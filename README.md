@@ -1,5 +1,6 @@
 # security-tools
 
+<<<<<<< HEAD
 
 
 ## Getting started
@@ -91,3 +92,23 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+=======
+Reusable GitLab CI/CD security review toolkit for merge requests.
+
+This repo is designed to be included from other GitLab projects using:
+
+```yaml
+include:
+  - project: "root/security-tools"
+    ref: "main"
+    file:
+      - "/templates/security-review.yml"
+```
+
+It provides:
+- reusable scan jobs
+- a pipeline-native security review job
+- MR comment automation
+- verdict-based pipeline blocking
+- parsing of Trivy, Gitleaks, Checkov, Hadolint, and Safety outputs
+>>>>>>> f9437a5 (Initial security-tools repo)
