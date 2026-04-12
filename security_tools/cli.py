@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from security_tools.clients import GitLabAPI
+from security_tools.models import ReviewContext
 from security_tools.parsers import (
     parse_checkov,
     parse_gitleaks,
@@ -72,35 +73,49 @@ def main() -> int:
     findings.extend(parse_hadolint(load_json("hadolint-report.json")))
     findings.extend(parse_checkov(load_json("checkov-report.json")))
 
-    context = {
-        "project_id": int(project_id),
-        "branch": branch,
-        "merge_request_iid": int(mr_iid) if mr_iid else None,
-        "findings": findings,
-        "detected_scans": present_scans,
-        "gitlab_ci_content": Path(".gitlab-ci.yml").read_text(encoding="utf-8")
+    context = ReviewContext(
+        project_id=int(project_id),
+        branch=branch,
+        merge_request_iid=int(mr_iid) if mr_iid else None,
+        findings=findings,
+        detected_scans=present_scans,
+        gitlab_ci_content=Path(".gitlab-ci.yml").read_text(encoding="utf-8")
         if Path(".gitlab-ci.yml").exists()
         else None,
-        "dockerfile_content": Path("Dockerfile").read_text(encoding="utf-8")
+        dockerfile_content=Path("Dockerfile").read_text(encoding="utf-8")
         if Path("Dockerfile").exists()
         else None,
-        "dockerignore_content": Path(".dockerignore").read_text(encoding="utf-8")
+        dockerignore_content=Path(".dockerignore").read_text(encoding="utf-8")
         if Path(".dockerignore").exists()
         else None,
-    }
+    )
 
-    review = build_review(context)
-    print(json.dumps(review, indent=2))
+    try:
+        reviewer = SecurityReviewer()
+        review = reviewer.review(context)
+    except Exception as exc:
+        print(f"Operational error while building review: {exc}", file=sys.stderr)
+        return 2
+
+    print(review.model_dump_json(indent=2))
 
     if api_token and mr_iid and enable_comments:
-        api = GitLabAPI(base_url=gitlab_url, token=api_token, verify_ssl=False)
-        api.post_merge_request_note(
-            project_id=int(project_id),
-            merge_request_iid=int(mr_iid),
-            body=review["mr_comment"],
-        )
+        try:
+            api = GitLabAPI(base_url=gitlab_url, token=api_token, verify_ssl=False)
+            api.post_merge_request_note(
+                project_id=int(project_id),
+                merge_request_iid=int(mr_iid),
+                body=review.mr_comment,
+            )
+        except Exception as exc:
+            print(f"Failed to post MR comment: {exc}", file=sys.stderr)
+            return 2
 
-    return 1 if review["verdict"] == "BLOCK" else 0
+    if review.verdict == "BLOCK":
+        return 1
+    if review.verdict == "OPERATIONAL_ERROR":
+        return 2
+    return 0
 
 
 if __name__ == "__main__":
