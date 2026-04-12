@@ -1,6 +1,11 @@
+include:
+  - local: "/templates/base/security-rules.yml"
+
 security_review:
+  extends: .security_rule_template
   stage: review
   image: python:${PYTHON_VERSION}
+
   needs:
     - job: dependency_scan
       optional: true
@@ -20,18 +25,21 @@ security_review:
     - job: iac_scanning
       optional: true
       artifacts: true
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_IID'
-  before_script:
-    - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+
   script:
+    - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+
     - |
       if [ ! -d .security-tools ]; then
-        git clone "http://oauth2:${GITLAB_API_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git" .security-tools
-        cd .security-tools
-        git checkout "${SECURITY_TOOLS_REF}"
-        cd ..
+        git clone --depth 1 \
+          --branch "${SECURITY_TOOLS_REF:-main}" \
+          "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${SECURITY_TOOLS_PROJECT_PATH}.git" \
+          .security-tools
       fi
+
     - python -m pip install ./.security-tools
+
+    - ls -la
+    - find . -maxdepth 2 -type f | sort
+
     - python -m security_tools.cli
-  allow_failure: false

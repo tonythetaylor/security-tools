@@ -1,0 +1,24 @@
+include:
+  - local: "/templates/base/security-rules.yml"
+
+dockerfile_scan:
+  extends: .security_base
+  image: alpine:latest
+  script:
+    - apk add --no-cache curl
+    - ARCH="$(uname -m)"
+    - |
+      if [ "$ARCH" = "aarch64" ]; then
+        HADOLINT_URL="https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-arm64"
+      else
+        HADOLINT_URL="https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64"
+      fi
+    - curl -sSL "$HADOLINT_URL" -o hadolint
+    - chmod +x hadolint
+    - ./hadolint Dockerfile -f json > hadolint-report.json || true
+    - test -f hadolint-report.json || echo "[]" > hadolint-report.json
+  artifacts:
+    when: always
+    paths:
+      - hadolint-report.json
+    expire_in: 1 week

@@ -1,3 +1,0 @@
-include:
-  - local: "/templates/security-scans.yml"
-  - local: "/templates/security-review.yml"

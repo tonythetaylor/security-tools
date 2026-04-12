@@ -1,0 +1,14 @@
+include:
+  - local: "/templates/base/security-rules.yml"
+
+dependency_scan:
+  extends: .security_base
+  image: python:${PYTHON_VERSION}
+  script:
+    - pip install safety || true
+    - safety check --json > safety-report.json || echo "[]" > safety-report.json
+  artifacts:
+    when: always
+    paths:
+      - safety-report.json
+    expire_in: 1 week

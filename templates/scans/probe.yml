@@ -1,0 +1,8 @@
+include:
+  - local: "/templates/base/security-rules.yml"
+
+scan_template_probe:
+  extends: .security_base
+  image: alpine:latest
+  script:
+    - echo "security-scans template loaded"

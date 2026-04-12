@@ -1,0 +1,3 @@
+include:
+  - local: "/templates/suites/security-scans.yml"
+  - local: "/templates/review/security-review.yml"

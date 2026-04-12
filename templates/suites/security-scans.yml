@@ -1,0 +1,8 @@
+include:
+  - local: "/templates/scans/probe.yml"
+  - local: "/templates/scans/dependency-scan.yml"
+  - local: "/templates/scans/secret-detection.yml"
+  - local: "/templates/scans/sast.yml"
+  - local: "/templates/scans/container-scanning.yml"
+  - local: "/templates/scans/dockerfile-scan.yml"
+  - local: "/templates/scans/iac-scanning.yml"
