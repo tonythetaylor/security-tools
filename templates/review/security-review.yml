@@ -26,20 +26,59 @@ security_review:
       optional: true
       artifacts: true
 
-  script:
+  before_script:
     - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
 
+  script:
     - |
+      set +e
+
+      CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
+
       if [ ! -d .security-tools ]; then
         git clone --depth 1 \
           --branch "${SECURITY_TOOLS_REF:-main}" \
-          "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}/${SECURITY_TOOLS_PROJECT_PATH}.git" \
+          "$CLONE_URL" \
           .security-tools
+        CLONE_RC=$?
+        if [ $CLONE_RC -ne 0 ]; then
+          echo "WARNING: failed to clone security-tools shared repo"
+          echo '{"status":"operational_error","step":"clone","message":"Unable to clone shared repo"}' > security-review-status.json
+          exit 2
+        fi
       fi
 
-    - python -m pip install ./.security-tools
+      python -m pip install ./.security-tools
+      INSTALL_RC=$?
+      if [ $INSTALL_RC -ne 0 ]; then
+        echo "WARNING: failed to install security-tools package"
+        echo '{"status":"operational_error","step":"install","message":"Unable to install shared package"}' > security-review-status.json
+        exit 2
+      fi
 
-    - ls -la
-    - find . -maxdepth 2 -type f | sort
+      ls -la
+      find . -maxdepth 2 -type f | sort
 
-    - python -m security_tools.cli
+      python -m security_tools.cli
+      REVIEW_RC=$?
+
+      if [ $REVIEW_RC -eq 1 ]; then
+        echo "Security review returned BLOCK"
+        exit 1
+      elif [ $REVIEW_RC -eq 2 ]; then
+        echo "Security review returned OPERATIONAL ERROR"
+        exit 2
+      else
+        echo "Security review passed"
+        exit 0
+      fi
+
+  artifacts:
+    when: always
+    paths:
+      - security-review-status.json
+    expire_in: 1 week
+
+  allow_failure:
+    exit_codes:
+      - 2
