@@ -154,7 +154,7 @@ validate_repo:
     - python -c "from security_tools.runtime import run_runtime_verification"
     - python -c "from security_tools.runtime.executor import run_runtime_verification"
     - python -c "from security_tools.runtime.detector import detect_runtime_profile"
-    - python -c "from security_tools.runtime.policy import load_policy"
+    - python -c "from security_tools.runtime.policy import load_runtime_policy"
 
     ########################################################
     # Catalog / policy loader smoke tests
@@ -166,6 +166,6 @@ validate_repo:
     # Runtime policy smoke test
     ########################################################
 
-    - python -c "from security_tools.runtime.policy import load_policy; print(load_policy())"
-
+    - python -c "from security_tools.runtime.policy import load_runtime_policy; print(load_runtime_policy())"
+    
     - echo "security-tools repo validation passed"
