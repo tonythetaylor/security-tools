@@ -101,3 +101,9 @@ iac_scanning:
       - checkov-report.json
     expire_in: 1 week
   allow_failure: true
+
+scan_template_probe:
+  stage: security
+  image: alpine:latest
+  script:
+    - echo "security-scans.yml loaded"
