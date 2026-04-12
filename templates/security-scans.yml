@@ -1,16 +1,31 @@
+.security_mr_rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_IID'
+    - when: never
+
+scan_template_probe:
+  extends: .security_mr_rules
+  stage: security
+  image: alpine:latest
+  script:
+    - echo "security-scans.yml loaded"
+
 dependency_scan:
+  extends: .security_mr_rules
   stage: security
   image: python:${PYTHON_VERSION}
   script:
     - pip install safety || true
     - safety check --json > safety-report.json || echo "[]" > safety-report.json
   artifacts:
+    when: always
     paths:
       - safety-report.json
     expire_in: 1 week
   allow_failure: true
 
 secret_detection:
+  extends: .security_mr_rules
   stage: security
   image: alpine:latest
   script:
@@ -28,6 +43,7 @@ secret_detection:
     - ./gitleaks detect --source . --report-format json --report-path gl-secret-detection-report.json || true
     - test -f gl-secret-detection-report.json || echo "[]" > gl-secret-detection-report.json
   artifacts:
+    when: always
     paths:
       - gl-secret-detection-report.json
     reports:
@@ -36,6 +52,7 @@ secret_detection:
   allow_failure: true
 
 sast:
+  extends: .security_mr_rules
   stage: security
   image: alpine:latest
   script:
@@ -44,6 +61,7 @@ sast:
     - ./trivy fs . --format sarif --output gl-sast-report.sarif || true
     - test -f gl-sast-report.sarif || printf '%s\n' '{"version":"2.1.0","runs":[]}' > gl-sast-report.sarif
   artifacts:
+    when: always
     paths:
       - gl-sast-report.sarif
     reports:
@@ -52,6 +70,7 @@ sast:
   allow_failure: true
 
 container_scanning:
+  extends: .security_mr_rules
   stage: security
   image: alpine:latest
   script:
@@ -60,6 +79,7 @@ container_scanning:
     - ./trivy fs . --format json --output gl-container-scanning-report.json || true
     - test -f gl-container-scanning-report.json || echo '{"Results":[]}' > gl-container-scanning-report.json
   artifacts:
+    when: always
     paths:
       - gl-container-scanning-report.json
     reports:
@@ -68,6 +88,7 @@ container_scanning:
   allow_failure: true
 
 dockerfile_scan:
+  extends: .security_mr_rules
   stage: security
   image: alpine:latest
   script:
@@ -84,12 +105,14 @@ dockerfile_scan:
     - ./hadolint Dockerfile -f json > hadolint-report.json || true
     - test -f hadolint-report.json || echo "[]" > hadolint-report.json
   artifacts:
+    when: always
     paths:
       - hadolint-report.json
     expire_in: 1 week
   allow_failure: true
 
 iac_scanning:
+  extends: .security_mr_rules
   stage: security
   image: python:${PYTHON_VERSION}
   script:
@@ -97,13 +120,8 @@ iac_scanning:
     - checkov -d . -o json > checkov-report.json || true
     - test -f checkov-report.json || echo '{"results":{"failed_checks":[],"passed_checks":[],"skipped_checks":[]}}' > checkov-report.json
   artifacts:
+    when: always
     paths:
       - checkov-report.json
     expire_in: 1 week
   allow_failure: true
-
-scan_template_probe:
-  stage: security
-  image: alpine:latest
-  script:
-    - echo "security-scans.yml loaded"
