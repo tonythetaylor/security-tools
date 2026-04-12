@@ -59,7 +59,7 @@ security_review:
       ls -la
       find . -maxdepth 2 -type f | sort
 
-      python -m security_tools.cli
+      security-review
       REVIEW_RC=$?
 
       if [ $REVIEW_RC -eq 1 ]; then

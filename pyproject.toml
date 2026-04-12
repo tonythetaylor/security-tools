@@ -15,8 +15,13 @@ dependencies = [
   "python-dotenv>=1.0,<2",
 ]
 
+[project.scripts]
+security-review = "security_tools.cli:main"
+
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.packages.find]
+where = ["."]
 include = ["security_tools*"]
+exclude = ["tests*"]
