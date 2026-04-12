@@ -1,17 +1,17 @@
-.security_mr_rules:
+.security_rule_template:
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_IID'
-    - when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 
 scan_template_probe:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: alpine:latest
   script:
     - echo "security-scans.yml loaded"
 
 dependency_scan:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: python:${PYTHON_VERSION}
   script:
@@ -25,7 +25,7 @@ dependency_scan:
   allow_failure: true
 
 secret_detection:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: alpine:latest
   script:
@@ -52,7 +52,7 @@ secret_detection:
   allow_failure: true
 
 sast:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: alpine:latest
   script:
@@ -70,7 +70,7 @@ sast:
   allow_failure: true
 
 container_scanning:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: alpine:latest
   script:
@@ -88,7 +88,7 @@ container_scanning:
   allow_failure: true
 
 dockerfile_scan:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: alpine:latest
   script:
@@ -112,7 +112,7 @@ dockerfile_scan:
   allow_failure: true
 
 iac_scanning:
-  extends: .security_mr_rules
+  extends: .security_rule_template
   stage: security
   image: python:${PYTHON_VERSION}
   script:
