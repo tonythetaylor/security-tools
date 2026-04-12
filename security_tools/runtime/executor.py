@@ -41,25 +41,6 @@ def _container_running(container_name: str) -> tuple[bool, int | None]:
         return False, None
 
 
-def _container_ip(container_name: str) -> str | None:
-    try:
-        cp = _run(["docker", "inspect", container_name], check=True)
-        data = json.loads(cp.stdout)
-        if not isinstance(data, list) or not data:
-            return None
-
-        networks = data[0].get("NetworkSettings", {}).get("Networks", {})
-        if isinstance(networks, dict):
-            for _, cfg in networks.items():
-                ip = cfg.get("IPAddress")
-                if ip:
-                    return str(ip)
-
-        return None
-    except Exception:
-        return None
-
-
 def _cleanup(container_name: str) -> None:
     _run(["docker", "rm", "-f", container_name], check=False)
 
@@ -72,6 +53,37 @@ def _build_if_missing(
     if image_exists(image):
         return
     _run(["docker", "build", "-t", image, "-f", dockerfile_path, context_dir], check=True)
+
+
+def _logs_indicate_ready(logs: str) -> bool:
+    markers = [
+        "Running on http://",
+        "Uvicorn running on",
+        "Tomcat started",
+        "Started Application",
+        "Listening on",
+        "Server started",
+        "Ready to accept connections",
+        "nginx/",
+    ]
+    return any(marker in logs for marker in markers)
+
+
+def _exec_http_probe(container_name: str, port: int, path: str) -> bool:
+    url = f"http://127.0.0.1:{port}{path}"
+
+    commands = [
+        ["docker", "exec", container_name, "sh", "-lc", f"curl -fsS {url}"],
+        ["docker", "exec", container_name, "sh", "-lc", f"wget -qO- {url}"],
+        ["docker", "exec", container_name, "sh", "-lc", f"python - <<'PY'\nimport urllib.request\nurllib.request.urlopen('{url}')\nPY"],
+    ]
+
+    for cmd in commands:
+        cp = _run(cmd, check=False)
+        if cp.returncode == 0:
+            return True
+
+    return False
 
 
 def run_runtime_verification(
@@ -92,7 +104,7 @@ def run_runtime_verification(
 
     if build_if_missing:
         try:
-            _build_if_missing(image, dockerfile_path=dockerfile_path, context_dir=context_dir)
+            _build_if_missing(image, dockerfile_path, context_dir)
         except Exception as exc:
             return RuntimeReport(
                 verdict="OPERATIONAL_ERROR",
@@ -102,36 +114,18 @@ def run_runtime_verification(
                 errors=[f"Failed to build image: {exc}"],
             )
 
-    try:
-        image_inspect = inspect_image(image)
-    except Exception as exc:
-        return RuntimeReport(
-            verdict="OPERATIONAL_ERROR",
-            image=image,
-            profile=detect_runtime_profile(),
-            startup=RuntimeStartup(),
-            errors=[f"Failed to inspect image: {exc}"],
-        )
-
+    image_inspect = inspect_image(image)
     dockerfile_info = parse_dockerfile(dockerfile_path)
     repo_hint_info = repo_hints(context_dir)
+
     profile = detect_runtime_profile(image_inspect, dockerfile_info, repo_hint_info)
     policy = load_runtime_policy()
-    startup_timeout_seconds = int(
-        policy.get("timeouts", {}).get("startup_seconds", startup_timeout_seconds)
-    )
 
-    container_name = f"runtime-verify-{random.randint(10000, 99999)}"
-
-    # Bind only the most likely ports instead of every guessed port.
-    port_args: list[str] = []
-    candidate_ports = sorted(set(profile.candidate_http_ports or profile.expected_ports))
-    for port in candidate_ports[:2]:
-        if 1 <= port <= 65535:
-            port_args += ["-p", f"{port}:{port}"]
+    container_name = f"runtime-verify-{random.randint(10000,99999)}"
 
     start = time.time()
     startup = RuntimeStartup()
+
     report = RuntimeReport(
         verdict="PASS",
         image=image,
@@ -144,19 +138,22 @@ def run_runtime_verification(
         },
     )
 
-    cp = _run(["docker", "run", "-d", "--name", container_name, *port_args, image], check=False)
-    if cp.returncode != 0:
-        report.verdict = "BLOCK"
-        report.errors.append(
-            f"Failed to start container: {cp.stderr.strip() or cp.stdout.strip() or 'docker run failed'}"
+    try:
+        cp = _run(
+            ["docker", "run", "-d", "--name", container_name, image],
+            check=True,
         )
+        container_id = cp.stdout.strip()
+        startup.container_started = True
+        report.metadata["container_id"] = container_id
+
+    except Exception as exc:
+        report.verdict = "BLOCK"
+        report.errors.append(f"Failed to start container: {exc}")
         return apply_runtime_policy(report, policy)
 
-    container_id = cp.stdout.strip()
-    startup.container_started = True
-    report.metadata["container_id"] = container_id
-
     time.sleep(3)
+
     running, exit_code = _container_running(container_name)
     startup.container_running = running
     startup.container_exit_code = exit_code
@@ -169,32 +166,36 @@ def run_runtime_verification(
         _cleanup(container_name)
         return apply_runtime_policy(report, policy)
 
-    # Probe the container IP instead of 127.0.0.1 so DinD jobs work correctly.
-    target_host = _container_ip(container_name) or "127.0.0.1"
-    report.metadata["probe_target_host"] = target_host
+    # -----------------------------
+    # PRIMARY: In-container probing
+    # -----------------------------
+    listening_ports = []
 
-    listening_ports: list[int] = []
-    checked_ports = sorted(set(profile.expected_ports or profile.candidate_http_ports))
-    for port in checked_ports:
-        check = wait_for_tcp(
-            target_host,
-            port,
-            timeout_seconds=min(startup_timeout_seconds, 15),
-        )
-        report.port_checks.append(check)
-        if check.status == "PASS":
-            listening_ports.append(port)
+    for port in profile.candidate_http_ports:
+        for path in profile.candidate_http_paths:
+            if _exec_http_probe(container_name, port, path):
+                listening_ports.append(port)
+                report.http_checks.append(
+                    http_check(f"http://127.0.0.1:{port}{path}")
+                )
+                break
 
     report.listening_ports = listening_ports
 
-    for port in sorted(set(profile.candidate_http_ports)):
-        for path in profile.candidate_http_paths:
-            url = f"http://{target_host}:{port}{path}"
-            check = http_check(url)
-            report.http_checks.append(check)
-            if check.status == "PASS":
-                break
+    # -----------------------------
+    # Fallback: External probing
+    # -----------------------------
+    if not listening_ports:
+        container_logs = _tail_container_logs(container_name)
+
+        if _logs_indicate_ready(container_logs):
+            report.warnings.append(
+                "Logs indicate service startup, but readiness probe inconclusive."
+            )
+            report.verdict = "WARN"
 
     report.logs_tail = _tail_container_logs(container_name)
+
     _cleanup(container_name)
+
     return apply_runtime_policy(report, policy)

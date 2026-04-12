@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import os
 import socket
 import time
 import urllib.error
@@ -32,29 +31,33 @@ def wait_for_tcp(
     interval: float = 1.0,
 ) -> PortCheck:
     deadline = time.time() + timeout_seconds
+
     last = PortCheck(
         port=port,
         status="FAIL",
-        detail=f"Timed out waiting for TCP port {host}:{port}.",
+        detail="Timed out waiting for TCP port.",
     )
 
     while time.time() < deadline:
         check = tcp_check(host, port)
         if check.status == "PASS":
             return check
+
         last = check
         time.sleep(interval)
 
     return last
 
 
-def _direct_http_opener() -> urllib.request.OpenerDirector:
-    # Disable proxies for internal readiness checks.
-    return urllib.request.build_opener(urllib.request.ProxyHandler({}))
+def _direct_opener():
+    return urllib.request.build_opener(
+        urllib.request.ProxyHandler({})
+    )
 
 
 def http_check(url: str, timeout: float = 3.0) -> HttpCheck:
-    opener = _direct_http_opener()
+    opener = _direct_opener()
+
     request = urllib.request.Request(
         url,
         headers={"User-Agent": "security-tools-runtime/1.0"},
@@ -66,44 +69,22 @@ def http_check(url: str, timeout: float = 3.0) -> HttpCheck:
                 url=url,
                 status="PASS" if 200 <= response.status < 500 else "WARN",
                 http_status=response.status,
-                detail=f"HTTP responded with {response.status}.",
+                detail=f"HTTP responded {response.status}",
             )
+
     except urllib.error.HTTPError as exc:
         status = "PASS" if 200 <= exc.code < 500 else "FAIL"
         return HttpCheck(
             url=url,
             status=status,
             http_status=exc.code,
-            detail=f"HTTP error response {exc.code}.",
+            detail=f"HTTP error {exc.code}",
         )
+
     except Exception as exc:
         return HttpCheck(
             url=url,
             status="FAIL",
             http_status=None,
-            detail=f"HTTP request failed: {exc}",
+            detail=str(exc),
         )
-
-
-def wait_for_http(
-    url: str,
-    timeout_seconds: int = 30,
-    interval: float = 1.0,
-    request_timeout: float = 3.0,
-) -> HttpCheck:
-    deadline = time.time() + timeout_seconds
-    last = HttpCheck(
-        url=url,
-        status="FAIL",
-        http_status=None,
-        detail=f"Timed out waiting for HTTP readiness at {url}.",
-    )
-
-    while time.time() < deadline:
-        check = http_check(url, timeout=request_timeout)
-        if check.status == "PASS":
-            return check
-        last = check
-        time.sleep(interval)
-
-    return last

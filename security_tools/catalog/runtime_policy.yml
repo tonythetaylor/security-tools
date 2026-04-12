@@ -1,7 +1,11 @@
 timeouts:
   startup_seconds: 45
 
-verdict_rules:
+rules:
   block_on_container_exit: true
-  block_if_no_ports_and_no_http_success: false
-  warn_if_profile_unknown: true
+  block_if_no_readiness: true
+
+severity:
+  PASS: 0
+  WARN: 1
+  BLOCK: 2
