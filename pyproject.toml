@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "security-tools"
+version = "0.1.0"
+description = "Reusable GitLab CI security review toolkit"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.8,<3",
+  "pydantic-settings>=2.4,<3",
+  "requests>=2.32,<3",
+  "python-dotenv>=1.0,<2",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["security_tools*"]

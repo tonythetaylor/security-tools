@@ -148,6 +148,6 @@ security_review:
         git checkout "${SECURITY_TOOLS_REF}"
         cd ..
       fi
-    - python -m pip install -r .security-tools/requirements.txt
-    - PYTHONPATH=.security-tools python .security-tools/cli/run_security_review.py
+    - python -m pip install ./.security-tools
+    - python -m security_tools.cli
   allow_failure: false
