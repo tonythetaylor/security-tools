@@ -63,6 +63,7 @@ class ReviewResult(BaseModel):
     detected_scans: list[str] = Field(default_factory=list)
     missing_expected_scans: list[str] = Field(default_factory=list)
     operational_warnings: list[str] = Field(default_factory=list)
+    risk_score: int = 0
 
 
 class ReviewContext(BaseModel):

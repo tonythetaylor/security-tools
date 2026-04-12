@@ -1,0 +1,121 @@
+{
+  "verdict": "BLOCK",
+  "image": "invite-app-fullstack-backend:latest",
+  "profile": {
+    "name": "python_web",
+    "confidence": 0.8,
+    "expected_ports": [
+      8000,
+      5000,
+      8080
+    ],
+    "candidate_http_ports": [
+      8000,
+      5000,
+      8080
+    ],
+    "candidate_http_paths": [
+      "/",
+      "/health",
+      "/docs",
+      "/openapi.json"
+    ],
+    "expected_process_hints": [],
+    "notes": []
+  },
+  "startup": {
+    "container_started": false,
+    "container_running": false,
+    "startup_seconds": 0.0,
+    "container_exit_code": null
+  },
+  "exposed_ports": [
+    5000,
+    8000,
+    8080
+  ],
+  "listening_ports": [],
+  "port_checks": [],
+  "http_checks": [],
+  "warnings": [],
+  "errors": [
+    "Failed to start container: Command '['docker', 'run', '-d', '--name', 'runtime-verify-51601', '-p', '5000:5000', '-p', '8000:8000', '-p', '8080:8080', 'invite-app-fullstack-backend:latest']' returned non-zero exit status 125."
+  ],
+  "logs_tail": "",
+  "metadata": {
+    "dockerfile": {
+      "base_images": [],
+      "exposed_ports": [],
+      "entrypoint": null,
+      "cmd": null,
+      "raw": ""
+    },
+    "repo_hints": {
+      "has_package_json": false,
+      "has_requirements_txt": true,
+      "has_nginx_conf": false,
+      "has_server_xml": false,
+      "has_application_yml": false,
+      "has_application_properties": false,
+      "file_names": [
+        ".gitignore",
+        ".gitlab-ci.yml",
+        "__init__.py",
+        "catalog_loader.py",
+        "checkov.py",
+        "cli.py",
+        "common.py",
+        "container-runtime-verify.yml",
+        "container-scanning.yml",
+        "dedup.py",
+        "dependency-scan.yml",
+        "dependency_links.txt",
+        "detector.py",
+        "docker_introspect.py",
+        "dockerfile-scan.yml",
+        "entry_points.txt",
+        "executor.py",
+        "finding_catalog.yml",
+        "generic.py",
+        "gitlab_api.py",
+        "gitleaks.py",
+        "hadolint.py",
+        "heuristics.py",
+        "iac-scanning.yml",
+        "models.py",
+        "nginx.py",
+        "node_web.py",
+        "pkg-info",
+        "policy.py",
+        "policy.yml",
+        "policy_loader.py",
+        "probe.yml",
+        "probes.py",
+        "pyproject.toml",
+        "python_web.py",
+        "readme-runtime-verify.md",
+        "readme.md",
+        "renderers.py",
+        "requirements.txt",
+        "requires.txt",
+        "reviewer.py",
+        "runtime-report.json",
+        "runtime-summary.md",
+        "runtime_policy.yml",
+        "safety.py",
+        "sast.yml",
+        "secret-detection.yml",
+        "security-review.yml",
+        "security-rules.yml",
+        "security-scans.yml",
+        "security-suite.yml",
+        "severity.py",
+        "sources.txt",
+        "spring_boot.py",
+        "tomcat.py",
+        "top_level.txt",
+        "trivy.py"
+      ]
+    }
+  }
+}

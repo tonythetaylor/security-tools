@@ -1,3 +1,4 @@
 include:
   - local: "/templates/suites/security-scans.yml"
+  - local: "/templates/runtime/container-runtime-verify.yml"
   - local: "/templates/review/security-review.yml"

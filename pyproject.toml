@@ -18,6 +18,7 @@ dependencies = [
 
 [project.scripts]
 security-review = "security_tools.cli:main"
+container-runtime-verify = "security_tools.runtime.cli:main"
 
 [tool.setuptools]
 include-package-data = true

@@ -11,8 +11,10 @@ from security_tools.models import (
     ReviewRecommendation,
     ReviewResult,
 )
+from security_tools.review.dedup import deduplicate_findings
 from security_tools.review.heuristics import build_heuristic_findings
 from security_tools.review.renderers import render_mr_comment
+from security_tools.review.severity import severity_to_risk_score
 
 
 class SecurityReviewer:
@@ -42,6 +44,10 @@ class SecurityReviewer:
 
     def _policy_verdict_rules(self) -> dict[str, Any]:
         value = self.policy.get("verdict_rules", {})
+        return value if isinstance(value, dict) else {}
+
+    def _policy_risk_rules(self) -> dict[str, Any]:
+        value = self.policy.get("risk", {})
         return value if isinstance(value, dict) else {}
 
     def _lookup_catalog_item(self, finding: NormalizedFinding) -> dict[str, Any]:
@@ -101,13 +107,18 @@ class SecurityReviewer:
             raw_payload=finding.raw_payload,
         )
 
+    def _calculate_risk_score(self, findings: list[EnrichedFinding]) -> int:
+        return sum(severity_to_risk_score(f.severity) for f in findings)
+
     def _compute_verdict(
         self,
         findings: list[EnrichedFinding],
         missing_scans: list[str],
         operational_warnings: list[str],
+        risk_score: int,
     ) -> str:
         verdict_rules = self._policy_verdict_rules()
+        risk_rules = self._policy_risk_rules()
 
         if operational_warnings and verdict_rules.get("operational_error_on_warnings", True):
             return "OPERATIONAL_ERROR"
@@ -130,6 +141,12 @@ class SecurityReviewer:
 
         if any(severities.get(sev, 0) > 0 for sev in block_on_severities):
             return "BLOCK"
+
+        if risk_rules.get("enabled", False):
+            if risk_score >= int(risk_rules.get("block_if_score_gte", 999999)):
+                return "BLOCK"
+            if risk_score >= int(risk_rules.get("warn_if_score_gte", 999999)):
+                return "WARN"
 
         if any(severities.get(sev, 0) > 0 for sev in warn_on_severities):
             return "WARN"
@@ -182,18 +199,23 @@ class SecurityReviewer:
         )
 
         enriched = [self.enrich_finding(finding) for finding in all_findings]
+        enriched = deduplicate_findings(enriched)
+
+        risk_score = self._calculate_risk_score(enriched)
         recommendations = self._to_recommendations(enriched)
 
         verdict = self._compute_verdict(
             findings=enriched,
             missing_scans=missing_scans,
             operational_warnings=operational_warnings,
+            risk_score=risk_score,
         )
 
         summary = (
             f"Pipeline-native security review completed. "
-            f"Detected {len(context.detected_scans)} scans and generated "
-            f"{len(recommendations)} recommendations."
+            f"Detected {len(context.detected_scans)} scans, generated "
+            f"{len(recommendations)} recommendations, and calculated "
+            f"a risk score of {risk_score}."
         )
 
         mr_comment = render_mr_comment(
@@ -213,4 +235,5 @@ class SecurityReviewer:
             detected_scans=context.detected_scans,
             missing_expected_scans=missing_scans,
             operational_warnings=operational_warnings,
+            risk_score=risk_score,
         )

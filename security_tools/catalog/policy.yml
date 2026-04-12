@@ -24,8 +24,13 @@ verdict_rules:
   warn_on_severities:
     - medium
 
-always_block_categories:
-  - secret_detection
+  always_block_categories:
+    - secret_detection
 
-always_block_finding_types:
-  - secret_exposure
+  always_block_finding_types:
+    - secret_exposure
+
+risk:
+  enabled: true
+  block_if_score_gte: 20
+  warn_if_score_gte: 8

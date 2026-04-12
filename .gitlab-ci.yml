@@ -33,29 +33,46 @@ validate_repo:
     - test -f templates/suites/security-scans.yml
     - test -f templates/suites/security-suite.yml
 
-    # Python package
+    ########################################################
+    # Python package root
+    ########################################################
+
     - test -d security_tools
     - test -f security_tools/__init__.py
     - test -f security_tools/cli.py
     - test -f security_tools/models.py
 
+    ########################################################
     # Clients package
+    ########################################################
+
     - test -d security_tools/clients
     - test -f security_tools/clients/__init__.py
     - test -f security_tools/clients/gitlab_api.py
 
+    ########################################################
     # Catalog files
+    ########################################################
+
     - test -d security_tools/catalog
+    - test -f security_tools/catalog/__init__.py
     - test -f security_tools/catalog/finding_catalog.yml
     - test -f security_tools/catalog/policy.yml
+    - test -f security_tools/catalog/runtime_policy.yml
 
+    ########################################################
     # Loader files
+    ########################################################
+
     - test -d security_tools/loaders
     - test -f security_tools/loaders/__init__.py
     - test -f security_tools/loaders/catalog_loader.py
     - test -f security_tools/loaders/policy_loader.py
 
+    ########################################################
     # Parser package
+    ########################################################
+
     - test -d security_tools/parsers
     - test -f security_tools/parsers/__init__.py
     - test -f security_tools/parsers/common.py
@@ -65,15 +82,90 @@ validate_repo:
     - test -f security_tools/parsers/checkov.py
     - test -f security_tools/parsers/trivy.py
 
+    ########################################################
     # Review package
+    ########################################################
+
     - test -d security_tools/review
     - test -f security_tools/review/__init__.py
     - test -f security_tools/review/reviewer.py
     - test -f security_tools/review/heuristics.py
     - test -f security_tools/review/renderers.py
+    - test -f security_tools/review/severity.py
+    - test -f security_tools/review/dedup.py
 
+    ########################################################
+    # Runtime verification module
+    ########################################################
+
+    - test -d security_tools/runtime
+    - test -f security_tools/runtime/__init__.py
+    - test -f security_tools/runtime/models.py
+    - test -f security_tools/runtime/docker_introspect.py
+    - test -f security_tools/runtime/detector.py
+    - test -f security_tools/runtime/probes.py
+    - test -f security_tools/runtime/policy.py
+    - test -f security_tools/runtime/renderers.py
+    - test -f security_tools/runtime/executor.py
+    - test -f security_tools/runtime/cli.py
+
+    ########################################################
+    # Runtime profiles
+    ########################################################
+
+    - test -d security_tools/runtime/profiles
+    - test -f security_tools/runtime/profiles/__init__.py
+    - test -f security_tools/runtime/profiles/generic.py
+    - test -f security_tools/runtime/profiles/nginx.py
+    - test -f security_tools/runtime/profiles/tomcat.py
+    - test -f security_tools/runtime/profiles/python_web.py
+    - test -f security_tools/runtime/profiles/node_web.py
+    - test -f security_tools/runtime/profiles/spring_boot.py
+
+    ########################################################
+    # Runtime templates
+    ########################################################
+
+    - test -d templates/runtime
+    - test -f templates/runtime/container-runtime-verify.yml
+
+    ########################################################
     # Install/package validation
+    ########################################################
+
     - pip install .
     - security-review --help || true
+    - container-runtime-verify --help || true
+
+    ########################################################
+    # Import smoke tests
+    ########################################################
+
+    - python -c "from security_tools.clients import GitLabAPI"
+    - python -c "from security_tools.parsers import parse_checkov, parse_gitleaks, parse_hadolint, parse_safety, parse_trivy"
+    - python -c "from security_tools.review import SecurityReviewer"
+    - python -c "from security_tools.review.severity import normalize_severity, severity_to_risk_score"
+    - python -c "from security_tools.review.dedup import deduplicate_findings"
+
+    ########################################################
+    # Runtime import smoke tests
+    ########################################################
+
+    - python -c "from security_tools.runtime import run_runtime_verification"
+    - python -c "from security_tools.runtime.executor import run_runtime_verification"
+    - python -c "from security_tools.runtime.detector import detect_runtime_profile"
+    - python -c "from security_tools.runtime.policy import load_policy"
+
+    ########################################################
+    # Catalog / policy loader smoke tests
+    ########################################################
+
+    - python -c "from security_tools.loaders import load_finding_catalog, load_policy; print(load_finding_catalog()['default']); print(load_policy()['verdict_rules'])"
+
+    ########################################################
+    # Runtime policy smoke test
+    ########################################################
+
+    - python -c "from security_tools.runtime.policy import load_policy; print(load_policy())"
 
     - echo "security-tools repo validation passed"

@@ -1,0 +1,3 @@
+[console_scripts]
+container-runtime-verify = security_tools.runtime.cli:main
+security-review = security_tools.cli:main

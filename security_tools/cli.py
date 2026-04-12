@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import sys
@@ -28,13 +29,54 @@ def load_json(path: str) -> Any | None:
         return None
 
 
+def build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Run GitLab security review from scan artifacts."
+    )
+    parser.add_argument(
+        "--project-id",
+        default=os.environ.get("CI_PROJECT_ID"),
+        help="GitLab project ID. Defaults to CI_PROJECT_ID.",
+    )
+    parser.add_argument(
+        "--mr-iid",
+        default=os.environ.get("CI_MERGE_REQUEST_IID"),
+        help="Merge request IID. Defaults to CI_MERGE_REQUEST_IID.",
+    )
+    parser.add_argument(
+        "--branch",
+        default=os.environ.get("CI_COMMIT_REF_NAME"),
+        help="Branch name. Defaults to CI_COMMIT_REF_NAME.",
+    )
+    parser.add_argument(
+        "--gitlab-url",
+        default=os.environ.get("GITLAB_URL", "http://host.docker.internal:8088"),
+        help="GitLab base URL.",
+    )
+    parser.add_argument(
+        "--api-token",
+        default=os.environ.get("GITLAB_API_TOKEN"),
+        help="GitLab API token for MR comments.",
+    )
+    parser.add_argument(
+        "--enable-comments",
+        action="store_true",
+        default=os.environ.get("ENABLE_MR_COMMENTS", "true").lower() == "true",
+        help="Post MR comments when token and MR IID are available.",
+    )
+    return parser
+
+
 def main() -> int:
-    project_id = os.environ.get("CI_PROJECT_ID")
-    mr_iid = os.environ.get("CI_MERGE_REQUEST_IID")
-    branch = os.environ.get("CI_COMMIT_REF_NAME")
-    api_token = os.environ.get("GITLAB_API_TOKEN")
-    gitlab_url = os.environ.get("GITLAB_URL", "http://host.docker.internal:8088")
-    enable_comments = os.environ.get("ENABLE_MR_COMMENTS", "true").lower() == "true"
+    parser = build_arg_parser()
+    args = parser.parse_args()
+
+    project_id = args.project_id
+    mr_iid = args.mr_iid
+    branch = args.branch
+    api_token = args.api_token
+    gitlab_url = args.gitlab_url
+    enable_comments = args.enable_comments
 
     if not project_id:
         print("CI_PROJECT_ID is required", file=sys.stderr)
