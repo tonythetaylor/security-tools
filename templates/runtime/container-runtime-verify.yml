@@ -5,7 +5,8 @@ container_runtime_verify:
   extends: .security_base
   image: python:3.12-slim
   services:
-    - docker:27-dind
+    - name: docker:27-dind
+      alias: docker
   variables:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
@@ -26,7 +27,21 @@ container_runtime_verify:
         > /etc/apt/sources.list.d/docker.list
     - apt-get update
     - apt-get install -y docker-ce-cli
-    - docker version
+    - |
+      echo '{"status":"starting"}' > runtime-report.json
+      echo '# Runtime Verification Summary' > runtime-summary.md
+    - |
+      for i in $(seq 1 30); do
+        getent hosts docker && break
+        echo "Waiting for docker service DNS..."
+        sleep 2
+      done
+    - |
+      for i in $(seq 1 30); do
+        docker version && break
+        echo "Waiting for Docker daemon..."
+        sleep 2
+      done
     - |
       if [ ! -d .security-tools ]; then
         CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
@@ -36,8 +51,6 @@ container_runtime_verify:
     - python -m pip install ./.security-tools
 
   script:
-    - echo '{"status":"starting"}' > runtime-report.json
-    - echo '# Runtime Verification Summary' > runtime-summary.md
     - |
       python -m security_tools.runtime.cli \
         --image "${RUNTIME_IMAGE_TAG}" \
