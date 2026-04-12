@@ -3,7 +3,7 @@ include:
 
 container_runtime_verify:
   extends: .security_base
-  image: docker:27-cli
+  image: python:3.12-slim
   services:
     - docker:27-dind
   variables:
@@ -11,21 +11,38 @@ container_runtime_verify:
     DOCKER_TLS_CERTDIR: ""
     RUNTIME_IMAGE_TAG: "$CI_PROJECT_PATH_SLUG:$CI_COMMIT_SHA"
     RUNTIME_VERIFY_STARTUP_TIMEOUT: "45"
+
   before_script:
-    - apk add --no-cache python3 py3-pip git curl bash
+    - apt-get update
+    - apt-get install -y curl git ca-certificates gnupg
+    - install -m 0755 -d /etc/apt/keyrings
+    - curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+    - chmod a+r /etc/apt/keyrings/docker.asc
+    - |
+      echo \
+        "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+        https://download.docker.com/linux/debian \
+        $(. /etc/os-release && echo "$VERSION_CODENAME") stable" \
+        > /etc/apt/sources.list.d/docker.list
+    - apt-get update
+    - apt-get install -y docker-ce-cli
+    - docker version
     - |
       if [ ! -d .security-tools ]; then
         CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
         git clone --depth 1 --branch "${SECURITY_TOOLS_REF:-main}" "$CLONE_URL" .security-tools
       fi
-    - python3 -m pip install ./.security-tools
+    - python -m pip install --upgrade pip setuptools wheel
+    - python -m pip install ./.security-tools
+
   script:
     - |
-      python3 -m security_tools.runtime.cli \
+      python -m security_tools.runtime.cli \
         --image "${RUNTIME_IMAGE_TAG}" \
         --startup-timeout "${RUNTIME_VERIFY_STARTUP_TIMEOUT}" \
         --output-json runtime-report.json \
         --output-md runtime-summary.md
+
   artifacts:
     when: always
     paths:
