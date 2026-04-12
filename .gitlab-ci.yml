@@ -8,10 +8,39 @@ default:
 validate_repo:
   stage: validate
   image: python:3.12
+
   script:
     - python --version
+
+    # Core repository validation
+    - test -f pyproject.toml
+    - test -f README.md
+
+    # Templates validation
     - test -f templates/security-review.yml
+    - test -f templates/security-scans.yml
+    - test -f templates/base/security-rules.yml
+
+    # Scan templates
+    - test -f templates/scans/dependency-scan.yml
+    - test -f templates/scans/secret-detection.yml
+    - test -f templates/scans/sast.yml
+    - test -f templates/scans/container-scan.yml
+    - test -f templates/scans/dockerfile-scan.yml
+    - test -f templates/scans/iac-scan.yml
+
+    # CLI validation
     - test -f cli/run_security_review.py
-    - test -f requirements.txt
+
+    # Python package validation
     - test -d security_tools
+    - test -f security_tools/cli.py
+    - test -f security_tools/reviewer.py
+    - test -f security_tools/parsers.py
+    - test -f security_tools/gitlab_api.py
+
+    # Install validation
+    - pip install .
+    - security-review --help || true
+
     - echo "security-tools repo validation passed"
