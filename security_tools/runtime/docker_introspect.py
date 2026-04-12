@@ -1,19 +1,19 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 from pathlib import Path
-from typing import Any
 
 
-def _run(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(cmd, text=True, capture_output=True, check=check)
+def _run(cmd: list[str]) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(cmd, text=True, capture_output=True, check=True)
 
 
 def docker_available() -> bool:
     try:
-        _run(["docker", "version"], check=True)
+        _run(["docker", "version"])
         return True
     except Exception:
         return False
@@ -21,24 +21,22 @@ def docker_available() -> bool:
 
 def image_exists(image: str) -> bool:
     try:
-        _run(["docker", "image", "inspect", image], check=True)
+        _run(["docker", "image", "inspect", image])
         return True
     except Exception:
         return False
 
 
-def inspect_image(image: str) -> dict[str, Any]:
-    cp = _run(["docker", "image", "inspect", image], check=True)
+def inspect_image(image: str) -> dict:
+    cp = _run(["docker", "image", "inspect", image])
     data = json.loads(cp.stdout)
-    if not isinstance(data, list) or not data:
-        return {}
-    first = data[0]
-    return first if isinstance(first, dict) else {}
+    return data[0] if data else {}
 
 
-def parse_dockerfile(dockerfile_path: str | Path = "Dockerfile") -> dict[str, Any]:
-    path = Path(dockerfile_path)
-    if not path.exists():
+def parse_dockerfile(path: str = "Dockerfile") -> dict:
+    dockerfile = Path(path)
+
+    if not dockerfile.exists():
         return {
             "base_images": [],
             "exposed_ports": [],
@@ -47,81 +45,72 @@ def parse_dockerfile(dockerfile_path: str | Path = "Dockerfile") -> dict[str, An
             "raw": "",
         }
 
-    raw = path.read_text(encoding="utf-8", errors="ignore")
-    base_images = re.findall(r"(?im)^\\s*FROM\\s+([^\\s]+)", raw)
-    expose_matches = re.findall(r"(?im)^\\s*EXPOSE\\s+(.+)$", raw)
+    raw = dockerfile.read_text()
 
-    exposed_ports: list[int] = []
-    for line in expose_matches:
-        for token in line.split():
-            token = token.split("/")[0].strip()
-            if token.isdigit():
-                exposed_ports.append(int(token))
+    base_images = re.findall(r"^FROM\s+([^\s]+)", raw, re.MULTILINE)
 
-    entrypoint_match = re.search(r"(?im)^\\s*ENTRYPOINT\\s+(.+)$", raw)
-    cmd_match = re.search(r"(?im)^\\s*CMD\\s+(.+)$", raw)
+    exposed_ports = []
+    for match in re.findall(r"^EXPOSE\s+(.+)", raw, re.MULTILINE):
+        for port in match.split():
+            try:
+                exposed_ports.append(int(port.split("/")[0]))
+            except Exception:
+                pass
+
+    entrypoint_match = re.search(r"^ENTRYPOINT\s+(.+)", raw, re.MULTILINE)
+    cmd_match = re.search(r"^CMD\s+(.+)", raw, re.MULTILINE)
 
     return {
         "base_images": base_images,
         "exposed_ports": sorted(set(exposed_ports)),
-        "entrypoint": entrypoint_match.group(1).strip() if entrypoint_match else None,
-        "cmd": cmd_match.group(1).strip() if cmd_match else None,
+        "entrypoint": entrypoint_match.group(1) if entrypoint_match else None,
+        "cmd": cmd_match.group(1) if cmd_match else None,
         "raw": raw,
     }
 
 
-def repo_hints(root: str | Path = ".") -> dict[str, Any]:
-    root_path = Path(root)
+def repo_hints(context_dir: str = ".") -> dict:
+    hints = {
+        "has_package_json": False,
+        "has_requirements_txt": False,
+        "has_nginx_conf": False,
+        "has_server_xml": False,
+        "has_application_yml": False,
+        "has_application_properties": False,
+        "file_names": [],
+    }
 
-    ignored_dir_names = {
+    ignore_dirs = {
         ".git",
-        ".venv",
-        "venv",
-        "node_modules",
-        "__pycache__",
-        ".mypy_cache",
-        ".pytest_cache",
-        "dist",
-        "build",
-        ".tox",
         ".security-tools",
+        ".venv",
+        "__pycache__",
+        ".pytest_cache",
     }
 
-    ignored_file_names = {
-        "runtime-report.json",
-        "runtime-summary.md",
-    }
+    for root, dirs, files in os.walk(context_dir):
+        dirs[:] = [d for d in dirs if d not in ignore_dirs]
 
-    file_names: set[str] = set()
+        for f in files:
+            hints["file_names"].append(f)
 
-    for path in root_path.rglob("*"):
-        if any(part in ignored_dir_names for part in path.parts):
-            continue
-        if path.is_file():
-            name = path.name.lower()
-            if name in ignored_file_names:
-                continue
-            file_names.add(name)
+            if f == "package.json":
+                hints["has_package_json"] = True
 
-    return {
-        "has_package_json": "package.json" in file_names,
-        "has_requirements_txt": "requirements.txt" in file_names,
-        "has_nginx_conf": "nginx.conf" in file_names,
-        "has_server_xml": "server.xml" in file_names,
-        "has_application_yml": "application.yml" in file_names or "application.yaml" in file_names,
-        "has_application_properties": "application.properties" in file_names,
-        "file_names": sorted(file_names),
-    }
+            if f == "requirements.txt":
+                hints["has_requirements_txt"] = True
 
-def derive_ports_from_image_inspect(image_inspect: dict[str, Any]) -> list[int]:
-    cfg = image_inspect.get("Config", {}) if isinstance(image_inspect, dict) else {}
-    exposed = cfg.get("ExposedPorts", {}) if isinstance(cfg, dict) else {}
-    ports: list[int] = []
+            if f == "nginx.conf":
+                hints["has_nginx_conf"] = True
 
-    if isinstance(exposed, dict):
-        for key in exposed.keys():
-            token = str(key).split("/")[0]
-            if token.isdigit():
-                ports.append(int(token))
+            if f == "server.xml":
+                hints["has_server_xml"] = True
 
-    return sorted(set(ports))
+            if f == "application.yml":
+                hints["has_application_yml"] = True
+
+            if f == "application.properties":
+                hints["has_application_properties"] = True
+
+    hints["file_names"] = sorted(set(hints["file_names"]))
+    return hints

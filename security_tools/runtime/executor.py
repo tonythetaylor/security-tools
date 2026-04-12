@@ -5,6 +5,8 @@ import random
 import subprocess
 import time
 
+from security_tools.runtime.contracts import load_runtime_contract, merge_contract
+from security_tools.runtime.dependencies import start_dependencies
 from security_tools.runtime.detector import detect_runtime_profile
 from security_tools.runtime.docker_introspect import (
     docker_available,
@@ -15,7 +17,6 @@ from security_tools.runtime.docker_introspect import (
 )
 from security_tools.runtime.models import RuntimeReport, RuntimeStartup, HttpCheck
 from security_tools.runtime.policy import apply_runtime_policy, load_runtime_policy
-from security_tools.runtime.probes import http_check, wait_for_tcp
 
 
 def _run(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess[str]:
@@ -75,7 +76,19 @@ def _exec_http_probe(container_name: str, port: int, path: str) -> bool:
     commands = [
         ["docker", "exec", container_name, "sh", "-lc", f"curl -fsS {url}"],
         ["docker", "exec", container_name, "sh", "-lc", f"wget -qO- {url}"],
-        ["docker", "exec", container_name, "sh", "-lc", f"python - <<'PY'\nimport urllib.request\nurllib.request.urlopen('{url}')\nPY"],
+        [
+            "docker",
+            "exec",
+            container_name,
+            "sh",
+            "-lc",
+            (
+                "python - <<'PY'\n"
+                "import urllib.request\n"
+                f"urllib.request.urlopen('{url}')\n"
+                "PY"
+            ),
+        ],
     ]
 
     for cmd in commands:
@@ -119,9 +132,14 @@ def run_runtime_verification(
     repo_hint_info = repo_hints(context_dir)
 
     profile = detect_runtime_profile(image_inspect, dockerfile_info, repo_hint_info)
+
+    contract = load_runtime_contract()
+    profile = merge_contract(profile, contract)
+
+    started_dependencies = start_dependencies(contract)
     policy = load_runtime_policy()
 
-    container_name = f"runtime-verify-{random.randint(10000,99999)}"
+    container_name = f"runtime-verify-{random.randint(10000, 99999)}"
 
     start = time.time()
     startup = RuntimeStartup()
@@ -135,14 +153,20 @@ def run_runtime_verification(
         metadata={
             "dockerfile": dockerfile_info,
             "repo_hints": repo_hint_info,
+            "runtime_contract": contract,
+            "started_dependencies": started_dependencies,
         },
     )
 
+    run_cmd = ["docker", "run", "-d", "--name", container_name]
+
+    for env_name, env_value in contract.get("env", {}).items():
+        run_cmd += ["-e", f"{env_name}={env_value}"]
+
+    run_cmd.append(image)
+
     try:
-        cp = _run(
-            ["docker", "run", "-d", "--name", container_name, image],
-            check=True,
-        )
+        cp = _run(run_cmd, check=True)
         container_id = cp.stdout.strip()
         startup.container_started = True
         report.metadata["container_id"] = container_id
@@ -166,10 +190,7 @@ def run_runtime_verification(
         _cleanup(container_name)
         return apply_runtime_policy(report, policy)
 
-    # -----------------------------
-    # PRIMARY: In-container probing
-    # -----------------------------
-    listening_ports = []
+    listening_ports: list[int] = []
 
     for port in profile.candidate_http_ports:
         for path in profile.candidate_http_paths:
@@ -185,14 +206,10 @@ def run_runtime_verification(
                 )
                 break
 
-    report.listening_ports = listening_ports
+    report.listening_ports = sorted(set(listening_ports))
 
-    # -----------------------------
-    # Fallback: External probing
-    # -----------------------------
     if not listening_ports:
         container_logs = _tail_container_logs(container_name)
-
         if _logs_indicate_ready(container_logs):
             report.warnings.append(
                 "Logs indicate service startup, but readiness probe inconclusive."
