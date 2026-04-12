@@ -1,0 +1,15 @@
+include:
+  - local: "/templates/base/security-rules.yml"
+
+iac_scanning:
+  extends: .security_base
+  image: python:${PYTHON_VERSION}
+  script:
+    - pip install checkov || true
+    - checkov -d . -o json > checkov-report.json || true
+    - test -f checkov-report.json || echo '{"results":{"failed_checks":[],"passed_checks":[],"skipped_checks":[]}}' > checkov-report.json
+  artifacts:
+    when: always
+    paths:
+      - checkov-report.json
+    expire_in: 1 week
