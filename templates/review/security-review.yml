@@ -63,12 +63,15 @@ security_review:
       REVIEW_RC=$?
 
       if [ $REVIEW_RC -eq 1 ]; then
+        echo '{"status":"block","message":"Security review returned BLOCK"}' > security-review-status.json
         echo "Security review returned BLOCK"
         exit 1
       elif [ $REVIEW_RC -eq 2 ]; then
+        echo '{"status":"operational_error","step":"review","message":"Security review returned operational error"}' > security-review-status.json
         echo "Security review returned OPERATIONAL ERROR"
         exit 2
       else
+        echo '{"status":"pass","message":"Security review passed"}' > security-review-status.json
         echo "Security review passed"
         exit 0
       fi
