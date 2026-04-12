@@ -13,7 +13,7 @@ from security_tools.runtime.docker_introspect import (
     parse_dockerfile,
     repo_hints,
 )
-from security_tools.runtime.models import RuntimeReport, RuntimeStartup
+from security_tools.runtime.models import RuntimeReport, RuntimeStartup, HttpCheck
 from security_tools.runtime.policy import apply_runtime_policy, load_runtime_policy
 from security_tools.runtime.probes import http_check, wait_for_tcp
 
@@ -176,7 +176,12 @@ def run_runtime_verification(
             if _exec_http_probe(container_name, port, path):
                 listening_ports.append(port)
                 report.http_checks.append(
-                    http_check(f"http://127.0.0.1:{port}{path}")
+                    HttpCheck(
+                        url=f"http://127.0.0.1:{port}{path}",
+                        status="PASS",
+                        http_status=200,
+                        detail="In-container HTTP probe succeeded.",
+                    )
                 )
                 break
 
