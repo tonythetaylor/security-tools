@@ -84,16 +84,24 @@ def repo_hints(root: str | Path = ".") -> dict[str, Any]:
         "dist",
         "build",
         ".tox",
+        ".security-tools",
+    }
+
+    ignored_file_names = {
+        "runtime-report.json",
+        "runtime-summary.md",
     }
 
     file_names: set[str] = set()
 
     for path in root_path.rglob("*"):
-        parts = set(path.parts)
-        if ignored_dir_names.intersection(parts):
+        if any(part in ignored_dir_names for part in path.parts):
             continue
         if path.is_file():
-            file_names.add(path.name.lower())
+            name = path.name.lower()
+            if name in ignored_file_names:
+                continue
+            file_names.add(name)
 
     return {
         "has_package_json": "package.json" in file_names,
@@ -104,7 +112,6 @@ def repo_hints(root: str | Path = ".") -> dict[str, Any]:
         "has_application_properties": "application.properties" in file_names,
         "file_names": sorted(file_names),
     }
-
 
 def derive_ports_from_image_inspect(image_inspect: dict[str, Any]) -> list[int]:
     cfg = image_inspect.get("Config", {}) if isinstance(image_inspect, dict) else {}
