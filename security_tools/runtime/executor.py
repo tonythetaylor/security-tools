@@ -41,6 +41,25 @@ def _container_running(container_name: str) -> tuple[bool, int | None]:
         return False, None
 
 
+def _container_ip(container_name: str) -> str | None:
+    try:
+        cp = _run(["docker", "inspect", container_name], check=True)
+        data = json.loads(cp.stdout)
+        if not isinstance(data, list) or not data:
+            return None
+
+        networks = data[0].get("NetworkSettings", {}).get("Networks", {})
+        if isinstance(networks, dict):
+            for _, cfg in networks.items():
+                ip = cfg.get("IPAddress")
+                if ip:
+                    return str(ip)
+
+        return None
+    except Exception:
+        return None
+
+
 def _cleanup(container_name: str) -> None:
     _run(["docker", "rm", "-f", container_name], check=False)
 
@@ -103,8 +122,11 @@ def run_runtime_verification(
     )
 
     container_name = f"runtime-verify-{random.randint(10000, 99999)}"
+
+    # Bind only the most likely ports instead of every guessed port.
     port_args: list[str] = []
-    for port in sorted(set(profile.expected_ports or profile.candidate_http_ports)):
+    candidate_ports = sorted(set(profile.candidate_http_ports or profile.expected_ports))
+    for port in candidate_ports[:2]:
         if 1 <= port <= 65535:
             port_args += ["-p", f"{port}:{port}"]
 
@@ -122,15 +144,17 @@ def run_runtime_verification(
         },
     )
 
-    try:
-        cp = _run(["docker", "run", "-d", "--name", container_name, *port_args, image], check=True)
-        container_id = cp.stdout.strip()
-        startup.container_started = True
-        report.metadata["container_id"] = container_id
-    except Exception as exc:
+    cp = _run(["docker", "run", "-d", "--name", container_name, *port_args, image], check=False)
+    if cp.returncode != 0:
         report.verdict = "BLOCK"
-        report.errors.append(f"Failed to start container: {exc}")
+        report.errors.append(
+            f"Failed to start container: {cp.stderr.strip() or cp.stdout.strip() or 'docker run failed'}"
+        )
         return apply_runtime_policy(report, policy)
+
+    container_id = cp.stdout.strip()
+    startup.container_started = True
+    report.metadata["container_id"] = container_id
 
     time.sleep(3)
     running, exit_code = _container_running(container_name)
@@ -145,10 +169,18 @@ def run_runtime_verification(
         _cleanup(container_name)
         return apply_runtime_policy(report, policy)
 
+    # Probe the container IP instead of 127.0.0.1 so DinD jobs work correctly.
+    target_host = _container_ip(container_name) or "127.0.0.1"
+    report.metadata["probe_target_host"] = target_host
+
     listening_ports: list[int] = []
     checked_ports = sorted(set(profile.expected_ports or profile.candidate_http_ports))
     for port in checked_ports:
-        check = wait_for_tcp("127.0.0.1", port, timeout_seconds=min(startup_timeout_seconds, 15))
+        check = wait_for_tcp(
+            target_host,
+            port,
+            timeout_seconds=min(startup_timeout_seconds, 15),
+        )
         report.port_checks.append(check)
         if check.status == "PASS":
             listening_ports.append(port)
@@ -157,7 +189,7 @@ def run_runtime_verification(
 
     for port in sorted(set(profile.candidate_http_ports)):
         for path in profile.candidate_http_paths:
-            url = f"http://127.0.0.1:{port}{path}"
+            url = f"http://{target_host}:{port}{path}"
             check = http_check(url)
             report.http_checks.append(check)
             if check.status == "PASS":
