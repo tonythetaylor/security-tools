@@ -1,0 +1,17 @@
+stages:
+  - validate
+
+default:
+  tags:
+    - docker
+
+validate_repo:
+  stage: validate
+  image: python:3.12
+  script:
+    - python --version
+    - test -f templates/security-review.yml
+    - test -f cli/run_security_review.py
+    - test -f requirements.txt
+    - test -d security_tools
+    - echo "security-tools repo validation passed"
