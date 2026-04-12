@@ -67,6 +67,67 @@ def build_arg_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def summarize_runtime_report(runtime_report: dict[str, Any] | None) -> str:
+    if not runtime_report:
+        return "Runtime verification: not provided."
+
+    verdict = runtime_report.get("verdict", "UNKNOWN")
+    image = runtime_report.get("image", "unknown")
+    profile = runtime_report.get("profile", {}) or {}
+    startup = runtime_report.get("startup", {}) or {}
+    listening_ports = runtime_report.get("listening_ports", []) or []
+    warnings = runtime_report.get("warnings", []) or []
+    errors = runtime_report.get("errors", []) or []
+
+    lines = [
+        "## Runtime Verification",
+        f"- Verdict: `{verdict}`",
+        f"- Image: `{image}`",
+        f"- Profile: `{profile.get('name', 'unknown')}`",
+        f"- Container started: `{startup.get('container_started', False)}`",
+        f"- Container running: `{startup.get('container_running', False)}`",
+        f"- Startup seconds: `{startup.get('startup_seconds', 0)}`",
+        f"- Listening ports: `{', '.join(str(p) for p in listening_ports) if listening_ports else 'none'}`",
+    ]
+
+    if warnings:
+        lines.append("- Warnings:")
+        for warning in warnings:
+            lines.append(f"  - {warning}")
+
+    if errors:
+        lines.append("- Errors:")
+        for error in errors:
+            lines.append(f"  - {error}")
+
+    return "\n".join(lines)
+
+
+def final_verdict_from_review_and_runtime(
+    review_verdict: str,
+    runtime_report: dict[str, Any] | None,
+) -> str:
+    if not runtime_report:
+        return review_verdict
+
+    runtime_verdict = str(runtime_report.get("verdict", "PASS")).upper()
+
+    if runtime_verdict == "OPERATIONAL_ERROR":
+        return "OPERATIONAL_ERROR"
+
+    if runtime_verdict == "BLOCK":
+        return "BLOCK"
+
+    if runtime_verdict == "WARN":
+        if review_verdict == "BLOCK":
+            return "BLOCK"
+        if review_verdict == "OPERATIONAL_ERROR":
+            return "OPERATIONAL_ERROR"
+        return "WARN"
+
+    return review_verdict
+
+
 def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
@@ -91,11 +152,17 @@ def main() -> int:
         "iac_scanning": "checkov-report.json",
     }
 
+    runtime_report = load_json("runtime-report.json")
+    runtime_present = runtime_report is not None
+
     present_scans = [
         scan_name
         for scan_name, file_name in scan_files.items()
         if Path(file_name).exists()
     ]
+
+    if runtime_present:
+        present_scans.append("runtime_verification")
 
     if not present_scans:
         print(
@@ -106,6 +173,7 @@ def main() -> int:
         print("Expected one or more of:", file=sys.stderr)
         for _, file_name in scan_files.items():
             print(f"  - {file_name}", file=sys.stderr)
+        print("  - runtime-report.json", file=sys.stderr)
         return 2
 
     findings = []
@@ -139,7 +207,23 @@ def main() -> int:
         print(f"Operational error while building review: {exc}", file=sys.stderr)
         return 2
 
-    print(review.model_dump_json(indent=2))
+    runtime_summary = summarize_runtime_report(runtime_report)
+    final_verdict = final_verdict_from_review_and_runtime(
+        str(review.verdict).upper(),
+        runtime_report,
+    )
+
+    output = {
+        "review": review.model_dump(),
+        "runtime_report": runtime_report,
+        "runtime_summary": runtime_summary,
+        "final_verdict": final_verdict,
+    }
+    print(json.dumps(output, indent=2))
+
+    mr_comment = review.mr_comment
+    if runtime_present:
+        mr_comment = f"{mr_comment}\n\n{runtime_summary}"
 
     if api_token and mr_iid and enable_comments:
         try:
@@ -147,15 +231,15 @@ def main() -> int:
             api.post_merge_request_note(
                 project_id=int(project_id),
                 merge_request_iid=int(mr_iid),
-                body=review.mr_comment,
+                body=mr_comment,
             )
         except Exception as exc:
             print(f"Failed to post MR comment: {exc}", file=sys.stderr)
             return 2
 
-    if review.verdict == "BLOCK":
+    if final_verdict == "BLOCK":
         return 1
-    if review.verdict == "OPERATIONAL_ERROR":
+    if final_verdict == "OPERATIONAL_ERROR":
         return 2
     return 0
 
