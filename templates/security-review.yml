@@ -126,16 +126,22 @@ security_review:
   needs:
     - job: dependency_scan
       optional: true
+      artifacts: true
     - job: secret_detection
       optional: true
+      artifacts: true
     - job: sast
       optional: true
+      artifacts: true
     - job: container_scanning
       optional: true
+      artifacts: true
     - job: dockerfile_scan
       optional: true
+      artifacts: true
     - job: iac_scanning
       optional: true
+      artifacts: true
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_IID'
   before_script:
@@ -149,5 +155,7 @@ security_review:
         cd ..
       fi
     - python -m pip install ./.security-tools
+    - ls -la
+    - find . -maxdepth 2 -type f | sort
     - python -m security_tools.cli
   allow_failure: false
