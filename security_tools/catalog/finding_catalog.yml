@@ -1,0 +1,103 @@
+default:
+  title: "Security finding requires review"
+  default_severity: "medium"
+  rationale: "This finding requires security review and triage."
+  suggested_fix: "Review the finding, confirm exploitability or impact, and apply the appropriate remediation."
+  compliance_refs: []
+
+findings:
+  secret_exposure:
+    title: "Potential secret exposure detected"
+    default_severity: "high"
+    rationale: "Secrets committed to source control can lead to credential compromise and downstream system exposure."
+    suggested_fix: "Remove the secret from code, rotate it, and migrate secret handling to a secure store such as Vault or environment-based injection."
+    compliance_refs:
+      - "NIST IA-5"
+      - "NIST SC-28"
+      - "FedRAMP SC-28"
+
+  dependency_vulnerability:
+    title: "Vulnerable dependency detected"
+    default_severity: "medium"
+    rationale: "Known vulnerable dependencies increase application exposure and should be reviewed for upgrade or replacement."
+    suggested_fix: "Upgrade the affected package to a fixed version or remove the dependency if it is unnecessary."
+    compliance_refs:
+      - "NIST SI-2"
+      - "NIST RA-5"
+      - "FedRAMP RA-5"
+
+  container_vulnerability:
+    title: "Container vulnerability detected"
+    default_severity: "high"
+    rationale: "Container images with known vulnerabilities increase the runtime attack surface and patching burden."
+    suggested_fix: "Rebuild the image with patched base layers and updated packages, and remove unnecessary dependencies from the runtime image."
+    compliance_refs:
+      - "NIST SI-2"
+      - "NIST CM-6"
+      - "FedRAMP CM-6"
+
+  dockerfile_issue:
+    title: "Dockerfile security issue detected"
+    default_severity: "medium"
+    rationale: "Dockerfile build patterns can unintentionally expand the image attack surface or weaken reproducibility."
+    suggested_fix: "Adjust the Dockerfile to minimize packages, use targeted COPY statements, and separate build/runtime concerns."
+    compliance_refs:
+      - "NIST CM-6"
+      - "NIST SA-11"
+      - "CIS Docker Benchmark"
+
+  iac_misconfiguration:
+    title: "Infrastructure as Code misconfiguration detected"
+    default_severity: "high"
+    rationale: "Infrastructure misconfigurations can introduce exposed services, weak identity controls, or insecure defaults."
+    suggested_fix: "Review the failing control, update the IaC definition, and re-run validation before promotion."
+    compliance_refs:
+      - "NIST CM-6"
+      - "NIST AC-3"
+      - "FedRAMP CM-6"
+
+  static_misconfiguration:
+    title: "Static security issue detected"
+    default_severity: "medium"
+    rationale: "Static findings may indicate insecure patterns or risky defaults in the codebase or build definitions."
+    suggested_fix: "Review the flagged issue, confirm exploitability, and remediate insecure code or configuration patterns."
+    compliance_refs:
+      - "NIST SA-11"
+      - "NIST CM-3"
+
+rules:
+  docker.broad_copy:
+    title: "Dockerfile uses broad COPY pattern"
+    default_severity: "high"
+    rationale: "Broad COPY patterns can move unnecessary files into runtime images."
+    suggested_fix: "Replace broad COPY with targeted paths only and maintain a strict .dockerignore."
+    compliance_refs:
+      - "NIST CM-6"
+      - "FedRAMP CM-6"
+
+  docker.single_stage:
+    title: "Dockerfile may not separate build and runtime stages"
+    default_severity: "medium"
+    rationale: "Single-stage builds commonly retain build tools in runtime images."
+    suggested_fix: "Use multi-stage builds and copy only runtime artifacts."
+    compliance_refs:
+      - "NIST CM-6"
+      - "NIST SI-2"
+
+  ci.artifacts_scope:
+    title: "CI/CD YAML contains pattern requiring security review: artifacts:"
+    default_severity: "medium"
+    rationale: "Pipeline configuration patterns can unintentionally broaden deploy scope or artifact scope."
+    suggested_fix: "Review artifact boundaries to ensure only deployable outputs are persisted."
+    compliance_refs:
+      - "NIST CM-3"
+      - "NIST SA-11"
+
+  ci.paths_scope:
+    title: "CI/CD YAML contains pattern requiring security review: paths:"
+    default_severity: "medium"
+    rationale: "Pipeline configuration patterns can unintentionally broaden deploy scope or artifact scope."
+    suggested_fix: "Artifact path collection should be scoped to release outputs only."
+    compliance_refs:
+      - "NIST CM-3"
+      - "NIST SA-11"

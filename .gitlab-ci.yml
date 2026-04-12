@@ -37,9 +37,40 @@ validate_repo:
     - test -d security_tools
     - test -f security_tools/__init__.py
     - test -f security_tools/cli.py
-    - test -f security_tools/gitlab_api.py
-    - test -f security_tools/parsers.py
-    - test -f security_tools/reviewer.py
+    - test -f security_tools/models.py
+
+    # Clients package
+    - test -d security_tools/clients
+    - test -f security_tools/clients/__init__.py
+    - test -f security_tools/clients/gitlab_api.py
+
+    # Catalog files
+    - test -d security_tools/catalog
+    - test -f security_tools/catalog/finding_catalog.yml
+    - test -f security_tools/catalog/policy.yml
+
+    # Loader files
+    - test -d security_tools/loaders
+    - test -f security_tools/loaders/__init__.py
+    - test -f security_tools/loaders/catalog_loader.py
+    - test -f security_tools/loaders/policy_loader.py
+
+    # Parser package
+    - test -d security_tools/parsers
+    - test -f security_tools/parsers/__init__.py
+    - test -f security_tools/parsers/common.py
+    - test -f security_tools/parsers/safety.py
+    - test -f security_tools/parsers/gitleaks.py
+    - test -f security_tools/parsers/hadolint.py
+    - test -f security_tools/parsers/checkov.py
+    - test -f security_tools/parsers/trivy.py
+
+    # Review package
+    - test -d security_tools/review
+    - test -f security_tools/review/__init__.py
+    - test -f security_tools/review/reviewer.py
+    - test -f security_tools/review/heuristics.py
+    - test -f security_tools/review/renderers.py
 
     # Install/package validation
     - pip install .

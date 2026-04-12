@@ -1,0 +1,31 @@
+required_scans:
+  merge_request:
+    - dependency_scanning
+    - secret_detection
+    - sast
+    - container_scanning
+    - iac_scanning
+
+  default_branch:
+    - dependency_scanning
+    - secret_detection
+    - sast
+    - container_scanning
+    - iac_scanning
+
+verdict_rules:
+  block_if_missing_scans: true
+  operational_error_on_warnings: true
+
+  block_on_severities:
+    - critical
+    - high
+
+  warn_on_severities:
+    - medium
+
+always_block_categories:
+  - secret_detection
+
+always_block_finding_types:
+  - secret_exposure

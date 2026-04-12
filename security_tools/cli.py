@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from security_tools.gitlab_api import GitLabAPI
+from security_tools.clients import GitLabAPI
 from security_tools.parsers import (
     parse_checkov,
     parse_gitleaks,
@@ -14,7 +14,7 @@ from security_tools.parsers import (
     parse_safety,
     parse_trivy,
 )
-from security_tools.reviewer import build_review
+from security_tools.review import SecurityReviewer
 
 
 def load_json(path: str) -> Any | None:
