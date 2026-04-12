@@ -36,6 +36,8 @@ container_runtime_verify:
     - python -m pip install ./.security-tools
 
   script:
+    - echo '{"status":"starting"}' > runtime-report.json
+    - echo '# Runtime Verification Summary' > runtime-summary.md
     - |
       python -m security_tools.runtime.cli \
         --image "${RUNTIME_IMAGE_TAG}" \
