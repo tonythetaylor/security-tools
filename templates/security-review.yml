@@ -1,8 +1,3 @@
-include:
-  - project: "root/security-tools"
-    ref: "main"
-    file: "/templates/security-scans.yml"
-    
 security_review:
   stage: review
   image: python:${PYTHON_VERSION}
