@@ -12,6 +12,7 @@ security_tools.egg-info/top_level.txt
 security_tools/catalog/__init__.py
 security_tools/catalog/finding_catalog.yml
 security_tools/catalog/policy.yml
+security_tools/catalog/runtime-contract.yml
 security_tools/catalog/runtime_policy.yml
 security_tools/clients/__init__.py
 security_tools/clients/gitlab_api.py
@@ -33,6 +34,8 @@ security_tools/review/reviewer.py
 security_tools/review/severity.py
 security_tools/runtime/__init__.py
 security_tools/runtime/cli.py
+security_tools/runtime/contracts.py
+security_tools/runtime/dependencies.py
 security_tools/runtime/detector.py
 security_tools/runtime/docker_introspect.py
 security_tools/runtime/executor.py
