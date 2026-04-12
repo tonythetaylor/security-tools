@@ -12,6 +12,13 @@ from security_tools.runtime.profiles.spring_boot import spring_boot_profile
 from security_tools.runtime.profiles.tomcat import tomcat_profile
 
 
+def normalize_profile(profile: RuntimeProfile) -> RuntimeProfile:
+    profile.expected_ports = list(dict.fromkeys(profile.expected_ports or []))
+    profile.candidate_http_ports = list(dict.fromkeys(profile.candidate_http_ports or []))
+    profile.candidate_http_paths = list(dict.fromkeys(profile.candidate_http_paths or []))
+    return profile
+
+
 def detect_runtime_profile(
     image_inspect: dict[str, Any] | None = None,
     dockerfile_info: dict[str, Any] | None = None,
@@ -35,23 +42,23 @@ def detect_runtime_profile(
     raw = f"{raw} {dockerfile_info.get('entrypoint') or ''} {dockerfile_info.get('cmd') or ''} {cmd_blob} {entry_blob}".lower()
 
     if "nginx" in raw or repo_hint_info.get("has_nginx_conf"):
-        return nginx_profile(ports)
+        return normalize_profile(nginx_profile(ports))
 
     if "tomcat" in raw or "catalina" in raw or repo_hint_info.get("has_server_xml"):
-        return tomcat_profile(ports)
+        return normalize_profile(tomcat_profile(ports))
 
     if (
         "spring" in raw
         or repo_hint_info.get("has_application_yml")
         or repo_hint_info.get("has_application_properties")
     ) and ("java" in raw or "jar" in raw):
-        return spring_boot_profile(ports)
+        return normalize_profile(spring_boot_profile(ports))
 
     if (
         any(token in raw for token in ["uvicorn", "gunicorn", "flask", "fastapi"])
         or repo_hint_info.get("has_requirements_txt")
     ):
-        return python_web_profile(ports)
+        return normalize_profile(python_web_profile(ports))
 
     if (
         "node" in raw
@@ -59,6 +66,6 @@ def detect_runtime_profile(
         or "npm" in raw
         or "yarn" in raw
     ):
-        return node_web_profile(ports)
+        return normalize_profile(node_web_profile(ports))
 
-    return generic_profile(ports)
+    return normalize_profile(generic_profile(ports))

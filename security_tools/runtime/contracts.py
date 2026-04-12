@@ -27,6 +27,7 @@ def merge_contract(profile, contract: dict):
 
     if startup.get("port"):
         profile.expected_ports = [startup["port"]]
+        profile.candidate_http_ports = [startup["port"]]
 
     if readiness.get("http_paths"):
         profile.candidate_http_paths = readiness["http_paths"]
