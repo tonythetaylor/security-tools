@@ -67,7 +67,7 @@ security-tools/
 
 ---
 
-# ⚡ Quick Start
+# Quick Start
 
 Include the full security suite:
 
@@ -92,7 +92,7 @@ That's it — all scans and review logic will run automatically.
 
 ---
 
-# 🔍 Security Pipeline Flow
+# Security Pipeline Flow
 
 ```text
 build
