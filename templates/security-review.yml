@@ -137,8 +137,7 @@ security_review:
     - job: iac_scanning
       optional: true
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-    - if: '$CI_MERGE_REQUEST_IID'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_IID'
   before_script:
     - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
   script:
@@ -150,5 +149,5 @@ security_review:
         cd ..
       fi
     - python -m pip install -r .security-tools/requirements.txt
-    - python .security-tools/cli/run_security_review.py
+    - PYTHONPATH=.security-tools python .security-tools/cli/run_security_review.py
   allow_failure: false
