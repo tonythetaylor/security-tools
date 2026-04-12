@@ -108,6 +108,8 @@ validate_repo:
     - test -f security_tools/runtime/renderers.py
     - test -f security_tools/runtime/executor.py
     - test -f security_tools/runtime/cli.py
+    - test -f security_tools/runtime/contracts.py
+    - test -f security_tools/runtime/dependencies.py
 
     ########################################################
     # Runtime profiles
@@ -121,6 +123,12 @@ validate_repo:
     - test -f security_tools/runtime/profiles/python_web.py
     - test -f security_tools/runtime/profiles/node_web.py
     - test -f security_tools/runtime/profiles/spring_boot.py
+
+    ########################################################
+    # Planning module
+    ########################################################
+
+    - test -d security_tools/planning || true
 
     ########################################################
     # Runtime templates
@@ -155,6 +163,8 @@ validate_repo:
     - python -c "from security_tools.runtime.executor import run_runtime_verification"
     - python -c "from security_tools.runtime.detector import detect_runtime_profile"
     - python -c "from security_tools.runtime.policy import load_runtime_policy"
+    - python -c "from security_tools.runtime.contracts import load_runtime_contract, merge_contract"
+    - python -c "from security_tools.runtime.dependencies import start_dependencies"
 
     ########################################################
     # Catalog / policy loader smoke tests
@@ -167,5 +177,6 @@ validate_repo:
     ########################################################
 
     - python -c "from security_tools.runtime.policy import load_runtime_policy; print(load_runtime_policy())"
-    
+    - python -c "from security_tools.runtime.contracts import load_runtime_contract; print(load_runtime_contract())"
+
     - echo "security-tools repo validation passed"
