@@ -1,3 +1,10 @@
+stages:
+  - validate
+
+default:
+  tags:
+    - docker
+
 validate_repo:
   stage: validate
   image: python:3.12
