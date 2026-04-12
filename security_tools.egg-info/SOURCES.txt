@@ -12,7 +12,6 @@ security_tools.egg-info/top_level.txt
 security_tools/catalog/__init__.py
 security_tools/catalog/finding_catalog.yml
 security_tools/catalog/policy.yml
-security_tools/catalog/runtime-contract.yml
 security_tools/catalog/runtime_policy.yml
 security_tools/clients/__init__.py
 security_tools/clients/gitlab_api.py

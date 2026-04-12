@@ -69,35 +69,51 @@ def _logs_indicate_ready(logs: str) -> bool:
     ]
     return any(marker in logs for marker in markers)
 
-
-def _exec_http_probe(container_name: str, port: int, path: str) -> bool:
-    url = f"http://127.0.0.1:{port}{path}"
+def _exec_http_probe(container_name: str, port: int, path: str) -> tuple[bool, str, int | None]:
+    http_url = f"http://127.0.0.1:{port}{path}"
+    https_url = f"https://127.0.0.1:{port}{path}"
 
     commands = [
-        ["docker", "exec", container_name, "sh", "-lc", f"curl -fsS {url}"],
-        ["docker", "exec", container_name, "sh", "-lc", f"wget -qO- {url}"],
-        [
-            "docker",
-            "exec",
-            container_name,
-            "sh",
-            "-lc",
-            (
-                "python - <<'PY'\n"
-                "import urllib.request\n"
-                f"urllib.request.urlopen('{url}')\n"
-                "PY"
-            ),
-        ],
+        (
+            ["docker", "exec", container_name, "sh", "-lc", f"curl -fsS {http_url} >/dev/null"],
+            http_url,
+            200,
+        ),
+        (
+            ["docker", "exec", container_name, "sh", "-lc", f"curl -kfsS {https_url} >/dev/null"],
+            https_url,
+            200,
+        ),
+        (
+            ["docker", "exec", container_name, "sh", "-lc", f"wget -qO- {http_url} >/dev/null"],
+            http_url,
+            200,
+        ),
+        (
+            [
+                "docker",
+                "exec",
+                container_name,
+                "sh",
+                "-lc",
+                (
+                    "python - <<'PY'\n"
+                    "import urllib.request\n"
+                    f"urllib.request.urlopen('{http_url}')\n"
+                    "PY"
+                ),
+            ],
+            http_url,
+            200,
+        ),
     ]
 
-    for cmd in commands:
+    for cmd, used_url, status_code in commands:
         cp = _run(cmd, check=False)
         if cp.returncode == 0:
-            return True
+            return True, used_url, status_code
 
-    return False
-
+    return False, http_url, None
 
 def run_runtime_verification(
     image: str,
@@ -194,14 +210,15 @@ def run_runtime_verification(
 
     for port in profile.candidate_http_ports:
         for path in profile.candidate_http_paths:
-            if _exec_http_probe(container_name, port, path):
+            ok, used_url, status_code = _exec_http_probe(container_name, port, path)
+            if ok:
                 listening_ports.append(port)
                 report.http_checks.append(
                     HttpCheck(
-                        url=f"http://127.0.0.1:{port}{path}",
+                        url=used_url,
                         status="PASS",
-                        http_status=200,
-                        detail="In-container HTTP probe succeeded.",
+                        http_status=status_code,
+                        detail="In-container readiness probe succeeded.",
                     )
                 )
                 break
