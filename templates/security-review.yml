@@ -124,12 +124,18 @@ security_review:
   stage: review
   image: python:${PYTHON_VERSION}
   needs:
-    - dependency_scan
-    - secret_detection
-    - sast
-    - container_scanning
-    - dockerfile_scan
-    - iac_scanning
+    - job: dependency_scan
+      optional: true
+    - job: secret_detection
+      optional: true
+    - job: sast
+      optional: true
+    - job: container_scanning
+      optional: true
+    - job: dockerfile_scan
+      optional: true
+    - job: iac_scanning
+      optional: true
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_MERGE_REQUEST_IID'
