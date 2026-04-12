@@ -33,9 +33,6 @@ validate_repo:
     - test -f templates/suites/security-scans.yml
     - test -f templates/suites/security-suite.yml
 
-    # Legacy/compat CLI wrapper if still kept
-    - test -f cli/run_security_review.py
-
     # Python package
     - test -d security_tools
     - test -f security_tools/__init__.py
