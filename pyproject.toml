@@ -26,3 +26,6 @@ include-package-data = true
 where = ["."]
 include = ["security_tools*"]
 exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"security_tools.catalog" = ["*.yml", "*.yaml"]
