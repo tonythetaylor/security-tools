@@ -163,6 +163,82 @@ validate_repo:
     - test -d security_tools/planning || true
 
     ########################################################
+    # Intelligence module
+    ########################################################
+
+    - test -d security_tools/intelligence
+    - test -f security_tools/intelligence/__init__.py
+    - test -f security_tools/intelligence/engine.py
+    - test -f security_tools/intelligence/knowledge_loader.py
+    - test -f security_tools/intelligence/models.py
+    - test -f security_tools/intelligence/prompt_builder.py
+    - test -f security_tools/intelligence/retriever.py
+    - test -f security_tools/intelligence/recommendation_engine.py
+
+    ########################################################
+    # Intelligence providers
+    ########################################################
+
+    - test -d security_tools/intelligence/providers
+    - test -f security_tools/intelligence/providers/__init__.py
+    - test -f security_tools/intelligence/providers/base.py
+    - test -f security_tools/intelligence/providers/noop.py
+    - test -f security_tools/intelligence/providers/mock.py
+
+    ########################################################
+    # Intelligence ingest module
+    ########################################################
+
+    - test -d security_tools/intelligence/ingest
+    - test -f security_tools/intelligence/ingest/__init__.py
+    - test -f security_tools/intelligence/ingest/cli.py
+    - test -f security_tools/intelligence/ingest/extractors.py
+    - test -f security_tools/intelligence/ingest/models.py
+    - test -f security_tools/intelligence/ingest/registry.py
+    - test -f security_tools/intelligence/ingest/writers.py
+
+    ########################################################
+    # Intelligence ingest splitters
+    ########################################################
+
+    - test -d security_tools/intelligence/ingest/splitters
+    - test -f security_tools/intelligence/ingest/splitters/__init__.py
+    - test -f security_tools/intelligence/ingest/splitters/cis.py
+    - test -f security_tools/intelligence/ingest/splitters/nist_800_53.py
+    - test -f security_tools/intelligence/ingest/splitters/nist_800_190.py
+    - test -f security_tools/intelligence/ingest/splitters/stig.py
+    - test -f security_tools/intelligence/ingest/splitters/fedramp.py
+
+    ########################################################
+    # Intelligence ingest mappers
+    ########################################################
+
+    - test -d security_tools/intelligence/ingest/mappers
+    - test -f security_tools/intelligence/ingest/mappers/__init__.py
+    - test -f security_tools/intelligence/ingest/mappers/cis.py
+    - test -f security_tools/intelligence/ingest/mappers/nist_800_53.py
+    - test -f security_tools/intelligence/ingest/mappers/nist_800_190.py
+    - test -f security_tools/intelligence/ingest/mappers/stig.py
+    - test -f security_tools/intelligence/ingest/mappers/fedramp.py
+
+    ########################################################
+    # Intelligence knowledge package
+    ########################################################
+
+    - test -d security_tools/intelligence/knowledge
+    - test -f security_tools/intelligence/knowledge/__init__.py
+    - test -d security_tools/intelligence/knowledge/compliance
+    - test -d security_tools/intelligence/knowledge/container
+    - test -d security_tools/intelligence/knowledge/dockerfile
+    - test -d security_tools/intelligence/knowledge/org_policies
+
+    ########################################################
+    # Optional raw knowledge sources
+    ########################################################
+
+    - test -d knowledge_sources || true
+
+    ########################################################
     # Install/package validation
     ########################################################
 
@@ -198,16 +274,34 @@ validate_repo:
     - python -c "from security_tools.loaders import load_finding_catalog, load_policy; print(load_finding_catalog()['default']); print(load_policy()['verdict_rules'])"
 
     ########################################################
-    # Runtime policy smoke test
+    # Runtime policy smoke tests
     ########################################################
 
     - python -c "from security_tools.runtime.policy import load_runtime_policy; print(load_runtime_policy())"
     - python -c "from security_tools.runtime.contracts import load_runtime_contract; print(load_runtime_contract())"
 
     ########################################################
-    # Planning smoke test
+    # Planning smoke tests
     ########################################################
 
     - python -c "from security_tools.planning import detect_stack, build_scan_plan; print('planning module loaded')"
+
+    ########################################################
+    # Intelligence smoke tests
+    ########################################################
+
+    - python -c "from security_tools.intelligence import SecurityIntelligenceEngine, NoOpLLMProvider, MockLLMProvider; engine = SecurityIntelligenceEngine(provider=MockLLMProvider()); print(engine.health())"
+    - python -c "from security_tools.intelligence.recommendation_engine import RecommendationEngine; print('recommendation engine loaded')"
+    - python -c "from security_tools.intelligence.providers.base import BaseLLMProvider; print('provider base loaded')"
+
+    ########################################################
+    # Intelligence ingest smoke tests
+    ########################################################
+
+    - python -c "from security_tools.intelligence.ingest.registry import ingest_document; print('ingest registry loaded')"
+    - python -c "from security_tools.intelligence.ingest.splitters.cis import split_cis_controls_text, split_cis_safeguards_text; print('cis splitters loaded')"
+    - python -c "from security_tools.intelligence.ingest.mappers.cis import map_cis_section; print('cis mapper loaded')"
+    - python -c "from security_tools.intelligence.ingest.splitters.nist_800_190 import split_nist_800_190_sections; print('nist 800-190 splitter loaded')"
+    - python -c "from security_tools.intelligence.ingest.mappers.nist_800_190 import map_nist_800_190_section; print('nist 800-190 mapper loaded')"
 
     - echo "security-tools repo validation passed"
