@@ -13,18 +13,89 @@ def _normalize_recommendation(
     return rec.model_dump()
 
 
-def _render_metric_block(
-    title: str,
-    values: dict[str, int] | None,
+def _render_severity_table(
+    severity_counts: dict[str, int] | None,
 ) -> list[str]:
     lines: list[str] = []
 
-    if not values:
+    if not severity_counts:
         return lines
 
-    lines.append(f"### {title}")
-    for key, value in values.items():
-        lines.append(f"- **{key}**: {value}")
+    lines.append("### Severity Dashboard")
+    lines.append("")
+    lines.append("| Severity | Count |")
+    lines.append("|----------|-------|")
+
+    ordered = ["critical", "high", "medium", "low", "info", "unknown"]
+    for sev in ordered:
+        count = severity_counts.get(sev, 0)
+        if sev == "unknown" and count == 0:
+            continue
+        lines.append(f"| {sev.capitalize()} | {count} |")
+
+    lines.append("")
+    return lines
+
+
+def _render_tool_table(
+    tool_counts: dict[str, int] | None,
+) -> list[str]:
+    lines: list[str] = []
+
+    if not tool_counts:
+        return lines
+
+    lines.append("### Tool Breakdown")
+    lines.append("")
+    lines.append("| Tool | Findings |")
+    lines.append("|------|----------|")
+
+    for tool, count in tool_counts.items():
+        lines.append(f"| {tool} | {count} |")
+
+    lines.append("")
+    return lines
+
+
+def _render_category_table(
+    category_counts: dict[str, int] | None,
+) -> list[str]:
+    lines: list[str] = []
+
+    if not category_counts:
+        return lines
+
+    lines.append("### Category Breakdown")
+    lines.append("")
+    lines.append("| Category | Findings |")
+    lines.append("|----------|----------|")
+
+    for category, count in category_counts.items():
+        lines.append(f"| {category} | {count} |")
+
+    lines.append("")
+    return lines
+
+
+def _render_scan_coverage(
+    detected: list[str],
+    missing: list[str],
+) -> list[str]:
+    lines: list[str] = []
+
+    all_scans = sorted(set(detected + missing))
+    if not all_scans:
+        return lines
+
+    lines.append("### Scan Coverage")
+    lines.append("")
+    lines.append("| Scan | Status |")
+    lines.append("|------|--------|")
+
+    for scan in all_scans:
+        status = "✅ Present" if scan in detected else "⚠️ Missing"
+        lines.append(f"| {scan} | {status} |")
+
     lines.append("")
     return lines
 
@@ -73,9 +144,10 @@ def render_mr_comment(
         lines.append(str(verdict_rationale).strip())
         lines.append("")
 
-    lines.extend(_render_metric_block("Severity Breakdown", severity_counts))
-    lines.extend(_render_metric_block("Tool Breakdown", tool_counts))
-    lines.extend(_render_metric_block("Category Breakdown", category_counts))
+    lines.extend(_render_severity_table(severity_counts))
+    lines.extend(_render_tool_table(tool_counts))
+    lines.extend(_render_category_table(category_counts))
+    lines.extend(_render_scan_coverage(detected_scans, missing_scans))
 
     if planning_context:
         lines.append("### Dynamic Planning Context")
