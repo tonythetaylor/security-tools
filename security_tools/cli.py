@@ -128,6 +128,53 @@ def final_verdict_from_review_and_runtime(
     return review_verdict
 
 
+def build_planning_context() -> dict[str, Any] | None:
+    generated_plan = load_json("scan-plan.json")
+    if isinstance(generated_plan, dict):
+        detected = generated_plan.get("detected", {}) or {}
+        return {
+            "pipeline_mode": "dynamic child pipeline",
+            "detected_stack": sorted(
+                set(
+                    list(detected.get("languages", []) or [])
+                    + list(detected.get("frameworks", []) or [])
+                    + ([detected.get("service_type")] if detected.get("service_type") else [])
+                )
+            ),
+            "deploy_targets": detected.get("deploy_targets", []) or [],
+            "runtime_contract_present": detected.get("has_runtime_contract", False),
+        }
+
+    runtime_contract = load_json("runtime-contract.json")
+    if isinstance(runtime_contract, dict):
+        service = runtime_contract.get("service", {}) or {}
+        stack = []
+        role = service.get("role")
+        if role:
+            stack.append(str(role))
+        return {
+            "pipeline_mode": "runtime contract guided",
+            "detected_stack": stack,
+            "deploy_targets": [],
+            "runtime_contract_present": True,
+        }
+
+    if Path("runtime-contract.yml").exists():
+        return {
+            "pipeline_mode": "dynamic child pipeline",
+            "detected_stack": [],
+            "deploy_targets": [],
+            "runtime_contract_present": True,
+        }
+
+    return {
+        "pipeline_mode": "static or inferred",
+        "detected_stack": [],
+        "deploy_targets": [],
+        "runtime_contract_present": False,
+    }
+
+
 def main() -> int:
     parser = build_arg_parser()
     args = parser.parse_args()
@@ -154,6 +201,7 @@ def main() -> int:
 
     runtime_report = load_json("runtime-report.json")
     runtime_present = runtime_report is not None
+    planning_context = build_planning_context()
 
     present_scans = [
         scan_name
@@ -198,6 +246,10 @@ def main() -> int:
         dockerignore_content=Path(".dockerignore").read_text(encoding="utf-8")
         if Path(".dockerignore").exists()
         else None,
+        metadata={
+            "runtime_report": runtime_report,
+            "planning_context": planning_context,
+        },
     )
 
     try:
@@ -216,14 +268,13 @@ def main() -> int:
     output = {
         "review": review.model_dump(),
         "runtime_report": runtime_report,
+        "planning_context": planning_context,
         "runtime_summary": runtime_summary,
         "final_verdict": final_verdict,
     }
     print(json.dumps(output, indent=2))
 
     mr_comment = review.mr_comment
-    if runtime_present:
-        mr_comment = f"{mr_comment}\n\n{runtime_summary}"
 
     if api_token and mr_iid and enable_comments:
         try:

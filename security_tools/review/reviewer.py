@@ -184,6 +184,70 @@ class SecurityReviewer:
 
         return recommendations
 
+    def _build_planning_context(self, context: ReviewContext) -> dict[str, Any] | None:
+        metadata = getattr(context, "metadata", None)
+        if not isinstance(metadata, dict):
+            return None
+
+        planning = metadata.get("planning_context")
+        if isinstance(planning, dict):
+            return planning
+
+        return None
+
+    def _build_runtime_context(self, context: ReviewContext) -> dict[str, Any] | None:
+        metadata = getattr(context, "metadata", None)
+        if not isinstance(metadata, dict):
+            return None
+
+        runtime_report = metadata.get("runtime_report")
+        if not isinstance(runtime_report, dict):
+            return None
+
+        profile = runtime_report.get("profile", {}) or {}
+        startup = runtime_report.get("startup", {}) or {}
+        listening_ports = runtime_report.get("listening_ports", []) or []
+
+        return {
+            "Verdict": runtime_report.get("verdict", "UNKNOWN"),
+            "Image": runtime_report.get("image", "unknown"),
+            "Profile": profile.get("name", "unknown"),
+            "Container started": startup.get("container_started", False),
+            "Container running": startup.get("container_running", False),
+            "Startup seconds": startup.get("startup_seconds", 0),
+            "Listening ports": ", ".join(str(p) for p in listening_ports) if listening_ports else "none",
+        }
+
+    def _build_verdict_rationale(
+        self,
+        verdict: str,
+        recommendations: list[ReviewRecommendation],
+        missing_scans: list[str],
+        runtime_context: dict[str, Any] | None,
+    ) -> str:
+        if verdict == "BLOCK" and missing_scans:
+            return (
+                "The review is BLOCK because one or more required scans were missing: "
+                f"{', '.join(missing_scans)}."
+            )
+
+        if verdict == "BLOCK":
+            return "The review is BLOCK because blocking findings or policy violations were detected."
+
+        if verdict == "WARN":
+            runtime_phrase = ""
+            if runtime_context and runtime_context.get("Verdict") == "PASS":
+                runtime_phrase = " Runtime verification passed."
+            return (
+                "The review is WARN because non-blocking findings or hardening recommendations remain."
+                f"{runtime_phrase}"
+            )
+
+        if verdict == "PASS":
+            return "The review is PASS because required scans were present and no blocking findings were detected."
+
+        return "The review encountered an operational condition that requires attention."
+
     def review(self, context: ReviewContext) -> ReviewResult:
         operational_warnings: list[str] = []
 
@@ -218,6 +282,15 @@ class SecurityReviewer:
             f"a risk score of {risk_score}."
         )
 
+        planning_context = self._build_planning_context(context)
+        runtime_context = self._build_runtime_context(context)
+        verdict_rationale = self._build_verdict_rationale(
+            verdict=verdict,
+            recommendations=recommendations,
+            missing_scans=missing_scans,
+            runtime_context=runtime_context,
+        )
+
         mr_comment = render_mr_comment(
             verdict=verdict,
             summary=summary,
@@ -225,6 +298,10 @@ class SecurityReviewer:
             detected_scans=context.detected_scans,
             missing_scans=missing_scans,
             operational_warnings=operational_warnings,
+            planning_context=planning_context,
+            runtime_context=runtime_context,
+            risk_score=risk_score,
+            verdict_rationale=verdict_rationale,
         )
 
         return ReviewResult(

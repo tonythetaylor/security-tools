@@ -25,6 +25,12 @@ security_tools/parsers/gitleaks.py
 security_tools/parsers/hadolint.py
 security_tools/parsers/safety.py
 security_tools/parsers/trivy.py
+security_tools/planning/__init__.py
+security_tools/planning/cli.py
+security_tools/planning/models.py
+security_tools/planning/scan_planner.py
+security_tools/planning/stack_detector.py
+security_tools/planning/yaml_renderer.py
 security_tools/review/__init__.py
 security_tools/review/dedup.py
 security_tools/review/heuristics.py
