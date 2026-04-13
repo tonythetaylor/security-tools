@@ -207,6 +207,6 @@ validate_repo:
     # Planning smoke test
     ########################################################
 
-    - python -c "import importlib; importlib.import_module('security_tools.planning') if importlib.util.find_spec('security_tools.planning') else print('planning module optional')"
+    - python -c "from security_tools.planning import detect_stack, build_scan_plan; print('planning module loaded')"
 
     - echo "security-tools repo validation passed"
