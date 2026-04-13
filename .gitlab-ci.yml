@@ -11,17 +11,29 @@ validate_repo:
   script:
     - python --version
 
+    ########################################################
     # Core repo files
+    ########################################################
+
     - test -f pyproject.toml
     - test -f README.md
 
+    ########################################################
     # Base templates
+    ########################################################
+
     - test -f templates/base/security-rules.yml
 
+    ########################################################
     # Review templates
+    ########################################################
+
     - test -f templates/review/security-review.yml
 
+    ########################################################
     # Scan templates
+    ########################################################
+
     - test -f templates/scans/dependency-scan.yml
     - test -f templates/scans/secret-detection.yml
     - test -f templates/scans/sast.yml
@@ -29,9 +41,28 @@ validate_repo:
     - test -f templates/scans/dockerfile-scan.yml
     - test -f templates/scans/iac-scanning.yml
 
+    ########################################################
     # Suite templates
+    ########################################################
+
     - test -f templates/suites/security-scans.yml
     - test -f templates/suites/security-suite.yml
+    - test -f templates/suites/dynamic-security-suite.yml
+
+    ########################################################
+    # Planning templates
+    ########################################################
+
+    - test -d templates/planning
+    - test -f templates/planning/generate-security-pipeline.yml
+    - test -f templates/planning/run-dynamic-security-pipeline.yml
+
+    ########################################################
+    # Runtime templates
+    ########################################################
+
+    - test -d templates/runtime
+    - test -f templates/runtime/container-runtime-verify.yml
 
     ########################################################
     # Python package root
@@ -131,13 +162,6 @@ validate_repo:
     - test -d security_tools/planning || true
 
     ########################################################
-    # Runtime templates
-    ########################################################
-
-    - test -d templates/runtime
-    - test -f templates/runtime/container-runtime-verify.yml
-
-    ########################################################
     # Install/package validation
     ########################################################
 
@@ -178,5 +202,11 @@ validate_repo:
 
     - python -c "from security_tools.runtime.policy import load_runtime_policy; print(load_runtime_policy())"
     - python -c "from security_tools.runtime.contracts import load_runtime_contract; print(load_runtime_contract())"
+
+    ########################################################
+    # Planning smoke test
+    ########################################################
+
+    - python -c "import importlib; importlib.import_module('security_tools.planning') if importlib.util.find_spec('security_tools.planning') else print('planning module optional')"
 
     - echo "security-tools repo validation passed"

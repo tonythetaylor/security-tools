@@ -1,0 +1,18 @@
+generate_security_pipeline:
+  stage: plan
+  image: python:3.12
+
+  script:
+    - python --version
+    - pip install .
+    - python -m security_tools.planning.cli --output generated-security-pipeline.yml
+    - echo "Generated dynamic security pipeline:"
+    - cat generated-security-pipeline.yml
+
+  artifacts:
+    when: always
+    paths:
+      - generated-security-pipeline.yml
+
+  rules:
+    - when: always
