@@ -7,4 +7,7 @@ run_dynamic_security_pipeline:
     strategy: depend
 
   rules:
-    - when: always
+    - exists:
+        - generated-security-pipeline.yml
+      when: always
+    - when: never

@@ -56,6 +56,7 @@ validate_repo:
     - test -d templates/planning
     - test -f templates/planning/generate-security-pipeline.yml
     - test -f templates/planning/run-dynamic-security-pipeline.yml
+    - test -f templates/planning/run-static-security-fallback.yml
 
     ########################################################
     # Runtime templates
