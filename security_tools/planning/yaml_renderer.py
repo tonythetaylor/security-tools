@@ -33,6 +33,9 @@ def render_child_pipeline(plan: ScanPlan) -> str:
 
     if "container_runtime_verify" in plan.jobs:
         lines.extend(_include_block("/templates/runtime/container-runtime-verify.yml"))
+    
+    if "sast" in plan.jobs:
+        lines.extend(_include_block("/templates/scans/sast.yml"))
 
     lines.extend(_include_block("/templates/review/security-review.yml"))
     lines.append("")

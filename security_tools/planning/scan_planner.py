@@ -10,6 +10,7 @@ def build_scan_plan(detected: StackDetection) -> ScanPlan:
 
     if any(lang in detected.languages for lang in ["python", "node", "java"]):
         jobs.append("dependency_scan")
+        jobs.append("sast")
 
     if detected.has_dockerfile:
         jobs.append("dockerfile_scan")
