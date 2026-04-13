@@ -1,11 +1,9 @@
 run_dynamic_security_pipeline:
   stage: security
-
   trigger:
     include:
       - artifact: generated-security-pipeline.yml
         job: generate_security_pipeline
-
     strategy: depend
 
   rules:

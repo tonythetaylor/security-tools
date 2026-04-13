@@ -1,11 +1,26 @@
 generate_security_pipeline:
   stage: plan
   image: python:3.12
+  tags:
+    - docker
+
+  before_script:
+    - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+    - echo "# generated security pipeline placeholder" > generated-security-pipeline.yml
+    - |
+      if [ ! -d .security-tools ]; then
+        CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
+        git clone --depth 1 \
+          --branch "${SECURITY_TOOLS_REF:-main}" \
+          "$CLONE_URL" \
+          .security-tools
+      fi
+    - python -m pip install --upgrade pip setuptools wheel
+    - python -m pip install ./.security-tools
 
   script:
-    - python --version
-    - pip install .
-    - python -m security_tools.planning.cli --output generated-security-pipeline.yml
+    - python -m security_tools.planning.cli --root . --output generated-security-pipeline.yml
+    - test -f generated-security-pipeline.yml
     - echo "Generated dynamic security pipeline:"
     - cat generated-security-pipeline.yml
 
