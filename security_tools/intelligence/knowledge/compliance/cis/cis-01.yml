@@ -1,0 +1,129 @@
+id: cis-01
+title: 01 Inventory and Control of Enterprise Assets
+category: asset_security
+applies_to:
+- asset_inventory
+- asset_management
+- unauthorized_assets
+tags:
+- asset-inventory
+- cis
+- control
+- control_01
+- enterprise-assets
+- visibility
+severity_guidance: medium
+description: "01\nInventory and Control of Enterprise Assets\nActively manage (inventory,\
+  \ track, and correct) all enterprise assets (end-user devices, including portable\
+  \ and mobile; network devices; non-\ncomputing/Internet of Things (IoT) devices;\
+  \ and servers) connected to the infrastructure physically, virtually, remotely,\
+  \ and those within cloud \nenvironments, to accurately know the totality of assets\
+  \ that need to be monitored and protected within the enterprise. This will also\
+  \ support \nidentifying unauthorized and unmanaged assets to remove or remediate.\n\
+  1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\nDevices\n-Identify-\n\
+  • • •\nEstablish and maintain an accurate, detailed, and up-to-date inventory of\
+  \ all enterprise assets with the potential to store or process data, \nto include:\
+  \ end-user devices (including portable and mobile), network devices, non-computing/IoT\
+  \ devices, and servers. Ensure the \ninventory records the network address (if static),\
+  \ hardware address, machine name, enterprise asset owner, department for each asset,\
+  \ \nand whether the asset has been approved to connect to the network. For mobile\
+  \ end-user devices, MDM type tools can support this \nprocess, where appropriate.\
+  \ This inventory includes assets connected to the infrastructure physically, virtually,\
+  \ remotely, and those within \ncloud environments. Additionally, it includes assets\
+  \ that are regularly connected to the enterprise’s network infrastructure, even\
+  \ if they \nare not under control of the enterprise. Review and update the inventory\
+  \ of all enterprise assets bi-annually, or more frequently.\n1.2\nAddress Unauthorized\
+  \ Assets\nDevices\n-Respond-\n• • •\nEnsure that a process exists to address unauthorized\
+  \ assets on a weekly basis. The enterprise may choose to remove the asset from the\
+  \ \nnetwork, deny the asset from connecting remotely to the network, or quarantine\
+  \ the asset.\n1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\nUtilize\
+  \ an active discovery tool to identify assets connected to the enterprise’s network.\
+  \ Configure the active discovery tool to execute \ndaily, or more frequently.\n\
+  1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise\
+  \ \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging on all DHCP servers\
+  \ or Internet Protocol (IP) address management tools to update the enterprise’s\
+  \ asset inventory. \nReview and use logs to update the enterprise’s asset inventory\
+  \ weekly, or more frequently.\n1.5\nUse a Passive Asset Discovery Tool\nDevices\n\
+  -Detect-\n•\nUse a passive discovery tool to identify assets connected to the enterprise’s\
+  \ network. Review and use scans to update the enterprise’s \nasset inventory at\
+  \ least weekly, or more frequently."
+rationale: "01\nInventory and Control of Enterprise Assets\nActively manage (inventory,\
+  \ track, and correct) all enterprise assets (end-user devices, including portable\
+  \ and mobile; network devices; non-\ncomputing/Internet of Things (IoT) devices;\
+  \ and servers) connected to the infrastructure physically, virtually, remotely,\
+  \ and those within cloud \nenvironments, to accurately know the totality of assets\
+  \ that need to be monitored and protected within the enterprise. This will also\
+  \ support \nidentifying unauthorized and unmanaged assets to remove or remediate.\n\
+  1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\nDevices\n-Identify-\n\
+  • • •\nEstablish and maintain an accurate, detailed, and up-to-date inventory of\
+  \ all enterprise assets with the potential to store or process data, \nto include:\
+  \ end-user devices (including portable and mobile), network devices, non-computing/IoT\
+  \ devices, and servers. Ensure the \ninventory records the network address (if static),\
+  \ hardware address, machine name, enterprise asset owner, department for each asset,\
+  \ \nand whether the asset has been approved to connect to the network. For mobile\
+  \ end-user devices, MDM type tools can support this \nprocess, where appropriate.\
+  \ This inventory includes assets connected to the infrastructure physically, virtually,\
+  \ remotely, and those within \ncloud environments. Additionally, it includes assets\
+  \ that are regularly connected to the enterprise’s network infrastructure, even\
+  \ if they \nare not under control of the enterprise. Review and update the inventory\
+  \ of all enterprise assets bi-annually, or more frequently.\n1.2\nAddress Unauthorized\
+  \ Assets\nDevices\n-Respond-\n• • •\nEnsure that a process exists to address unauthorized\
+  \ assets on a weekly basis. The enterprise may choose to remove the asset from the\
+  \ \nnetwork, deny the asset from connecting remotely to the network, or quarantine\
+  \ the asset.\n1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\nUtilize\
+  \ an active discovery tool to identify assets connected to the enterprise’s network.\
+  \ Configure the active discovery tool to execute \ndaily, or more frequently.\n\
+  1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise\
+  \ \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging on all DHCP servers\
+  \ or Internet Protocol (IP) address management tools to update the enterprise’s\
+  \ asset inventory. \nReview and use logs to update the enterprise’s asset inventory\
+  \ weekly, or more frequently.\n1.5\nUse a Passive Asset Discovery Tool\nDevices\n\
+  -Detect-\n•\nUse a passive discovery tool to identify assets connected to the enterprise’s\
+  \ network. Review and use scans to update the enterprise’s \nasset inventory at\
+  \ least weekly, or more frequently."
+developer_guidance: "01\nInventory and Control of Enterprise Assets\nActively manage\
+  \ (inventory, track, and correct) all enterprise assets (end-user devices, including\
+  \ portable and mobile; network devices; non-\ncomputing/Internet of Things (IoT)\
+  \ devices; and servers) connected to the infrastructure physically, virtually, remotely,\
+  \ and those within cloud \nenvironments, to accurately know the totality of assets\
+  \ that need to be monitored and protected within the enterprise. This will also\
+  \ support \nidentifying unauthorized and unmanaged assets to remove or remediate.\n\
+  1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\nDevices\n-Identify-\n\
+  • • •\nEstablish and maintain an accurate, detailed, and up-to-date inventory of\
+  \ all enterprise assets with the potential to store or process data, \nto include:\
+  \ end-user devices (including portable and mobile), network devices, non-computing/IoT\
+  \ devices, and servers. Ensure the \ninventory records the network address (if static),\
+  \ hardware address, machine name, enterprise asset owner, department for each asset,\
+  \ \nand whether the asset has been approved to connect to the network. For mobile\
+  \ end-user devices, MDM type tools can support this \nprocess, where appropriate.\
+  \ This inventory includes assets connected to the infrastructure physically, virtually,\
+  \ remotely, and those within \ncloud environments. Additionally, it includes assets\
+  \ that are regularly connected to the enterprise’s network infrastructure, even\
+  \ if they \nare not under control of the enterprise. Review and update the inventory\
+  \ of all enterprise assets bi-annually, or more frequently.\n1.2\nAddress Unauthorized\
+  \ Assets\nDevices\n-Respond-\n• • •\nEnsure that a process exists to address unauthorized\
+  \ assets on a weekly basis. The enterprise may choose to remove the asset from the\
+  \ \nnetwork, deny the asset from connecting remotely to the network, or quarantine\
+  \ the asset.\n1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\nUtilize\
+  \ an active discovery tool to identify assets connected to the enterprise’s network.\
+  \ Configure the active discovery tool to execute \ndaily, or more frequently.\n\
+  1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise\
+  \ \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging on all DHCP servers\
+  \ or Internet Protocol (IP) address management tools to update the enterprise’s\
+  \ asset inventory. \nReview and use logs to update the enterprise’s asset inventory\
+  \ weekly, or more frequently.\n1.5\nUse a Passive Asset Discovery Tool\nDevices\n\
+  -Detect-\n•\nUse a passive discovery tool to identify assets connected to the enterprise’s\
+  \ network. Review and use scans to update the enterprise’s \nasset inventory at\
+  \ least weekly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

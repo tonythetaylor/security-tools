@@ -1,0 +1,37 @@
+id: cis-05-6
+title: 05.6 Centralize Account Management
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_05
+- safeguard
+- safeguard_5_6
+severity_guidance: medium
+description: "5.6\nCentralize Account Management\nUsers\n-Protect-\n• •\nCentralize\
+  \ account management through a directory or identity service.\n\nCIS Controls v8\n\
+  A8 \n\uFEFFControls and Safeguards Index\nControl 06 / Safeguard 6.1 — Control 07\
+  \ / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "5.6\nCentralize Account Management\nUsers\n-Protect-\n• •\nCentralize\
+  \ account management through a directory or identity service.\n\nCIS Controls v8\n\
+  A8 \n\uFEFFControls and Safeguards Index\nControl 06 / Safeguard 6.1 — Control 07\
+  \ / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "5.6\nCentralize Account Management\nUsers\n-Protect-\n• •\nCentralize\
+  \ account management through a directory or identity service.\n\nCIS Controls v8\n\
+  A8 \n\uFEFFControls and Safeguards Index\nControl 06 / Safeguard 6.1 — Control 07\
+  \ / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 05.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

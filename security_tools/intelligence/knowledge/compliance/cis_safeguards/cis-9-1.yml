@@ -1,0 +1,40 @@
+id: cis-9-1
+title: 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients
+category: email_web_security
+applies_to:
+- browser_security
+- email_security
+- content_filtering
+tags:
+- browser
+- cis
+- control_09
+- email
+- protections
+- safeguard
+- safeguard_9_1
+severity_guidance: medium
+description: "9.1\nEnsure Use of Only Fully Supported Browsers and Email Clients\n\
+  Applications\n-Protect-\n• • •\nEnsure only fully supported browsers and email clients\
+  \ are allowed to execute in the enterprise, only using the latest version of browsers\
+  \ \nand email clients provided through the vendor."
+rationale: "9.1\nEnsure Use of Only Fully Supported Browsers and Email Clients\nApplications\n\
+  -Protect-\n• • •\nEnsure only fully supported browsers and email clients are allowed\
+  \ to execute in the enterprise, only using the latest version of browsers \nand\
+  \ email clients provided through the vendor."
+developer_guidance: "9.1\nEnsure Use of Only Fully Supported Browsers and Email Clients\n\
+  Applications\n-Protect-\n• • •\nEnsure only fully supported browsers and email clients\
+  \ are allowed to execute in the enterprise, only using the latest version of browsers\
+  \ \nand email clients provided through the vendor."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: Safeguard 9.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

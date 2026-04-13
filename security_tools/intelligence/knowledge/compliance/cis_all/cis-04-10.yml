@@ -1,0 +1,43 @@
+id: cis-04-10
+title: 04.10 Enforce Automatic Device Lockout on Portable End-User Devices
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_04
+- safeguard
+- safeguard_4_10
+severity_guidance: medium
+description: "4.10\nEnforce Automatic Device Lockout on Portable End-User Devices\n\
+  Devices\n-Respond-\n• •\nEnforce automatic device lockout following a predetermined\
+  \ threshold of local failed authentication attempts on portable end-user \ndevices,\
+  \ where supported. For laptops, do not allow more than 20 failed authentication\
+  \ attempts; for tablets and smartphones, no more \nthan 10 failed authentication\
+  \ attempts. Example implementations include Microsoft® InTune Device Lock and Apple®\
+  \ Configuration Profile \nmaxFailedAttempts."
+rationale: "4.10\nEnforce Automatic Device Lockout on Portable End-User Devices\n\
+  Devices\n-Respond-\n• •\nEnforce automatic device lockout following a predetermined\
+  \ threshold of local failed authentication attempts on portable end-user \ndevices,\
+  \ where supported. For laptops, do not allow more than 20 failed authentication\
+  \ attempts; for tablets and smartphones, no more \nthan 10 failed authentication\
+  \ attempts. Example implementations include Microsoft® InTune Device Lock and Apple®\
+  \ Configuration Profile \nmaxFailedAttempts."
+developer_guidance: "4.10\nEnforce Automatic Device Lockout on Portable End-User Devices\n\
+  Devices\n-Respond-\n• •\nEnforce automatic device lockout following a predetermined\
+  \ threshold of local failed authentication attempts on portable end-user \ndevices,\
+  \ where supported. For laptops, do not allow more than 20 failed authentication\
+  \ attempts; for tablets and smartphones, no more \nthan 10 failed authentication\
+  \ attempts. Example implementations include Microsoft® InTune Device Lock and Apple®\
+  \ Configuration Profile \nmaxFailedAttempts."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 04.10
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

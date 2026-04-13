@@ -1,0 +1,52 @@
+id: nist-800-190-3-4-4
+title: 3.4.4 App vulnerabilities
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_4_4
+severity_guidance: medium
+description: "3.4.4 App vulnerabilities \nEven when organizations are taking the precautions\
+  \ recommended in this guide, containers may \nstill be compromised due to flaws\
+  \ in the apps they run. This is not a problem with containers \nthemselves, but\
+  \ instead is just the manifestation of typical software flaws within a container\
+  \ \nenvironment. For example, a containerized web app may be vulnerable to cross-site\
+  \ scripting \nvulnerabilities, and a database front end container may be subject\
+  \ to Structured Query Language \n(SQL) injection. When a container is compromised,\
+  \ it can be misused in many ways, such as \ngranting unauthorized access to sensitive\
+  \ information or enabling attacks against other containers \nor the host OS."
+rationale: "3.4.4 App vulnerabilities \nEven when organizations are taking the precautions\
+  \ recommended in this guide, containers may \nstill be compromised due to flaws\
+  \ in the apps they run. This is not a problem with containers \nthemselves, but\
+  \ instead is just the manifestation of typical software flaws within a container\
+  \ \nenvironment. For example, a containerized web app may be vulnerable to cross-site\
+  \ scripting \nvulnerabilities, and a database front end container may be subject\
+  \ to Structured Query Language \n(SQL) injection. When a container is compromised,\
+  \ it can be misused in many ways, such as \ngranting unauthorized access to sensitive\
+  \ information or enabling attacks against other containers \nor the host OS."
+developer_guidance: "3.4.4 App vulnerabilities \nEven when organizations are taking\
+  \ the precautions recommended in this guide, containers may \nstill be compromised\
+  \ due to flaws in the apps they run. This is not a problem with containers \nthemselves,\
+  \ but instead is just the manifestation of typical software flaws within a container\
+  \ \nenvironment. For example, a containerized web app may be vulnerable to cross-site\
+  \ scripting \nvulnerabilities, and a database front end container may be subject\
+  \ to Structured Query Language \n(SQL) injection. When a container is compromised,\
+  \ it can be misused in many ways, such as \ngranting unauthorized access to sensitive\
+  \ information or enabling attacks against other containers \nor the host OS."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.4.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,31 @@
+id: dockerfile-copy-scope
+title: Dockerfile copy scope may be too broad
+category: container_security
+applies_to:
+  - dockerfile_copy_scope_too_broad
+  - dockerfile
+tags:
+  - copy
+  - add
+  - dockerignore
+severity_guidance: medium
+description: |
+  Broad COPY or ADD instructions can move secrets, test data, caches, and unnecessary files into images.
+rationale: |
+  Container images should include only the files required for build or runtime.
+developer_guidance: |
+  Use targeted COPY instructions and maintain a strict .dockerignore file.
+compliance_refs:
+  - framework: NIST
+    control: CM-6
+  - framework: NIST
+    control: SA-11
+  - framework: CIS Docker Benchmark
+    control: 4.8
+ownership:
+  typical_owner: application_team
+remediation:
+  summary: Reduce COPY scope and maintain .dockerignore
+  steps:
+    - Replace COPY . . with targeted COPY statements
+    - Exclude tests, VCS metadata, credentials, and caches using .dockerignore

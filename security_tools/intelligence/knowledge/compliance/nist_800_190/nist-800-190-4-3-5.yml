@@ -1,0 +1,67 @@
+id: nist-800-190-4-3-5
+title: 4.3.5 Orchestrator node trust
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_3_5
+severity_guidance: medium
+description: "4.3.5 Orchestrator node trust \nOrchestration platforms should be configured\
+  \ to provide features that create a secure \nenvironment for all the apps they run.\
+  \ Orchestrators should ensure that nodes are securely \nintroduced to the cluster,\
+  \ have a persistent identity throughout their lifecycle, and can also \nprovide\
+  \ an accurate inventory of nodes and their connectivity states. Organizations should\
+  \ ensure \nthat orchestration platforms are designed specifically to be resilient\
+  \ to compromise of individual \nnodes without compromising the overall security\
+  \ of the cluster. A compromised node must be \nable to be isolated and removed from\
+  \ the cluster without disrupting or degrading overall cluster \noperations. Finally,\
+  \ organizations should choose orchestrators that provide mutually \nauthenticated\
+  \ network connections between cluster members and end-to-end encryption of intra-\n\
+  cluster traffic. Because of the portability of containers, many deployments may\
+  \ occur across \nnetworks organizations do not directly control, so a secure-by-default\
+  \ posture is particularly \nimportant for this scenario."
+rationale: "4.3.5 Orchestrator node trust \nOrchestration platforms should be configured\
+  \ to provide features that create a secure \nenvironment for all the apps they run.\
+  \ Orchestrators should ensure that nodes are securely \nintroduced to the cluster,\
+  \ have a persistent identity throughout their lifecycle, and can also \nprovide\
+  \ an accurate inventory of nodes and their connectivity states. Organizations should\
+  \ ensure \nthat orchestration platforms are designed specifically to be resilient\
+  \ to compromise of individual \nnodes without compromising the overall security\
+  \ of the cluster. A compromised node must be \nable to be isolated and removed from\
+  \ the cluster without disrupting or degrading overall cluster \noperations. Finally,\
+  \ organizations should choose orchestrators that provide mutually \nauthenticated\
+  \ network connections between cluster members and end-to-end encryption of intra-\n\
+  cluster traffic. Because of the portability of containers, many deployments may\
+  \ occur across \nnetworks organizations do not directly control, so a secure-by-default\
+  \ posture is particularly \nimportant for this scenario."
+developer_guidance: "4.3.5 Orchestrator node trust \nOrchestration platforms should\
+  \ be configured to provide features that create a secure \nenvironment for all the\
+  \ apps they run. Orchestrators should ensure that nodes are securely \nintroduced\
+  \ to the cluster, have a persistent identity throughout their lifecycle, and can\
+  \ also \nprovide an accurate inventory of nodes and their connectivity states. Organizations\
+  \ should ensure \nthat orchestration platforms are designed specifically to be resilient\
+  \ to compromise of individual \nnodes without compromising the overall security\
+  \ of the cluster. A compromised node must be \nable to be isolated and removed from\
+  \ the cluster without disrupting or degrading overall cluster \noperations. Finally,\
+  \ organizations should choose orchestrators that provide mutually \nauthenticated\
+  \ network connections between cluster members and end-to-end encryption of intra-\n\
+  cluster traffic. Because of the portability of containers, many deployments may\
+  \ occur across \nnetworks organizations do not directly control, so a secure-by-default\
+  \ posture is particularly \nimportant for this scenario."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.3.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

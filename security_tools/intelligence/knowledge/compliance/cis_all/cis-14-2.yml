@@ -1,0 +1,40 @@
+id: cis-14-2
+title: 14.2 Train Workforce Members to Recognize Social Engineering Attacks
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_14
+- safeguard
+- safeguard_14_2
+severity_guidance: medium
+description: "14.2\nTrain Workforce Members to Recognize Social Engineering Attacks\n\
+  N/A\n-Protect-\n• • •\nTrain workforce members to recognize social engineering attacks,\
+  \ such as phishing, pre-texting, and tailgating.\n\nCIS Controls v8\nA13 \n\uFEFF\
+  Controls and Safeguards Index\nControl 14 / Safeguard 14.3 — Control 15 / Safeguard\
+  \ 15.4\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+rationale: "14.2\nTrain Workforce Members to Recognize Social Engineering Attacks\n\
+  N/A\n-Protect-\n• • •\nTrain workforce members to recognize social engineering attacks,\
+  \ such as phishing, pre-texting, and tailgating.\n\nCIS Controls v8\nA13 \n\uFEFF\
+  Controls and Safeguards Index\nControl 14 / Safeguard 14.3 — Control 15 / Safeguard\
+  \ 15.4\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+developer_guidance: "14.2\nTrain Workforce Members to Recognize Social Engineering\
+  \ Attacks\nN/A\n-Protect-\n• • •\nTrain workforce members to recognize social engineering\
+  \ attacks, such as phishing, pre-texting, and tailgating.\n\nCIS Controls v8\nA13\
+  \ \n\uFEFFControls and Safeguards Index\nControl 14 / Safeguard 14.3 — Control 15\
+  \ / Safeguard 15.4\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

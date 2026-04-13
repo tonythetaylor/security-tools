@@ -1,0 +1,59 @@
+id: nist-800-190-3-3-2
+title: 3.3.2 Unauthorized access
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_3_2
+severity_guidance: medium
+description: "3.3.2 Unauthorized access \nOrchestrators often include their own authentication\
+  \ directory service, which may be separate \nfrom the typical directories already\
+  \ in use within an organization. This can lead to weaker \naccount management practices\
+  \ and ‘orphaned’ accounts in the orchestrator because these \nsystems are less rigorously\
+  \ managed. Because many of these accounts are highly privileged \nwithin the orchestrator,\
+  \ compromise of them can lead to systemwide compromise. \nContainers typically use\
+  \ data storage volumes that are managed by the orchestration tool and are \nnot\
+  \ host specific. Because a container may run on any given node within a cluster,\
+  \ the data \nrequired by the app within the container must be available to the container\
+  \ regardless of which \nhost it is running on. At the same time, many organizations\
+  \ manage data that must be encrypted \nat rest to prevent unauthorized access."
+rationale: "3.3.2 Unauthorized access \nOrchestrators often include their own authentication\
+  \ directory service, which may be separate \nfrom the typical directories already\
+  \ in use within an organization. This can lead to weaker \naccount management practices\
+  \ and ‘orphaned’ accounts in the orchestrator because these \nsystems are less rigorously\
+  \ managed. Because many of these accounts are highly privileged \nwithin the orchestrator,\
+  \ compromise of them can lead to systemwide compromise. \nContainers typically use\
+  \ data storage volumes that are managed by the orchestration tool and are \nnot\
+  \ host specific. Because a container may run on any given node within a cluster,\
+  \ the data \nrequired by the app within the container must be available to the container\
+  \ regardless of which \nhost it is running on. At the same time, many organizations\
+  \ manage data that must be encrypted \nat rest to prevent unauthorized access."
+developer_guidance: "3.3.2 Unauthorized access \nOrchestrators often include their\
+  \ own authentication directory service, which may be separate \nfrom the typical\
+  \ directories already in use within an organization. This can lead to weaker \n\
+  account management practices and ‘orphaned’ accounts in the orchestrator because\
+  \ these \nsystems are less rigorously managed. Because many of these accounts are\
+  \ highly privileged \nwithin the orchestrator, compromise of them can lead to systemwide\
+  \ compromise. \nContainers typically use data storage volumes that are managed by\
+  \ the orchestration tool and are \nnot host specific. Because a container may run\
+  \ on any given node within a cluster, the data \nrequired by the app within the\
+  \ container must be available to the container regardless of which \nhost it is\
+  \ running on. At the same time, many organizations manage data that must be encrypted\
+  \ \nat rest to prevent unauthorized access."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.3.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

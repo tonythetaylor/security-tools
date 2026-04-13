@@ -1,0 +1,37 @@
+id: cis-06-2
+title: 06.2 Establish an Access Revoking Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_06
+- safeguard
+- safeguard_6_2
+severity_guidance: medium
+description: "6.2\nEstablish an Access Revoking Process\nUsers\n-Protect-\n• • •\n\
+  Establish and follow a process, preferably automated, for revoking access to enterprise\
+  \ assets, through disabling accounts immediately \nupon termination, rights revocation,\
+  \ or role change of a user. Disabling accounts, instead of deleting accounts, may\
+  \ be necessary to \npreserve audit trails."
+rationale: "6.2\nEstablish an Access Revoking Process\nUsers\n-Protect-\n• • •\nEstablish\
+  \ and follow a process, preferably automated, for revoking access to enterprise\
+  \ assets, through disabling accounts immediately \nupon termination, rights revocation,\
+  \ or role change of a user. Disabling accounts, instead of deleting accounts, may\
+  \ be necessary to \npreserve audit trails."
+developer_guidance: "6.2\nEstablish an Access Revoking Process\nUsers\n-Protect-\n\
+  • • •\nEstablish and follow a process, preferably automated, for revoking access\
+  \ to enterprise assets, through disabling accounts immediately \nupon termination,\
+  \ rights revocation, or role change of a user. Disabling accounts, instead of deleting\
+  \ accounts, may be necessary to \npreserve audit trails."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 06.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

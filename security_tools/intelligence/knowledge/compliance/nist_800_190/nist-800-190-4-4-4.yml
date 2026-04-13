@@ -1,0 +1,85 @@
+id: nist-800-190-4-4-4
+title: 4.4.4 App vulnerabilities
+category: application_security
+applies_to:
+- application_vulnerabilities
+- sast
+- application_security
+tags:
+- 800-190
+- appsec
+- containers
+- nist
+- runtime
+- section_4_4_4
+- vulnerabilities
+severity_guidance: medium
+description: "4.4.4 App vulnerabilities \nExisting host-based intrusion detection\
+  \ processes and tools are often unable to detect and prevent \nattacks within containers\
+  \ due to the differing technical architecture and operational practices \n\nFor\
+  \ more information on seccomp, see https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt.\n\
+  \npreviously discussed. Organizations should implement additional tools that are\
+  \ container aware \nand designed to operate at the scale and change rate typically\
+  \ seen with containers. These tools \nshould be able to automatically profile containerized\
+  \ apps using behavioral learning and build \nsecurity profiles for them to minimize\
+  \ human interaction. These profiles should then be able to \nprevent and detect\
+  \ anomalies at runtime, including events such as: \n• Invalid or unexpected process\
+  \ execution, \n• Invalid or unexpected system calls, \n• Changes to protected configuration\
+  \ files and binaries, \n• Writes to unexpected locations and file types, \n• Creation\
+  \ of unexpected network listeners, \n• Traffic sent to unexpected network destinations,\
+  \ and \n• Malware storage or execution. \nContainers should also be run with their\
+  \ root filesystems in read-only mode. This approach \nisolates writes to specifically\
+  \ defined directories, which can then be more easily monitored by \nthe aforementioned\
+  \ tools. Furthermore, using read-only filesystems makes the containers more \nresilient\
+  \ to compromise since any tampering is isolated to these specific locations and\
+  \ can be \neasily separated from the rest of the app."
+rationale: "4.4.4 App vulnerabilities \nExisting host-based intrusion detection processes\
+  \ and tools are often unable to detect and prevent \nattacks within containers due\
+  \ to the differing technical architecture and operational practices \n\nFor more\
+  \ information on seccomp, see https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt.\n\
+  \npreviously discussed. Organizations should implement additional tools that are\
+  \ container aware \nand designed to operate at the scale and change rate typically\
+  \ seen with containers. These tools \nshould be able to automatically profile containerized\
+  \ apps using behavioral learning and build \nsecurity profiles for them to minimize\
+  \ human interaction. These profiles should then be able to \nprevent and detect\
+  \ anomalies at runtime, including events such as: \n• Invalid or unexpected process\
+  \ execution, \n• Invalid or unexpected system calls, \n• Changes to protected configuration\
+  \ files and binaries, \n• Writes to unexpected locations and file types, \n• Creation\
+  \ of unexpected network listeners, \n• Traffic sent to unexpected network destinations,\
+  \ and \n• Malware storage or execution. \nContainers should also be run with their\
+  \ root filesystems in read-only mode. This approach \nisolates writes to specifically\
+  \ defined directories, which can then be more easily monitored by \nthe aforementioned\
+  \ tools. Furthermore, using read-only filesystems makes the containers more \nresilient\
+  \ to compromise since any tampering is isolated to these specific locations and\
+  \ can be \neasily separated from the rest of the app."
+developer_guidance: "4.4.4 App vulnerabilities \nExisting host-based intrusion detection\
+  \ processes and tools are often unable to detect and prevent \nattacks within containers\
+  \ due to the differing technical architecture and operational practices \n\nFor\
+  \ more information on seccomp, see https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt.\n\
+  \npreviously discussed. Organizations should implement additional tools that are\
+  \ container aware \nand designed to operate at the scale and change rate typically\
+  \ seen with containers. These tools \nshould be able to automatically profile containerized\
+  \ apps using behavioral learning and build \nsecurity profiles for them to minimize\
+  \ human interaction. These profiles should then be able to \nprevent and detect\
+  \ anomalies at runtime, including events such as: \n• Invalid or unexpected process\
+  \ execution, \n• Invalid or unexpected system calls, \n• Changes to protected configuration\
+  \ files and binaries, \n• Writes to unexpected locations and file types, \n• Creation\
+  \ of unexpected network listeners, \n• Traffic sent to unexpected network destinations,\
+  \ and \n• Malware storage or execution. \nContainers should also be run with their\
+  \ root filesystems in read-only mode. This approach \nisolates writes to specifically\
+  \ defined directories, which can then be more easily monitored by \nthe aforementioned\
+  \ tools. Furthermore, using read-only filesystems makes the containers more \nresilient\
+  \ to compromise since any tampering is isolated to these specific locations and\
+  \ can be \neasily separated from the rest of the app."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.4.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

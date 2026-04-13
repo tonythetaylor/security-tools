@@ -1,0 +1,64 @@
+id: cis-3-4
+title: 3.4 Enforce Data Retention
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_4
+severity_guidance: medium
+description: '3.4
+
+  Enforce Data Retention
+
+  Data
+
+  -Protect-
+
+  • • •
+
+  Retain data according to the enterprise’s data management process. Data retention
+  must include both minimum and maximum timelines.'
+rationale: '3.4
+
+  Enforce Data Retention
+
+  Data
+
+  -Protect-
+
+  • • •
+
+  Retain data according to the enterprise’s data management process. Data retention
+  must include both minimum and maximum timelines.'
+developer_guidance: '3.4
+
+  Enforce Data Retention
+
+  Data
+
+  -Protect-
+
+  • • •
+
+  Retain data according to the enterprise’s data management process. Data retention
+  must include both minimum and maximum timelines.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

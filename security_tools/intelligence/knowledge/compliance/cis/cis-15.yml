@@ -1,0 +1,150 @@
+id: cis-15
+title: 15 Service Provider Management
+category: third_party_security
+applies_to:
+- service_provider_management
+- third_party_risk
+- vendor_security
+tags:
+- cis
+- control
+- control_15
+- service-providers
+- third-party
+- vendors
+severity_guidance: medium
+description: "15\nService Provider Management\nDevelop a process to evaluate service\
+  \ providers who hold sensitive data, or are responsible for an enterprise’s critical\
+  \ IT platforms or processes, to \nensure these providers are protecting those platforms\
+  \ and data appropriately.\n15.1\nEstablish and Maintain an Inventory of Service\
+  \ Providers\nN/A\n-Identify-\n• • •\nEstablish and maintain an inventory of service\
+  \ providers. The inventory is to list all known service providers, include classification(s),\
+  \ \nand designate an enterprise contact for each service provider. Review and update\
+  \ the inventory annually, or when significant enterprise \nchanges occur that could\
+  \ impact this Safeguard. \n15.2\nEstablish and Maintain a Service Provider Management\
+  \ Policy\nN/A\n-Identify-\n• •\nEstablish and maintain a service provider management\
+  \ policy. Ensure the policy addresses the classification, inventory, assessment,\
+  \ \nmonitoring, and decommissioning of service providers. Review and update the\
+  \ policy annually, or when significant enterprise changes \noccur that could impact\
+  \ this Safeguard.\n15.3\nClassify Service Providers\nN/A\n-Identify-\n• •\nClassify\
+  \ service providers. Classification consideration may include one or more characteristics,\
+  \ such as data sensitivity, data volume, \navailability requirements, applicable\
+  \ regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard.\n15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n15.5\nAssess Service Providers\nN/A\n\
+  -Identify-\n•\nAssess service providers consistent with the enterprise’s service\
+  \ provider management policy. Assessment scope may vary based on \nclassification(s),\
+  \ and may include review of standardized assessment reports, such as Service Organization\
+  \ Control 2 (SOC 2) and \nPayment Card Industry (PCI) Attestation of Compliance\
+  \ (AoC), customized questionnaires, or other appropriately rigorous processes. \n\
+  Reassess service providers annually, at a minimum, or with new and renewed contracts.\n\
+  15.6\nMonitor Service Providers\nData\n-Detect-\n•\nMonitor service providers consistent\
+  \ with the enterprise’s service provider management policy. Monitoring may include\
+  \ periodic \nreassessment of service provider compliance, monitoring service provider\
+  \ release notes, and dark web monitoring.\n15.7\nSecurely Decommission Service Providers\n\
+  Data\n-Protect-\n•\nSecurely decommission service providers. Example considerations\
+  \ include user and service account deactivation, termination of data \nflows, and\
+  \ secure disposal of enterprise data within service provider systems."
+rationale: "15\nService Provider Management\nDevelop a process to evaluate service\
+  \ providers who hold sensitive data, or are responsible for an enterprise’s critical\
+  \ IT platforms or processes, to \nensure these providers are protecting those platforms\
+  \ and data appropriately.\n15.1\nEstablish and Maintain an Inventory of Service\
+  \ Providers\nN/A\n-Identify-\n• • •\nEstablish and maintain an inventory of service\
+  \ providers. The inventory is to list all known service providers, include classification(s),\
+  \ \nand designate an enterprise contact for each service provider. Review and update\
+  \ the inventory annually, or when significant enterprise \nchanges occur that could\
+  \ impact this Safeguard. \n15.2\nEstablish and Maintain a Service Provider Management\
+  \ Policy\nN/A\n-Identify-\n• •\nEstablish and maintain a service provider management\
+  \ policy. Ensure the policy addresses the classification, inventory, assessment,\
+  \ \nmonitoring, and decommissioning of service providers. Review and update the\
+  \ policy annually, or when significant enterprise changes \noccur that could impact\
+  \ this Safeguard.\n15.3\nClassify Service Providers\nN/A\n-Identify-\n• •\nClassify\
+  \ service providers. Classification consideration may include one or more characteristics,\
+  \ such as data sensitivity, data volume, \navailability requirements, applicable\
+  \ regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard.\n15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n15.5\nAssess Service Providers\nN/A\n\
+  -Identify-\n•\nAssess service providers consistent with the enterprise’s service\
+  \ provider management policy. Assessment scope may vary based on \nclassification(s),\
+  \ and may include review of standardized assessment reports, such as Service Organization\
+  \ Control 2 (SOC 2) and \nPayment Card Industry (PCI) Attestation of Compliance\
+  \ (AoC), customized questionnaires, or other appropriately rigorous processes. \n\
+  Reassess service providers annually, at a minimum, or with new and renewed contracts.\n\
+  15.6\nMonitor Service Providers\nData\n-Detect-\n•\nMonitor service providers consistent\
+  \ with the enterprise’s service provider management policy. Monitoring may include\
+  \ periodic \nreassessment of service provider compliance, monitoring service provider\
+  \ release notes, and dark web monitoring.\n15.7\nSecurely Decommission Service Providers\n\
+  Data\n-Protect-\n•\nSecurely decommission service providers. Example considerations\
+  \ include user and service account deactivation, termination of data \nflows, and\
+  \ secure disposal of enterprise data within service provider systems."
+developer_guidance: "15\nService Provider Management\nDevelop a process to evaluate\
+  \ service providers who hold sensitive data, or are responsible for an enterprise’s\
+  \ critical IT platforms or processes, to \nensure these providers are protecting\
+  \ those platforms and data appropriately.\n15.1\nEstablish and Maintain an Inventory\
+  \ of Service Providers\nN/A\n-Identify-\n• • •\nEstablish and maintain an inventory\
+  \ of service providers. The inventory is to list all known service providers, include\
+  \ classification(s), \nand designate an enterprise contact for each service provider.\
+  \ Review and update the inventory annually, or when significant enterprise \nchanges\
+  \ occur that could impact this Safeguard. \n15.2\nEstablish and Maintain a Service\
+  \ Provider Management Policy\nN/A\n-Identify-\n• •\nEstablish and maintain a service\
+  \ provider management policy. Ensure the policy addresses the classification, inventory,\
+  \ assessment, \nmonitoring, and decommissioning of service providers. Review and\
+  \ update the policy annually, or when significant enterprise changes \noccur that\
+  \ could impact this Safeguard.\n15.3\nClassify Service Providers\nN/A\n-Identify-\n\
+  • •\nClassify service providers. Classification consideration may include one or\
+  \ more characteristics, such as data sensitivity, data volume, \navailability requirements,\
+  \ applicable regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard.\n15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n15.5\nAssess Service Providers\nN/A\n\
+  -Identify-\n•\nAssess service providers consistent with the enterprise’s service\
+  \ provider management policy. Assessment scope may vary based on \nclassification(s),\
+  \ and may include review of standardized assessment reports, such as Service Organization\
+  \ Control 2 (SOC 2) and \nPayment Card Industry (PCI) Attestation of Compliance\
+  \ (AoC), customized questionnaires, or other appropriately rigorous processes. \n\
+  Reassess service providers annually, at a minimum, or with new and renewed contracts.\n\
+  15.6\nMonitor Service Providers\nData\n-Detect-\n•\nMonitor service providers consistent\
+  \ with the enterprise’s service provider management policy. Monitoring may include\
+  \ periodic \nreassessment of service provider compliance, monitoring service provider\
+  \ release notes, and dark web monitoring.\n15.7\nSecurely Decommission Service Providers\n\
+  Data\n-Protect-\n•\nSecurely decommission service providers. Example considerations\
+  \ include user and service account deactivation, termination of data \nflows, and\
+  \ secure disposal of enterprise data within service provider systems."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 15
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

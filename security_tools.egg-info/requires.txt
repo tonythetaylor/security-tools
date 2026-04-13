@@ -3,3 +3,4 @@ pydantic-settings<3,>=2.4
 requests<3,>=2.32
 python-dotenv<2,>=1.0
 PyYAML<7,>=6.0
+PyMuPDF<2,>=1.24

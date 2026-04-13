@@ -1,0 +1,61 @@
+id: cis-10-2
+title: 10.2 Configure Automatic Anti-Malware Signature Updates
+category: endpoint_security
+applies_to:
+- malware_defense
+- endpoint_protection
+- anti_malware
+tags:
+- cis
+- control_10
+- defense
+- endpoint
+- malware
+- safeguard
+- safeguard_10_2
+severity_guidance: medium
+description: '10.2
+
+  Configure Automatic Anti-Malware Signature Updates
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Configure automatic updates for anti-malware signature files on all enterprise assets.'
+rationale: '10.2
+
+  Configure Automatic Anti-Malware Signature Updates
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Configure automatic updates for anti-malware signature files on all enterprise assets.'
+developer_guidance: '10.2
+
+  Configure Automatic Anti-Malware Signature Updates
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Configure automatic updates for anti-malware signature files on all enterprise assets.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 10
+  note: Safeguard 10.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

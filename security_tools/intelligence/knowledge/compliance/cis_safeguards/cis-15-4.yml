@@ -1,0 +1,58 @@
+id: cis-15-4
+title: 15.4 Ensure Service Provider Contracts Include Security Requirements
+category: third_party_security
+applies_to:
+- service_provider_management
+- third_party_risk
+- vendor_security
+tags:
+- cis
+- control_15
+- safeguard
+- safeguard_15_4
+- service-providers
+- third-party
+- vendors
+severity_guidance: medium
+description: "15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "15.4\nEnsure Service Provider Contracts Include Security Requirements\n\
+  N/A\n-Protect-\n• •\nEnsure service provider contracts include security requirements.\
+  \ Example requirements may include minimum security program \nrequirements, security\
+  \ incident and/or data breach notification and response, data encryption requirements,\
+  \ and data disposal \ncommitments. These security requirements must be consistent\
+  \ with the enterprise’s service provider management policy. Review service \nprovider\
+  \ contracts annually to ensure contracts are not missing security requirements.\n\
+  \nCIS Controls v8\nA14 \n\uFEFFControls and Safeguards Index\nControl 15 / Safeguard\
+  \ 15.5 — Control 16 / Safeguard 16.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 15
+  note: Safeguard 15.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

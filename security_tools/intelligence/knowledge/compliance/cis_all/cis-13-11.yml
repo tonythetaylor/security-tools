@@ -1,0 +1,55 @@
+id: cis-13-11
+title: 13.11 Tune Security Event Alerting Thresholds
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_13
+- safeguard
+- safeguard_13_11
+severity_guidance: medium
+description: '13.11
+
+  Tune Security Event Alerting Thresholds
+
+  Network
+
+  -Detect-
+
+  •
+
+  Tune security event alerting thresholds monthly, or more frequently.'
+rationale: '13.11
+
+  Tune Security Event Alerting Thresholds
+
+  Network
+
+  -Detect-
+
+  •
+
+  Tune security event alerting thresholds monthly, or more frequently.'
+developer_guidance: '13.11
+
+  Tune Security Event Alerting Thresholds
+
+  Network
+
+  -Detect-
+
+  •
+
+  Tune security event alerting thresholds monthly, or more frequently.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.11
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

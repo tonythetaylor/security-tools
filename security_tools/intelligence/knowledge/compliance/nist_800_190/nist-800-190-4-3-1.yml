@@ -1,0 +1,49 @@
+id: nist-800-190-4-3-1
+title: 4.3.1 Unbounded administrative access
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_3_1
+severity_guidance: medium
+description: "4.3.1 Unbounded administrative access \nEspecially because of their\
+  \ wide-ranging span of control, orchestrators should use a least \nprivilege access\
+  \ model in which users are only granted the ability to perform the specific actions\
+  \ \non the specific hosts, containers, and images their job roles require. For example,\
+  \ members of the \ntest team should only be given access to the images used in testing\
+  \ and the hosts used for running \nthem, and should only be able to manipulate the\
+  \ containers they created. Test team members \nshould have limited or no access\
+  \ to containers used in production."
+rationale: "4.3.1 Unbounded administrative access \nEspecially because of their wide-ranging\
+  \ span of control, orchestrators should use a least \nprivilege access model in\
+  \ which users are only granted the ability to perform the specific actions \non\
+  \ the specific hosts, containers, and images their job roles require. For example,\
+  \ members of the \ntest team should only be given access to the images used in testing\
+  \ and the hosts used for running \nthem, and should only be able to manipulate the\
+  \ containers they created. Test team members \nshould have limited or no access\
+  \ to containers used in production."
+developer_guidance: "4.3.1 Unbounded administrative access \nEspecially because of\
+  \ their wide-ranging span of control, orchestrators should use a least \nprivilege\
+  \ access model in which users are only granted the ability to perform the specific\
+  \ actions \non the specific hosts, containers, and images their job roles require.\
+  \ For example, members of the \ntest team should only be given access to the images\
+  \ used in testing and the hosts used for running \nthem, and should only be able\
+  \ to manipulate the containers they created. Test team members \nshould have limited\
+  \ or no access to containers used in production."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.3.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

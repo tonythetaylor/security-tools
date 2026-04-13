@@ -1,0 +1,40 @@
+id: cis-3-2
+title: 3.2 Establish and Maintain a Data Inventory
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_2
+severity_guidance: medium
+description: "3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n• •\
+  \ •\nEstablish and maintain a data inventory, based on the enterprise’s data management\
+  \ process. Inventory sensitive data, at a minimum. \nReview and update inventory\
+  \ annually, at a minimum, with a priority on sensitive data."
+rationale: "3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n• • •\n\
+  Establish and maintain a data inventory, based on the enterprise’s data management\
+  \ process. Inventory sensitive data, at a minimum. \nReview and update inventory\
+  \ annually, at a minimum, with a priority on sensitive data."
+developer_guidance: "3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n\
+  • • •\nEstablish and maintain a data inventory, based on the enterprise’s data management\
+  \ process. Inventory sensitive data, at a minimum. \nReview and update inventory\
+  \ annually, at a minimum, with a priority on sensitive data."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

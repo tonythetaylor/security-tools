@@ -1,0 +1,65 @@
+id: cis-7-2
+title: 7.2 Establish and Maintain a Remediation Process
+category: vulnerability_management
+applies_to:
+- vulnerability_management
+- container_scanning
+- dependency_scan
+- patch_management
+tags:
+- cis
+- control_07
+- patching
+- safeguard
+- safeguard_7_2
+- scanning
+- vulnerabilities
+severity_guidance: medium
+description: '7.2
+
+  Establish and Maintain a Remediation Process
+
+  Applications
+
+  -Respond-
+
+  • • •
+
+  Establish and maintain a risk-based remediation strategy documented in a remediation
+  process, with monthly, or more frequent, reviews.'
+rationale: '7.2
+
+  Establish and Maintain a Remediation Process
+
+  Applications
+
+  -Respond-
+
+  • • •
+
+  Establish and maintain a risk-based remediation strategy documented in a remediation
+  process, with monthly, or more frequent, reviews.'
+developer_guidance: '7.2
+
+  Establish and Maintain a Remediation Process
+
+  Applications
+
+  -Respond-
+
+  • • •
+
+  Establish and maintain a risk-based remediation strategy documented in a remediation
+  process, with monthly, or more frequent, reviews.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 7.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,159 @@
+id: cis-04
+title: 04 Secure Configuration of
+category: configuration_security
+applies_to:
+- secure_configuration
+- hardening
+- baseline_configuration
+tags:
+- baseline
+- cis
+- configuration
+- control
+- control_04
+- hardening
+severity_guidance: medium
+description: "04\n \nSecure Configuration of \nEnterprise Assets and Software\nSAFEGUARDS\
+  \ TOTAL•\n12\n IG1•\n7/12\n IG2•\n11/12\n IG3•\n12/12\nOVERVIEW \nEstablish and\
+  \ maintain the secure configuration of enterprise assets (end-user \ndevices, including\
+  \ portable and mobile; network devices; non-computing/IoT \ndevices; and servers)\
+  \ and software (operating systems and applications).\nWhy is this Control critical?\n\
+  As delivered from manufacturers and resellers, the default configurations for enterprise\
+  \ \nassets and software are normally geared towards ease-of-deployment and ease-of-\n\
+  use rather than security. Basic controls, open services and ports, default accounts\
+  \ or \npasswords, pre-configured Domain Name System (DNS) settings, older (vulnerable)\
+  \ \nprotocols, and pre-installation of unnecessary software can all be exploitable\
+  \ if left in \ntheir default state. Further, these security configuration updates\
+  \ need to be managed \nand maintained over the life cycle of enterprise assets and\
+  \ software. Configuration \nupdates need to be tracked and approved through configuration\
+  \ management workflow \nprocess to maintain a record that can be reviewed for compliance,\
+  \ leveraged for \nincident response, and to support audits. This CIS Control is\
+  \ important to on-premises \ndevices, as well as remote devices, network devices,\
+  \ and cloud environments.\nService providers play a key role in modern infrastructures,\
+  \ especially for smaller \nenterprises. They often are not set up by default in\
+  \ the most secure configuration to \nprovide flexibility for their customers to\
+  \ apply their own security policies. Therefore, \nthe presence of default accounts\
+  \ or passwords, excessive access, or unnecessary \nservices are common in default\
+  \ configurations. These could introduce weaknesses that \nare under the responsibility\
+  \ of the enterprise that is using the software, rather than the \nservice provider.\
+  \ This extends to ongoing management and updates, as some Platform \nas a Service\
+  \ (PaaS) only extend to the operating system, so patching and updating \nhosted\
+  \ applications are under the responsibility of the enterprise.\nEven after a strong\
+  \ initial configuration is developed and applied, it must be continually \nmanaged\
+  \ to avoid degrading security as software is updated or patched, new security \n\
+  vulnerabilities are reported, and configurations are “tweaked,” to allow the installation\
+  \ of \nnew software or to support new operational requirements.\nCONTROL\n\nCIS\
+  \ Controls v8\n17 \nControl 04: Secure Configuration of Enterprise Assets and Software\n\
+  Procedures and tools\nThere are many available security baselines for each system.\
+  \ Enterprises should start \nwith these publicly developed, vetted, and supported\
+  \ security benchmarks, security \nguides, or checklists. Some resources include:\n\
+  \ \n→The CIS Benchmarks™ Program – http://www.cisecurity.org/cis-benchmarks/\n \n\
+  →The National Institute of Standards and Technology (NIST®) National Checklist \n\
+  Program Repository – https://nvd.nist.gov/ncp/repository\nEnterprises should augment\
+  \ or adjust these baselines to satisfy enterprise security \npolicies, and industry\
+  \ and government regulatory requirements. Deviations of standard \nconfigurations\
+  \ and rationale should be documented to facilitate future reviews or audits.\nFor\
+  \ a larger or more complex enterprise, there will be multiple security baseline\
+  \ \nconfigurations based on security requirements or classification of the data\
+  \ on the \nenterprise asset. Here is an example of the steps to build a secure baseline\
+  \ image:"
+rationale: "04\n \nSecure Configuration of \nEnterprise Assets and Software\nSAFEGUARDS\
+  \ TOTAL•\n12\n IG1•\n7/12\n IG2•\n11/12\n IG3•\n12/12\nOVERVIEW \nEstablish and\
+  \ maintain the secure configuration of enterprise assets (end-user \ndevices, including\
+  \ portable and mobile; network devices; non-computing/IoT \ndevices; and servers)\
+  \ and software (operating systems and applications).\nWhy is this Control critical?\n\
+  As delivered from manufacturers and resellers, the default configurations for enterprise\
+  \ \nassets and software are normally geared towards ease-of-deployment and ease-of-\n\
+  use rather than security. Basic controls, open services and ports, default accounts\
+  \ or \npasswords, pre-configured Domain Name System (DNS) settings, older (vulnerable)\
+  \ \nprotocols, and pre-installation of unnecessary software can all be exploitable\
+  \ if left in \ntheir default state. Further, these security configuration updates\
+  \ need to be managed \nand maintained over the life cycle of enterprise assets and\
+  \ software. Configuration \nupdates need to be tracked and approved through configuration\
+  \ management workflow \nprocess to maintain a record that can be reviewed for compliance,\
+  \ leveraged for \nincident response, and to support audits. This CIS Control is\
+  \ important to on-premises \ndevices, as well as remote devices, network devices,\
+  \ and cloud environments.\nService providers play a key role in modern infrastructures,\
+  \ especially for smaller \nenterprises. They often are not set up by default in\
+  \ the most secure configuration to \nprovide flexibility for their customers to\
+  \ apply their own security policies. Therefore, \nthe presence of default accounts\
+  \ or passwords, excessive access, or unnecessary \nservices are common in default\
+  \ configurations. These could introduce weaknesses that \nare under the responsibility\
+  \ of the enterprise that is using the software, rather than the \nservice provider.\
+  \ This extends to ongoing management and updates, as some Platform \nas a Service\
+  \ (PaaS) only extend to the operating system, so patching and updating \nhosted\
+  \ applications are under the responsibility of the enterprise.\nEven after a strong\
+  \ initial configuration is developed and applied, it must be continually \nmanaged\
+  \ to avoid degrading security as software is updated or patched, new security \n\
+  vulnerabilities are reported, and configurations are “tweaked,” to allow the installation\
+  \ of \nnew software or to support new operational requirements.\nCONTROL\n\nCIS\
+  \ Controls v8\n17 \nControl 04: Secure Configuration of Enterprise Assets and Software\n\
+  Procedures and tools\nThere are many available security baselines for each system.\
+  \ Enterprises should start \nwith these publicly developed, vetted, and supported\
+  \ security benchmarks, security \nguides, or checklists. Some resources include:\n\
+  \ \n→The CIS Benchmarks™ Program – http://www.cisecurity.org/cis-benchmarks/\n \n\
+  →The National Institute of Standards and Technology (NIST®) National Checklist \n\
+  Program Repository – https://nvd.nist.gov/ncp/repository\nEnterprises should augment\
+  \ or adjust these baselines to satisfy enterprise security \npolicies, and industry\
+  \ and government regulatory requirements. Deviations of standard \nconfigurations\
+  \ and rationale should be documented to facilitate future reviews or audits.\nFor\
+  \ a larger or more complex enterprise, there will be multiple security baseline\
+  \ \nconfigurations based on security requirements or classification of the data\
+  \ on the \nenterprise asset. Here is an example of the steps to build a secure baseline\
+  \ image:"
+developer_guidance: "04\n \nSecure Configuration of \nEnterprise Assets and Software\n\
+  SAFEGUARDS TOTAL•\n12\n IG1•\n7/12\n IG2•\n11/12\n IG3•\n12/12\nOVERVIEW \nEstablish\
+  \ and maintain the secure configuration of enterprise assets (end-user \ndevices,\
+  \ including portable and mobile; network devices; non-computing/IoT \ndevices; and\
+  \ servers) and software (operating systems and applications).\nWhy is this Control\
+  \ critical?\nAs delivered from manufacturers and resellers, the default configurations\
+  \ for enterprise \nassets and software are normally geared towards ease-of-deployment\
+  \ and ease-of-\nuse rather than security. Basic controls, open services and ports,\
+  \ default accounts or \npasswords, pre-configured Domain Name System (DNS) settings,\
+  \ older (vulnerable) \nprotocols, and pre-installation of unnecessary software can\
+  \ all be exploitable if left in \ntheir default state. Further, these security configuration\
+  \ updates need to be managed \nand maintained over the life cycle of enterprise\
+  \ assets and software. Configuration \nupdates need to be tracked and approved through\
+  \ configuration management workflow \nprocess to maintain a record that can be reviewed\
+  \ for compliance, leveraged for \nincident response, and to support audits. This\
+  \ CIS Control is important to on-premises \ndevices, as well as remote devices,\
+  \ network devices, and cloud environments.\nService providers play a key role in\
+  \ modern infrastructures, especially for smaller \nenterprises. They often are not\
+  \ set up by default in the most secure configuration to \nprovide flexibility for\
+  \ their customers to apply their own security policies. Therefore, \nthe presence\
+  \ of default accounts or passwords, excessive access, or unnecessary \nservices\
+  \ are common in default configurations. These could introduce weaknesses that \n\
+  are under the responsibility of the enterprise that is using the software, rather\
+  \ than the \nservice provider. This extends to ongoing management and updates, as\
+  \ some Platform \nas a Service (PaaS) only extend to the operating system, so patching\
+  \ and updating \nhosted applications are under the responsibility of the enterprise.\n\
+  Even after a strong initial configuration is developed and applied, it must be continually\
+  \ \nmanaged to avoid degrading security as software is updated or patched, new security\
+  \ \nvulnerabilities are reported, and configurations are “tweaked,” to allow the\
+  \ installation of \nnew software or to support new operational requirements.\nCONTROL\n\
+  \nCIS Controls v8\n17 \nControl 04: Secure Configuration of Enterprise Assets and\
+  \ Software\nProcedures and tools\nThere are many available security baselines for\
+  \ each system. Enterprises should start \nwith these publicly developed, vetted,\
+  \ and supported security benchmarks, security \nguides, or checklists. Some resources\
+  \ include:\n \n→The CIS Benchmarks™ Program – http://www.cisecurity.org/cis-benchmarks/\n\
+  \ \n→The National Institute of Standards and Technology (NIST®) National Checklist\
+  \ \nProgram Repository – https://nvd.nist.gov/ncp/repository\nEnterprises should\
+  \ augment or adjust these baselines to satisfy enterprise security \npolicies, and\
+  \ industry and government regulatory requirements. Deviations of standard \nconfigurations\
+  \ and rationale should be documented to facilitate future reviews or audits.\nFor\
+  \ a larger or more complex enterprise, there will be multiple security baseline\
+  \ \nconfigurations based on security requirements or classification of the data\
+  \ on the \nenterprise asset. Here is an example of the steps to build a secure baseline\
+  \ image:"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,138 @@
+id: cis-13
+title: 13 Network Monitoring and Defense
+category: network_defense
+applies_to:
+- network_monitoring
+- network_defense
+- traffic_analysis
+tags:
+- cis
+- control
+- control_13
+- defense
+- network-monitoring
+- traffic
+severity_guidance: medium
+description: "13\nNetwork Monitoring and Defense\nOperate processes and tooling to\
+  \ establish and maintain comprehensive network monitoring and defense against security\
+  \ threats across the \nenterprise’s network infrastructure and user base.\n13.1\n\
+  Centralize Security Event Alerting\nNetwork\n-Detect-\n• •\nCentralize security\
+  \ event alerting across enterprise assets for log correlation and analysis. Best\
+  \ practice implementation requires the use \nof a SIEM, which includes vendor-defined\
+  \ event correlation alerts. A log analytics platform configured with security-relevant\
+  \ correlation \nalerts also satisfies this Safeguard.\n13.2\nDeploy a Host-Based\
+  \ Intrusion Detection Solution\nDevices\n-Detect-\n• •\nDeploy a host-based intrusion\
+  \ detection solution on enterprise assets, where appropriate and/or supported.\n\
+  13.3\nDeploy a Network Intrusion Detection Solution\nNetwork\n-Detect-\n• •\nDeploy\
+  \ a network intrusion detection solution on enterprise assets, where appropriate.\
+  \ Example implementations include the use of a \nNetwork Intrusion Detection System\
+  \ (NIDS) or equivalent cloud service provider (CSP) service.\n13.4\nPerform Traffic\
+  \ Filtering Between Network Segments\nNetwork\n-Protect-\n• •\nPerform traffic filtering\
+  \ between network segments, where appropriate.\n13.5\nManage Access Control for\
+  \ Remote Assets\nDevices\n-Protect-\n • •\nManage access control for assets remotely\
+  \ connecting to enterprise resources. Determine amount of access to enterprise resources\
+  \ \nbased on: up-to-date anti-malware software installed, configuration compliance\
+  \ with the enterprise’s secure configuration process, and \nensuring the operating\
+  \ system and applications are up-to-date.\n13.6\nCollect Network Traffic Flow Logs\
+  \ \nNetwork\n-Detect-\n• •\nCollect network traffic flow logs and/or network traffic\
+  \ to review and alert upon from network devices.\n13.7\nDeploy a Host-Based Intrusion\
+  \ Prevention Solution\nDevices\n-Protect-\n•\nDeploy a host-based intrusion prevention\
+  \ solution on enterprise assets, where appropriate and/or supported. Example implementations\
+  \ \ninclude use of an Endpoint Detection and Response (EDR) client or host-based\
+  \ IPS agent.\n13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n-Protect-\n\
+  •\nDeploy a network intrusion prevention solution, where appropriate. Example implementations\
+  \ include the use of a Network Intrusion \nPrevention System (NIPS) or equivalent\
+  \ CSP service.\n13.9\nDeploy Port-Level Access Control\nDevices\n-Protect-\n•\n\
+  Deploy port-level access control. Port-level access control utilizes 802.1x, or\
+  \ similar network access control protocols, such as \ncertificates, and may incorporate\
+  \ user and/or device authentication.\n13.10\nPerform Application Layer Filtering\n\
+  Network\n-Protect-\n•\nPerform application layer filtering. Example implementations\
+  \ include a filtering proxy, application layer firewall, or gateway.\n13.11\nTune\
+  \ Security Event Alerting Thresholds\nNetwork\n-Detect-\n•\nTune security event\
+  \ alerting thresholds monthly, or more frequently."
+rationale: "13\nNetwork Monitoring and Defense\nOperate processes and tooling to establish\
+  \ and maintain comprehensive network monitoring and defense against security threats\
+  \ across the \nenterprise’s network infrastructure and user base.\n13.1\nCentralize\
+  \ Security Event Alerting\nNetwork\n-Detect-\n• •\nCentralize security event alerting\
+  \ across enterprise assets for log correlation and analysis. Best practice implementation\
+  \ requires the use \nof a SIEM, which includes vendor-defined event correlation\
+  \ alerts. A log analytics platform configured with security-relevant correlation\
+  \ \nalerts also satisfies this Safeguard.\n13.2\nDeploy a Host-Based Intrusion Detection\
+  \ Solution\nDevices\n-Detect-\n• •\nDeploy a host-based intrusion detection solution\
+  \ on enterprise assets, where appropriate and/or supported.\n13.3\nDeploy a Network\
+  \ Intrusion Detection Solution\nNetwork\n-Detect-\n• •\nDeploy a network intrusion\
+  \ detection solution on enterprise assets, where appropriate. Example implementations\
+  \ include the use of a \nNetwork Intrusion Detection System (NIDS) or equivalent\
+  \ cloud service provider (CSP) service.\n13.4\nPerform Traffic Filtering Between\
+  \ Network Segments\nNetwork\n-Protect-\n• •\nPerform traffic filtering between network\
+  \ segments, where appropriate.\n13.5\nManage Access Control for Remote Assets\n\
+  Devices\n-Protect-\n • •\nManage access control for assets remotely connecting to\
+  \ enterprise resources. Determine amount of access to enterprise resources \nbased\
+  \ on: up-to-date anti-malware software installed, configuration compliance with\
+  \ the enterprise’s secure configuration process, and \nensuring the operating system\
+  \ and applications are up-to-date.\n13.6\nCollect Network Traffic Flow Logs \nNetwork\n\
+  -Detect-\n• •\nCollect network traffic flow logs and/or network traffic to review\
+  \ and alert upon from network devices.\n13.7\nDeploy a Host-Based Intrusion Prevention\
+  \ Solution\nDevices\n-Protect-\n•\nDeploy a host-based intrusion prevention solution\
+  \ on enterprise assets, where appropriate and/or supported. Example implementations\
+  \ \ninclude use of an Endpoint Detection and Response (EDR) client or host-based\
+  \ IPS agent.\n13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n-Protect-\n\
+  •\nDeploy a network intrusion prevention solution, where appropriate. Example implementations\
+  \ include the use of a Network Intrusion \nPrevention System (NIPS) or equivalent\
+  \ CSP service.\n13.9\nDeploy Port-Level Access Control\nDevices\n-Protect-\n•\n\
+  Deploy port-level access control. Port-level access control utilizes 802.1x, or\
+  \ similar network access control protocols, such as \ncertificates, and may incorporate\
+  \ user and/or device authentication.\n13.10\nPerform Application Layer Filtering\n\
+  Network\n-Protect-\n•\nPerform application layer filtering. Example implementations\
+  \ include a filtering proxy, application layer firewall, or gateway.\n13.11\nTune\
+  \ Security Event Alerting Thresholds\nNetwork\n-Detect-\n•\nTune security event\
+  \ alerting thresholds monthly, or more frequently."
+developer_guidance: "13\nNetwork Monitoring and Defense\nOperate processes and tooling\
+  \ to establish and maintain comprehensive network monitoring and defense against\
+  \ security threats across the \nenterprise’s network infrastructure and user base.\n\
+  13.1\nCentralize Security Event Alerting\nNetwork\n-Detect-\n• •\nCentralize security\
+  \ event alerting across enterprise assets for log correlation and analysis. Best\
+  \ practice implementation requires the use \nof a SIEM, which includes vendor-defined\
+  \ event correlation alerts. A log analytics platform configured with security-relevant\
+  \ correlation \nalerts also satisfies this Safeguard.\n13.2\nDeploy a Host-Based\
+  \ Intrusion Detection Solution\nDevices\n-Detect-\n• •\nDeploy a host-based intrusion\
+  \ detection solution on enterprise assets, where appropriate and/or supported.\n\
+  13.3\nDeploy a Network Intrusion Detection Solution\nNetwork\n-Detect-\n• •\nDeploy\
+  \ a network intrusion detection solution on enterprise assets, where appropriate.\
+  \ Example implementations include the use of a \nNetwork Intrusion Detection System\
+  \ (NIDS) or equivalent cloud service provider (CSP) service.\n13.4\nPerform Traffic\
+  \ Filtering Between Network Segments\nNetwork\n-Protect-\n• •\nPerform traffic filtering\
+  \ between network segments, where appropriate.\n13.5\nManage Access Control for\
+  \ Remote Assets\nDevices\n-Protect-\n • •\nManage access control for assets remotely\
+  \ connecting to enterprise resources. Determine amount of access to enterprise resources\
+  \ \nbased on: up-to-date anti-malware software installed, configuration compliance\
+  \ with the enterprise’s secure configuration process, and \nensuring the operating\
+  \ system and applications are up-to-date.\n13.6\nCollect Network Traffic Flow Logs\
+  \ \nNetwork\n-Detect-\n• •\nCollect network traffic flow logs and/or network traffic\
+  \ to review and alert upon from network devices.\n13.7\nDeploy a Host-Based Intrusion\
+  \ Prevention Solution\nDevices\n-Protect-\n•\nDeploy a host-based intrusion prevention\
+  \ solution on enterprise assets, where appropriate and/or supported. Example implementations\
+  \ \ninclude use of an Endpoint Detection and Response (EDR) client or host-based\
+  \ IPS agent.\n13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n-Protect-\n\
+  •\nDeploy a network intrusion prevention solution, where appropriate. Example implementations\
+  \ include the use of a Network Intrusion \nPrevention System (NIPS) or equivalent\
+  \ CSP service.\n13.9\nDeploy Port-Level Access Control\nDevices\n-Protect-\n•\n\
+  Deploy port-level access control. Port-level access control utilizes 802.1x, or\
+  \ similar network access control protocols, such as \ncertificates, and may incorporate\
+  \ user and/or device authentication.\n13.10\nPerform Application Layer Filtering\n\
+  Network\n-Protect-\n•\nPerform application layer filtering. Example implementations\
+  \ include a filtering proxy, application layer firewall, or gateway.\n13.11\nTune\
+  \ Security Event Alerting Thresholds\nNetwork\n-Detect-\n•\nTune security event\
+  \ alerting thresholds monthly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

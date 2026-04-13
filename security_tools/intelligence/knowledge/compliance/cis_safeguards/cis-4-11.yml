@@ -1,0 +1,40 @@
+id: cis-4-11
+title: 4.11 Enforce Remote Wipe Capability on Portable End-User Devices
+category: configuration_security
+applies_to:
+- secure_configuration
+- hardening
+- baseline_configuration
+tags:
+- baseline
+- cis
+- configuration
+- control_04
+- hardening
+- safeguard
+- safeguard_4_11
+severity_guidance: medium
+description: "4.11\nEnforce Remote Wipe Capability on Portable End-User Devices\n\
+  Devices\n-Protect-\n• •\nRemotely wipe enterprise data from enterprise-owned portable\
+  \ end-user devices when deemed appropriate such as lost or stolen \ndevices, or\
+  \ when an individual no longer supports the enterprise."
+rationale: "4.11\nEnforce Remote Wipe Capability on Portable End-User Devices\nDevices\n\
+  -Protect-\n• •\nRemotely wipe enterprise data from enterprise-owned portable end-user\
+  \ devices when deemed appropriate such as lost or stolen \ndevices, or when an individual\
+  \ no longer supports the enterprise."
+developer_guidance: "4.11\nEnforce Remote Wipe Capability on Portable End-User Devices\n\
+  Devices\n-Protect-\n• •\nRemotely wipe enterprise data from enterprise-owned portable\
+  \ end-user devices when deemed appropriate such as lost or stolen \ndevices, or\
+  \ when an individual no longer supports the enterprise."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 4.11
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

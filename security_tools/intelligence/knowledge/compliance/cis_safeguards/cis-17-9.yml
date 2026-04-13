@@ -1,0 +1,46 @@
+id: cis-17-9
+title: 17.9 Establish and Maintain Security Incident Thresholds
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_9
+severity_guidance: medium
+description: "17.9\nEstablish and Maintain Security Incident Thresholds\nN/A\n-Recover-\n\
+  •\nEstablish and maintain security incident thresholds, including, at a minimum,\
+  \ differentiating between an incident and an event. Examples \ncan include: abnormal\
+  \ activity, security vulnerability, security weakness, data breach, privacy incident,\
+  \ etc. Review annually, or when \nsignificant enterprise changes occur that could\
+  \ impact this Safeguard."
+rationale: "17.9\nEstablish and Maintain Security Incident Thresholds\nN/A\n-Recover-\n\
+  •\nEstablish and maintain security incident thresholds, including, at a minimum,\
+  \ differentiating between an incident and an event. Examples \ncan include: abnormal\
+  \ activity, security vulnerability, security weakness, data breach, privacy incident,\
+  \ etc. Review annually, or when \nsignificant enterprise changes occur that could\
+  \ impact this Safeguard."
+developer_guidance: "17.9\nEstablish and Maintain Security Incident Thresholds\nN/A\n\
+  -Recover-\n•\nEstablish and maintain security incident thresholds, including, at\
+  \ a minimum, differentiating between an incident and an event. Examples \ncan include:\
+  \ abnormal activity, security vulnerability, security weakness, data breach, privacy\
+  \ incident, etc. Review annually, or when \nsignificant enterprise changes occur\
+  \ that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

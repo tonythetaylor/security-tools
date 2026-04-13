@@ -1,0 +1,40 @@
+id: cis-14-4
+title: 14.4 Train Workforce on Data Handling Best Practices
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_14
+- safeguard
+- safeguard_14_4
+severity_guidance: medium
+description: "14.4\nTrain Workforce on Data Handling Best Practices\nN/A\n-Protect-\n\
+  • • •\nTrain workforce members on how to identify and properly store, transfer,\
+  \ archive, and destroy sensitive data. This also includes training \nworkforce members\
+  \ on clear screen and desk best practices, such as locking their screen when they\
+  \ step away from their enterprise \nasset, erasing physical and virtual whiteboards\
+  \ at the end of meetings, and storing data and assets securely."
+rationale: "14.4\nTrain Workforce on Data Handling Best Practices\nN/A\n-Protect-\n\
+  • • •\nTrain workforce members on how to identify and properly store, transfer,\
+  \ archive, and destroy sensitive data. This also includes training \nworkforce members\
+  \ on clear screen and desk best practices, such as locking their screen when they\
+  \ step away from their enterprise \nasset, erasing physical and virtual whiteboards\
+  \ at the end of meetings, and storing data and assets securely."
+developer_guidance: "14.4\nTrain Workforce on Data Handling Best Practices\nN/A\n\
+  -Protect-\n• • •\nTrain workforce members on how to identify and properly store,\
+  \ transfer, archive, and destroy sensitive data. This also includes training \n\
+  workforce members on clear screen and desk best practices, such as locking their\
+  \ screen when they step away from their enterprise \nasset, erasing physical and\
+  \ virtual whiteboards at the end of meetings, and storing data and assets securely."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

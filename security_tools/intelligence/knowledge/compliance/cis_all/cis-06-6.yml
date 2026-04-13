@@ -1,0 +1,38 @@
+id: cis-06-6
+title: 06.6 Establish and Maintain an Inventory of Authentication and Authorization
+  Systems
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_06
+- safeguard
+- safeguard_6_6
+severity_guidance: medium
+description: "6.6\nEstablish and Maintain an Inventory of Authentication and Authorization\
+  \ Systems\nUsers\n-Identify-\n• •\nEstablish and maintain an inventory of the enterprise’s\
+  \ authentication and authorization systems, including those hosted on-site or at\
+  \ a \nremote service provider. Review and update the inventory, at a minimum, annually,\
+  \ or more frequently."
+rationale: "6.6\nEstablish and Maintain an Inventory of Authentication and Authorization\
+  \ Systems\nUsers\n-Identify-\n• •\nEstablish and maintain an inventory of the enterprise’s\
+  \ authentication and authorization systems, including those hosted on-site or at\
+  \ a \nremote service provider. Review and update the inventory, at a minimum, annually,\
+  \ or more frequently."
+developer_guidance: "6.6\nEstablish and Maintain an Inventory of Authentication and\
+  \ Authorization Systems\nUsers\n-Identify-\n• •\nEstablish and maintain an inventory\
+  \ of the enterprise’s authentication and authorization systems, including those\
+  \ hosted on-site or at a \nremote service provider. Review and update the inventory,\
+  \ at a minimum, annually, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 06.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

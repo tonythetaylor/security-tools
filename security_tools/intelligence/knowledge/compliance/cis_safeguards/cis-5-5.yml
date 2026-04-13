@@ -1,0 +1,43 @@
+id: cis-5-5
+title: 5.5 Establish and Maintain an Inventory of Service Accounts
+category: identity_security
+applies_to:
+- account_management
+- identity_lifecycle
+- privileged_accounts
+tags:
+- accounts
+- cis
+- control_05
+- identity
+- privilege
+- safeguard
+- safeguard_5_5
+severity_guidance: medium
+description: "5.5\nEstablish and Maintain an Inventory of Service Accounts\nUsers\n\
+  -Identify-\n• •\nEstablish and maintain an inventory of service accounts. The inventory,\
+  \ at a minimum, must contain department owner, review date, \nand purpose. Perform\
+  \ service account reviews to validate that all active accounts are authorized, on\
+  \ a recurring schedule at a minimum \nquarterly, or more frequently."
+rationale: "5.5\nEstablish and Maintain an Inventory of Service Accounts\nUsers\n\
+  -Identify-\n• •\nEstablish and maintain an inventory of service accounts. The inventory,\
+  \ at a minimum, must contain department owner, review date, \nand purpose. Perform\
+  \ service account reviews to validate that all active accounts are authorized, on\
+  \ a recurring schedule at a minimum \nquarterly, or more frequently."
+developer_guidance: "5.5\nEstablish and Maintain an Inventory of Service Accounts\n\
+  Users\n-Identify-\n• •\nEstablish and maintain an inventory of service accounts.\
+  \ The inventory, at a minimum, must contain department owner, review date, \nand\
+  \ purpose. Perform service account reviews to validate that all active accounts\
+  \ are authorized, on a recurring schedule at a minimum \nquarterly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 5.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

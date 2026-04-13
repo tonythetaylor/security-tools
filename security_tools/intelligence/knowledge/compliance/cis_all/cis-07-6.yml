@@ -1,0 +1,35 @@
+id: cis-07-6
+title: 07.6 Perform Automated Vulnerability Scans of Externally-Exposed Enterprise
+  Assets
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_07
+- safeguard
+- safeguard_7_6
+severity_guidance: medium
+description: "7.6\nPerform Automated Vulnerability Scans of Externally-Exposed Enterprise\
+  \ Assets\nApplications\n-Identify-\n• •\nPerform automated vulnerability scans of\
+  \ externally-exposed enterprise assets using a SCAP-compliant vulnerability scanning\
+  \ tool. \nPerform scans on a monthly, or more frequent, basis."
+rationale: "7.6\nPerform Automated Vulnerability Scans of Externally-Exposed Enterprise\
+  \ Assets\nApplications\n-Identify-\n• •\nPerform automated vulnerability scans of\
+  \ externally-exposed enterprise assets using a SCAP-compliant vulnerability scanning\
+  \ tool. \nPerform scans on a monthly, or more frequent, basis."
+developer_guidance: "7.6\nPerform Automated Vulnerability Scans of Externally-Exposed\
+  \ Enterprise Assets\nApplications\n-Identify-\n• •\nPerform automated vulnerability\
+  \ scans of externally-exposed enterprise assets using a SCAP-compliant vulnerability\
+  \ scanning tool. \nPerform scans on a monthly, or more frequent, basis."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 07.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

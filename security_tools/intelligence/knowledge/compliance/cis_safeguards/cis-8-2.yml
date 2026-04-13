@@ -1,0 +1,64 @@
+id: cis-8-2
+title: 8.2 Collect Audit Logs
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control_08
+- logging
+- monitoring
+- safeguard
+- safeguard_8_2
+severity_guidance: medium
+description: '8.2
+
+  Collect Audit Logs
+
+  Network
+
+  -Detect-
+
+  • • •
+
+  Collect audit logs. Ensure that logging, per the enterprise’s audit log management
+  process, has been enabled across enterprise assets.'
+rationale: '8.2
+
+  Collect Audit Logs
+
+  Network
+
+  -Detect-
+
+  • • •
+
+  Collect audit logs. Ensure that logging, per the enterprise’s audit log management
+  process, has been enabled across enterprise assets.'
+developer_guidance: '8.2
+
+  Collect Audit Logs
+
+  Network
+
+  -Detect-
+
+  • • •
+
+  Collect audit logs. Ensure that logging, per the enterprise’s audit log management
+  process, has been enabled across enterprise assets.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 8.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

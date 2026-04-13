@@ -1,0 +1,48 @@
+id: nist-800-190-3-2-3
+title: 3.2.3 Insufficient authentication and authorization restrictions
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_2_3
+severity_guidance: medium
+description: "3.2.3 Insufficient authentication and authorization restrictions \n\
+  Because registries may contain images used to run sensitive or proprietary apps\
+  \ and to access \nsensitive data, insufficient authentication and authorization\
+  \ requirements can lead to intellectual\n\nproperty loss and expose significant\
+  \ technical details about an app to an attacker. Even more \ncritically, because\
+  \ registries are typically trusted as a source of valid, approved software, \ncompromise\
+  \ of a registry can potentially lead to compromise of downstream containers and\
+  \ \nhosts."
+rationale: "3.2.3 Insufficient authentication and authorization restrictions \nBecause\
+  \ registries may contain images used to run sensitive or proprietary apps and to\
+  \ access \nsensitive data, insufficient authentication and authorization requirements\
+  \ can lead to intellectual\n\nproperty loss and expose significant technical details\
+  \ about an app to an attacker. Even more \ncritically, because registries are typically\
+  \ trusted as a source of valid, approved software, \ncompromise of a registry can\
+  \ potentially lead to compromise of downstream containers and \nhosts."
+developer_guidance: "3.2.3 Insufficient authentication and authorization restrictions\
+  \ \nBecause registries may contain images used to run sensitive or proprietary apps\
+  \ and to access \nsensitive data, insufficient authentication and authorization\
+  \ requirements can lead to intellectual\n\nproperty loss and expose significant\
+  \ technical details about an app to an attacker. Even more \ncritically, because\
+  \ registries are typically trusted as a source of valid, approved software, \ncompromise\
+  \ of a registry can potentially lead to compromise of downstream containers and\
+  \ \nhosts."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.2.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,49 @@
+id: dockerfile-build-runtime-separation
+title: Separate build and runtime stages
+category: container_security
+applies_to:
+  - dockerfile_build_runtime_not_separated
+  - dockerfile
+  - python_web
+tags:
+  - dockerfile
+  - multi-stage
+  - runtime
+  - build
+severity_guidance: medium
+description: |
+  Single-stage container builds often keep compilers, caches, package managers,
+  and build-time assets in the final runtime image.
+rationale: |
+  Runtime images should only contain what is required to execute the application.
+developer_guidance: |
+  Use a builder stage for dependency compilation and a separate runtime stage
+  that contains only the application artifacts and runtime libraries.
+recommended_patterns:
+  - multi_stage_build
+  - minimal_runtime_image
+bad_examples:
+  - single_stage_with_build_tools
+good_examples:
+  - builder_to_runtime_copy
+compliance_refs:
+  - framework: NIST
+    control: CM-6
+  - framework: NIST
+    control: SI-2
+  - framework: NIST SP 800-190
+    control: Container Hardening
+  - framework: CIS Docker Benchmark
+    control: 4.1
+risk_context:
+  internet_facing: high
+  internal_service: medium
+ownership:
+  typical_owner: application_team
+remediation:
+  summary: Use multi-stage builds and keep build tooling out of the runtime image
+  steps:
+    - Add a builder stage
+    - Install build-only dependencies in the builder
+    - Copy only built artifacts into the runtime stage
+    - Exclude package caches and temporary files

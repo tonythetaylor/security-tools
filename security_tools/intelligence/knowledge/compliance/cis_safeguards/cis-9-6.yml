@@ -1,0 +1,61 @@
+id: cis-9-6
+title: 9.6 Block Unnecessary File Types
+category: email_web_security
+applies_to:
+- browser_security
+- email_security
+- content_filtering
+tags:
+- browser
+- cis
+- control_09
+- email
+- protections
+- safeguard
+- safeguard_9_6
+severity_guidance: medium
+description: '9.6
+
+  Block Unnecessary File Types
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Block unnecessary file types attempting to enter the enterprise’s email gateway.'
+rationale: '9.6
+
+  Block Unnecessary File Types
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Block unnecessary file types attempting to enter the enterprise’s email gateway.'
+developer_guidance: '9.6
+
+  Block Unnecessary File Types
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Block unnecessary file types attempting to enter the enterprise’s email gateway.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: Safeguard 9.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,34 @@
+id: cis-03-9
+title: 03.9 Encrypt Data on Removable Media
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_9
+severity_guidance: medium
+description: "3.9\nEncrypt Data on Removable Media\nData\n-Protect-\n• •\nEncrypt\
+  \ data on removable media.\n\nCIS Controls v8\nA6 \n\uFEFFControls and Safeguards\
+  \ Index\nControl 03 / Safeguard 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\n\
+  NUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "3.9\nEncrypt Data on Removable Media\nData\n-Protect-\n• •\nEncrypt data\
+  \ on removable media.\n\nCIS Controls v8\nA6 \n\uFEFFControls and Safeguards Index\n\
+  Control 03 / Safeguard 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "3.9\nEncrypt Data on Removable Media\nData\n-Protect-\n• •\n\
+  Encrypt data on removable media.\n\nCIS Controls v8\nA6 \n\uFEFFControls and Safeguards\
+  \ Index\nControl 03 / Safeguard 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\n\
+  NUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

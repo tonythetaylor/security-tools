@@ -1,0 +1,50 @@
+id: nist-800-190-3-1-4
+title: 3.1.4 Embedded clear text secrets
+category: secret_security
+applies_to:
+- secret_detection
+- embedded_secrets
+- image_security
+tags:
+- 800-190
+- containers
+- images
+- nist
+- secret-detection
+- secrets
+- section_3_1_4
+severity_guidance: medium
+description: "3.1.4 Embedded clear text secrets \nMany apps require secrets to enable\
+  \ secure communication between components. For example, a \nweb app may need a username\
+  \ and password to connect to a backend database. Other examples \nof embedded secrets\
+  \ include connection strings, SSH private keys, and X.509 private keys. \nWhen an\
+  \ app is packaged into an image, these secrets can be embedded directly into the\
+  \ image \nfile system. However, this practice creates a security risk because anyone\
+  \ with access to the \nimage can easily parse it to learn these secrets."
+rationale: "3.1.4 Embedded clear text secrets \nMany apps require secrets to enable\
+  \ secure communication between components. For example, a \nweb app may need a username\
+  \ and password to connect to a backend database. Other examples \nof embedded secrets\
+  \ include connection strings, SSH private keys, and X.509 private keys. \nWhen an\
+  \ app is packaged into an image, these secrets can be embedded directly into the\
+  \ image \nfile system. However, this practice creates a security risk because anyone\
+  \ with access to the \nimage can easily parse it to learn these secrets."
+developer_guidance: "3.1.4 Embedded clear text secrets \nMany apps require secrets\
+  \ to enable secure communication between components. For example, a \nweb app may\
+  \ need a username and password to connect to a backend database. Other examples\
+  \ \nof embedded secrets include connection strings, SSH private keys, and X.509\
+  \ private keys. \nWhen an app is packaged into an image, these secrets can be embedded\
+  \ directly into the image \nfile system. However, this practice creates a security\
+  \ risk because anyone with access to the \nimage can easily parse it to learn these\
+  \ secrets."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.1.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,85 @@
+id: nist-800-190-4-2-3
+title: 4.2.3 Insufficient authentication and authorization restrictions
+category: identity_security
+applies_to:
+- registry_authz
+- registry_authn
+- least_privilege
+tags:
+- 800-190
+- authentication
+- authorization
+- containers
+- nist
+- registry
+- section_4_2_3
+severity_guidance: medium
+description: "4.2.3 Insufficient authentication and authorization restrictions \n\
+  All access to registries that contain proprietary or sensitive images should require\
+  \ authentication. \nAny write access to a registry should require authentication\
+  \ to ensure that only images from \ntrusted entities can be added to it. For example,\
+  \ only allow developers to push images to the \nspecific repositories they are responsible\
+  \ for, rather than being able to update any repository. \n\nFor more information\
+  \ on NIST-validated cryptographic implementations, see the Cryptographic Module\
+  \ Validation Program \n(CMVP) page at https://csrc.nist.gov/projects/cryptographic-module-validation-program.\n\
+  \nOrganizations should consider federating with existing accounts, such as their\
+  \ own or a cloud \nprovider’s directory service to take advantage of security controls\
+  \ already in place for those \naccounts. All write access to registries should be\
+  \ audited and any read actions for sensitive \nimages should similarly be logged.\
+  \ \nRegistries also provide an opportunity to apply context-aware authorization\
+  \ controls to actions. \nFor example, organizations can configure their continuous\
+  \ integration processes to allow images \nto be signed by the authorized personnel\
+  \ and pushed to a registry only after they have passed a \nvulnerability scan and\
+  \ compliance assessment. Organizations should integrate these automated \nscans\
+  \ into their processes to prevent the promotion and deployment of vulnerable or\
+  \ \nmisconfigured images."
+rationale: "4.2.3 Insufficient authentication and authorization restrictions \nAll\
+  \ access to registries that contain proprietary or sensitive images should require\
+  \ authentication. \nAny write access to a registry should require authentication\
+  \ to ensure that only images from \ntrusted entities can be added to it. For example,\
+  \ only allow developers to push images to the \nspecific repositories they are responsible\
+  \ for, rather than being able to update any repository. \n\nFor more information\
+  \ on NIST-validated cryptographic implementations, see the Cryptographic Module\
+  \ Validation Program \n(CMVP) page at https://csrc.nist.gov/projects/cryptographic-module-validation-program.\n\
+  \nOrganizations should consider federating with existing accounts, such as their\
+  \ own or a cloud \nprovider’s directory service to take advantage of security controls\
+  \ already in place for those \naccounts. All write access to registries should be\
+  \ audited and any read actions for sensitive \nimages should similarly be logged.\
+  \ \nRegistries also provide an opportunity to apply context-aware authorization\
+  \ controls to actions. \nFor example, organizations can configure their continuous\
+  \ integration processes to allow images \nto be signed by the authorized personnel\
+  \ and pushed to a registry only after they have passed a \nvulnerability scan and\
+  \ compliance assessment. Organizations should integrate these automated \nscans\
+  \ into their processes to prevent the promotion and deployment of vulnerable or\
+  \ \nmisconfigured images."
+developer_guidance: "4.2.3 Insufficient authentication and authorization restrictions\
+  \ \nAll access to registries that contain proprietary or sensitive images should\
+  \ require authentication. \nAny write access to a registry should require authentication\
+  \ to ensure that only images from \ntrusted entities can be added to it. For example,\
+  \ only allow developers to push images to the \nspecific repositories they are responsible\
+  \ for, rather than being able to update any repository. \n\nFor more information\
+  \ on NIST-validated cryptographic implementations, see the Cryptographic Module\
+  \ Validation Program \n(CMVP) page at https://csrc.nist.gov/projects/cryptographic-module-validation-program.\n\
+  \nOrganizations should consider federating with existing accounts, such as their\
+  \ own or a cloud \nprovider’s directory service to take advantage of security controls\
+  \ already in place for those \naccounts. All write access to registries should be\
+  \ audited and any read actions for sensitive \nimages should similarly be logged.\
+  \ \nRegistries also provide an opportunity to apply context-aware authorization\
+  \ controls to actions. \nFor example, organizations can configure their continuous\
+  \ integration processes to allow images \nto be signed by the authorized personnel\
+  \ and pushed to a registry only after they have passed a \nvulnerability scan and\
+  \ compliance assessment. Organizations should integrate these automated \nscans\
+  \ into their processes to prevent the promotion and deployment of vulnerable or\
+  \ \nmisconfigured images."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.2.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

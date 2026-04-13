@@ -1,0 +1,34 @@
+id: cis-04-9
+title: 04.9 Configure Trusted DNS Servers on Enterprise Assets
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_04
+- safeguard
+- safeguard_4_9
+severity_guidance: medium
+description: "4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n-Protect-\n\
+  • •\nConfigure trusted DNS servers on enterprise assets. Example implementations\
+  \ include: configuring assets to use enterprise-controlled \nDNS servers and/or\
+  \ reputable externally accessible DNS servers."
+rationale: "4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n-Protect-\n\
+  • •\nConfigure trusted DNS servers on enterprise assets. Example implementations\
+  \ include: configuring assets to use enterprise-controlled \nDNS servers and/or\
+  \ reputable externally accessible DNS servers."
+developer_guidance: "4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n\
+  -Protect-\n• •\nConfigure trusted DNS servers on enterprise assets. Example implementations\
+  \ include: configuring assets to use enterprise-controlled \nDNS servers and/or\
+  \ reputable externally accessible DNS servers."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 04.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

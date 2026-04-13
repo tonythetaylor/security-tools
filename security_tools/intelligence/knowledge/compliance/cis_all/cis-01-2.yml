@@ -1,0 +1,34 @@
+id: cis-01-2
+title: 01.2 Address Unauthorized Assets
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_01
+- safeguard
+- safeguard_1_2
+severity_guidance: medium
+description: "1.2\nAddress Unauthorized Assets\nDevices\n-Respond-\n• • •\nEnsure\
+  \ that a process exists to address unauthorized assets on a weekly basis. The enterprise\
+  \ may choose to remove the asset from the \nnetwork, deny the asset from connecting\
+  \ remotely to the network, or quarantine the asset."
+rationale: "1.2\nAddress Unauthorized Assets\nDevices\n-Respond-\n• • •\nEnsure that\
+  \ a process exists to address unauthorized assets on a weekly basis. The enterprise\
+  \ may choose to remove the asset from the \nnetwork, deny the asset from connecting\
+  \ remotely to the network, or quarantine the asset."
+developer_guidance: "1.2\nAddress Unauthorized Assets\nDevices\n-Respond-\n• • •\n\
+  Ensure that a process exists to address unauthorized assets on a weekly basis. The\
+  \ enterprise may choose to remove the asset from the \nnetwork, deny the asset from\
+  \ connecting remotely to the network, or quarantine the asset."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: Safeguard 01.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

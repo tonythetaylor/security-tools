@@ -1,0 +1,46 @@
+id: nist-800-190-3-4-1
+title: 3.4.1 Vulnerabilities within the runtime software
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_4_1
+severity_guidance: medium
+description: "3.4.1 Vulnerabilities within the runtime software \nWhile relatively\
+  \ uncommon, vulnerabilities within the runtime software are particularly \ndangerous\
+  \ if they allow ‘container escape’ scenarios in which malicious software can attack\
+  \ \nresources in other containers and the host OS itself. An attacker may also be\
+  \ able to exploit \nvulnerabilities to compromise the runtime software itself, and\
+  \ then alter that software so it allows \nthe attacker to access other containers,\
+  \ monitor container-to-container communications, etc."
+rationale: "3.4.1 Vulnerabilities within the runtime software \nWhile relatively uncommon,\
+  \ vulnerabilities within the runtime software are particularly \ndangerous if they\
+  \ allow ‘container escape’ scenarios in which malicious software can attack \nresources\
+  \ in other containers and the host OS itself. An attacker may also be able to exploit\
+  \ \nvulnerabilities to compromise the runtime software itself, and then alter that\
+  \ software so it allows \nthe attacker to access other containers, monitor container-to-container\
+  \ communications, etc."
+developer_guidance: "3.4.1 Vulnerabilities within the runtime software \nWhile relatively\
+  \ uncommon, vulnerabilities within the runtime software are particularly \ndangerous\
+  \ if they allow ‘container escape’ scenarios in which malicious software can attack\
+  \ \nresources in other containers and the host OS itself. An attacker may also be\
+  \ able to exploit \nvulnerabilities to compromise the runtime software itself, and\
+  \ then alter that software so it allows \nthe attacker to access other containers,\
+  \ monitor container-to-container communications, etc."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.4.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

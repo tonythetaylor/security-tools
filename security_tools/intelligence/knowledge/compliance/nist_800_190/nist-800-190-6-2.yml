@@ -1,0 +1,130 @@
+id: nist-800-190-6-2
+title: 6.2 Planning and Design Phase
+category: design_security
+applies_to:
+- container_design
+- forensics
+- incident_readiness
+tags:
+- 800-190
+- containers
+- design
+- forensics
+- incident-response
+- nist
+- section_6_2
+severity_guidance: medium
+description: "6.2 \nPlanning and Design Phase \nThe primary container-specific consideration\
+  \ for the planning and design phase is forensics. \nBecause containers mostly build\
+  \ on components already present in OSs, the tools and techniques \nfor performing\
+  \ forensics in a containerized environment are mostly an evolution of existing \n\
+  practices. The immutable nature of containers and images can actually improve forensic\
+  \ \ncapabilities because the demarcation between what an image should do and what\
+  \ actually \noccurred during an incident is clearer. For example, if a container\
+  \ launched to run a web server \nsuddenly starts a mail relay, it is very clear\
+  \ that the new process was not part of the original\n\nimage used to create the\
+  \ container. On traditional platforms, with less separation between the OS \nand\
+  \ apps, making this differentiation can be much more difficult. \nOrganizations\
+  \ that are familiar with process, memory, and disk incident response activities\
+  \ will \nfind them largely similar when working with containers. However, there\
+  \ are some differences to \nkeep in mind as well. \nContainers typically use a layered\
+  \ file system that is virtualized from the host OS. Directly \nexamining paths on\
+  \ the hosts typically only reveals the outer boundary of these layers, not the \n\
+  files and data within them. Thus, when responding to incidents in containerized\
+  \ environments, \nusers should identify the specific storage provider in use and\
+  \ understand how to properly \nexamine its contents offline. \nContainers are typically\
+  \ connected to each other using virtualized overlay networks. These \noverlay networks\
+  \ frequently use encapsulation and encryption to allow the traffic to be routed\
+  \ \nover existing networks securely. However, this means that when investigating\
+  \ incidents on \ncontainer networks, particularly when doing any live packet analysis,\
+  \ the tools used must be \naware of these virtualized networks and understand how\
+  \ to extract the embedded IP frames from \nwithin them for parsing with existing\
+  \ tools. \nProcess and memory activity within containers is largely similar to that\
+  \ which would be observed \nwithin traditional apps, but with different parent processes.\
+  \ For example, container runtimes may \nspawn all processes within containers in\
+  \ a nested fashion in which the runtime is the top-level \nprocess with first-level\
+  \ descendants per container and second-level descendants for each process \nwithin\
+  \ the container. For example: \n├─containerd─┬───┬───[container1─┬─bash] \n│ │ │\
+  \ └─8*[{thread}]] \n│ │ ├─container2────┬─start.sh─┬─mongod───22*[{mongod}] \n│\
+  \ │ │ │ └─node─┬─4*[{V8 WorkerThread}] \n│ │ │ │ └─5*[{node}] \n│ │ │ └─8*[{thread}]\
+  \ \n│ │ ├─container3────┬─mysqld───28*[{mysqld}] \n│ │ │ └─8*[{thread}]"
+rationale: "6.2 \nPlanning and Design Phase \nThe primary container-specific consideration\
+  \ for the planning and design phase is forensics. \nBecause containers mostly build\
+  \ on components already present in OSs, the tools and techniques \nfor performing\
+  \ forensics in a containerized environment are mostly an evolution of existing \n\
+  practices. The immutable nature of containers and images can actually improve forensic\
+  \ \ncapabilities because the demarcation between what an image should do and what\
+  \ actually \noccurred during an incident is clearer. For example, if a container\
+  \ launched to run a web server \nsuddenly starts a mail relay, it is very clear\
+  \ that the new process was not part of the original\n\nimage used to create the\
+  \ container. On traditional platforms, with less separation between the OS \nand\
+  \ apps, making this differentiation can be much more difficult. \nOrganizations\
+  \ that are familiar with process, memory, and disk incident response activities\
+  \ will \nfind them largely similar when working with containers. However, there\
+  \ are some differences to \nkeep in mind as well. \nContainers typically use a layered\
+  \ file system that is virtualized from the host OS. Directly \nexamining paths on\
+  \ the hosts typically only reveals the outer boundary of these layers, not the \n\
+  files and data within them. Thus, when responding to incidents in containerized\
+  \ environments, \nusers should identify the specific storage provider in use and\
+  \ understand how to properly \nexamine its contents offline. \nContainers are typically\
+  \ connected to each other using virtualized overlay networks. These \noverlay networks\
+  \ frequently use encapsulation and encryption to allow the traffic to be routed\
+  \ \nover existing networks securely. However, this means that when investigating\
+  \ incidents on \ncontainer networks, particularly when doing any live packet analysis,\
+  \ the tools used must be \naware of these virtualized networks and understand how\
+  \ to extract the embedded IP frames from \nwithin them for parsing with existing\
+  \ tools. \nProcess and memory activity within containers is largely similar to that\
+  \ which would be observed \nwithin traditional apps, but with different parent processes.\
+  \ For example, container runtimes may \nspawn all processes within containers in\
+  \ a nested fashion in which the runtime is the top-level \nprocess with first-level\
+  \ descendants per container and second-level descendants for each process \nwithin\
+  \ the container. For example: \n├─containerd─┬───┬───[container1─┬─bash] \n│ │ │\
+  \ └─8*[{thread}]] \n│ │ ├─container2────┬─start.sh─┬─mongod───22*[{mongod}] \n│\
+  \ │ │ │ └─node─┬─4*[{V8 WorkerThread}] \n│ │ │ │ └─5*[{node}] \n│ │ │ └─8*[{thread}]\
+  \ \n│ │ ├─container3────┬─mysqld───28*[{mysqld}] \n│ │ │ └─8*[{thread}]"
+developer_guidance: "6.2 \nPlanning and Design Phase \nThe primary container-specific\
+  \ consideration for the planning and design phase is forensics. \nBecause containers\
+  \ mostly build on components already present in OSs, the tools and techniques \n\
+  for performing forensics in a containerized environment are mostly an evolution\
+  \ of existing \npractices. The immutable nature of containers and images can actually\
+  \ improve forensic \ncapabilities because the demarcation between what an image\
+  \ should do and what actually \noccurred during an incident is clearer. For example,\
+  \ if a container launched to run a web server \nsuddenly starts a mail relay, it\
+  \ is very clear that the new process was not part of the original\n\nimage used\
+  \ to create the container. On traditional platforms, with less separation between\
+  \ the OS \nand apps, making this differentiation can be much more difficult. \n\
+  Organizations that are familiar with process, memory, and disk incident response\
+  \ activities will \nfind them largely similar when working with containers. However,\
+  \ there are some differences to \nkeep in mind as well. \nContainers typically use\
+  \ a layered file system that is virtualized from the host OS. Directly \nexamining\
+  \ paths on the hosts typically only reveals the outer boundary of these layers,\
+  \ not the \nfiles and data within them. Thus, when responding to incidents in containerized\
+  \ environments, \nusers should identify the specific storage provider in use and\
+  \ understand how to properly \nexamine its contents offline. \nContainers are typically\
+  \ connected to each other using virtualized overlay networks. These \noverlay networks\
+  \ frequently use encapsulation and encryption to allow the traffic to be routed\
+  \ \nover existing networks securely. However, this means that when investigating\
+  \ incidents on \ncontainer networks, particularly when doing any live packet analysis,\
+  \ the tools used must be \naware of these virtualized networks and understand how\
+  \ to extract the embedded IP frames from \nwithin them for parsing with existing\
+  \ tools. \nProcess and memory activity within containers is largely similar to that\
+  \ which would be observed \nwithin traditional apps, but with different parent processes.\
+  \ For example, container runtimes may \nspawn all processes within containers in\
+  \ a nested fashion in which the runtime is the top-level \nprocess with first-level\
+  \ descendants per container and second-level descendants for each process \nwithin\
+  \ the container. For example: \n├─containerd─┬───┬───[container1─┬─bash] \n│ │ │\
+  \ └─8*[{thread}]] \n│ │ ├─container2────┬─start.sh─┬─mongod───22*[{mongod}] \n│\
+  \ │ │ │ └─node─┬─4*[{V8 WorkerThread}] \n│ │ │ │ └─5*[{node}] \n│ │ │ └─8*[{thread}]\
+  \ \n│ │ ├─container3────┬─mysqld───28*[{mysqld}] \n│ │ │ └─8*[{thread}]"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '6.2'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

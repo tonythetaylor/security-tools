@@ -1,0 +1,43 @@
+id: cis-02-2
+title: 02.2 Ensure Authorized Software is Currently Supported
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_02
+- safeguard
+- safeguard_2_2
+severity_guidance: medium
+description: "2.2\nEnsure Authorized Software is Currently Supported \nApplications\n\
+  -Identify-\n• • •\nEnsure that only currently supported software is designated as\
+  \ authorized in the software inventory for enterprise assets. If software \nis unsupported,\
+  \ yet necessary for the fulfillment of the enterprise’s mission, document an exception\
+  \ detailing mitigating controls and \nresidual risk acceptance. For any unsupported\
+  \ software without an exception documentation, designate as unauthorized. Review\
+  \ the \nsoftware list to verify software support at least monthly, or more frequently."
+rationale: "2.2\nEnsure Authorized Software is Currently Supported \nApplications\n\
+  -Identify-\n• • •\nEnsure that only currently supported software is designated as\
+  \ authorized in the software inventory for enterprise assets. If software \nis unsupported,\
+  \ yet necessary for the fulfillment of the enterprise’s mission, document an exception\
+  \ detailing mitigating controls and \nresidual risk acceptance. For any unsupported\
+  \ software without an exception documentation, designate as unauthorized. Review\
+  \ the \nsoftware list to verify software support at least monthly, or more frequently."
+developer_guidance: "2.2\nEnsure Authorized Software is Currently Supported \nApplications\n\
+  -Identify-\n• • •\nEnsure that only currently supported software is designated as\
+  \ authorized in the software inventory for enterprise assets. If software \nis unsupported,\
+  \ yet necessary for the fulfillment of the enterprise’s mission, document an exception\
+  \ detailing mitigating controls and \nresidual risk acceptance. For any unsupported\
+  \ software without an exception documentation, designate as unauthorized. Review\
+  \ the \nsoftware list to verify software support at least monthly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: Safeguard 02.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

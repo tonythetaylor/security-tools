@@ -1,0 +1,62 @@
+id: nist-800-190-3-1-1
+title: 3.1.1 Image vulnerabilities
+category: container_security
+applies_to:
+- image_vulnerabilities
+- container_scanning
+- vulnerability_management
+tags:
+- 800-190
+- container-scanning
+- containers
+- images
+- nist
+- section_3_1_1
+- vulnerabilities
+severity_guidance: medium
+description: "3.1.1 Image vulnerabilities \nBecause images are effectively static\
+  \ archive files that include all the components used to run a \ngiven app, components\
+  \ within an image may be missing critical security updates or are otherwise \noutdated.\
+  \ An image created with fully up-to-date components may be free of known \nvulnerabilities\
+  \ for days or weeks after its creation, but at some time vulnerabilities will be\
+  \ \ndiscovered in one or more image components, and thus the image will no longer\
+  \ be up-to-date. \nUnlike traditional operational patterns in which deployed software\
+  \ is updated ‘in the field’ on the \nhosts it runs on, with containers these updates\
+  \ must be made upstream in the images themselves, \nwhich are then redeployed. Thus,\
+  \ a common risk in containerized environments is deployed \ncontainers having vulnerabilities\
+  \ because the version of the image used to generate the containers \nhas vulnerabilities."
+rationale: "3.1.1 Image vulnerabilities \nBecause images are effectively static archive\
+  \ files that include all the components used to run a \ngiven app, components within\
+  \ an image may be missing critical security updates or are otherwise \noutdated.\
+  \ An image created with fully up-to-date components may be free of known \nvulnerabilities\
+  \ for days or weeks after its creation, but at some time vulnerabilities will be\
+  \ \ndiscovered in one or more image components, and thus the image will no longer\
+  \ be up-to-date. \nUnlike traditional operational patterns in which deployed software\
+  \ is updated ‘in the field’ on the \nhosts it runs on, with containers these updates\
+  \ must be made upstream in the images themselves, \nwhich are then redeployed. Thus,\
+  \ a common risk in containerized environments is deployed \ncontainers having vulnerabilities\
+  \ because the version of the image used to generate the containers \nhas vulnerabilities."
+developer_guidance: "3.1.1 Image vulnerabilities \nBecause images are effectively\
+  \ static archive files that include all the components used to run a \ngiven app,\
+  \ components within an image may be missing critical security updates or are otherwise\
+  \ \noutdated. An image created with fully up-to-date components may be free of known\
+  \ \nvulnerabilities for days or weeks after its creation, but at some time vulnerabilities\
+  \ will be \ndiscovered in one or more image components, and thus the image will\
+  \ no longer be up-to-date. \nUnlike traditional operational patterns in which deployed\
+  \ software is updated ‘in the field’ on the \nhosts it runs on, with containers\
+  \ these updates must be made upstream in the images themselves, \nwhich are then\
+  \ redeployed. Thus, a common risk in containerized environments is deployed \ncontainers\
+  \ having vulnerabilities because the version of the image used to generate the containers\
+  \ \nhas vulnerabilities."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.1.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

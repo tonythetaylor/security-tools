@@ -14,6 +14,7 @@ dependencies = [
   "requests>=2.32,<3",
   "python-dotenv>=1.0,<2",
   "PyYAML>=6.0,<7",
+  "PyMuPDF>=1.24,<2",
 ]
 
 [project.scripts]
@@ -30,3 +31,4 @@ exclude = ["tests*"]
 
 [tool.setuptools.package-data]
 "security_tools.catalog" = ["*.yml", "*.yaml"]
+"security_tools.intelligence.knowledge" = ["**/*.yml", "**/*.yaml", "*.yml", "*.yaml"]

@@ -1,0 +1,31 @@
+id: cis-17-8
+title: 17.8 Conduct Post-Incident Reviews
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_17
+- safeguard
+- safeguard_17_8
+severity_guidance: medium
+description: "17.8\nConduct Post-Incident Reviews\nN/A\n-Recover-\n• •\nConduct post-incident\
+  \ reviews. Post-incident reviews help prevent incident recurrence through identifying\
+  \ lessons learned and \nfollow-up action."
+rationale: "17.8\nConduct Post-Incident Reviews\nN/A\n-Recover-\n• •\nConduct post-incident\
+  \ reviews. Post-incident reviews help prevent incident recurrence through identifying\
+  \ lessons learned and \nfollow-up action."
+developer_guidance: "17.8\nConduct Post-Incident Reviews\nN/A\n-Recover-\n• •\nConduct\
+  \ post-incident reviews. Post-incident reviews help prevent incident recurrence\
+  \ through identifying lessons learned and \nfollow-up action."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

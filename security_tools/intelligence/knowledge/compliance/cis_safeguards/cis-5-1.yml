@@ -1,0 +1,46 @@
+id: cis-5-1
+title: 5.1 Establish and Maintain an Inventory of Accounts
+category: identity_security
+applies_to:
+- account_management
+- identity_lifecycle
+- privileged_accounts
+tags:
+- accounts
+- cis
+- control_05
+- identity
+- privilege
+- safeguard
+- safeguard_5_1
+severity_guidance: medium
+description: "5.1\nEstablish and Maintain an Inventory of Accounts\nUsers\n-Identify-\n\
+  • • •\nEstablish and maintain an inventory of all accounts managed in the enterprise.\
+  \ The inventory must include both user and administrator \naccounts. The inventory,\
+  \ at a minimum, should contain the person’s name, username, start/stop dates, and\
+  \ department. Validate that all \nactive accounts are authorized, on a recurring\
+  \ schedule at a minimum quarterly, or more frequently."
+rationale: "5.1\nEstablish and Maintain an Inventory of Accounts\nUsers\n-Identify-\n\
+  • • •\nEstablish and maintain an inventory of all accounts managed in the enterprise.\
+  \ The inventory must include both user and administrator \naccounts. The inventory,\
+  \ at a minimum, should contain the person’s name, username, start/stop dates, and\
+  \ department. Validate that all \nactive accounts are authorized, on a recurring\
+  \ schedule at a minimum quarterly, or more frequently."
+developer_guidance: "5.1\nEstablish and Maintain an Inventory of Accounts\nUsers\n\
+  -Identify-\n• • •\nEstablish and maintain an inventory of all accounts managed in\
+  \ the enterprise. The inventory must include both user and administrator \naccounts.\
+  \ The inventory, at a minimum, should contain the person’s name, username, start/stop\
+  \ dates, and department. Validate that all \nactive accounts are authorized, on\
+  \ a recurring schedule at a minimum quarterly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 5.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

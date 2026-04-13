@@ -1,0 +1,61 @@
+id: nist-800-190-5-2
+title: 5.2 Exploit of the Container Runtime
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_5_2
+severity_guidance: medium
+description: "5.2 \nExploit of the Container Runtime \nWhile an uncommon occurrence,\
+  \ if a container runtime were compromised, an attacker could \nutilize this access\
+  \ to attack all the containers on the host and even the host itself. \nRelevant\
+  \ mitigations for this threat scenario include: \n1. The usage of mandatory access\
+  \ control capabilities can provide additional barriers to \nensure that process\
+  \ and file system activity is still segmented within the defined \nboundaries. \n\
+  2. Segmentation of workloads ensures that the scope of the compromise would be limited\
+  \ to \napps of a common sensitivity level that are sharing the host. For example,\
+  \ a compromised \nruntime on a host only running web apps would not impact runtimes\
+  \ on other hosts \nrunning containers for financial apps. \n3. Security tools that\
+  \ can report on the vulnerability state of runtimes and prevent the \ndeployment\
+  \ of images to vulnerable runtimes can prevent workloads from running there."
+rationale: "5.2 \nExploit of the Container Runtime \nWhile an uncommon occurrence,\
+  \ if a container runtime were compromised, an attacker could \nutilize this access\
+  \ to attack all the containers on the host and even the host itself. \nRelevant\
+  \ mitigations for this threat scenario include: \n1. The usage of mandatory access\
+  \ control capabilities can provide additional barriers to \nensure that process\
+  \ and file system activity is still segmented within the defined \nboundaries. \n\
+  2. Segmentation of workloads ensures that the scope of the compromise would be limited\
+  \ to \napps of a common sensitivity level that are sharing the host. For example,\
+  \ a compromised \nruntime on a host only running web apps would not impact runtimes\
+  \ on other hosts \nrunning containers for financial apps. \n3. Security tools that\
+  \ can report on the vulnerability state of runtimes and prevent the \ndeployment\
+  \ of images to vulnerable runtimes can prevent workloads from running there."
+developer_guidance: "5.2 \nExploit of the Container Runtime \nWhile an uncommon occurrence,\
+  \ if a container runtime were compromised, an attacker could \nutilize this access\
+  \ to attack all the containers on the host and even the host itself. \nRelevant\
+  \ mitigations for this threat scenario include: \n1. The usage of mandatory access\
+  \ control capabilities can provide additional barriers to \nensure that process\
+  \ and file system activity is still segmented within the defined \nboundaries. \n\
+  2. Segmentation of workloads ensures that the scope of the compromise would be limited\
+  \ to \napps of a common sensitivity level that are sharing the host. For example,\
+  \ a compromised \nruntime on a host only running web apps would not impact runtimes\
+  \ on other hosts \nrunning containers for financial apps. \n3. Security tools that\
+  \ can report on the vulnerability state of runtimes and prevent the \ndeployment\
+  \ of images to vulnerable runtimes can prevent workloads from running there."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '5.2'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

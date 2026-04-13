@@ -1,0 +1,49 @@
+id: cis-17-2
+title: 17.2 Establish and Maintain Contact Information for Reporting Security Incidents
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_2
+severity_guidance: medium
+description: "17.2\nEstablish and Maintain Contact Information for Reporting Security\
+  \ Incidents\nN/A\n-Respond-\n• • •\nEstablish and maintain contact information for\
+  \ parties that need to be informed of security incidents. Contacts may include internal\
+  \ \nstaff, third-party vendors, law enforcement, cyber insurance providers, relevant\
+  \ government agencies, Information Sharing and Analysis \nCenter (ISAC) partners,\
+  \ or other stakeholders. Verify contacts annually to ensure that information is\
+  \ up-to-date."
+rationale: "17.2\nEstablish and Maintain Contact Information for Reporting Security\
+  \ Incidents\nN/A\n-Respond-\n• • •\nEstablish and maintain contact information for\
+  \ parties that need to be informed of security incidents. Contacts may include internal\
+  \ \nstaff, third-party vendors, law enforcement, cyber insurance providers, relevant\
+  \ government agencies, Information Sharing and Analysis \nCenter (ISAC) partners,\
+  \ or other stakeholders. Verify contacts annually to ensure that information is\
+  \ up-to-date."
+developer_guidance: "17.2\nEstablish and Maintain Contact Information for Reporting\
+  \ Security Incidents\nN/A\n-Respond-\n• • •\nEstablish and maintain contact information\
+  \ for parties that need to be informed of security incidents. Contacts may include\
+  \ internal \nstaff, third-party vendors, law enforcement, cyber insurance providers,\
+  \ relevant government agencies, Information Sharing and Analysis \nCenter (ISAC)\
+  \ partners, or other stakeholders. Verify contacts annually to ensure that information\
+  \ is up-to-date."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

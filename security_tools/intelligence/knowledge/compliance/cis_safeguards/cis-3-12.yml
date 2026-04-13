@@ -1,0 +1,40 @@
+id: cis-3-12
+title: 3.12 Segment Data Processing and Storage Based on Sensitivity
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_12
+severity_guidance: medium
+description: "3.12\nSegment Data Processing and Storage Based on Sensitivity\nNetwork\n\
+  -Protect-\n• •\nSegment data processing and storage based on the sensitivity of\
+  \ the data. Do not process sensitive data on enterprise assets intended \nfor lower\
+  \ sensitivity data."
+rationale: "3.12\nSegment Data Processing and Storage Based on Sensitivity\nNetwork\n\
+  -Protect-\n• •\nSegment data processing and storage based on the sensitivity of\
+  \ the data. Do not process sensitive data on enterprise assets intended \nfor lower\
+  \ sensitivity data."
+developer_guidance: "3.12\nSegment Data Processing and Storage Based on Sensitivity\n\
+  Network\n-Protect-\n• •\nSegment data processing and storage based on the sensitivity\
+  \ of the data. Do not process sensitive data on enterprise assets intended \nfor\
+  \ lower sensitivity data."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.12
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

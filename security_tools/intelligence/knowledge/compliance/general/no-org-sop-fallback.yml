@@ -1,0 +1,29 @@
+id: no-org-sop-fallback
+title: Standards-based fallback guidance
+category: general
+applies_to:
+  - general
+tags:
+  - fallback
+  - nist
+  - cis
+severity_guidance: low
+description: |
+  When organization-specific SOPs do not exist, recommendations should fall back to recognized baseline standards.
+rationale: |
+  Security guidance should still be actionable and defensible even in less mature environments.
+developer_guidance: |
+  Use NIST, CIS, and related platform hardening guidance as the default recommendation baseline until local SOPs are defined.
+compliance_refs:
+  - framework: NIST
+    control: CM-6
+  - framework: NIST
+    control: SA-11
+ownership:
+  typical_owner: security_team
+remediation:
+  summary: Use standards-based guidance until org policy is defined
+  steps:
+    - Map findings to NIST and CIS baselines
+    - Document local interpretation where needed
+    - Replace fallback guidance with local SOPs as they are created

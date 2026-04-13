@@ -1,0 +1,43 @@
+id: nist-800-190-4-2-1
+title: 4.2.1 Insecure connections to registries
+category: transport_security
+applies_to:
+- https
+- registry_tls
+- secure_transport
+tags:
+- 800-190
+- containers
+- nist
+- registry
+- section_4_2_1
+- tls
+- transport-security
+severity_guidance: medium
+description: "4.2.1 Insecure connections to registries \nOrganizations should configure\
+  \ their development tools, orchestrators, and container runtimes to \nonly connect\
+  \ to registries over encrypted channels. The specific steps vary between tools,\
+  \ but the \nkey goal is to ensure that all data pushed to and pulled from a registry\
+  \ occurs between trusted \nendpoints and is encrypted in transit."
+rationale: "4.2.1 Insecure connections to registries \nOrganizations should configure\
+  \ their development tools, orchestrators, and container runtimes to \nonly connect\
+  \ to registries over encrypted channels. The specific steps vary between tools,\
+  \ but the \nkey goal is to ensure that all data pushed to and pulled from a registry\
+  \ occurs between trusted \nendpoints and is encrypted in transit."
+developer_guidance: "4.2.1 Insecure connections to registries \nOrganizations should\
+  \ configure their development tools, orchestrators, and container runtimes to \n\
+  only connect to registries over encrypted channels. The specific steps vary between\
+  \ tools, but the \nkey goal is to ensure that all data pushed to and pulled from\
+  \ a registry occurs between trusted \nendpoints and is encrypted in transit."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.2.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,43 @@
+id: cis-17-4
+title: 17.4 Establish and Maintain an Incident Response Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_17
+- safeguard
+- safeguard_17_4
+severity_guidance: medium
+description: "17.4\nEstablish and Maintain an Incident Response Process\nN/A\n-Respond-\n\
+  • •\nEstablish and maintain an incident response process that addresses roles and\
+  \ responsibilities, compliance requirements, and a \ncommunication plan. Review\
+  \ annually, or when significant enterprise changes occur that could impact this\
+  \ Safeguard.\n\nCIS Controls v8\nA16 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 17 / Safeguard 17.5 — Control 18 / Safeguard 18.5\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "17.4\nEstablish and Maintain an Incident Response Process\nN/A\n-Respond-\n\
+  • •\nEstablish and maintain an incident response process that addresses roles and\
+  \ responsibilities, compliance requirements, and a \ncommunication plan. Review\
+  \ annually, or when significant enterprise changes occur that could impact this\
+  \ Safeguard.\n\nCIS Controls v8\nA16 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 17 / Safeguard 17.5 — Control 18 / Safeguard 18.5\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "17.4\nEstablish and Maintain an Incident Response Process\nN/A\n\
+  -Respond-\n• •\nEstablish and maintain an incident response process that addresses\
+  \ roles and responsibilities, compliance requirements, and a \ncommunication plan.\
+  \ Review annually, or when significant enterprise changes occur that could impact\
+  \ this Safeguard.\n\nCIS Controls v8\nA16 \n\uFEFFControls and Safeguards Index\n\
+  Control 17 / Safeguard 17.5 — Control 18 / Safeguard 18.5\nCONTROL\nSAFEGUARD\n\
+  NUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,37 @@
+id: cis-14-3
+title: 14.3 Train Workforce Members on Authentication Best Practices
+category: training_security
+applies_to:
+- security_training
+- awareness
+- skills_development
+tags:
+- awareness
+- cis
+- control_14
+- safeguard
+- safeguard_14_3
+- skills
+- training
+severity_guidance: medium
+description: "14.3\nTrain Workforce Members on Authentication Best Practices\nN/A\n\
+  -Protect-\n• • •\nTrain workforce members on authentication best practices. Example\
+  \ topics include MFA, password composition, and \ncredential management."
+rationale: "14.3\nTrain Workforce Members on Authentication Best Practices\nN/A\n\
+  -Protect-\n• • •\nTrain workforce members on authentication best practices. Example\
+  \ topics include MFA, password composition, and \ncredential management."
+developer_guidance: "14.3\nTrain Workforce Members on Authentication Best Practices\n\
+  N/A\n-Protect-\n• • •\nTrain workforce members on authentication best practices.\
+  \ Example topics include MFA, password composition, and \ncredential management."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

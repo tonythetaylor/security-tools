@@ -1,0 +1,46 @@
+id: nist-800-190-3-5-5
+title: 3.5.5 Host OS file system tampering
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_5_5
+severity_guidance: medium
+description: "3.5.5 Host OS file system tampering \nInsecure container configurations\
+  \ can expose host volumes to greater risk of file tampering. For \nexample, if a\
+  \ container is allowed to mount sensitive directories on the host OS, that container\
+  \ \ncan then change files in those directories. These changes could impact the stability\
+  \ and security \nof the host and all other containers running on it.\n\nCountermeasures\
+  \ for Major Risks \nThis section recommends countermeasures for the major risks\
+  \ identified in Section 3."
+rationale: "3.5.5 Host OS file system tampering \nInsecure container configurations\
+  \ can expose host volumes to greater risk of file tampering. For \nexample, if a\
+  \ container is allowed to mount sensitive directories on the host OS, that container\
+  \ \ncan then change files in those directories. These changes could impact the stability\
+  \ and security \nof the host and all other containers running on it.\n\nCountermeasures\
+  \ for Major Risks \nThis section recommends countermeasures for the major risks\
+  \ identified in Section 3."
+developer_guidance: "3.5.5 Host OS file system tampering \nInsecure container configurations\
+  \ can expose host volumes to greater risk of file tampering. For \nexample, if a\
+  \ container is allowed to mount sensitive directories on the host OS, that container\
+  \ \ncan then change files in those directories. These changes could impact the stability\
+  \ and security \nof the host and all other containers running on it.\n\nCountermeasures\
+  \ for Major Risks \nThis section recommends countermeasures for the major risks\
+  \ identified in Section 3."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.5.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

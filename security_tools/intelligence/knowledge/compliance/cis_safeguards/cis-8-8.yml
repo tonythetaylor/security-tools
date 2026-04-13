@@ -1,0 +1,37 @@
+id: cis-8-8
+title: 8.8 Collect Command-Line Audit Logs
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control_08
+- logging
+- monitoring
+- safeguard
+- safeguard_8_8
+severity_guidance: medium
+description: "8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\nCollect\
+  \ command-line audit logs. Example implementations include collecting audit logs\
+  \ from PowerShell®, BASH™, and remote \nadministrative terminals."
+rationale: "8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\nCollect\
+  \ command-line audit logs. Example implementations include collecting audit logs\
+  \ from PowerShell®, BASH™, and remote \nadministrative terminals."
+developer_guidance: "8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\n\
+  Collect command-line audit logs. Example implementations include collecting audit\
+  \ logs from PowerShell®, BASH™, and remote \nadministrative terminals."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 8.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

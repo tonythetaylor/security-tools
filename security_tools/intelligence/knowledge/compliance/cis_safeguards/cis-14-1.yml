@@ -1,0 +1,46 @@
+id: cis-14-1
+title: 14.1 Establish and Maintain a Security Awareness Program
+category: training_security
+applies_to:
+- security_training
+- awareness
+- skills_development
+tags:
+- awareness
+- cis
+- control_14
+- safeguard
+- safeguard_14_1
+- skills
+- training
+severity_guidance: medium
+description: "14.1\nEstablish and Maintain a Security Awareness Program\nN/A\n-Protect-\n\
+  • • •\nEstablish and maintain a security awareness program. The purpose of a security\
+  \ awareness program is to educate the enterprise’s \nworkforce on how to interact\
+  \ with enterprise assets and data in a secure manner. Conduct training at hire and,\
+  \ at a minimum, annually. \nReview and update content annually, or when significant\
+  \ enterprise changes occur that could impact this Safeguard."
+rationale: "14.1\nEstablish and Maintain a Security Awareness Program\nN/A\n-Protect-\n\
+  • • •\nEstablish and maintain a security awareness program. The purpose of a security\
+  \ awareness program is to educate the enterprise’s \nworkforce on how to interact\
+  \ with enterprise assets and data in a secure manner. Conduct training at hire and,\
+  \ at a minimum, annually. \nReview and update content annually, or when significant\
+  \ enterprise changes occur that could impact this Safeguard."
+developer_guidance: "14.1\nEstablish and Maintain a Security Awareness Program\nN/A\n\
+  -Protect-\n• • •\nEstablish and maintain a security awareness program. The purpose\
+  \ of a security awareness program is to educate the enterprise’s \nworkforce on\
+  \ how to interact with enterprise assets and data in a secure manner. Conduct training\
+  \ at hire and, at a minimum, annually. \nReview and update content annually, or\
+  \ when significant enterprise changes occur that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

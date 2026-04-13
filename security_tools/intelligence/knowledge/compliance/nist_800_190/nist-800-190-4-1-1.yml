@@ -1,0 +1,91 @@
+id: nist-800-190-4-1-1
+title: 4.1.1 Image vulnerabilities
+category: container_security
+applies_to:
+- image_vulnerabilities
+- container_scanning
+- vulnerability_management
+tags:
+- 800-190
+- containers
+- countermeasures
+- images
+- nist
+- section_4_1_1
+- vulnerabilities
+severity_guidance: medium
+description: "4.1.1 Image vulnerabilities \nThere is a need for container technology-specific\
+  \ vulnerability management tools and processes. \nTraditional vulnerability management\
+  \ tools make many assumptions about host durability and \napp update mechanisms\
+  \ and frequencies that are fundamentally misaligned with a containerized \nmodel.\
+  \ These tools are often unable to detect vulnerabilities within containers, leading\
+  \ to a false \nsense of safety. \nOrganizations should use tools that take the pipeline-based\
+  \ build approach and immutable nature \nof containers and images into their design\
+  \ to provide more actionable and reliable results. Key \naspects of effective tools\
+  \ and processes include: \n1. Integration with the entire lifecycle of images, from\
+  \ the beginning of the build process, to \nwhatever registries the organization\
+  \ is using, to runtime. \n2. Visibility into vulnerabilities at all layers of the\
+  \ image, not just the base layer of the \nimage but also application frameworks\
+  \ and custom software the organization is using. \nVisibility should be centralized\
+  \ across the organization and provide flexible reporting and \nmonitoring views\
+  \ aligned with organizations’ business processes. \n3. Policy-driven enforcement;\
+  \ organizations should be able to create “quality gates” at each \nstage of the\
+  \ build and deployment process to ensure that only images that meet the \norganization’s\
+  \ vulnerability and configuration policies are allowed to progress. For \nexample,\
+  \ organizations should be able to configure a rule in the build process to prevent\
+  \ \nthe progression of images that include vulnerabilities with Common Vulnerability\
+  \ \nScoring System (CVSS) [18] ratings above a selected threshold."
+rationale: "4.1.1 Image vulnerabilities \nThere is a need for container technology-specific\
+  \ vulnerability management tools and processes. \nTraditional vulnerability management\
+  \ tools make many assumptions about host durability and \napp update mechanisms\
+  \ and frequencies that are fundamentally misaligned with a containerized \nmodel.\
+  \ These tools are often unable to detect vulnerabilities within containers, leading\
+  \ to a false \nsense of safety. \nOrganizations should use tools that take the pipeline-based\
+  \ build approach and immutable nature \nof containers and images into their design\
+  \ to provide more actionable and reliable results. Key \naspects of effective tools\
+  \ and processes include: \n1. Integration with the entire lifecycle of images, from\
+  \ the beginning of the build process, to \nwhatever registries the organization\
+  \ is using, to runtime. \n2. Visibility into vulnerabilities at all layers of the\
+  \ image, not just the base layer of the \nimage but also application frameworks\
+  \ and custom software the organization is using. \nVisibility should be centralized\
+  \ across the organization and provide flexible reporting and \nmonitoring views\
+  \ aligned with organizations’ business processes. \n3. Policy-driven enforcement;\
+  \ organizations should be able to create “quality gates” at each \nstage of the\
+  \ build and deployment process to ensure that only images that meet the \norganization’s\
+  \ vulnerability and configuration policies are allowed to progress. For \nexample,\
+  \ organizations should be able to configure a rule in the build process to prevent\
+  \ \nthe progression of images that include vulnerabilities with Common Vulnerability\
+  \ \nScoring System (CVSS) [18] ratings above a selected threshold."
+developer_guidance: "4.1.1 Image vulnerabilities \nThere is a need for container technology-specific\
+  \ vulnerability management tools and processes. \nTraditional vulnerability management\
+  \ tools make many assumptions about host durability and \napp update mechanisms\
+  \ and frequencies that are fundamentally misaligned with a containerized \nmodel.\
+  \ These tools are often unable to detect vulnerabilities within containers, leading\
+  \ to a false \nsense of safety. \nOrganizations should use tools that take the pipeline-based\
+  \ build approach and immutable nature \nof containers and images into their design\
+  \ to provide more actionable and reliable results. Key \naspects of effective tools\
+  \ and processes include: \n1. Integration with the entire lifecycle of images, from\
+  \ the beginning of the build process, to \nwhatever registries the organization\
+  \ is using, to runtime. \n2. Visibility into vulnerabilities at all layers of the\
+  \ image, not just the base layer of the \nimage but also application frameworks\
+  \ and custom software the organization is using. \nVisibility should be centralized\
+  \ across the organization and provide flexible reporting and \nmonitoring views\
+  \ aligned with organizations’ business processes. \n3. Policy-driven enforcement;\
+  \ organizations should be able to create “quality gates” at each \nstage of the\
+  \ build and deployment process to ensure that only images that meet the \norganization’s\
+  \ vulnerability and configuration policies are allowed to progress. For \nexample,\
+  \ organizations should be able to configure a rule in the build process to prevent\
+  \ \nthe progression of images that include vulnerabilities with Common Vulnerability\
+  \ \nScoring System (CVSS) [18] ratings above a selected threshold."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.1.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

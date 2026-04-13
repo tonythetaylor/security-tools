@@ -1,0 +1,180 @@
+id: cis-03
+title: 03 Data Protection
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control
+- control_03
+- data-protection
+- recovery
+- retention
+severity_guidance: medium
+description: "03\nData Protection\nDevelop processes and technical controls to identify,\
+  \ classify, securely handle, retain, and dispose of data.\n3.1\nEstablish and Maintain\
+  \ a Data Management Process\nData\n-Identify-\n• • •\nEstablish and maintain a data\
+  \ management process. In the process, address data sensitivity, data owner, handling\
+  \ of data, data retention \nlimits, and disposal requirements, based on sensitivity\
+  \ and retention standards for the enterprise. Review and update documentation \n\
+  annually, or when significant enterprise changes occur that could impact this Safeguard.\n\
+  3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n• • •\nEstablish\
+  \ and maintain a data inventory, based on the enterprise’s data management process.\
+  \ Inventory sensitive data, at a minimum. \nReview and update inventory annually,\
+  \ at a minimum, with a priority on sensitive data.\n3.3\nConfigure Data Access Control\
+  \ Lists\nData\n-Protect-\n• • •\nConfigure data access control lists based on a\
+  \ user’s need to know. Apply data access control lists, also known as access permissions,\
+  \ to \nlocal and remote file systems, databases, and applications.\n3.4\nEnforce\
+  \ Data Retention\nData\n-Protect-\n• • •\nRetain data according to the enterprise’s\
+  \ data management process. Data retention must include both minimum and maximum\
+  \ timelines.\n3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\nSecurely dispose\
+  \ of data as outlined in the enterprise’s data management process. Ensure the disposal\
+  \ process and method are \ncommensurate with the data sensitivity.\n3.6\nEncrypt\
+  \ Data on End-User Devices\nDevices\n-Protect-\n• • •\nEncrypt data on end-user\
+  \ devices containing sensitive data. Example implementations can include: Windows\
+  \ BitLocker®, Apple \nFileVault®, Linux® dm-crypt.\n3.7\nEstablish and Maintain\
+  \ a Data Classification Scheme\nData\n-Identify-\n• •\nEstablish and maintain an\
+  \ overall data classification scheme for the enterprise. Enterprises may use labels,\
+  \ such as “Sensitive,” \n“Confidential,” and “Public,” and classify their data according\
+  \ to those labels. Review and update the classification scheme annually, or \nwhen\
+  \ significant enterprise changes occur that could impact this Safeguard.\n3.8\n\
+  Document Data Flows\nData\n-Identify-\n• •\nDocument data flows. Data flow documentation\
+  \ includes service provider data flows and should be based on the enterprise’s data\
+  \ \nmanagement process. Review and update documentation annually, or when significant\
+  \ enterprise changes occur that could impact \nthis Safeguard.\n3.9\nEncrypt Data\
+  \ on Removable Media\nData\n-Protect-\n• •\nEncrypt data on removable media.\n\n\
+  CIS Controls v8\nA6 \n\uFEFFControls and Safeguards Index\nControl 03 / Safeguard\
+  \ 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n3.10\nEncrypt Sensitive Data in Transit\n\
+  Data\n-Protect-\n• •\nEncrypt sensitive data in transit. Example implementations\
+  \ can include: Transport Layer Security (TLS) and Open Secure \nShell (OpenSSH).\n\
+  3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\nEncrypt sensitive data\
+  \ at rest on servers, applications, and databases containing sensitive data. Storage-layer\
+  \ encryption, also known \nas server-side encryption, meets the minimum requirement\
+  \ of this Safeguard. Additional encryption methods may include application-\nlayer\
+  \ encryption, also known as client-side encryption, where access to the data storage\
+  \ device(s) does not permit access to the \nplain-text data. \n3.12\nSegment Data\
+  \ Processing and Storage Based on Sensitivity\nNetwork\n-Protect-\n• •\nSegment\
+  \ data processing and storage based on the sensitivity of the data. Do not process\
+  \ sensitive data on enterprise assets intended \nfor lower sensitivity data.\n3.13\n\
+  Deploy a Data Loss Prevention Solution\nData\n-Protect-\n•\nImplement an automated\
+  \ tool, such as a host-based Data Loss Prevention (DLP) tool to identify all sensitive\
+  \ data stored, processed, \nor transmitted through enterprise assets, including\
+  \ those located onsite or at a remote service provider, and update the enterprise’s\
+  \ \nsensitive data invent"
+rationale: "03\nData Protection\nDevelop processes and technical controls to identify,\
+  \ classify, securely handle, retain, and dispose of data.\n3.1\nEstablish and Maintain\
+  \ a Data Management Process\nData\n-Identify-\n• • •\nEstablish and maintain a data\
+  \ management process. In the process, address data sensitivity, data owner, handling\
+  \ of data, data retention \nlimits, and disposal requirements, based on sensitivity\
+  \ and retention standards for the enterprise. Review and update documentation \n\
+  annually, or when significant enterprise changes occur that could impact this Safeguard.\n\
+  3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n• • •\nEstablish\
+  \ and maintain a data inventory, based on the enterprise’s data management process.\
+  \ Inventory sensitive data, at a minimum. \nReview and update inventory annually,\
+  \ at a minimum, with a priority on sensitive data.\n3.3\nConfigure Data Access Control\
+  \ Lists\nData\n-Protect-\n• • •\nConfigure data access control lists based on a\
+  \ user’s need to know. Apply data access control lists, also known as access permissions,\
+  \ to \nlocal and remote file systems, databases, and applications.\n3.4\nEnforce\
+  \ Data Retention\nData\n-Protect-\n• • •\nRetain data according to the enterprise’s\
+  \ data management process. Data retention must include both minimum and maximum\
+  \ timelines.\n3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\nSecurely dispose\
+  \ of data as outlined in the enterprise’s data management process. Ensure the disposal\
+  \ process and method are \ncommensurate with the data sensitivity.\n3.6\nEncrypt\
+  \ Data on End-User Devices\nDevices\n-Protect-\n• • •\nEncrypt data on end-user\
+  \ devices containing sensitive data. Example implementations can include: Windows\
+  \ BitLocker®, Apple \nFileVault®, Linux® dm-crypt.\n3.7\nEstablish and Maintain\
+  \ a Data Classification Scheme\nData\n-Identify-\n• •\nEstablish and maintain an\
+  \ overall data classification scheme for the enterprise. Enterprises may use labels,\
+  \ such as “Sensitive,” \n“Confidential,” and “Public,” and classify their data according\
+  \ to those labels. Review and update the classification scheme annually, or \nwhen\
+  \ significant enterprise changes occur that could impact this Safeguard.\n3.8\n\
+  Document Data Flows\nData\n-Identify-\n• •\nDocument data flows. Data flow documentation\
+  \ includes service provider data flows and should be based on the enterprise’s data\
+  \ \nmanagement process. Review and update documentation annually, or when significant\
+  \ enterprise changes occur that could impact \nthis Safeguard.\n3.9\nEncrypt Data\
+  \ on Removable Media\nData\n-Protect-\n• •\nEncrypt data on removable media.\n\n\
+  CIS Controls v8\nA6 \n\uFEFFControls and Safeguards Index\nControl 03 / Safeguard\
+  \ 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n3.10\nEncrypt Sensitive Data in Transit\n\
+  Data\n-Protect-\n• •\nEncrypt sensitive data in transit. Example implementations\
+  \ can include: Transport Layer Security (TLS) and Open Secure \nShell (OpenSSH).\n\
+  3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\nEncrypt sensitive data\
+  \ at rest on servers, applications, and databases containing sensitive data. Storage-layer\
+  \ encryption, also known \nas server-side encryption, meets the minimum requirement\
+  \ of this Safeguard. Additional encryption methods may include application-\nlayer\
+  \ encryption, also known as client-side encryption, where access to the data storage\
+  \ device(s) does not permit access to the \nplain-text data. \n3.12\nSegment Data\
+  \ Processing and Storage Based on Sensitivity\nNetwork\n-Protect-\n• •\nSegment\
+  \ data processing and storage based on the sensitivity of the data. Do not process\
+  \ sensitive data on enterprise assets intended \nfor lower sensitivity data.\n3.13\n\
+  Deploy a Data Loss Prevention Solution\nData\n-Protect-\n•\nImplement an automated\
+  \ tool, such as a host-based Data Loss Prevention (DLP) tool to identify all sensitive\
+  \ data stored, processed, \nor transmitted through enterprise assets, including\
+  \ those located onsite or at a remote service provider, and update the enterprise’s\
+  \ \nsensitive data invent"
+developer_guidance: "03\nData Protection\nDevelop processes and technical controls\
+  \ to identify, classify, securely handle, retain, and dispose of data.\n3.1\nEstablish\
+  \ and Maintain a Data Management Process\nData\n-Identify-\n• • •\nEstablish and\
+  \ maintain a data management process. In the process, address data sensitivity,\
+  \ data owner, handling of data, data retention \nlimits, and disposal requirements,\
+  \ based on sensitivity and retention standards for the enterprise. Review and update\
+  \ documentation \nannually, or when significant enterprise changes occur that could\
+  \ impact this Safeguard.\n3.2\nEstablish and Maintain a Data Inventory\nData\n-Identify-\n\
+  • • •\nEstablish and maintain a data inventory, based on the enterprise’s data management\
+  \ process. Inventory sensitive data, at a minimum. \nReview and update inventory\
+  \ annually, at a minimum, with a priority on sensitive data.\n3.3\nConfigure Data\
+  \ Access Control Lists\nData\n-Protect-\n• • •\nConfigure data access control lists\
+  \ based on a user’s need to know. Apply data access control lists, also known as\
+  \ access permissions, to \nlocal and remote file systems, databases, and applications.\n\
+  3.4\nEnforce Data Retention\nData\n-Protect-\n• • •\nRetain data according to the\
+  \ enterprise’s data management process. Data retention must include both minimum\
+  \ and maximum timelines.\n3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\n\
+  Securely dispose of data as outlined in the enterprise’s data management process.\
+  \ Ensure the disposal process and method are \ncommensurate with the data sensitivity.\n\
+  3.6\nEncrypt Data on End-User Devices\nDevices\n-Protect-\n• • •\nEncrypt data on\
+  \ end-user devices containing sensitive data. Example implementations can include:\
+  \ Windows BitLocker®, Apple \nFileVault®, Linux® dm-crypt.\n3.7\nEstablish and Maintain\
+  \ a Data Classification Scheme\nData\n-Identify-\n• •\nEstablish and maintain an\
+  \ overall data classification scheme for the enterprise. Enterprises may use labels,\
+  \ such as “Sensitive,” \n“Confidential,” and “Public,” and classify their data according\
+  \ to those labels. Review and update the classification scheme annually, or \nwhen\
+  \ significant enterprise changes occur that could impact this Safeguard.\n3.8\n\
+  Document Data Flows\nData\n-Identify-\n• •\nDocument data flows. Data flow documentation\
+  \ includes service provider data flows and should be based on the enterprise’s data\
+  \ \nmanagement process. Review and update documentation annually, or when significant\
+  \ enterprise changes occur that could impact \nthis Safeguard.\n3.9\nEncrypt Data\
+  \ on Removable Media\nData\n-Protect-\n• •\nEncrypt data on removable media.\n\n\
+  CIS Controls v8\nA6 \n\uFEFFControls and Safeguards Index\nControl 03 / Safeguard\
+  \ 3.10 — Control 04 / Safeguard 4.7\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n3.10\nEncrypt Sensitive Data in Transit\n\
+  Data\n-Protect-\n• •\nEncrypt sensitive data in transit. Example implementations\
+  \ can include: Transport Layer Security (TLS) and Open Secure \nShell (OpenSSH).\n\
+  3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\nEncrypt sensitive data\
+  \ at rest on servers, applications, and databases containing sensitive data. Storage-layer\
+  \ encryption, also known \nas server-side encryption, meets the minimum requirement\
+  \ of this Safeguard. Additional encryption methods may include application-\nlayer\
+  \ encryption, also known as client-side encryption, where access to the data storage\
+  \ device(s) does not permit access to the \nplain-text data. \n3.12\nSegment Data\
+  \ Processing and Storage Based on Sensitivity\nNetwork\n-Protect-\n• •\nSegment\
+  \ data processing and storage based on the sensitivity of the data. Do not process\
+  \ sensitive data on enterprise assets intended \nfor lower sensitivity data.\n3.13\n\
+  Deploy a Data Loss Prevention Solution\nData\n-Protect-\n•\nImplement an automated\
+  \ tool, such as a host-based Data Loss Prevention (DLP) tool to identify all sensitive\
+  \ data stored, processed, \nor transmitted through enterprise assets, including\
+  \ those located onsite or at a remote service provider, and update the enterprise’s\
+  \ \nsensitive data invent"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

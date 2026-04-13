@@ -1,0 +1,49 @@
+id: nist-800-190-3-3-1
+title: 3.3.1 Unbounded administrative access
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_3_1
+severity_guidance: medium
+description: "3.3.1 Unbounded administrative access \nHistorically, many orchestrators\
+  \ were designed with the assumption that all users interacting \nwith them would\
+  \ be administrators and those administrators should have environment-wide \ncontrol.\
+  \ However, in many cases, a single orchestrator may run many different apps, each\
+  \ \nmanaged by different teams, and with different sensitivity levels. If the access\
+  \ provided to users \nand groups is not scoped to their specific needs, a malicious\
+  \ or careless user could affect or \nsubvert the operation of other containers managed\
+  \ by the orchestrator."
+rationale: "3.3.1 Unbounded administrative access \nHistorically, many orchestrators\
+  \ were designed with the assumption that all users interacting \nwith them would\
+  \ be administrators and those administrators should have environment-wide \ncontrol.\
+  \ However, in many cases, a single orchestrator may run many different apps, each\
+  \ \nmanaged by different teams, and with different sensitivity levels. If the access\
+  \ provided to users \nand groups is not scoped to their specific needs, a malicious\
+  \ or careless user could affect or \nsubvert the operation of other containers managed\
+  \ by the orchestrator."
+developer_guidance: "3.3.1 Unbounded administrative access \nHistorically, many orchestrators\
+  \ were designed with the assumption that all users interacting \nwith them would\
+  \ be administrators and those administrators should have environment-wide \ncontrol.\
+  \ However, in many cases, a single orchestrator may run many different apps, each\
+  \ \nmanaged by different teams, and with different sensitivity levels. If the access\
+  \ provided to users \nand groups is not scoped to their specific needs, a malicious\
+  \ or careless user could affect or \nsubvert the operation of other containers managed\
+  \ by the orchestrator."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.3.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

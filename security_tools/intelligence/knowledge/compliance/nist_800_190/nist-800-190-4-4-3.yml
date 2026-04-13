@@ -1,0 +1,104 @@
+id: nist-800-190-4-4-3
+title: 4.4.3 Insecure container runtime configurations
+category: configuration_security
+applies_to:
+- runtime_configuration
+- container_hardening
+- least_privilege
+tags:
+- 800-190
+- configuration
+- containers
+- hardening
+- nist
+- runtime
+- section_4_4_3
+severity_guidance: medium
+description: "4.4.3 Insecure container runtime configurations \nOrganizations should\
+  \ automate compliance with container runtime configuration standards. \nDocumented\
+  \ technical implementation guidance, such as the Center for Internet Security Docker\
+  \ \nBenchmark [20], provides details on options and recommended settings, but operationalizing\
+  \ this \nguidance depends on automation. Organizations can use a variety of tools\
+  \ to “scan” and assess \ntheir compliance at a point in time, but such approaches\
+  \ do not scale. Instead, organizations \nshould use tools or processes that continuously\
+  \ assess configuration settings across the \nenvironment and actively enforce them.\
+  \ \nAdditionally, mandatory access control (MAC) technologies like SELinux [21]\
+  \ and AppArmor \n[22] provide enhanced control and isolation for containers running\
+  \ Linux OSs. For example, \nthese technologies can be used to provide additional\
+  \ segmentation and assurance that containers \nshould only be able to access specific\
+  \ file paths, processes, and network sockets, further \nconstraining the ability\
+  \ of even a compromised container to impact the host or other containers. \nMAC\
+  \ technologies provide protection at the host OS layer, ensuring that only specific\
+  \ files, \npaths, and processes are accessible to containerized apps. Organizations\
+  \ are encouraged to use \nthe MAC technologies provided by their host OSs in all\
+  \ container deployments. \nSecure computing (seccomp)7 profiles are another mechanism\
+  \ that can be used to constrain the \nsystem-level capabilities containers are allocated\
+  \ at runtime. Common container runtimes like \nDocker include default seccomp profiles\
+  \ that drop system calls that are unsafe and typically \nunnecessary for container\
+  \ operation. Additionally, custom profiles can be created and passed to \ncontainer\
+  \ runtimes to further limit their capabilities. At a minimum, organizations should\
+  \ ensure \nthat containers are run with the default profiles provided by their runtime\
+  \ and should consider \nusing additional profiles for high-risk apps."
+rationale: "4.4.3 Insecure container runtime configurations \nOrganizations should\
+  \ automate compliance with container runtime configuration standards. \nDocumented\
+  \ technical implementation guidance, such as the Center for Internet Security Docker\
+  \ \nBenchmark [20], provides details on options and recommended settings, but operationalizing\
+  \ this \nguidance depends on automation. Organizations can use a variety of tools\
+  \ to “scan” and assess \ntheir compliance at a point in time, but such approaches\
+  \ do not scale. Instead, organizations \nshould use tools or processes that continuously\
+  \ assess configuration settings across the \nenvironment and actively enforce them.\
+  \ \nAdditionally, mandatory access control (MAC) technologies like SELinux [21]\
+  \ and AppArmor \n[22] provide enhanced control and isolation for containers running\
+  \ Linux OSs. For example, \nthese technologies can be used to provide additional\
+  \ segmentation and assurance that containers \nshould only be able to access specific\
+  \ file paths, processes, and network sockets, further \nconstraining the ability\
+  \ of even a compromised container to impact the host or other containers. \nMAC\
+  \ technologies provide protection at the host OS layer, ensuring that only specific\
+  \ files, \npaths, and processes are accessible to containerized apps. Organizations\
+  \ are encouraged to use \nthe MAC technologies provided by their host OSs in all\
+  \ container deployments. \nSecure computing (seccomp)7 profiles are another mechanism\
+  \ that can be used to constrain the \nsystem-level capabilities containers are allocated\
+  \ at runtime. Common container runtimes like \nDocker include default seccomp profiles\
+  \ that drop system calls that are unsafe and typically \nunnecessary for container\
+  \ operation. Additionally, custom profiles can be created and passed to \ncontainer\
+  \ runtimes to further limit their capabilities. At a minimum, organizations should\
+  \ ensure \nthat containers are run with the default profiles provided by their runtime\
+  \ and should consider \nusing additional profiles for high-risk apps."
+developer_guidance: "4.4.3 Insecure container runtime configurations \nOrganizations\
+  \ should automate compliance with container runtime configuration standards. \n\
+  Documented technical implementation guidance, such as the Center for Internet Security\
+  \ Docker \nBenchmark [20], provides details on options and recommended settings,\
+  \ but operationalizing this \nguidance depends on automation. Organizations can\
+  \ use a variety of tools to “scan” and assess \ntheir compliance at a point in time,\
+  \ but such approaches do not scale. Instead, organizations \nshould use tools or\
+  \ processes that continuously assess configuration settings across the \nenvironment\
+  \ and actively enforce them. \nAdditionally, mandatory access control (MAC) technologies\
+  \ like SELinux [21] and AppArmor \n[22] provide enhanced control and isolation for\
+  \ containers running Linux OSs. For example, \nthese technologies can be used to\
+  \ provide additional segmentation and assurance that containers \nshould only be\
+  \ able to access specific file paths, processes, and network sockets, further \n\
+  constraining the ability of even a compromised container to impact the host or other\
+  \ containers. \nMAC technologies provide protection at the host OS layer, ensuring\
+  \ that only specific files, \npaths, and processes are accessible to containerized\
+  \ apps. Organizations are encouraged to use \nthe MAC technologies provided by their\
+  \ host OSs in all container deployments. \nSecure computing (seccomp)7 profiles\
+  \ are another mechanism that can be used to constrain the \nsystem-level capabilities\
+  \ containers are allocated at runtime. Common container runtimes like \nDocker include\
+  \ default seccomp profiles that drop system calls that are unsafe and typically\
+  \ \nunnecessary for container operation. Additionally, custom profiles can be created\
+  \ and passed to \ncontainer runtimes to further limit their capabilities. At a minimum,\
+  \ organizations should ensure \nthat containers are run with the default profiles\
+  \ provided by their runtime and should consider \nusing additional profiles for\
+  \ high-risk apps."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.4.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

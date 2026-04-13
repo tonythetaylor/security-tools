@@ -1,0 +1,37 @@
+id: cis-13-6
+title: 13.6 Collect Network Traffic Flow Logs
+category: network_defense
+applies_to:
+- network_monitoring
+- network_defense
+- traffic_analysis
+tags:
+- cis
+- control_13
+- defense
+- network-monitoring
+- safeguard
+- safeguard_13_6
+- traffic
+severity_guidance: medium
+description: "13.6\nCollect Network Traffic Flow Logs \nNetwork\n-Detect-\n• •\nCollect\
+  \ network traffic flow logs and/or network traffic to review and alert upon from\
+  \ network devices."
+rationale: "13.6\nCollect Network Traffic Flow Logs \nNetwork\n-Detect-\n• •\nCollect\
+  \ network traffic flow logs and/or network traffic to review and alert upon from\
+  \ network devices."
+developer_guidance: "13.6\nCollect Network Traffic Flow Logs \nNetwork\n-Detect-\n\
+  • •\nCollect network traffic flow logs and/or network traffic to review and alert\
+  \ upon from network devices."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

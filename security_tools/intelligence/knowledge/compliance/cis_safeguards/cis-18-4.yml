@@ -1,0 +1,37 @@
+id: cis-18-4
+title: 18.4 Validate Security Measures
+category: assurance_security
+applies_to:
+- penetration_testing
+- security_validation
+- assurance_testing
+tags:
+- assurance
+- cis
+- control_18
+- penetration-testing
+- safeguard
+- safeguard_18_4
+- validation
+severity_guidance: medium
+description: "18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate security\
+  \ measures after each penetration test. If deemed necessary, modify rulesets and\
+  \ capabilities to detect the techniques \nused during testing."
+rationale: "18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate security\
+  \ measures after each penetration test. If deemed necessary, modify rulesets and\
+  \ capabilities to detect the techniques \nused during testing."
+developer_guidance: "18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate\
+  \ security measures after each penetration test. If deemed necessary, modify rulesets\
+  \ and capabilities to detect the techniques \nused during testing."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: Safeguard 18.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

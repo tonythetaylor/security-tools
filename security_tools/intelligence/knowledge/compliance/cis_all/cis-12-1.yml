@@ -1,0 +1,37 @@
+id: cis-12-1
+title: 12.1 Ensure Network Infrastructure is Up-to-Date
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_12
+- safeguard
+- safeguard_12_1
+severity_guidance: medium
+description: "12.1\nEnsure Network Infrastructure is Up-to-Date\nNetwork\n-Protect-\n\
+  • • •\nEnsure network infrastructure is kept up-to-date. Example implementations\
+  \ include running the latest stable release of software and/\nor using currently\
+  \ supported network-as-a-service (NaaS) offerings. Review software versions monthly,\
+  \ or more frequently, to verify \nsoftware support."
+rationale: "12.1\nEnsure Network Infrastructure is Up-to-Date\nNetwork\n-Protect-\n\
+  • • •\nEnsure network infrastructure is kept up-to-date. Example implementations\
+  \ include running the latest stable release of software and/\nor using currently\
+  \ supported network-as-a-service (NaaS) offerings. Review software versions monthly,\
+  \ or more frequently, to verify \nsoftware support."
+developer_guidance: "12.1\nEnsure Network Infrastructure is Up-to-Date\nNetwork\n\
+  -Protect-\n• • •\nEnsure network infrastructure is kept up-to-date. Example implementations\
+  \ include running the latest stable release of software and/\nor using currently\
+  \ supported network-as-a-service (NaaS) offerings. Review software versions monthly,\
+  \ or more frequently, to verify \nsoftware support."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 12
+  note: Safeguard 12.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,108 @@
+id: cis-05
+title: 05 Account Management
+category: identity_security
+applies_to:
+- account_management
+- identity_lifecycle
+- privileged_accounts
+tags:
+- accounts
+- cis
+- control
+- control_05
+- identity
+- privilege
+severity_guidance: medium
+description: "05\nAccount Management\nUse processes and tools to assign and manage\
+  \ authorization to credentials for user accounts, including administrator accounts,\
+  \ as well as service \naccounts, to enterprise assets and software.\n5.1\nEstablish\
+  \ and Maintain an Inventory of Accounts\nUsers\n-Identify-\n• • •\nEstablish and\
+  \ maintain an inventory of all accounts managed in the enterprise. The inventory\
+  \ must include both user and administrator \naccounts. The inventory, at a minimum,\
+  \ should contain the person’s name, username, start/stop dates, and department.\
+  \ Validate that all \nactive accounts are authorized, on a recurring schedule at\
+  \ a minimum quarterly, or more frequently.\n5.2\nUse Unique Passwords\nUsers\n-Protect-\n\
+  • • •\nUse unique passwords for all enterprise assets. Best practice implementation\
+  \ includes, at a minimum, an 8-character password for \naccounts using MFA and a\
+  \ 14-character password for accounts not using MFA.\n5.3\nDisable Dormant Accounts\n\
+  Users\n-Respond-\n• • •\nDelete or disable any dormant accounts after a period of\
+  \ 45 days of inactivity, where supported.\n5.4\nRestrict Administrator Privileges\
+  \ to Dedicated Administrator Accounts\nUsers\n-Protect-\n• • •\nRestrict administrator\
+  \ privileges to dedicated administrator accounts on enterprise assets. Conduct general\
+  \ computing activities, such as \ninternet browsing, email, and productivity suite\
+  \ use, from the user’s primary, non-privileged account.\n5.5\nEstablish and Maintain\
+  \ an Inventory of Service Accounts\nUsers\n-Identify-\n• •\nEstablish and maintain\
+  \ an inventory of service accounts. The inventory, at a minimum, must contain department\
+  \ owner, review date, \nand purpose. Perform service account reviews to validate\
+  \ that all active accounts are authorized, on a recurring schedule at a minimum\
+  \ \nquarterly, or more frequently.\n5.6\nCentralize Account Management\nUsers\n\
+  -Protect-\n• •\nCentralize account management through a directory or identity service.\n\
+  \nCIS Controls v8\nA8 \n\uFEFFControls and Safeguards Index\nControl 06 / Safeguard\
+  \ 6.1 — Control 07 / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "05\nAccount Management\nUse processes and tools to assign and manage authorization\
+  \ to credentials for user accounts, including administrator accounts, as well as\
+  \ service \naccounts, to enterprise assets and software.\n5.1\nEstablish and Maintain\
+  \ an Inventory of Accounts\nUsers\n-Identify-\n• • •\nEstablish and maintain an\
+  \ inventory of all accounts managed in the enterprise. The inventory must include\
+  \ both user and administrator \naccounts. The inventory, at a minimum, should contain\
+  \ the person’s name, username, start/stop dates, and department. Validate that all\
+  \ \nactive accounts are authorized, on a recurring schedule at a minimum quarterly,\
+  \ or more frequently.\n5.2\nUse Unique Passwords\nUsers\n-Protect-\n• • •\nUse unique\
+  \ passwords for all enterprise assets. Best practice implementation includes, at\
+  \ a minimum, an 8-character password for \naccounts using MFA and a 14-character\
+  \ password for accounts not using MFA.\n5.3\nDisable Dormant Accounts\nUsers\n-Respond-\n\
+  • • •\nDelete or disable any dormant accounts after a period of 45 days of inactivity,\
+  \ where supported.\n5.4\nRestrict Administrator Privileges to Dedicated Administrator\
+  \ Accounts\nUsers\n-Protect-\n• • •\nRestrict administrator privileges to dedicated\
+  \ administrator accounts on enterprise assets. Conduct general computing activities,\
+  \ such as \ninternet browsing, email, and productivity suite use, from the user’s\
+  \ primary, non-privileged account.\n5.5\nEstablish and Maintain an Inventory of\
+  \ Service Accounts\nUsers\n-Identify-\n• •\nEstablish and maintain an inventory\
+  \ of service accounts. The inventory, at a minimum, must contain department owner,\
+  \ review date, \nand purpose. Perform service account reviews to validate that all\
+  \ active accounts are authorized, on a recurring schedule at a minimum \nquarterly,\
+  \ or more frequently.\n5.6\nCentralize Account Management\nUsers\n-Protect-\n• •\n\
+  Centralize account management through a directory or identity service.\n\nCIS Controls\
+  \ v8\nA8 \n\uFEFFControls and Safeguards Index\nControl 06 / Safeguard 6.1 — Control\
+  \ 07 / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "05\nAccount Management\nUse processes and tools to assign and\
+  \ manage authorization to credentials for user accounts, including administrator\
+  \ accounts, as well as service \naccounts, to enterprise assets and software.\n\
+  5.1\nEstablish and Maintain an Inventory of Accounts\nUsers\n-Identify-\n• • •\n\
+  Establish and maintain an inventory of all accounts managed in the enterprise. The\
+  \ inventory must include both user and administrator \naccounts. The inventory,\
+  \ at a minimum, should contain the person’s name, username, start/stop dates, and\
+  \ department. Validate that all \nactive accounts are authorized, on a recurring\
+  \ schedule at a minimum quarterly, or more frequently.\n5.2\nUse Unique Passwords\n\
+  Users\n-Protect-\n• • •\nUse unique passwords for all enterprise assets. Best practice\
+  \ implementation includes, at a minimum, an 8-character password for \naccounts\
+  \ using MFA and a 14-character password for accounts not using MFA.\n5.3\nDisable\
+  \ Dormant Accounts\nUsers\n-Respond-\n• • •\nDelete or disable any dormant accounts\
+  \ after a period of 45 days of inactivity, where supported.\n5.4\nRestrict Administrator\
+  \ Privileges to Dedicated Administrator Accounts\nUsers\n-Protect-\n• • •\nRestrict\
+  \ administrator privileges to dedicated administrator accounts on enterprise assets.\
+  \ Conduct general computing activities, such as \ninternet browsing, email, and\
+  \ productivity suite use, from the user’s primary, non-privileged account.\n5.5\n\
+  Establish and Maintain an Inventory of Service Accounts\nUsers\n-Identify-\n• •\n\
+  Establish and maintain an inventory of service accounts. The inventory, at a minimum,\
+  \ must contain department owner, review date, \nand purpose. Perform service account\
+  \ reviews to validate that all active accounts are authorized, on a recurring schedule\
+  \ at a minimum \nquarterly, or more frequently.\n5.6\nCentralize Account Management\n\
+  Users\n-Protect-\n• •\nCentralize account management through a directory or identity\
+  \ service.\n\nCIS Controls v8\nA8 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 06 / Safeguard 6.1 — Control 07 / Safeguard 7.5\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

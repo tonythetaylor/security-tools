@@ -1,0 +1,40 @@
+id: cis-3-3
+title: 3.3 Configure Data Access Control Lists
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_3
+severity_guidance: medium
+description: "3.3\nConfigure Data Access Control Lists\nData\n-Protect-\n• • •\nConfigure\
+  \ data access control lists based on a user’s need to know. Apply data access control\
+  \ lists, also known as access permissions, to \nlocal and remote file systems, databases,\
+  \ and applications."
+rationale: "3.3\nConfigure Data Access Control Lists\nData\n-Protect-\n• • •\nConfigure\
+  \ data access control lists based on a user’s need to know. Apply data access control\
+  \ lists, also known as access permissions, to \nlocal and remote file systems, databases,\
+  \ and applications."
+developer_guidance: "3.3\nConfigure Data Access Control Lists\nData\n-Protect-\n•\
+  \ • •\nConfigure data access control lists based on a user’s need to know. Apply\
+  \ data access control lists, also known as access permissions, to \nlocal and remote\
+  \ file systems, databases, and applications."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

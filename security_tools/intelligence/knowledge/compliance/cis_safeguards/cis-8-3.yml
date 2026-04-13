@@ -1,0 +1,64 @@
+id: cis-8-3
+title: 8.3 Ensure Adequate Audit Log Storage
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control_08
+- logging
+- monitoring
+- safeguard
+- safeguard_8_3
+severity_guidance: medium
+description: '8.3
+
+  Ensure Adequate Audit Log Storage
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Ensure that logging destinations maintain adequate storage to comply with the enterprise’s
+  audit log management process.'
+rationale: '8.3
+
+  Ensure Adequate Audit Log Storage
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Ensure that logging destinations maintain adequate storage to comply with the enterprise’s
+  audit log management process.'
+developer_guidance: '8.3
+
+  Ensure Adequate Audit Log Storage
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Ensure that logging destinations maintain adequate storage to comply with the enterprise’s
+  audit log management process.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 8.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

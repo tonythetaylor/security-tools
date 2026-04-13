@@ -1,0 +1,43 @@
+id: nist-800-190-3-2-2
+title: 3.2.2 Stale images in registries
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_2_2
+severity_guidance: medium
+description: "3.2.2 Stale images in registries \nBecause registries are typically\
+  \ the source location for all the images an organization deploys, \nover time the\
+  \ set of images they store can include many vulnerable, out-of-date versions. While\
+  \ \nthese vulnerable images do not directly pose a threat simply by being stored\
+  \ in the registry, they \nincrease the likelihood of accidental deployment of a\
+  \ known-vulnerable version."
+rationale: "3.2.2 Stale images in registries \nBecause registries are typically the\
+  \ source location for all the images an organization deploys, \nover time the set\
+  \ of images they store can include many vulnerable, out-of-date versions. While\
+  \ \nthese vulnerable images do not directly pose a threat simply by being stored\
+  \ in the registry, they \nincrease the likelihood of accidental deployment of a\
+  \ known-vulnerable version."
+developer_guidance: "3.2.2 Stale images in registries \nBecause registries are typically\
+  \ the source location for all the images an organization deploys, \nover time the\
+  \ set of images they store can include many vulnerable, out-of-date versions. While\
+  \ \nthese vulnerable images do not directly pose a threat simply by being stored\
+  \ in the registry, they \nincrease the likelihood of accidental deployment of a\
+  \ known-vulnerable version."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.2.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

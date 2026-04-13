@@ -1,0 +1,37 @@
+id: cis-04-12
+title: 04.12 Separate Enterprise Workspaces on Mobile End-User Devices
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_04
+- safeguard
+- safeguard_4_12
+severity_guidance: medium
+description: "4.12\nSeparate Enterprise Workspaces on Mobile End-User Devices\nDevices\n\
+  -Protect-\n•\nEnsure separate enterprise workspaces are used on mobile end-user\
+  \ devices, where supported. Example implementations \ninclude using an Apple® Configuration\
+  \ Profile or Android™ Work Profile to separate enterprise applications and data\
+  \ from personal \napplications and data."
+rationale: "4.12\nSeparate Enterprise Workspaces on Mobile End-User Devices\nDevices\n\
+  -Protect-\n•\nEnsure separate enterprise workspaces are used on mobile end-user\
+  \ devices, where supported. Example implementations \ninclude using an Apple® Configuration\
+  \ Profile or Android™ Work Profile to separate enterprise applications and data\
+  \ from personal \napplications and data."
+developer_guidance: "4.12\nSeparate Enterprise Workspaces on Mobile End-User Devices\n\
+  Devices\n-Protect-\n•\nEnsure separate enterprise workspaces are used on mobile\
+  \ end-user devices, where supported. Example implementations \ninclude using an\
+  \ Apple® Configuration Profile or Android™ Work Profile to separate enterprise applications\
+  \ and data from personal \napplications and data."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 04.12
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

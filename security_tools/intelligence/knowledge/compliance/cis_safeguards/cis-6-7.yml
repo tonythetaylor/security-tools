@@ -1,0 +1,64 @@
+id: cis-6-7
+title: 6.7 Centralize Access Control
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+tags:
+- access-control
+- authorization
+- cis
+- control_06
+- least-privilege
+- safeguard
+- safeguard_6_7
+severity_guidance: medium
+description: '6.7
+
+  Centralize Access Control
+
+  Users
+
+  -Protect-
+
+  • •
+
+  Centralize access control for all enterprise assets through a directory service
+  or SSO provider, where supported.'
+rationale: '6.7
+
+  Centralize Access Control
+
+  Users
+
+  -Protect-
+
+  • •
+
+  Centralize access control for all enterprise assets through a directory service
+  or SSO provider, where supported.'
+developer_guidance: '6.7
+
+  Centralize Access Control
+
+  Users
+
+  -Protect-
+
+  • •
+
+  Centralize access control for all enterprise assets through a directory service
+  or SSO provider, where supported.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 6.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

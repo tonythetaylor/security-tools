@@ -1,0 +1,135 @@
+id: cis-08
+title: 08 Audit Log Management
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control
+- control_08
+- logging
+- monitoring
+severity_guidance: medium
+description: "08\nAudit Log Management\nCollect, alert, review, and retain audit logs\
+  \ of events that could help detect, understand, or recover from an attack.\n8.1\n\
+  Establish and Maintain an Audit Log Management Process\nNetwork\n-Protect-\n• •\
+  \ •\nEstablish and maintain an audit log management process that defines the enterprise’s\
+  \ logging requirements. At a minimum, address \nthe collection, review, and retention\
+  \ of audit logs for enterprise assets. Review and update documentation annually,\
+  \ or when significant \nenterprise changes occur that could impact this Safeguard.\n\
+  8.2\nCollect Audit Logs\nNetwork\n-Detect-\n• • •\nCollect audit logs. Ensure that\
+  \ logging, per the enterprise’s audit log management process, has been enabled across\
+  \ enterprise assets.\n8.3\nEnsure Adequate Audit Log Storage\nNetwork\n-Protect-\n\
+  • • •\nEnsure that logging destinations maintain adequate storage to comply with\
+  \ the enterprise’s audit log management process.\n8.4\nStandardize Time Synchronization\n\
+  Network\n-Protect-\n• •\nStandardize time synchronization. Configure at least two\
+  \ synchronized time sources across enterprise assets, where supported.\n8.5\nCollect\
+  \ Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure detailed audit logging\
+  \ for enterprise assets containing sensitive data. Include event source, date, username,\
+  \ timestamp, source \naddresses, destination addresses, and other useful elements\
+  \ that could assist in a forensic investigation.\n8.6\nCollect DNS Query Audit Logs\n\
+  Network\n-Detect-\n• •\nCollect DNS query audit logs on enterprise assets, where\
+  \ appropriate and supported.\n8.7\nCollect URL Request Audit Logs\nNetwork\n-Detect-\n\
+  • •\nCollect URL request audit logs on enterprise assets, where appropriate and\
+  \ supported.\n8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\nCollect\
+  \ command-line audit logs. Example implementations include collecting audit logs\
+  \ from PowerShell®, BASH™, and remote \nadministrative terminals.\n8.9\nCentralize\
+  \ Audit Logs\nNetwork\n-Detect-\n• •\nCentralize, to the extent possible, audit\
+  \ log collection and retention across enterprise assets.\n8.10\nRetain Audit Logs\n\
+  Network\n-Protect-\n• •\nRetain audit logs across enterprise assets for a minimum\
+  \ of 90 days.\n8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct\
+  \ reviews of audit logs to detect anomalies or abnormal events that could indicate\
+  \ a potential threat. Conduct reviews on a \nweekly, or more frequent, basis.\n\
+  8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect service provider\
+  \ logs, where supported. Example implementations include collecting authentication\
+  \ and authorization events, \ndata creation and disposal events, and user management\
+  \ events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "08\nAudit Log Management\nCollect, alert, review, and retain audit logs\
+  \ of events that could help detect, understand, or recover from an attack.\n8.1\n\
+  Establish and Maintain an Audit Log Management Process\nNetwork\n-Protect-\n• •\
+  \ •\nEstablish and maintain an audit log management process that defines the enterprise’s\
+  \ logging requirements. At a minimum, address \nthe collection, review, and retention\
+  \ of audit logs for enterprise assets. Review and update documentation annually,\
+  \ or when significant \nenterprise changes occur that could impact this Safeguard.\n\
+  8.2\nCollect Audit Logs\nNetwork\n-Detect-\n• • •\nCollect audit logs. Ensure that\
+  \ logging, per the enterprise’s audit log management process, has been enabled across\
+  \ enterprise assets.\n8.3\nEnsure Adequate Audit Log Storage\nNetwork\n-Protect-\n\
+  • • •\nEnsure that logging destinations maintain adequate storage to comply with\
+  \ the enterprise’s audit log management process.\n8.4\nStandardize Time Synchronization\n\
+  Network\n-Protect-\n• •\nStandardize time synchronization. Configure at least two\
+  \ synchronized time sources across enterprise assets, where supported.\n8.5\nCollect\
+  \ Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure detailed audit logging\
+  \ for enterprise assets containing sensitive data. Include event source, date, username,\
+  \ timestamp, source \naddresses, destination addresses, and other useful elements\
+  \ that could assist in a forensic investigation.\n8.6\nCollect DNS Query Audit Logs\n\
+  Network\n-Detect-\n• •\nCollect DNS query audit logs on enterprise assets, where\
+  \ appropriate and supported.\n8.7\nCollect URL Request Audit Logs\nNetwork\n-Detect-\n\
+  • •\nCollect URL request audit logs on enterprise assets, where appropriate and\
+  \ supported.\n8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\nCollect\
+  \ command-line audit logs. Example implementations include collecting audit logs\
+  \ from PowerShell®, BASH™, and remote \nadministrative terminals.\n8.9\nCentralize\
+  \ Audit Logs\nNetwork\n-Detect-\n• •\nCentralize, to the extent possible, audit\
+  \ log collection and retention across enterprise assets.\n8.10\nRetain Audit Logs\n\
+  Network\n-Protect-\n• •\nRetain audit logs across enterprise assets for a minimum\
+  \ of 90 days.\n8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct\
+  \ reviews of audit logs to detect anomalies or abnormal events that could indicate\
+  \ a potential threat. Conduct reviews on a \nweekly, or more frequent, basis.\n\
+  8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect service provider\
+  \ logs, where supported. Example implementations include collecting authentication\
+  \ and authorization events, \ndata creation and disposal events, and user management\
+  \ events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "08\nAudit Log Management\nCollect, alert, review, and retain\
+  \ audit logs of events that could help detect, understand, or recover from an attack.\n\
+  8.1\nEstablish and Maintain an Audit Log Management Process\nNetwork\n-Protect-\n\
+  • • •\nEstablish and maintain an audit log management process that defines the enterprise’s\
+  \ logging requirements. At a minimum, address \nthe collection, review, and retention\
+  \ of audit logs for enterprise assets. Review and update documentation annually,\
+  \ or when significant \nenterprise changes occur that could impact this Safeguard.\n\
+  8.2\nCollect Audit Logs\nNetwork\n-Detect-\n• • •\nCollect audit logs. Ensure that\
+  \ logging, per the enterprise’s audit log management process, has been enabled across\
+  \ enterprise assets.\n8.3\nEnsure Adequate Audit Log Storage\nNetwork\n-Protect-\n\
+  • • •\nEnsure that logging destinations maintain adequate storage to comply with\
+  \ the enterprise’s audit log management process.\n8.4\nStandardize Time Synchronization\n\
+  Network\n-Protect-\n• •\nStandardize time synchronization. Configure at least two\
+  \ synchronized time sources across enterprise assets, where supported.\n8.5\nCollect\
+  \ Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure detailed audit logging\
+  \ for enterprise assets containing sensitive data. Include event source, date, username,\
+  \ timestamp, source \naddresses, destination addresses, and other useful elements\
+  \ that could assist in a forensic investigation.\n8.6\nCollect DNS Query Audit Logs\n\
+  Network\n-Detect-\n• •\nCollect DNS query audit logs on enterprise assets, where\
+  \ appropriate and supported.\n8.7\nCollect URL Request Audit Logs\nNetwork\n-Detect-\n\
+  • •\nCollect URL request audit logs on enterprise assets, where appropriate and\
+  \ supported.\n8.8\nCollect Command-Line Audit Logs\nDevices\n-Detect-\n• •\nCollect\
+  \ command-line audit logs. Example implementations include collecting audit logs\
+  \ from PowerShell®, BASH™, and remote \nadministrative terminals.\n8.9\nCentralize\
+  \ Audit Logs\nNetwork\n-Detect-\n• •\nCentralize, to the extent possible, audit\
+  \ log collection and retention across enterprise assets.\n8.10\nRetain Audit Logs\n\
+  Network\n-Protect-\n• •\nRetain audit logs across enterprise assets for a minimum\
+  \ of 90 days.\n8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct\
+  \ reviews of audit logs to detect anomalies or abnormal events that could indicate\
+  \ a potential threat. Conduct reviews on a \nweekly, or more frequent, basis.\n\
+  8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect service provider\
+  \ logs, where supported. Example implementations include collecting authentication\
+  \ and authorization events, \ndata creation and disposal events, and user management\
+  \ events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

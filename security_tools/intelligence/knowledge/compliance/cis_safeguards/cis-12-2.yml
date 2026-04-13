@@ -1,0 +1,40 @@
+id: cis-12-2
+title: 12.2 Establish and Maintain a Secure Network Architecture
+category: network_security
+applies_to:
+- network_infrastructure
+- network_hardening
+- network_management
+tags:
+- cis
+- control_12
+- infrastructure
+- management
+- network
+- safeguard
+- safeguard_12_2
+severity_guidance: medium
+description: "12.2\nEstablish and Maintain a Secure Network Architecture\nNetwork\n\
+  -Protect-\n• •\nEstablish and maintain a secure network architecture. A secure network\
+  \ architecture must address segmentation, least privilege, and \navailability, at\
+  \ a minimum."
+rationale: "12.2\nEstablish and Maintain a Secure Network Architecture\nNetwork\n\
+  -Protect-\n• •\nEstablish and maintain a secure network architecture. A secure network\
+  \ architecture must address segmentation, least privilege, and \navailability, at\
+  \ a minimum."
+developer_guidance: "12.2\nEstablish and Maintain a Secure Network Architecture\n\
+  Network\n-Protect-\n• •\nEstablish and maintain a secure network architecture. A\
+  \ secure network architecture must address segmentation, least privilege, and \n\
+  availability, at a minimum."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 12
+  note: Safeguard 12.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

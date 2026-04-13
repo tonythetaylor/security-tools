@@ -1,0 +1,58 @@
+id: cis-14-6
+title: 14.6 Train Workforce Members on Recognizing and Reporting Security Incidents
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_14
+- safeguard
+- safeguard_14_6
+severity_guidance: medium
+description: '14.6
+
+  Train Workforce Members on Recognizing and Reporting Security Incidents
+
+  N/A
+
+  -Protect-
+
+  • • •
+
+  Train workforce members to be able to recognize a potential incident and be able
+  to report such an incident.'
+rationale: '14.6
+
+  Train Workforce Members on Recognizing and Reporting Security Incidents
+
+  N/A
+
+  -Protect-
+
+  • • •
+
+  Train workforce members to be able to recognize a potential incident and be able
+  to report such an incident.'
+developer_guidance: '14.6
+
+  Train Workforce Members on Recognizing and Reporting Security Incidents
+
+  N/A
+
+  -Protect-
+
+  • • •
+
+  Train workforce members to be able to recognize a potential incident and be able
+  to report such an incident.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

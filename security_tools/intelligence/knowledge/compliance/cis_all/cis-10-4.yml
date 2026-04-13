@@ -1,0 +1,55 @@
+id: cis-10-4
+title: 10.4 Configure Automatic Anti-Malware Scanning of Removable Media
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_10
+- safeguard
+- safeguard_10_4
+severity_guidance: medium
+description: '10.4
+
+  Configure Automatic Anti-Malware Scanning of Removable Media
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Configure anti-malware software to automatically scan removable media.'
+rationale: '10.4
+
+  Configure Automatic Anti-Malware Scanning of Removable Media
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Configure anti-malware software to automatically scan removable media.'
+developer_guidance: '10.4
+
+  Configure Automatic Anti-Malware Scanning of Removable Media
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Configure anti-malware software to automatically scan removable media.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 10
+  note: Safeguard 10.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,47 @@
+id: cis-14-8
+title: 14.8 Train Workforce on the Dangers of Connecting to and Transmitting Enterprise
+  Data
+category: training_security
+applies_to:
+- security_training
+- awareness
+- skills_development
+tags:
+- awareness
+- cis
+- control_14
+- safeguard
+- safeguard_14_8
+- skills
+- training
+severity_guidance: medium
+description: "14.8\nTrain Workforce on the Dangers of Connecting to and Transmitting\
+  \ Enterprise Data \nOver Insecure Networks\nN/A\n-Protect-\n• • •\nTrain workforce\
+  \ members on the dangers of connecting to, and transmitting data over, insecure\
+  \ networks for enterprise activities. \nIf the enterprise has remote workers, training\
+  \ must include guidance to ensure that all users securely configure their home network\
+  \ \ninfrastructure."
+rationale: "14.8\nTrain Workforce on the Dangers of Connecting to and Transmitting\
+  \ Enterprise Data \nOver Insecure Networks\nN/A\n-Protect-\n• • •\nTrain workforce\
+  \ members on the dangers of connecting to, and transmitting data over, insecure\
+  \ networks for enterprise activities. \nIf the enterprise has remote workers, training\
+  \ must include guidance to ensure that all users securely configure their home network\
+  \ \ninfrastructure."
+developer_guidance: "14.8\nTrain Workforce on the Dangers of Connecting to and Transmitting\
+  \ Enterprise Data \nOver Insecure Networks\nN/A\n-Protect-\n• • •\nTrain workforce\
+  \ members on the dangers of connecting to, and transmitting data over, insecure\
+  \ networks for enterprise activities. \nIf the enterprise has remote workers, training\
+  \ must include guidance to ensure that all users securely configure their home network\
+  \ \ninfrastructure."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

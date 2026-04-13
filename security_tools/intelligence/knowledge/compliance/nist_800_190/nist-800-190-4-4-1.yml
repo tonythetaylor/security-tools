@@ -1,0 +1,49 @@
+id: nist-800-190-4-4-1
+title: 4.4.1 Vulnerabilities within the runtime software
+category: runtime_security
+applies_to:
+- runtime_vulnerabilities
+- runtime_hardening
+- container_runtime
+tags:
+- 800-190
+- containers
+- nist
+- runtime
+- section_4_4_1
+- vulnerabilities
+severity_guidance: medium
+description: "4.4.1 Vulnerabilities within the runtime software \nThe container runtime\
+  \ must be carefully monitored for vulnerabilities, and when problems are \ndetected,\
+  \ they must be remediated quickly. A vulnerable runtime exposes all containers it\
+  \ \nsupports, as well as the host itself, to potentially significant risk. Organizations\
+  \ should use tools \nto look for Common Vulnerabilities and Exposures (CVEs) vulnerabilities\
+  \ in the runtimes \ndeployed, to upgrade any instances at risk, and to ensure that\
+  \ orchestrators only allow \ndeployments to properly maintained runtimes."
+rationale: "4.4.1 Vulnerabilities within the runtime software \nThe container runtime\
+  \ must be carefully monitored for vulnerabilities, and when problems are \ndetected,\
+  \ they must be remediated quickly. A vulnerable runtime exposes all containers it\
+  \ \nsupports, as well as the host itself, to potentially significant risk. Organizations\
+  \ should use tools \nto look for Common Vulnerabilities and Exposures (CVEs) vulnerabilities\
+  \ in the runtimes \ndeployed, to upgrade any instances at risk, and to ensure that\
+  \ orchestrators only allow \ndeployments to properly maintained runtimes."
+developer_guidance: "4.4.1 Vulnerabilities within the runtime software \nThe container\
+  \ runtime must be carefully monitored for vulnerabilities, and when problems are\
+  \ \ndetected, they must be remediated quickly. A vulnerable runtime exposes all\
+  \ containers it \nsupports, as well as the host itself, to potentially significant\
+  \ risk. Organizations should use tools \nto look for Common Vulnerabilities and\
+  \ Exposures (CVEs) vulnerabilities in the runtimes \ndeployed, to upgrade any instances\
+  \ at risk, and to ensure that orchestrators only allow \ndeployments to properly\
+  \ maintained runtimes."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.4.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

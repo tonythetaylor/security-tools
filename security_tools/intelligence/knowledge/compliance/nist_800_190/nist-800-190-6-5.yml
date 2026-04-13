@@ -1,0 +1,175 @@
+id: nist-800-190-6-5
+title: 6.5 Disposition Phase
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_6_5
+severity_guidance: medium
+description: "6.5 \nDisposition Phase \nThe ability for containers to be deployed\
+  \ and destroyed automatically based on the needs of an \napp allows for highly efficient\
+  \ systems but can also introduce some challenges for records \nretention, forensic,\
+  \ and event data requirements. Organizations should make sure that appropriate \n\
+  mechanisms are in place to satisfy their data retention policies. Examples of issues\
+  \ that should be \naddressed are how containers and images should be destroyed,\
+  \ what data should be extracted \nfrom a container before disposal and how that\
+  \ data extraction should be performed, how \ncryptographic keys used by a container\
+  \ should be revoked or deleted, etc. \nData stores and media that support the containerized\
+  \ environment should be included in any \ndisposal plans developed by the organization.\n\
+  \nConclusion \nContainers represent a transformational change in the way apps are\
+  \ built and run. They do not \nnecessitate dramatically new security best practices;\
+  \ on the contrary, most important aspects of \ncontainer security are refinements\
+  \ of well-established techniques and principles. This document \nhas updated and\
+  \ expanded general security recommendations to take the risks particular to \ncontainer\
+  \ technologies into account. \nThis document has already discussed some of the differences\
+  \ between securing containers and \nsecuring the same apps in VMs. It is useful\
+  \ to summarize the guidance in this document around \nthose points. \nIn container\
+  \ environments there are many more entities, so security processes and tools must\
+  \ be \nable to scale accordingly. Scale does not just mean the total number of objects\
+  \ supported in a \ndatabase, but also how effectively and autonomously policy can\
+  \ be managed. Many \norganizations struggle with the burden of managing security\
+  \ across hundreds of VMs. As \ncontainer-centric architectures become the norm and\
+  \ these organizations are responsible for \nthousands or tens of thousands of containers,\
+  \ their security practices should emphasize \nautomation and efficiency to keep\
+  \ up. \nWith containers there is a much higher rate of change, moving from updating\
+  \ an app a few times \na year to a few times a week or even a day. What used to\
+  \ be acceptable to do manually no longer \nis. Automation is not just important\
+  \ to deal with the net number of entities, but also with how \nfrequently those\
+  \ entities change. Being able to centrally express policy and have software \nmanage\
+  \ enforcement of it across the environment is vital. Organizations that adopt containers\
+  \ \nshould be prepared to manage this frequency of change. This may require fundamentally\
+  \ new \noperational practices and organizational evolution. \nThe use of containers\
+  \ shifts much of the responsibility for security to developers, so \norganizations\
+  \ should ensure their developers have all the information, skills, and tools they\
+  \ need \nto make sound decisions. Also, security teams should be enabled to actively\
+  \ enforce quality \nthroughout the development cycle. Organizations that are successful\
+  \ at this transition gain \nsecurity benefit in being able to respond to vulnerabilities\
+  \ faster and with less operational burden \nthan ever before. \nSecurity must be\
+  \ as portable as the containers themselves, so organizations should adopt \ntechniques\
+  \ and tools that are open and work across platforms and environments. Many \norganizations\
+  \ will see developers build in one environment, test in another, and deploy in a\
+  \ third, \nso having consistency in assessment and enforcement across these is key.\
+  \ Portability is also not \njust environmental but also temporal. Continuous integration\
+  \ and deployment practices erode the \ntraditional walls between phases of the development\
+  \ and deployment cycle, so organizations \nneed to ensure consistent, automated\
+  \ security practices across creation of the image, storage of \nthe image in registries,\
+  \ and running of the images in containers. \nOrganizations that navigate these changes\
+  \ can begin to leverage containers to actually improve \ntheir overall security.\
+  \ The immutabil"
+rationale: "6.5 \nDisposition Phase \nThe ability for containers to be deployed and\
+  \ destroyed automatically based on the needs of an \napp allows for highly efficient\
+  \ systems but can also introduce some challenges for records \nretention, forensic,\
+  \ and event data requirements. Organizations should make sure that appropriate \n\
+  mechanisms are in place to satisfy their data retention policies. Examples of issues\
+  \ that should be \naddressed are how containers and images should be destroyed,\
+  \ what data should be extracted \nfrom a container before disposal and how that\
+  \ data extraction should be performed, how \ncryptographic keys used by a container\
+  \ should be revoked or deleted, etc. \nData stores and media that support the containerized\
+  \ environment should be included in any \ndisposal plans developed by the organization.\n\
+  \nConclusion \nContainers represent a transformational change in the way apps are\
+  \ built and run. They do not \nnecessitate dramatically new security best practices;\
+  \ on the contrary, most important aspects of \ncontainer security are refinements\
+  \ of well-established techniques and principles. This document \nhas updated and\
+  \ expanded general security recommendations to take the risks particular to \ncontainer\
+  \ technologies into account. \nThis document has already discussed some of the differences\
+  \ between securing containers and \nsecuring the same apps in VMs. It is useful\
+  \ to summarize the guidance in this document around \nthose points. \nIn container\
+  \ environments there are many more entities, so security processes and tools must\
+  \ be \nable to scale accordingly. Scale does not just mean the total number of objects\
+  \ supported in a \ndatabase, but also how effectively and autonomously policy can\
+  \ be managed. Many \norganizations struggle with the burden of managing security\
+  \ across hundreds of VMs. As \ncontainer-centric architectures become the norm and\
+  \ these organizations are responsible for \nthousands or tens of thousands of containers,\
+  \ their security practices should emphasize \nautomation and efficiency to keep\
+  \ up. \nWith containers there is a much higher rate of change, moving from updating\
+  \ an app a few times \na year to a few times a week or even a day. What used to\
+  \ be acceptable to do manually no longer \nis. Automation is not just important\
+  \ to deal with the net number of entities, but also with how \nfrequently those\
+  \ entities change. Being able to centrally express policy and have software \nmanage\
+  \ enforcement of it across the environment is vital. Organizations that adopt containers\
+  \ \nshould be prepared to manage this frequency of change. This may require fundamentally\
+  \ new \noperational practices and organizational evolution. \nThe use of containers\
+  \ shifts much of the responsibility for security to developers, so \norganizations\
+  \ should ensure their developers have all the information, skills, and tools they\
+  \ need \nto make sound decisions. Also, security teams should be enabled to actively\
+  \ enforce quality \nthroughout the development cycle. Organizations that are successful\
+  \ at this transition gain \nsecurity benefit in being able to respond to vulnerabilities\
+  \ faster and with less operational burden \nthan ever before. \nSecurity must be\
+  \ as portable as the containers themselves, so organizations should adopt \ntechniques\
+  \ and tools that are open and work across platforms and environments. Many \norganizations\
+  \ will see developers build in one environment, test in another, and deploy in a\
+  \ third, \nso having consistency in assessment and enforcement across these is key.\
+  \ Portability is also not \njust environmental but also temporal. Continuous integration\
+  \ and deployment practices erode the \ntraditional walls between phases of the development\
+  \ and deployment cycle, so organizations \nneed to ensure consistent, automated\
+  \ security practices across creation of the image, storage of \nthe image in registries,\
+  \ and running of the images in containers. \nOrganizations that navigate these changes\
+  \ can begin to leverage containers to actually improve \ntheir overall security.\
+  \ The immutabil"
+developer_guidance: "6.5 \nDisposition Phase \nThe ability for containers to be deployed\
+  \ and destroyed automatically based on the needs of an \napp allows for highly efficient\
+  \ systems but can also introduce some challenges for records \nretention, forensic,\
+  \ and event data requirements. Organizations should make sure that appropriate \n\
+  mechanisms are in place to satisfy their data retention policies. Examples of issues\
+  \ that should be \naddressed are how containers and images should be destroyed,\
+  \ what data should be extracted \nfrom a container before disposal and how that\
+  \ data extraction should be performed, how \ncryptographic keys used by a container\
+  \ should be revoked or deleted, etc. \nData stores and media that support the containerized\
+  \ environment should be included in any \ndisposal plans developed by the organization.\n\
+  \nConclusion \nContainers represent a transformational change in the way apps are\
+  \ built and run. They do not \nnecessitate dramatically new security best practices;\
+  \ on the contrary, most important aspects of \ncontainer security are refinements\
+  \ of well-established techniques and principles. This document \nhas updated and\
+  \ expanded general security recommendations to take the risks particular to \ncontainer\
+  \ technologies into account. \nThis document has already discussed some of the differences\
+  \ between securing containers and \nsecuring the same apps in VMs. It is useful\
+  \ to summarize the guidance in this document around \nthose points. \nIn container\
+  \ environments there are many more entities, so security processes and tools must\
+  \ be \nable to scale accordingly. Scale does not just mean the total number of objects\
+  \ supported in a \ndatabase, but also how effectively and autonomously policy can\
+  \ be managed. Many \norganizations struggle with the burden of managing security\
+  \ across hundreds of VMs. As \ncontainer-centric architectures become the norm and\
+  \ these organizations are responsible for \nthousands or tens of thousands of containers,\
+  \ their security practices should emphasize \nautomation and efficiency to keep\
+  \ up. \nWith containers there is a much higher rate of change, moving from updating\
+  \ an app a few times \na year to a few times a week or even a day. What used to\
+  \ be acceptable to do manually no longer \nis. Automation is not just important\
+  \ to deal with the net number of entities, but also with how \nfrequently those\
+  \ entities change. Being able to centrally express policy and have software \nmanage\
+  \ enforcement of it across the environment is vital. Organizations that adopt containers\
+  \ \nshould be prepared to manage this frequency of change. This may require fundamentally\
+  \ new \noperational practices and organizational evolution. \nThe use of containers\
+  \ shifts much of the responsibility for security to developers, so \norganizations\
+  \ should ensure their developers have all the information, skills, and tools they\
+  \ need \nto make sound decisions. Also, security teams should be enabled to actively\
+  \ enforce quality \nthroughout the development cycle. Organizations that are successful\
+  \ at this transition gain \nsecurity benefit in being able to respond to vulnerabilities\
+  \ faster and with less operational burden \nthan ever before. \nSecurity must be\
+  \ as portable as the containers themselves, so organizations should adopt \ntechniques\
+  \ and tools that are open and work across platforms and environments. Many \norganizations\
+  \ will see developers build in one environment, test in another, and deploy in a\
+  \ third, \nso having consistency in assessment and enforcement across these is key.\
+  \ Portability is also not \njust environmental but also temporal. Continuous integration\
+  \ and deployment practices erode the \ntraditional walls between phases of the development\
+  \ and deployment cycle, so organizations \nneed to ensure consistent, automated\
+  \ security practices across creation of the image, storage of \nthe image in registries,\
+  \ and running of the images in containers. \nOrganizations that navigate these changes\
+  \ can begin to leverage containers to actually improve \ntheir overall security.\
+  \ The immutabil"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '6.5'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

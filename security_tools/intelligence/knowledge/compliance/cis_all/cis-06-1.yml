@@ -1,0 +1,31 @@
+id: cis-06-1
+title: 06.1 Establish an Access Granting Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_06
+- safeguard
+- safeguard_6_1
+severity_guidance: medium
+description: "6.1\nEstablish an Access Granting Process\nUsers\n-Protect-\n• • •\n\
+  Establish and follow a process, preferably automated, for granting access to enterprise\
+  \ assets upon new hire, rights grant, or role \nchange of a user."
+rationale: "6.1\nEstablish an Access Granting Process\nUsers\n-Protect-\n• • •\nEstablish\
+  \ and follow a process, preferably automated, for granting access to enterprise\
+  \ assets upon new hire, rights grant, or role \nchange of a user."
+developer_guidance: "6.1\nEstablish an Access Granting Process\nUsers\n-Protect-\n\
+  • • •\nEstablish and follow a process, preferably automated, for granting access\
+  \ to enterprise assets upon new hire, rights grant, or role \nchange of a user."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 06.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

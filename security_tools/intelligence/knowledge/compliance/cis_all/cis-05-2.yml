@@ -1,0 +1,34 @@
+id: cis-05-2
+title: 05.2 Use Unique Passwords
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_05
+- safeguard
+- safeguard_5_2
+severity_guidance: medium
+description: "5.2\nUse Unique Passwords\nUsers\n-Protect-\n• • •\nUse unique passwords\
+  \ for all enterprise assets. Best practice implementation includes, at a minimum,\
+  \ an 8-character password for \naccounts using MFA and a 14-character password for\
+  \ accounts not using MFA."
+rationale: "5.2\nUse Unique Passwords\nUsers\n-Protect-\n• • •\nUse unique passwords\
+  \ for all enterprise assets. Best practice implementation includes, at a minimum,\
+  \ an 8-character password for \naccounts using MFA and a 14-character password for\
+  \ accounts not using MFA."
+developer_guidance: "5.2\nUse Unique Passwords\nUsers\n-Protect-\n• • •\nUse unique\
+  \ passwords for all enterprise assets. Best practice implementation includes, at\
+  \ a minimum, an 8-character password for \naccounts using MFA and a 14-character\
+  \ password for accounts not using MFA."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 05.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

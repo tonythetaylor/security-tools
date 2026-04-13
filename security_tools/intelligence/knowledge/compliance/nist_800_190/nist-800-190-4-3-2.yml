@@ -1,0 +1,70 @@
+id: nist-800-190-4-3-2
+title: 4.3.2 Unauthorized access
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_3_2
+severity_guidance: medium
+description: "4.3.2 Unauthorized access \nAccess to cluster-wide administrative accounts\
+  \ should be tightly controlled as these accounts \nprovide ability to affect all\
+  \ resources in the environment. Organizations should use strong \nauthentication\
+  \ methods, such as requiring multifactor authentication instead of just a password.\
+  \ \nOrganizations should implement single sign-on to existing directory systems\
+  \ where applicable. \nSingle sign-on simplifies the orchestrator authentication\
+  \ experience, makes it easier for users to \nuse strong authentication credentials,\
+  \ and centralizes auditing of access, making anomaly \ndetection more effective.\
+  \ \nTraditional approaches for data at rest encryption often involve the use of\
+  \ host-based capabilities \nthat may be incompatible with containers. Thus, organizations\
+  \ should use tools for encrypting \ndata used with containers that allow the data\
+  \ to be accessed properly from containers regardless \nof the node they are running\
+  \ on. Such encryption tools should provide the same barriers to \nunauthorized access\
+  \ and tampering, using the same cryptographic approaches as those defined in \n\
+  NIST SP 800-111 [19]."
+rationale: "4.3.2 Unauthorized access \nAccess to cluster-wide administrative accounts\
+  \ should be tightly controlled as these accounts \nprovide ability to affect all\
+  \ resources in the environment. Organizations should use strong \nauthentication\
+  \ methods, such as requiring multifactor authentication instead of just a password.\
+  \ \nOrganizations should implement single sign-on to existing directory systems\
+  \ where applicable. \nSingle sign-on simplifies the orchestrator authentication\
+  \ experience, makes it easier for users to \nuse strong authentication credentials,\
+  \ and centralizes auditing of access, making anomaly \ndetection more effective.\
+  \ \nTraditional approaches for data at rest encryption often involve the use of\
+  \ host-based capabilities \nthat may be incompatible with containers. Thus, organizations\
+  \ should use tools for encrypting \ndata used with containers that allow the data\
+  \ to be accessed properly from containers regardless \nof the node they are running\
+  \ on. Such encryption tools should provide the same barriers to \nunauthorized access\
+  \ and tampering, using the same cryptographic approaches as those defined in \n\
+  NIST SP 800-111 [19]."
+developer_guidance: "4.3.2 Unauthorized access \nAccess to cluster-wide administrative\
+  \ accounts should be tightly controlled as these accounts \nprovide ability to affect\
+  \ all resources in the environment. Organizations should use strong \nauthentication\
+  \ methods, such as requiring multifactor authentication instead of just a password.\
+  \ \nOrganizations should implement single sign-on to existing directory systems\
+  \ where applicable. \nSingle sign-on simplifies the orchestrator authentication\
+  \ experience, makes it easier for users to \nuse strong authentication credentials,\
+  \ and centralizes auditing of access, making anomaly \ndetection more effective.\
+  \ \nTraditional approaches for data at rest encryption often involve the use of\
+  \ host-based capabilities \nthat may be incompatible with containers. Thus, organizations\
+  \ should use tools for encrypting \ndata used with containers that allow the data\
+  \ to be accessed properly from containers regardless \nof the node they are running\
+  \ on. Such encryption tools should provide the same barriers to \nunauthorized access\
+  \ and tampering, using the same cryptographic approaches as those defined in \n\
+  NIST SP 800-111 [19]."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.3.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

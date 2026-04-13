@@ -1,0 +1,52 @@
+id: cis-16-14
+title: 16.14 Conduct Threat Modeling
+category: application_security
+applies_to:
+- sast
+- secure_sdlc
+- application_security
+- dependency_scan
+- third_party_components
+tags:
+- appsec
+- cis
+- control_16
+- safeguard
+- safeguard_16_14
+- sast
+- secure-development
+- third-party-code
+severity_guidance: medium
+description: "16.14\nConduct Threat Modeling\nApplications\n-Protect-\n•\nConduct\
+  \ threat modeling. Threat modeling is the process of identifying and addressing\
+  \ application security design flaws within a design, \nbefore code is created. It\
+  \ is conducted through specially trained individuals who evaluate the application\
+  \ design and gauge security \nrisks for each entry point and access level. The goal\
+  \ is to map out the application, architecture, and infrastructure in a structured\
+  \ way to \nunderstand its weaknesses."
+rationale: "16.14\nConduct Threat Modeling\nApplications\n-Protect-\n•\nConduct threat\
+  \ modeling. Threat modeling is the process of identifying and addressing application\
+  \ security design flaws within a design, \nbefore code is created. It is conducted\
+  \ through specially trained individuals who evaluate the application design and\
+  \ gauge security \nrisks for each entry point and access level. The goal is to map\
+  \ out the application, architecture, and infrastructure in a structured way to \n\
+  understand its weaknesses."
+developer_guidance: "16.14\nConduct Threat Modeling\nApplications\n-Protect-\n•\n\
+  Conduct threat modeling. Threat modeling is the process of identifying and addressing\
+  \ application security design flaws within a design, \nbefore code is created. It\
+  \ is conducted through specially trained individuals who evaluate the application\
+  \ design and gauge security \nrisks for each entry point and access level. The goal\
+  \ is to map out the application, architecture, and infrastructure in a structured\
+  \ way to \nunderstand its weaknesses."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.14
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,88 @@
+id: nist-800-190-4-1-2
+title: 4.1.2 Image configuration defects
+category: configuration_security
+applies_to:
+- image_configuration
+- dockerfile_scan
+- hardening
+tags:
+- 800-190
+- configuration
+- containers
+- countermeasures
+- hardening
+- nist
+- section_4_1_2
+severity_guidance: medium
+description: "4.1.2 Image configuration defects \nOrganizations should adopt tools\
+  \ and processes to validate and enforce compliance with secure \nconfiguration best\
+  \ practices. For example, images should be configured to run as non-privileged \n\
+  users. Tools and processes that should be adopted include: \n1. Validation of image\
+  \ configuration settings, including vendor recommendations and third-\nparty best\
+  \ practices. \n2. Ongoing, continuously updated, centralized reporting and monitoring\
+  \ of image \ncompliance state to identify weaknesses and risks at the organizational\
+  \ level. \n3. Enforcement of compliance requirements by optionally preventing the\
+  \ running of non-\ncompliant images. \n4. Use of base layers from trusted sources\
+  \ only, frequent updates of base layers, and \nselection of base layers from minimalistic\
+  \ technologies like Alpine Linux and Windows \nNano Server to reduce attack surface\
+  \ areas.\n\nA final recommendation for image configuration is that SSH and other\
+  \ remote administration \ntools designed to provide remote shells to hosts should\
+  \ never be enabled within containers. \nContainers should be run in an immutable\
+  \ manner to derive the greatest security benefit from \ntheir use. Enabling remote\
+  \ access to them via these tools implies a degree of change that violates \nthis\
+  \ principle and exposes them to greater risk of network-based attack. Instead, all\
+  \ remote \nmanagement of containers should be done through the container runtime\
+  \ APIs, which may be \naccessed via orchestration tools, or by creating remote shell\
+  \ sessions to the host on which the \ncontainer is running."
+rationale: "4.1.2 Image configuration defects \nOrganizations should adopt tools and\
+  \ processes to validate and enforce compliance with secure \nconfiguration best\
+  \ practices. For example, images should be configured to run as non-privileged \n\
+  users. Tools and processes that should be adopted include: \n1. Validation of image\
+  \ configuration settings, including vendor recommendations and third-\nparty best\
+  \ practices. \n2. Ongoing, continuously updated, centralized reporting and monitoring\
+  \ of image \ncompliance state to identify weaknesses and risks at the organizational\
+  \ level. \n3. Enforcement of compliance requirements by optionally preventing the\
+  \ running of non-\ncompliant images. \n4. Use of base layers from trusted sources\
+  \ only, frequent updates of base layers, and \nselection of base layers from minimalistic\
+  \ technologies like Alpine Linux and Windows \nNano Server to reduce attack surface\
+  \ areas.\n\nA final recommendation for image configuration is that SSH and other\
+  \ remote administration \ntools designed to provide remote shells to hosts should\
+  \ never be enabled within containers. \nContainers should be run in an immutable\
+  \ manner to derive the greatest security benefit from \ntheir use. Enabling remote\
+  \ access to them via these tools implies a degree of change that violates \nthis\
+  \ principle and exposes them to greater risk of network-based attack. Instead, all\
+  \ remote \nmanagement of containers should be done through the container runtime\
+  \ APIs, which may be \naccessed via orchestration tools, or by creating remote shell\
+  \ sessions to the host on which the \ncontainer is running."
+developer_guidance: "4.1.2 Image configuration defects \nOrganizations should adopt\
+  \ tools and processes to validate and enforce compliance with secure \nconfiguration\
+  \ best practices. For example, images should be configured to run as non-privileged\
+  \ \nusers. Tools and processes that should be adopted include: \n1. Validation of\
+  \ image configuration settings, including vendor recommendations and third-\nparty\
+  \ best practices. \n2. Ongoing, continuously updated, centralized reporting and\
+  \ monitoring of image \ncompliance state to identify weaknesses and risks at the\
+  \ organizational level. \n3. Enforcement of compliance requirements by optionally\
+  \ preventing the running of non-\ncompliant images. \n4. Use of base layers from\
+  \ trusted sources only, frequent updates of base layers, and \nselection of base\
+  \ layers from minimalistic technologies like Alpine Linux and Windows \nNano Server\
+  \ to reduce attack surface areas.\n\nA final recommendation for image configuration\
+  \ is that SSH and other remote administration \ntools designed to provide remote\
+  \ shells to hosts should never be enabled within containers. \nContainers should\
+  \ be run in an immutable manner to derive the greatest security benefit from \n\
+  their use. Enabling remote access to them via these tools implies a degree of change\
+  \ that violates \nthis principle and exposes them to greater risk of network-based\
+  \ attack. Instead, all remote \nmanagement of containers should be done through\
+  \ the container runtime APIs, which may be \naccessed via orchestration tools, or\
+  \ by creating remote shell sessions to the host on which the \ncontainer is running."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.1.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

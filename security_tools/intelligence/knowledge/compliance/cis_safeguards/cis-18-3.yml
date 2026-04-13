@@ -1,0 +1,64 @@
+id: cis-18-3
+title: 18.3 Remediate Penetration Test Findings
+category: assurance_security
+applies_to:
+- penetration_testing
+- security_validation
+- assurance_testing
+tags:
+- assurance
+- cis
+- control_18
+- penetration-testing
+- safeguard
+- safeguard_18_3
+- validation
+severity_guidance: medium
+description: '18.3
+
+  Remediate Penetration Test Findings
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Remediate penetration test findings based on the enterprise’s policy for remediation
+  scope and prioritization.'
+rationale: '18.3
+
+  Remediate Penetration Test Findings
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Remediate penetration test findings based on the enterprise’s policy for remediation
+  scope and prioritization.'
+developer_guidance: '18.3
+
+  Remediate Penetration Test Findings
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Remediate penetration test findings based on the enterprise’s policy for remediation
+  scope and prioritization.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: Safeguard 18.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

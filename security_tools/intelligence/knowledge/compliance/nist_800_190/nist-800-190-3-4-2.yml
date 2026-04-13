@@ -1,0 +1,70 @@
+id: nist-800-190-3-4-2
+title: 3.4.2 Unbounded network access from containers
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_4_2
+severity_guidance: medium
+description: "3.4.2 Unbounded network access from containers \nBy default in most\
+  \ container runtimes, individual containers are able to access each other and the\
+  \ \nhost OS over the network. If a container is compromised and acting maliciously,\
+  \ allowing this \nnetwork traffic may expose other resources in the environment\
+  \ to risk. For example, a \ncompromised container may be used to scan the network\
+  \ it is connected to in order to find other \nweaknesses for an attacker to exploit.\
+  \ This risk is related to that from poorly separated virtual \nnetworks, as discussed\
+  \ in Section 3.3.3, but different because it is focused more on flows from \ncontainers\
+  \ to any outbound destination, not on app “cross talk” scenarios. \nEgress network\
+  \ access is more complex to manage in a containerized environment because so \n\
+  much of the connection is virtualized between containers. Thus, traffic from one\
+  \ container to \nanother may appear simply as encapsulated packets on the network\
+  \ without directly indicating \nthe ultimate source, destination, or payload. Tools\
+  \ and operational processes that are not \ncontainer aware are not able to inspect\
+  \ this traffic or determine whether it represents a threat."
+rationale: "3.4.2 Unbounded network access from containers \nBy default in most container\
+  \ runtimes, individual containers are able to access each other and the \nhost OS\
+  \ over the network. If a container is compromised and acting maliciously, allowing\
+  \ this \nnetwork traffic may expose other resources in the environment to risk.\
+  \ For example, a \ncompromised container may be used to scan the network it is connected\
+  \ to in order to find other \nweaknesses for an attacker to exploit. This risk is\
+  \ related to that from poorly separated virtual \nnetworks, as discussed in Section\
+  \ 3.3.3, but different because it is focused more on flows from \ncontainers to\
+  \ any outbound destination, not on app “cross talk” scenarios. \nEgress network\
+  \ access is more complex to manage in a containerized environment because so \n\
+  much of the connection is virtualized between containers. Thus, traffic from one\
+  \ container to \nanother may appear simply as encapsulated packets on the network\
+  \ without directly indicating \nthe ultimate source, destination, or payload. Tools\
+  \ and operational processes that are not \ncontainer aware are not able to inspect\
+  \ this traffic or determine whether it represents a threat."
+developer_guidance: "3.4.2 Unbounded network access from containers \nBy default in\
+  \ most container runtimes, individual containers are able to access each other and\
+  \ the \nhost OS over the network. If a container is compromised and acting maliciously,\
+  \ allowing this \nnetwork traffic may expose other resources in the environment\
+  \ to risk. For example, a \ncompromised container may be used to scan the network\
+  \ it is connected to in order to find other \nweaknesses for an attacker to exploit.\
+  \ This risk is related to that from poorly separated virtual \nnetworks, as discussed\
+  \ in Section 3.3.3, but different because it is focused more on flows from \ncontainers\
+  \ to any outbound destination, not on app “cross talk” scenarios. \nEgress network\
+  \ access is more complex to manage in a containerized environment because so \n\
+  much of the connection is virtualized between containers. Thus, traffic from one\
+  \ container to \nanother may appear simply as encapsulated packets on the network\
+  \ without directly indicating \nthe ultimate source, destination, or payload. Tools\
+  \ and operational processes that are not \ncontainer aware are not able to inspect\
+  \ this traffic or determine whether it represents a threat."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.4.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

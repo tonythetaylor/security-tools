@@ -1,0 +1,43 @@
+id: cis-10-7
+title: 10.7 Use Behavior-Based Anti-Malware Software
+category: endpoint_security
+applies_to:
+- malware_defense
+- endpoint_protection
+- anti_malware
+tags:
+- cis
+- control_10
+- defense
+- endpoint
+- malware
+- safeguard
+- safeguard_10_7
+severity_guidance: medium
+description: "10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n\
+  • •\nUse behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFF\
+  Controls and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard\
+  \ 12.8\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+rationale: "10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n• •\n\
+  Use behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFFControls\
+  \ and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard 12.8\n\
+  CONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+developer_guidance: "10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n\
+  • •\nUse behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFF\
+  Controls and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard\
+  \ 12.8\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 10
+  note: Safeguard 10.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

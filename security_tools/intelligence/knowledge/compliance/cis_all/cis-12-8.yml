@@ -1,0 +1,47 @@
+id: cis-12-8
+title: 12.8 Establish and Maintain Dedicated Computing Resources for All Administrative
+  Work
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_12
+- safeguard
+- safeguard_12_8
+severity_guidance: medium
+description: "12.8\nEstablish and Maintain Dedicated Computing Resources for All Administrative\
+  \ Work\nDevices\n-Protect-\n•\nEstablish and maintain dedicated computing resources,\
+  \ either physically or logically separated, for all administrative tasks or tasks\
+  \ \nrequiring administrative access. The computing resources should be segmented\
+  \ from the enterprise’s primary network and not be \nallowed internet access.\n\n\
+  CIS Controls v8\nA12 \n\uFEFFControls and Safeguards Index\nControl 13 / Safeguard\
+  \ 13.1 — Control 14 / Safeguard 14.2\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "12.8\nEstablish and Maintain Dedicated Computing Resources for All Administrative\
+  \ Work\nDevices\n-Protect-\n•\nEstablish and maintain dedicated computing resources,\
+  \ either physically or logically separated, for all administrative tasks or tasks\
+  \ \nrequiring administrative access. The computing resources should be segmented\
+  \ from the enterprise’s primary network and not be \nallowed internet access.\n\n\
+  CIS Controls v8\nA12 \n\uFEFFControls and Safeguards Index\nControl 13 / Safeguard\
+  \ 13.1 — Control 14 / Safeguard 14.2\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "12.8\nEstablish and Maintain Dedicated Computing Resources for\
+  \ All Administrative Work\nDevices\n-Protect-\n•\nEstablish and maintain dedicated\
+  \ computing resources, either physically or logically separated, for all administrative\
+  \ tasks or tasks \nrequiring administrative access. The computing resources should\
+  \ be segmented from the enterprise’s primary network and not be \nallowed internet\
+  \ access.\n\nCIS Controls v8\nA12 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 13 / Safeguard 13.1 — Control 14 / Safeguard 14.2\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 12
+  note: Safeguard 12.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

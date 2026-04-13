@@ -1,0 +1,35 @@
+id: cis-12-7
+title: 12.7 Ensure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s
+  AAA
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_12
+- safeguard
+- safeguard_12_7
+severity_guidance: medium
+description: "12.7\nEnsure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s\
+  \ AAA \nInfrastructure\nDevices\n-Protect-\n• •\nRequire users to authenticate to\
+  \ enterprise-managed VPN and authentication services prior to accessing enterprise\
+  \ resources on end-\nuser devices."
+rationale: "12.7\nEnsure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s\
+  \ AAA \nInfrastructure\nDevices\n-Protect-\n• •\nRequire users to authenticate to\
+  \ enterprise-managed VPN and authentication services prior to accessing enterprise\
+  \ resources on end-\nuser devices."
+developer_guidance: "12.7\nEnsure Remote Devices Utilize a VPN and are Connecting\
+  \ to an Enterprise’s AAA \nInfrastructure\nDevices\n-Protect-\n• •\nRequire users\
+  \ to authenticate to enterprise-managed VPN and authentication services prior to\
+  \ accessing enterprise resources on end-\nuser devices."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 12
+  note: Safeguard 12.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

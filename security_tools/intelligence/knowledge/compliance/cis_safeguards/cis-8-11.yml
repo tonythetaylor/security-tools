@@ -1,0 +1,37 @@
+id: cis-8-11
+title: 8.11 Conduct Audit Log Reviews
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control_08
+- logging
+- monitoring
+- safeguard
+- safeguard_8_11
+severity_guidance: medium
+description: "8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct reviews\
+  \ of audit logs to detect anomalies or abnormal events that could indicate a potential\
+  \ threat. Conduct reviews on a \nweekly, or more frequent, basis."
+rationale: "8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct reviews\
+  \ of audit logs to detect anomalies or abnormal events that could indicate a potential\
+  \ threat. Conduct reviews on a \nweekly, or more frequent, basis."
+developer_guidance: "8.11\nConduct Audit Log Reviews\nNetwork\n-Detect-\n• •\nConduct\
+  \ reviews of audit logs to detect anomalies or abnormal events that could indicate\
+  \ a potential threat. Conduct reviews on a \nweekly, or more frequent, basis."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 8.11
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

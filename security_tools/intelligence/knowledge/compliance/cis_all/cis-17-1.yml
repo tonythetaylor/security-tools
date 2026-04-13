@@ -1,0 +1,46 @@
+id: cis-17-1
+title: 17.1 Designate Personnel to Manage Incident Handling
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_17
+- safeguard
+- safeguard_17_1
+severity_guidance: medium
+description: "17.1\nDesignate Personnel to Manage Incident Handling\nN/A\n-Respond-\n\
+  • • •\nDesignate one key person, and at least one backup, who will manage the enterprise’s\
+  \ incident handling process. Management personnel \nare responsible for the coordination\
+  \ and documentation of incident response and recovery efforts and can consist of\
+  \ employees \ninternal to the enterprise, third-party vendors, or a hybrid approach.\
+  \ If using a third-party vendor, designate at least one person internal \nto the\
+  \ enterprise to oversee any third-party work. Review annually, or when significant\
+  \ enterprise changes occur that could impact \nthis Safeguard."
+rationale: "17.1\nDesignate Personnel to Manage Incident Handling\nN/A\n-Respond-\n\
+  • • •\nDesignate one key person, and at least one backup, who will manage the enterprise’s\
+  \ incident handling process. Management personnel \nare responsible for the coordination\
+  \ and documentation of incident response and recovery efforts and can consist of\
+  \ employees \ninternal to the enterprise, third-party vendors, or a hybrid approach.\
+  \ If using a third-party vendor, designate at least one person internal \nto the\
+  \ enterprise to oversee any third-party work. Review annually, or when significant\
+  \ enterprise changes occur that could impact \nthis Safeguard."
+developer_guidance: "17.1\nDesignate Personnel to Manage Incident Handling\nN/A\n\
+  -Respond-\n• • •\nDesignate one key person, and at least one backup, who will manage\
+  \ the enterprise’s incident handling process. Management personnel \nare responsible\
+  \ for the coordination and documentation of incident response and recovery efforts\
+  \ and can consist of employees \ninternal to the enterprise, third-party vendors,\
+  \ or a hybrid approach. If using a third-party vendor, designate at least one person\
+  \ internal \nto the enterprise to oversee any third-party work. Review annually,\
+  \ or when significant enterprise changes occur that could impact \nthis Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

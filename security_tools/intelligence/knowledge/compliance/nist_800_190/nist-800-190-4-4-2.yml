@@ -1,0 +1,100 @@
+id: nist-800-190-4-4-2
+title: 4.4.2 Unbounded network access from containers
+category: network_security
+applies_to:
+- egress_control
+- network_policy
+- runtime_network_access
+tags:
+- 800-190
+- containers
+- egress
+- network
+- nist
+- runtime
+- section_4_4_2
+severity_guidance: medium
+description: "4.4.2 Unbounded network access from containers \nOrganizations should\
+  \ control the egress network traffic sent by containers. At minimum, these \ncontrols\
+  \ should be in place at network borders, ensuring containers are not able to send\
+  \ traffic \nacross networks of differing sensitivity levels, such as from an environment\
+  \ hosting secure data \nto the internet, similar to the patterns used for traditional\
+  \ architectures. However, the virtualized \nnetworking model of inter-container\
+  \ traffic poses an additional challenge. \nBecause containers deployed across multiple\
+  \ hosts typically communicate over a virtual, \nencrypted network, traditional network\
+  \ devices are often blind to this traffic. Additionally, \ncontainers are typically\
+  \ assigned dynamic IP addresses automatically when deployed by \norchestrators,\
+  \ and these addresses change continuously as the app is scaled and load balanced.\
+  \ \nThus, ideally, organizations should use a combination of existing network level\
+  \ devices and \nmore app-aware network filtering. App-aware tools should be able\
+  \ to not just see the inter-\ncontainer traffic, but also to dynamically generate\
+  \ the rules used to filter this traffic based on the\n\nspecific characteristics\
+  \ of the apps running in the containers. This dynamic rule management is \ncritical\
+  \ due to the scale and rate of change of containerized apps, as well as their ephemeral\
+  \ \nnetworking topology. \nSpecifically, app-aware tools should provide the following\
+  \ capabilities: \n• Automated determination of proper container networking surfaces,\
+  \ including both \ninbound ports and process-port bindings; \n• Detection of traffic\
+  \ flows both between containers and other network entities, over both \n‘on the\
+  \ wire’ traffic and encapsulated traffic; and \n• Detection of network anomalies,\
+  \ such as unexpected traffic flows within the \norganization’s network, port scanning,\
+  \ or outbound access to potentially dangerous \ndestinations."
+rationale: "4.4.2 Unbounded network access from containers \nOrganizations should\
+  \ control the egress network traffic sent by containers. At minimum, these \ncontrols\
+  \ should be in place at network borders, ensuring containers are not able to send\
+  \ traffic \nacross networks of differing sensitivity levels, such as from an environment\
+  \ hosting secure data \nto the internet, similar to the patterns used for traditional\
+  \ architectures. However, the virtualized \nnetworking model of inter-container\
+  \ traffic poses an additional challenge. \nBecause containers deployed across multiple\
+  \ hosts typically communicate over a virtual, \nencrypted network, traditional network\
+  \ devices are often blind to this traffic. Additionally, \ncontainers are typically\
+  \ assigned dynamic IP addresses automatically when deployed by \norchestrators,\
+  \ and these addresses change continuously as the app is scaled and load balanced.\
+  \ \nThus, ideally, organizations should use a combination of existing network level\
+  \ devices and \nmore app-aware network filtering. App-aware tools should be able\
+  \ to not just see the inter-\ncontainer traffic, but also to dynamically generate\
+  \ the rules used to filter this traffic based on the\n\nspecific characteristics\
+  \ of the apps running in the containers. This dynamic rule management is \ncritical\
+  \ due to the scale and rate of change of containerized apps, as well as their ephemeral\
+  \ \nnetworking topology. \nSpecifically, app-aware tools should provide the following\
+  \ capabilities: \n• Automated determination of proper container networking surfaces,\
+  \ including both \ninbound ports and process-port bindings; \n• Detection of traffic\
+  \ flows both between containers and other network entities, over both \n‘on the\
+  \ wire’ traffic and encapsulated traffic; and \n• Detection of network anomalies,\
+  \ such as unexpected traffic flows within the \norganization’s network, port scanning,\
+  \ or outbound access to potentially dangerous \ndestinations."
+developer_guidance: "4.4.2 Unbounded network access from containers \nOrganizations\
+  \ should control the egress network traffic sent by containers. At minimum, these\
+  \ \ncontrols should be in place at network borders, ensuring containers are not\
+  \ able to send traffic \nacross networks of differing sensitivity levels, such as\
+  \ from an environment hosting secure data \nto the internet, similar to the patterns\
+  \ used for traditional architectures. However, the virtualized \nnetworking model\
+  \ of inter-container traffic poses an additional challenge. \nBecause containers\
+  \ deployed across multiple hosts typically communicate over a virtual, \nencrypted\
+  \ network, traditional network devices are often blind to this traffic. Additionally,\
+  \ \ncontainers are typically assigned dynamic IP addresses automatically when deployed\
+  \ by \norchestrators, and these addresses change continuously as the app is scaled\
+  \ and load balanced. \nThus, ideally, organizations should use a combination of\
+  \ existing network level devices and \nmore app-aware network filtering. App-aware\
+  \ tools should be able to not just see the inter-\ncontainer traffic, but also to\
+  \ dynamically generate the rules used to filter this traffic based on the\n\nspecific\
+  \ characteristics of the apps running in the containers. This dynamic rule management\
+  \ is \ncritical due to the scale and rate of change of containerized apps, as well\
+  \ as their ephemeral \nnetworking topology. \nSpecifically, app-aware tools should\
+  \ provide the following capabilities: \n• Automated determination of proper container\
+  \ networking surfaces, including both \ninbound ports and process-port bindings;\
+  \ \n• Detection of traffic flows both between containers and other network entities,\
+  \ over both \n‘on the wire’ traffic and encapsulated traffic; and \n• Detection\
+  \ of network anomalies, such as unexpected traffic flows within the \norganization’s\
+  \ network, port scanning, or outbound access to potentially dangerous \ndestinations."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.4.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

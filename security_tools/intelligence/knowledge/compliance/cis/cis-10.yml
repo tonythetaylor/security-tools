@@ -1,0 +1,87 @@
+id: cis-10
+title: 10 Malware Defenses
+category: endpoint_security
+applies_to:
+- malware_defense
+- endpoint_protection
+- anti_malware
+tags:
+- cis
+- control
+- control_10
+- defense
+- endpoint
+- malware
+severity_guidance: medium
+description: "10\nMalware Defenses\nPrevent or control the installation, spread, and\
+  \ execution of malicious applications, code, or scripts on enterprise assets.\n\
+  10.1\nDeploy and Maintain Anti-Malware Software\nDevices\n-Protect-\n• • •\nDeploy\
+  \ and maintain anti-malware software on all enterprise assets.\n10.2\nConfigure\
+  \ Automatic Anti-Malware Signature Updates\nDevices\n-Protect-\n• • •\nConfigure\
+  \ automatic updates for anti-malware signature files on all enterprise assets.\n\
+  10.3\nDisable Autorun and Autoplay for Removable Media\nDevices\n-Protect-\n• •\
+  \ •\nDisable autorun and autoplay auto-execute functionality for removable media.\n\
+  10.4\nConfigure Automatic Anti-Malware Scanning of Removable Media\nDevices\n-Detect-\n\
+  • •\nConfigure anti-malware software to automatically scan removable media.\n10.5\n\
+  Enable Anti-Exploitation Features\nDevices\n-Protect-\n• •\nEnable anti-exploitation\
+  \ features on enterprise assets and software, where possible, such as Microsoft®\
+  \ Data Execution Prevention (DEP), \nWindows® Defender Exploit Guard (WDEG), or\
+  \ Apple® System Integrity Protection (SIP) and Gatekeeper™.\n10.6\nCentrally Manage\
+  \ Anti-Malware Software\nDevices\n-Protect-\n• •\nCentrally manage anti-malware\
+  \ software.\n10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n\
+  • •\nUse behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFF\
+  Controls and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard\
+  \ 12.8\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+rationale: "10\nMalware Defenses\nPrevent or control the installation, spread, and\
+  \ execution of malicious applications, code, or scripts on enterprise assets.\n\
+  10.1\nDeploy and Maintain Anti-Malware Software\nDevices\n-Protect-\n• • •\nDeploy\
+  \ and maintain anti-malware software on all enterprise assets.\n10.2\nConfigure\
+  \ Automatic Anti-Malware Signature Updates\nDevices\n-Protect-\n• • •\nConfigure\
+  \ automatic updates for anti-malware signature files on all enterprise assets.\n\
+  10.3\nDisable Autorun and Autoplay for Removable Media\nDevices\n-Protect-\n• •\
+  \ •\nDisable autorun and autoplay auto-execute functionality for removable media.\n\
+  10.4\nConfigure Automatic Anti-Malware Scanning of Removable Media\nDevices\n-Detect-\n\
+  • •\nConfigure anti-malware software to automatically scan removable media.\n10.5\n\
+  Enable Anti-Exploitation Features\nDevices\n-Protect-\n• •\nEnable anti-exploitation\
+  \ features on enterprise assets and software, where possible, such as Microsoft®\
+  \ Data Execution Prevention (DEP), \nWindows® Defender Exploit Guard (WDEG), or\
+  \ Apple® System Integrity Protection (SIP) and Gatekeeper™.\n10.6\nCentrally Manage\
+  \ Anti-Malware Software\nDevices\n-Protect-\n• •\nCentrally manage anti-malware\
+  \ software.\n10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n\
+  • •\nUse behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFF\
+  Controls and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard\
+  \ 12.8\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+developer_guidance: "10\nMalware Defenses\nPrevent or control the installation, spread,\
+  \ and execution of malicious applications, code, or scripts on enterprise assets.\n\
+  10.1\nDeploy and Maintain Anti-Malware Software\nDevices\n-Protect-\n• • •\nDeploy\
+  \ and maintain anti-malware software on all enterprise assets.\n10.2\nConfigure\
+  \ Automatic Anti-Malware Signature Updates\nDevices\n-Protect-\n• • •\nConfigure\
+  \ automatic updates for anti-malware signature files on all enterprise assets.\n\
+  10.3\nDisable Autorun and Autoplay for Removable Media\nDevices\n-Protect-\n• •\
+  \ •\nDisable autorun and autoplay auto-execute functionality for removable media.\n\
+  10.4\nConfigure Automatic Anti-Malware Scanning of Removable Media\nDevices\n-Detect-\n\
+  • •\nConfigure anti-malware software to automatically scan removable media.\n10.5\n\
+  Enable Anti-Exploitation Features\nDevices\n-Protect-\n• •\nEnable anti-exploitation\
+  \ features on enterprise assets and software, where possible, such as Microsoft®\
+  \ Data Execution Prevention (DEP), \nWindows® Defender Exploit Guard (WDEG), or\
+  \ Apple® System Integrity Protection (SIP) and Gatekeeper™.\n10.6\nCentrally Manage\
+  \ Anti-Malware Software\nDevices\n-Protect-\n• •\nCentrally manage anti-malware\
+  \ software.\n10.7\nUse Behavior-Based Anti-Malware Software\nDevices\n-Detect-\n\
+  • •\nUse behavior-based anti-malware software.\n\nCIS Controls v8\nA11 \n\uFEFF\
+  Controls and Safeguards Index\nControl 11 / Safeguard 11.1 — Control 12 / Safeguard\
+  \ 12.8\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 10
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

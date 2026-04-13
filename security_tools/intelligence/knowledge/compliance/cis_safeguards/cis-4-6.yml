@@ -1,0 +1,49 @@
+id: cis-4-6
+title: 4.6 Securely Manage Enterprise Assets and Software
+category: configuration_security
+applies_to:
+- secure_configuration
+- hardening
+- baseline_configuration
+tags:
+- baseline
+- cis
+- configuration
+- control_04
+- hardening
+- safeguard
+- safeguard_4_6
+severity_guidance: medium
+description: "4.6\nSecurely Manage Enterprise Assets and Software\nNetwork\n-Protect-\n\
+  • • •\nSecurely manage enterprise assets and software. Example implementations include\
+  \ managing configuration through version-controlled-\ninfrastructure-as-code and\
+  \ accessing administrative interfaces over secure network protocols, such as Secure\
+  \ Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use insecure\
+  \ management protocols, such as Telnet (Teletype Network) and HTTP, unless \noperationally\
+  \ essential."
+rationale: "4.6\nSecurely Manage Enterprise Assets and Software\nNetwork\n-Protect-\n\
+  • • •\nSecurely manage enterprise assets and software. Example implementations include\
+  \ managing configuration through version-controlled-\ninfrastructure-as-code and\
+  \ accessing administrative interfaces over secure network protocols, such as Secure\
+  \ Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use insecure\
+  \ management protocols, such as Telnet (Teletype Network) and HTTP, unless \noperationally\
+  \ essential."
+developer_guidance: "4.6\nSecurely Manage Enterprise Assets and Software\nNetwork\n\
+  -Protect-\n• • •\nSecurely manage enterprise assets and software. Example implementations\
+  \ include managing configuration through version-controlled-\ninfrastructure-as-code\
+  \ and accessing administrative interfaces over secure network protocols, such as\
+  \ Secure Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use\
+  \ insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless\
+  \ \noperationally essential."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 4.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

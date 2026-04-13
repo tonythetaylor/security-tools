@@ -1,0 +1,37 @@
+id: cis-04-3
+title: 04.3 Configure Automatic Session Locking on Enterprise Assets
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_04
+- safeguard
+- safeguard_4_3
+severity_guidance: medium
+description: "4.3\nConfigure Automatic Session Locking on Enterprise Assets\nUsers\n\
+  -Protect-\n• • •\nConfigure automatic session locking on enterprise assets after\
+  \ a defined period of inactivity. For general purpose operating systems, the \n\
+  period must not exceed 15 minutes. For mobile end-user devices, the period must\
+  \ not exceed 2 minutes."
+rationale: "4.3\nConfigure Automatic Session Locking on Enterprise Assets\nUsers\n\
+  -Protect-\n• • •\nConfigure automatic session locking on enterprise assets after\
+  \ a defined period of inactivity. For general purpose operating systems, the \n\
+  period must not exceed 15 minutes. For mobile end-user devices, the period must\
+  \ not exceed 2 minutes."
+developer_guidance: "4.3\nConfigure Automatic Session Locking on Enterprise Assets\n\
+  Users\n-Protect-\n• • •\nConfigure automatic session locking on enterprise assets\
+  \ after a defined period of inactivity. For general purpose operating systems, the\
+  \ \nperiod must not exceed 15 minutes. For mobile end-user devices, the period must\
+  \ not exceed 2 minutes."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 04.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

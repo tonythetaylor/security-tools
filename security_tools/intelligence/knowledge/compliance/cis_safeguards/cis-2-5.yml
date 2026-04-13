@@ -1,0 +1,38 @@
+id: cis-2-5
+title: 2.5 Allowlist Authorized Software
+category: software_security
+applies_to:
+- software_inventory
+- software_asset_management
+- unauthorized_software
+tags:
+- asset-management
+- cis
+- control_02
+- safeguard
+- safeguard_2_5
+- software-assets
+- software-inventory
+severity_guidance: medium
+description: "2.5\nAllowlist Authorized Software\nApplications\n-Protect-\n• •\nUse\
+  \ technical controls, such as application allowlisting, to ensure that only authorized\
+  \ software can execute or be accessed. \nReassess bi-annually, or more frequently."
+rationale: "2.5\nAllowlist Authorized Software\nApplications\n-Protect-\n• •\nUse\
+  \ technical controls, such as application allowlisting, to ensure that only authorized\
+  \ software can execute or be accessed. \nReassess bi-annually, or more frequently."
+developer_guidance: "2.5\nAllowlist Authorized Software\nApplications\n-Protect-\n\
+  • •\nUse technical controls, such as application allowlisting, to ensure that only\
+  \ authorized software can execute or be accessed. \nReassess bi-annually, or more\
+  \ frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: Safeguard 2.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,47 @@
+id: cis-3-11
+title: 3.11 Encrypt Sensitive Data at Rest
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_11
+severity_guidance: medium
+description: "3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\nEncrypt\
+  \ sensitive data at rest on servers, applications, and databases containing sensitive\
+  \ data. Storage-layer encryption, also known \nas server-side encryption, meets\
+  \ the minimum requirement of this Safeguard. Additional encryption methods may include\
+  \ application-\nlayer encryption, also known as client-side encryption, where access\
+  \ to the data storage device(s) does not permit access to the \nplain-text data."
+rationale: "3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\nEncrypt sensitive\
+  \ data at rest on servers, applications, and databases containing sensitive data.\
+  \ Storage-layer encryption, also known \nas server-side encryption, meets the minimum\
+  \ requirement of this Safeguard. Additional encryption methods may include application-\n\
+  layer encryption, also known as client-side encryption, where access to the data\
+  \ storage device(s) does not permit access to the \nplain-text data."
+developer_guidance: "3.11\nEncrypt Sensitive Data at Rest\nData\n-Protect-\n• •\n\
+  Encrypt sensitive data at rest on servers, applications, and databases containing\
+  \ sensitive data. Storage-layer encryption, also known \nas server-side encryption,\
+  \ meets the minimum requirement of this Safeguard. Additional encryption methods\
+  \ may include application-\nlayer encryption, also known as client-side encryption,\
+  \ where access to the data storage device(s) does not permit access to the \nplain-text\
+  \ data."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.11
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

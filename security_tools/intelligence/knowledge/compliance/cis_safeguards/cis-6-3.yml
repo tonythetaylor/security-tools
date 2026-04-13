@@ -1,0 +1,40 @@
+id: cis-6-3
+title: 6.3 Require MFA for Externally-Exposed Applications
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+tags:
+- access-control
+- authorization
+- cis
+- control_06
+- least-privilege
+- safeguard
+- safeguard_6_3
+severity_guidance: medium
+description: "6.3\nRequire MFA for Externally-Exposed Applications\nUsers\n-Protect-\n\
+  • • •\nRequire all externally-exposed enterprise or third-party applications to\
+  \ enforce MFA, where supported. Enforcing MFA through a \ndirectory service or SSO\
+  \ provider is a satisfactory implementation of this Safeguard."
+rationale: "6.3\nRequire MFA for Externally-Exposed Applications\nUsers\n-Protect-\n\
+  • • •\nRequire all externally-exposed enterprise or third-party applications to\
+  \ enforce MFA, where supported. Enforcing MFA through a \ndirectory service or SSO\
+  \ provider is a satisfactory implementation of this Safeguard."
+developer_guidance: "6.3\nRequire MFA for Externally-Exposed Applications\nUsers\n\
+  -Protect-\n• • •\nRequire all externally-exposed enterprise or third-party applications\
+  \ to enforce MFA, where supported. Enforcing MFA through a \ndirectory service or\
+  \ SSO provider is a satisfactory implementation of this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 6.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

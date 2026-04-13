@@ -1,0 +1,34 @@
+id: cis-07-1
+title: 07.1 Establish and Maintain a Vulnerability Management Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_07
+- safeguard
+- safeguard_7_1
+severity_guidance: medium
+description: "7.1\nEstablish and Maintain a Vulnerability Management Process\nApplications\n\
+  -Protect-\n• • •\nEstablish and maintain a documented vulnerability management process\
+  \ for enterprise assets. Review and update documentation \nannually, or when significant\
+  \ enterprise changes occur that could impact this Safeguard."
+rationale: "7.1\nEstablish and Maintain a Vulnerability Management Process\nApplications\n\
+  -Protect-\n• • •\nEstablish and maintain a documented vulnerability management process\
+  \ for enterprise assets. Review and update documentation \nannually, or when significant\
+  \ enterprise changes occur that could impact this Safeguard."
+developer_guidance: "7.1\nEstablish and Maintain a Vulnerability Management Process\n\
+  Applications\n-Protect-\n• • •\nEstablish and maintain a documented vulnerability\
+  \ management process for enterprise assets. Review and update documentation \nannually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 07.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

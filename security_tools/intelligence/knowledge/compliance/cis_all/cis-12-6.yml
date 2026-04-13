@@ -1,0 +1,58 @@
+id: cis-12-6
+title: 12.6 Use of Secure Network Management and Communication Protocols
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_12
+- safeguard
+- safeguard_12_6
+severity_guidance: medium
+description: '12.6
+
+  Use of Secure Network Management and Communication Protocols 
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Use secure network management and communication protocols (e.g., 802.1X, Wi-Fi Protected
+  Access 2 (WPA2) Enterprise or greater).'
+rationale: '12.6
+
+  Use of Secure Network Management and Communication Protocols 
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Use secure network management and communication protocols (e.g., 802.1X, Wi-Fi Protected
+  Access 2 (WPA2) Enterprise or greater).'
+developer_guidance: '12.6
+
+  Use of Secure Network Management and Communication Protocols 
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Use secure network management and communication protocols (e.g., 802.1X, Wi-Fi Protected
+  Access 2 (WPA2) Enterprise or greater).'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 12
+  note: Safeguard 12.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

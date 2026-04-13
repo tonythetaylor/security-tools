@@ -1,0 +1,51 @@
+id: nist-800-190-4-3-3
+title: 4.3.3 Poorly separated inter-container network traffic
+category: network_security
+applies_to:
+- network_segmentation
+- inter_container_traffic
+- kubernetes_network_policy
+tags:
+- 800-190
+- containers
+- network
+- nist
+- section_4_3_3
+- segmentation
+severity_guidance: medium
+description: "4.3.3 Poorly separated inter-container network traffic \nOrchestrators\
+  \ should be configured to separate network traffic into discrete virtual networks\
+  \ by \nsensitivity level. While per-app segmentation is also possible, for most\
+  \ organizations and use \ncases, simply defining networks by sensitivity level provides\
+  \ sufficient mitigation of risk with a \nmanageable degree of complexity. For example,\
+  \ public-facing apps can share a virtual network,\n\ninternal apps can use another,\
+  \ and communication between the two should occur through a small \nnumber of well-defined\
+  \ interfaces."
+rationale: "4.3.3 Poorly separated inter-container network traffic \nOrchestrators\
+  \ should be configured to separate network traffic into discrete virtual networks\
+  \ by \nsensitivity level. While per-app segmentation is also possible, for most\
+  \ organizations and use \ncases, simply defining networks by sensitivity level provides\
+  \ sufficient mitigation of risk with a \nmanageable degree of complexity. For example,\
+  \ public-facing apps can share a virtual network,\n\ninternal apps can use another,\
+  \ and communication between the two should occur through a small \nnumber of well-defined\
+  \ interfaces."
+developer_guidance: "4.3.3 Poorly separated inter-container network traffic \nOrchestrators\
+  \ should be configured to separate network traffic into discrete virtual networks\
+  \ by \nsensitivity level. While per-app segmentation is also possible, for most\
+  \ organizations and use \ncases, simply defining networks by sensitivity level provides\
+  \ sufficient mitigation of risk with a \nmanageable degree of complexity. For example,\
+  \ public-facing apps can share a virtual network,\n\ninternal apps can use another,\
+  \ and communication between the two should occur through a small \nnumber of well-defined\
+  \ interfaces."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.3.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

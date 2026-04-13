@@ -1,0 +1,46 @@
+id: cis-17-6
+title: 17.6 Define Mechanisms for Communicating During Incident Response
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_6
+severity_guidance: medium
+description: "17.6\nDefine Mechanisms for Communicating During Incident Response\n\
+  N/A\n-Respond-\n• •\nDetermine which primary and secondary mechanisms will be used\
+  \ to communicate and report during a security incident. Mechanisms \ncan include\
+  \ phone calls, emails, or letters. Keep in mind that certain mechanisms, such as\
+  \ emails, can be affected during a security \nincident. Review annually, or when\
+  \ significant enterprise changes occur that could impact this Safeguard."
+rationale: "17.6\nDefine Mechanisms for Communicating During Incident Response\nN/A\n\
+  -Respond-\n• •\nDetermine which primary and secondary mechanisms will be used to\
+  \ communicate and report during a security incident. Mechanisms \ncan include phone\
+  \ calls, emails, or letters. Keep in mind that certain mechanisms, such as emails,\
+  \ can be affected during a security \nincident. Review annually, or when significant\
+  \ enterprise changes occur that could impact this Safeguard."
+developer_guidance: "17.6\nDefine Mechanisms for Communicating During Incident Response\n\
+  N/A\n-Respond-\n• •\nDetermine which primary and secondary mechanisms will be used\
+  \ to communicate and report during a security incident. Mechanisms \ncan include\
+  \ phone calls, emails, or letters. Keep in mind that certain mechanisms, such as\
+  \ emails, can be affected during a security \nincident. Review annually, or when\
+  \ significant enterprise changes occur that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

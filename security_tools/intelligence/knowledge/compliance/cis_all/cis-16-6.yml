@@ -1,0 +1,46 @@
+id: cis-16-6
+title: 16.6 Establish and Maintain a Severity Rating System and Process for Application
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_6
+severity_guidance: medium
+description: "16.6\nEstablish and Maintain a Severity Rating System and Process for\
+  \ Application \nVulnerabilities\nApplications\n-Protect-\n• •\nEstablish and maintain\
+  \ a severity rating system and process for application vulnerabilities that facilitates\
+  \ prioritizing the order in \nwhich discovered vulnerabilities are fixed. This process\
+  \ includes setting a minimum level of security acceptability for releasing code\
+  \ or \napplications. Severity ratings bring a systematic way of triaging vulnerabilities\
+  \ that improves risk management and helps ensure the most \nsevere bugs are fixed\
+  \ first. Review and update the system and process annually."
+rationale: "16.6\nEstablish and Maintain a Severity Rating System and Process for\
+  \ Application \nVulnerabilities\nApplications\n-Protect-\n• •\nEstablish and maintain\
+  \ a severity rating system and process for application vulnerabilities that facilitates\
+  \ prioritizing the order in \nwhich discovered vulnerabilities are fixed. This process\
+  \ includes setting a minimum level of security acceptability for releasing code\
+  \ or \napplications. Severity ratings bring a systematic way of triaging vulnerabilities\
+  \ that improves risk management and helps ensure the most \nsevere bugs are fixed\
+  \ first. Review and update the system and process annually."
+developer_guidance: "16.6\nEstablish and Maintain a Severity Rating System and Process\
+  \ for Application \nVulnerabilities\nApplications\n-Protect-\n• •\nEstablish and\
+  \ maintain a severity rating system and process for application vulnerabilities\
+  \ that facilitates prioritizing the order in \nwhich discovered vulnerabilities\
+  \ are fixed. This process includes setting a minimum level of security acceptability\
+  \ for releasing code or \napplications. Severity ratings bring a systematic way\
+  \ of triaging vulnerabilities that improves risk management and helps ensure the\
+  \ most \nsevere bugs are fixed first. Review and update the system and process annually."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

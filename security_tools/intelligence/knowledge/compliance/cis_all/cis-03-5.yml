@@ -1,0 +1,31 @@
+id: cis-03-5
+title: 03.5 Securely Dispose of Data
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_5
+severity_guidance: medium
+description: "3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\nSecurely dispose\
+  \ of data as outlined in the enterprise’s data management process. Ensure the disposal\
+  \ process and method are \ncommensurate with the data sensitivity."
+rationale: "3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\nSecurely dispose\
+  \ of data as outlined in the enterprise’s data management process. Ensure the disposal\
+  \ process and method are \ncommensurate with the data sensitivity."
+developer_guidance: "3.5\nSecurely Dispose of Data\nData\n-Protect-\n• • •\nSecurely\
+  \ dispose of data as outlined in the enterprise’s data management process. Ensure\
+  \ the disposal process and method are \ncommensurate with the data sensitivity."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

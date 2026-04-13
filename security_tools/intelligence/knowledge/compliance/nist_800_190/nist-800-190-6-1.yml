@@ -1,0 +1,76 @@
+id: nist-800-190-6-1
+title: 6.1 Initiation Phase
+category: governance_security
+applies_to:
+- container_adoption
+- process_change
+- security_training
+tags:
+- 800-190
+- containers
+- governance
+- nist
+- operations
+- section_6_1
+- training
+severity_guidance: medium
+description: "6.1 \nInitiation Phase \nOrganizations should consider how other security\
+  \ policies may be affected by containers and \nadjust these policies as needed to\
+  \ take containers into consideration. For example, policies for \nincident response\
+  \ (especially forensics) and vulnerability management may need to be adjusted \n\
+  to take into account the special requirements of containers. \nThe introduction\
+  \ of container technologies might disrupt the existing culture and software \ndevelopment\
+  \ methodologies within the organization. To take full advantage of the benefits\
+  \ \ncontainers can provide, the organization’s processes should be tailored to support\
+  \ this new way \nof developing, running, and supporting apps. Traditional development\
+  \ practices, patching \ntechniques, and system upgrade processes might not directly\
+  \ apply to a containerized \nenvironment, and it is important that the employees\
+  \ within the organization are willing to adapt \nto a new model. New processes can\
+  \ consider and address any potential culture shock that is \nintroduced by the technology\
+  \ shift. Education and training can be offered to anyone involved in \nthe software\
+  \ development lifecycle to allow people to become comfortable with the new way to\
+  \ \nbuild, ship, and run apps."
+rationale: "6.1 \nInitiation Phase \nOrganizations should consider how other security\
+  \ policies may be affected by containers and \nadjust these policies as needed to\
+  \ take containers into consideration. For example, policies for \nincident response\
+  \ (especially forensics) and vulnerability management may need to be adjusted \n\
+  to take into account the special requirements of containers. \nThe introduction\
+  \ of container technologies might disrupt the existing culture and software \ndevelopment\
+  \ methodologies within the organization. To take full advantage of the benefits\
+  \ \ncontainers can provide, the organization’s processes should be tailored to support\
+  \ this new way \nof developing, running, and supporting apps. Traditional development\
+  \ practices, patching \ntechniques, and system upgrade processes might not directly\
+  \ apply to a containerized \nenvironment, and it is important that the employees\
+  \ within the organization are willing to adapt \nto a new model. New processes can\
+  \ consider and address any potential culture shock that is \nintroduced by the technology\
+  \ shift. Education and training can be offered to anyone involved in \nthe software\
+  \ development lifecycle to allow people to become comfortable with the new way to\
+  \ \nbuild, ship, and run apps."
+developer_guidance: "6.1 \nInitiation Phase \nOrganizations should consider how other\
+  \ security policies may be affected by containers and \nadjust these policies as\
+  \ needed to take containers into consideration. For example, policies for \nincident\
+  \ response (especially forensics) and vulnerability management may need to be adjusted\
+  \ \nto take into account the special requirements of containers. \nThe introduction\
+  \ of container technologies might disrupt the existing culture and software \ndevelopment\
+  \ methodologies within the organization. To take full advantage of the benefits\
+  \ \ncontainers can provide, the organization’s processes should be tailored to support\
+  \ this new way \nof developing, running, and supporting apps. Traditional development\
+  \ practices, patching \ntechniques, and system upgrade processes might not directly\
+  \ apply to a containerized \nenvironment, and it is important that the employees\
+  \ within the organization are willing to adapt \nto a new model. New processes can\
+  \ consider and address any potential culture shock that is \nintroduced by the technology\
+  \ shift. Education and training can be offered to anyone involved in \nthe software\
+  \ development lifecycle to allow people to become comfortable with the new way to\
+  \ \nbuild, ship, and run apps."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '6.1'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

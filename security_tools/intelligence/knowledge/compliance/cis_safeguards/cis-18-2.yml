@@ -1,0 +1,46 @@
+id: cis-18-2
+title: 18.2 Perform Periodic External Penetration Tests
+category: assurance_security
+applies_to:
+- penetration_testing
+- security_validation
+- assurance_testing
+tags:
+- assurance
+- cis
+- control_18
+- penetration-testing
+- safeguard
+- safeguard_18_2
+- validation
+severity_guidance: medium
+description: "18.2\nPerform Periodic External Penetration Tests\nNetwork\n-Identify-\n\
+  • •\nPerform periodic external penetration tests based on program requirements,\
+  \ no less than annually. External penetration testing must \ninclude enterprise\
+  \ and environmental reconnaissance to detect exploitable information. Penetration\
+  \ testing requires specialized skills and \nexperience and must be conducted through\
+  \ a qualified party. The testing may be clear box or opaque box."
+rationale: "18.2\nPerform Periodic External Penetration Tests\nNetwork\n-Identify-\n\
+  • •\nPerform periodic external penetration tests based on program requirements,\
+  \ no less than annually. External penetration testing must \ninclude enterprise\
+  \ and environmental reconnaissance to detect exploitable information. Penetration\
+  \ testing requires specialized skills and \nexperience and must be conducted through\
+  \ a qualified party. The testing may be clear box or opaque box."
+developer_guidance: "18.2\nPerform Periodic External Penetration Tests\nNetwork\n\
+  -Identify-\n• •\nPerform periodic external penetration tests based on program requirements,\
+  \ no less than annually. External penetration testing must \ninclude enterprise\
+  \ and environmental reconnaissance to detect exploitable information. Penetration\
+  \ testing requires specialized skills and \nexperience and must be conducted through\
+  \ a qualified party. The testing may be clear box or opaque box."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: Safeguard 18.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,34 @@
+id: cis-11-4
+title: 11.4 Establish and Maintain an Isolated Instance of Recovery Data
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_11
+- safeguard
+- safeguard_11_4
+severity_guidance: medium
+description: "11.4\nEstablish and Maintain an Isolated Instance of Recovery Data \n\
+  Data\n-Recover-\n• • •\nEstablish and maintain an isolated instance of recovery\
+  \ data. Example implementations include, version controlling backup destinations\
+  \ \nthrough offline, cloud, or off-site systems or services."
+rationale: "11.4\nEstablish and Maintain an Isolated Instance of Recovery Data \n\
+  Data\n-Recover-\n• • •\nEstablish and maintain an isolated instance of recovery\
+  \ data. Example implementations include, version controlling backup destinations\
+  \ \nthrough offline, cloud, or off-site systems or services."
+developer_guidance: "11.4\nEstablish and Maintain an Isolated Instance of Recovery\
+  \ Data \nData\n-Recover-\n• • •\nEstablish and maintain an isolated instance of\
+  \ recovery data. Example implementations include, version controlling backup destinations\
+  \ \nthrough offline, cloud, or off-site systems or services."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 11
+  note: Safeguard 11.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

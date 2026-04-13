@@ -1,0 +1,46 @@
+id: cis-14-9
+title: 14.9 Conduct Role-Specific Security Awareness and Skills Training
+category: training_security
+applies_to:
+- security_training
+- awareness
+- skills_development
+tags:
+- awareness
+- cis
+- control_14
+- safeguard
+- safeguard_14_9
+- skills
+- training
+severity_guidance: medium
+description: "14.9\nConduct Role-Specific Security Awareness and Skills Training\n\
+  N/A\n-Protect-\n• •\nConduct role-specific security awareness and skills training.\
+  \ Example implementations include secure system administration courses for \nIT\
+  \ professionals, OWASP® Top 10 vulnerability awareness and prevention training for\
+  \ web application developers, and advanced social \nengineering awareness training\
+  \ for high-profile roles."
+rationale: "14.9\nConduct Role-Specific Security Awareness and Skills Training\nN/A\n\
+  -Protect-\n• •\nConduct role-specific security awareness and skills training. Example\
+  \ implementations include secure system administration courses for \nIT professionals,\
+  \ OWASP® Top 10 vulnerability awareness and prevention training for web application\
+  \ developers, and advanced social \nengineering awareness training for high-profile\
+  \ roles."
+developer_guidance: "14.9\nConduct Role-Specific Security Awareness and Skills Training\n\
+  N/A\n-Protect-\n• •\nConduct role-specific security awareness and skills training.\
+  \ Example implementations include secure system administration courses for \nIT\
+  \ professionals, OWASP® Top 10 vulnerability awareness and prevention training for\
+  \ web application developers, and advanced social \nengineering awareness training\
+  \ for high-profile roles."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

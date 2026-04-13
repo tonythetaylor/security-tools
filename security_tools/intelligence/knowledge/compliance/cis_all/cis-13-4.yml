@@ -1,0 +1,55 @@
+id: cis-13-4
+title: 13.4 Perform Traffic Filtering Between Network Segments
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_13
+- safeguard
+- safeguard_13_4
+severity_guidance: medium
+description: '13.4
+
+  Perform Traffic Filtering Between Network Segments
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Perform traffic filtering between network segments, where appropriate.'
+rationale: '13.4
+
+  Perform Traffic Filtering Between Network Segments
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Perform traffic filtering between network segments, where appropriate.'
+developer_guidance: '13.4
+
+  Perform Traffic Filtering Between Network Segments
+
+  Network
+
+  -Protect-
+
+  • •
+
+  Perform traffic filtering between network segments, where appropriate.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

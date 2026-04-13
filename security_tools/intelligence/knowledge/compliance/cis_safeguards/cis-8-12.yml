@@ -1,0 +1,46 @@
+id: cis-8-12
+title: 8.12 Collect Service Provider Logs
+category: logging_security
+applies_to:
+- audit_logging
+- log_management
+- security_monitoring
+tags:
+- audit
+- cis
+- control_08
+- logging
+- monitoring
+- safeguard
+- safeguard_8_12
+severity_guidance: medium
+description: "8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect service\
+  \ provider logs, where supported. Example implementations include collecting authentication\
+  \ and authorization events, \ndata creation and disposal events, and user management\
+  \ events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect service\
+  \ provider logs, where supported. Example implementations include collecting authentication\
+  \ and authorization events, \ndata creation and disposal events, and user management\
+  \ events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "8.12\nCollect Service Provider Logs\nData\n-Detect-\n•\nCollect\
+  \ service provider logs, where supported. Example implementations include collecting\
+  \ authentication and authorization events, \ndata creation and disposal events,\
+  \ and user management events.\n\nCIS Controls v8\nA10 \n\uFEFFControls and Safeguards\
+  \ Index\nControl 09 / Safeguard 9.1 — Control 10 / Safeguard 10.7\nCONTROL\nSAFEGUARD\n\
+  NUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 8.12
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

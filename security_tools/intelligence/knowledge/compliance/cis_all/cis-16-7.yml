@@ -1,0 +1,49 @@
+id: cis-16-7
+title: 16.7 Use Standard Hardening Configuration Templates for Application Infrastructure
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_7
+severity_guidance: medium
+description: "16.7\nUse Standard Hardening Configuration Templates for Application\
+  \ Infrastructure\nApplications\n-Protect-\n• •\nUse standard, industry-recommended\
+  \ hardening configuration templates for application infrastructure components. This\
+  \ includes \nunderlying servers, databases, and web servers, and applies to cloud\
+  \ containers, Platform as a Service (PaaS) components, and SaaS \ncomponents. Do\
+  \ not allow in-house developed software to weaken configuration hardening.\n\nCIS\
+  \ Controls v8\nA15 \n\uFEFFControls and Safeguards Index\nControl 16 / Safeguard\
+  \ 16.8 — Control 17 / Safeguard 17.4\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "16.7\nUse Standard Hardening Configuration Templates for Application Infrastructure\n\
+  Applications\n-Protect-\n• •\nUse standard, industry-recommended hardening configuration\
+  \ templates for application infrastructure components. This includes \nunderlying\
+  \ servers, databases, and web servers, and applies to cloud containers, Platform\
+  \ as a Service (PaaS) components, and SaaS \ncomponents. Do not allow in-house developed\
+  \ software to weaken configuration hardening.\n\nCIS Controls v8\nA15 \n\uFEFFControls\
+  \ and Safeguards Index\nControl 16 / Safeguard 16.8 — Control 17 / Safeguard 17.4\n\
+  CONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\n\
+  IG1\nIG2\nIG3"
+developer_guidance: "16.7\nUse Standard Hardening Configuration Templates for Application\
+  \ Infrastructure\nApplications\n-Protect-\n• •\nUse standard, industry-recommended\
+  \ hardening configuration templates for application infrastructure components. This\
+  \ includes \nunderlying servers, databases, and web servers, and applies to cloud\
+  \ containers, Platform as a Service (PaaS) components, and SaaS \ncomponents. Do\
+  \ not allow in-house developed software to weaken configuration hardening.\n\nCIS\
+  \ Controls v8\nA15 \n\uFEFFControls and Safeguards Index\nControl 16 / Safeguard\
+  \ 16.8 — Control 17 / Safeguard 17.4\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

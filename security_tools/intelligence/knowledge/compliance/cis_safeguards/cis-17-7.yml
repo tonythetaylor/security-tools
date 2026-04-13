@@ -1,0 +1,43 @@
+id: cis-17-7
+title: 17.7 Conduct Routine Incident Response Exercises
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_7
+severity_guidance: medium
+description: "17.7\nConduct Routine Incident Response Exercises\nN/A\n-Recover-\n\
+  • •\nPlan and conduct routine incident response exercises and scenarios for key\
+  \ personnel involved in the incident response process to \nprepare for responding\
+  \ to real-world incidents. Exercises need to test communication channels, decision\
+  \ making, and workflows. \nConduct testing on an annual basis, at a minimum."
+rationale: "17.7\nConduct Routine Incident Response Exercises\nN/A\n-Recover-\n• •\n\
+  Plan and conduct routine incident response exercises and scenarios for key personnel\
+  \ involved in the incident response process to \nprepare for responding to real-world\
+  \ incidents. Exercises need to test communication channels, decision making, and\
+  \ workflows. \nConduct testing on an annual basis, at a minimum."
+developer_guidance: "17.7\nConduct Routine Incident Response Exercises\nN/A\n-Recover-\n\
+  • •\nPlan and conduct routine incident response exercises and scenarios for key\
+  \ personnel involved in the incident response process to \nprepare for responding\
+  \ to real-world incidents. Exercises need to test communication channels, decision\
+  \ making, and workflows. \nConduct testing on an annual basis, at a minimum."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

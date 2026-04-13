@@ -1,0 +1,37 @@
+id: cis-03-13
+title: 03.13 Deploy a Data Loss Prevention Solution
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_13
+severity_guidance: medium
+description: "3.13\nDeploy a Data Loss Prevention Solution\nData\n-Protect-\n•\nImplement\
+  \ an automated tool, such as a host-based Data Loss Prevention (DLP) tool to identify\
+  \ all sensitive data stored, processed, \nor transmitted through enterprise assets,\
+  \ including those located onsite or at a remote service provider, and update the\
+  \ enterprise’s \nsensitive data inventory."
+rationale: "3.13\nDeploy a Data Loss Prevention Solution\nData\n-Protect-\n•\nImplement\
+  \ an automated tool, such as a host-based Data Loss Prevention (DLP) tool to identify\
+  \ all sensitive data stored, processed, \nor transmitted through enterprise assets,\
+  \ including those located onsite or at a remote service provider, and update the\
+  \ enterprise’s \nsensitive data inventory."
+developer_guidance: "3.13\nDeploy a Data Loss Prevention Solution\nData\n-Protect-\n\
+  •\nImplement an automated tool, such as a host-based Data Loss Prevention (DLP)\
+  \ tool to identify all sensitive data stored, processed, \nor transmitted through\
+  \ enterprise assets, including those located onsite or at a remote service provider,\
+  \ and update the enterprise’s \nsensitive data inventory."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.13
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

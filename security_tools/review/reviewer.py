@@ -3,6 +3,8 @@ from __future__ import annotations
 from collections import Counter
 from typing import Any
 
+from security_tools.intelligence import MockLLMProvider, SecurityIntelligenceEngine
+from security_tools.intelligence.models import IntelligenceContext
 from security_tools.loaders import load_finding_catalog, load_policy
 from security_tools.models import (
     EnrichedFinding,
@@ -22,9 +24,13 @@ class SecurityReviewer:
         self,
         catalog: dict[str, Any] | None = None,
         policy: dict[str, Any] | None = None,
+        intelligence_engine: SecurityIntelligenceEngine | None = None,
     ) -> None:
         self.catalog = catalog or load_finding_catalog()
         self.policy = policy or load_policy()
+        self.intelligence_engine = intelligence_engine or SecurityIntelligenceEngine(
+            provider=MockLLMProvider()
+        )
 
     def _catalog_default(self) -> dict[str, Any]:
         value = self.catalog.get("default", {})
@@ -76,7 +82,79 @@ class SecurityReviewer:
 
         return list(required.get("default_branch", []))
 
-    def enrich_finding(self, finding: NormalizedFinding) -> EnrichedFinding:
+    def _extract_planning_context(self, context: ReviewContext) -> dict[str, Any]:
+        metadata = context.metadata or {}
+        planning = metadata.get("planning_context")
+        return planning if isinstance(planning, dict) else {}
+
+    def _extract_runtime_report(self, context: ReviewContext) -> dict[str, Any]:
+        metadata = context.metadata or {}
+        runtime = metadata.get("runtime_report")
+        return runtime if isinstance(runtime, dict) else {}
+
+    def _build_intelligence_context(
+        self,
+        finding: NormalizedFinding,
+        context: ReviewContext,
+    ) -> IntelligenceContext:
+        planning_context = self._extract_planning_context(context)
+        runtime_report = self._extract_runtime_report(context)
+        runtime_profile = (runtime_report.get("profile") or {}).get("name")
+
+        detected_stack = planning_context.get("detected_stack") or []
+        if not isinstance(detected_stack, list):
+            detected_stack = []
+
+        languages: list[str] = []
+        frameworks: list[str] = []
+
+        for item in detected_stack:
+            value = str(item).lower()
+            if value in {"python", "java", "node", "go", "ruby", "php", "dotnet", "rust"}:
+                languages.append(value)
+            else:
+                frameworks.append(value)
+
+        service_type = planning_context.get("service_type")
+        if not service_type:
+            service_type = next(
+                (
+                    str(x)
+                    for x in detected_stack
+                    if str(x).endswith(("_web", "_frontend", "_boot", "tomcat"))
+                ),
+                None,
+            )
+
+        location = None
+        if finding.location.path:
+            location = finding.location.path
+            if finding.location.line:
+                location = f"{location}:{finding.location.line}"
+
+        return IntelligenceContext(
+            finding_type=finding.finding_type,
+            title=finding.title,
+            severity=finding.severity,
+            category=finding.category,
+            rule_id=finding.rule_id,
+            location=location,
+            service_type=str(service_type) if service_type else None,
+            languages=list(dict.fromkeys(languages)),
+            frameworks=list(dict.fromkeys(frameworks)),
+            deploy_targets=list(planning_context.get("deploy_targets", []) or []),
+            runtime_profile=str(runtime_profile) if runtime_profile else None,
+            runtime_contract_present=bool(
+                planning_context.get("runtime_contract_present", False)
+            ),
+            metadata=finding.metadata,
+        )
+
+    def enrich_finding(
+        self,
+        finding: NormalizedFinding,
+        context: ReviewContext | None = None,
+    ) -> EnrichedFinding:
         catalog_item = self._lookup_catalog_item(finding)
 
         severity = (
@@ -85,24 +163,69 @@ class SecurityReviewer:
             else catalog_item.get("default_severity", "unknown")
         )
 
+        title = str(catalog_item.get("title") or finding.title)
+        rationale = str(
+            catalog_item.get("rationale")
+            or "This finding requires security review."
+        )
+        suggested_fix = str(
+            catalog_item.get("suggested_fix")
+            or "Review the issue and apply the appropriate remediation."
+        )
+        compliance_refs = list(catalog_item.get("compliance_refs", []))
+
+        if context is not None:
+            try:
+                intel_context = self._build_intelligence_context(finding, context)
+                intel = self.intelligence_engine.enrich(
+                    context=intel_context,
+                    baseline_title=title,
+                    baseline_severity=severity,
+                    baseline_rationale=rationale,
+                    baseline_fix=suggested_fix,
+                )
+
+                if intel:
+                    title = intel.title or title
+                    if intel.rationale:
+                        rationale = intel.rationale
+                    if intel.suggested_fix:
+                        suggested_fix = intel.suggested_fix
+                    if intel.compliance_refs:
+                        compliance_refs = list(
+                            dict.fromkeys(compliance_refs + intel.compliance_refs)
+                        )
+
+                    extra_notes: list[str] = []
+                    if intel.developer_guidance:
+                        extra_notes.append(
+                            f"Developer guidance: {intel.developer_guidance}"
+                        )
+                    if intel.ownership_guidance:
+                        extra_notes.append(f"Ownership: {intel.ownership_guidance}")
+                    if intel.evidence_document_ids:
+                        extra_notes.append(
+                            "Evidence docs: "
+                            + ", ".join(intel.evidence_document_ids[:5])
+                        )
+
+                    if extra_notes:
+                        rationale = f"{rationale} {' '.join(extra_notes)}"
+            except Exception:
+                pass
+
         return EnrichedFinding(
             tool=finding.tool,
             finding_type=finding.finding_type,
             rule_id=finding.rule_id,
             category=finding.category,
             severity=severity,
-            title=str(catalog_item.get("title") or finding.title),
+            title=title,
             description=finding.description,
             location=finding.location,
-            rationale=str(
-                catalog_item.get("rationale")
-                or "This finding requires security review."
-            ),
-            suggested_fix=str(
-                catalog_item.get("suggested_fix")
-                or "Review the issue and apply the appropriate remediation."
-            ),
-            compliance_refs=list(catalog_item.get("compliance_refs", [])),
+            rationale=rationale,
+            suggested_fix=suggested_fix,
+            compliance_refs=compliance_refs,
             metadata=finding.metadata,
             raw_payload=finding.raw_payload,
         )
@@ -120,16 +243,26 @@ class SecurityReviewer:
         verdict_rules = self._policy_verdict_rules()
         risk_rules = self._policy_risk_rules()
 
-        if operational_warnings and verdict_rules.get("operational_error_on_warnings", True):
+        if operational_warnings and verdict_rules.get(
+            "operational_error_on_warnings", True
+        ):
             return "OPERATIONAL_ERROR"
 
         if missing_scans and verdict_rules.get("block_if_missing_scans", True):
             return "BLOCK"
 
-        always_block_categories = set(verdict_rules.get("always_block_categories", []))
-        always_block_finding_types = set(verdict_rules.get("always_block_finding_types", []))
-        block_on_severities = set(verdict_rules.get("block_on_severities", ["critical", "high"]))
-        warn_on_severities = set(verdict_rules.get("warn_on_severities", ["medium"]))
+        always_block_categories = set(
+            verdict_rules.get("always_block_categories", [])
+        )
+        always_block_finding_types = set(
+            verdict_rules.get("always_block_finding_types", [])
+        )
+        block_on_severities = set(
+            verdict_rules.get("block_on_severities", ["critical", "high"])
+        )
+        warn_on_severities = set(
+            verdict_rules.get("warn_on_severities", ["medium"])
+        )
 
         for finding in findings:
             if finding.category and finding.category in always_block_categories:
@@ -185,7 +318,7 @@ class SecurityReviewer:
         return recommendations
 
     def _build_planning_context(self, context: ReviewContext) -> dict[str, Any] | None:
-        metadata = getattr(context, "metadata", None)
+        metadata = context.metadata
         if not isinstance(metadata, dict):
             return None
 
@@ -196,7 +329,7 @@ class SecurityReviewer:
         return None
 
     def _build_runtime_context(self, context: ReviewContext) -> dict[str, Any] | None:
-        metadata = getattr(context, "metadata", None)
+        metadata = context.metadata
         if not isinstance(metadata, dict):
             return None
 
@@ -215,7 +348,9 @@ class SecurityReviewer:
             "Container started": startup.get("container_started", False),
             "Container running": startup.get("container_running", False),
             "Startup seconds": startup.get("startup_seconds", 0),
-            "Listening ports": ", ".join(str(p) for p in listening_ports) if listening_ports else "none",
+            "Listening ports": ", ".join(str(p) for p in listening_ports)
+            if listening_ports
+            else "none",
         }
 
     def _build_verdict_rationale(
@@ -232,19 +367,25 @@ class SecurityReviewer:
             )
 
         if verdict == "BLOCK":
-            return "The review is BLOCK because blocking findings or policy violations were detected."
+            return (
+                "The review is BLOCK because blocking findings or policy violations "
+                "were detected."
+            )
 
         if verdict == "WARN":
             runtime_phrase = ""
             if runtime_context and runtime_context.get("Verdict") == "PASS":
                 runtime_phrase = " Runtime verification passed."
             return (
-                "The review is WARN because non-blocking findings or hardening recommendations remain."
-                f"{runtime_phrase}"
+                "The review is WARN because non-blocking findings or hardening "
+                f"recommendations remain.{runtime_phrase}"
             )
 
         if verdict == "PASS":
-            return "The review is PASS because required scans were present and no blocking findings were detected."
+            return (
+                "The review is PASS because required scans were present and no "
+                "blocking findings were detected."
+            )
 
         return "The review encountered an operational condition that requires attention."
 
@@ -262,7 +403,7 @@ class SecurityReviewer:
             )
         )
 
-        enriched = [self.enrich_finding(finding) for finding in all_findings]
+        enriched = [self.enrich_finding(finding, context) for finding in all_findings]
         enriched = deduplicate_findings(enriched)
 
         risk_score = self._calculate_risk_score(enriched)

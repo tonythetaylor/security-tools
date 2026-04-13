@@ -1,0 +1,46 @@
+id: nist-800-190-3-5-1
+title: 3.5.1 Large attack surface
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_5_1
+severity_guidance: medium
+description: "3.5.1 Large attack surface \nEvery host OS has an attack surface, which\
+  \ is the collection of all ways attackers can attempt to \naccess and exploit the\
+  \ host OS’s vulnerabilities. For example, any network-accessible service \nprovides\
+  \ a potential entry point for attackers, adding to the attack surface. The larger\
+  \ the attack \nsurface is, the better the odds are that an attacker can find and\
+  \ access a vulnerability, leading to a \ncompromise of the host OS and the containers\
+  \ running on top of it."
+rationale: "3.5.1 Large attack surface \nEvery host OS has an attack surface, which\
+  \ is the collection of all ways attackers can attempt to \naccess and exploit the\
+  \ host OS’s vulnerabilities. For example, any network-accessible service \nprovides\
+  \ a potential entry point for attackers, adding to the attack surface. The larger\
+  \ the attack \nsurface is, the better the odds are that an attacker can find and\
+  \ access a vulnerability, leading to a \ncompromise of the host OS and the containers\
+  \ running on top of it."
+developer_guidance: "3.5.1 Large attack surface \nEvery host OS has an attack surface,\
+  \ which is the collection of all ways attackers can attempt to \naccess and exploit\
+  \ the host OS’s vulnerabilities. For example, any network-accessible service \n\
+  provides a potential entry point for attackers, adding to the attack surface. The\
+  \ larger the attack \nsurface is, the better the odds are that an attacker can find\
+  \ and access a vulnerability, leading to a \ncompromise of the host OS and the containers\
+  \ running on top of it."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.5.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,178 @@
+id: nist-800-190-4-5-2
+title: 4.5.2 SC-4, Information in
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_5_2
+severity_guidance: medium
+description: "4.5.2 \nSC-4, Information in \nShared Resources \nContainer technologies\
+  \ are designed to restrict each container’s \naccess to shared resources so that\
+  \ information cannot \ninadvertently be leaked from one container to another. \n\
+  2 (introduction), 2.2, \n2.3, 4.4 \nSC-6, Resource \nAvailability \nThe maximum\
+  \ resources available for each container can be \nspecified, thus protecting the\
+  \ availability of resources by not \nallowing any container to consume excessive\
+  \ resources. \n2.2, 2.3 \nSC-7, Boundary \nProtection \nBoundaries can be established\
+  \ and enforced between containers \nto restrict their communications with each other.\
+  \ \n2 (introduction), 2.2, \n2.3, 4.4 \nSC-39, Process \nIsolation \nMultiple containers\
+  \ can run processes simultaneously on the \nsame host, but those processes are isolated\
+  \ from each other. \n2 (introduction), 2.1, \n2.2, 2.3, 4.4 \nSI-7, Software, \n\
+  Firmware, and \nInformation Integrity \nUnauthorized changes to the contents of\
+  \ images can easily be \ndetected and the altered image replaced with a known good\
+  \ copy. \n2.3, 4.1, 4.2 \nSI-14, Non-\nPersistence \nImages running within containers\
+  \ are replaced as needed with \nnew image versions, so data, files, executables,\
+  \ and other \ninformation stored within running images is not persistent. \n2.1,\
+  \ 2.3, 4.1 \n \nSimilar to Table 3, Table 4 lists the NIST Cybersecurity Framework\
+  \ [30] subcategories that can \nbe accomplished partially or completely by using\
+  \ container technologies. The rightmost column \nlists the sections of this document\
+  \ that map to each Cybersecurity Framework subcategory. \nTable 4: NIST Cybersecurity\
+  \ Framework Subcategories Supported by Container Technologies \nCybersecurity Framework\
+  \ \nSubcategory \nContainer Technology Relevancy \nRelated Sections \nof This Document\
+  \ \nPR.DS-4: Adequate capacity to ensure \navailability is maintained \nThe maximum\
+  \ resources available for each \ncontainer can be specified, thus protecting the\
+  \ \navailability of resources by not allowing any \ncontainer to consume excessive\
+  \ resources. \n2.2, 2.3\n\nCybersecurity Framework \nSubcategory \nContainer Technology\
+  \ Relevancy \nRelated Sections \nof This Document \nPR.DS-5: Protections against\
+  \ data \nleaks are implemented \nContainer technologies are designed to restrict\
+  \ \neach container’s access to shared resources so \nthat information cannot inadvertently\
+  \ be leaked \nfrom one container to another. \n2 (introduction), 2.2, \n2.3, 4.4\
+  \ \nPR.DS-6: Integrity checking \nmechanisms are used to verify \nsoftware, firmware,\
+  \ and information \nintegrity \nUnauthorized changes to the contents of images \n\
+  can easily be detected and the altered image \nreplaced with a known good copy.\
+  \ \n2.3, 4.1, 4.2 \nPR.DS-7: The development and testing \nenvironment(s) are separate\
+  \ from the \nproduction environment \nUsing containers makes it easier to have \n\
+  separate development, testing, and production \nenvironments because the same image\
+  \ can be \nused in all environments without adjustments. \n2.1, 2.3 \nPR.IP-3: Configuration\
+  \ change control \nprocesses are in place \nImages can be used to help manage change\
+  \ \ncontrol for apps. \n2.1, 2.2, 2.3, 2.4, 4.1 \n \nInformation on these controls\
+  \ and guidelines on possible implementations can be found in the \nfollowing NIST\
+  \ publications: \n• FIPS 140-2, Security Requirements for Cryptographic Modules\
+  \ \n• FIPS 197, Advanced Encryption Standard (AES) \n• FIPS 199, Standards for Security\
+  \ Categorization of Federal Information and Information \nSystems \n• FIPS 201-2,\
+  \ Personal Identity Verification (PIV) of Federal Employees and Contractors \n•\
+  \ SP 800-12 Rev. 1, An Introduction to Information Security \n• Draft SP 800-16\
+  \ Rev. 1, A Role-Based Model for Federal Information \nTechnology/Cybersecurity\
+  \ Training \n• SP 800-18 Rev. 1, Guide for Developing Security Plans for Federal\
+  \ Information Systems \n• SP 800-30 Rev. 1, Guide for Conducting Risk Assessments\
+  \ \n• SP 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems\
+  \ \n• SP 800-39, Managing Information Security Risk: Organization, Mission, and\
+  \ Information \nSystem View \n• SP 800-40 Re"
+rationale: "4.5.2 \nSC-4, Information in \nShared Resources \nContainer technologies\
+  \ are designed to restrict each container’s \naccess to shared resources so that\
+  \ information cannot \ninadvertently be leaked from one container to another. \n\
+  2 (introduction), 2.2, \n2.3, 4.4 \nSC-6, Resource \nAvailability \nThe maximum\
+  \ resources available for each container can be \nspecified, thus protecting the\
+  \ availability of resources by not \nallowing any container to consume excessive\
+  \ resources. \n2.2, 2.3 \nSC-7, Boundary \nProtection \nBoundaries can be established\
+  \ and enforced between containers \nto restrict their communications with each other.\
+  \ \n2 (introduction), 2.2, \n2.3, 4.4 \nSC-39, Process \nIsolation \nMultiple containers\
+  \ can run processes simultaneously on the \nsame host, but those processes are isolated\
+  \ from each other. \n2 (introduction), 2.1, \n2.2, 2.3, 4.4 \nSI-7, Software, \n\
+  Firmware, and \nInformation Integrity \nUnauthorized changes to the contents of\
+  \ images can easily be \ndetected and the altered image replaced with a known good\
+  \ copy. \n2.3, 4.1, 4.2 \nSI-14, Non-\nPersistence \nImages running within containers\
+  \ are replaced as needed with \nnew image versions, so data, files, executables,\
+  \ and other \ninformation stored within running images is not persistent. \n2.1,\
+  \ 2.3, 4.1 \n \nSimilar to Table 3, Table 4 lists the NIST Cybersecurity Framework\
+  \ [30] subcategories that can \nbe accomplished partially or completely by using\
+  \ container technologies. The rightmost column \nlists the sections of this document\
+  \ that map to each Cybersecurity Framework subcategory. \nTable 4: NIST Cybersecurity\
+  \ Framework Subcategories Supported by Container Technologies \nCybersecurity Framework\
+  \ \nSubcategory \nContainer Technology Relevancy \nRelated Sections \nof This Document\
+  \ \nPR.DS-4: Adequate capacity to ensure \navailability is maintained \nThe maximum\
+  \ resources available for each \ncontainer can be specified, thus protecting the\
+  \ \navailability of resources by not allowing any \ncontainer to consume excessive\
+  \ resources. \n2.2, 2.3\n\nCybersecurity Framework \nSubcategory \nContainer Technology\
+  \ Relevancy \nRelated Sections \nof This Document \nPR.DS-5: Protections against\
+  \ data \nleaks are implemented \nContainer technologies are designed to restrict\
+  \ \neach container’s access to shared resources so \nthat information cannot inadvertently\
+  \ be leaked \nfrom one container to another. \n2 (introduction), 2.2, \n2.3, 4.4\
+  \ \nPR.DS-6: Integrity checking \nmechanisms are used to verify \nsoftware, firmware,\
+  \ and information \nintegrity \nUnauthorized changes to the contents of images \n\
+  can easily be detected and the altered image \nreplaced with a known good copy.\
+  \ \n2.3, 4.1, 4.2 \nPR.DS-7: The development and testing \nenvironment(s) are separate\
+  \ from the \nproduction environment \nUsing containers makes it easier to have \n\
+  separate development, testing, and production \nenvironments because the same image\
+  \ can be \nused in all environments without adjustments. \n2.1, 2.3 \nPR.IP-3: Configuration\
+  \ change control \nprocesses are in place \nImages can be used to help manage change\
+  \ \ncontrol for apps. \n2.1, 2.2, 2.3, 2.4, 4.1 \n \nInformation on these controls\
+  \ and guidelines on possible implementations can be found in the \nfollowing NIST\
+  \ publications: \n• FIPS 140-2, Security Requirements for Cryptographic Modules\
+  \ \n• FIPS 197, Advanced Encryption Standard (AES) \n• FIPS 199, Standards for Security\
+  \ Categorization of Federal Information and Information \nSystems \n• FIPS 201-2,\
+  \ Personal Identity Verification (PIV) of Federal Employees and Contractors \n•\
+  \ SP 800-12 Rev. 1, An Introduction to Information Security \n• Draft SP 800-16\
+  \ Rev. 1, A Role-Based Model for Federal Information \nTechnology/Cybersecurity\
+  \ Training \n• SP 800-18 Rev. 1, Guide for Developing Security Plans for Federal\
+  \ Information Systems \n• SP 800-30 Rev. 1, Guide for Conducting Risk Assessments\
+  \ \n• SP 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems\
+  \ \n• SP 800-39, Managing Information Security Risk: Organization, Mission, and\
+  \ Information \nSystem View \n• SP 800-40 Re"
+developer_guidance: "4.5.2 \nSC-4, Information in \nShared Resources \nContainer technologies\
+  \ are designed to restrict each container’s \naccess to shared resources so that\
+  \ information cannot \ninadvertently be leaked from one container to another. \n\
+  2 (introduction), 2.2, \n2.3, 4.4 \nSC-6, Resource \nAvailability \nThe maximum\
+  \ resources available for each container can be \nspecified, thus protecting the\
+  \ availability of resources by not \nallowing any container to consume excessive\
+  \ resources. \n2.2, 2.3 \nSC-7, Boundary \nProtection \nBoundaries can be established\
+  \ and enforced between containers \nto restrict their communications with each other.\
+  \ \n2 (introduction), 2.2, \n2.3, 4.4 \nSC-39, Process \nIsolation \nMultiple containers\
+  \ can run processes simultaneously on the \nsame host, but those processes are isolated\
+  \ from each other. \n2 (introduction), 2.1, \n2.2, 2.3, 4.4 \nSI-7, Software, \n\
+  Firmware, and \nInformation Integrity \nUnauthorized changes to the contents of\
+  \ images can easily be \ndetected and the altered image replaced with a known good\
+  \ copy. \n2.3, 4.1, 4.2 \nSI-14, Non-\nPersistence \nImages running within containers\
+  \ are replaced as needed with \nnew image versions, so data, files, executables,\
+  \ and other \ninformation stored within running images is not persistent. \n2.1,\
+  \ 2.3, 4.1 \n \nSimilar to Table 3, Table 4 lists the NIST Cybersecurity Framework\
+  \ [30] subcategories that can \nbe accomplished partially or completely by using\
+  \ container technologies. The rightmost column \nlists the sections of this document\
+  \ that map to each Cybersecurity Framework subcategory. \nTable 4: NIST Cybersecurity\
+  \ Framework Subcategories Supported by Container Technologies \nCybersecurity Framework\
+  \ \nSubcategory \nContainer Technology Relevancy \nRelated Sections \nof This Document\
+  \ \nPR.DS-4: Adequate capacity to ensure \navailability is maintained \nThe maximum\
+  \ resources available for each \ncontainer can be specified, thus protecting the\
+  \ \navailability of resources by not allowing any \ncontainer to consume excessive\
+  \ resources. \n2.2, 2.3\n\nCybersecurity Framework \nSubcategory \nContainer Technology\
+  \ Relevancy \nRelated Sections \nof This Document \nPR.DS-5: Protections against\
+  \ data \nleaks are implemented \nContainer technologies are designed to restrict\
+  \ \neach container’s access to shared resources so \nthat information cannot inadvertently\
+  \ be leaked \nfrom one container to another. \n2 (introduction), 2.2, \n2.3, 4.4\
+  \ \nPR.DS-6: Integrity checking \nmechanisms are used to verify \nsoftware, firmware,\
+  \ and information \nintegrity \nUnauthorized changes to the contents of images \n\
+  can easily be detected and the altered image \nreplaced with a known good copy.\
+  \ \n2.3, 4.1, 4.2 \nPR.DS-7: The development and testing \nenvironment(s) are separate\
+  \ from the \nproduction environment \nUsing containers makes it easier to have \n\
+  separate development, testing, and production \nenvironments because the same image\
+  \ can be \nused in all environments without adjustments. \n2.1, 2.3 \nPR.IP-3: Configuration\
+  \ change control \nprocesses are in place \nImages can be used to help manage change\
+  \ \ncontrol for apps. \n2.1, 2.2, 2.3, 2.4, 4.1 \n \nInformation on these controls\
+  \ and guidelines on possible implementations can be found in the \nfollowing NIST\
+  \ publications: \n• FIPS 140-2, Security Requirements for Cryptographic Modules\
+  \ \n• FIPS 197, Advanced Encryption Standard (AES) \n• FIPS 199, Standards for Security\
+  \ Categorization of Federal Information and Information \nSystems \n• FIPS 201-2,\
+  \ Personal Identity Verification (PIV) of Federal Employees and Contractors \n•\
+  \ SP 800-12 Rev. 1, An Introduction to Information Security \n• Draft SP 800-16\
+  \ Rev. 1, A Role-Based Model for Federal Information \nTechnology/Cybersecurity\
+  \ Training \n• SP 800-18 Rev. 1, Guide for Developing Security Plans for Federal\
+  \ Information Systems \n• SP 800-30 Rev. 1, Guide for Conducting Risk Assessments\
+  \ \n• SP 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems\
+  \ \n• SP 800-39, Managing Information Security Risk: Organization, Mission, and\
+  \ Information \nSystem View \n• SP 800-40 Re"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.5.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

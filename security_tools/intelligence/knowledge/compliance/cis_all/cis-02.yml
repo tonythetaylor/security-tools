@@ -1,0 +1,52 @@
+id: cis-02
+title: 02 Create a security configuration script that sets system security settings
+  to meet the
+category: software_security
+applies_to:
+- software_inventory
+- software_asset_management
+- unauthorized_software
+tags:
+- asset-management
+- cis
+- control
+- control_02
+- software-assets
+- software-inventory
+severity_guidance: medium
+description: "02 Create a security configuration script that sets system security\
+  \ settings to meet the \nrequirements to protect the data used on the enterprise\
+  \ asset. Use benchmarks, \nsuch as the ones described earlier in this section.\n\
+  03 Install the base operating system software.\n04 Apply appropriate operating system\
+  \ and security patches.\n05 Install appropriate application software packages, tool,\
+  \ and utilities.\n06 Apply appropriate updates to software installed in Step 4.\n\
+  07 Install local customization scripts to this image.\n08 Run the security script\
+  \ created in Step 2 to set the appropriate security level."
+rationale: "02 Create a security configuration script that sets system security settings\
+  \ to meet the \nrequirements to protect the data used on the enterprise asset. Use\
+  \ benchmarks, \nsuch as the ones described earlier in this section.\n03 Install\
+  \ the base operating system software.\n04 Apply appropriate operating system and\
+  \ security patches.\n05 Install appropriate application software packages, tool,\
+  \ and utilities.\n06 Apply appropriate updates to software installed in Step 4.\n\
+  07 Install local customization scripts to this image.\n08 Run the security script\
+  \ created in Step 2 to set the appropriate security level."
+developer_guidance: "02 Create a security configuration script that sets system security\
+  \ settings to meet the \nrequirements to protect the data used on the enterprise\
+  \ asset. Use benchmarks, \nsuch as the ones described earlier in this section.\n\
+  03 Install the base operating system software.\n04 Apply appropriate operating system\
+  \ and security patches.\n05 Install appropriate application software packages, tool,\
+  \ and utilities.\n06 Apply appropriate updates to software installed in Step 4.\n\
+  07 Install local customization scripts to this image.\n08 Run the security script\
+  \ created in Step 2 to set the appropriate security level."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

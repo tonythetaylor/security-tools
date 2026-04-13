@@ -1,0 +1,46 @@
+id: nist-800-190-3-5-3
+title: 3.5.3 Host OS component vulnerabilities
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_5_3
+severity_guidance: medium
+description: "3.5.3 Host OS component vulnerabilities \nAll host OSs, even container-specific\
+  \ ones, provide foundational system components—for \nexample, the cryptographic\
+  \ libraries used to authenticate remote connections and the kernel \nprimitives\
+  \ used for general process invocation and management. Like any other software, these\
+  \ \ncomponents can have vulnerabilities and, because they exist low in the container\
+  \ technology \narchitecture, they can impact all the containers and apps that run\
+  \ on these hosts."
+rationale: "3.5.3 Host OS component vulnerabilities \nAll host OSs, even container-specific\
+  \ ones, provide foundational system components—for \nexample, the cryptographic\
+  \ libraries used to authenticate remote connections and the kernel \nprimitives\
+  \ used for general process invocation and management. Like any other software, these\
+  \ \ncomponents can have vulnerabilities and, because they exist low in the container\
+  \ technology \narchitecture, they can impact all the containers and apps that run\
+  \ on these hosts."
+developer_guidance: "3.5.3 Host OS component vulnerabilities \nAll host OSs, even\
+  \ container-specific ones, provide foundational system components—for \nexample,\
+  \ the cryptographic libraries used to authenticate remote connections and the kernel\
+  \ \nprimitives used for general process invocation and management. Like any other\
+  \ software, these \ncomponents can have vulnerabilities and, because they exist\
+  \ low in the container technology \narchitecture, they can impact all the containers\
+  \ and apps that run on these hosts."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.5.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,40 @@
+id: cis-15-1
+title: 15.1 Establish and Maintain an Inventory of Service Providers
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_15
+- safeguard
+- safeguard_15_1
+severity_guidance: medium
+description: "15.1\nEstablish and Maintain an Inventory of Service Providers\nN/A\n\
+  -Identify-\n• • •\nEstablish and maintain an inventory of service providers. The\
+  \ inventory is to list all known service providers, include classification(s), \n\
+  and designate an enterprise contact for each service provider. Review and update\
+  \ the inventory annually, or when significant enterprise \nchanges occur that could\
+  \ impact this Safeguard."
+rationale: "15.1\nEstablish and Maintain an Inventory of Service Providers\nN/A\n\
+  -Identify-\n• • •\nEstablish and maintain an inventory of service providers. The\
+  \ inventory is to list all known service providers, include classification(s), \n\
+  and designate an enterprise contact for each service provider. Review and update\
+  \ the inventory annually, or when significant enterprise \nchanges occur that could\
+  \ impact this Safeguard."
+developer_guidance: "15.1\nEstablish and Maintain an Inventory of Service Providers\n\
+  N/A\n-Identify-\n• • •\nEstablish and maintain an inventory of service providers.\
+  \ The inventory is to list all known service providers, include classification(s),\
+  \ \nand designate an enterprise contact for each service provider. Review and update\
+  \ the inventory annually, or when significant enterprise \nchanges occur that could\
+  \ impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 15
+  note: Safeguard 15.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,46 @@
+id: cis-3-1
+title: 3.1 Establish and Maintain a Data Management Process
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_1
+severity_guidance: medium
+description: "3.1\nEstablish and Maintain a Data Management Process\nData\n-Identify-\n\
+  • • •\nEstablish and maintain a data management process. In the process, address\
+  \ data sensitivity, data owner, handling of data, data retention \nlimits, and disposal\
+  \ requirements, based on sensitivity and retention standards for the enterprise.\
+  \ Review and update documentation \nannually, or when significant enterprise changes\
+  \ occur that could impact this Safeguard."
+rationale: "3.1\nEstablish and Maintain a Data Management Process\nData\n-Identify-\n\
+  • • •\nEstablish and maintain a data management process. In the process, address\
+  \ data sensitivity, data owner, handling of data, data retention \nlimits, and disposal\
+  \ requirements, based on sensitivity and retention standards for the enterprise.\
+  \ Review and update documentation \nannually, or when significant enterprise changes\
+  \ occur that could impact this Safeguard."
+developer_guidance: "3.1\nEstablish and Maintain a Data Management Process\nData\n\
+  -Identify-\n• • •\nEstablish and maintain a data management process. In the process,\
+  \ address data sensitivity, data owner, handling of data, data retention \nlimits,\
+  \ and disposal requirements, based on sensitivity and retention standards for the\
+  \ enterprise. Review and update documentation \nannually, or when significant enterprise\
+  \ changes occur that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

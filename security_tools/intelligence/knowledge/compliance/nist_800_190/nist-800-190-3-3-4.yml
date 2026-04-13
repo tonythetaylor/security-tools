@@ -1,0 +1,52 @@
+id: nist-800-190-3-3-4
+title: 3.3.4 Mixing of workload sensitivity levels
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_3_4
+severity_guidance: medium
+description: "3.3.4 Mixing of workload sensitivity levels \nOrchestrators are typically\
+  \ focused primarily on driving the scale and density of workloads. This \nmeans\
+  \ that, by default, they can place workloads of differing sensitivity levels on\
+  \ the same host. \nFor example, in a default configuration, an orchestrator may\
+  \ place a container running a public-\nfacing web server on the same host as one\
+  \ processing sensitive financial data, simply because \nthat host happens to have\
+  \ the most available resources at the time of deployment. In the case of a \ncritical\
+  \ vulnerability in the web server, this can put the container processing sensitive\
+  \ financial \ndata at significantly greater risk of compromise."
+rationale: "3.3.4 Mixing of workload sensitivity levels \nOrchestrators are typically\
+  \ focused primarily on driving the scale and density of workloads. This \nmeans\
+  \ that, by default, they can place workloads of differing sensitivity levels on\
+  \ the same host. \nFor example, in a default configuration, an orchestrator may\
+  \ place a container running a public-\nfacing web server on the same host as one\
+  \ processing sensitive financial data, simply because \nthat host happens to have\
+  \ the most available resources at the time of deployment. In the case of a \ncritical\
+  \ vulnerability in the web server, this can put the container processing sensitive\
+  \ financial \ndata at significantly greater risk of compromise."
+developer_guidance: "3.3.4 Mixing of workload sensitivity levels \nOrchestrators are\
+  \ typically focused primarily on driving the scale and density of workloads. This\
+  \ \nmeans that, by default, they can place workloads of differing sensitivity levels\
+  \ on the same host. \nFor example, in a default configuration, an orchestrator may\
+  \ place a container running a public-\nfacing web server on the same host as one\
+  \ processing sensitive financial data, simply because \nthat host happens to have\
+  \ the most available resources at the time of deployment. In the case of a \ncritical\
+  \ vulnerability in the web server, this can put the container processing sensitive\
+  \ financial \ndata at significantly greater risk of compromise."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.3.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

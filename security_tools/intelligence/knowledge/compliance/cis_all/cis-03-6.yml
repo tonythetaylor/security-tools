@@ -1,0 +1,31 @@
+id: cis-03-6
+title: 03.6 Encrypt Data on End-User Devices
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_6
+severity_guidance: medium
+description: "3.6\nEncrypt Data on End-User Devices\nDevices\n-Protect-\n• • •\nEncrypt\
+  \ data on end-user devices containing sensitive data. Example implementations can\
+  \ include: Windows BitLocker®, Apple \nFileVault®, Linux® dm-crypt."
+rationale: "3.6\nEncrypt Data on End-User Devices\nDevices\n-Protect-\n• • •\nEncrypt\
+  \ data on end-user devices containing sensitive data. Example implementations can\
+  \ include: Windows BitLocker®, Apple \nFileVault®, Linux® dm-crypt."
+developer_guidance: "3.6\nEncrypt Data on End-User Devices\nDevices\n-Protect-\n•\
+  \ • •\nEncrypt data on end-user devices containing sensitive data. Example implementations\
+  \ can include: Windows BitLocker®, Apple \nFileVault®, Linux® dm-crypt."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

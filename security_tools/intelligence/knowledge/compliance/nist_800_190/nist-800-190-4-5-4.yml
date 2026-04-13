@@ -1,0 +1,46 @@
+id: nist-800-190-4-5-4
+title: 4.5.4 Improper user access rights
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_5_4
+severity_guidance: medium
+description: "4.5.4 Improper user access rights \nThough most container deployments\
+  \ rely on orchestrators to distribute jobs across hosts, \norganizations should\
+  \ still ensure that all authentication to the OS is audited, login anomalies are\
+  \ \nmonitored, and any escalation to perform privileged operations is logged. This\
+  \ makes it possible \nto identify anomalous access patterns such as an individual\
+  \ logging on to a host directly and \nrunning privileged commands to manipulate\
+  \ containers."
+rationale: "4.5.4 Improper user access rights \nThough most container deployments\
+  \ rely on orchestrators to distribute jobs across hosts, \norganizations should\
+  \ still ensure that all authentication to the OS is audited, login anomalies are\
+  \ \nmonitored, and any escalation to perform privileged operations is logged. This\
+  \ makes it possible \nto identify anomalous access patterns such as an individual\
+  \ logging on to a host directly and \nrunning privileged commands to manipulate\
+  \ containers."
+developer_guidance: "4.5.4 Improper user access rights \nThough most container deployments\
+  \ rely on orchestrators to distribute jobs across hosts, \norganizations should\
+  \ still ensure that all authentication to the OS is audited, login anomalies are\
+  \ \nmonitored, and any escalation to perform privileged operations is logged. This\
+  \ makes it possible \nto identify anomalous access patterns such as an individual\
+  \ logging on to a host directly and \nrunning privileged commands to manipulate\
+  \ containers."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.5.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

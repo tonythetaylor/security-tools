@@ -1,0 +1,40 @@
+id: cis-14-5
+title: 14.5 Train Workforce Members on Causes of Unintentional Data Exposure
+category: training_security
+applies_to:
+- security_training
+- awareness
+- skills_development
+tags:
+- awareness
+- cis
+- control_14
+- safeguard
+- safeguard_14_5
+- skills
+- training
+severity_guidance: medium
+description: "14.5\nTrain Workforce Members on Causes of Unintentional Data Exposure\n\
+  N/A\n-Protect-\n• • •\nTrain workforce members to be aware of causes for unintentional\
+  \ data exposure. Example topics include mis-delivery of sensitive data, \nlosing\
+  \ a portable end-user device, or publishing data to unintended audiences."
+rationale: "14.5\nTrain Workforce Members on Causes of Unintentional Data Exposure\n\
+  N/A\n-Protect-\n• • •\nTrain workforce members to be aware of causes for unintentional\
+  \ data exposure. Example topics include mis-delivery of sensitive data, \nlosing\
+  \ a portable end-user device, or publishing data to unintended audiences."
+developer_guidance: "14.5\nTrain Workforce Members on Causes of Unintentional Data\
+  \ Exposure\nN/A\n-Protect-\n• • •\nTrain workforce members to be aware of causes\
+  \ for unintentional data exposure. Example topics include mis-delivery of sensitive\
+  \ data, \nlosing a portable end-user device, or publishing data to unintended audiences."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 14
+  note: Safeguard 14.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,37 @@
+id: cis-05-4
+title: 05.4 Restrict Administrator Privileges to Dedicated Administrator Accounts
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_05
+- safeguard
+- safeguard_5_4
+severity_guidance: medium
+description: "5.4\nRestrict Administrator Privileges to Dedicated Administrator Accounts\n\
+  Users\n-Protect-\n• • •\nRestrict administrator privileges to dedicated administrator\
+  \ accounts on enterprise assets. Conduct general computing activities, such as \n\
+  internet browsing, email, and productivity suite use, from the user’s primary, non-privileged\
+  \ account."
+rationale: "5.4\nRestrict Administrator Privileges to Dedicated Administrator Accounts\n\
+  Users\n-Protect-\n• • •\nRestrict administrator privileges to dedicated administrator\
+  \ accounts on enterprise assets. Conduct general computing activities, such as \n\
+  internet browsing, email, and productivity suite use, from the user’s primary, non-privileged\
+  \ account."
+developer_guidance: "5.4\nRestrict Administrator Privileges to Dedicated Administrator\
+  \ Accounts\nUsers\n-Protect-\n• • •\nRestrict administrator privileges to dedicated\
+  \ administrator accounts on enterprise assets. Conduct general computing activities,\
+  \ such as \ninternet browsing, email, and productivity suite use, from the user’s\
+  \ primary, non-privileged account."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 05.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

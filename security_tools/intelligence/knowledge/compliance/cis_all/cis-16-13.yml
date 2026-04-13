@@ -1,0 +1,40 @@
+id: cis-16-13
+title: 16.13 Conduct Application Penetration Testing
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_13
+severity_guidance: medium
+description: "16.13\nConduct Application Penetration Testing\nApplications\n-Protect-\n\
+  •\nConduct application penetration testing. For critical applications, authenticated\
+  \ penetration testing is better suited to finding business \nlogic vulnerabilities\
+  \ than code scanning and automated security testing. Penetration testing relies\
+  \ on the skill of the tester to manually \nmanipulate an application as an authenticated\
+  \ and unauthenticated user."
+rationale: "16.13\nConduct Application Penetration Testing\nApplications\n-Protect-\n\
+  •\nConduct application penetration testing. For critical applications, authenticated\
+  \ penetration testing is better suited to finding business \nlogic vulnerabilities\
+  \ than code scanning and automated security testing. Penetration testing relies\
+  \ on the skill of the tester to manually \nmanipulate an application as an authenticated\
+  \ and unauthenticated user."
+developer_guidance: "16.13\nConduct Application Penetration Testing\nApplications\n\
+  -Protect-\n•\nConduct application penetration testing. For critical applications,\
+  \ authenticated penetration testing is better suited to finding business \nlogic\
+  \ vulnerabilities than code scanning and automated security testing. Penetration\
+  \ testing relies on the skill of the tester to manually \nmanipulate an application\
+  \ as an authenticated and unauthenticated user."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.13
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

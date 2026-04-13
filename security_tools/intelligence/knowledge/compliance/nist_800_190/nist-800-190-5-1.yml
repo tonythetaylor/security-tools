@@ -1,0 +1,76 @@
+id: nist-800-190-5-1
+title: 5.1 Exploit of a Vulnerability within an Image
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_5_1
+severity_guidance: medium
+description: "5.1 \nExploit of a Vulnerability within an Image \nOne of the most common\
+  \ threats to a containerized environment is application-level \nvulnerabilities\
+  \ in the software within containers. For example, an organization may build an \n\
+  image based on a common web app. If that app has a vulnerability, it may be used\
+  \ to subvert the \napp within the container. Once compromised, the attacker may\
+  \ be able to map other systems in \nthe environment, attempt to elevate privileges\
+  \ within the compromised container, or abuse the \ncontainer for use in attacks\
+  \ on other systems (such as acting as a file dropper or command and \ncontrol endpoint).\
+  \ \nOrganizations that adopt the recommended countermeasures would have multiple\
+  \ layers of \ndefense in depth against such threats: \n1. Detecting the vulnerable\
+  \ image early in the deployment process and having controls in \nplace to prevent\
+  \ vulnerable images from being deployed would prevent the vulnerability \nfrom being\
+  \ introduced into production. \n2. Container-aware network monitoring and filtering\
+  \ would detect anomalous connections \nto other containers during the attempt to\
+  \ map other systems. \n3. Container-aware process monitoring and malware detection\
+  \ would detect the running of \ninvalid or unexpected malicious processes and the\
+  \ data they introduce into the \nenvironment."
+rationale: "5.1 \nExploit of a Vulnerability within an Image \nOne of the most common\
+  \ threats to a containerized environment is application-level \nvulnerabilities\
+  \ in the software within containers. For example, an organization may build an \n\
+  image based on a common web app. If that app has a vulnerability, it may be used\
+  \ to subvert the \napp within the container. Once compromised, the attacker may\
+  \ be able to map other systems in \nthe environment, attempt to elevate privileges\
+  \ within the compromised container, or abuse the \ncontainer for use in attacks\
+  \ on other systems (such as acting as a file dropper or command and \ncontrol endpoint).\
+  \ \nOrganizations that adopt the recommended countermeasures would have multiple\
+  \ layers of \ndefense in depth against such threats: \n1. Detecting the vulnerable\
+  \ image early in the deployment process and having controls in \nplace to prevent\
+  \ vulnerable images from being deployed would prevent the vulnerability \nfrom being\
+  \ introduced into production. \n2. Container-aware network monitoring and filtering\
+  \ would detect anomalous connections \nto other containers during the attempt to\
+  \ map other systems. \n3. Container-aware process monitoring and malware detection\
+  \ would detect the running of \ninvalid or unexpected malicious processes and the\
+  \ data they introduce into the \nenvironment."
+developer_guidance: "5.1 \nExploit of a Vulnerability within an Image \nOne of the\
+  \ most common threats to a containerized environment is application-level \nvulnerabilities\
+  \ in the software within containers. For example, an organization may build an \n\
+  image based on a common web app. If that app has a vulnerability, it may be used\
+  \ to subvert the \napp within the container. Once compromised, the attacker may\
+  \ be able to map other systems in \nthe environment, attempt to elevate privileges\
+  \ within the compromised container, or abuse the \ncontainer for use in attacks\
+  \ on other systems (such as acting as a file dropper or command and \ncontrol endpoint).\
+  \ \nOrganizations that adopt the recommended countermeasures would have multiple\
+  \ layers of \ndefense in depth against such threats: \n1. Detecting the vulnerable\
+  \ image early in the deployment process and having controls in \nplace to prevent\
+  \ vulnerable images from being deployed would prevent the vulnerability \nfrom being\
+  \ introduced into production. \n2. Container-aware network monitoring and filtering\
+  \ would detect anomalous connections \nto other containers during the attempt to\
+  \ map other systems. \n3. Container-aware process monitoring and malware detection\
+  \ would detect the running of \ninvalid or unexpected malicious processes and the\
+  \ data they introduce into the \nenvironment."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '5.1'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

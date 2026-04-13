@@ -1,0 +1,43 @@
+id: cis-02-1
+title: 02.1 Establish and Maintain a Software Inventory
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_02
+- safeguard
+- safeguard_2_1
+severity_guidance: medium
+description: "2.1\nEstablish and Maintain a Software Inventory\nApplications\n-Identify-\n\
+  • • •\nEstablish and maintain a detailed inventory of all licensed software installed\
+  \ on enterprise assets. The software inventory must document \nthe title, publisher,\
+  \ initial install/use date, and business purpose for each entry; where appropriate,\
+  \ include the Uniform Resource Locator \n(URL), app store(s), version(s), deployment\
+  \ mechanism, and decommission date. Review and update the software inventory bi-annually,\
+  \ \nor more frequently."
+rationale: "2.1\nEstablish and Maintain a Software Inventory\nApplications\n-Identify-\n\
+  • • •\nEstablish and maintain a detailed inventory of all licensed software installed\
+  \ on enterprise assets. The software inventory must document \nthe title, publisher,\
+  \ initial install/use date, and business purpose for each entry; where appropriate,\
+  \ include the Uniform Resource Locator \n(URL), app store(s), version(s), deployment\
+  \ mechanism, and decommission date. Review and update the software inventory bi-annually,\
+  \ \nor more frequently."
+developer_guidance: "2.1\nEstablish and Maintain a Software Inventory\nApplications\n\
+  -Identify-\n• • •\nEstablish and maintain a detailed inventory of all licensed software\
+  \ installed on enterprise assets. The software inventory must document \nthe title,\
+  \ publisher, initial install/use date, and business purpose for each entry; where\
+  \ appropriate, include the Uniform Resource Locator \n(URL), app store(s), version(s),\
+  \ deployment mechanism, and decommission date. Review and update the software inventory\
+  \ bi-annually, \nor more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: Safeguard 02.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

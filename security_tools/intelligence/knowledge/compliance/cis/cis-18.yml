@@ -1,0 +1,144 @@
+id: cis-18
+title: 18 Penetration Testing
+category: assurance_security
+applies_to:
+- penetration_testing
+- security_validation
+- assurance_testing
+tags:
+- assurance
+- cis
+- control
+- control_18
+- penetration-testing
+- validation
+severity_guidance: medium
+description: "18\nPenetration Testing\nTest the effectiveness and resiliency of enterprise\
+  \ assets through identifying and exploiting weaknesses in controls (people, processes,\
+  \ and \ntechnology), and simulating the objectives and actions of an attacker.\n\
+  18.1\nEstablish and Maintain a Penetration Testing Program\nN/A\n-Identify-\n• •\n\
+  Establish and maintain a penetration testing program appropriate to the size, complexity,\
+  \ and maturity of the enterprise. Penetration \ntesting program characteristics\
+  \ include scope, such as network, web application, Application Programming Interface\
+  \ (API), hosted \nservices, and physical premise controls; frequency; limitations,\
+  \ such as acceptable hours, and excluded attack types; point of contact \ninformation;\
+  \ remediation, such as how findings will be routed internally; and retrospective\
+  \ requirements.\n18.2\nPerform Periodic External Penetration Tests\nNetwork\n-Identify-\n\
+  • •\nPerform periodic external penetration tests based on program requirements,\
+  \ no less than annually. External penetration testing must \ninclude enterprise\
+  \ and environmental reconnaissance to detect exploitable information. Penetration\
+  \ testing requires specialized skills and \nexperience and must be conducted through\
+  \ a qualified party. The testing may be clear box or opaque box.\n18.3\nRemediate\
+  \ Penetration Test Findings\nNetwork\n-Protect-\n• •\nRemediate penetration test\
+  \ findings based on the enterprise’s policy for remediation scope and prioritization.\n\
+  18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate security measures\
+  \ after each penetration test. If deemed necessary, modify rulesets and capabilities\
+  \ to detect the techniques \nused during testing.\n18.5\nPerform Periodic Internal\
+  \ Penetration Tests\nN/A\n-Identify-\n•\nPerform periodic internal penetration tests\
+  \ based on program requirements, no less than annually. The testing may be clear\
+  \ box \nor opaque box.\n\ncisecurity.org\n info@cisecurity.org\n 518-266-3460\n\
+  \ Center for Internet Security\n @CISecurity\n CenterforIntSec\n TheCISecurity\n\
+  \ cisecurity\nThe Center for Internet Security, Inc. (CIS®) makes the connected\
+  \ \nworld a safer place for people, businesses, and governments \nthrough our core\
+  \ competencies of collaboration and innovation. \nWe are a community-driven nonprofit,\
+  \ responsible for the CIS \nControls® and CIS Benchmarks™, globally recognized best\
+  \ practices \nfor securing IT systems and data. We lead a global community \nof\
+  \ IT professionals to continuously evolve these standards and \nprovide products\
+  \ and services to proactively safeguard against \nemerging threats.\nOur CIS Hardened\
+  \ Images® provide secure, on-demand, scalable \ncomputing environments in the cloud.\
+  \ CIS is home to the \nMulti‑State Information Sharing and Analysis Center® (MS-ISAC®),\
+  \ \nthe trusted resource for cyber threat prevention, protection, \nresponse, and\
+  \ recovery for U.S. State, Local, Tribal, and Territorial \ngovernment entities,\
+  \ and the Elections Infrastructure Information \nSharing and Analysis Center® (EI‑ISAC®),\
+  \ which supports the rapidly \nchanging cybersecurity needs of U.S. elections offices.\
+  \ To learn \nmore, visit www.cisecurity.org or follow us on Twitter: @CISecurity."
+rationale: "18\nPenetration Testing\nTest the effectiveness and resiliency of enterprise\
+  \ assets through identifying and exploiting weaknesses in controls (people, processes,\
+  \ and \ntechnology), and simulating the objectives and actions of an attacker.\n\
+  18.1\nEstablish and Maintain a Penetration Testing Program\nN/A\n-Identify-\n• •\n\
+  Establish and maintain a penetration testing program appropriate to the size, complexity,\
+  \ and maturity of the enterprise. Penetration \ntesting program characteristics\
+  \ include scope, such as network, web application, Application Programming Interface\
+  \ (API), hosted \nservices, and physical premise controls; frequency; limitations,\
+  \ such as acceptable hours, and excluded attack types; point of contact \ninformation;\
+  \ remediation, such as how findings will be routed internally; and retrospective\
+  \ requirements.\n18.2\nPerform Periodic External Penetration Tests\nNetwork\n-Identify-\n\
+  • •\nPerform periodic external penetration tests based on program requirements,\
+  \ no less than annually. External penetration testing must \ninclude enterprise\
+  \ and environmental reconnaissance to detect exploitable information. Penetration\
+  \ testing requires specialized skills and \nexperience and must be conducted through\
+  \ a qualified party. The testing may be clear box or opaque box.\n18.3\nRemediate\
+  \ Penetration Test Findings\nNetwork\n-Protect-\n• •\nRemediate penetration test\
+  \ findings based on the enterprise’s policy for remediation scope and prioritization.\n\
+  18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate security measures\
+  \ after each penetration test. If deemed necessary, modify rulesets and capabilities\
+  \ to detect the techniques \nused during testing.\n18.5\nPerform Periodic Internal\
+  \ Penetration Tests\nN/A\n-Identify-\n•\nPerform periodic internal penetration tests\
+  \ based on program requirements, no less than annually. The testing may be clear\
+  \ box \nor opaque box.\n\ncisecurity.org\n info@cisecurity.org\n 518-266-3460\n\
+  \ Center for Internet Security\n @CISecurity\n CenterforIntSec\n TheCISecurity\n\
+  \ cisecurity\nThe Center for Internet Security, Inc. (CIS®) makes the connected\
+  \ \nworld a safer place for people, businesses, and governments \nthrough our core\
+  \ competencies of collaboration and innovation. \nWe are a community-driven nonprofit,\
+  \ responsible for the CIS \nControls® and CIS Benchmarks™, globally recognized best\
+  \ practices \nfor securing IT systems and data. We lead a global community \nof\
+  \ IT professionals to continuously evolve these standards and \nprovide products\
+  \ and services to proactively safeguard against \nemerging threats.\nOur CIS Hardened\
+  \ Images® provide secure, on-demand, scalable \ncomputing environments in the cloud.\
+  \ CIS is home to the \nMulti‑State Information Sharing and Analysis Center® (MS-ISAC®),\
+  \ \nthe trusted resource for cyber threat prevention, protection, \nresponse, and\
+  \ recovery for U.S. State, Local, Tribal, and Territorial \ngovernment entities,\
+  \ and the Elections Infrastructure Information \nSharing and Analysis Center® (EI‑ISAC®),\
+  \ which supports the rapidly \nchanging cybersecurity needs of U.S. elections offices.\
+  \ To learn \nmore, visit www.cisecurity.org or follow us on Twitter: @CISecurity."
+developer_guidance: "18\nPenetration Testing\nTest the effectiveness and resiliency\
+  \ of enterprise assets through identifying and exploiting weaknesses in controls\
+  \ (people, processes, and \ntechnology), and simulating the objectives and actions\
+  \ of an attacker.\n18.1\nEstablish and Maintain a Penetration Testing Program\n\
+  N/A\n-Identify-\n• •\nEstablish and maintain a penetration testing program appropriate\
+  \ to the size, complexity, and maturity of the enterprise. Penetration \ntesting\
+  \ program characteristics include scope, such as network, web application, Application\
+  \ Programming Interface (API), hosted \nservices, and physical premise controls;\
+  \ frequency; limitations, such as acceptable hours, and excluded attack types; point\
+  \ of contact \ninformation; remediation, such as how findings will be routed internally;\
+  \ and retrospective requirements.\n18.2\nPerform Periodic External Penetration Tests\n\
+  Network\n-Identify-\n• •\nPerform periodic external penetration tests based on program\
+  \ requirements, no less than annually. External penetration testing must \ninclude\
+  \ enterprise and environmental reconnaissance to detect exploitable information.\
+  \ Penetration testing requires specialized skills and \nexperience and must be conducted\
+  \ through a qualified party. The testing may be clear box or opaque box.\n18.3\n\
+  Remediate Penetration Test Findings\nNetwork\n-Protect-\n• •\nRemediate penetration\
+  \ test findings based on the enterprise’s policy for remediation scope and prioritization.\n\
+  18.4\nValidate Security Measures\nNetwork\n-Protect-\n•\nValidate security measures\
+  \ after each penetration test. If deemed necessary, modify rulesets and capabilities\
+  \ to detect the techniques \nused during testing.\n18.5\nPerform Periodic Internal\
+  \ Penetration Tests\nN/A\n-Identify-\n•\nPerform periodic internal penetration tests\
+  \ based on program requirements, no less than annually. The testing may be clear\
+  \ box \nor opaque box.\n\ncisecurity.org\n info@cisecurity.org\n 518-266-3460\n\
+  \ Center for Internet Security\n @CISecurity\n CenterforIntSec\n TheCISecurity\n\
+  \ cisecurity\nThe Center for Internet Security, Inc. (CIS®) makes the connected\
+  \ \nworld a safer place for people, businesses, and governments \nthrough our core\
+  \ competencies of collaboration and innovation. \nWe are a community-driven nonprofit,\
+  \ responsible for the CIS \nControls® and CIS Benchmarks™, globally recognized best\
+  \ practices \nfor securing IT systems and data. We lead a global community \nof\
+  \ IT professionals to continuously evolve these standards and \nprovide products\
+  \ and services to proactively safeguard against \nemerging threats.\nOur CIS Hardened\
+  \ Images® provide secure, on-demand, scalable \ncomputing environments in the cloud.\
+  \ CIS is home to the \nMulti‑State Information Sharing and Analysis Center® (MS-ISAC®),\
+  \ \nthe trusted resource for cyber threat prevention, protection, \nresponse, and\
+  \ recovery for U.S. State, Local, Tribal, and Territorial \ngovernment entities,\
+  \ and the Elections Infrastructure Information \nSharing and Analysis Center® (EI‑ISAC®),\
+  \ which supports the rapidly \nchanging cybersecurity needs of U.S. elections offices.\
+  \ To learn \nmore, visit www.cisecurity.org or follow us on Twitter: @CISecurity."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

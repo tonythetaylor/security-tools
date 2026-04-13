@@ -1,0 +1,33 @@
+id: dockerfile-runtime-build-tools
+title: Runtime image contains build-time tooling
+category: container_security
+applies_to:
+  - dockerfile_runtime_contains_build_tools
+  - dockerfile
+  - python_web
+tags:
+  - dockerfile
+  - gcc
+  - make
+  - build-tools
+  - runtime
+severity_guidance: medium
+description: |
+  Build tools in the final runtime image increase attack surface and reduce image minimality.
+rationale: |
+  Runtime images should contain only execution dependencies, not compilers or build chains.
+developer_guidance: |
+  Move compilers, headers, package managers, and build helpers into a dedicated builder stage.
+compliance_refs:
+  - framework: NIST
+    control: CM-6
+  - framework: CIS Docker Benchmark
+    control: 4.1
+ownership:
+  typical_owner: application_team
+remediation:
+  summary: Remove build tools from the runtime image
+  steps:
+    - Identify compiler and build packages
+    - Move them to a builder stage
+    - Rebuild runtime image with only runtime dependencies

@@ -1,0 +1,43 @@
+id: cis-07-5
+title: 07.5 Perform Automated Vulnerability Scans of Internal Enterprise Assets
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_07
+- safeguard
+- safeguard_7_5
+severity_guidance: medium
+description: "7.5\nPerform Automated Vulnerability Scans of Internal Enterprise Assets\n\
+  Applications\n-Identify-\n• •\nPerform automated vulnerability scans of internal\
+  \ enterprise assets on a quarterly, or more frequent, basis. Conduct both authenticated\
+  \ \nand unauthenticated scans, using a SCAP-compliant vulnerability scanning tool.\n\
+  \nCIS Controls v8\nA9 \n\uFEFFControls and Safeguards Index\nControl 07 / Safeguard\
+  \ 7.6 — Control 08 / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "7.5\nPerform Automated Vulnerability Scans of Internal Enterprise Assets\n\
+  Applications\n-Identify-\n• •\nPerform automated vulnerability scans of internal\
+  \ enterprise assets on a quarterly, or more frequent, basis. Conduct both authenticated\
+  \ \nand unauthenticated scans, using a SCAP-compliant vulnerability scanning tool.\n\
+  \nCIS Controls v8\nA9 \n\uFEFFControls and Safeguards Index\nControl 07 / Safeguard\
+  \ 7.6 — Control 08 / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "7.5\nPerform Automated Vulnerability Scans of Internal Enterprise\
+  \ Assets\nApplications\n-Identify-\n• •\nPerform automated vulnerability scans of\
+  \ internal enterprise assets on a quarterly, or more frequent, basis. Conduct both\
+  \ authenticated \nand unauthenticated scans, using a SCAP-compliant vulnerability\
+  \ scanning tool.\n\nCIS Controls v8\nA9 \n\uFEFFControls and Safeguards Index\n\
+  Control 07 / Safeguard 7.6 — Control 08 / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 07.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

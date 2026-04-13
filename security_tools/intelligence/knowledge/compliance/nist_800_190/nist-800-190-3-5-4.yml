@@ -1,0 +1,46 @@
+id: nist-800-190-3-5-4
+title: 3.5.4 Improper user access rights
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_5_4
+severity_guidance: medium
+description: "3.5.4 Improper user access rights \nContainer-specific OSs are typically\
+  \ not optimized to support multiuser scenarios since \ninteractive user logon should\
+  \ be rare. Organizations are exposed to risk when users log on \ndirectly to hosts\
+  \ to manage containers, rather than going through an orchestration layer. Direct\
+  \ \nmanagement enables wide-ranging changes to the system and all containers on\
+  \ it, and can \npotentially enable a user that only needs to manage a specific app’s\
+  \ containers to impact many \nothers."
+rationale: "3.5.4 Improper user access rights \nContainer-specific OSs are typically\
+  \ not optimized to support multiuser scenarios since \ninteractive user logon should\
+  \ be rare. Organizations are exposed to risk when users log on \ndirectly to hosts\
+  \ to manage containers, rather than going through an orchestration layer. Direct\
+  \ \nmanagement enables wide-ranging changes to the system and all containers on\
+  \ it, and can \npotentially enable a user that only needs to manage a specific app’s\
+  \ containers to impact many \nothers."
+developer_guidance: "3.5.4 Improper user access rights \nContainer-specific OSs are\
+  \ typically not optimized to support multiuser scenarios since \ninteractive user\
+  \ logon should be rare. Organizations are exposed to risk when users log on \ndirectly\
+  \ to hosts to manage containers, rather than going through an orchestration layer.\
+  \ Direct \nmanagement enables wide-ranging changes to the system and all containers\
+  \ on it, and can \npotentially enable a user that only needs to manage a specific\
+  \ app’s containers to impact many \nothers."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.5.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

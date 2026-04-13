@@ -1,0 +1,43 @@
+id: cis-16-4
+title: 16.4 Establish and Manage an Inventory of Third-Party Software Components
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_4
+severity_guidance: medium
+description: "16.4\nEstablish and Manage an Inventory of Third-Party Software Components\n\
+  Applications\n-Protect-\n• •\nEstablish and manage an updated inventory of third-party\
+  \ components used in development, often referred to as a “bill of materials,” as\
+  \ \nwell as components slated for future use. This inventory is to include any risks\
+  \ that each third-party component could pose. Evaluate the \nlist at least monthly\
+  \ to identify any changes or updates to these components, and validate that the\
+  \ component is still supported."
+rationale: "16.4\nEstablish and Manage an Inventory of Third-Party Software Components\n\
+  Applications\n-Protect-\n• •\nEstablish and manage an updated inventory of third-party\
+  \ components used in development, often referred to as a “bill of materials,” as\
+  \ \nwell as components slated for future use. This inventory is to include any risks\
+  \ that each third-party component could pose. Evaluate the \nlist at least monthly\
+  \ to identify any changes or updates to these components, and validate that the\
+  \ component is still supported."
+developer_guidance: "16.4\nEstablish and Manage an Inventory of Third-Party Software\
+  \ Components\nApplications\n-Protect-\n• •\nEstablish and manage an updated inventory\
+  \ of third-party components used in development, often referred to as a “bill of\
+  \ materials,” as \nwell as components slated for future use. This inventory is to\
+  \ include any risks that each third-party component could pose. Evaluate the \n\
+  list at least monthly to identify any changes or updates to these components, and\
+  \ validate that the component is still supported."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

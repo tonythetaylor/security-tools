@@ -1,0 +1,117 @@
+id: cis-06
+title: 06 Access Control Management
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+tags:
+- access-control
+- authorization
+- cis
+- control
+- control_06
+- least-privilege
+severity_guidance: medium
+description: "06\nAccess Control Management\nUse processes and tools to create, assign,\
+  \ manage, and revoke access credentials and privileges for user, administrator,\
+  \ and service accounts for \nenterprise assets and software.\n6.1\nEstablish an\
+  \ Access Granting Process\nUsers\n-Protect-\n• • •\nEstablish and follow a process,\
+  \ preferably automated, for granting access to enterprise assets upon new hire,\
+  \ rights grant, or role \nchange of a user.\n6.2\nEstablish an Access Revoking Process\n\
+  Users\n-Protect-\n• • •\nEstablish and follow a process, preferably automated, for\
+  \ revoking access to enterprise assets, through disabling accounts immediately \n\
+  upon termination, rights revocation, or role change of a user. Disabling accounts,\
+  \ instead of deleting accounts, may be necessary to \npreserve audit trails.\n6.3\n\
+  Require MFA for Externally-Exposed Applications\nUsers\n-Protect-\n• • •\nRequire\
+  \ all externally-exposed enterprise or third-party applications to enforce MFA,\
+  \ where supported. Enforcing MFA through a \ndirectory service or SSO provider is\
+  \ a satisfactory implementation of this Safeguard.\n6.4\nRequire MFA for Remote\
+  \ Network Access\nUsers\n-Protect-\n• • •\nRequire MFA for remote network access.\n\
+  6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n• • •\nRequire MFA\
+  \ for all administrative access accounts, where supported, on all enterprise assets,\
+  \ whether managed on-site or through a \nthird-party provider.\n6.6\nEstablish and\
+  \ Maintain an Inventory of Authentication and Authorization Systems\nUsers\n-Identify-\n\
+  • •\nEstablish and maintain an inventory of the enterprise’s authentication and\
+  \ authorization systems, including those hosted on-site or at a \nremote service\
+  \ provider. Review and update the inventory, at a minimum, annually, or more frequently.\n\
+  6.7\nCentralize Access Control\nUsers\n-Protect-\n• •\nCentralize access control\
+  \ for all enterprise assets through a directory service or SSO provider, where supported.\n\
+  6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n•\nDefine and\
+  \ maintain role-based access control, through determining and documenting the access\
+  \ rights necessary for each role within \nthe enterprise to successfully carry out\
+  \ its assigned duties. Perform access control reviews of enterprise assets to validate\
+  \ that all \nprivileges are authorized, on a recurring schedule at a minimum annually,\
+  \ or more frequently."
+rationale: "06\nAccess Control Management\nUse processes and tools to create, assign,\
+  \ manage, and revoke access credentials and privileges for user, administrator,\
+  \ and service accounts for \nenterprise assets and software.\n6.1\nEstablish an\
+  \ Access Granting Process\nUsers\n-Protect-\n• • •\nEstablish and follow a process,\
+  \ preferably automated, for granting access to enterprise assets upon new hire,\
+  \ rights grant, or role \nchange of a user.\n6.2\nEstablish an Access Revoking Process\n\
+  Users\n-Protect-\n• • •\nEstablish and follow a process, preferably automated, for\
+  \ revoking access to enterprise assets, through disabling accounts immediately \n\
+  upon termination, rights revocation, or role change of a user. Disabling accounts,\
+  \ instead of deleting accounts, may be necessary to \npreserve audit trails.\n6.3\n\
+  Require MFA for Externally-Exposed Applications\nUsers\n-Protect-\n• • •\nRequire\
+  \ all externally-exposed enterprise or third-party applications to enforce MFA,\
+  \ where supported. Enforcing MFA through a \ndirectory service or SSO provider is\
+  \ a satisfactory implementation of this Safeguard.\n6.4\nRequire MFA for Remote\
+  \ Network Access\nUsers\n-Protect-\n• • •\nRequire MFA for remote network access.\n\
+  6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n• • •\nRequire MFA\
+  \ for all administrative access accounts, where supported, on all enterprise assets,\
+  \ whether managed on-site or through a \nthird-party provider.\n6.6\nEstablish and\
+  \ Maintain an Inventory of Authentication and Authorization Systems\nUsers\n-Identify-\n\
+  • •\nEstablish and maintain an inventory of the enterprise’s authentication and\
+  \ authorization systems, including those hosted on-site or at a \nremote service\
+  \ provider. Review and update the inventory, at a minimum, annually, or more frequently.\n\
+  6.7\nCentralize Access Control\nUsers\n-Protect-\n• •\nCentralize access control\
+  \ for all enterprise assets through a directory service or SSO provider, where supported.\n\
+  6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n•\nDefine and\
+  \ maintain role-based access control, through determining and documenting the access\
+  \ rights necessary for each role within \nthe enterprise to successfully carry out\
+  \ its assigned duties. Perform access control reviews of enterprise assets to validate\
+  \ that all \nprivileges are authorized, on a recurring schedule at a minimum annually,\
+  \ or more frequently."
+developer_guidance: "06\nAccess Control Management\nUse processes and tools to create,\
+  \ assign, manage, and revoke access credentials and privileges for user, administrator,\
+  \ and service accounts for \nenterprise assets and software.\n6.1\nEstablish an\
+  \ Access Granting Process\nUsers\n-Protect-\n• • •\nEstablish and follow a process,\
+  \ preferably automated, for granting access to enterprise assets upon new hire,\
+  \ rights grant, or role \nchange of a user.\n6.2\nEstablish an Access Revoking Process\n\
+  Users\n-Protect-\n• • •\nEstablish and follow a process, preferably automated, for\
+  \ revoking access to enterprise assets, through disabling accounts immediately \n\
+  upon termination, rights revocation, or role change of a user. Disabling accounts,\
+  \ instead of deleting accounts, may be necessary to \npreserve audit trails.\n6.3\n\
+  Require MFA for Externally-Exposed Applications\nUsers\n-Protect-\n• • •\nRequire\
+  \ all externally-exposed enterprise or third-party applications to enforce MFA,\
+  \ where supported. Enforcing MFA through a \ndirectory service or SSO provider is\
+  \ a satisfactory implementation of this Safeguard.\n6.4\nRequire MFA for Remote\
+  \ Network Access\nUsers\n-Protect-\n• • •\nRequire MFA for remote network access.\n\
+  6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n• • •\nRequire MFA\
+  \ for all administrative access accounts, where supported, on all enterprise assets,\
+  \ whether managed on-site or through a \nthird-party provider.\n6.6\nEstablish and\
+  \ Maintain an Inventory of Authentication and Authorization Systems\nUsers\n-Identify-\n\
+  • •\nEstablish and maintain an inventory of the enterprise’s authentication and\
+  \ authorization systems, including those hosted on-site or at a \nremote service\
+  \ provider. Review and update the inventory, at a minimum, annually, or more frequently.\n\
+  6.7\nCentralize Access Control\nUsers\n-Protect-\n• •\nCentralize access control\
+  \ for all enterprise assets through a directory service or SSO provider, where supported.\n\
+  6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n•\nDefine and\
+  \ maintain role-based access control, through determining and documenting the access\
+  \ rights necessary for each role within \nthe enterprise to successfully carry out\
+  \ its assigned duties. Perform access control reviews of enterprise assets to validate\
+  \ that all \nprivileges are authorized, on a recurring schedule at a minimum annually,\
+  \ or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

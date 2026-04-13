@@ -1,0 +1,37 @@
+id: cis-3-14
+title: 3.14 Log Sensitive Data Access
+category: data_security
+applies_to:
+- data_protection
+- data_management
+- data_recovery
+tags:
+- cis
+- control_03
+- data-protection
+- recovery
+- retention
+- safeguard
+- safeguard_3_14
+severity_guidance: medium
+description: "3.14\nLog Sensitive Data Access\nData\n-Detect-\n•\nLog sensitive data\
+  \ access, including modification and disposal.\n\nCIS Controls v8\n16 \nControl\
+  \ 04: Secure Configuration of Enterprise Assets and Software"
+rationale: "3.14\nLog Sensitive Data Access\nData\n-Detect-\n•\nLog sensitive data\
+  \ access, including modification and disposal.\n\nCIS Controls v8\n16 \nControl\
+  \ 04: Secure Configuration of Enterprise Assets and Software"
+developer_guidance: "3.14\nLog Sensitive Data Access\nData\n-Detect-\n•\nLog sensitive\
+  \ data access, including modification and disposal.\n\nCIS Controls v8\n16 \nControl\
+  \ 04: Secure Configuration of Enterprise Assets and Software"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 3.14
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

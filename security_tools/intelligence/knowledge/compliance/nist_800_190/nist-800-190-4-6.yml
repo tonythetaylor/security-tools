@@ -1,0 +1,154 @@
+id: nist-800-190-4-6
+title: 4.6 Hardware Countermeasures
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_6
+severity_guidance: medium
+description: "4.6 \nHardware Countermeasures \nSoftware-based security is regularly\
+  \ defeated, as acknowledged in NIST SP 800-164 [24]. NIST \ndefines trusted computing\
+  \ requirements in NIST SPs 800-147 [25], 800-155 [26], and 800-164. \nTo NIST, “trusted”\
+  \ means that the platform behaves as it is expected to: the software inventory is\
+  \ \naccurate, the configuration settings and security controls are in place and\
+  \ operating as they \nshould, and so on. “Trusted” also means that it is known that\
+  \ no unauthorized person has \ntampered with the software or its configuration on\
+  \ the hosts. Hardware root of trust is not a \nconcept unique to containers, but\
+  \ container management and security tools can leverage \nattestations for the rest\
+  \ of the container technology architecture to ensure containers are being \nrun\
+  \ in secure environments. \nThe currently available way to provide trusted computing\
+  \ is to: \n1. Measure firmware, software, and configuration data before it is executed\
+  \ using a Root of \nTrust for Measurement (RTM). \n2. Store those measurements in\
+  \ a hardware root of trust, like a trusted platform module \n(TPM). \n3. Validate\
+  \ that the current measurements match the expected measurements. If so, it can be\
+  \ \nattested that the platform can be trusted to behave as expected. \nTPM-enabled\
+  \ devices can check the integrity of the machine during the boot process, enabling\
+  \ \nprotection and detection mechanisms to function in hardware, at pre-boot, and\
+  \ in the secure boot \nprocess. This same trust and integrity assurance can be extended\
+  \ beyond the OS and the boot \nloader to the container runtimes and apps. Note that\
+  \ while standards are being developed to \nenable verification of hardware trust\
+  \ by users of cloud services, not all clouds expose this \nfunctionality to their\
+  \ customers. In cases where technical verification is not provided, \norganizations\
+  \ should address hardware trust requirements as part of their service agreements\
+  \ with \ncloud providers. \nThe increasing complexity of systems and the deeply\
+  \ embedded nature of today’s threats means \nthat security should extend across\
+  \ all container technology components, starting with the \nhardware and firmware.\
+  \ This would form a distributed trusted computing model and provide the \nmost trusted\
+  \ and secure way to build, run, orchestrate, and manage containers. \nThe trusted\
+  \ computing model should start with measured/secure boot, which provides a verified\
+  \ \nsystem platform, and build a chain of trust rooted in hardware and extended\
+  \ to the bootloaders, \nthe OS kernel, and the OS components to enable cryptographic\
+  \ verification of boot mechanisms, \nsystem images, container runtimes, and container\
+  \ images. For container technologies, these \ntechniques are currently applicable\
+  \ at the hardware, hypervisor, and host OS layers, with early \nwork in progress\
+  \ to apply these to container-specific components.\n\nAs of this writing, NIST is\
+  \ collaborating with industry partners to build reference architectures \nbased\
+  \ on commercial off-the-shelf products that demonstrate the trusted computing model\
+  \ for \ncontainer environments.8 \n\nFor more information on previous NIST efforts\
+  \ in this area, see NIST IR 7904, Trusted Geolocation in the Cloud: Proof of \n\
+  Concept Implementation [27].\n\nContainer Threat Scenario Examples \nTo illustrate\
+  \ the effectiveness of the recommended countermeasures from Section 4, consider\
+  \ the \nfollowing threat scenario examples for containers."
+rationale: "4.6 \nHardware Countermeasures \nSoftware-based security is regularly\
+  \ defeated, as acknowledged in NIST SP 800-164 [24]. NIST \ndefines trusted computing\
+  \ requirements in NIST SPs 800-147 [25], 800-155 [26], and 800-164. \nTo NIST, “trusted”\
+  \ means that the platform behaves as it is expected to: the software inventory is\
+  \ \naccurate, the configuration settings and security controls are in place and\
+  \ operating as they \nshould, and so on. “Trusted” also means that it is known that\
+  \ no unauthorized person has \ntampered with the software or its configuration on\
+  \ the hosts. Hardware root of trust is not a \nconcept unique to containers, but\
+  \ container management and security tools can leverage \nattestations for the rest\
+  \ of the container technology architecture to ensure containers are being \nrun\
+  \ in secure environments. \nThe currently available way to provide trusted computing\
+  \ is to: \n1. Measure firmware, software, and configuration data before it is executed\
+  \ using a Root of \nTrust for Measurement (RTM). \n2. Store those measurements in\
+  \ a hardware root of trust, like a trusted platform module \n(TPM). \n3. Validate\
+  \ that the current measurements match the expected measurements. If so, it can be\
+  \ \nattested that the platform can be trusted to behave as expected. \nTPM-enabled\
+  \ devices can check the integrity of the machine during the boot process, enabling\
+  \ \nprotection and detection mechanisms to function in hardware, at pre-boot, and\
+  \ in the secure boot \nprocess. This same trust and integrity assurance can be extended\
+  \ beyond the OS and the boot \nloader to the container runtimes and apps. Note that\
+  \ while standards are being developed to \nenable verification of hardware trust\
+  \ by users of cloud services, not all clouds expose this \nfunctionality to their\
+  \ customers. In cases where technical verification is not provided, \norganizations\
+  \ should address hardware trust requirements as part of their service agreements\
+  \ with \ncloud providers. \nThe increasing complexity of systems and the deeply\
+  \ embedded nature of today’s threats means \nthat security should extend across\
+  \ all container technology components, starting with the \nhardware and firmware.\
+  \ This would form a distributed trusted computing model and provide the \nmost trusted\
+  \ and secure way to build, run, orchestrate, and manage containers. \nThe trusted\
+  \ computing model should start with measured/secure boot, which provides a verified\
+  \ \nsystem platform, and build a chain of trust rooted in hardware and extended\
+  \ to the bootloaders, \nthe OS kernel, and the OS components to enable cryptographic\
+  \ verification of boot mechanisms, \nsystem images, container runtimes, and container\
+  \ images. For container technologies, these \ntechniques are currently applicable\
+  \ at the hardware, hypervisor, and host OS layers, with early \nwork in progress\
+  \ to apply these to container-specific components.\n\nAs of this writing, NIST is\
+  \ collaborating with industry partners to build reference architectures \nbased\
+  \ on commercial off-the-shelf products that demonstrate the trusted computing model\
+  \ for \ncontainer environments.8 \n\nFor more information on previous NIST efforts\
+  \ in this area, see NIST IR 7904, Trusted Geolocation in the Cloud: Proof of \n\
+  Concept Implementation [27].\n\nContainer Threat Scenario Examples \nTo illustrate\
+  \ the effectiveness of the recommended countermeasures from Section 4, consider\
+  \ the \nfollowing threat scenario examples for containers."
+developer_guidance: "4.6 \nHardware Countermeasures \nSoftware-based security is regularly\
+  \ defeated, as acknowledged in NIST SP 800-164 [24]. NIST \ndefines trusted computing\
+  \ requirements in NIST SPs 800-147 [25], 800-155 [26], and 800-164. \nTo NIST, “trusted”\
+  \ means that the platform behaves as it is expected to: the software inventory is\
+  \ \naccurate, the configuration settings and security controls are in place and\
+  \ operating as they \nshould, and so on. “Trusted” also means that it is known that\
+  \ no unauthorized person has \ntampered with the software or its configuration on\
+  \ the hosts. Hardware root of trust is not a \nconcept unique to containers, but\
+  \ container management and security tools can leverage \nattestations for the rest\
+  \ of the container technology architecture to ensure containers are being \nrun\
+  \ in secure environments. \nThe currently available way to provide trusted computing\
+  \ is to: \n1. Measure firmware, software, and configuration data before it is executed\
+  \ using a Root of \nTrust for Measurement (RTM). \n2. Store those measurements in\
+  \ a hardware root of trust, like a trusted platform module \n(TPM). \n3. Validate\
+  \ that the current measurements match the expected measurements. If so, it can be\
+  \ \nattested that the platform can be trusted to behave as expected. \nTPM-enabled\
+  \ devices can check the integrity of the machine during the boot process, enabling\
+  \ \nprotection and detection mechanisms to function in hardware, at pre-boot, and\
+  \ in the secure boot \nprocess. This same trust and integrity assurance can be extended\
+  \ beyond the OS and the boot \nloader to the container runtimes and apps. Note that\
+  \ while standards are being developed to \nenable verification of hardware trust\
+  \ by users of cloud services, not all clouds expose this \nfunctionality to their\
+  \ customers. In cases where technical verification is not provided, \norganizations\
+  \ should address hardware trust requirements as part of their service agreements\
+  \ with \ncloud providers. \nThe increasing complexity of systems and the deeply\
+  \ embedded nature of today’s threats means \nthat security should extend across\
+  \ all container technology components, starting with the \nhardware and firmware.\
+  \ This would form a distributed trusted computing model and provide the \nmost trusted\
+  \ and secure way to build, run, orchestrate, and manage containers. \nThe trusted\
+  \ computing model should start with measured/secure boot, which provides a verified\
+  \ \nsystem platform, and build a chain of trust rooted in hardware and extended\
+  \ to the bootloaders, \nthe OS kernel, and the OS components to enable cryptographic\
+  \ verification of boot mechanisms, \nsystem images, container runtimes, and container\
+  \ images. For container technologies, these \ntechniques are currently applicable\
+  \ at the hardware, hypervisor, and host OS layers, with early \nwork in progress\
+  \ to apply these to container-specific components.\n\nAs of this writing, NIST is\
+  \ collaborating with industry partners to build reference architectures \nbased\
+  \ on commercial off-the-shelf products that demonstrate the trusted computing model\
+  \ for \ncontainer environments.8 \n\nFor more information on previous NIST efforts\
+  \ in this area, see NIST IR 7904, Trusted Geolocation in the Cloud: Proof of \n\
+  Concept Implementation [27].\n\nContainer Threat Scenario Examples \nTo illustrate\
+  \ the effectiveness of the recommended countermeasures from Section 4, consider\
+  \ the \nfollowing threat scenario examples for containers."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '4.6'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

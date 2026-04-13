@@ -1,0 +1,40 @@
+id: cis-04-1
+title: 04.1 Establish and Maintain a Secure Configuration Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_04
+- safeguard
+- safeguard_4_1
+severity_guidance: medium
+description: "4.1\nEstablish and Maintain a Secure Configuration Process\nApplications\n\
+  -Protect-\n• • •\nEstablish and maintain a secure configuration process for enterprise\
+  \ assets (end-user devices, including portable and mobile, non-\ncomputing/IoT devices,\
+  \ and servers) and software (operating systems and applications). Review and update\
+  \ documentation annually, or \nwhen significant enterprise changes occur that could\
+  \ impact this Safeguard."
+rationale: "4.1\nEstablish and Maintain a Secure Configuration Process\nApplications\n\
+  -Protect-\n• • •\nEstablish and maintain a secure configuration process for enterprise\
+  \ assets (end-user devices, including portable and mobile, non-\ncomputing/IoT devices,\
+  \ and servers) and software (operating systems and applications). Review and update\
+  \ documentation annually, or \nwhen significant enterprise changes occur that could\
+  \ impact this Safeguard."
+developer_guidance: "4.1\nEstablish and Maintain a Secure Configuration Process\n\
+  Applications\n-Protect-\n• • •\nEstablish and maintain a secure configuration process\
+  \ for enterprise assets (end-user devices, including portable and mobile, non-\n\
+  computing/IoT devices, and servers) and software (operating systems and applications).\
+  \ Review and update documentation annually, or \nwhen significant enterprise changes\
+  \ occur that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: Safeguard 04.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

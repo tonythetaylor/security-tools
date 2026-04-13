@@ -1,0 +1,180 @@
+id: cis-04
+title: 04 Secure Configuration of Enterprise Assets and Software
+category: configuration_security
+applies_to:
+- secure_configuration
+- hardening
+- baseline_configuration
+tags:
+- baseline
+- cis
+- configuration
+- control
+- control_04
+- hardening
+severity_guidance: medium
+description: "04\nSecure Configuration of Enterprise Assets and Software\nEstablish\
+  \ and maintain the secure configuration of enterprise assets (end-user devices,\
+  \ including portable and mobile; network devices; non-\ncomputing/IoT devices; and\
+  \ servers) and software (operating systems and applications).\n4.1\nEstablish and\
+  \ Maintain a Secure Configuration Process\nApplications\n-Protect-\n• • •\nEstablish\
+  \ and maintain a secure configuration process for enterprise assets (end-user devices,\
+  \ including portable and mobile, non-\ncomputing/IoT devices, and servers) and software\
+  \ (operating systems and applications). Review and update documentation annually,\
+  \ or \nwhen significant enterprise changes occur that could impact this Safeguard.\n\
+  4.2\nEstablish and Maintain a Secure Configuration Process for Network Infrastructure\n\
+  Network\n-Protect-\n• • •\nEstablish and maintain a secure configuration process\
+  \ for network devices. Review and update documentation annually, or when \nsignificant\
+  \ enterprise changes occur that could impact this Safeguard.\n4.3\nConfigure Automatic\
+  \ Session Locking on Enterprise Assets\nUsers\n-Protect-\n• • •\nConfigure automatic\
+  \ session locking on enterprise assets after a defined period of inactivity. For\
+  \ general purpose operating systems, the \nperiod must not exceed 15 minutes. For\
+  \ mobile end-user devices, the period must not exceed 2 minutes.\n4.4\nImplement\
+  \ and Manage a Firewall on Servers\nDevices\n-Protect-\n• • •\nImplement and manage\
+  \ a firewall on servers, where supported. Example implementations include a virtual\
+  \ firewall, operating system \nfirewall, or a third-party firewall agent.\n4.5\n\
+  Implement and Manage a Firewall on End-User Devices\nDevices\n-Protect-\n• • •\n\
+  Implement and manage a host-based firewall or port-filtering tool on end-user devices,\
+  \ with a default-deny rule that drops all traffic \nexcept those services and ports\
+  \ that are explicitly allowed.\n4.6\nSecurely Manage Enterprise Assets and Software\n\
+  Network\n-Protect-\n• • •\nSecurely manage enterprise assets and software. Example\
+  \ implementations include managing configuration through version-controlled-\ninfrastructure-as-code\
+  \ and accessing administrative interfaces over secure network protocols, such as\
+  \ Secure Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use\
+  \ insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless\
+  \ \noperationally essential.\n4.7\nManage Default Accounts on Enterprise Assets\
+  \ and Software\nUsers\n-Protect-\n• • •\nManage default accounts on enterprise assets\
+  \ and software, such as root, administrator, and other pre-configured vendor accounts.\
+  \ \nExample implementations can include: disabling default accounts or making them\
+  \ unusable.\n\nCIS Controls v8\nA7 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 04 / Safeguard 4.8 — Control 05 / Safeguard 5.6\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n4.8\nUninstall\
+  \ or Disable Unnecessary Services on Enterprise Assets and Software\nDevices\n-Protect-\n\
+  • •\nUninstall or disable unnecessary services on enterprise assets and software,\
+  \ such as an unused file sharing service, web application \nmodule, or service function.\n\
+  4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n-Protect-\n• •\n\
+  Configure trusted DNS servers on enterprise assets. Example implementations include:\
+  \ configuring assets to use enterprise-controlled \nDNS servers and/or reputable\
+  \ externally accessible DNS servers.\n4.10\nEnforce Automatic Device Lockout on\
+  \ Portable End-User Devices\nDevices\n-Respond-\n• •\nEnforce automatic device lockout\
+  \ following a predetermined threshold of local failed authentication attempts on\
+  \ portable end-user \ndevices, where supported. For laptops, do not allow more than\
+  \ 20 failed authentication attempts; for tablets and smartphones, no more \nthan\
+  \ 10 failed authentication attempts. Example implementations include Microsoft®\
+  \ InTune Device Lock and Apple® Configuration Profile \nmaxFailedAttempts.\n4.11\n\
+  Enforce Remote Wipe Capability on Portable End-User Devices\nDevices\n-Protect-\n\
+  • •\nRemot"
+rationale: "04\nSecure Configuration of Enterprise Assets and Software\nEstablish\
+  \ and maintain the secure configuration of enterprise assets (end-user devices,\
+  \ including portable and mobile; network devices; non-\ncomputing/IoT devices; and\
+  \ servers) and software (operating systems and applications).\n4.1\nEstablish and\
+  \ Maintain a Secure Configuration Process\nApplications\n-Protect-\n• • •\nEstablish\
+  \ and maintain a secure configuration process for enterprise assets (end-user devices,\
+  \ including portable and mobile, non-\ncomputing/IoT devices, and servers) and software\
+  \ (operating systems and applications). Review and update documentation annually,\
+  \ or \nwhen significant enterprise changes occur that could impact this Safeguard.\n\
+  4.2\nEstablish and Maintain a Secure Configuration Process for Network Infrastructure\n\
+  Network\n-Protect-\n• • •\nEstablish and maintain a secure configuration process\
+  \ for network devices. Review and update documentation annually, or when \nsignificant\
+  \ enterprise changes occur that could impact this Safeguard.\n4.3\nConfigure Automatic\
+  \ Session Locking on Enterprise Assets\nUsers\n-Protect-\n• • •\nConfigure automatic\
+  \ session locking on enterprise assets after a defined period of inactivity. For\
+  \ general purpose operating systems, the \nperiod must not exceed 15 minutes. For\
+  \ mobile end-user devices, the period must not exceed 2 minutes.\n4.4\nImplement\
+  \ and Manage a Firewall on Servers\nDevices\n-Protect-\n• • •\nImplement and manage\
+  \ a firewall on servers, where supported. Example implementations include a virtual\
+  \ firewall, operating system \nfirewall, or a third-party firewall agent.\n4.5\n\
+  Implement and Manage a Firewall on End-User Devices\nDevices\n-Protect-\n• • •\n\
+  Implement and manage a host-based firewall or port-filtering tool on end-user devices,\
+  \ with a default-deny rule that drops all traffic \nexcept those services and ports\
+  \ that are explicitly allowed.\n4.6\nSecurely Manage Enterprise Assets and Software\n\
+  Network\n-Protect-\n• • •\nSecurely manage enterprise assets and software. Example\
+  \ implementations include managing configuration through version-controlled-\ninfrastructure-as-code\
+  \ and accessing administrative interfaces over secure network protocols, such as\
+  \ Secure Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use\
+  \ insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless\
+  \ \noperationally essential.\n4.7\nManage Default Accounts on Enterprise Assets\
+  \ and Software\nUsers\n-Protect-\n• • •\nManage default accounts on enterprise assets\
+  \ and software, such as root, administrator, and other pre-configured vendor accounts.\
+  \ \nExample implementations can include: disabling default accounts or making them\
+  \ unusable.\n\nCIS Controls v8\nA7 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 04 / Safeguard 4.8 — Control 05 / Safeguard 5.6\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n4.8\nUninstall\
+  \ or Disable Unnecessary Services on Enterprise Assets and Software\nDevices\n-Protect-\n\
+  • •\nUninstall or disable unnecessary services on enterprise assets and software,\
+  \ such as an unused file sharing service, web application \nmodule, or service function.\n\
+  4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n-Protect-\n• •\n\
+  Configure trusted DNS servers on enterprise assets. Example implementations include:\
+  \ configuring assets to use enterprise-controlled \nDNS servers and/or reputable\
+  \ externally accessible DNS servers.\n4.10\nEnforce Automatic Device Lockout on\
+  \ Portable End-User Devices\nDevices\n-Respond-\n• •\nEnforce automatic device lockout\
+  \ following a predetermined threshold of local failed authentication attempts on\
+  \ portable end-user \ndevices, where supported. For laptops, do not allow more than\
+  \ 20 failed authentication attempts; for tablets and smartphones, no more \nthan\
+  \ 10 failed authentication attempts. Example implementations include Microsoft®\
+  \ InTune Device Lock and Apple® Configuration Profile \nmaxFailedAttempts.\n4.11\n\
+  Enforce Remote Wipe Capability on Portable End-User Devices\nDevices\n-Protect-\n\
+  • •\nRemot"
+developer_guidance: "04\nSecure Configuration of Enterprise Assets and Software\n\
+  Establish and maintain the secure configuration of enterprise assets (end-user devices,\
+  \ including portable and mobile; network devices; non-\ncomputing/IoT devices; and\
+  \ servers) and software (operating systems and applications).\n4.1\nEstablish and\
+  \ Maintain a Secure Configuration Process\nApplications\n-Protect-\n• • •\nEstablish\
+  \ and maintain a secure configuration process for enterprise assets (end-user devices,\
+  \ including portable and mobile, non-\ncomputing/IoT devices, and servers) and software\
+  \ (operating systems and applications). Review and update documentation annually,\
+  \ or \nwhen significant enterprise changes occur that could impact this Safeguard.\n\
+  4.2\nEstablish and Maintain a Secure Configuration Process for Network Infrastructure\n\
+  Network\n-Protect-\n• • •\nEstablish and maintain a secure configuration process\
+  \ for network devices. Review and update documentation annually, or when \nsignificant\
+  \ enterprise changes occur that could impact this Safeguard.\n4.3\nConfigure Automatic\
+  \ Session Locking on Enterprise Assets\nUsers\n-Protect-\n• • •\nConfigure automatic\
+  \ session locking on enterprise assets after a defined period of inactivity. For\
+  \ general purpose operating systems, the \nperiod must not exceed 15 minutes. For\
+  \ mobile end-user devices, the period must not exceed 2 minutes.\n4.4\nImplement\
+  \ and Manage a Firewall on Servers\nDevices\n-Protect-\n• • •\nImplement and manage\
+  \ a firewall on servers, where supported. Example implementations include a virtual\
+  \ firewall, operating system \nfirewall, or a third-party firewall agent.\n4.5\n\
+  Implement and Manage a Firewall on End-User Devices\nDevices\n-Protect-\n• • •\n\
+  Implement and manage a host-based firewall or port-filtering tool on end-user devices,\
+  \ with a default-deny rule that drops all traffic \nexcept those services and ports\
+  \ that are explicitly allowed.\n4.6\nSecurely Manage Enterprise Assets and Software\n\
+  Network\n-Protect-\n• • •\nSecurely manage enterprise assets and software. Example\
+  \ implementations include managing configuration through version-controlled-\ninfrastructure-as-code\
+  \ and accessing administrative interfaces over secure network protocols, such as\
+  \ Secure Shell (SSH) and Hypertext \nTransfer Protocol Secure (HTTPS). Do not use\
+  \ insecure management protocols, such as Telnet (Teletype Network) and HTTP, unless\
+  \ \noperationally essential.\n4.7\nManage Default Accounts on Enterprise Assets\
+  \ and Software\nUsers\n-Protect-\n• • •\nManage default accounts on enterprise assets\
+  \ and software, such as root, administrator, and other pre-configured vendor accounts.\
+  \ \nExample implementations can include: disabling default accounts or making them\
+  \ unusable.\n\nCIS Controls v8\nA7 \n\uFEFFControls and Safeguards Index\nControl\
+  \ 04 / Safeguard 4.8 — Control 05 / Safeguard 5.6\nCONTROL\nSAFEGUARD\nNUMBER\n\
+  TITLE/ \nDESCRIPTION\nASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3\n4.8\nUninstall\
+  \ or Disable Unnecessary Services on Enterprise Assets and Software\nDevices\n-Protect-\n\
+  • •\nUninstall or disable unnecessary services on enterprise assets and software,\
+  \ such as an unused file sharing service, web application \nmodule, or service function.\n\
+  4.9\nConfigure Trusted DNS Servers on Enterprise Assets\nDevices\n-Protect-\n• •\n\
+  Configure trusted DNS servers on enterprise assets. Example implementations include:\
+  \ configuring assets to use enterprise-controlled \nDNS servers and/or reputable\
+  \ externally accessible DNS servers.\n4.10\nEnforce Automatic Device Lockout on\
+  \ Portable End-User Devices\nDevices\n-Respond-\n• •\nEnforce automatic device lockout\
+  \ following a predetermined threshold of local failed authentication attempts on\
+  \ portable end-user \ndevices, where supported. For laptops, do not allow more than\
+  \ 20 failed authentication attempts; for tablets and smartphones, no more \nthan\
+  \ 10 failed authentication attempts. Example implementations include Microsoft®\
+  \ InTune Device Lock and Apple® Configuration Profile \nmaxFailedAttempts.\n4.11\n\
+  Enforce Remote Wipe Capability on Portable End-User Devices\nDevices\n-Protect-\n\
+  • •\nRemot"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 04
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

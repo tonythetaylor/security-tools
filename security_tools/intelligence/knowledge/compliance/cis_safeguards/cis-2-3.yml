@@ -1,0 +1,46 @@
+id: cis-2-3
+title: 2.3 Address Unauthorized Software
+category: software_security
+applies_to:
+- software_inventory
+- software_asset_management
+- unauthorized_software
+tags:
+- asset-management
+- cis
+- control_02
+- safeguard
+- safeguard_2_3
+- software-assets
+- software-inventory
+severity_guidance: medium
+description: "2.3\nAddress Unauthorized Software\nApplications\n-Respond-\n• • •\n\
+  Ensure that unauthorized software is either removed from use on enterprise assets\
+  \ or receives a documented exception. Review monthly, \nor more frequently.\n\n\
+  CIS Controls v8\nA5 \n\uFEFFControls and Safeguards Index\nControl 02 / Safeguard\
+  \ 2.4 — Control 03 / Safeguard 3.9\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+rationale: "2.3\nAddress Unauthorized Software\nApplications\n-Respond-\n• • •\nEnsure\
+  \ that unauthorized software is either removed from use on enterprise assets or\
+  \ receives a documented exception. Review monthly, \nor more frequently.\n\nCIS\
+  \ Controls v8\nA5 \n\uFEFFControls and Safeguards Index\nControl 02 / Safeguard\
+  \ 2.4 — Control 03 / Safeguard 3.9\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+developer_guidance: "2.3\nAddress Unauthorized Software\nApplications\n-Respond-\n\
+  • • •\nEnsure that unauthorized software is either removed from use on enterprise\
+  \ assets or receives a documented exception. Review monthly, \nor more frequently.\n\
+  \nCIS Controls v8\nA5 \n\uFEFFControls and Safeguards Index\nControl 02 / Safeguard\
+  \ 2.4 — Control 03 / Safeguard 3.9\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\n\
+  ASSET TYPE\nSECURITY FUNCTION\nIG1\nIG2\nIG3"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: Safeguard 2.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

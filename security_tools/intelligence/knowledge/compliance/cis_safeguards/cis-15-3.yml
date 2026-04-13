@@ -1,0 +1,46 @@
+id: cis-15-3
+title: 15.3 Classify Service Providers
+category: third_party_security
+applies_to:
+- service_provider_management
+- third_party_risk
+- vendor_security
+tags:
+- cis
+- control_15
+- safeguard
+- safeguard_15_3
+- service-providers
+- third-party
+- vendors
+severity_guidance: medium
+description: "15.3\nClassify Service Providers\nN/A\n-Identify-\n• •\nClassify service\
+  \ providers. Classification consideration may include one or more characteristics,\
+  \ such as data sensitivity, data volume, \navailability requirements, applicable\
+  \ regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard."
+rationale: "15.3\nClassify Service Providers\nN/A\n-Identify-\n• •\nClassify service\
+  \ providers. Classification consideration may include one or more characteristics,\
+  \ such as data sensitivity, data volume, \navailability requirements, applicable\
+  \ regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard."
+developer_guidance: "15.3\nClassify Service Providers\nN/A\n-Identify-\n• •\nClassify\
+  \ service providers. Classification consideration may include one or more characteristics,\
+  \ such as data sensitivity, data volume, \navailability requirements, applicable\
+  \ regulations, inherent risk, and mitigated risk. Update and review classifications\
+  \ annually, or when \nsignificant enterprise changes occur that could impact this\
+  \ Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 15
+  note: Safeguard 15.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

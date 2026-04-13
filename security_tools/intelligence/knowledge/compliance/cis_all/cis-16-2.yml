@@ -1,0 +1,61 @@
+id: cis-16-2
+title: 16.2 Establish and Maintain a Process to Accept and Address Software Vulnerabilities
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_2
+severity_guidance: medium
+description: "16.2\nEstablish and Maintain a Process to Accept and Address Software\
+  \ Vulnerabilities\nApplications\n-Protect-\n• •\nEstablish and maintain a process\
+  \ to accept and address reports of software vulnerabilities, including providing\
+  \ a means for external \nentities to report. The process is to include such items\
+  \ as: a vulnerability handling policy that identifies reporting process, responsible\
+  \ \nparty for handling vulnerability reports, and a process for intake, assignment,\
+  \ remediation, and remediation testing. As part of the \nprocess, use a vulnerability\
+  \ tracking system that includes severity ratings, and metrics for measuring timing\
+  \ for identification, analysis, \nand remediation of vulnerabilities. Review and\
+  \ update documentation annually, or when significant enterprise changes occur that\
+  \ could \nimpact this Safeguard. \nThird-party application developers need to consider\
+  \ this an externally-facing policy that helps to set expectations for outside \n\
+  stakeholders."
+rationale: "16.2\nEstablish and Maintain a Process to Accept and Address Software\
+  \ Vulnerabilities\nApplications\n-Protect-\n• •\nEstablish and maintain a process\
+  \ to accept and address reports of software vulnerabilities, including providing\
+  \ a means for external \nentities to report. The process is to include such items\
+  \ as: a vulnerability handling policy that identifies reporting process, responsible\
+  \ \nparty for handling vulnerability reports, and a process for intake, assignment,\
+  \ remediation, and remediation testing. As part of the \nprocess, use a vulnerability\
+  \ tracking system that includes severity ratings, and metrics for measuring timing\
+  \ for identification, analysis, \nand remediation of vulnerabilities. Review and\
+  \ update documentation annually, or when significant enterprise changes occur that\
+  \ could \nimpact this Safeguard. \nThird-party application developers need to consider\
+  \ this an externally-facing policy that helps to set expectations for outside \n\
+  stakeholders."
+developer_guidance: "16.2\nEstablish and Maintain a Process to Accept and Address\
+  \ Software Vulnerabilities\nApplications\n-Protect-\n• •\nEstablish and maintain\
+  \ a process to accept and address reports of software vulnerabilities, including\
+  \ providing a means for external \nentities to report. The process is to include\
+  \ such items as: a vulnerability handling policy that identifies reporting process,\
+  \ responsible \nparty for handling vulnerability reports, and a process for intake,\
+  \ assignment, remediation, and remediation testing. As part of the \nprocess, use\
+  \ a vulnerability tracking system that includes severity ratings, and metrics for\
+  \ measuring timing for identification, analysis, \nand remediation of vulnerabilities. Review\
+  \ and update documentation annually, or when significant enterprise changes occur\
+  \ that could \nimpact this Safeguard. \nThird-party application developers need\
+  \ to consider this an externally-facing policy that helps to set expectations for\
+  \ outside \nstakeholders."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

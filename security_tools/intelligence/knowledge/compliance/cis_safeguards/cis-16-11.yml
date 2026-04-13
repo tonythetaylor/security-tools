@@ -1,0 +1,61 @@
+id: cis-16-11
+title: 16.11 Leverage Vetted Modules or Services for Application Security Components
+category: application_security
+applies_to:
+- sast
+- secure_sdlc
+- application_security
+- dependency_scan
+- third_party_components
+tags:
+- appsec
+- cis
+- control_16
+- safeguard
+- safeguard_16_11
+- sast
+- secure-development
+- third-party-code
+severity_guidance: medium
+description: "16.11\nLeverage Vetted Modules or Services for Application Security\
+  \ Components\nApplications\n-Protect-\n• •\nLeverage vetted modules or services\
+  \ for application security components, such as identity management, encryption,\
+  \ and auditing and \nlogging. Using platform features in critical security functions\
+  \ will reduce developers’ workload and minimize the likelihood of design or \nimplementation\
+  \ errors. Modern operating systems provide effective mechanisms for identification,\
+  \ authentication, and authorization \nand make those mechanisms available to applications.\
+  \ Use only standardized, currently accepted, and extensively reviewed encryption\
+  \ \nalgorithms. Operating systems also provide mechanisms to create and maintain\
+  \ secure audit logs."
+rationale: "16.11\nLeverage Vetted Modules or Services for Application Security Components\n\
+  Applications\n-Protect-\n• •\nLeverage vetted modules or services for application\
+  \ security components, such as identity management, encryption, and auditing and\
+  \ \nlogging. Using platform features in critical security functions will reduce\
+  \ developers’ workload and minimize the likelihood of design or \nimplementation\
+  \ errors. Modern operating systems provide effective mechanisms for identification,\
+  \ authentication, and authorization \nand make those mechanisms available to applications.\
+  \ Use only standardized, currently accepted, and extensively reviewed encryption\
+  \ \nalgorithms. Operating systems also provide mechanisms to create and maintain\
+  \ secure audit logs."
+developer_guidance: "16.11\nLeverage Vetted Modules or Services for Application Security\
+  \ Components\nApplications\n-Protect-\n• •\nLeverage vetted modules or services\
+  \ for application security components, such as identity management, encryption,\
+  \ and auditing and \nlogging. Using platform features in critical security functions\
+  \ will reduce developers’ workload and minimize the likelihood of design or \nimplementation\
+  \ errors. Modern operating systems provide effective mechanisms for identification,\
+  \ authentication, and authorization \nand make those mechanisms available to applications.\
+  \ Use only standardized, currently accepted, and extensively reviewed encryption\
+  \ \nalgorithms. Operating systems also provide mechanisms to create and maintain\
+  \ secure audit logs."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.11
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

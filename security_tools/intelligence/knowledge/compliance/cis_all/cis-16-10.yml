@@ -1,0 +1,49 @@
+id: cis-16-10
+title: 16.10 Apply Secure Design Principles in Application Architectures
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_10
+severity_guidance: medium
+description: "16.10\nApply Secure Design Principles in Application Architectures\n\
+  Applications\n-Protect-\n• •\nApply secure design principles in application architectures.\
+  \ Secure design principles include the concept of least privilege and enforcing\
+  \ \nmediation to validate every operation that the user makes, promoting the concept\
+  \ of “never trust user input.” Examples include ensuring \nthat explicit error checking\
+  \ is performed and documented for all input, including for size, data type, and\
+  \ acceptable ranges or formats. \nSecure design also means minimizing the application\
+  \ infrastructure attack surface, such as turning off unprotected ports and services,\
+  \ \nremoving unnecessary programs and files, and renaming or removing default accounts."
+rationale: "16.10\nApply Secure Design Principles in Application Architectures\nApplications\n\
+  -Protect-\n• •\nApply secure design principles in application architectures. Secure\
+  \ design principles include the concept of least privilege and enforcing \nmediation\
+  \ to validate every operation that the user makes, promoting the concept of “never\
+  \ trust user input.” Examples include ensuring \nthat explicit error checking is\
+  \ performed and documented for all input, including for size, data type, and acceptable\
+  \ ranges or formats. \nSecure design also means minimizing the application infrastructure\
+  \ attack surface, such as turning off unprotected ports and services, \nremoving\
+  \ unnecessary programs and files, and renaming or removing default accounts."
+developer_guidance: "16.10\nApply Secure Design Principles in Application Architectures\n\
+  Applications\n-Protect-\n• •\nApply secure design principles in application architectures.\
+  \ Secure design principles include the concept of least privilege and enforcing\
+  \ \nmediation to validate every operation that the user makes, promoting the concept\
+  \ of “never trust user input.” Examples include ensuring \nthat explicit error checking\
+  \ is performed and documented for all input, including for size, data type, and\
+  \ acceptable ranges or formats. \nSecure design also means minimizing the application\
+  \ infrastructure attack surface, such as turning off unprotected ports and services,\
+  \ \nremoving unnecessary programs and files, and renaming or removing default accounts."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.10
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

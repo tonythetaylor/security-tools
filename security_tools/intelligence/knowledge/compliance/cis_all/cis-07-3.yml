@@ -1,0 +1,58 @@
+id: cis-07-3
+title: 07.3 Perform Automated Operating System Patch Management
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_07
+- safeguard
+- safeguard_7_3
+severity_guidance: medium
+description: '7.3
+
+  Perform Automated Operating System Patch Management
+
+  Applications
+
+  -Protect-
+
+  • • •
+
+  Perform operating system updates on enterprise assets through automated patch management
+  on a monthly, or more frequent, basis.'
+rationale: '7.3
+
+  Perform Automated Operating System Patch Management
+
+  Applications
+
+  -Protect-
+
+  • • •
+
+  Perform operating system updates on enterprise assets through automated patch management
+  on a monthly, or more frequent, basis.'
+developer_guidance: '7.3
+
+  Perform Automated Operating System Patch Management
+
+  Applications
+
+  -Protect-
+
+  • • •
+
+  Perform operating system updates on enterprise assets through automated patch management
+  on a monthly, or more frequent, basis.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 07.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

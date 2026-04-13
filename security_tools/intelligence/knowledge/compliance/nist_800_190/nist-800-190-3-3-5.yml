@@ -1,0 +1,52 @@
+id: nist-800-190-3-3-5
+title: 3.3.5 Orchestrator node trust
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_3_5
+severity_guidance: medium
+description: "3.3.5 Orchestrator node trust \nMaintenance of trust between the nodes\
+  \ in the environment requires special care. The \norchestrator is the most foundational\
+  \ node. Weak orchestrator configurations can expose the \norchestrator and all other\
+  \ container technology components to increased risk. Examples of \npossible consequences\
+  \ include: \n• Unauthorized hosts joining the cluster and running containers \n\
+  • The compromise of a single cluster host implying compromise of the entire cluster—for\
+  \ \nexample, if the same key pairs used for authentication are shared across all\
+  \ nodes \n• Communications between the orchestrator and DevOps personnel, administrators,\
+  \ and \nhosts being unencrypted and unauthenticated"
+rationale: "3.3.5 Orchestrator node trust \nMaintenance of trust between the nodes\
+  \ in the environment requires special care. The \norchestrator is the most foundational\
+  \ node. Weak orchestrator configurations can expose the \norchestrator and all other\
+  \ container technology components to increased risk. Examples of \npossible consequences\
+  \ include: \n• Unauthorized hosts joining the cluster and running containers \n\
+  • The compromise of a single cluster host implying compromise of the entire cluster—for\
+  \ \nexample, if the same key pairs used for authentication are shared across all\
+  \ nodes \n• Communications between the orchestrator and DevOps personnel, administrators,\
+  \ and \nhosts being unencrypted and unauthenticated"
+developer_guidance: "3.3.5 Orchestrator node trust \nMaintenance of trust between\
+  \ the nodes in the environment requires special care. The \norchestrator is the\
+  \ most foundational node. Weak orchestrator configurations can expose the \norchestrator\
+  \ and all other container technology components to increased risk. Examples of \n\
+  possible consequences include: \n• Unauthorized hosts joining the cluster and running\
+  \ containers \n• The compromise of a single cluster host implying compromise of\
+  \ the entire cluster—for \nexample, if the same key pairs used for authentication\
+  \ are shared across all nodes \n• Communications between the orchestrator and DevOps\
+  \ personnel, administrators, and \nhosts being unencrypted and unauthenticated"
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.3.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

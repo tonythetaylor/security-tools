@@ -1,0 +1,73 @@
+id: nist-800-190-3-4-3
+title: 3.4.3 Insecure container runtime configurations
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_4_3
+severity_guidance: medium
+description: "3.4.3 Insecure container runtime configurations \nContainer runtimes\
+  \ typically expose many configurable options to administrators. Setting them \n\
+  improperly can lower the relative security of the system. For example, on Linux\
+  \ container hosts, \nthe set of allowed system calls is often limited by default\
+  \ to only those required for safe \noperation of containers. If this list is widened,\
+  \ it may expose containers and the host OS to \nincreased risk from a compromised\
+  \ container. Similarly, if a container is run in privileged mode, \nit has access\
+  \ to all the devices on the host, thus allowing it to essentially act as part of\
+  \ the host \nOS and impact all other containers running on it. \nAnother example\
+  \ of an insecure runtime configuration is allowing containers to mount sensitive\
+  \ \ndirectories on the host. Containers should rarely make changes to the host OS\
+  \ file system and \nshould almost never make changes to locations that control the\
+  \ basic functionality of the host OS \n(e.g., /boot or /etc for Linux containers,\
+  \ C:\\Windows for Windows containers). If a compromised \ncontainer is allowed to\
+  \ make changes to these paths, it could be used to elevate privileges and \nattack\
+  \ the host itself as well as other containers running on the host."
+rationale: "3.4.3 Insecure container runtime configurations \nContainer runtimes typically\
+  \ expose many configurable options to administrators. Setting them \nimproperly\
+  \ can lower the relative security of the system. For example, on Linux container\
+  \ hosts, \nthe set of allowed system calls is often limited by default to only those\
+  \ required for safe \noperation of containers. If this list is widened, it may expose\
+  \ containers and the host OS to \nincreased risk from a compromised container. Similarly,\
+  \ if a container is run in privileged mode, \nit has access to all the devices on\
+  \ the host, thus allowing it to essentially act as part of the host \nOS and impact\
+  \ all other containers running on it. \nAnother example of an insecure runtime configuration\
+  \ is allowing containers to mount sensitive \ndirectories on the host. Containers\
+  \ should rarely make changes to the host OS file system and \nshould almost never\
+  \ make changes to locations that control the basic functionality of the host OS\
+  \ \n(e.g., /boot or /etc for Linux containers, C:\\Windows for Windows containers).\
+  \ If a compromised \ncontainer is allowed to make changes to these paths, it could\
+  \ be used to elevate privileges and \nattack the host itself as well as other containers\
+  \ running on the host."
+developer_guidance: "3.4.3 Insecure container runtime configurations \nContainer runtimes\
+  \ typically expose many configurable options to administrators. Setting them \n\
+  improperly can lower the relative security of the system. For example, on Linux\
+  \ container hosts, \nthe set of allowed system calls is often limited by default\
+  \ to only those required for safe \noperation of containers. If this list is widened,\
+  \ it may expose containers and the host OS to \nincreased risk from a compromised\
+  \ container. Similarly, if a container is run in privileged mode, \nit has access\
+  \ to all the devices on the host, thus allowing it to essentially act as part of\
+  \ the host \nOS and impact all other containers running on it. \nAnother example\
+  \ of an insecure runtime configuration is allowing containers to mount sensitive\
+  \ \ndirectories on the host. Containers should rarely make changes to the host OS\
+  \ file system and \nshould almost never make changes to locations that control the\
+  \ basic functionality of the host OS \n(e.g., /boot or /etc for Linux containers,\
+  \ C:\\Windows for Windows containers). If a compromised \ncontainer is allowed to\
+  \ make changes to these paths, it could be used to elevate privileges and \nattack\
+  \ the host itself as well as other containers running on the host."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.4.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

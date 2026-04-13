@@ -1,0 +1,58 @@
+id: cis-08-9
+title: 08.9 Centralize Audit Logs
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_08
+- safeguard
+- safeguard_8_9
+severity_guidance: medium
+description: '8.9
+
+  Centralize Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Centralize, to the extent possible, audit log collection and retention across enterprise
+  assets.'
+rationale: '8.9
+
+  Centralize Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Centralize, to the extent possible, audit log collection and retention across enterprise
+  assets.'
+developer_guidance: '8.9
+
+  Centralize Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Centralize, to the extent possible, audit log collection and retention across enterprise
+  assets.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 08.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

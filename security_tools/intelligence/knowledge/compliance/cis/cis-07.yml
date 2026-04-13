@@ -1,0 +1,115 @@
+id: cis-07
+title: 07 Continuous Vulnerability Management
+category: vulnerability_management
+applies_to:
+- vulnerability_management
+- container_scanning
+- dependency_scan
+- patch_management
+tags:
+- cis
+- control
+- control_07
+- patching
+- scanning
+- vulnerabilities
+severity_guidance: medium
+description: "07\nContinuous Vulnerability Management\nDevelop a plan to continuously\
+  \ assess and track vulnerabilities on all enterprise assets within the enterprise’s\
+  \ infrastructure, in order to remediate, \nand minimize, the window of opportunity\
+  \ for attackers. Monitor public and private industry sources for new threat and\
+  \ vulnerability information.\n7.1\nEstablish and Maintain a Vulnerability Management\
+  \ Process\nApplications\n-Protect-\n• • •\nEstablish and maintain a documented vulnerability\
+  \ management process for enterprise assets. Review and update documentation \nannually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard.\n\
+  7.2\nEstablish and Maintain a Remediation Process\nApplications\n-Respond-\n• •\
+  \ •\nEstablish and maintain a risk-based remediation strategy documented in a remediation\
+  \ process, with monthly, or more frequent, reviews.\n7.3\nPerform Automated Operating\
+  \ System Patch Management\nApplications\n-Protect-\n• • •\nPerform operating system\
+  \ updates on enterprise assets through automated patch management on a monthly,\
+  \ or more frequent, basis.\n7.4\nPerform Automated Application Patch Management\n\
+  Applications\n-Protect-\n• • •\nPerform application updates on enterprise assets\
+  \ through automated patch management on a monthly, or more frequent, basis.\n7.5\n\
+  Perform Automated Vulnerability Scans of Internal Enterprise Assets\nApplications\n\
+  -Identify-\n• •\nPerform automated vulnerability scans of internal enterprise assets\
+  \ on a quarterly, or more frequent, basis. Conduct both authenticated \nand unauthenticated\
+  \ scans, using a SCAP-compliant vulnerability scanning tool.\n\nCIS Controls v8\n\
+  A9 \n\uFEFFControls and Safeguards Index\nControl 07 / Safeguard 7.6 — Control 08\
+  \ / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3\n7.6\nPerform Automated Vulnerability Scans of\
+  \ Externally-Exposed Enterprise Assets\nApplications\n-Identify-\n• •\nPerform automated\
+  \ vulnerability scans of externally-exposed enterprise assets using a SCAP-compliant\
+  \ vulnerability scanning tool. \nPerform scans on a monthly, or more frequent, basis.\
+  \ \n7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n• •\nRemediate\
+  \ detected vulnerabilities in software through processes and tooling on a monthly,\
+  \ or more frequent, basis, based on the \nremediation process."
+rationale: "07\nContinuous Vulnerability Management\nDevelop a plan to continuously\
+  \ assess and track vulnerabilities on all enterprise assets within the enterprise’s\
+  \ infrastructure, in order to remediate, \nand minimize, the window of opportunity\
+  \ for attackers. Monitor public and private industry sources for new threat and\
+  \ vulnerability information.\n7.1\nEstablish and Maintain a Vulnerability Management\
+  \ Process\nApplications\n-Protect-\n• • •\nEstablish and maintain a documented vulnerability\
+  \ management process for enterprise assets. Review and update documentation \nannually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard.\n\
+  7.2\nEstablish and Maintain a Remediation Process\nApplications\n-Respond-\n• •\
+  \ •\nEstablish and maintain a risk-based remediation strategy documented in a remediation\
+  \ process, with monthly, or more frequent, reviews.\n7.3\nPerform Automated Operating\
+  \ System Patch Management\nApplications\n-Protect-\n• • •\nPerform operating system\
+  \ updates on enterprise assets through automated patch management on a monthly,\
+  \ or more frequent, basis.\n7.4\nPerform Automated Application Patch Management\n\
+  Applications\n-Protect-\n• • •\nPerform application updates on enterprise assets\
+  \ through automated patch management on a monthly, or more frequent, basis.\n7.5\n\
+  Perform Automated Vulnerability Scans of Internal Enterprise Assets\nApplications\n\
+  -Identify-\n• •\nPerform automated vulnerability scans of internal enterprise assets\
+  \ on a quarterly, or more frequent, basis. Conduct both authenticated \nand unauthenticated\
+  \ scans, using a SCAP-compliant vulnerability scanning tool.\n\nCIS Controls v8\n\
+  A9 \n\uFEFFControls and Safeguards Index\nControl 07 / Safeguard 7.6 — Control 08\
+  \ / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3\n7.6\nPerform Automated Vulnerability Scans of\
+  \ Externally-Exposed Enterprise Assets\nApplications\n-Identify-\n• •\nPerform automated\
+  \ vulnerability scans of externally-exposed enterprise assets using a SCAP-compliant\
+  \ vulnerability scanning tool. \nPerform scans on a monthly, or more frequent, basis.\
+  \ \n7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n• •\nRemediate\
+  \ detected vulnerabilities in software through processes and tooling on a monthly,\
+  \ or more frequent, basis, based on the \nremediation process."
+developer_guidance: "07\nContinuous Vulnerability Management\nDevelop a plan to continuously\
+  \ assess and track vulnerabilities on all enterprise assets within the enterprise’s\
+  \ infrastructure, in order to remediate, \nand minimize, the window of opportunity\
+  \ for attackers. Monitor public and private industry sources for new threat and\
+  \ vulnerability information.\n7.1\nEstablish and Maintain a Vulnerability Management\
+  \ Process\nApplications\n-Protect-\n• • •\nEstablish and maintain a documented vulnerability\
+  \ management process for enterprise assets. Review and update documentation \nannually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard.\n\
+  7.2\nEstablish and Maintain a Remediation Process\nApplications\n-Respond-\n• •\
+  \ •\nEstablish and maintain a risk-based remediation strategy documented in a remediation\
+  \ process, with monthly, or more frequent, reviews.\n7.3\nPerform Automated Operating\
+  \ System Patch Management\nApplications\n-Protect-\n• • •\nPerform operating system\
+  \ updates on enterprise assets through automated patch management on a monthly,\
+  \ or more frequent, basis.\n7.4\nPerform Automated Application Patch Management\n\
+  Applications\n-Protect-\n• • •\nPerform application updates on enterprise assets\
+  \ through automated patch management on a monthly, or more frequent, basis.\n7.5\n\
+  Perform Automated Vulnerability Scans of Internal Enterprise Assets\nApplications\n\
+  -Identify-\n• •\nPerform automated vulnerability scans of internal enterprise assets\
+  \ on a quarterly, or more frequent, basis. Conduct both authenticated \nand unauthenticated\
+  \ scans, using a SCAP-compliant vulnerability scanning tool.\n\nCIS Controls v8\n\
+  A9 \n\uFEFFControls and Safeguards Index\nControl 07 / Safeguard 7.6 — Control 08\
+  \ / Safeguard 8.12\nCONTROL\nSAFEGUARD\nNUMBER\nTITLE/ \nDESCRIPTION\nASSET TYPE\n\
+  SECURITY FUNCTION\nIG1\nIG2\nIG3\n7.6\nPerform Automated Vulnerability Scans of\
+  \ Externally-Exposed Enterprise Assets\nApplications\n-Identify-\n• •\nPerform automated\
+  \ vulnerability scans of externally-exposed enterprise assets using a SCAP-compliant\
+  \ vulnerability scanning tool. \nPerform scans on a monthly, or more frequent, basis.\
+  \ \n7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n• •\nRemediate\
+  \ detected vulnerabilities in software through processes and tooling on a monthly,\
+  \ or more frequent, basis, based on the \nremediation process."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,31 @@
+id: cis-03-10
+title: 03.10 Encrypt Sensitive Data in Transit
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_10
+severity_guidance: medium
+description: "3.10\nEncrypt Sensitive Data in Transit\nData\n-Protect-\n• •\nEncrypt\
+  \ sensitive data in transit. Example implementations can include: Transport Layer\
+  \ Security (TLS) and Open Secure \nShell (OpenSSH)."
+rationale: "3.10\nEncrypt Sensitive Data in Transit\nData\n-Protect-\n• •\nEncrypt\
+  \ sensitive data in transit. Example implementations can include: Transport Layer\
+  \ Security (TLS) and Open Secure \nShell (OpenSSH)."
+developer_guidance: "3.10\nEncrypt Sensitive Data in Transit\nData\n-Protect-\n• •\n\
+  Encrypt sensitive data in transit. Example implementations can include: Transport\
+  \ Layer Security (TLS) and Open Secure \nShell (OpenSSH)."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.10
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,47 @@
+id: cis-17-3
+title: 17.3 Establish and Maintain an Enterprise Process for Reporting Incidents
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_3
+severity_guidance: medium
+description: "17.3\nEstablish and Maintain an Enterprise Process for Reporting Incidents\n\
+  N/A\n-Respond-\n• • •\nEstablish and maintain an enterprise process for the workforce\
+  \ to report security incidents. The process includes reporting timeframe, \npersonnel\
+  \ to report to, mechanism for reporting, and the minimum information to be reported.\
+  \ Ensure the process is publicly available to \nall of the workforce. Review annually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard."
+rationale: "17.3\nEstablish and Maintain an Enterprise Process for Reporting Incidents\n\
+  N/A\n-Respond-\n• • •\nEstablish and maintain an enterprise process for the workforce\
+  \ to report security incidents. The process includes reporting timeframe, \npersonnel\
+  \ to report to, mechanism for reporting, and the minimum information to be reported.\
+  \ Ensure the process is publicly available to \nall of the workforce. Review annually,\
+  \ or when significant enterprise changes occur that could impact this Safeguard."
+developer_guidance: "17.3\nEstablish and Maintain an Enterprise Process for Reporting\
+  \ Incidents\nN/A\n-Respond-\n• • •\nEstablish and maintain an enterprise process\
+  \ for the workforce to report security incidents. The process includes reporting\
+  \ timeframe, \npersonnel to report to, mechanism for reporting, and the minimum\
+  \ information to be reported. Ensure the process is publicly available to \nall\
+  \ of the workforce. Review annually, or when significant enterprise changes occur\
+  \ that could impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

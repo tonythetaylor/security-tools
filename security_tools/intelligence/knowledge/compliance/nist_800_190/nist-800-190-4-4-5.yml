@@ -1,0 +1,49 @@
+id: nist-800-190-4-4-5
+title: 4.4.5 Rogue containers
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_4_5
+severity_guidance: medium
+description: "4.4.5 Rogue containers \nOrganizations should institute separate environments\
+  \ for development, test, production, and \nother scenarios, each with specific controls\
+  \ to provide role-based access control for container \ndeployment and management\
+  \ activities. All container creation should be associated with \nindividual user\
+  \ identities and logged to provide a clear audit trail of activity. Further, \n\
+  organizations are encouraged to use security tools that can enforce baseline requirements\
+  \ for \nvulnerability management and compliance prior to allowing an image to be\
+  \ run."
+rationale: "4.4.5 Rogue containers \nOrganizations should institute separate environments\
+  \ for development, test, production, and \nother scenarios, each with specific controls\
+  \ to provide role-based access control for container \ndeployment and management\
+  \ activities. All container creation should be associated with \nindividual user\
+  \ identities and logged to provide a clear audit trail of activity. Further, \n\
+  organizations are encouraged to use security tools that can enforce baseline requirements\
+  \ for \nvulnerability management and compliance prior to allowing an image to be\
+  \ run."
+developer_guidance: "4.4.5 Rogue containers \nOrganizations should institute separate\
+  \ environments for development, test, production, and \nother scenarios, each with\
+  \ specific controls to provide role-based access control for container \ndeployment\
+  \ and management activities. All container creation should be associated with \n\
+  individual user identities and logged to provide a clear audit trail of activity.\
+  \ Further, \norganizations are encouraged to use security tools that can enforce\
+  \ baseline requirements for \nvulnerability management and compliance prior to allowing\
+  \ an image to be run."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.4.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

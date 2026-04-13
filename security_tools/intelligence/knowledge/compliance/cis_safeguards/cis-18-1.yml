@@ -1,0 +1,51 @@
+id: cis-18-1
+title: 18.1 Establish and Maintain a Penetration Testing Program
+category: assurance_security
+applies_to:
+- penetration_testing
+- security_validation
+tags:
+- assurance
+- cis
+- control_18
+- penetration-testing
+- safeguard
+- safeguard_18_1
+- validation
+severity_guidance: medium
+description: "18.1\nEstablish and Maintain a Penetration Testing Program\nN/A\n-Identify-\n\
+  • •\nEstablish and maintain a penetration testing program appropriate to the size,\
+  \ complexity, and maturity of the enterprise. Penetration \ntesting program characteristics\
+  \ include scope, such as network, web application, Application Programming Interface\
+  \ (API), hosted \nservices, and physical premise controls; frequency; limitations,\
+  \ such as acceptable hours, and excluded attack types; point of contact \ninformation;\
+  \ remediation, such as how findings will be routed internally; and retrospective\
+  \ requirements."
+rationale: "18.1\nEstablish and Maintain a Penetration Testing Program\nN/A\n-Identify-\n\
+  • •\nEstablish and maintain a penetration testing program appropriate to the size,\
+  \ complexity, and maturity of the enterprise. Penetration \ntesting program characteristics\
+  \ include scope, such as network, web application, Application Programming Interface\
+  \ (API), hosted \nservices, and physical premise controls; frequency; limitations,\
+  \ such as acceptable hours, and excluded attack types; point of contact \ninformation;\
+  \ remediation, such as how findings will be routed internally; and retrospective\
+  \ requirements."
+developer_guidance: "18.1\nEstablish and Maintain a Penetration Testing Program\n\
+  N/A\n-Identify-\n• •\nEstablish and maintain a penetration testing program appropriate\
+  \ to the size, complexity, and maturity of the enterprise. Penetration \ntesting\
+  \ program characteristics include scope, such as network, web application, Application\
+  \ Programming Interface (API), hosted \nservices, and physical premise controls;\
+  \ frequency; limitations, such as acceptable hours, and excluded attack types; point\
+  \ of contact \ninformation; remediation, such as how findings will be routed internally;\
+  \ and retrospective requirements."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: Safeguard 18.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

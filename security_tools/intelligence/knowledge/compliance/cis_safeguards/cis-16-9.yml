@@ -1,0 +1,52 @@
+id: cis-16-9
+title: 16.9 Train Developers in Application Security Concepts and Secure Coding
+category: application_security
+applies_to:
+- sast
+- secure_sdlc
+- application_security
+- dependency_scan
+- third_party_components
+tags:
+- appsec
+- cis
+- control_16
+- safeguard
+- safeguard_16_9
+- sast
+- secure-development
+- third-party-code
+severity_guidance: medium
+description: "16.9\nTrain Developers in Application Security Concepts and Secure Coding\n\
+  Applications\n-Protect-\n• •\nEnsure that all software development personnel receive\
+  \ training in writing secure code for their specific development environment and\
+  \ \nresponsibilities. Training can include general security principles and application\
+  \ security standard practices. Conduct training at least \nannually and design in\
+  \ a way to promote security within the development team, and build a culture of\
+  \ security among the developers."
+rationale: "16.9\nTrain Developers in Application Security Concepts and Secure Coding\n\
+  Applications\n-Protect-\n• •\nEnsure that all software development personnel receive\
+  \ training in writing secure code for their specific development environment and\
+  \ \nresponsibilities. Training can include general security principles and application\
+  \ security standard practices. Conduct training at least \nannually and design in\
+  \ a way to promote security within the development team, and build a culture of\
+  \ security among the developers."
+developer_guidance: "16.9\nTrain Developers in Application Security Concepts and Secure\
+  \ Coding\nApplications\n-Protect-\n• •\nEnsure that all software development personnel\
+  \ receive training in writing secure code for their specific development environment\
+  \ and \nresponsibilities. Training can include general security principles and application\
+  \ security standard practices. Conduct training at least \nannually and design in\
+  \ a way to promote security within the development team, and build a culture of\
+  \ security among the developers."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.9
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

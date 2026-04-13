@@ -1,0 +1,55 @@
+id: cis-08-6
+title: 08.6 Collect DNS Query Audit Logs
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_08
+- safeguard
+- safeguard_8_6
+severity_guidance: medium
+description: '8.6
+
+  Collect DNS Query Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Collect DNS query audit logs on enterprise assets, where appropriate and supported.'
+rationale: '8.6
+
+  Collect DNS Query Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Collect DNS query audit logs on enterprise assets, where appropriate and supported.'
+developer_guidance: '8.6
+
+  Collect DNS Query Audit Logs
+
+  Network
+
+  -Detect-
+
+  • •
+
+  Collect DNS query audit logs on enterprise assets, where appropriate and supported.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 08.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

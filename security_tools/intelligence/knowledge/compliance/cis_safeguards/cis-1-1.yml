@@ -1,0 +1,67 @@
+id: cis-1-1
+title: 1.1 Establish and Maintain Detailed Enterprise Asset Inventory
+category: asset_security
+applies_to:
+- asset_inventory
+- asset_management
+- unauthorized_assets
+tags:
+- asset-inventory
+- cis
+- control_01
+- enterprise-assets
+- safeguard
+- safeguard_1_1
+- visibility
+severity_guidance: medium
+description: "1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\nDevices\n\
+  -Identify-\n• • •\nEstablish and maintain an accurate, detailed, and up-to-date\
+  \ inventory of all enterprise assets with the potential to store or process data,\
+  \ \nto include: end-user devices (including portable and mobile), network devices,\
+  \ non-computing/IoT devices, and servers. Ensure the \ninventory records the network\
+  \ address (if static), hardware address, machine name, enterprise asset owner, department\
+  \ for each asset, \nand whether the asset has been approved to connect to the network.\
+  \ For mobile end-user devices, MDM type tools can support this \nprocess, where\
+  \ appropriate. This inventory includes assets connected to the infrastructure physically,\
+  \ virtually, remotely, and those within \ncloud environments. Additionally, it includes\
+  \ assets that are regularly connected to the enterprise’s network infrastructure,\
+  \ even if they \nare not under control of the enterprise. Review and update the\
+  \ inventory of all enterprise assets bi-annually, or more frequently."
+rationale: "1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\nDevices\n\
+  -Identify-\n• • •\nEstablish and maintain an accurate, detailed, and up-to-date\
+  \ inventory of all enterprise assets with the potential to store or process data,\
+  \ \nto include: end-user devices (including portable and mobile), network devices,\
+  \ non-computing/IoT devices, and servers. Ensure the \ninventory records the network\
+  \ address (if static), hardware address, machine name, enterprise asset owner, department\
+  \ for each asset, \nand whether the asset has been approved to connect to the network.\
+  \ For mobile end-user devices, MDM type tools can support this \nprocess, where\
+  \ appropriate. This inventory includes assets connected to the infrastructure physically,\
+  \ virtually, remotely, and those within \ncloud environments. Additionally, it includes\
+  \ assets that are regularly connected to the enterprise’s network infrastructure,\
+  \ even if they \nare not under control of the enterprise. Review and update the\
+  \ inventory of all enterprise assets bi-annually, or more frequently."
+developer_guidance: "1.1\nEstablish and Maintain Detailed Enterprise Asset Inventory\n\
+  Devices\n-Identify-\n• • •\nEstablish and maintain an accurate, detailed, and up-to-date\
+  \ inventory of all enterprise assets with the potential to store or process data,\
+  \ \nto include: end-user devices (including portable and mobile), network devices,\
+  \ non-computing/IoT devices, and servers. Ensure the \ninventory records the network\
+  \ address (if static), hardware address, machine name, enterprise asset owner, department\
+  \ for each asset, \nand whether the asset has been approved to connect to the network.\
+  \ For mobile end-user devices, MDM type tools can support this \nprocess, where\
+  \ appropriate. This inventory includes assets connected to the infrastructure physically,\
+  \ virtually, remotely, and those within \ncloud environments. Additionally, it includes\
+  \ assets that are regularly connected to the enterprise’s network infrastructure,\
+  \ even if they \nare not under control of the enterprise. Review and update the\
+  \ inventory of all enterprise assets bi-annually, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: Safeguard 1.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

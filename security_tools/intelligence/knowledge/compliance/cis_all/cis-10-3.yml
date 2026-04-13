@@ -1,0 +1,55 @@
+id: cis-10-3
+title: 10.3 Disable Autorun and Autoplay for Removable Media
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_10
+- safeguard
+- safeguard_10_3
+severity_guidance: medium
+description: '10.3
+
+  Disable Autorun and Autoplay for Removable Media
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Disable autorun and autoplay auto-execute functionality for removable media.'
+rationale: '10.3
+
+  Disable Autorun and Autoplay for Removable Media
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Disable autorun and autoplay auto-execute functionality for removable media.'
+developer_guidance: '10.3
+
+  Disable Autorun and Autoplay for Removable Media
+
+  Devices
+
+  -Protect-
+
+  • • •
+
+  Disable autorun and autoplay auto-execute functionality for removable media.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 10
+  note: Safeguard 10.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

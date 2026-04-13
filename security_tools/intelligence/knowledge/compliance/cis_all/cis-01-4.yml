@@ -1,0 +1,37 @@
+id: cis-01-4
+title: 01.4 Use Dynamic Host Configuration Protocol (DHCP) Logging to Update Enterprise
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_01
+- safeguard
+- safeguard_1_4
+severity_guidance: medium
+description: "1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to Update\
+  \ Enterprise \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging on all\
+  \ DHCP servers or Internet Protocol (IP) address management tools to update the\
+  \ enterprise’s asset inventory. \nReview and use logs to update the enterprise’s\
+  \ asset inventory weekly, or more frequently."
+rationale: "1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to Update\
+  \ Enterprise \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging on all\
+  \ DHCP servers or Internet Protocol (IP) address management tools to update the\
+  \ enterprise’s asset inventory. \nReview and use logs to update the enterprise’s\
+  \ asset inventory weekly, or more frequently."
+developer_guidance: "1.4\nUse Dynamic Host Configuration Protocol (DHCP) Logging to\
+  \ Update Enterprise \nAsset Inventory\nDevices\n-Identify-\n• •\nUse DHCP logging\
+  \ on all DHCP servers or Internet Protocol (IP) address management tools to update\
+  \ the enterprise’s asset inventory. \nReview and use logs to update the enterprise’s\
+  \ asset inventory weekly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: Safeguard 01.4
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

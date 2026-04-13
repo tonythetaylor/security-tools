@@ -1,0 +1,88 @@
+id: nist-800-190-4-1-4
+title: 4.1.4 Embedded clear text secrets
+category: secret_security
+applies_to:
+- secret_detection
+- embedded_secrets
+- image_security
+tags:
+- 800-190
+- containers
+- countermeasures
+- images
+- nist
+- secrets
+- section_4_1_4
+severity_guidance: medium
+description: "4.1.4 Embedded clear text secrets \nSecrets should be stored outside\
+  \ of images and provided dynamically at runtime as needed. Most \norchestrators,\
+  \ such as Docker Swarm and Kubernetes, include native management of secrets. \n\
+  These orchestrators not only provide secure storage of secrets and ‘just in time’\
+  \ injection to \ncontainers, but also make it much simpler to integrate secret management\
+  \ into the build and \ndeployment processes. For example, an organization could\
+  \ use these tools to securely provision \nthe database connection string into a\
+  \ web application container. The orchestrator can ensure that \nonly the web application\
+  \ container had access to this secret, that it is not persisted to disk, and \n\
+  that anytime the web app is deployed, the secret is provisioned into it. \nOrganizations\
+  \ may also integrate their container deployments with existing enterprise secret\
+  \ \nmanagement systems that are already in use for storing secrets in non-container\
+  \ environments. \nThese tools typically provide APIs to retrieve secrets securely\
+  \ as containers are deployed, which \neliminates the need to persist them within\
+  \ images. \nRegardless of the tool chosen, organizations should ensure that secrets\
+  \ are only provided to the \nspecific containers that require them, based on a pre-defined\
+  \ and administrator-controlled setting, \nand that secrets are always encrypted\
+  \ at rest and in transit using Federal Information Processing \nStandard (FIPS)\
+  \ 140 approved cryptographic algorithms5 contained in validated cryptographic \n\
+  modules."
+rationale: "4.1.4 Embedded clear text secrets \nSecrets should be stored outside of\
+  \ images and provided dynamically at runtime as needed. Most \norchestrators, such\
+  \ as Docker Swarm and Kubernetes, include native management of secrets. \nThese\
+  \ orchestrators not only provide secure storage of secrets and ‘just in time’ injection\
+  \ to \ncontainers, but also make it much simpler to integrate secret management\
+  \ into the build and \ndeployment processes. For example, an organization could\
+  \ use these tools to securely provision \nthe database connection string into a\
+  \ web application container. The orchestrator can ensure that \nonly the web application\
+  \ container had access to this secret, that it is not persisted to disk, and \n\
+  that anytime the web app is deployed, the secret is provisioned into it. \nOrganizations\
+  \ may also integrate their container deployments with existing enterprise secret\
+  \ \nmanagement systems that are already in use for storing secrets in non-container\
+  \ environments. \nThese tools typically provide APIs to retrieve secrets securely\
+  \ as containers are deployed, which \neliminates the need to persist them within\
+  \ images. \nRegardless of the tool chosen, organizations should ensure that secrets\
+  \ are only provided to the \nspecific containers that require them, based on a pre-defined\
+  \ and administrator-controlled setting, \nand that secrets are always encrypted\
+  \ at rest and in transit using Federal Information Processing \nStandard (FIPS)\
+  \ 140 approved cryptographic algorithms5 contained in validated cryptographic \n\
+  modules."
+developer_guidance: "4.1.4 Embedded clear text secrets \nSecrets should be stored\
+  \ outside of images and provided dynamically at runtime as needed. Most \norchestrators,\
+  \ such as Docker Swarm and Kubernetes, include native management of secrets. \n\
+  These orchestrators not only provide secure storage of secrets and ‘just in time’\
+  \ injection to \ncontainers, but also make it much simpler to integrate secret management\
+  \ into the build and \ndeployment processes. For example, an organization could\
+  \ use these tools to securely provision \nthe database connection string into a\
+  \ web application container. The orchestrator can ensure that \nonly the web application\
+  \ container had access to this secret, that it is not persisted to disk, and \n\
+  that anytime the web app is deployed, the secret is provisioned into it. \nOrganizations\
+  \ may also integrate their container deployments with existing enterprise secret\
+  \ \nmanagement systems that are already in use for storing secrets in non-container\
+  \ environments. \nThese tools typically provide APIs to retrieve secrets securely\
+  \ as containers are deployed, which \neliminates the need to persist them within\
+  \ images. \nRegardless of the tool chosen, organizations should ensure that secrets\
+  \ are only provided to the \nspecific containers that require them, based on a pre-defined\
+  \ and administrator-controlled setting, \nand that secrets are always encrypted\
+  \ at rest and in transit using Federal Information Processing \nStandard (FIPS)\
+  \ 140 approved cryptographic algorithms5 contained in validated cryptographic \n\
+  modules."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.1.4
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,55 @@
+id: nist-800-190-3-1-5
+title: 3.1.5 Use of untrusted images
+category: supply_chain_security
+applies_to:
+- trusted_images
+- image_provenance
+- software_supply_chain
+tags:
+- 800-190
+- containers
+- nist
+- provenance
+- section_3_1_5
+- supply-chain
+- trusted-images
+severity_guidance: medium
+description: "3.1.5 Use of untrusted images \nOne of the most common high-risk scenarios\
+  \ in any environment is the execution of untrusted \nsoftware. The portability and\
+  \ ease of reuse of containers increase the temptation for teams to run \nimages\
+  \ from external sources that may not be well validated or trustworthy. For example,\
+  \ when \ntroubleshooting a problem with a web app, a user may find another version\
+  \ of that app available \nin an image provided by a third party. Using this externally\
+  \ provided image results in the same \ntypes of risks that external software traditionally\
+  \ has, such as introducing malware, leaking data, \nor including components with\
+  \ vulnerabilities."
+rationale: "3.1.5 Use of untrusted images \nOne of the most common high-risk scenarios\
+  \ in any environment is the execution of untrusted \nsoftware. The portability and\
+  \ ease of reuse of containers increase the temptation for teams to run \nimages\
+  \ from external sources that may not be well validated or trustworthy. For example,\
+  \ when \ntroubleshooting a problem with a web app, a user may find another version\
+  \ of that app available \nin an image provided by a third party. Using this externally\
+  \ provided image results in the same \ntypes of risks that external software traditionally\
+  \ has, such as introducing malware, leaking data, \nor including components with\
+  \ vulnerabilities."
+developer_guidance: "3.1.5 Use of untrusted images \nOne of the most common high-risk\
+  \ scenarios in any environment is the execution of untrusted \nsoftware. The portability\
+  \ and ease of reuse of containers increase the temptation for teams to run \nimages\
+  \ from external sources that may not be well validated or trustworthy. For example,\
+  \ when \ntroubleshooting a problem with a web app, a user may find another version\
+  \ of that app available \nin an image provided by a third party. Using this externally\
+  \ provided image results in the same \ntypes of risks that external software traditionally\
+  \ has, such as introducing malware, leaking data, \nor including components with\
+  \ vulnerabilities."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.1.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

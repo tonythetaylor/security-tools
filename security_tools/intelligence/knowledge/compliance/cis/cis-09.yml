@@ -1,0 +1,99 @@
+id: cis-09
+title: 09 Email and Web Browser Protections
+category: email_web_security
+applies_to:
+- browser_security
+- email_security
+- content_filtering
+tags:
+- browser
+- cis
+- control
+- control_09
+- email
+- protections
+severity_guidance: medium
+description: "09\nEmail and Web Browser Protections\nImprove protections and detections\
+  \ of threats from email and web vectors, as these are opportunities for attackers\
+  \ to manipulate human behavior \nthrough direct engagement.\n9.1\nEnsure Use of\
+  \ Only Fully Supported Browsers and Email Clients\nApplications\n-Protect-\n• •\
+  \ •\nEnsure only fully supported browsers and email clients are allowed to execute\
+  \ in the enterprise, only using the latest version of browsers \nand email clients\
+  \ provided through the vendor.\n9.2\nUse DNS Filtering Services\nNetwork\n-Protect-\n\
+  • • •\nUse DNS filtering services on all enterprise assets to block access to known\
+  \ malicious domains.\n9.3\nMaintain and Enforce Network-Based URL Filters\nNetwork\n\
+  -Protect-\n• •\nEnforce and update network-based URL filters to limit an enterprise\
+  \ asset from connecting to potentially malicious or unapproved \nwebsites. Example\
+  \ implementations include category-based filtering, reputation-based filtering,\
+  \ or through the use of block lists. Enforce \nfilters for all enterprise assets.\n\
+  9.4\nRestrict Unnecessary or Unauthorized Browser and Email Client Extensions\n\
+  Applications\n-Protect-\n• •\nRestrict, either through uninstalling or disabling,\
+  \ any unauthorized or unnecessary browser or email client plugins, extensions, and\
+  \ \nadd-on applications.\n9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower\
+  \ the chance of spoofed or modified emails from valid domains, implement DMARC policy\
+  \ and verification, starting with \nimplementing the Sender Policy Framework (SPF)\
+  \ and the DomainKeys Identified Mail (DKIM) standards.\n9.6\nBlock Unnecessary File\
+  \ Types\nNetwork\n-Protect-\n• •\nBlock unnecessary file types attempting to enter\
+  \ the enterprise’s email gateway.\n9.7\nDeploy and Maintain Email Server Anti-Malware\
+  \ Protections\nNetwork\n-Protect-\n•\nDeploy and maintain email server anti-malware\
+  \ protections, such as attachment scanning and/or sandboxing."
+rationale: "09\nEmail and Web Browser Protections\nImprove protections and detections\
+  \ of threats from email and web vectors, as these are opportunities for attackers\
+  \ to manipulate human behavior \nthrough direct engagement.\n9.1\nEnsure Use of\
+  \ Only Fully Supported Browsers and Email Clients\nApplications\n-Protect-\n• •\
+  \ •\nEnsure only fully supported browsers and email clients are allowed to execute\
+  \ in the enterprise, only using the latest version of browsers \nand email clients\
+  \ provided through the vendor.\n9.2\nUse DNS Filtering Services\nNetwork\n-Protect-\n\
+  • • •\nUse DNS filtering services on all enterprise assets to block access to known\
+  \ malicious domains.\n9.3\nMaintain and Enforce Network-Based URL Filters\nNetwork\n\
+  -Protect-\n• •\nEnforce and update network-based URL filters to limit an enterprise\
+  \ asset from connecting to potentially malicious or unapproved \nwebsites. Example\
+  \ implementations include category-based filtering, reputation-based filtering,\
+  \ or through the use of block lists. Enforce \nfilters for all enterprise assets.\n\
+  9.4\nRestrict Unnecessary or Unauthorized Browser and Email Client Extensions\n\
+  Applications\n-Protect-\n• •\nRestrict, either through uninstalling or disabling,\
+  \ any unauthorized or unnecessary browser or email client plugins, extensions, and\
+  \ \nadd-on applications.\n9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower\
+  \ the chance of spoofed or modified emails from valid domains, implement DMARC policy\
+  \ and verification, starting with \nimplementing the Sender Policy Framework (SPF)\
+  \ and the DomainKeys Identified Mail (DKIM) standards.\n9.6\nBlock Unnecessary File\
+  \ Types\nNetwork\n-Protect-\n• •\nBlock unnecessary file types attempting to enter\
+  \ the enterprise’s email gateway.\n9.7\nDeploy and Maintain Email Server Anti-Malware\
+  \ Protections\nNetwork\n-Protect-\n•\nDeploy and maintain email server anti-malware\
+  \ protections, such as attachment scanning and/or sandboxing."
+developer_guidance: "09\nEmail and Web Browser Protections\nImprove protections and\
+  \ detections of threats from email and web vectors, as these are opportunities for\
+  \ attackers to manipulate human behavior \nthrough direct engagement.\n9.1\nEnsure\
+  \ Use of Only Fully Supported Browsers and Email Clients\nApplications\n-Protect-\n\
+  • • •\nEnsure only fully supported browsers and email clients are allowed to execute\
+  \ in the enterprise, only using the latest version of browsers \nand email clients\
+  \ provided through the vendor.\n9.2\nUse DNS Filtering Services\nNetwork\n-Protect-\n\
+  • • •\nUse DNS filtering services on all enterprise assets to block access to known\
+  \ malicious domains.\n9.3\nMaintain and Enforce Network-Based URL Filters\nNetwork\n\
+  -Protect-\n• •\nEnforce and update network-based URL filters to limit an enterprise\
+  \ asset from connecting to potentially malicious or unapproved \nwebsites. Example\
+  \ implementations include category-based filtering, reputation-based filtering,\
+  \ or through the use of block lists. Enforce \nfilters for all enterprise assets.\n\
+  9.4\nRestrict Unnecessary or Unauthorized Browser and Email Client Extensions\n\
+  Applications\n-Protect-\n• •\nRestrict, either through uninstalling or disabling,\
+  \ any unauthorized or unnecessary browser or email client plugins, extensions, and\
+  \ \nadd-on applications.\n9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower\
+  \ the chance of spoofed or modified emails from valid domains, implement DMARC policy\
+  \ and verification, starting with \nimplementing the Sender Policy Framework (SPF)\
+  \ and the DomainKeys Identified Mail (DKIM) standards.\n9.6\nBlock Unnecessary File\
+  \ Types\nNetwork\n-Protect-\n• •\nBlock unnecessary file types attempting to enter\
+  \ the enterprise’s email gateway.\n9.7\nDeploy and Maintain Email Server Anti-Malware\
+  \ Protections\nNetwork\n-Protect-\n•\nDeploy and maintain email server anti-malware\
+  \ protections, such as attachment scanning and/or sandboxing."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

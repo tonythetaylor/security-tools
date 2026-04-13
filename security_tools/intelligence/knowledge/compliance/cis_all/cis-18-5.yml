@@ -1,0 +1,79 @@
+id: cis-18-5
+title: 18.5 Perform Periodic Internal Penetration Tests
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_18
+- safeguard
+- safeguard_18_5
+severity_guidance: medium
+description: "18.5\nPerform Periodic Internal Penetration Tests\nN/A\n-Identify-\n\
+  •\nPerform periodic internal penetration tests based on program requirements, no\
+  \ less than annually. The testing may be clear box \nor opaque box.\n\ncisecurity.org\n\
+  \ info@cisecurity.org\n 518-266-3460\n Center for Internet Security\n @CISecurity\n\
+  \ CenterforIntSec\n TheCISecurity\n cisecurity\nThe Center for Internet Security,\
+  \ Inc. (CIS®) makes the connected \nworld a safer place for people, businesses,\
+  \ and governments \nthrough our core competencies of collaboration and innovation.\
+  \ \nWe are a community-driven nonprofit, responsible for the CIS \nControls® and\
+  \ CIS Benchmarks™, globally recognized best practices \nfor securing IT systems\
+  \ and data. We lead a global community \nof IT professionals to continuously evolve\
+  \ these standards and \nprovide products and services to proactively safeguard against\
+  \ \nemerging threats.\nOur CIS Hardened Images® provide secure, on-demand, scalable\
+  \ \ncomputing environments in the cloud. CIS is home to the \nMulti‑State Information\
+  \ Sharing and Analysis Center® (MS-ISAC®), \nthe trusted resource for cyber threat\
+  \ prevention, protection, \nresponse, and recovery for U.S. State, Local, Tribal,\
+  \ and Territorial \ngovernment entities, and the Elections Infrastructure Information\
+  \ \nSharing and Analysis Center® (EI‑ISAC®), which supports the rapidly \nchanging\
+  \ cybersecurity needs of U.S. elections offices. To learn \nmore, visit www.cisecurity.org\
+  \ or follow us on Twitter: @CISecurity."
+rationale: "18.5\nPerform Periodic Internal Penetration Tests\nN/A\n-Identify-\n•\n\
+  Perform periodic internal penetration tests based on program requirements, no less\
+  \ than annually. The testing may be clear box \nor opaque box.\n\ncisecurity.org\n\
+  \ info@cisecurity.org\n 518-266-3460\n Center for Internet Security\n @CISecurity\n\
+  \ CenterforIntSec\n TheCISecurity\n cisecurity\nThe Center for Internet Security,\
+  \ Inc. (CIS®) makes the connected \nworld a safer place for people, businesses,\
+  \ and governments \nthrough our core competencies of collaboration and innovation.\
+  \ \nWe are a community-driven nonprofit, responsible for the CIS \nControls® and\
+  \ CIS Benchmarks™, globally recognized best practices \nfor securing IT systems\
+  \ and data. We lead a global community \nof IT professionals to continuously evolve\
+  \ these standards and \nprovide products and services to proactively safeguard against\
+  \ \nemerging threats.\nOur CIS Hardened Images® provide secure, on-demand, scalable\
+  \ \ncomputing environments in the cloud. CIS is home to the \nMulti‑State Information\
+  \ Sharing and Analysis Center® (MS-ISAC®), \nthe trusted resource for cyber threat\
+  \ prevention, protection, \nresponse, and recovery for U.S. State, Local, Tribal,\
+  \ and Territorial \ngovernment entities, and the Elections Infrastructure Information\
+  \ \nSharing and Analysis Center® (EI‑ISAC®), which supports the rapidly \nchanging\
+  \ cybersecurity needs of U.S. elections offices. To learn \nmore, visit www.cisecurity.org\
+  \ or follow us on Twitter: @CISecurity."
+developer_guidance: "18.5\nPerform Periodic Internal Penetration Tests\nN/A\n-Identify-\n\
+  •\nPerform periodic internal penetration tests based on program requirements, no\
+  \ less than annually. The testing may be clear box \nor opaque box.\n\ncisecurity.org\n\
+  \ info@cisecurity.org\n 518-266-3460\n Center for Internet Security\n @CISecurity\n\
+  \ CenterforIntSec\n TheCISecurity\n cisecurity\nThe Center for Internet Security,\
+  \ Inc. (CIS®) makes the connected \nworld a safer place for people, businesses,\
+  \ and governments \nthrough our core competencies of collaboration and innovation.\
+  \ \nWe are a community-driven nonprofit, responsible for the CIS \nControls® and\
+  \ CIS Benchmarks™, globally recognized best practices \nfor securing IT systems\
+  \ and data. We lead a global community \nof IT professionals to continuously evolve\
+  \ these standards and \nprovide products and services to proactively safeguard against\
+  \ \nemerging threats.\nOur CIS Hardened Images® provide secure, on-demand, scalable\
+  \ \ncomputing environments in the cloud. CIS is home to the \nMulti‑State Information\
+  \ Sharing and Analysis Center® (MS-ISAC®), \nthe trusted resource for cyber threat\
+  \ prevention, protection, \nresponse, and recovery for U.S. State, Local, Tribal,\
+  \ and Territorial \ngovernment entities, and the Elections Infrastructure Information\
+  \ \nSharing and Analysis Center® (EI‑ISAC®), which supports the rapidly \nchanging\
+  \ cybersecurity needs of U.S. elections offices. To learn \nmore, visit www.cisecurity.org\
+  \ or follow us on Twitter: @CISecurity."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 18
+  note: Safeguard 18.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

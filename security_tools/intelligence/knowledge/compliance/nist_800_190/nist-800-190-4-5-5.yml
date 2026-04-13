@@ -1,0 +1,52 @@
+id: nist-800-190-4-5-5
+title: 4.5.5 Host file system tampering
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_4_5_5
+severity_guidance: medium
+description: "4.5.5 Host file system tampering \nEnsure that containers are run with\
+  \ the minimal set of file system permissions required. Very \nrarely should containers\
+  \ mount local file systems on a host. Instead, any file changes that \ncontainers\
+  \ need to persist to disk should be made within storage volumes specifically allocated\
+  \ \nfor this purpose. In no case should containers be able to mount sensitive directories\
+  \ on a host’s \nfile system, especially those containing configuration settings\
+  \ for the operating system.\n\nOrganizations should use tools that can monitor what\
+  \ directories are being mounted by \ncontainers and prevent the deployment of containers\
+  \ that violate these policies."
+rationale: "4.5.5 Host file system tampering \nEnsure that containers are run with\
+  \ the minimal set of file system permissions required. Very \nrarely should containers\
+  \ mount local file systems on a host. Instead, any file changes that \ncontainers\
+  \ need to persist to disk should be made within storage volumes specifically allocated\
+  \ \nfor this purpose. In no case should containers be able to mount sensitive directories\
+  \ on a host’s \nfile system, especially those containing configuration settings\
+  \ for the operating system.\n\nOrganizations should use tools that can monitor what\
+  \ directories are being mounted by \ncontainers and prevent the deployment of containers\
+  \ that violate these policies."
+developer_guidance: "4.5.5 Host file system tampering \nEnsure that containers are\
+  \ run with the minimal set of file system permissions required. Very \nrarely should\
+  \ containers mount local file systems on a host. Instead, any file changes that\
+  \ \ncontainers need to persist to disk should be made within storage volumes specifically\
+  \ allocated \nfor this purpose. In no case should containers be able to mount sensitive\
+  \ directories on a host’s \nfile system, especially those containing configuration\
+  \ settings for the operating system.\n\nOrganizations should use tools that can\
+  \ monitor what directories are being mounted by \ncontainers and prevent the deployment\
+  \ of containers that violate these policies."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.5.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

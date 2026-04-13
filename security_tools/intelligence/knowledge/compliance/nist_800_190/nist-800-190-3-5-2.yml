@@ -1,0 +1,49 @@
+id: nist-800-190-3-5-2
+title: 3.5.2 Shared kernel
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_5_2
+severity_guidance: medium
+description: "3.5.2 Shared kernel \nContainer-specific OSs have a much smaller attack\
+  \ surface than that of general-purpose OSs. For \nexample, they do not contain libraries\
+  \ and package managers that enable a general-purpose OS to \ndirectly run database\
+  \ and web server apps. However, although containers provide strong \nsoftware-level\
+  \ isolation of resources, the use of a shared kernel invariably results in a larger\
+  \ \ninter-object attack surface than seen with hypervisors, even for container-specific\
+  \ OSs. In other \nwords, the level of isolation provided by container runtimes is\
+  \ not as high as that provided by \nhypervisors."
+rationale: "3.5.2 Shared kernel \nContainer-specific OSs have a much smaller attack\
+  \ surface than that of general-purpose OSs. For \nexample, they do not contain libraries\
+  \ and package managers that enable a general-purpose OS to \ndirectly run database\
+  \ and web server apps. However, although containers provide strong \nsoftware-level\
+  \ isolation of resources, the use of a shared kernel invariably results in a larger\
+  \ \ninter-object attack surface than seen with hypervisors, even for container-specific\
+  \ OSs. In other \nwords, the level of isolation provided by container runtimes is\
+  \ not as high as that provided by \nhypervisors."
+developer_guidance: "3.5.2 Shared kernel \nContainer-specific OSs have a much smaller\
+  \ attack surface than that of general-purpose OSs. For \nexample, they do not contain\
+  \ libraries and package managers that enable a general-purpose OS to \ndirectly\
+  \ run database and web server apps. However, although containers provide strong\
+  \ \nsoftware-level isolation of resources, the use of a shared kernel invariably\
+  \ results in a larger \ninter-object attack surface than seen with hypervisors,\
+  \ even for container-specific OSs. In other \nwords, the level of isolation provided\
+  \ by container runtimes is not as high as that provided by \nhypervisors."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.5.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

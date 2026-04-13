@@ -1,0 +1,43 @@
+id: cis-13-5
+title: 13.5 Manage Access Control for Remote Assets
+category: network_defense
+applies_to:
+- network_monitoring
+- network_defense
+- traffic_analysis
+tags:
+- cis
+- control_13
+- defense
+- network-monitoring
+- safeguard
+- safeguard_13_5
+- traffic
+severity_guidance: medium
+description: "13.5\nManage Access Control for Remote Assets\nDevices\n-Protect-\n\
+  \ • •\nManage access control for assets remotely connecting to enterprise resources.\
+  \ Determine amount of access to enterprise resources \nbased on: up-to-date anti-malware\
+  \ software installed, configuration compliance with the enterprise’s secure configuration\
+  \ process, and \nensuring the operating system and applications are up-to-date."
+rationale: "13.5\nManage Access Control for Remote Assets\nDevices\n-Protect-\n •\
+  \ •\nManage access control for assets remotely connecting to enterprise resources.\
+  \ Determine amount of access to enterprise resources \nbased on: up-to-date anti-malware\
+  \ software installed, configuration compliance with the enterprise’s secure configuration\
+  \ process, and \nensuring the operating system and applications are up-to-date."
+developer_guidance: "13.5\nManage Access Control for Remote Assets\nDevices\n-Protect-\n\
+  \ • •\nManage access control for assets remotely connecting to enterprise resources.\
+  \ Determine amount of access to enterprise resources \nbased on: up-to-date anti-malware\
+  \ software installed, configuration compliance with the enterprise’s secure configuration\
+  \ process, and \nensuring the operating system and applications are up-to-date."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

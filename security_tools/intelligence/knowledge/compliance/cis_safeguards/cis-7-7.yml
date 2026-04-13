@@ -1,0 +1,38 @@
+id: cis-7-7
+title: 7.7 Remediate Detected Vulnerabilities
+category: vulnerability_management
+applies_to:
+- vulnerability_management
+- container_scanning
+- dependency_scan
+- patch_management
+tags:
+- cis
+- control_07
+- patching
+- safeguard
+- safeguard_7_7
+- scanning
+- vulnerabilities
+severity_guidance: medium
+description: "7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n•\
+  \ •\nRemediate detected vulnerabilities in software through processes and tooling\
+  \ on a monthly, or more frequent, basis, based on the \nremediation process."
+rationale: "7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n• •\n\
+  Remediate detected vulnerabilities in software through processes and tooling on\
+  \ a monthly, or more frequent, basis, based on the \nremediation process."
+developer_guidance: "7.7\nRemediate Detected Vulnerabilities\nApplications\n-Respond-\n\
+  • •\nRemediate detected vulnerabilities in software through processes and tooling\
+  \ on a monthly, or more frequent, basis, based on the \nremediation process."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 07
+  note: Safeguard 7.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

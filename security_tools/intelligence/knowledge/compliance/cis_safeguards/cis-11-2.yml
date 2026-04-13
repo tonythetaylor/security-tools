@@ -1,0 +1,64 @@
+id: cis-11-2
+title: 11.2 Perform Automated Backups
+category: resilience_security
+applies_to:
+- backup
+- data_recovery
+- restoration
+tags:
+- backup
+- cis
+- control_11
+- recovery
+- resilience
+- safeguard
+- safeguard_11_2
+severity_guidance: medium
+description: '11.2
+
+  Perform Automated Backups 
+
+  Data
+
+  -Recover-
+
+  • • •
+
+  Perform automated backups of in-scope enterprise assets. Run backups weekly, or
+  more frequently, based on the sensitivity of the data.'
+rationale: '11.2
+
+  Perform Automated Backups 
+
+  Data
+
+  -Recover-
+
+  • • •
+
+  Perform automated backups of in-scope enterprise assets. Run backups weekly, or
+  more frequently, based on the sensitivity of the data.'
+developer_guidance: '11.2
+
+  Perform Automated Backups 
+
+  Data
+
+  -Recover-
+
+  • • •
+
+  Perform automated backups of in-scope enterprise assets. Run backups weekly, or
+  more frequently, based on the sensitivity of the data.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 11
+  note: Safeguard 11.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

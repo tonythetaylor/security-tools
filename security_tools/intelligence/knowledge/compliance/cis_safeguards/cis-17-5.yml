@@ -1,0 +1,43 @@
+id: cis-17-5
+title: 17.5 Assign Key Roles and Responsibilities
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- cis
+- control_17
+- incident-response
+- operations
+- response
+- safeguard
+- safeguard_17_5
+severity_guidance: medium
+description: "17.5\nAssign Key Roles and Responsibilities\nN/A\n-Respond-\n• •\nAssign\
+  \ key roles and responsibilities for incident response, including staff from legal,\
+  \ IT, information security, facilities, public relations, \nhuman resources, incident\
+  \ responders, and analysts, as applicable. Review annually, or when significant\
+  \ enterprise changes occur that \ncould impact this Safeguard."
+rationale: "17.5\nAssign Key Roles and Responsibilities\nN/A\n-Respond-\n• •\nAssign\
+  \ key roles and responsibilities for incident response, including staff from legal,\
+  \ IT, information security, facilities, public relations, \nhuman resources, incident\
+  \ responders, and analysts, as applicable. Review annually, or when significant\
+  \ enterprise changes occur that \ncould impact this Safeguard."
+developer_guidance: "17.5\nAssign Key Roles and Responsibilities\nN/A\n-Respond-\n\
+  • •\nAssign key roles and responsibilities for incident response, including staff\
+  \ from legal, IT, information security, facilities, public relations, \nhuman resources,\
+  \ incident responders, and analysts, as applicable. Review annually, or when significant\
+  \ enterprise changes occur that \ncould impact this Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 17
+  note: Safeguard 17.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

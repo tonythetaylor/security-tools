@@ -1,0 +1,88 @@
+id: nist-800-190-4-5-3
+title: 4.5.3 Host OS component vulnerabilities
+category: host_security
+applies_to:
+- host_vulnerabilities
+- patch_management
+- host_hardening
+tags:
+- 800-190
+- containers
+- host-os
+- nist
+- patching
+- section_4_5_3
+- vulnerabilities
+severity_guidance: medium
+description: "4.5.3 Host OS component vulnerabilities \nOrganizations should implement\
+  \ management practices and tools to validate the versioning of \ncomponents provided\
+  \ for base OS management and functionality. Even though container-\nspecific OSs\
+  \ have a much more minimal set of components than general-purpose OSs, they still\
+  \ \ndo have vulnerabilities and still require remediation. Organizations should\
+  \ use tools provided by \nthe OS vendor or other trusted organizations to regularly\
+  \ check for and apply updates to all \nsoftware components used within the OS. The\
+  \ OS should be kept up to date not only with \nsecurity updates, but also the latest\
+  \ component updates recommended by the vendor. This is \nparticularly important\
+  \ for the kernel and container runtime components as newer releases of \nthese components\
+  \ often add additional security protections and capabilities beyond simply \ncorrecting\
+  \ vulnerabilities. Some organizations may choose to simply redeploy new OS instances\
+  \ \nwith the necessary updates, rather than updating existing systems. This approach\
+  \ is also valid, \nalthough it often requires more sophisticated operational practices.\
+  \ \nHost OSs should be operated in an immutable manner with no data or state stored\
+  \ uniquely and \npersistently on the host and no application-level dependencies\
+  \ provided by the host. Instead, all \napp components and dependencies should be\
+  \ packaged and deployed in containers. This enables \nthe host to be operated in\
+  \ a nearly stateless manner with a greatly reduced attack surface. \nAdditionally,\
+  \ it provides a more trustworthy way to identify anomalies and configuration drift."
+rationale: "4.5.3 Host OS component vulnerabilities \nOrganizations should implement\
+  \ management practices and tools to validate the versioning of \ncomponents provided\
+  \ for base OS management and functionality. Even though container-\nspecific OSs\
+  \ have a much more minimal set of components than general-purpose OSs, they still\
+  \ \ndo have vulnerabilities and still require remediation. Organizations should\
+  \ use tools provided by \nthe OS vendor or other trusted organizations to regularly\
+  \ check for and apply updates to all \nsoftware components used within the OS. The\
+  \ OS should be kept up to date not only with \nsecurity updates, but also the latest\
+  \ component updates recommended by the vendor. This is \nparticularly important\
+  \ for the kernel and container runtime components as newer releases of \nthese components\
+  \ often add additional security protections and capabilities beyond simply \ncorrecting\
+  \ vulnerabilities. Some organizations may choose to simply redeploy new OS instances\
+  \ \nwith the necessary updates, rather than updating existing systems. This approach\
+  \ is also valid, \nalthough it often requires more sophisticated operational practices.\
+  \ \nHost OSs should be operated in an immutable manner with no data or state stored\
+  \ uniquely and \npersistently on the host and no application-level dependencies\
+  \ provided by the host. Instead, all \napp components and dependencies should be\
+  \ packaged and deployed in containers. This enables \nthe host to be operated in\
+  \ a nearly stateless manner with a greatly reduced attack surface. \nAdditionally,\
+  \ it provides a more trustworthy way to identify anomalies and configuration drift."
+developer_guidance: "4.5.3 Host OS component vulnerabilities \nOrganizations should\
+  \ implement management practices and tools to validate the versioning of \ncomponents\
+  \ provided for base OS management and functionality. Even though container-\nspecific\
+  \ OSs have a much more minimal set of components than general-purpose OSs, they\
+  \ still \ndo have vulnerabilities and still require remediation. Organizations should\
+  \ use tools provided by \nthe OS vendor or other trusted organizations to regularly\
+  \ check for and apply updates to all \nsoftware components used within the OS. The\
+  \ OS should be kept up to date not only with \nsecurity updates, but also the latest\
+  \ component updates recommended by the vendor. This is \nparticularly important\
+  \ for the kernel and container runtime components as newer releases of \nthese components\
+  \ often add additional security protections and capabilities beyond simply \ncorrecting\
+  \ vulnerabilities. Some organizations may choose to simply redeploy new OS instances\
+  \ \nwith the necessary updates, rather than updating existing systems. This approach\
+  \ is also valid, \nalthough it often requires more sophisticated operational practices.\
+  \ \nHost OSs should be operated in an immutable manner with no data or state stored\
+  \ uniquely and \npersistently on the host and no application-level dependencies\
+  \ provided by the host. Instead, all \napp components and dependencies should be\
+  \ packaged and deployed in containers. This enables \nthe host to be operated in\
+  \ a nearly stateless manner with a greatly reduced attack surface. \nAdditionally,\
+  \ it provides a more trustworthy way to identify anomalies and configuration drift."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.5.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

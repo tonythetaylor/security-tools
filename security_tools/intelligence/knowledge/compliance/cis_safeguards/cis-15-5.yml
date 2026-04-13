@@ -1,0 +1,49 @@
+id: cis-15-5
+title: 15.5 Assess Service Providers
+category: third_party_security
+applies_to:
+- service_provider_management
+- third_party_risk
+- vendor_security
+tags:
+- cis
+- control_15
+- safeguard
+- safeguard_15_5
+- service-providers
+- third-party
+- vendors
+severity_guidance: medium
+description: "15.5\nAssess Service Providers\nN/A\n-Identify-\n•\nAssess service providers\
+  \ consistent with the enterprise’s service provider management policy. Assessment\
+  \ scope may vary based on \nclassification(s), and may include review of standardized\
+  \ assessment reports, such as Service Organization Control 2 (SOC 2) and \nPayment\
+  \ Card Industry (PCI) Attestation of Compliance (AoC), customized questionnaires,\
+  \ or other appropriately rigorous processes. \nReassess service providers annually,\
+  \ at a minimum, or with new and renewed contracts."
+rationale: "15.5\nAssess Service Providers\nN/A\n-Identify-\n•\nAssess service providers\
+  \ consistent with the enterprise’s service provider management policy. Assessment\
+  \ scope may vary based on \nclassification(s), and may include review of standardized\
+  \ assessment reports, such as Service Organization Control 2 (SOC 2) and \nPayment\
+  \ Card Industry (PCI) Attestation of Compliance (AoC), customized questionnaires,\
+  \ or other appropriately rigorous processes. \nReassess service providers annually,\
+  \ at a minimum, or with new and renewed contracts."
+developer_guidance: "15.5\nAssess Service Providers\nN/A\n-Identify-\n•\nAssess service\
+  \ providers consistent with the enterprise’s service provider management policy.\
+  \ Assessment scope may vary based on \nclassification(s), and may include review\
+  \ of standardized assessment reports, such as Service Organization Control 2 (SOC\
+  \ 2) and \nPayment Card Industry (PCI) Attestation of Compliance (AoC), customized\
+  \ questionnaires, or other appropriately rigorous processes. \nReassess service\
+  \ providers annually, at a minimum, or with new and renewed contracts."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 15
+  note: Safeguard 15.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

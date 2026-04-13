@@ -1,0 +1,43 @@
+id: cis-16-1
+title: 16.1 Establish and Maintain a Secure Application Development Process
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_16
+- safeguard
+- safeguard_16_1
+severity_guidance: medium
+description: "16.1\nEstablish and Maintain a Secure Application Development Process\n\
+  Applications\n-Protect-\n• •\nEstablish and maintain a secure application development\
+  \ process. In the process, address such items as: secure application design \nstandards,\
+  \ secure coding practices, developer training, vulnerability management, security\
+  \ of third-party code, and application security \ntesting procedures. Review and\
+  \ update documentation annually, or when significant enterprise changes occur that\
+  \ could impact \nthis Safeguard."
+rationale: "16.1\nEstablish and Maintain a Secure Application Development Process\n\
+  Applications\n-Protect-\n• •\nEstablish and maintain a secure application development\
+  \ process. In the process, address such items as: secure application design \nstandards,\
+  \ secure coding practices, developer training, vulnerability management, security\
+  \ of third-party code, and application security \ntesting procedures. Review and\
+  \ update documentation annually, or when significant enterprise changes occur that\
+  \ could impact \nthis Safeguard."
+developer_guidance: "16.1\nEstablish and Maintain a Secure Application Development Process\n\
+  Applications\n-Protect-\n• •\nEstablish and maintain a secure application development\
+  \ process. In the process, address such items as: secure application design \nstandards,\
+  \ secure coding practices, developer training, vulnerability management, security\
+  \ of third-party code, and application security \ntesting procedures. Review and\
+  \ update documentation annually, or when significant enterprise changes occur that\
+  \ could impact \nthis Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.1
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

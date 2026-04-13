@@ -1,0 +1,76 @@
+id: nist-800-190-3-3-3
+title: 3.3.3 Poorly separated inter-container network traffic
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_3_3
+severity_guidance: medium
+description: "3.3.3 Poorly separated inter-container network traffic \nIn most containerized\
+  \ environments, traffic between individual nodes is routed over a virtual \noverlay\
+  \ network. This overlay network is typically managed by the orchestrator and is\
+  \ often \nopaque to existing network security and management tools. For example,\
+  \ instead of seeing \ndatabase queries being sent from a web server container to\
+  \ a database container on another host, \ntraditional network filters would only\
+  \ see encrypted packets flowing between two hosts, with no \nvisibility into the\
+  \ actual container endpoints, nor the traffic being sent. Although an encrypted\
+  \ \noverlay network provides many operational and security benefits, it can also\
+  \ create a security \n‘blindness’ scenario in which organizations are unable to\
+  \ effectively monitor traffic within their \nown networks. \nPotentially even more\
+  \ critical is the risk of traffic from different apps sharing the same virtual \n\
+  networks. If apps of different sensitivity levels, such as a public-facing web site\
+  \ and an internal \ntreasury management app, are using the same virtual network,\
+  \ sensitive internal apps may be \nexposed to greater risk from network attack.\
+  \ For example, if the public-facing web site is \ncompromised, attackers may be\
+  \ able to use shared networks to attack the treasury app."
+rationale: "3.3.3 Poorly separated inter-container network traffic \nIn most containerized\
+  \ environments, traffic between individual nodes is routed over a virtual \noverlay\
+  \ network. This overlay network is typically managed by the orchestrator and is\
+  \ often \nopaque to existing network security and management tools. For example,\
+  \ instead of seeing \ndatabase queries being sent from a web server container to\
+  \ a database container on another host, \ntraditional network filters would only\
+  \ see encrypted packets flowing between two hosts, with no \nvisibility into the\
+  \ actual container endpoints, nor the traffic being sent. Although an encrypted\
+  \ \noverlay network provides many operational and security benefits, it can also\
+  \ create a security \n‘blindness’ scenario in which organizations are unable to\
+  \ effectively monitor traffic within their \nown networks. \nPotentially even more\
+  \ critical is the risk of traffic from different apps sharing the same virtual \n\
+  networks. If apps of different sensitivity levels, such as a public-facing web site\
+  \ and an internal \ntreasury management app, are using the same virtual network,\
+  \ sensitive internal apps may be \nexposed to greater risk from network attack.\
+  \ For example, if the public-facing web site is \ncompromised, attackers may be\
+  \ able to use shared networks to attack the treasury app."
+developer_guidance: "3.3.3 Poorly separated inter-container network traffic \nIn most\
+  \ containerized environments, traffic between individual nodes is routed over a\
+  \ virtual \noverlay network. This overlay network is typically managed by the orchestrator\
+  \ and is often \nopaque to existing network security and management tools. For example,\
+  \ instead of seeing \ndatabase queries being sent from a web server container to\
+  \ a database container on another host, \ntraditional network filters would only\
+  \ see encrypted packets flowing between two hosts, with no \nvisibility into the\
+  \ actual container endpoints, nor the traffic being sent. Although an encrypted\
+  \ \noverlay network provides many operational and security benefits, it can also\
+  \ create a security \n‘blindness’ scenario in which organizations are unable to\
+  \ effectively monitor traffic within their \nown networks. \nPotentially even more\
+  \ critical is the risk of traffic from different apps sharing the same virtual \n\
+  networks. If apps of different sensitivity levels, such as a public-facing web site\
+  \ and an internal \ntreasury management app, are using the same virtual network,\
+  \ sensitive internal apps may be \nexposed to greater risk from network attack.\
+  \ For example, if the public-facing web site is \ncompromised, attackers may be\
+  \ able to use shared networks to attack the treasury app."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.3.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

@@ -1,0 +1,40 @@
+id: cis-13-8
+title: 13.8 Deploy a Network Intrusion Prevention Solution
+category: network_defense
+applies_to:
+- network_monitoring
+- network_defense
+- traffic_analysis
+tags:
+- cis
+- control_13
+- defense
+- network-monitoring
+- safeguard
+- safeguard_13_8
+- traffic
+severity_guidance: medium
+description: "13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n-Protect-\n\
+  •\nDeploy a network intrusion prevention solution, where appropriate. Example implementations\
+  \ include the use of a Network Intrusion \nPrevention System (NIPS) or equivalent\
+  \ CSP service."
+rationale: "13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n-Protect-\n\
+  •\nDeploy a network intrusion prevention solution, where appropriate. Example implementations\
+  \ include the use of a Network Intrusion \nPrevention System (NIPS) or equivalent\
+  \ CSP service."
+developer_guidance: "13.8\nDeploy a Network Intrusion Prevention Solution\nNetwork\n\
+  -Protect-\n•\nDeploy a network intrusion prevention solution, where appropriate.\
+  \ Example implementations include the use of a Network Intrusion \nPrevention System\
+  \ (NIPS) or equivalent CSP service."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,34 @@
+id: cis-09-5
+title: 09.5 Implement DMARC
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_09
+- safeguard
+- safeguard_9_5
+severity_guidance: medium
+description: "9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower the chance of\
+  \ spoofed or modified emails from valid domains, implement DMARC policy and verification,\
+  \ starting with \nimplementing the Sender Policy Framework (SPF) and the DomainKeys\
+  \ Identified Mail (DKIM) standards."
+rationale: "9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower the chance of\
+  \ spoofed or modified emails from valid domains, implement DMARC policy and verification,\
+  \ starting with \nimplementing the Sender Policy Framework (SPF) and the DomainKeys\
+  \ Identified Mail (DKIM) standards."
+developer_guidance: "9.5\nImplement DMARC\nNetwork\n-Protect-\n• •\nTo lower the chance\
+  \ of spoofed or modified emails from valid domains, implement DMARC policy and verification,\
+  \ starting with \nimplementing the Sender Policy Framework (SPF) and the DomainKeys\
+  \ Identified Mail (DKIM) standards."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: Safeguard 09.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,37 @@
+id: cis-02-6
+title: 02.6 Allowlist Authorized Libraries
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_02
+- safeguard
+- safeguard_2_6
+severity_guidance: medium
+description: "2.6\nAllowlist Authorized Libraries\nApplications\n-Protect-\n• •\n\
+  Use technical controls to ensure that only authorized software libraries, such as\
+  \ specific .dll, .ocx, .so, etc., files are allowed to load into a \nsystem process.\
+  \ Block unauthorized libraries from loading into a system process. Reassess bi-annually,\
+  \ or more frequently."
+rationale: "2.6\nAllowlist Authorized Libraries\nApplications\n-Protect-\n• •\nUse\
+  \ technical controls to ensure that only authorized software libraries, such as\
+  \ specific .dll, .ocx, .so, etc., files are allowed to load into a \nsystem process.\
+  \ Block unauthorized libraries from loading into a system process. Reassess bi-annually,\
+  \ or more frequently."
+developer_guidance: "2.6\nAllowlist Authorized Libraries\nApplications\n-Protect-\n\
+  • •\nUse technical controls to ensure that only authorized software libraries, such\
+  \ as specific .dll, .ocx, .so, etc., files are allowed to load into a \nsystem process.\
+  \ Block unauthorized libraries from loading into a system process. Reassess bi-annually,\
+  \ or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 02
+  note: Safeguard 02.6
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

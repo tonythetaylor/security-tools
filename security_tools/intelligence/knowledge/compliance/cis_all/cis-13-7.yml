@@ -1,0 +1,34 @@
+id: cis-13-7
+title: 13.7 Deploy a Host-Based Intrusion Prevention Solution
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_13
+- safeguard
+- safeguard_13_7
+severity_guidance: medium
+description: "13.7\nDeploy a Host-Based Intrusion Prevention Solution\nDevices\n-Protect-\n\
+  •\nDeploy a host-based intrusion prevention solution on enterprise assets, where\
+  \ appropriate and/or supported. Example implementations \ninclude use of an Endpoint\
+  \ Detection and Response (EDR) client or host-based IPS agent."
+rationale: "13.7\nDeploy a Host-Based Intrusion Prevention Solution\nDevices\n-Protect-\n\
+  •\nDeploy a host-based intrusion prevention solution on enterprise assets, where\
+  \ appropriate and/or supported. Example implementations \ninclude use of an Endpoint\
+  \ Detection and Response (EDR) client or host-based IPS agent."
+developer_guidance: "13.7\nDeploy a Host-Based Intrusion Prevention Solution\nDevices\n\
+  -Protect-\n•\nDeploy a host-based intrusion prevention solution on enterprise assets,\
+  \ where appropriate and/or supported. Example implementations \ninclude use of an\
+  \ Endpoint Detection and Response (EDR) client or host-based IPS agent."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

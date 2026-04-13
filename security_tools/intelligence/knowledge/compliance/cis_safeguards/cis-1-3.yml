@@ -1,0 +1,37 @@
+id: cis-1-3
+title: 1.3 Utilize an Active Discovery Tool
+category: asset_security
+applies_to:
+- asset_inventory
+- asset_management
+- unauthorized_assets
+tags:
+- asset-inventory
+- cis
+- control_01
+- enterprise-assets
+- safeguard
+- safeguard_1_3
+- visibility
+severity_guidance: medium
+description: "1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\nUtilize\
+  \ an active discovery tool to identify assets connected to the enterprise’s network.\
+  \ Configure the active discovery tool to execute \ndaily, or more frequently."
+rationale: "1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\nUtilize\
+  \ an active discovery tool to identify assets connected to the enterprise’s network.\
+  \ Configure the active discovery tool to execute \ndaily, or more frequently."
+developer_guidance: "1.3\nUtilize an Active Discovery Tool\nDevices\n-Detect-\n• •\n\
+  Utilize an active discovery tool to identify assets connected to the enterprise’s\
+  \ network. Configure the active discovery tool to execute \ndaily, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: Safeguard 1.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

@@ -1,0 +1,136 @@
+id: nist-800-190-5-3
+title: 5.3 Running a Poisoned Image
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_5_3
+severity_guidance: medium
+description: "5.3 \nRunning a Poisoned Image \nBecause images are easily sourced from\
+  \ public locations, often with unknown provenance, an \nattacker may embed malicious\
+  \ software within images known to be used by a target. For\n\nexample, if an attacker\
+  \ determines that a target is active on a discussion board about a particular \n\
+  project and uses images provided by that project’s web site, the attacker may seek\
+  \ to craft \nmalicious versions of these images for use in an attack. \nRelevant\
+  \ mitigations include: \n1. Ensuring that only vetted, tested, validated, and digitally\
+  \ signed images are allowed to be \nuploaded to an organization’s registries. \n\
+  2. Ensuring that only trusted images are allowed to run, which will prevent images\
+  \ from \nexternal, unvetted sources from being used. \n3. Automatically scanning\
+  \ images for vulnerabilities and malware, which may detect \nmalicious code such\
+  \ as rootkits embedded within an image. \n4. Implementing runtime controls that\
+  \ limit the container's ability to abuse resources, \nescalate privileges, and run\
+  \ executables. \n5. Using container-level network segmentation to limit the “blast\
+  \ radius” of what the \npoisoned image might do. \n6. Validating a container runtime\
+  \ operates following least-privilege and least-access \nprinciples. \n7. Building\
+  \ a threat profile of the container's runtime. This includes, but is not limited\
+  \ to, \nprocesses, network calls, and filesystem changes. \n8. Validating the integrity\
+  \ of images before runtime by leveraging hashes and digital \nsignatures. \n9. Restrict\
+  \ images from being run based on rules establishing acceptable vulnerability \n\
+  severity levels. For example, prevent images with vulnerabilities that have a Moderate\
+  \ or \nhigher CVSS rating from being run.\n\nContainer Technology Life Cycle Security\
+  \ Considerations \nIt is critically important to carefully plan before installing,\
+  \ configuring, and deploying container \ntechnologies. This helps ensure that the\
+  \ container environment is as secure as possible and is in \ncompliance with all\
+  \ relevant organizational policies, external regulations, and other \nrequirements.\
+  \ \nThere is a great deal of similarity in the planning and implementation recommendations\
+  \ for \ncontainer technologies and virtualization solutions. Section 5 of NIST SP\
+  \ 800-125 [1] already \ncontains a full set of recommendations for virtualization\
+  \ solutions. Instead of repeating all those \nrecommendations here, this section\
+  \ points readers to that document and states that, besides the \nexceptions listed\
+  \ below, organizations should apply all the NIST SP 800-125 Section 5 \nrecommendations\
+  \ in a container technology context. For example, instead of creating a \nvirtualization\
+  \ security policy, create a container technology security policy. \nThis section\
+  \ of the document lists exceptions and additions to the NIST SP 800-125 Section\
+  \ 5 \nrecommendations, grouped by the corresponding phase in the planning and implementation\
+  \ life \ncycle."
+rationale: "5.3 \nRunning a Poisoned Image \nBecause images are easily sourced from\
+  \ public locations, often with unknown provenance, an \nattacker may embed malicious\
+  \ software within images known to be used by a target. For\n\nexample, if an attacker\
+  \ determines that a target is active on a discussion board about a particular \n\
+  project and uses images provided by that project’s web site, the attacker may seek\
+  \ to craft \nmalicious versions of these images for use in an attack. \nRelevant\
+  \ mitigations include: \n1. Ensuring that only vetted, tested, validated, and digitally\
+  \ signed images are allowed to be \nuploaded to an organization’s registries. \n\
+  2. Ensuring that only trusted images are allowed to run, which will prevent images\
+  \ from \nexternal, unvetted sources from being used. \n3. Automatically scanning\
+  \ images for vulnerabilities and malware, which may detect \nmalicious code such\
+  \ as rootkits embedded within an image. \n4. Implementing runtime controls that\
+  \ limit the container's ability to abuse resources, \nescalate privileges, and run\
+  \ executables. \n5. Using container-level network segmentation to limit the “blast\
+  \ radius” of what the \npoisoned image might do. \n6. Validating a container runtime\
+  \ operates following least-privilege and least-access \nprinciples. \n7. Building\
+  \ a threat profile of the container's runtime. This includes, but is not limited\
+  \ to, \nprocesses, network calls, and filesystem changes. \n8. Validating the integrity\
+  \ of images before runtime by leveraging hashes and digital \nsignatures. \n9. Restrict\
+  \ images from being run based on rules establishing acceptable vulnerability \n\
+  severity levels. For example, prevent images with vulnerabilities that have a Moderate\
+  \ or \nhigher CVSS rating from being run.\n\nContainer Technology Life Cycle Security\
+  \ Considerations \nIt is critically important to carefully plan before installing,\
+  \ configuring, and deploying container \ntechnologies. This helps ensure that the\
+  \ container environment is as secure as possible and is in \ncompliance with all\
+  \ relevant organizational policies, external regulations, and other \nrequirements.\
+  \ \nThere is a great deal of similarity in the planning and implementation recommendations\
+  \ for \ncontainer technologies and virtualization solutions. Section 5 of NIST SP\
+  \ 800-125 [1] already \ncontains a full set of recommendations for virtualization\
+  \ solutions. Instead of repeating all those \nrecommendations here, this section\
+  \ points readers to that document and states that, besides the \nexceptions listed\
+  \ below, organizations should apply all the NIST SP 800-125 Section 5 \nrecommendations\
+  \ in a container technology context. For example, instead of creating a \nvirtualization\
+  \ security policy, create a container technology security policy. \nThis section\
+  \ of the document lists exceptions and additions to the NIST SP 800-125 Section\
+  \ 5 \nrecommendations, grouped by the corresponding phase in the planning and implementation\
+  \ life \ncycle."
+developer_guidance: "5.3 \nRunning a Poisoned Image \nBecause images are easily sourced\
+  \ from public locations, often with unknown provenance, an \nattacker may embed\
+  \ malicious software within images known to be used by a target. For\n\nexample,\
+  \ if an attacker determines that a target is active on a discussion board about\
+  \ a particular \nproject and uses images provided by that project’s web site, the\
+  \ attacker may seek to craft \nmalicious versions of these images for use in an\
+  \ attack. \nRelevant mitigations include: \n1. Ensuring that only vetted, tested,\
+  \ validated, and digitally signed images are allowed to be \nuploaded to an organization’s\
+  \ registries. \n2. Ensuring that only trusted images are allowed to run, which will\
+  \ prevent images from \nexternal, unvetted sources from being used. \n3. Automatically\
+  \ scanning images for vulnerabilities and malware, which may detect \nmalicious\
+  \ code such as rootkits embedded within an image. \n4. Implementing runtime controls\
+  \ that limit the container's ability to abuse resources, \nescalate privileges,\
+  \ and run executables. \n5. Using container-level network segmentation to limit\
+  \ the “blast radius” of what the \npoisoned image might do. \n6. Validating a container\
+  \ runtime operates following least-privilege and least-access \nprinciples. \n7.\
+  \ Building a threat profile of the container's runtime. This includes, but is not\
+  \ limited to, \nprocesses, network calls, and filesystem changes. \n8. Validating\
+  \ the integrity of images before runtime by leveraging hashes and digital \nsignatures.\
+  \ \n9. Restrict images from being run based on rules establishing acceptable vulnerability\
+  \ \nseverity levels. For example, prevent images with vulnerabilities that have\
+  \ a Moderate or \nhigher CVSS rating from being run.\n\nContainer Technology Life\
+  \ Cycle Security Considerations \nIt is critically important to carefully plan before\
+  \ installing, configuring, and deploying container \ntechnologies. This helps ensure\
+  \ that the container environment is as secure as possible and is in \ncompliance\
+  \ with all relevant organizational policies, external regulations, and other \n\
+  requirements. \nThere is a great deal of similarity in the planning and implementation\
+  \ recommendations for \ncontainer technologies and virtualization solutions. Section\
+  \ 5 of NIST SP 800-125 [1] already \ncontains a full set of recommendations for\
+  \ virtualization solutions. Instead of repeating all those \nrecommendations here,\
+  \ this section points readers to that document and states that, besides the \nexceptions\
+  \ listed below, organizations should apply all the NIST SP 800-125 Section 5 \n\
+  recommendations in a container technology context. For example, instead of creating\
+  \ a \nvirtualization security policy, create a container technology security policy.\
+  \ \nThis section of the document lists exceptions and additions to the NIST SP 800-125\
+  \ Section 5 \nrecommendations, grouped by the corresponding phase in the planning\
+  \ and implementation life \ncycle."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '5.3'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

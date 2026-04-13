@@ -1,0 +1,136 @@
+id: nist-800-190-6-4
+title: 6.4 Operations and Maintenance Phase
+category: operations_security
+applies_to:
+- operations
+- maintenance
+- continuous_monitoring
+tags:
+- 800-190
+- containers
+- maintenance
+- monitoring
+- nist
+- operations
+- section_6_4
+severity_guidance: medium
+description: "6.4 \nOperations and Maintenance Phase \nOperational processes that\
+  \ are particularly important for maintaining the security of container \ntechnologies,\
+  \ and thus should be performed regularly, include updating all images and \ndistributing\
+  \ those updated images to containers to take the place of older images. Other security\
+  \ \nbest practices, such as performing vulnerability management and updates for\
+  \ other supporting \nlayers like hosts and orchestrators, are also key ongoing operational\
+  \ tasks. Container security and \nmonitoring tools should similarly be integrated\
+  \ with existing security information and event \nmanagement (SIEM) tools to ensure\
+  \ container-related events flow through the same tools and \nprocesses used to provide\
+  \ security throughout the rest of the environment. \nIf and when security incidents\
+  \ occur within a containerized environment, organizations should be \nprepared to\
+  \ respond with processes and tools that are optimized for the unique aspects of\
+  \ \ncontainers. The core guidance outlined in NIST SP 800-61, Computer Security\
+  \ Incident \nHandling Guide [28], is very much applicable for containerized environments\
+  \ as well. However, \norganizations adopting containers should ensure they enhance\
+  \ their responses for some of the \nunique aspects of container security. \n• Because\
+  \ containerized apps may be run by a different team than the traditional operations\
+  \ \nteam, organizations should ensure that whatever teams are responsible for container\
+  \ \noperations are brought into the incident response plan and understand their\
+  \ role in it. \n• As discussed throughout this document, the ephemeral and automated\
+  \ nature of container \nmanagement may not be aligned with the asset management\
+  \ policies and tools an \norganization has traditionally used. Incident response\
+  \ teams must be able to know the \nroles, owners, and sensitivity levels of containers,\
+  \ and be able to integrate this data into \ntheir process. \n• Clear procedures\
+  \ should be defined to respond to container related incidents. For \nexample, if\
+  \ a particular image is being exploited, but that image is in use across hundreds\
+  \ \nof containers, the response team may need to shut down all of these containers\
+  \ to stop the \nattack. While single vulnerabilities have long been able to cause\
+  \ problems across many \nsystems, with containers, the response may require rebuilding\
+  \ and redeploying a new \nimage widely, rather than installing a patch to existing\
+  \ systems. This change in response\n\nmay involve different teams and approvals\
+  \ and should be understood and practiced ahead \nof time. \n• As discussed previously,\
+  \ logging and other forensic data may be stored differently in a \ncontainerized\
+  \ environment. Incident response teams should be familiar with the different \n\
+  tools and techniques required to gather data and have documented processes specifically\
+  \ \nfor these environments."
+rationale: "6.4 \nOperations and Maintenance Phase \nOperational processes that are\
+  \ particularly important for maintaining the security of container \ntechnologies,\
+  \ and thus should be performed regularly, include updating all images and \ndistributing\
+  \ those updated images to containers to take the place of older images. Other security\
+  \ \nbest practices, such as performing vulnerability management and updates for\
+  \ other supporting \nlayers like hosts and orchestrators, are also key ongoing operational\
+  \ tasks. Container security and \nmonitoring tools should similarly be integrated\
+  \ with existing security information and event \nmanagement (SIEM) tools to ensure\
+  \ container-related events flow through the same tools and \nprocesses used to provide\
+  \ security throughout the rest of the environment. \nIf and when security incidents\
+  \ occur within a containerized environment, organizations should be \nprepared to\
+  \ respond with processes and tools that are optimized for the unique aspects of\
+  \ \ncontainers. The core guidance outlined in NIST SP 800-61, Computer Security\
+  \ Incident \nHandling Guide [28], is very much applicable for containerized environments\
+  \ as well. However, \norganizations adopting containers should ensure they enhance\
+  \ their responses for some of the \nunique aspects of container security. \n• Because\
+  \ containerized apps may be run by a different team than the traditional operations\
+  \ \nteam, organizations should ensure that whatever teams are responsible for container\
+  \ \noperations are brought into the incident response plan and understand their\
+  \ role in it. \n• As discussed throughout this document, the ephemeral and automated\
+  \ nature of container \nmanagement may not be aligned with the asset management\
+  \ policies and tools an \norganization has traditionally used. Incident response\
+  \ teams must be able to know the \nroles, owners, and sensitivity levels of containers,\
+  \ and be able to integrate this data into \ntheir process. \n• Clear procedures\
+  \ should be defined to respond to container related incidents. For \nexample, if\
+  \ a particular image is being exploited, but that image is in use across hundreds\
+  \ \nof containers, the response team may need to shut down all of these containers\
+  \ to stop the \nattack. While single vulnerabilities have long been able to cause\
+  \ problems across many \nsystems, with containers, the response may require rebuilding\
+  \ and redeploying a new \nimage widely, rather than installing a patch to existing\
+  \ systems. This change in response\n\nmay involve different teams and approvals\
+  \ and should be understood and practiced ahead \nof time. \n• As discussed previously,\
+  \ logging and other forensic data may be stored differently in a \ncontainerized\
+  \ environment. Incident response teams should be familiar with the different \n\
+  tools and techniques required to gather data and have documented processes specifically\
+  \ \nfor these environments."
+developer_guidance: "6.4 \nOperations and Maintenance Phase \nOperational processes\
+  \ that are particularly important for maintaining the security of container \ntechnologies,\
+  \ and thus should be performed regularly, include updating all images and \ndistributing\
+  \ those updated images to containers to take the place of older images. Other security\
+  \ \nbest practices, such as performing vulnerability management and updates for\
+  \ other supporting \nlayers like hosts and orchestrators, are also key ongoing operational\
+  \ tasks. Container security and \nmonitoring tools should similarly be integrated\
+  \ with existing security information and event \nmanagement (SIEM) tools to ensure\
+  \ container-related events flow through the same tools and \nprocesses used to provide\
+  \ security throughout the rest of the environment. \nIf and when security incidents\
+  \ occur within a containerized environment, organizations should be \nprepared to\
+  \ respond with processes and tools that are optimized for the unique aspects of\
+  \ \ncontainers. The core guidance outlined in NIST SP 800-61, Computer Security\
+  \ Incident \nHandling Guide [28], is very much applicable for containerized environments\
+  \ as well. However, \norganizations adopting containers should ensure they enhance\
+  \ their responses for some of the \nunique aspects of container security. \n• Because\
+  \ containerized apps may be run by a different team than the traditional operations\
+  \ \nteam, organizations should ensure that whatever teams are responsible for container\
+  \ \noperations are brought into the incident response plan and understand their\
+  \ role in it. \n• As discussed throughout this document, the ephemeral and automated\
+  \ nature of container \nmanagement may not be aligned with the asset management\
+  \ policies and tools an \norganization has traditionally used. Incident response\
+  \ teams must be able to know the \nroles, owners, and sensitivity levels of containers,\
+  \ and be able to integrate this data into \ntheir process. \n• Clear procedures\
+  \ should be defined to respond to container related incidents. For \nexample, if\
+  \ a particular image is being exploited, but that image is in use across hundreds\
+  \ \nof containers, the response team may need to shut down all of these containers\
+  \ to stop the \nattack. While single vulnerabilities have long been able to cause\
+  \ problems across many \nsystems, with containers, the response may require rebuilding\
+  \ and redeploying a new \nimage widely, rather than installing a patch to existing\
+  \ systems. This change in response\n\nmay involve different teams and approvals\
+  \ and should be understood and practiced ahead \nof time. \n• As discussed previously,\
+  \ logging and other forensic data may be stored differently in a \ncontainerized\
+  \ environment. Incident response teams should be familiar with the different \n\
+  tools and techniques required to gather data and have documented processes specifically\
+  \ \nfor these environments."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '6.4'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

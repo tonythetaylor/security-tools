@@ -1,0 +1,46 @@
+id: nist-800-190-3-1-3
+title: 3.1.3 Embedded malware
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_1_3
+severity_guidance: medium
+description: "3.1.3 Embedded malware \nBecause images are just collections of files\
+  \ packaged together, malicious files could be included \nintentionally or inadvertently\
+  \ within them. Such malware would have the same capabilities as \nany other component\
+  \ within the image and thus could be used to attack other containers or hosts \n\
+  within the environment. A possible source of embedded malware is the use of base\
+  \ layers and \nother images provided by third parties of which the full provenance\
+  \ is not known."
+rationale: "3.1.3 Embedded malware \nBecause images are just collections of files\
+  \ packaged together, malicious files could be included \nintentionally or inadvertently\
+  \ within them. Such malware would have the same capabilities as \nany other component\
+  \ within the image and thus could be used to attack other containers or hosts \n\
+  within the environment. A possible source of embedded malware is the use of base\
+  \ layers and \nother images provided by third parties of which the full provenance\
+  \ is not known."
+developer_guidance: "3.1.3 Embedded malware \nBecause images are just collections\
+  \ of files packaged together, malicious files could be included \nintentionally\
+  \ or inadvertently within them. Such malware would have the same capabilities as\
+  \ \nany other component within the image and thus could be used to attack other\
+  \ containers or hosts \nwithin the environment. A possible source of embedded malware\
+  \ is the use of base layers and \nother images provided by third parties of which\
+  \ the full provenance is not known."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.1.3
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

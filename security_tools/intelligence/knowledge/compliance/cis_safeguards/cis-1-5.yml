@@ -1,0 +1,40 @@
+id: cis-1-5
+title: 1.5 Use a Passive Asset Discovery Tool
+category: asset_security
+applies_to:
+- asset_inventory
+- asset_management
+- unauthorized_assets
+tags:
+- asset-inventory
+- cis
+- control_01
+- enterprise-assets
+- safeguard
+- safeguard_1_5
+- visibility
+severity_guidance: medium
+description: "1.5\nUse a Passive Asset Discovery Tool\nDevices\n-Detect-\n•\nUse a\
+  \ passive discovery tool to identify assets connected to the enterprise’s network.\
+  \ Review and use scans to update the enterprise’s \nasset inventory at least weekly,\
+  \ or more frequently."
+rationale: "1.5\nUse a Passive Asset Discovery Tool\nDevices\n-Detect-\n•\nUse a passive\
+  \ discovery tool to identify assets connected to the enterprise’s network. Review\
+  \ and use scans to update the enterprise’s \nasset inventory at least weekly, or\
+  \ more frequently."
+developer_guidance: "1.5\nUse a Passive Asset Discovery Tool\nDevices\n-Detect-\n\
+  •\nUse a passive discovery tool to identify assets connected to the enterprise’s\
+  \ network. Review and use scans to update the enterprise’s \nasset inventory at\
+  \ least weekly, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 01
+  note: Safeguard 1.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

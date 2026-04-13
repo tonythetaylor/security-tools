@@ -1,0 +1,37 @@
+id: cis-6-5
+title: 6.5 Require MFA for Administrative Access
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+tags:
+- access-control
+- authorization
+- cis
+- control_06
+- least-privilege
+- safeguard
+- safeguard_6_5
+severity_guidance: medium
+description: "6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n• • •\n\
+  Require MFA for all administrative access accounts, where supported, on all enterprise\
+  \ assets, whether managed on-site or through a \nthird-party provider."
+rationale: "6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n• • •\n\
+  Require MFA for all administrative access accounts, where supported, on all enterprise\
+  \ assets, whether managed on-site or through a \nthird-party provider."
+developer_guidance: "6.5\nRequire MFA for Administrative Access\nUsers\n-Protect-\n\
+  • • •\nRequire MFA for all administrative access accounts, where supported, on all\
+  \ enterprise assets, whether managed on-site or through a \nthird-party provider."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 6.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

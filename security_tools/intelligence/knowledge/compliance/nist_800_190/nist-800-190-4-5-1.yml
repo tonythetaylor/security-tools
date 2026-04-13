@@ -1,0 +1,79 @@
+id: nist-800-190-4-5-1
+title: 4.5.1 Large attack surface
+category: host_security
+applies_to:
+- attack_surface_reduction
+- minimal_host_os
+- host_hardening
+tags:
+- 800-190
+- attack-surface
+- containers
+- hardening
+- host-os
+- nist
+- section_4_5_1
+severity_guidance: medium
+description: "4.5.1 Large attack surface \nFor organizations using container-specific\
+  \ OSs, the threats are typically more minimal to start \nwith since the OSs are\
+  \ specifically designed to host containers and have other services and \nfunctionality\
+  \ disabled. Further, because these optimized OSs are designed specifically for \n\
+  hosting containers, they typically feature read-only file systems and employ other\
+  \ hardening \npractices by default. Whenever possible, organizations should use\
+  \ these minimalistic OSs to \nreduce their attack surfaces and mitigate the typical\
+  \ risks and hardening activities associated with \ngeneral-purpose OSs. \nOrganizations\
+  \ that cannot use a container-specific OS should follow the guidance in NIST SP\
+  \ \n800-123, Guide to General Server Security [23] to reduce the attack surface\
+  \ of their hosts as \nmuch as possible. For example, hosts that run containers should\
+  \ only run containers and not run \nother apps, like a web server or database, outside\
+  \ of containers. The host OS should not run \nunnecessary system services, such\
+  \ as a print spooler, that increase its attack and patching surface \nareas. Finally,\
+  \ hosts should be continuously scanned for vulnerabilities and updates applied\n\
+  \nquickly, not just to the container runtime but also to lower-level components\
+  \ such as the kernel \nthat containers rely upon for secure, compartmentalized operation."
+rationale: "4.5.1 Large attack surface \nFor organizations using container-specific\
+  \ OSs, the threats are typically more minimal to start \nwith since the OSs are\
+  \ specifically designed to host containers and have other services and \nfunctionality\
+  \ disabled. Further, because these optimized OSs are designed specifically for \n\
+  hosting containers, they typically feature read-only file systems and employ other\
+  \ hardening \npractices by default. Whenever possible, organizations should use\
+  \ these minimalistic OSs to \nreduce their attack surfaces and mitigate the typical\
+  \ risks and hardening activities associated with \ngeneral-purpose OSs. \nOrganizations\
+  \ that cannot use a container-specific OS should follow the guidance in NIST SP\
+  \ \n800-123, Guide to General Server Security [23] to reduce the attack surface\
+  \ of their hosts as \nmuch as possible. For example, hosts that run containers should\
+  \ only run containers and not run \nother apps, like a web server or database, outside\
+  \ of containers. The host OS should not run \nunnecessary system services, such\
+  \ as a print spooler, that increase its attack and patching surface \nareas. Finally,\
+  \ hosts should be continuously scanned for vulnerabilities and updates applied\n\
+  \nquickly, not just to the container runtime but also to lower-level components\
+  \ such as the kernel \nthat containers rely upon for secure, compartmentalized operation."
+developer_guidance: "4.5.1 Large attack surface \nFor organizations using container-specific\
+  \ OSs, the threats are typically more minimal to start \nwith since the OSs are\
+  \ specifically designed to host containers and have other services and \nfunctionality\
+  \ disabled. Further, because these optimized OSs are designed specifically for \n\
+  hosting containers, they typically feature read-only file systems and employ other\
+  \ hardening \npractices by default. Whenever possible, organizations should use\
+  \ these minimalistic OSs to \nreduce their attack surfaces and mitigate the typical\
+  \ risks and hardening activities associated with \ngeneral-purpose OSs. \nOrganizations\
+  \ that cannot use a container-specific OS should follow the guidance in NIST SP\
+  \ \n800-123, Guide to General Server Security [23] to reduce the attack surface\
+  \ of their hosts as \nmuch as possible. For example, hosts that run containers should\
+  \ only run containers and not run \nother apps, like a web server or database, outside\
+  \ of containers. The host OS should not run \nunnecessary system services, such\
+  \ as a print spooler, that increase its attack and patching surface \nareas. Finally,\
+  \ hosts should be continuously scanned for vulnerabilities and updates applied\n\
+  \nquickly, not just to the container runtime but also to lower-level components\
+  \ such as the kernel \nthat containers rely upon for secure, compartmentalized operation."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.5.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

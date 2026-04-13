@@ -1,0 +1,49 @@
+id: nist-800-190-3-2-1
+title: 3.2.1 Insecure connections to registries
+category: container_security_guidance
+applies_to:
+- container_scanning
+- runtime_hardening
+- image_security
+tags:
+- 800-190
+- containers
+- nist
+- section_3_2_1
+severity_guidance: medium
+description: "3.2.1 Insecure connections to registries \nImages often contain sensitive\
+  \ components like an organization’s proprietary software and \nembedded secrets.\
+  \ If connections to registries are performed over insecure channels, the contents\
+  \ \nof images are subject to the same confidentiality risks as any other data transmitted\
+  \ in the clear. \nThere is also an increased risk of man-in-the-middle attacks that\
+  \ could intercept network traffic \nintended for registries and steal developer\
+  \ or administrator credentials within that traffic, provide \nfraudulent or outdated\
+  \ images to orchestrators, etc."
+rationale: "3.2.1 Insecure connections to registries \nImages often contain sensitive\
+  \ components like an organization’s proprietary software and \nembedded secrets.\
+  \ If connections to registries are performed over insecure channels, the contents\
+  \ \nof images are subject to the same confidentiality risks as any other data transmitted\
+  \ in the clear. \nThere is also an increased risk of man-in-the-middle attacks that\
+  \ could intercept network traffic \nintended for registries and steal developer\
+  \ or administrator credentials within that traffic, provide \nfraudulent or outdated\
+  \ images to orchestrators, etc."
+developer_guidance: "3.2.1 Insecure connections to registries \nImages often contain\
+  \ sensitive components like an organization’s proprietary software and \nembedded\
+  \ secrets. If connections to registries are performed over insecure channels, the\
+  \ contents \nof images are subject to the same confidentiality risks as any other\
+  \ data transmitted in the clear. \nThere is also an increased risk of man-in-the-middle\
+  \ attacks that could intercept network traffic \nintended for registries and steal\
+  \ developer or administrator credentials within that traffic, provide \nfraudulent\
+  \ or outdated images to orchestrators, etc."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.2.1
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

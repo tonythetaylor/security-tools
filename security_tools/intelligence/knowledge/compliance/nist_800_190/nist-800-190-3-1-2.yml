@@ -1,0 +1,52 @@
+id: nist-800-190-3-1-2
+title: 3.1.2 Image configuration defects
+category: container_security
+applies_to:
+- image_configuration
+- dockerfile_scan
+- secure_configuration
+tags:
+- 800-190
+- configuration
+- containers
+- hardening
+- images
+- nist
+- section_3_1_2
+severity_guidance: medium
+description: "3.1.2 Image configuration defects \nIn addition to software defects,\
+  \ images may also have configuration defects. For example, an \nimage may not be\
+  \ configured with a specific user account to “run as” and thus run with greater\
+  \ \nprivileges than needed. As another example, an image may include an SSH daemon,\
+  \ which \nexposes the container to unnecessary network risk. Much like in a traditional\
+  \ server or VM, \nwhere a poor configuration can still expose a fully up-to-date\
+  \ system to attack, so too can a \npoorly configured image increase risk even if\
+  \ all the included components are up-to-date."
+rationale: "3.1.2 Image configuration defects \nIn addition to software defects, images\
+  \ may also have configuration defects. For example, an \nimage may not be configured\
+  \ with a specific user account to “run as” and thus run with greater \nprivileges\
+  \ than needed. As another example, an image may include an SSH daemon, which \n\
+  exposes the container to unnecessary network risk. Much like in a traditional server\
+  \ or VM, \nwhere a poor configuration can still expose a fully up-to-date system\
+  \ to attack, so too can a \npoorly configured image increase risk even if all the\
+  \ included components are up-to-date."
+developer_guidance: "3.1.2 Image configuration defects \nIn addition to software defects,\
+  \ images may also have configuration defects. For example, an \nimage may not be\
+  \ configured with a specific user account to “run as” and thus run with greater\
+  \ \nprivileges than needed. As another example, an image may include an SSH daemon,\
+  \ which \nexposes the container to unnecessary network risk. Much like in a traditional\
+  \ server or VM, \nwhere a poor configuration can still expose a fully up-to-date\
+  \ system to attack, so too can a \npoorly configured image increase risk even if\
+  \ all the included components are up-to-date."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 3.1.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

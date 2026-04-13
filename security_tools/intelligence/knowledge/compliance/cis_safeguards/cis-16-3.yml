@@ -1,0 +1,46 @@
+id: cis-16-3
+title: 16.3 Perform Root Cause Analysis on Security Vulnerabilities
+category: application_security
+applies_to:
+- third_party_components
+- dependency_scan
+- software_supply_chain
+tags:
+- appsec
+- cis
+- control_16
+- dependencies
+- safeguard
+- safeguard_16_3
+- sast
+- secure-development
+- supply-chain
+- third-party-code
+severity_guidance: medium
+description: "16.3\nPerform Root Cause Analysis on Security Vulnerabilities\nApplications\n\
+  -Protect-\n• •\nPerform root cause analysis on security vulnerabilities. When reviewing\
+  \ vulnerabilities, root cause analysis is the task of evaluating \nunderlying issues\
+  \ that create vulnerabilities in code, and allows development teams to move beyond\
+  \ just fixing individual vulnerabilities \nas they arise."
+rationale: "16.3\nPerform Root Cause Analysis on Security Vulnerabilities\nApplications\n\
+  -Protect-\n• •\nPerform root cause analysis on security vulnerabilities. When reviewing\
+  \ vulnerabilities, root cause analysis is the task of evaluating \nunderlying issues\
+  \ that create vulnerabilities in code, and allows development teams to move beyond\
+  \ just fixing individual vulnerabilities \nas they arise."
+developer_guidance: "16.3\nPerform Root Cause Analysis on Security Vulnerabilities\n\
+  Applications\n-Protect-\n• •\nPerform root cause analysis on security vulnerabilities.\
+  \ When reviewing vulnerabilities, root cause analysis is the task of evaluating\
+  \ \nunderlying issues that create vulnerabilities in code, and allows development\
+  \ teams to move beyond just fixing individual vulnerabilities \nas they arise."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 16
+  note: Safeguard 16.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

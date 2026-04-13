@@ -1,0 +1,34 @@
+id: cis-08-5
+title: 08.5 Collect Detailed Audit Logs
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_08
+- safeguard
+- safeguard_8_5
+severity_guidance: medium
+description: "8.5\nCollect Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure\
+  \ detailed audit logging for enterprise assets containing sensitive data. Include\
+  \ event source, date, username, timestamp, source \naddresses, destination addresses,\
+  \ and other useful elements that could assist in a forensic investigation."
+rationale: "8.5\nCollect Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure detailed\
+  \ audit logging for enterprise assets containing sensitive data. Include event source,\
+  \ date, username, timestamp, source \naddresses, destination addresses, and other\
+  \ useful elements that could assist in a forensic investigation."
+developer_guidance: "8.5\nCollect Detailed Audit Logs\nNetwork\n-Detect-\n• •\nConfigure\
+  \ detailed audit logging for enterprise assets containing sensitive data. Include\
+  \ event source, date, username, timestamp, source \naddresses, destination addresses,\
+  \ and other useful elements that could assist in a forensic investigation."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 08
+  note: Safeguard 08.5
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

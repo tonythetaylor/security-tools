@@ -1,0 +1,64 @@
+id: cis-5-3
+title: 5.3 Disable Dormant Accounts
+category: identity_security
+applies_to:
+- account_management
+- identity_lifecycle
+- privileged_accounts
+tags:
+- accounts
+- cis
+- control_05
+- identity
+- privilege
+- safeguard
+- safeguard_5_3
+severity_guidance: medium
+description: '5.3
+
+  Disable Dormant Accounts
+
+  Users
+
+  -Respond-
+
+  • • •
+
+  Delete or disable any dormant accounts after a period of 45 days of inactivity,
+  where supported.'
+rationale: '5.3
+
+  Disable Dormant Accounts
+
+  Users
+
+  -Respond-
+
+  • • •
+
+  Delete or disable any dormant accounts after a period of 45 days of inactivity,
+  where supported.'
+developer_guidance: '5.3
+
+  Disable Dormant Accounts
+
+  Users
+
+  -Respond-
+
+  • • •
+
+  Delete or disable any dormant accounts after a period of 45 days of inactivity,
+  where supported.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 05
+  note: Safeguard 5.3
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

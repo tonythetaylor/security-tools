@@ -1,0 +1,46 @@
+id: cis-6-8
+title: 6.8 Define and Maintain Role-Based Access Control
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+tags:
+- access-control
+- authorization
+- cis
+- control_06
+- least-privilege
+- safeguard
+- safeguard_6_8
+severity_guidance: medium
+description: "6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n\
+  •\nDefine and maintain role-based access control, through determining and documenting\
+  \ the access rights necessary for each role within \nthe enterprise to successfully\
+  \ carry out its assigned duties. Perform access control reviews of enterprise assets\
+  \ to validate that all \nprivileges are authorized, on a recurring schedule at a\
+  \ minimum annually, or more frequently."
+rationale: "6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n\
+  •\nDefine and maintain role-based access control, through determining and documenting\
+  \ the access rights necessary for each role within \nthe enterprise to successfully\
+  \ carry out its assigned duties. Perform access control reviews of enterprise assets\
+  \ to validate that all \nprivileges are authorized, on a recurring schedule at a\
+  \ minimum annually, or more frequently."
+developer_guidance: "6.8\nDefine and Maintain Role-Based Access Control\nData\n-Protect-\n\
+  •\nDefine and maintain role-based access control, through determining and documenting\
+  \ the access rights necessary for each role within \nthe enterprise to successfully\
+  \ carry out its assigned duties. Perform access control reviews of enterprise assets\
+  \ to validate that all \nprivileges are authorized, on a recurring schedule at a\
+  \ minimum annually, or more frequently."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 06
+  note: Safeguard 6.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

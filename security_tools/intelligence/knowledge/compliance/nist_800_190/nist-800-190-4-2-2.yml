@@ -1,0 +1,79 @@
+id: nist-800-190-4-2-2
+title: 4.2.2 Stale images in registries
+category: artifact_security
+applies_to:
+- stale_images
+- artifact_lifecycle
+- registry_hygiene
+tags:
+- 800-190
+- containers
+- lifecycle
+- nist
+- registry
+- section_4_2_2
+- stale-images
+severity_guidance: medium
+description: "4.2.2 Stale images in registries \nThe risk of using stale images can\
+  \ be mitigated through two primary methods. First, \norganizations can prune registries\
+  \ of unsafe, vulnerable images that should no longer be used. \nThis process can\
+  \ be automated based on time triggers and labels associated with images. \nSecond,\
+  \ operational practices should emphasize accessing images using immutable names\
+  \ that \nspecify discrete versions of images to be used. For example, rather than\
+  \ configuring a \ndeployment job to use the image called my-app, configure it to\
+  \ deploy specific versions of the \nimage, such as my-app:2.3 and my-app:2.4 to\
+  \ ensure that specific, known good instances of \nimages are deployed as part of\
+  \ each job. \nAnother option is using a “latest” tag for images and referencing\
+  \ this tag in deployment \nautomation. However, because this tag is only a label\
+  \ attached to the image and not a guarantee \nof freshness, organizations should\
+  \ be cautious to not overly trust it. Regardless of whether an \norganization chooses\
+  \ to use discrete names or to use a “latest” tag, it is critical that processes\
+  \ be \nput in place to ensure that either the automation is using the most recent\
+  \ unique name or the \nimages tagged “latest” actually do represent the most up-to-date\
+  \ versions."
+rationale: "4.2.2 Stale images in registries \nThe risk of using stale images can\
+  \ be mitigated through two primary methods. First, \norganizations can prune registries\
+  \ of unsafe, vulnerable images that should no longer be used. \nThis process can\
+  \ be automated based on time triggers and labels associated with images. \nSecond,\
+  \ operational practices should emphasize accessing images using immutable names\
+  \ that \nspecify discrete versions of images to be used. For example, rather than\
+  \ configuring a \ndeployment job to use the image called my-app, configure it to\
+  \ deploy specific versions of the \nimage, such as my-app:2.3 and my-app:2.4 to\
+  \ ensure that specific, known good instances of \nimages are deployed as part of\
+  \ each job. \nAnother option is using a “latest” tag for images and referencing\
+  \ this tag in deployment \nautomation. However, because this tag is only a label\
+  \ attached to the image and not a guarantee \nof freshness, organizations should\
+  \ be cautious to not overly trust it. Regardless of whether an \norganization chooses\
+  \ to use discrete names or to use a “latest” tag, it is critical that processes\
+  \ be \nput in place to ensure that either the automation is using the most recent\
+  \ unique name or the \nimages tagged “latest” actually do represent the most up-to-date\
+  \ versions."
+developer_guidance: "4.2.2 Stale images in registries \nThe risk of using stale images\
+  \ can be mitigated through two primary methods. First, \norganizations can prune\
+  \ registries of unsafe, vulnerable images that should no longer be used. \nThis\
+  \ process can be automated based on time triggers and labels associated with images.\
+  \ \nSecond, operational practices should emphasize accessing images using immutable\
+  \ names that \nspecify discrete versions of images to be used. For example, rather\
+  \ than configuring a \ndeployment job to use the image called my-app, configure\
+  \ it to deploy specific versions of the \nimage, such as my-app:2.3 and my-app:2.4\
+  \ to ensure that specific, known good instances of \nimages are deployed as part\
+  \ of each job. \nAnother option is using a “latest” tag for images and referencing\
+  \ this tag in deployment \nautomation. However, because this tag is only a label\
+  \ attached to the image and not a guarantee \nof freshness, organizations should\
+  \ be cautious to not overly trust it. Regardless of whether an \norganization chooses\
+  \ to use discrete names or to use a “latest” tag, it is critical that processes\
+  \ be \nput in place to ensure that either the automation is using the most recent\
+  \ unique name or the \nimages tagged “latest” actually do represent the most up-to-date\
+  \ versions."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.2.2
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

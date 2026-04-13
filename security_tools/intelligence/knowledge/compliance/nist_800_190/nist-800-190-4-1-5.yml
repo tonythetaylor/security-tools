@@ -1,0 +1,73 @@
+id: nist-800-190-4-1-5
+title: 4.1.5 Use of untrusted images
+category: supply_chain_security
+applies_to:
+- trusted_images
+- registry_policy
+- software_supply_chain
+tags:
+- 800-190
+- containers
+- countermeasures
+- nist
+- registry
+- section_4_1_5
+- trusted-images
+severity_guidance: medium
+description: "4.1.5 Use of untrusted images \nOrganizations should maintain a set\
+  \ of trusted images and registries and ensure that only images \nfrom this set are\
+  \ allowed to run in their environment, thus mitigating the risk of untrusted or\
+  \ \nmalicious components being deployed. \nTo mitigate these risks, organizations\
+  \ should take a multilayered approach that includes: \n\nFor more information on\
+  \ NIST-validated cryptographic implementations, see the Cryptographic Module Validation\
+  \ Program \n(CMVP) page at https://csrc.nist.gov/groups/STM/cmvp/.\n\n• Capability\
+  \ to centrally control exactly what images and registries are trusted in their \n\
+  environment; \n• Discrete identification of each image by cryptographic signature,\
+  \ using a NIST-validated \nimplementation6; \n• Enforcement to ensure that all hosts\
+  \ in the environment only run images from these \napproved lists; \n• Validation\
+  \ of image signatures before image execution to ensure images are from trusted \n\
+  sources and have not been tampered with; and \n• Ongoing monitoring and maintenance\
+  \ of these repositories to ensure images within them \nare maintained and updated\
+  \ as vulnerabilities and configuration requirements change."
+rationale: "4.1.5 Use of untrusted images \nOrganizations should maintain a set of\
+  \ trusted images and registries and ensure that only images \nfrom this set are\
+  \ allowed to run in their environment, thus mitigating the risk of untrusted or\
+  \ \nmalicious components being deployed. \nTo mitigate these risks, organizations\
+  \ should take a multilayered approach that includes: \n\nFor more information on\
+  \ NIST-validated cryptographic implementations, see the Cryptographic Module Validation\
+  \ Program \n(CMVP) page at https://csrc.nist.gov/groups/STM/cmvp/.\n\n• Capability\
+  \ to centrally control exactly what images and registries are trusted in their \n\
+  environment; \n• Discrete identification of each image by cryptographic signature,\
+  \ using a NIST-validated \nimplementation6; \n• Enforcement to ensure that all hosts\
+  \ in the environment only run images from these \napproved lists; \n• Validation\
+  \ of image signatures before image execution to ensure images are from trusted \n\
+  sources and have not been tampered with; and \n• Ongoing monitoring and maintenance\
+  \ of these repositories to ensure images within them \nare maintained and updated\
+  \ as vulnerabilities and configuration requirements change."
+developer_guidance: "4.1.5 Use of untrusted images \nOrganizations should maintain\
+  \ a set of trusted images and registries and ensure that only images \nfrom this\
+  \ set are allowed to run in their environment, thus mitigating the risk of untrusted\
+  \ or \nmalicious components being deployed. \nTo mitigate these risks, organizations\
+  \ should take a multilayered approach that includes: \n\nFor more information on\
+  \ NIST-validated cryptographic implementations, see the Cryptographic Module Validation\
+  \ Program \n(CMVP) page at https://csrc.nist.gov/groups/STM/cmvp/.\n\n• Capability\
+  \ to centrally control exactly what images and registries are trusted in their \n\
+  environment; \n• Discrete identification of each image by cryptographic signature,\
+  \ using a NIST-validated \nimplementation6; \n• Enforcement to ensure that all hosts\
+  \ in the environment only run images from these \napproved lists; \n• Validation\
+  \ of image signatures before image execution to ensure images are from trusted \n\
+  sources and have not been tampered with; and \n• Ongoing monitoring and maintenance\
+  \ of these repositories to ensure images within them \nare maintained and updated\
+  \ as vulnerabilities and configuration requirements change."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: 4.1.5
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

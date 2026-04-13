@@ -1,0 +1,98 @@
+id: nist-800-190-6-3
+title: 6.3 Implementation Phase
+category: implementation_security
+applies_to:
+- implementation
+- prototype_testing
+- security_validation
+tags:
+- 800-190
+- containers
+- implementation
+- nist
+- section_6_3
+- testing
+- validation
+severity_guidance: medium
+description: "6.3 \nImplementation Phase \nAfter the container technology has been\
+  \ designed, the next step is to implement and test a \nprototype of the design before\
+  \ putting the solution into production. Be aware that container \ntechnologies do\
+  \ not offer the types of introspection capabilities that VM technologies do. \n\
+  NIST SP 800-125 [1] cites several aspects of virtualization technologies that should\
+  \ be evaluated \nbefore production deployment, including authentication, connectivity\
+  \ and networking, app \nfunctionality, management, performance, and the security\
+  \ of the technology itself. In addition to \nthose, it is important to also evaluate\
+  \ the container technology’s isolation capabilities. Ensure \nthat processes within\
+  \ the container can access all resources they are permitted to and cannot view \n\
+  or access any other resources.\n\nImplementation may require new security tools\
+  \ that are specifically focused on containers and \ncloud-native apps and that have\
+  \ visibility into their operations that traditional tools lack. Finally, \ndeployment\
+  \ may also include altering the configuration of existing security controls and\
+  \ \ntechnologies, such as security event logging, network management, code repositories,\
+  \ and \nauthentication servers both to work with containers directly and to integrate\
+  \ with these new \ncontainer security tools. \nWhen the prototype evaluation has\
+  \ been completed and the container technology is ready for \nproduction usage, containers\
+  \ should initially be used for a small number of apps. Problems that \noccur are\
+  \ likely to affect multiple apps, so it is helpful to identify these problems early\
+  \ on so they \ncan be addressed before further deployment. A phased deployment also\
+  \ provides time for \ndevelopers and IT staff (e.g., system administrators, help\
+  \ desk) to be trained on its usage and \nsupport."
+rationale: "6.3 \nImplementation Phase \nAfter the container technology has been designed,\
+  \ the next step is to implement and test a \nprototype of the design before putting\
+  \ the solution into production. Be aware that container \ntechnologies do not offer\
+  \ the types of introspection capabilities that VM technologies do. \nNIST SP 800-125\
+  \ [1] cites several aspects of virtualization technologies that should be evaluated\
+  \ \nbefore production deployment, including authentication, connectivity and networking,\
+  \ app \nfunctionality, management, performance, and the security of the technology\
+  \ itself. In addition to \nthose, it is important to also evaluate the container\
+  \ technology’s isolation capabilities. Ensure \nthat processes within the container\
+  \ can access all resources they are permitted to and cannot view \nor access any\
+  \ other resources.\n\nImplementation may require new security tools that are specifically\
+  \ focused on containers and \ncloud-native apps and that have visibility into their\
+  \ operations that traditional tools lack. Finally, \ndeployment may also include\
+  \ altering the configuration of existing security controls and \ntechnologies, such\
+  \ as security event logging, network management, code repositories, and \nauthentication\
+  \ servers both to work with containers directly and to integrate with these new\
+  \ \ncontainer security tools. \nWhen the prototype evaluation has been completed\
+  \ and the container technology is ready for \nproduction usage, containers should\
+  \ initially be used for a small number of apps. Problems that \noccur are likely\
+  \ to affect multiple apps, so it is helpful to identify these problems early on\
+  \ so they \ncan be addressed before further deployment. A phased deployment also\
+  \ provides time for \ndevelopers and IT staff (e.g., system administrators, help\
+  \ desk) to be trained on its usage and \nsupport."
+developer_guidance: "6.3 \nImplementation Phase \nAfter the container technology has\
+  \ been designed, the next step is to implement and test a \nprototype of the design\
+  \ before putting the solution into production. Be aware that container \ntechnologies\
+  \ do not offer the types of introspection capabilities that VM technologies do.\
+  \ \nNIST SP 800-125 [1] cites several aspects of virtualization technologies that\
+  \ should be evaluated \nbefore production deployment, including authentication,\
+  \ connectivity and networking, app \nfunctionality, management, performance, and\
+  \ the security of the technology itself. In addition to \nthose, it is important\
+  \ to also evaluate the container technology’s isolation capabilities. Ensure \n\
+  that processes within the container can access all resources they are permitted\
+  \ to and cannot view \nor access any other resources.\n\nImplementation may require\
+  \ new security tools that are specifically focused on containers and \ncloud-native\
+  \ apps and that have visibility into their operations that traditional tools lack.\
+  \ Finally, \ndeployment may also include altering the configuration of existing\
+  \ security controls and \ntechnologies, such as security event logging, network\
+  \ management, code repositories, and \nauthentication servers both to work with\
+  \ containers directly and to integrate with these new \ncontainer security tools.\
+  \ \nWhen the prototype evaluation has been completed and the container technology\
+  \ is ready for \nproduction usage, containers should initially be used for a small\
+  \ number of apps. Problems that \noccur are likely to affect multiple apps, so it\
+  \ is helpful to identify these problems early on so they \ncan be addressed before\
+  \ further deployment. A phased deployment also provides time for \ndevelopers and\
+  \ IT staff (e.g., system administrators, help desk) to be trained on its usage and\
+  \ \nsupport."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-190
+  control: '6.3'
+  note: null
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/nist/NIST.SP.800-190.pdf
+source_type: nist_800_190

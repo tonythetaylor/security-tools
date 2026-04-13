@@ -1,0 +1,58 @@
+id: cis-13-2
+title: 13.2 Deploy a Host-Based Intrusion Detection Solution
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_13
+- safeguard
+- safeguard_13_2
+severity_guidance: medium
+description: '13.2
+
+  Deploy a Host-Based Intrusion Detection Solution
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Deploy a host-based intrusion detection solution on enterprise assets, where appropriate
+  and/or supported.'
+rationale: '13.2
+
+  Deploy a Host-Based Intrusion Detection Solution
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Deploy a host-based intrusion detection solution on enterprise assets, where appropriate
+  and/or supported.'
+developer_guidance: '13.2
+
+  Deploy a Host-Based Intrusion Detection Solution
+
+  Devices
+
+  -Detect-
+
+  • •
+
+  Deploy a host-based intrusion detection solution on enterprise assets, where appropriate
+  and/or supported.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 13
+  note: Safeguard 13.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

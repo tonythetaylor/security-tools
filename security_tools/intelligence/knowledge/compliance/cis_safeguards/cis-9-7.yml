@@ -1,0 +1,64 @@
+id: cis-9-7
+title: 9.7 Deploy and Maintain Email Server Anti-Malware Protections
+category: email_web_security
+applies_to:
+- browser_security
+- email_security
+- content_filtering
+tags:
+- browser
+- cis
+- control_09
+- email
+- protections
+- safeguard
+- safeguard_9_7
+severity_guidance: medium
+description: '9.7
+
+  Deploy and Maintain Email Server Anti-Malware Protections
+
+  Network
+
+  -Protect-
+
+  •
+
+  Deploy and maintain email server anti-malware protections, such as attachment scanning
+  and/or sandboxing.'
+rationale: '9.7
+
+  Deploy and Maintain Email Server Anti-Malware Protections
+
+  Network
+
+  -Protect-
+
+  •
+
+  Deploy and maintain email server anti-malware protections, such as attachment scanning
+  and/or sandboxing.'
+developer_guidance: '9.7
+
+  Deploy and Maintain Email Server Anti-Malware Protections
+
+  Network
+
+  -Protect-
+
+  •
+
+  Deploy and maintain email server anti-malware protections, such as attachment scanning
+  and/or sandboxing.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: Safeguard 9.7
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

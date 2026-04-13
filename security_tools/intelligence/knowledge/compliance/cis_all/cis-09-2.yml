@@ -1,0 +1,58 @@
+id: cis-09-2
+title: 09.2 Use DNS Filtering Services
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_09
+- safeguard
+- safeguard_9_2
+severity_guidance: medium
+description: '9.2
+
+  Use DNS Filtering Services
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Use DNS filtering services on all enterprise assets to block access to known malicious
+  domains.'
+rationale: '9.2
+
+  Use DNS Filtering Services
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Use DNS filtering services on all enterprise assets to block access to known malicious
+  domains.'
+developer_guidance: '9.2
+
+  Use DNS Filtering Services
+
+  Network
+
+  -Protect-
+
+  • • •
+
+  Use DNS filtering services on all enterprise assets to block access to known malicious
+  domains.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 09
+  note: Safeguard 09.2
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis

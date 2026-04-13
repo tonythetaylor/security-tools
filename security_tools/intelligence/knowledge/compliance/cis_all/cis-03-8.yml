@@ -1,0 +1,37 @@
+id: cis-03-8
+title: 03.8 Document Data Flows
+category: cis_security
+applies_to: []
+tags:
+- cis
+- control_03
+- safeguard
+- safeguard_3_8
+severity_guidance: medium
+description: "3.8\nDocument Data Flows\nData\n-Identify-\n• •\nDocument data flows.\
+  \ Data flow documentation includes service provider data flows and should be based\
+  \ on the enterprise’s data \nmanagement process. Review and update documentation\
+  \ annually, or when significant enterprise changes occur that could impact \nthis\
+  \ Safeguard."
+rationale: "3.8\nDocument Data Flows\nData\n-Identify-\n• •\nDocument data flows.\
+  \ Data flow documentation includes service provider data flows and should be based\
+  \ on the enterprise’s data \nmanagement process. Review and update documentation\
+  \ annually, or when significant enterprise changes occur that could impact \nthis\
+  \ Safeguard."
+developer_guidance: "3.8\nDocument Data Flows\nData\n-Identify-\n• •\nDocument data\
+  \ flows. Data flow documentation includes service provider data flows and should\
+  \ be based on the enterprise’s data \nmanagement process. Review and update documentation\
+  \ annually, or when significant enterprise changes occur that could impact \nthis\
+  \ Safeguard."
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: CIS Controls v8
+  control: Control 03
+  note: Safeguard 03.8
+risk_context: {}
+ownership: {}
+remediation: {}
+source_path: knowledge_sources/cis/CIS_Controls__v8__Critical_Security_Controls__2023_08.pdf
+source_type: cis
