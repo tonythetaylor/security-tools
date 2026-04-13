@@ -65,6 +65,10 @@ class ReviewResult(BaseModel):
     operational_warnings: list[str] = Field(default_factory=list)
     risk_score: int = 0
 
+    severity_counts: dict[str, int] = Field(default_factory=dict)
+    tool_counts: dict[str, int] = Field(default_factory=dict)
+    category_counts: dict[str, int] = Field(default_factory=dict)
+
 
 class ReviewContext(BaseModel):
     project_id: int

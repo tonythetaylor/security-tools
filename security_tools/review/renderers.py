@@ -13,6 +13,22 @@ def _normalize_recommendation(
     return rec.model_dump()
 
 
+def _render_metric_block(
+    title: str,
+    values: dict[str, int] | None,
+) -> list[str]:
+    lines: list[str] = []
+
+    if not values:
+        return lines
+
+    lines.append(f"### {title}")
+    for key, value in values.items():
+        lines.append(f"- **{key}**: {value}")
+    lines.append("")
+    return lines
+
+
 def render_mr_comment(
     verdict: str,
     summary: str,
@@ -24,6 +40,9 @@ def render_mr_comment(
     runtime_context: dict[str, Any] | None = None,
     risk_score: int | None = None,
     verdict_rationale: str | None = None,
+    severity_counts: dict[str, int] | None = None,
+    tool_counts: dict[str, int] | None = None,
+    category_counts: dict[str, int] | None = None,
 ) -> str:
     lines: list[str] = []
 
@@ -38,7 +57,7 @@ def render_mr_comment(
     )
 
     if risk_score is not None:
-        lines.append(f"- **Risk score:** {risk_score}")
+        lines.append(f"- **Aggregate risk score:** {risk_score}")
 
     if operational_warnings:
         lines.append(
@@ -51,8 +70,12 @@ def render_mr_comment(
 
     if verdict_rationale:
         lines.append("### Why this verdict")
-        lines.append(verdict_rationale)
+        lines.append(str(verdict_rationale).strip())
         lines.append("")
+
+    lines.extend(_render_metric_block("Severity Breakdown", severity_counts))
+    lines.extend(_render_metric_block("Tool Breakdown", tool_counts))
+    lines.extend(_render_metric_block("Category Breakdown", category_counts))
 
     if planning_context:
         lines.append("### Dynamic Planning Context")
@@ -60,7 +83,9 @@ def render_mr_comment(
         detected_stack = planning_context.get("detected_stack")
         if detected_stack:
             if isinstance(detected_stack, list):
-                lines.append(f"- **Detected stack:** {', '.join(str(x) for x in detected_stack)}")
+                lines.append(
+                    f"- **Detected stack:** {', '.join(str(x) for x in detected_stack)}"
+                )
             else:
                 lines.append(f"- **Detected stack:** {detected_stack}")
 
@@ -71,13 +96,17 @@ def render_mr_comment(
         deploy_targets = planning_context.get("deploy_targets")
         if deploy_targets:
             if isinstance(deploy_targets, list):
-                lines.append(f"- **Deploy targets:** {', '.join(str(x) for x in deploy_targets)}")
+                lines.append(
+                    f"- **Deploy targets:** {', '.join(str(x) for x in deploy_targets)}"
+                )
             else:
                 lines.append(f"- **Deploy targets:** {deploy_targets}")
 
         runtime_contract_present = planning_context.get("runtime_contract_present")
         if runtime_contract_present is not None:
-            lines.append(f"- **Runtime contract present:** {runtime_contract_present}")
+            lines.append(
+                f"- **Runtime contract present:** {runtime_contract_present}"
+            )
 
         lines.append("")
 
@@ -87,7 +116,7 @@ def render_mr_comment(
             lines.append(f"- **{key}:** {value}")
         lines.append("")
 
-    lines.append("### Recommendations")
+    lines.append("### Security Recommendations")
 
     if not recommendations:
         lines.append("- No actionable recommendations generated.")
@@ -97,23 +126,43 @@ def render_mr_comment(
         item = _normalize_recommendation(rec)
 
         severity = str(item.get("severity", "unknown")).upper()
-        title = str(item.get("title", "Untitled recommendation"))
-        lines.append(f"- **{severity}** {title}")
+        title = str(item.get("title", "Untitled recommendation")).strip()
 
-        location = item.get("location")
+        lines.append("---")
+        lines.append(f"#### {severity} — {title}")
+        lines.append("")
+
+        location = str(item.get("location") or "").strip()
         if location:
-            lines.append(f"  - Location: {location}")
+            lines.append(f"**Location**: `{location}`")
+            lines.append("")
 
-        rationale = item.get("rationale")
+        rationale = str(item.get("rationale") or "").strip()
         if rationale:
-            lines.append(f"  - Rationale: {rationale}")
+            lines.append("**Security Rationale**")
+            lines.append(rationale)
+            lines.append("")
 
-        suggested_fix = item.get("suggested_fix")
+        suggested_fix = str(item.get("suggested_fix") or "").strip()
         if suggested_fix:
-            lines.append(f"  - Suggested fix: {suggested_fix}")
+            lines.append("**Recommended Remediation**")
+            lines.append(suggested_fix)
+            lines.append("")
 
-        compliance_refs = item.get("compliance_refs") or []
+        compliance_refs = list(
+            dict.fromkeys(str(x) for x in (item.get("compliance_refs") or []))
+        )
         if compliance_refs:
-            lines.append(f"  - Compliance: {', '.join(str(x) for x in compliance_refs)}")
+            lines.append("**Compliance References**")
+            lines.append(", ".join(compliance_refs))
+            lines.append("")
+
+        lines.append("**Ownership**")
+        lines.append("- Responsible Team: _Application / Platform / Security (TBD)_")
+        lines.append("")
+
+        lines.append("**Tracking**")
+        lines.append("- Jira Ticket: _SEC-XXXX (if opened for investigation / triage)_")
+        lines.append("")
 
     return "\n".join(lines)

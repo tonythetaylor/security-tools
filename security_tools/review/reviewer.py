@@ -32,6 +32,28 @@ class SecurityReviewer:
             provider=MockLLMProvider()
         )
 
+    def _build_severity_counts(
+        self,
+        findings: list[EnrichedFinding],
+    ) -> dict[str, int]:
+        ordered = ["critical", "high", "medium", "low", "info", "unknown"]
+        counts = Counter(f.severity for f in findings)
+        return {sev: counts.get(sev, 0) for sev in ordered if counts.get(sev, 0) > 0}
+
+    def _build_tool_counts(
+        self,
+        findings: list[EnrichedFinding],
+    ) -> dict[str, int]:
+        counts = Counter(f.tool for f in findings if f.tool)
+        return dict(sorted(counts.items(), key=lambda x: (-x[1], x[0])))
+
+    def _build_category_counts(
+        self,
+        findings: list[EnrichedFinding],
+    ) -> dict[str, int]:
+        counts = Counter(f.category for f in findings if f.category)
+        return dict(sorted(counts.items(), key=lambda x: (-x[1], x[0])))
+    
     def _catalog_default(self) -> dict[str, Any]:
         value = self.catalog.get("default", {})
         return value if isinstance(value, dict) else {}
@@ -196,21 +218,11 @@ class SecurityReviewer:
                             dict.fromkeys(compliance_refs + intel.compliance_refs)
                         )
 
-                    extra_notes: list[str] = []
                     if intel.developer_guidance:
-                        extra_notes.append(
-                            f"Developer guidance: {intel.developer_guidance}"
-                        )
-                    if intel.ownership_guidance:
-                        extra_notes.append(f"Ownership: {intel.ownership_guidance}")
-                    if intel.evidence_document_ids:
-                        extra_notes.append(
-                            "Evidence docs: "
-                            + ", ".join(intel.evidence_document_ids[:5])
-                        )
+                        rationale = f"{rationale}\n\nDeveloper Guidance:\n{intel.developer_guidance}"
 
-                    if extra_notes:
-                        rationale = f"{rationale} {' '.join(extra_notes)}"
+                    if intel.ownership_guidance:
+                        rationale = f"{rationale}\n\nOwnership Guidance:\n{intel.ownership_guidance}"
             except Exception:
                 pass
 
@@ -408,6 +420,9 @@ class SecurityReviewer:
 
         risk_score = self._calculate_risk_score(enriched)
         recommendations = self._to_recommendations(enriched)
+        severity_counts = self._build_severity_counts(enriched)
+        tool_counts = self._build_tool_counts(enriched)
+        category_counts = self._build_category_counts(enriched)
 
         verdict = self._compute_verdict(
             findings=enriched,
@@ -443,6 +458,9 @@ class SecurityReviewer:
             runtime_context=runtime_context,
             risk_score=risk_score,
             verdict_rationale=verdict_rationale,
+            severity_counts=severity_counts,
+            tool_counts=tool_counts,
+            category_counts=category_counts,
         )
 
         return ReviewResult(
@@ -454,4 +472,7 @@ class SecurityReviewer:
             missing_expected_scans=missing_scans,
             operational_warnings=operational_warnings,
             risk_score=risk_score,
+            severity_counts=severity_counts,
+            tool_counts=tool_counts,
+            category_counts=category_counts,
         )
