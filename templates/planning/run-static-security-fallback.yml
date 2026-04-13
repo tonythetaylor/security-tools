@@ -1,0 +1,11 @@
+run_static_security_fallback:
+  stage: security
+  trigger:
+    include:
+      - project: "root/security-tools"
+        ref: "main"
+        file: "/templates/suites/security-suite.yml"
+    strategy: depend
+
+  rules:
+    - when: on_failure
