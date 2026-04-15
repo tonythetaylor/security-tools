@@ -78,6 +78,14 @@ include:
     file: "/templates/suites/security-suite.yml"
 ```
 
+```yaml
+## run a dynamic scan
+include:
+  - project: "root/security-tools"
+    ref: "main"
+    file: "/templates/suites/dynamic-security-suite.yml"
+```
+
 Define stages:
 
 ```yaml
