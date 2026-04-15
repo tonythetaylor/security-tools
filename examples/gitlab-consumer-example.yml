@@ -1,0 +1,43 @@
+include:
+  - project: "root/security-tools"
+    ref: "main"
+    file: "/templates/suites/dynamic-security-suite.yml"
+
+stages:
+  - build
+  - plan
+  - security
+  - review
+  - test
+
+default:
+  tags:
+    - docker
+
+variables:
+  PYTHON_VERSION: "3.12"
+  GITLEAKS_VERSION: "8.24.2"
+  TRIVY_VERSION: "0.69.3"
+  SECURITY_TOOLS_REF: "main"
+  SECURITY_TOOLS_PROJECT_PATH: "root/security-tools"
+  ENABLE_MR_COMMENTS: "true"
+
+build:
+  stage: build
+  image: python:${PYTHON_VERSION}
+  script:
+    - echo "Building project"
+    - python --version
+    - pip install -r requirements.txt || true
+
+test:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  script:
+    - pip install pytest
+    - |
+      if ls tests 2>/dev/null; then
+        pytest
+      else
+        echo "No tests found"
+      fi
