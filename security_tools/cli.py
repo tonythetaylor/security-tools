@@ -17,7 +17,7 @@ from security_tools.parsers import (
     parse_trivy,
 )
 from security_tools.review import SecurityReviewer
-
+from security_tools.planning.stack_detector import detect_stack
 
 def load_json(path: str) -> Any | None:
     p = Path(path)
@@ -128,7 +128,7 @@ def final_verdict_from_review_and_runtime(
     return review_verdict
 
 
-def build_planning_context() -> dict[str, Any] | None:
+def build_planning_context(runtime_report: dict[str, Any] | None = None) -> dict[str, Any]:
     generated_plan = load_json("scan-plan.json")
     if isinstance(generated_plan, dict):
         detected = generated_plan.get("detected", {}) or {}
@@ -141,37 +141,61 @@ def build_planning_context() -> dict[str, Any] | None:
                     + ([detected.get("service_type")] if detected.get("service_type") else [])
                 )
             ),
+            "languages": detected.get("languages", []) or [],
+            "frameworks": detected.get("frameworks", []) or [],
+            "service_type": detected.get("service_type"),
+            "repo_types": detected.get("repo_types", []) or [],
             "deploy_targets": detected.get("deploy_targets", []) or [],
             "runtime_contract_present": detected.get("has_runtime_contract", False),
+            "has_dockerfile": bool(detected.get("has_dockerfile", False)),
+            "has_iac": any(
+                bool(detected.get(flag, False))
+                for flag in ("has_terraform", "has_ansible", "has_kubernetes", "has_helm")
+            ),
         }
 
-    runtime_contract = load_json("runtime-contract.json")
-    if isinstance(runtime_contract, dict):
-        service = runtime_contract.get("service", {}) or {}
-        stack = []
-        role = service.get("role")
-        if role:
-            stack.append(str(role))
-        return {
-            "pipeline_mode": "runtime contract guided",
-            "detected_stack": stack,
-            "deploy_targets": [],
-            "runtime_contract_present": True,
-        }
+    detected = detect_stack(".")
+    detected_stack = sorted(
+        set(detected.languages + detected.frameworks + ([detected.service_type] if detected.service_type else []))
+    )
 
-    if Path("runtime-contract.yml").exists():
-        return {
-            "pipeline_mode": "dynamic child pipeline",
-            "detected_stack": [],
-            "deploy_targets": [],
-            "runtime_contract_present": True,
-        }
+    pipeline_mode = "inferred from repository"
+    runtime_contract_present = detected.has_runtime_contract
+
+    if runtime_report:
+        metadata = runtime_report.get("metadata", {}) or {}
+        runtime_contract = metadata.get("runtime_contract")
+        if isinstance(runtime_contract, dict):
+            runtime_contract_present = True
+            pipeline_mode = "runtime contract guided"
+
+            service = runtime_contract.get("service", {}) or {}
+            role = service.get("role")
+            if role and role not in detected_stack:
+                detected_stack.append(str(role))
+                detected_stack = sorted(set(detected_stack))
+
+            if role and not detected.service_type:
+                detected.service_type = str(role)
 
     return {
-        "pipeline_mode": "static or inferred",
-        "detected_stack": [],
-        "deploy_targets": [],
-        "runtime_contract_present": False,
+        "pipeline_mode": pipeline_mode,
+        "detected_stack": detected_stack,
+        "languages": detected.languages,
+        "frameworks": detected.frameworks,
+        "service_type": detected.service_type,
+        "repo_types": detected.repo_types,
+        "deploy_targets": detected.deploy_targets,
+        "runtime_contract_present": runtime_contract_present,
+        "has_dockerfile": detected.has_dockerfile,
+        "has_iac": any(
+            [
+                detected.has_terraform,
+                detected.has_ansible,
+                detected.has_kubernetes,
+                detected.has_helm,
+            ]
+        ),
     }
 
 
@@ -201,7 +225,7 @@ def main() -> int:
 
     runtime_report = load_json("runtime-report.json")
     runtime_present = runtime_report is not None
-    planning_context = build_planning_context()
+    planning_context = build_planning_context(runtime_report)
 
     present_scans = [
         scan_name
