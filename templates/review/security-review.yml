@@ -33,7 +33,7 @@ security_review:
     SECURITY_TOOLS_CLONE_DIR: "/tmp/security-tools"
 
   before_script:
-    - apt-get update -qq && apt-get install -y -qq git jq >/dev/null 2>&1 || true
+    - apt-get update -qq && apt-get install -y -qq git >/dev/null 2>&1 || true
 
   script:
     - |-
@@ -87,13 +87,6 @@ security_review:
       security-review
       REVIEW_RC=$?
 
-      FINAL_VERDICT="UNKNOWN"
-      if [ -f security-review-output.json ]; then
-        FINAL_VERDICT="$(jq -r '.final_verdict // .review.verdict // "UNKNOWN"' security-review-output.json 2>/dev/null)"
-      elif [ -f security-review-status.json ]; then
-        FINAL_VERDICT="$(jq -r '.final_verdict // .review.verdict // .status // "UNKNOWN"' security-review-status.json 2>/dev/null)"
-      fi
-
       case "$REVIEW_RC" in
         1)
           fail \
@@ -108,16 +101,8 @@ security_review:
             2
           ;;
         *)
-          if [ "$FINAL_VERDICT" = "WARN" ]; then
-            write_status '{"status":"pass","final_verdict":"WARN","message":"Security review completed with WARN"}'
-            echo "Security review completed with WARN"
-          elif [ "$FINAL_VERDICT" = "PASS" ]; then
-            write_status '{"status":"pass","final_verdict":"PASS","message":"Security review completed with PASS"}'
-            echo "Security review completed with PASS"
-          else
-            write_status "{\"status\":\"pass\",\"final_verdict\":\"${FINAL_VERDICT}\",\"message\":\"Security review completed with ${FINAL_VERDICT}\"}"
-            echo "Security review completed with ${FINAL_VERDICT}"
-          fi
+          write_status '{"status":"pass","final_verdict":"PASS_OR_WARN","message":"Security review completed successfully"}'
+          echo "Security review completed successfully"
           exit 0
           ;;
       esac
@@ -126,7 +111,6 @@ security_review:
     when: always
     paths:
       - security-review-status.json
-      - security-review-output.json
       - runtime-report.json
       - runtime-summary.md
       - gl-*.json

@@ -21,10 +21,10 @@ VERDICT_ICONS = {
     "OPERATIONAL_ERROR": "❌",
 }
 READINESS_BY_VERDICT = {
-    "PASS": "✅ Yes",
-    "WARN": "❌ Not Yet",
-    "BLOCK": "❌ No",
-    "OPERATIONAL_ERROR": "❌ No",
+    "PASS": "✅ READY",
+    "WARN": "❌ REMEDIATION RECOMMENDED",
+    "BLOCK": "❌ NOT READY",
+    "OPERATIONAL_ERROR": "❌ UNDETERMINED",
 }
 
 
