@@ -17,7 +17,7 @@ from security_tools.review.dedup import deduplicate_findings
 from security_tools.review.heuristics import build_heuristic_findings
 from security_tools.review.renderers import render_mr_comment
 from security_tools.review.severity import severity_to_risk_score
-
+from security_tools.review.verdict import calculate_verdict, build_verdict_rationale
 
 class SecurityReviewer:
     def __init__(
@@ -252,51 +252,13 @@ class SecurityReviewer:
         operational_warnings: list[str],
         risk_score: int,
     ) -> str:
-        verdict_rules = self._policy_verdict_rules()
-        risk_rules = self._policy_risk_rules()
-
-        if operational_warnings and verdict_rules.get(
-            "operational_error_on_warnings", True
-        ):
-            return "OPERATIONAL_ERROR"
-
-        if missing_scans and verdict_rules.get("block_if_missing_scans", True):
-            return "BLOCK"
-
-        always_block_categories = set(
-            verdict_rules.get("always_block_categories", [])
+        return calculate_verdict(
+            findings=findings,
+            missing_scans=missing_scans,
+            operational_warnings=operational_warnings,
+            risk_score=risk_score,
+            policy=self.policy,
         )
-        always_block_finding_types = set(
-            verdict_rules.get("always_block_finding_types", [])
-        )
-        block_on_severities = set(
-            verdict_rules.get("block_on_severities", ["critical", "high"])
-        )
-        warn_on_severities = set(
-            verdict_rules.get("warn_on_severities", ["medium"])
-        )
-
-        for finding in findings:
-            if finding.category and finding.category in always_block_categories:
-                return "BLOCK"
-            if finding.finding_type in always_block_finding_types:
-                return "BLOCK"
-
-        severities = Counter(f.severity for f in findings)
-
-        if any(severities.get(sev, 0) > 0 for sev in block_on_severities):
-            return "BLOCK"
-
-        if risk_rules.get("enabled", False):
-            if risk_score >= int(risk_rules.get("block_if_score_gte", 999999)):
-                return "BLOCK"
-            if risk_score >= int(risk_rules.get("warn_if_score_gte", 999999)):
-                return "WARN"
-
-        if any(severities.get(sev, 0) > 0 for sev in warn_on_severities):
-            return "WARN"
-
-        return "PASS"
 
     def _to_recommendations(
         self, findings: list[EnrichedFinding]
@@ -440,11 +402,13 @@ class SecurityReviewer:
 
         planning_context = self._build_planning_context(context)
         runtime_context = self._build_runtime_context(context)
-        verdict_rationale = self._build_verdict_rationale(
+        verdict_rationale = build_verdict_rationale(
             verdict=verdict,
-            recommendations=recommendations,
+            findings=enriched,
             missing_scans=missing_scans,
+            operational_warnings=operational_warnings,
             runtime_context=runtime_context,
+            risk_score=risk_score,
         )
 
         mr_comment = render_mr_comment(
