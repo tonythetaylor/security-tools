@@ -154,11 +154,11 @@ def _render_decision_table(
 
     production_ready = READINESS_BY_VERDICT.get(verdict.upper(), "❌ Not Yet")
 
-    lines.append("## 🛡️ Security Review")
+    lines.append("## Security Review")
     lines.append("")
     lines.extend(_render_intro())
 
-    lines.append("### 🚦 Decision")
+    lines.append("### Decision")
     lines.append("")
     lines.append("| Status | Value |")
     lines.append("|--------|-------|")
@@ -210,7 +210,7 @@ def _render_interpretation(
     elif verdict.upper() == "OPERATIONAL_ERROR":
         bullets.append("Operational review errors must be resolved before disposition")
 
-    lines.append("### 🧠 Interpretation")
+    lines.append("### Interpretation")
     lines.append("")
     for bullet in bullets:
         lines.append(f"- {bullet}")
@@ -226,7 +226,7 @@ def _render_severity_table(
     if not severity_counts:
         return lines
 
-    lines.append("### 📊 Risk Breakdown")
+    lines.append("### Risk Breakdown")
     lines.append("")
     lines.append("| Severity | Count |")
     lines.append("|----------|-------|")
@@ -252,7 +252,7 @@ def _render_scan_coverage(
     if not all_scans:
         return lines
 
-    lines.append("### 🔍 Coverage")
+    lines.append("### Coverage")
     lines.append("")
     if not missing:
         lines.append("All expected scans executed successfully:")
@@ -279,7 +279,7 @@ def _render_runtime_table(
     if not runtime_context:
         return lines
 
-    lines.append("### 🧪 Runtime Verification")
+    lines.append("### Runtime Verification")
     lines.append("")
     lines.append("| Check | Result |")
     lines.append("|------|--------|")
@@ -327,7 +327,7 @@ def _render_area_table(
     if not category_counts:
         return lines
 
-    lines.append("### 🧩 Affected Areas")
+    lines.append("### Affected Areas")
     lines.append("")
     lines.append("| Area | Findings |")
     lines.append("|------|----------|")
@@ -363,14 +363,24 @@ def _infer_owner(
 ) -> str:
     if not ownership_guidance:
         return "application_team"
-    lowered = ownership_guidance.lower()
-    if "platform" in lowered:
-        return "platform_team"
-    if "security" in lowered:
-        return "security_team"
-    if "application" in lowered:
+
+    text = ownership_guidance.strip().lower()
+
+    if "typical owner:" in text:
+        owner_text = text.split("typical owner:", 1)[1].strip()
+        owner_text = owner_text.split("unless", 1)[0].strip()
+        owner_text = owner_text.split(".", 1)[0].strip()
+        if owner_text:
+            return owner_text.replace(" ", "_")
+
+    if "application_team" in text or "application team" in text:
         return "application_team"
-    return ownership_guidance.strip()
+    if "security_team" in text or "security team" in text:
+        return "security_team"
+    if "platform_team" in text or "platform team" in text:
+        return "platform_team"
+
+    return "application_team"
 
 
 def _render_recommendation_summary_table(
@@ -381,7 +391,7 @@ def _render_recommendation_summary_table(
     if not recommendations:
         return lines
 
-    lines.append("### 🛠️ Recommended Actions")
+    lines.append("### Recommended Actions")
     lines.append("")
     lines.append("| Priority | Issue | Location | Owner |")
     lines.append("|----------|-------|----------|-------|")
@@ -413,7 +423,7 @@ def _render_detailed_recommendations(
 ) -> list[str]:
     lines: list[str] = []
 
-    lines.append("### 🔬 Details")
+    lines.append("### Details")
     lines.append("")
 
     if not recommendations:
@@ -438,9 +448,23 @@ def _render_detailed_recommendations(
         compliance_refs = list(
             dict.fromkeys(str(x) for x in (item.get("compliance_refs") or []))
         )
-        compliance_refs = [
-            ref for ref in compliance_refs if "mock mode" not in ref.lower()
+
+        banned_ref_fragments = [
+            "generated using internal security intelligence knowledge base",
+            "no external ai or third-party model services were used",
+            "recommendations derived from curated compliance and security guidance",
+            "mock mode",
         ]
+
+        filtered_refs: list[str] = []
+        for ref in compliance_refs:
+            lowered = ref.lower()
+            if any(fragment in lowered for fragment in banned_ref_fragments):
+                continue
+            filtered_refs.append(ref)
+
+        compliance_refs = filtered_refs
+
         owner = _infer_owner(ownership_guidance)
 
         summary_title = title
@@ -573,7 +597,7 @@ def _render_summary(
 ) -> list[str]:
     lines: list[str] = []
 
-    lines.append("### 🧾 Summary")
+    lines.append("### Summary")
     lines.append("")
 
     lines.append("- Pipeline executed successfully")

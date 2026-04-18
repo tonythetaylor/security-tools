@@ -29,60 +29,108 @@ security_review:
       optional: true
       artifacts: true
 
+  variables:
+    SECURITY_TOOLS_CLONE_DIR: "/tmp/security-tools"
+
   before_script:
-    - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+    - apt-get update -qq && apt-get install -y -qq git jq >/dev/null 2>&1 || true
 
   script:
-    - |
+    - |-
       set +e
 
+      write_status() {
+        echo "$1" > security-review-status.json
+      }
+
+      fail() {
+        MESSAGE="$1"
+        PAYLOAD="$2"
+        EXIT_CODE="$3"
+        write_status "$PAYLOAD"
+        echo "$MESSAGE"
+        exit "$EXIT_CODE"
+      }
+
       CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
+      TOOLS_DIR="${SECURITY_TOOLS_CLONE_DIR}"
 
-      if [ ! -d .security-tools ]; then
-        git clone --depth 1 \
-          --branch "${SECURITY_TOOLS_REF:-main}" \
-          "$CLONE_URL" \
-          .security-tools
-        CLONE_RC=$?
-        if [ $CLONE_RC -ne 0 ]; then
-          echo "WARNING: failed to clone security-tools shared repo"
-          echo '{"status":"operational_error","step":"clone","message":"Unable to clone shared repo"}' > security-review-status.json
-          exit 2
-        fi
+      rm -rf "${TOOLS_DIR}"
+
+      git clone --depth 1 \
+        --branch "${SECURITY_TOOLS_REF:-main}" \
+        "${CLONE_URL}" \
+        "${TOOLS_DIR}"
+
+      if [ $? -ne 0 ]; then
+        fail \
+          "Failed to clone security-tools repository" \
+          '{"status":"operational_error","step":"clone","message":"Unable to clone shared repo","final_verdict":"OPERATIONAL_ERROR"}' \
+          2
       fi
 
-      python -m pip install ./.security-tools
-      INSTALL_RC=$?
-      if [ $INSTALL_RC -ne 0 ]; then
-        echo "WARNING: failed to install security-tools package"
-        echo '{"status":"operational_error","step":"install","message":"Unable to install shared package"}' > security-review-status.json
-        exit 2
+      python -m pip install "${TOOLS_DIR}"
+
+      if [ $? -ne 0 ]; then
+        fail \
+          "Failed to install security-tools package" \
+          '{"status":"operational_error","step":"install","message":"Unable to install shared package","final_verdict":"OPERATIONAL_ERROR"}' \
+          2
       fi
 
-      ls -la
-      find . -maxdepth 2 -type f | sort
+      echo "Workspace snapshot:"
+      find . \
+        -path "./.git" -prune -o \
+        -path "./.security-tools" -prune -o \
+        -type f -maxdepth 2 -print | sort
 
       security-review
       REVIEW_RC=$?
 
-      if [ $REVIEW_RC -eq 1 ]; then
-        echo '{"status":"block","message":"Security review returned BLOCK"}' > security-review-status.json
-        echo "Security review returned BLOCK"
-        exit 1
-      elif [ $REVIEW_RC -eq 2 ]; then
-        echo '{"status":"operational_error","step":"review","message":"Security review returned operational error"}' > security-review-status.json
-        echo "Security review returned OPERATIONAL ERROR"
-        exit 2
-      else
-        echo '{"status":"pass","message":"Security review passed"}' > security-review-status.json
-        echo "Security review passed"
-        exit 0
+      FINAL_VERDICT="UNKNOWN"
+      if [ -f security-review-status.json ]; then
+        FINAL_VERDICT="$(jq -r '.final_verdict // .review.verdict // .status // "UNKNOWN"' security-review-status.json 2>/dev/null)"
       fi
+
+      case "$REVIEW_RC" in
+        1)
+          fail \
+            "Security review completed with BLOCK" \
+            '{"status":"block","final_verdict":"BLOCK","message":"Security review completed with BLOCK"}' \
+            1
+          ;;
+        2)
+          fail \
+            "Security review completed with OPERATIONAL_ERROR" \
+            '{"status":"operational_error","step":"review","final_verdict":"OPERATIONAL_ERROR","message":"Security review returned operational error"}' \
+            2
+          ;;
+        *)
+          if [ "$FINAL_VERDICT" = "WARN" ]; then
+            write_status '{"status":"pass","final_verdict":"WARN","message":"Security review completed with WARN"}'
+            echo "Security review completed with WARN"
+          elif [ "$FINAL_VERDICT" = "PASS" ]; then
+            write_status '{"status":"pass","final_verdict":"PASS","message":"Security review completed with PASS"}'
+            echo "Security review completed with PASS"
+          else
+            write_status "{\"status\":\"pass\",\"final_verdict\":\"${FINAL_VERDICT}\",\"message\":\"Security review completed with ${FINAL_VERDICT}\"}"
+            echo "Security review completed with ${FINAL_VERDICT}"
+          fi
+          exit 0
+          ;;
+      esac
 
   artifacts:
     when: always
     paths:
       - security-review-status.json
+      - runtime-report.json
+      - runtime-summary.md
+      - gl-*.json
+      - gl-*.sarif
+      - checkov-report.json
+      - hadolint-report.json
+      - safety-report.json
     expire_in: 1 week
 
   allow_failure:

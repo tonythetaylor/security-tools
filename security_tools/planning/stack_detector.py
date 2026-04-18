@@ -169,7 +169,7 @@ def detect_stack(root: str | Path = ".") -> StackDetection:
         detection.deploy_targets.append("onprem_or_vm_config")
     if has_compose:
         detection.deploy_targets.append("compose_local_or_server")
-    if not detection.deploy_targets and has_dockerfile:
+    if has_dockerfile:
         detection.deploy_targets.append("container_runtime")
     if not detection.deploy_targets:
         detection.deploy_targets.append("unknown")
