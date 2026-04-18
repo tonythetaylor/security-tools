@@ -14,17 +14,27 @@ SEVERITY_LABELS = {
     "info": "🔵 Info",
     "unknown": "⚪ Unknown",
 }
-VERDICT_ICONS = {
-    "PASS": "✅",
-    "WARN": "⚠️",
-    "BLOCK": "🛑",
-    "OPERATIONAL_ERROR": "❌",
+VERDICT_LABELS = {
+    "PASS": "✅ PASS",
+    "WARN": "⚠️ WARN",
+    "BLOCK": "❌ BLOCK",
+    "OPERATIONAL_ERROR": "❌ OPERATIONAL ERROR",
+    "UNKNOWN": "UNKNOWN",
 }
 READINESS_BY_VERDICT = {
     "PASS": "✅ READY",
-    "WARN": "❌ REMEDIATION RECOMMENDED",
-    "BLOCK": "❌ NOT READY",
+    "WARN": "❌ REMEDIATION REQUIRED",
+    "BLOCK": "❌ NOT APPROVED",
     "OPERATIONAL_ERROR": "❌ UNDETERMINED",
+    "UNKNOWN": "UNDETERMINED",
+}
+PRIORITY_LABELS = {
+    "critical": "🔴 Critical",
+    "high": "🟠 High",
+    "medium": "🟡 Medium",
+    "low": "🟢 Low",
+    "info": "🔵 Info",
+    "unknown": "⚪ Unknown",
 }
 
 
@@ -50,7 +60,7 @@ def _format_area_name(category: str) -> str:
     if not category:
         return "Uncategorized"
     mapping = {
-        "dockerfile_scanning": "Dockerfile Security",
+        "dockerfile_scanning": "Container Build Configuration",
         "container_scanning": "Container Security",
         "dependency_scanning": "Dependency Security",
         "secret_detection": "Secret Detection",
@@ -61,7 +71,7 @@ def _format_area_name(category: str) -> str:
     return mapping.get(category, _titleize_slug(category))
 
 
-def _truncate_text(value: str, limit: int = 600) -> str:
+def _truncate_text(value: str, limit: int = 700) -> str:
     text = value.strip()
     if len(text) <= limit:
         return text
@@ -77,9 +87,6 @@ def _clean_rationale(text: str) -> str:
     banned_fragments = [
         "This recommendation was generated in mock mode",
         "Mock mode enabled; no external model was called.",
-        "Generated using internal security intelligence knowledge base.",
-        "No external AI or third-party model services were used.",
-        "Recommendations derived from curated compliance and security guidance.",
     ]
 
     for fragment in banned_fragments:
@@ -119,10 +126,35 @@ def _extract_guidance_sections(
     return base.strip(), developer_guidance, ownership_guidance
 
 
+def _extract_declared_owner(ownership_guidance: str | None) -> str:
+    if not ownership_guidance:
+        return "Application Team"
+
+    text = ownership_guidance.strip()
+    lowered = text.lower()
+
+    if "typical owner:" in lowered:
+        raw = text.split(":", 1)[1].strip()
+        raw = raw.split("unless", 1)[0].strip()
+        raw = raw.split(".", 1)[0].strip()
+        if raw:
+            return raw.replace("_", " ").title()
+
+    if "application_team" in lowered or "application team" in lowered:
+        return "Application Team"
+    if "security_team" in lowered or "security team" in lowered:
+        return "Security Team"
+    if "platform_team" in lowered or "platform team" in lowered:
+        return "Platform Team"
+
+    return "Application Team"
+
+
 def _render_intro() -> list[str]:
     return [
-        "> Automated analysis combining static, dependency, container, IaC, and runtime validation.",
-        "> This output is designed to support engineering decisions, not replace them.",
+        "> Consolidated security assessment based on static analysis, dependency scanning,",
+        "> container evaluation, IaC inspection, and runtime verification.",
+        "> This output provides engineering-focused risk context and does not replace formal security review.",
         "",
     ]
 
@@ -136,8 +168,8 @@ def _render_decision_table(
     lines: list[str] = []
 
     runtime_verdict = str((runtime_context or {}).get("Verdict", "UNKNOWN")).upper()
-    verdict_icon = VERDICT_ICONS.get(verdict.upper(), "ℹ️")
-    runtime_icon = VERDICT_ICONS.get(runtime_verdict, "ℹ️")
+    verdict_label = VERDICT_LABELS.get(verdict.upper(), verdict.upper())
+    runtime_label = VERDICT_LABELS.get(runtime_verdict, runtime_verdict)
 
     medium_count = (severity_counts or {}).get("medium", 0)
     high_count = (severity_counts or {}).get("high", 0)
@@ -150,9 +182,9 @@ def _render_decision_table(
     elif medium_count > 0:
         findings_summary = f"{medium_count} Medium"
     else:
-        findings_summary = "No significant findings"
+        findings_summary = "No Significant Findings"
 
-    production_ready = READINESS_BY_VERDICT.get(verdict.upper(), "❌ Not Yet")
+    production_readiness = READINESS_BY_VERDICT.get(verdict.upper(), "UNDETERMINED")
 
     lines.append("## Security Review")
     lines.append("")
@@ -162,11 +194,11 @@ def _render_decision_table(
     lines.append("")
     lines.append("| Status | Value |")
     lines.append("|--------|-------|")
-    lines.append(f"| **Security Verdict** | {verdict_icon} {verdict.upper()} |")
-    lines.append(f"| **Runtime Health** | {runtime_icon} {runtime_verdict} |")
+    lines.append(f"| **Security Verdict** | {verdict_label} |")
+    lines.append(f"| **Runtime Health** | {runtime_label} |")
     lines.append(f"| **Risk Score** | {risk_score if risk_score is not None else 'N/A'} |")
     lines.append(f"| **Findings** | {findings_summary} |")
-    lines.append(f"| **Production Ready** | {production_ready} |")
+    lines.append(f"| **Production Readiness** | {production_readiness} |")
     lines.append("")
 
     return lines
@@ -187,28 +219,28 @@ def _render_interpretation(
     bullets: list[str] = []
 
     if critical == 0 and high == 0:
-        bullets.append("No blocking vulnerabilities detected")
+        bullets.append("No blocking vulnerabilities identified")
     else:
-        bullets.append("Blocking security findings were detected")
+        bullets.append("Blocking security findings were identified")
 
     if runtime_verdict == "PASS":
-        bullets.append("Application runs successfully in runtime verification")
+        bullets.append("Application successfully passed runtime verification")
     elif runtime_verdict:
-        bullets.append(f"Runtime verification reported {runtime_verdict}")
+        bullets.append(f"Runtime verification returned {runtime_verdict}")
 
     if medium > 0:
         bullets.append("Security hardening is incomplete")
     else:
-        bullets.append("No medium-severity hardening issues were identified")
+        bullets.append("No medium-severity hardening findings were identified")
 
     if verdict.upper() == "PASS":
-        bullets.append("Suitable for continued promotion based on current policy")
+        bullets.append("Current results support continued promotion under existing policy")
     elif verdict.upper() == "WARN":
-        bullets.append("Remediation recommended before production deployment")
+        bullets.append("Remediation is required prior to production deployment")
     elif verdict.upper() == "BLOCK":
-        bullets.append("Not ready for production deployment without remediation")
+        bullets.append("Approval should not be granted until blocking findings are remediated")
     elif verdict.upper() == "OPERATIONAL_ERROR":
-        bullets.append("Operational review errors must be resolved before disposition")
+        bullets.append("Formal disposition is not possible until operational issues are resolved")
 
     lines.append("### Interpretation")
     lines.append("")
@@ -216,6 +248,42 @@ def _render_interpretation(
         lines.append(f"- {bullet}")
     lines.append("")
 
+    return lines
+
+
+def _render_rationale(
+    verdict_rationale: str | None,
+    summary: str | None,
+    verdict: str,
+    risk_score: int | None,
+    severity_counts: dict[str, int] | None,
+    runtime_context: dict[str, Any] | None,
+) -> list[str]:
+    lines: list[str] = []
+
+    lines.append("### Rationale")
+    lines.append("")
+
+    if verdict_rationale:
+        lines.append(str(verdict_rationale).strip())
+        lines.append("")
+        return lines
+
+    medium = (severity_counts or {}).get("medium", 0)
+    runtime_verdict = str((runtime_context or {}).get("Verdict", "UNKNOWN")).upper()
+
+    if verdict.upper() == "WARN":
+        lines.append(
+            f"The review resulted in a WARN verdict due to unresolved non-blocking findings "
+            f"and incomplete hardening. Risk score: {risk_score if risk_score is not None else 'N/A'}. "
+            f"Medium findings: {medium}. Runtime verification: {runtime_verdict}."
+        )
+    elif summary:
+        lines.append(str(summary).strip())
+    else:
+        lines.append("No additional rationale was generated.")
+
+    lines.append("")
     return lines
 
 
@@ -235,7 +303,7 @@ def _render_severity_table(
         count = severity_counts.get(sev, 0)
         if sev == "unknown" and count == 0:
             continue
-        label = SEVERITY_LABELS.get(sev, sev.capitalize())
+        label = SEVERITY_LABELS.get(sev, sev.upper())
         lines.append(f"| {label} | {count} |")
 
     lines.append("")
@@ -255,7 +323,7 @@ def _render_scan_coverage(
     lines.append("### Coverage")
     lines.append("")
     if not missing:
-        lines.append("All expected scans executed successfully:")
+        lines.append("All expected security scans were executed successfully:")
         lines.append("")
         for scan in sorted(detected):
             lines.append(f"- ✅ {scan}")
@@ -285,8 +353,8 @@ def _render_runtime_table(
     lines.append("|------|--------|")
 
     verdict = str(runtime_context.get("Verdict", "UNKNOWN")).upper()
-    verdict_icon = VERDICT_ICONS.get(verdict, "ℹ️")
-    lines.append(f"| Runtime Verdict | {verdict_icon} {verdict} |")
+    verdict_label = VERDICT_LABELS.get(verdict, verdict)
+    lines.append(f"| Runtime Verdict | {verdict_label} |")
 
     profile = runtime_context.get("Profile")
     if profile:
@@ -294,11 +362,11 @@ def _render_runtime_table(
 
     started = runtime_context.get("Container started")
     if started is not None:
-        lines.append(f"| Container Startup | {'✅ Success' if started else '❌ Failed'} |")
+        lines.append(f"| Container Startup | {'✅ SUCCESS' if started else '❌ FAILED'} |")
 
     running = runtime_context.get("Container running")
     if running is not None:
-        lines.append(f"| Application Running | {'✅ Yes' if running else '❌ No'} |")
+        lines.append(f"| Application Running | {'✅ CONFIRMED' if running else '❌ NOT CONFIRMED'} |")
 
     startup_seconds = runtime_context.get("Startup seconds")
     if startup_seconds is not None:
@@ -346,7 +414,7 @@ def _render_tool_table(
     if not tool_counts:
         return lines
 
-    lines.append("### 🛠️ Tool Signals")
+    lines.append("### Tool Signals")
     lines.append("")
     lines.append("| Tool | Findings |")
     lines.append("|------|----------|")
@@ -356,31 +424,6 @@ def _render_tool_table(
 
     lines.append("")
     return lines
-
-
-def _infer_owner(
-    ownership_guidance: str | None,
-) -> str:
-    if not ownership_guidance:
-        return "application_team"
-
-    text = ownership_guidance.strip().lower()
-
-    if "typical owner:" in text:
-        owner_text = text.split("typical owner:", 1)[1].strip()
-        owner_text = owner_text.split("unless", 1)[0].strip()
-        owner_text = owner_text.split(".", 1)[0].strip()
-        if owner_text:
-            return owner_text.replace(" ", "_")
-
-    if "application_team" in text or "application team" in text:
-        return "application_team"
-    if "security_team" in text or "security team" in text:
-        return "security_team"
-    if "platform_team" in text or "platform team" in text:
-        return "platform_team"
-
-    return "application_team"
 
 
 def _render_recommendation_summary_table(
@@ -393,24 +436,19 @@ def _render_recommendation_summary_table(
 
     lines.append("### Recommended Actions")
     lines.append("")
-    lines.append("| Priority | Issue | Location | Owner |")
-    lines.append("|----------|-------|----------|-------|")
+    lines.append("| Priority | Finding | Location | Responsible Party |")
+    lines.append("|----------|---------|----------|-------------------|")
 
     for rec in recommendations[:max_items]:
         item = _normalize_recommendation(rec)
         severity = str(item.get("severity", "unknown")).lower()
-        severity_label = {
-            "critical": "🔴 Critical",
-            "high": "🟠 High",
-            "medium": "🟡 Medium",
-            "low": "🟢 Low",
-        }.get(severity, f"⚪ {severity.upper()}")
+        severity_label = PRIORITY_LABELS.get(severity, "⚪ Unknown")
 
         title = str(item.get("title", "Untitled recommendation")).strip()
         location = str(item.get("location") or "-").strip() or "-"
         rationale = _clean_rationale(str(item.get("rationale") or ""))
         _, _, ownership_guidance = _extract_guidance_sections(rationale)
-        owner = _infer_owner(ownership_guidance)
+        owner = _extract_declared_owner(ownership_guidance)
 
         lines.append(f"| {severity_label} | {title} | `{location}` | {owner} |")
 
@@ -427,7 +465,7 @@ def _render_detailed_recommendations(
     lines.append("")
 
     if not recommendations:
-        lines.append("- No actionable recommendations generated.")
+        lines.append("- No actionable recommendations were generated.")
         lines.append("")
         return lines
 
@@ -464,8 +502,7 @@ def _render_detailed_recommendations(
             filtered_refs.append(ref)
 
         compliance_refs = filtered_refs
-
-        owner = _infer_owner(ownership_guidance)
+        owner = _extract_declared_owner(ownership_guidance)
 
         summary_title = title
         if location:
@@ -479,12 +516,12 @@ def _render_detailed_recommendations(
         lines.append("")
 
         if base_rationale:
-            lines.append("**Risk**")
+            lines.append("**Security Context**")
             lines.append(_truncate_text(base_rationale, limit=700))
             lines.append("")
 
         if suggested_fix:
-            lines.append("**Fix**")
+            lines.append("**Recommended Action**")
             lines.append(_truncate_text(suggested_fix, limit=700))
             lines.append("")
 
@@ -493,7 +530,7 @@ def _render_detailed_recommendations(
             lines.append(_truncate_text(developer_guidance, limit=500))
             lines.append("")
 
-        lines.append("**Owner**")
+        lines.append("**Responsible Party**")
         lines.append(f"- {owner}")
         lines.append("")
 
@@ -526,24 +563,24 @@ def _render_context(
 
     service_type = planning_context.get("service_type")
     if service_type:
-        lines.append(f"| Service Type | {service_type} |")
+        lines.append(f"| Service Profile | {service_type} |")
 
     runtime_contract_present = planning_context.get("runtime_contract_present")
     if runtime_contract_present is not None:
         lines.append(
-            f"| Runtime Contract | {_normalize_bool_text(runtime_contract_present)} |"
+            f"| Runtime Contract Present | {_normalize_bool_text(runtime_contract_present)} |"
         )
 
     has_dockerfile = planning_context.get("has_dockerfile")
     if has_dockerfile is not None:
         lines.append(
-            f"| Dockerfile Present | {_normalize_bool_text(has_dockerfile)} |"
+            f"| Dockerfile Detected | {_normalize_bool_text(has_dockerfile)} |"
         )
 
     has_iac = planning_context.get("has_iac")
     if has_iac is not None:
         lines.append(
-            f"| IaC Detected | {_normalize_bool_text(has_iac)} |"
+            f"| Infrastructure as Code Detected | {_normalize_bool_text(has_iac)} |"
         )
 
     languages = planning_context.get("languages")
@@ -568,7 +605,7 @@ def _render_context(
             repo_type_value = ", ".join(str(x) for x in repo_types)
         else:
             repo_type_value = str(repo_types)
-        lines.append(f"| Repo Types | {repo_type_value} |")
+        lines.append(f"| Repository Classification | {repo_type_value} |")
 
     detected_stack = planning_context.get("detected_stack")
     if detected_stack:
@@ -584,7 +621,7 @@ def _render_context(
             target_value = ", ".join(str(x) for x in deploy_targets)
         else:
             target_value = str(deploy_targets)
-        lines.append(f"| Deploy Targets | {target_value} |")
+        lines.append(f"| Deployment Targets | {target_value} |")
 
     lines.append("")
     return lines
@@ -600,25 +637,25 @@ def _render_summary(
     lines.append("### Summary")
     lines.append("")
 
-    lines.append("- Pipeline executed successfully")
+    lines.append("- Pipeline execution completed successfully")
 
     if runtime_context:
         runtime_verdict = str(runtime_context.get("Verdict", "UNKNOWN")).upper()
         lines.append(f"- Runtime verification result: `{runtime_verdict}`")
 
     if verdict.upper() == "PASS":
-        lines.append("- No blocking security findings were identified")
-        lines.append("- Suitable for continued promotion under current policy")
+        lines.append("- No blocking vulnerabilities were identified")
+        lines.append("- Current results support continued promotion under existing policy")
     elif verdict.upper() == "WARN":
-        lines.append("- Security posture is acceptable but not hardened")
-        lines.append("- No immediate blockers were identified")
-        lines.append("- Action is recommended before production readiness")
+        lines.append("- No blocking vulnerabilities were identified")
+        lines.append("- Security posture does not meet production hardening expectations")
+        lines.append("- Remediation is required prior to production readiness")
     elif verdict.upper() == "BLOCK":
         lines.append("- Blocking findings were identified")
-        lines.append("- Remediation is required before production deployment")
+        lines.append("- Approval should not be granted until remediation is complete")
     elif verdict.upper() == "OPERATIONAL_ERROR":
         lines.append("- Review encountered operational issues")
-        lines.append("- Operational errors must be resolved before final disposition")
+        lines.append("- Final disposition is not possible until operational issues are resolved")
 
     if operational_warnings:
         lines.append(f"- Operational warnings: {'; '.join(operational_warnings)}")
@@ -659,18 +696,16 @@ def render_mr_comment(
             severity_counts=severity_counts,
         )
     )
-
-    if verdict_rationale:
-        lines.append("### Why this matters")
-        lines.append("")
-        lines.append(str(verdict_rationale).strip())
-        lines.append("")
-    elif summary:
-        lines.append("### Why this matters")
-        lines.append("")
-        lines.append(str(summary).strip())
-        lines.append("")
-
+    lines.extend(
+        _render_rationale(
+            verdict_rationale=verdict_rationale,
+            summary=summary,
+            verdict=verdict,
+            risk_score=risk_score,
+            severity_counts=severity_counts,
+            runtime_context=runtime_context,
+        )
+    )
     lines.extend(_render_severity_table(severity_counts))
     lines.extend(_render_scan_coverage(detected_scans, missing_scans))
     lines.extend(_render_runtime_table(runtime_context))
