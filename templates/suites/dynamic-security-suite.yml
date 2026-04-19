@@ -1,11 +1,8 @@
 stages:
   - plan
   - security
-  - promote
-  - verify
 
 include:
   - local: "/templates/planning/generate-security-pipeline.yml"
   - local: "/templates/planning/run-dynamic-security-pipeline.yml"
   - local: "/templates/planning/run-static-security-fallback.yml"
-  - local: "/templates/control-plane/control-plane-promotion.yml"
