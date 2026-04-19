@@ -1,0 +1,50 @@
+environments:
+  dev:
+    build_allowed: true
+    deploy_allowed: true
+    approvals_required: []
+    required_controls: []
+    policy_overrides:
+      allow_warn: true
+
+  ite:
+    build_allowed: false
+    deploy_allowed: true
+    approvals_required:
+      - devsecops
+    required_controls:
+      - runtime_report
+    policy_overrides:
+      allow_warn: true
+
+  qa:
+    build_allowed: false
+    deploy_allowed: true
+    approvals_required:
+      - devsecops
+    required_controls:
+      - runtime_report
+
+  stage:
+    build_allowed: false
+    deploy_allowed: true
+    approvals_required:
+      - devsecops
+      - security
+    required_controls:
+      - runtime_report
+      - signature
+
+  prod:
+    build_allowed: false
+    deploy_allowed: true
+    approvals_required:
+      - devsecops
+      - security
+      - operations
+    required_controls:
+      - runtime_report
+      - signature
+      - attestation
+    policy_overrides:
+      allow_warn: false

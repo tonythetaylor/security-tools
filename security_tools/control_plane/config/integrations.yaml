@@ -1,0 +1,35 @@
+registries:
+  - name: harbor_main
+    type: harbor
+    url: https://harbor.internal.example
+    verify_tls: true
+    auth:
+      method: token
+      secret_ref: vault://control-plane/harbor-main
+    supports:
+      - container_image
+      - helm_chart
+
+  - name: nexus_main
+    type: nexus
+    url: https://nexus.internal.example
+    verify_tls: true
+    auth:
+      method: basic
+      secret_ref: vault://control-plane/nexus-main
+    supports:
+      - python_package
+      - java_artifact
+      - generic_bundle
+
+evidence_stores:
+  - name: local_filesystem
+    type: filesystem
+    base_path: ./data/evidence
+
+teams:
+  - name: app_platform
+    artifact_backends:
+      container_image: harbor_main
+      python_package: nexus_main
+    evidence_store: local_filesystem

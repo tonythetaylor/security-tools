@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "backend": "harbor_main",
+  "target": "https://harbor.internal.example/app-platform/test-sec-project:ite",
+  "details": {
+    "message": "Harbor promotion stub executed",
+    "project": "harbor_main",
+    "target_repo": "app-platform/test-sec-project",
+    "target_tag": "ite"
+  },
+  "error": null
+}

@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "security-tools"
-version = "0.1.0"
-description = "Reusable GitLab CI security review toolkit"
+version = "0.2.0"
+description = "Security review, runtime verification, and artifact-centric DevSecOps control plane toolkit"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -20,6 +20,10 @@ dependencies = [
 [project.scripts]
 security-review = "security_tools.cli:main"
 container-runtime-verify = "security_tools.runtime.cli:main"
+control-plane-evaluate = "security_tools.control_plane.commands.evaluate_promotion:main"
+control-plane-promote = "security_tools.control_plane.commands.promote_artifact:main"
+control-plane-record-deployment = "security_tools.control_plane.commands.record_deployment:main"
+control-plane-check-drift = "security_tools.control_plane.commands.check_drift:main"
 
 [tool.setuptools]
 include-package-data = true
@@ -32,3 +36,4 @@ exclude = ["tests*"]
 [tool.setuptools.package-data]
 "security_tools.catalog" = ["*.yml", "*.yaml"]
 "security_tools.intelligence.knowledge" = ["**/*.yml", "**/*.yaml", "*.yml", "*.yaml"]
+"security_tools.control_plane.config" = ["*.yml", "*.yaml"]

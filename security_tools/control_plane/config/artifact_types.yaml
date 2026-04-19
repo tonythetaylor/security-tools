@@ -1,0 +1,63 @@
+artifact_types:
+  container_image:
+    identity:
+      require_digest: true
+      require_version: false
+      require_checksum: false
+    promotion:
+      build_once: true
+      immutable: true
+      runtime_configurable: true
+    evidence:
+      required:
+        - security_review
+        - sbom
+        - runtime_report
+    policy_profile: container_default
+
+  python_package:
+    identity:
+      require_digest: false
+      require_version: true
+      require_checksum: true
+    promotion:
+      build_once: true
+      immutable: true
+      runtime_configurable: false
+    evidence:
+      required:
+        - security_review
+        - sbom
+        - dependency_scan
+    policy_profile: package_default
+
+  java_artifact:
+    identity:
+      require_digest: false
+      require_version: true
+      require_checksum: true
+    promotion:
+      build_once: true
+      immutable: true
+      runtime_configurable: false
+    evidence:
+      required:
+        - security_review
+        - sbom
+        - dependency_scan
+    policy_profile: package_default
+
+  helm_chart:
+    identity:
+      require_digest: false
+      require_version: true
+      require_checksum: true
+    promotion:
+      build_once: true
+      immutable: true
+      runtime_configurable: true
+    evidence:
+      required:
+        - security_review
+        - iac_scan
+    policy_profile: deployable_default

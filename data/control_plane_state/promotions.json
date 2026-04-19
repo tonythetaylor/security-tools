@@ -1,0 +1,382 @@
+[
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 04:45:15.110295",
+    "updated_at": "2026-04-19 04:45:15.110296"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 04:45:32.679977",
+    "updated_at": "2026-04-19 04:45:32.679979"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ]
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 04:49:22.882147",
+    "updated_at": "2026-04-19 04:49:22.882149"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "denied",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ]
+    },
+    "decision_reason": "Missing required evidence or control: signature; Missing required evidence or control: attestation",
+    "created_at": "2026-04-19 04:49:38.350742",
+    "updated_at": "2026-04-19 04:49:38.350743"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "denied",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ]
+    },
+    "decision_reason": "Missing required evidence or control: signature; Missing required evidence or control: attestation",
+    "created_at": "2026-04-19 04:50:22.748889",
+    "updated_at": "2026-04-19 04:50:22.748891"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ]
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 04:50:42.424310",
+    "updated_at": "2026-04-19 04:50:42.424312"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ]
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 05:01:58.866953",
+    "updated_at": "2026-04-19 05:01:58.866955"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "denied",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ]
+    },
+    "decision_reason": "Missing required evidence or control: signature; Missing required evidence or control: attestation",
+    "created_at": "2026-04-19 05:02:05.965810",
+    "updated_at": "2026-04-19 05:02:05.965812"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ]
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 05:02:12.877616",
+    "updated_at": "2026-04-19 05:02:12.877618"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ]
+    },
+    "decision_reason": "Eligible for promotion",
+    "created_at": "2026-04-19 05:04:36.699157",
+    "updated_at": "2026-04-19 05:04:36.699159"
+  },
+  {
+    "artifact_digest": "sha256:def456",
+    "source_environment": "dev",
+    "target_environment": "qa",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "denied",
+    "policy_snapshot": {
+      "artifact_type": "python_package",
+      "policy_profile": "package_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ]
+    },
+    "decision_reason": "Missing required evidence or control: runtime_report",
+    "created_at": "2026-04-19 05:04:43.201241",
+    "updated_at": "2026-04-19 05:04:43.201243"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ],
+      "execution": {
+        "message": "Harbor promotion stub executed",
+        "project": "harbor_main",
+        "target_repo": "app-platform/test-sec-project",
+        "target_tag": "ite"
+      }
+    },
+    "decision_reason": "Harbor promotion stub executed",
+    "created_at": "2026-04-19 05:10:46.977288",
+    "updated_at": "2026-04-19 05:10:46.977290"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "denied",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ],
+      "execution": {}
+    },
+    "decision_reason": "Missing required evidence or control: signature; Missing required evidence or control: attestation",
+    "created_at": "2026-04-19 05:11:00.338829",
+    "updated_at": "2026-04-19 05:11:00.338831"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "stage",
+    "target_environment": "prod",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report",
+        "signature",
+        "attestation"
+      ],
+      "approvals_required": [
+        "devsecops",
+        "security",
+        "operations"
+      ],
+      "execution": {
+        "message": "Harbor promotion stub executed",
+        "project": "harbor_main",
+        "target_repo": "app-platform/test-sec-project",
+        "target_tag": "prod"
+      }
+    },
+    "decision_reason": "Harbor promotion stub executed",
+    "created_at": "2026-04-19 05:11:06.984387",
+    "updated_at": "2026-04-19 05:11:06.984389"
+  },
+  {
+    "artifact_digest": "sha256:abc123",
+    "source_environment": "dev",
+    "target_environment": "ite",
+    "requested_by": "anthony",
+    "approved_by": [],
+    "status": "approved",
+    "policy_snapshot": {
+      "artifact_type": "container_image",
+      "policy_profile": "container_default",
+      "build_allowed": false,
+      "deploy_allowed": true,
+      "required_controls": [
+        "runtime_report"
+      ],
+      "approvals_required": [
+        "devsecops"
+      ],
+      "execution": {
+        "message": "Harbor promotion stub executed",
+        "project": "harbor_main",
+        "target_repo": "app-platform/test-sec-project",
+        "target_tag": "ite"
+      }
+    },
+    "decision_reason": "Harbor promotion stub executed",
+    "created_at": "2026-04-19 06:25:58.126814+00:00",
+    "updated_at": "2026-04-19 06:25:58.126814+00:00"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "artifact_digest": "sha256:abc123",
+    "environment": "ite",
+    "runtime_config_refs": [
+      "vault://ite/app/db",
+      "configmap://ite/app/runtime"
+    ],
+    "env_vars": {
+      "APP_ENV": "ite"
+    },
+    "manifest_hash": "sha256:manifest123",
+    "runtime_verification_verdict": "PASS",
+    "drift_verification_verdict": "NOT_RUN",
+    "deployed_by": "anthony",
+    "deployed_at": "2026-04-19 05:54:42.588502+00:00",
+    "metadata": {}
+  }
+]

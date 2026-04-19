@@ -1,0 +1,46 @@
+[
+  {
+    "identity": {
+      "artifact_type": "container_image",
+      "name": "test-sec-project",
+      "version": null,
+      "digest": "sha256:abc123",
+      "checksum": null,
+      "backend_name": "harbor_main",
+      "location": "https://harbor.internal.example"
+    },
+    "source_repo": null,
+    "source_commit": null,
+    "build_pipeline_id": null,
+    "sbom_present": true,
+    "signature_present": false,
+    "attestation_present": false,
+    "security_verdict": null,
+    "risk_score": null,
+    "metadata": {},
+    "created_at": "2026-04-19 06:25:58.126092",
+    "_key": "container_image|test-sec-project||sha256:abc123|"
+  },
+  {
+    "identity": {
+      "artifact_type": "python_package",
+      "name": "shared-auth-lib",
+      "version": "1.4.2",
+      "digest": null,
+      "checksum": "sha256:def456",
+      "backend_name": "nexus_main",
+      "location": "https://nexus.internal.example"
+    },
+    "source_repo": null,
+    "source_commit": null,
+    "build_pipeline_id": null,
+    "sbom_present": true,
+    "signature_present": false,
+    "attestation_present": false,
+    "security_verdict": null,
+    "risk_score": null,
+    "metadata": {},
+    "created_at": "2026-04-19 05:04:43.200775",
+    "_key": "python_package|shared-auth-lib|1.4.2||sha256:def456"
+  }
+]

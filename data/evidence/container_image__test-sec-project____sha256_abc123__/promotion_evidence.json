@@ -1,0 +1,23 @@
+{
+  "artifact": {
+    "artifact_type": "container_image",
+    "name": "test-sec-project",
+    "version": null,
+    "digest": "sha256:abc123",
+    "checksum": null,
+    "backend_name": "harbor_main",
+    "location": "https://harbor.internal.example"
+  },
+  "security": {
+    "sbom": true,
+    "signature": false,
+    "attestation": false,
+    "runtime_verified": true
+  },
+  "request": {
+    "team": "app_platform",
+    "source_env": "dev",
+    "target_env": "ite",
+    "requested_by": "anthony"
+  }
+}

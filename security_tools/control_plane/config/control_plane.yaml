@@ -1,0 +1,14 @@
+version: 1
+
+control_plane:
+  name: security-tools-control-plane
+  default_policy_profile: baseline
+  state_backend: local_json
+  evidence_store: local_filesystem
+  registry_resolution_mode: strict
+  require_immutable_identity: true
+
+defaults:
+  promotion_mode: immutable
+  build_environment: dev
+  evidence_retention_days: 90
