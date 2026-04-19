@@ -1,0 +1,66 @@
+id: nist-800-53-au_11
+title: AU-11 AUDIT RECORD RETENTION
+category: logging_security
+applies_to:
+- audit_logging
+- audit_trail
+- security_monitoring
+tags:
+- 800-53
+- au
+- au_11
+- audit
+- logging
+- nist
+- traceability
+severity_guidance: medium
+description: Organizations retain audit records until it is determined that the records
+  are no longer needed for administrative, legal, audit, or other operational purposes.
+  This includes the retention and availability of audit records relative to Freedom
+  of Information Act (FOIA) requests, subpoenas, and law enforcement actions. Organizations
+  develop standard categories of audit records relative to such types of actions and
+  standard response processes for each type of action. The National Archives and Recor...
+rationale: Organizations retain audit records until it is determined that the records
+  are no longer needed for administrative, legal, audit, or other operational purposes.
+  This includes the retention and availability of audit records relative to Freedom
+  of Information Act (FOIA) requests, subpoenas, and law enforcement actions. Organizations
+  develop standard categories of audit records relative to such types of actions and
+  standard response processes for each type of action. The National Archives and Records
+  Administration (NARA) General Records Schedules provide federal policy on records
+  retention.
+developer_guidance: 'AU-11 AUDIT RECORD RETENTION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- audit_logging
+- tamper_resistant_logs
+- log_review_and_alerting
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AU-11
+  note: null
+risk_context:
+  family: AU
+  related_controls:
+  - AU-2
+  - AU-4
+  - AU-5
+  - AU-6
+  - AU-9
+  - AU-14
+  - MP-6
+  - RA-5
+  - SI-12
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for AU-11 AUDIT RECORD RETENTION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

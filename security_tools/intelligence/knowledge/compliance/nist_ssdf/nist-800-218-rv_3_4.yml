@@ -1,0 +1,190 @@
+id: nist-800-218-rv_3_4
+title: RV.3.4 Review the SDLC process, and update it if
+category: root_cause_security
+applies_to:
+- root_cause_analysis
+- lessons_learned
+- process_improvement
+tags:
+- feedback-loop
+- lessons-learned
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- root-cause
+- rv
+- rv_3
+- rv_3_4
+- ssdf
+- task
+- triage
+severity_guidance: high
+description: "RV.3.4: Review the SDLC process, and update it if \nappropriate to prevent\
+  \ (or reduce the likelihood of) the \nroot cause recurring in updates to the software\
+  \ or in \nnew software that is created. \nExample 1: Record lessons learned through\
+  \ root cause analysis in a wiki that \ndevelopers can access and search. \nExample\
+  \ 2: Plan and implement changes to the appropriate SDLC practices. \nBSAFSS: PD.1-3\
+  \ \nBSIMM: CP3.3, CMVM3.2 \nEO14028: 4e(ix) \nIEC62443: DM-6 \nISO30111: 7.1.7 \n\
+  MSSDL: 2\n\n \n \n \n \n \n19 \nPractices \nTasks \nNotional Implementation Examples\
+  \ \nReferences \nPCISSLC: 2.6, 4.2 \nSCFPSSD: Secure Development Lifecycle Feedback\
+  \ \nSP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0009, K0039, K0070\n\n \n \n \n\
+  \ \n \n20 \nReferences \n[BSAFSS] \nBSA (2020) The BSA Framework for Secure Software:\
+  \ A New Approach to \nSecuring the Software Lifecycle, Version 1.1. Available at\
+  \ \nhttps://www.bsa.org/files/reports/bsa_framework_secure_software_update\n_2020.pdf\
+  \ \n[BSIMM] \nMigues S, Erlikhman E, Ewers J, Nassery K (2021) BSIMM12 2021 \nFoundations\
+  \ Report. Available at \nhttps://www.bsimm.com/content/dam/bsimm/reports/bsimm12-\n\
+  foundations.pdf \n[CNCFSSCP] \nCloud Native Computing Foundation (2021) Software\
+  \ Supply Chain Best \nPractices. Available at https://github.com/cncf/tag-\nsecurity/tree/main/supply-chain-security/supply-chain-security-paper\
+  \ \n[EO14028] \nExecutive Order 14028 (2021) Improving the Nation’s Cybersecurity.\
+  \ (The \nWhite House, Washington, DC), DCPD-202100401, May 12, 2021. \nhttps://www.govinfo.gov/app/details/DCPD-202100401\
+  \ \n[IDASOAR] \nHong Fong EK, Wheeler D, Henninger A (2016) State-of-the-Art \n\
+  Resources (SOAR) for Software Vulnerability Detection, Test, and \nEvaluation 2016.\
+  \ (Institute for Defense Analyses [IDA], Alexandria, VA), \nIDA Paper P-8005. Available\
+  \ at https://www.ida.org/research-and-\npublications/publications/all/s/st/stateoftheart-resources-soar-for-software-\n\
+  vulnerability-detection-test-and-evaluation-2016 \n[IEC62443] \nInternational Electrotechnical\
+  \ Commission (IEC), Security for industrial \nautomation and control systems – Part\
+  \ 4-1: Secure product development \nlifecycle requirements, IEC 62443-4-1, 2018.\
+  \ Available at \nhttps://webstore.iec.ch/publication/33615 \n[IR7692] \nWaltermire\
+  \ DA, Scarfone KA, Casipe M (2011) Specification for the Open \nChecklist Interactive\
+  \ Language (OCIL) Version 2.0. (National Institute of \nStandards and Technology,\
+  \ Gaithersburg, MD), NIST Interagency or \nInternal Report (IR) 7692. https://doi.org/10.6028/NIST.IR.7692\
+  \ \n[IR7864] \nLeMay E, Scarfone KA, Mell PM (2012) The Common Misuse Scoring \n\
+  System (CMSS): Metrics for Software Feature Misuse Vulnerabilities. \n(National\
+  \ Institute of Standards and Technology, Gaithersburg, MD), NIST \nInteragency or\
+  \ Internal Report (IR) 7864. \nhttps://doi.org/10.6028/NIST.IR.7864 \n[IR8397] \n\
+  Black P, Guttman B, Okun V (2021) Guidelines on Minimum Standards \nfor Developer\
+  \ Verification of Software. (National Institute of Standards \nand Technology, Gaithersburg,\
+  \ MD), NIST Interagency or Internal Report \n(IR) 8397. https://doi.org/10.6028/NIST.IR.8397\n\
+  \n \n \n \n \n \n21 \n[ISO27034] \nInternational Organization for Standardization\
+  \ (ISO)/International \nElectrotechnical Commission (IEC), Information technology\
+  \ – Security \ntechniques – Application security – Part 1: Overview and concepts,\
+  \ \nISO/IEC 27034-1:2011, 2011. Available at \nhttps://www.iso.org/standard/44378.html\
+  \ \n[ISO29147] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability disclosure, ISO/IEC 29147:2018, 2018. \nAvailable at https://www.iso.org/standard/72311.html\
+  \ \n[ISO30111] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability handling processes, ISO/IEC 30111:2019, 2019. \nAvailable at https://www.iso.org/standard/69725.html\
+  \ \n[MSSDL] \nMicrosoft (2021) Security Development Lifecycle. Available at \nhttps://www.microsoft.co"
+rationale: "RV.3.4: Review the SDLC process, and update it if \nappropriate to prevent\
+  \ (or reduce the likelihood of) the \nroot cause recurring in updates to the software\
+  \ or in \nnew software that is created. \nExample 1: Record lessons learned through\
+  \ root cause analysis in a wiki that \ndevelopers can access and search. \nExample\
+  \ 2: Plan and implement changes to the appropriate SDLC practices. \nBSAFSS: PD.1-3\
+  \ \nBSIMM: CP3.3, CMVM3.2 \nEO14028: 4e(ix) \nIEC62443: DM-6 \nISO30111: 7.1.7 \n\
+  MSSDL: 2\n\n \n \n \n \n \n19 \nPractices \nTasks \nNotional Implementation Examples\
+  \ \nReferences \nPCISSLC: 2.6, 4.2 \nSCFPSSD: Secure Development Lifecycle Feedback\
+  \ \nSP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0009, K0039, K0070\n\n \n \n \n\
+  \ \n \n20 \nReferences \n[BSAFSS] \nBSA (2020) The BSA Framework for Secure Software:\
+  \ A New Approach to \nSecuring the Software Lifecycle, Version 1.1. Available at\
+  \ \nhttps://www.bsa.org/files/reports/bsa_framework_secure_software_update\n_2020.pdf\
+  \ \n[BSIMM] \nMigues S, Erlikhman E, Ewers J, Nassery K (2021) BSIMM12 2021 \nFoundations\
+  \ Report. Available at \nhttps://www.bsimm.com/content/dam/bsimm/reports/bsimm12-\n\
+  foundations.pdf \n[CNCFSSCP] \nCloud Native Computing Foundation (2021) Software\
+  \ Supply Chain Best \nPractices. Available at https://github.com/cncf/tag-\nsecurity/tree/main/supply-chain-security/supply-chain-security-paper\
+  \ \n[EO14028] \nExecutive Order 14028 (2021) Improving the Nation’s Cybersecurity.\
+  \ (The \nWhite House, Washington, DC), DCPD-202100401, May 12, 2021. \nhttps://www.govinfo.gov/app/details/DCPD-202100401\
+  \ \n[IDASOAR] \nHong Fong EK, Wheeler D, Henninger A (2016) State-of-the-Art \n\
+  Resources (SOAR) for Software Vulnerability Detection, Test, and \nEvaluation 2016.\
+  \ (Institute for Defense Analyses [IDA], Alexandria, VA), \nIDA Paper P-8005. Available\
+  \ at https://www.ida.org/research-and-\npublications/publications/all/s/st/stateoftheart-resources-soar-for-software-\n\
+  vulnerability-detection-test-and-evaluation-2016 \n[IEC62443] \nInternational Electrotechnical\
+  \ Commission (IEC), Security for industrial \nautomation and control systems – Part\
+  \ 4-1: Secure product development \nlifecycle requirements, IEC 62443-4-1, 2018.\
+  \ Available at \nhttps://webstore.iec.ch/publication/33615 \n[IR7692] \nWaltermire\
+  \ DA, Scarfone KA, Casipe M (2011) Specification for the Open \nChecklist Interactive\
+  \ Language (OCIL) Version 2.0. (National Institute of \nStandards and Technology,\
+  \ Gaithersburg, MD), NIST Interagency or \nInternal Report (IR) 7692. https://doi.org/10.6028/NIST.IR.7692\
+  \ \n[IR7864] \nLeMay E, Scarfone KA, Mell PM (2012) The Common Misuse Scoring \n\
+  System (CMSS): Metrics for Software Feature Misuse Vulnerabilities. \n(National\
+  \ Institute of Standards and Technology, Gaithersburg, MD), NIST \nInteragency or\
+  \ Internal Report (IR) 7864. \nhttps://doi.org/10.6028/NIST.IR.7864 \n[IR8397] \n\
+  Black P, Guttman B, Okun V (2021) Guidelines on Minimum Standards \nfor Developer\
+  \ Verification of Software. (National Institute of Standards \nand Technology, Gaithersburg,\
+  \ MD), NIST Interagency or Internal Report \n(IR) 8397. https://doi.org/10.6028/NIST.IR.8397\n\
+  \n \n \n \n \n \n21 \n[ISO27034] \nInternational Organization for Standardization\
+  \ (ISO)/International \nElectrotechnical Commission (IEC), Information technology\
+  \ – Security \ntechniques – Application security – Part 1: Overview and concepts,\
+  \ \nISO/IEC 27034-1:2011, 2011. Available at \nhttps://www.iso.org/standard/44378.html\
+  \ \n[ISO29147] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability disclosure, ISO/IEC 29147:2018, 2018. \nAvailable at https://www.iso.org/standard/72311.html\
+  \ \n[ISO30111] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability handling processes, ISO/IEC 30111:2019, 2019. \nAvailable at https://www.iso.org/standard/69725.html\
+  \ \n[MSSDL] \nMicrosoft (2021) Security Development Lifecycle. Available at \nhttps://www.microsoft.co"
+developer_guidance: "RV.3.4 Review the SDLC process, and update it if defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nRV.3.4: Review the SDLC process,\
+  \ and update it if \nappropriate to prevent (or reduce the likelihood of) the \n\
+  root cause recurring in updates to the software or in \nnew software that is created.\
+  \ \nExample 1: Record lessons learned through root cause analysis in a wiki that\
+  \ \ndevelopers can access and search. \nExample 2: Plan and implement changes to\
+  \ the appropriate SDLC practices. \nBSAFSS: PD.1-3 \nBSIMM: CP3.3, CMVM3.2 \nEO14028:\
+  \ 4e(ix) \nIEC62443: DM-6 \nISO30111: 7.1.7 \nMSSDL: 2\n\n \n \n \n \n \n19 \nPractices\
+  \ \nTasks \nNotional Implementation Examples \nReferences \nPCISSLC: 2.6, 4.2 \n\
+  SCFPSSD: Secure Development Lifecycle Feedback \nSP80053: SA-15 \nSP800161: SA-15\
+  \ \nSP800181: K0009, K0039, K0070\n\n \n \n \n \n \n20 \nReferences \n[BSAFSS] \n\
+  BSA (2020) The BSA Framework for Secure Software: A New Approach to \nSecuring the\
+  \ Software Lifecycle, Version 1.1. Available at \nhttps://www.bsa.org/files/reports/bsa_framework_secure_software_update\n\
+  _2020.pdf \n[BSIMM] \nMigues S, Erlikhman E, Ewers J, Nassery K (2021) BSIMM12 2021\
+  \ \nFoundations Report. Available at \nhttps://www.bsimm.com/content/dam/bsimm/reports/bsimm12-\n\
+  foundations.pdf \n[CNCFSSCP] \nCloud Native Computing Foundation (2021) Software\
+  \ Supply Chain Best \nPractices. Available at https://github.com/cncf/tag-\nsecurity/tree/main/supply-chain-security/supply-chain-security-paper\
+  \ \n[EO14028] \nExecutive Order 14028 (2021) Improving the Nation’s Cybersecurity.\
+  \ (The \nWhite House, Washington, DC), DCPD-202100401, May 12, 2021. \nhttps://www.govinfo.gov/app/details/DCPD-202100401\
+  \ \n[IDASOAR] \nHong Fong EK, Wheeler D, Henninger A (2016) State-of-the-Art \n\
+  Resources (SOAR) for Software Vulnerability Detection, Test, and \nEvaluation 2016.\
+  \ (Institute for Defense Analyses [IDA], Alexandria, VA), \nIDA Paper P-8005. Available\
+  \ at https://www.ida.org/research-and-\npublications/publications/all/s/st/stateoftheart-resources-soar-for-software-\n\
+  vulnerability-detection-test-and-evaluation-2016 \n[IEC62443] \nInternational Electrotechnical\
+  \ Commission (IEC), Security for industrial \nautomation and control systems – Part\
+  \ 4-1: Secure product development \nlifecycle requirements, IEC 62443-4-1, 2018.\
+  \ Available at \nhttps://webstore.iec.ch/publication/33615 \n[IR7692] \nWaltermire\
+  \ DA, Scarfone KA, Casipe M (2011) Specification for the Open \nChecklist Interactive\
+  \ Language (OCIL) Version 2.0. (National Institute of \nStandards and Technology,\
+  \ Gaithersburg, MD), NIST Interagency or \nInternal Report (IR) 7692. https://doi.org/10.6028/NIST.IR.7692\
+  \ \n[IR7864] \nLeMay E, Scarfone KA, Mell PM (2012) The Common Misuse Scoring \n\
+  System (CMSS): Metrics for Software Feature Misuse Vulnerabilities. \n(National\
+  \ Institute of Standards and Technology, Gaithersburg, MD), NIST \nInteragency or\
+  \ Internal Report (IR) 7864. \nhttps://doi.org/10.6028/NIST.IR.7864 \n[IR8397] \n\
+  Black P, Guttman B, Okun V (2021) Guidelines on Minimum Standards \nfor Developer\
+  \ Verification of Software. (National Institute of Standards \nand Technology, Gaithersburg,\
+  \ MD), NIST Interagency or Internal Report \n(IR) 8397. https://doi.org/10.6028/NIST.IR.8397\n\
+  \n \n \n \n \n \n21 \n[ISO27034] \nInternational Organization for Standardization\
+  \ (ISO)/International \nElectrotechnical Commission (IEC), Information technology\
+  \ – Security \ntechniques – Application security – Part 1: Overview and concepts,\
+  \ \nISO/IEC 27034-1:2011, 2011. Available at \nhttps://www.iso.org/standard/44378.html\
+  \ \n[ISO29147] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability disclosure, ISO/IEC 29147:2018, 2018. \nAvailable at https://www.iso.org/standard/72311.html\
+  \ \n[ISO30111] \nInternational Organization for Standardization (ISO)/International\
+  \ \nElectrotechnical Commission (IEC), Information technology – Security \ntechniques\
+  \ – Vulnerability handling processes, ISO/IEC 30111:2019, 2019. \nAvailable at https://www.iso.org/standard/69725.html\
+  \ \n[MSSDL] \nMicrosoft (2021) Security Development Lifecycle. Available at \nhttps://www.microsoft.co\n\
+  \nEnriched Guidance:\nRV.3.4 Review the SDLC process, and update it if is an SSDF\
+  \ practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.3.4
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.3.4 Review the SDLC process, and update it if
+implementation_examples: []

@@ -1,0 +1,59 @@
+id: nist-800-53-sr_8
+title: SR-8 NOTIFICATION AGREEMENTS
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_8
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: The establishment of agreements and procedures facilitates communications
+  among supply chain entities. Early notification of compromises and potential compromises
+  in the supply chain that can potentially adversely affect or have adversely affected
+  organizational systems or system components is essential for organizations to effectively
+  respond to such incidents. The results of assessments or audits may include open-source
+  information that contributed to a decision or result and could be used to...
+rationale: The establishment of agreements and procedures facilitates communications
+  among supply chain entities. Early notification of compromises and potential compromises
+  in the supply chain that can potentially adversely affect or have adversely affected
+  organizational systems or system components is essential for organizations to effectively
+  respond to such incidents. The results of assessments or audits may include open-source
+  information that contributed to a decision or result and could be used to help the
+  supply chain entity resolve a concern or improve its processes.
+developer_guidance: 'SR-8 NOTIFICATION AGREEMENTS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-8
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - IR-4
+  - IR-6
+  - IR-8
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-8 NOTIFICATION AGREEMENTS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

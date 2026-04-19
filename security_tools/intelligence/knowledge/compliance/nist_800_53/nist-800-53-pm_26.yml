@@ -1,0 +1,68 @@
+id: nist-800-53-pm_26
+title: PM-26 COMPLAINT MANAGEMENT
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_26
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-26 COMPLAINT MANAGEMENT requires: Mechanisms that are easy to use
+  and readily accessible by the public; All information necessary for successfully
+  filing complaints; Tracking mechanisms to ensure all complaints received are reviewed
+  and addressed within [Assignment: organization-defined time period].'
+rationale: Complaints, concerns, and questions from individuals can serve as valuable
+  sources of input to organizations and ultimately improve operational models, uses
+  of technology, data collection practices, and controls. Mechanisms that can be used
+  by the public include telephone hotline, email, or web-based forms. The information
+  necessary for successfully filing complaints includes contact information for the
+  senior agency official for privacy or other official designated to receive complaints.
+  Privacy complaints may also include personally identifiable information which is
+  handled in accordance with relevant policies and processes.
+developer_guidance: 'PM-26 COMPLAINT MANAGEMENT is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Mechanisms that are easy to use and readily accessible by the public
+
+  - All information necessary for successfully filing complaints
+
+  - Tracking mechanisms to ensure all complaints received are reviewed and addressed
+  within [Assignment: organization-defined time period]
+
+  - Acknowledgement of receipt of complaints, concerns, or questions from individuals
+  within [Assignment: organization-defined time period]; and
+
+  - Response to complaints, concerns, or questions from individuals within [Assignment:
+  organization-defined time period]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-26
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - IR-7
+  - IR-9
+  - PM-22
+  - SI-18
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-26 COMPLAINT MANAGEMENT.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,135 @@
+id: nist-800-218-po_5_2
+title: PO.5.2 Secure and harden development endpoints
+category: development_environment_security
+applies_to:
+- development_environment
+- build_environment
+- access_control
+- hardening
+tags:
+- development-environment
+- governance
+- hardening
+- nist_800_218
+- po
+- po_5
+- po_5_2
+- prepare-the-organization
+- segmentation
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.5.2: Secure and harden development endpoints \n(i.e., endpoints for\
+  \ software designers, developers, \ntesters, builders, etc.) to perform development-related\
+  \ \ntasks using a risk-based approach. \nExample 1: Configure each development endpoint\
+  \ based on approved hardening \nguides, checklists, etc.; for example, enable FIPS-compliant\
+  \ encryption of all \nsensitive data at rest and in transit. \nExample 2: Configure\
+  \ each development endpoint and the development \nresources to provide the least\
+  \ functionality needed by users and services and to \nenforce the principle of least\
+  \ privilege. \nExample 3: Continuously monitor the security posture of all development\
+  \ \nendpoints, including monitoring and auditing all use of privileged access. \n\
+  Example 4: Configure security controls and other tools involved in securing and\
+  \ \nhardening development endpoints to generate artifacts for their activities.\
+  \ \nExample 5: Require multi-factor authentication for all access to development\
+  \ \nendpoints and development resources. \nExample 6: Provide dedicated development\
+  \ endpoints on non-production \nnetworks for performing all development-related\
+  \ tasks. Provide separate \nendpoints on production networks for all other tasks.\
+  \ \nExample 7: Configure each development endpoint following a zero trust \narchitecture.\
+  \ \nBSAFSS: DE.1-1, IA.1, IA.2 \nEO14028: 4e(i)(C), 4e(i)(E), 4e(i)(F), 4e(ii),\
+  \ 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nNISTCSF: PR.AC-4, PR.AC-7, PR.IP-1,\
+  \ PR.IP-3, PR.IP-12, PR.PT-1, PR.PT-3, DE.CM \nSCAGILE: Tasks Requiring the Help\
+  \ of Security Experts 11 \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: OM-ADM-001, SP-SYS-001; T0484, T0485,\
+  \ T0489, T0553; K0005, K0007, \nK0077, K0088, K0130, K0167, K0205, K0275; S0076,\
+  \ S0097, S0121, S0158; A0155 \nProtect Software (PS) \nProtect All Forms of Code\
+  \ from Unauthorized \nAccess and Tampering (PS.1): Help prevent \nunauthorized changes\
+  \ to code, both inadvertent \nand intentional, which could circumvent or \nnegate\
+  \ the intended security characteristics of \nthe software. For code that is not\
+  \ intended to be \npublicly accessible, this helps prevent theft of \nthe software\
+  \ and may make it more difficult or \ntime-consuming for attackers to find \nvulnerabilities\
+  \ in the software."
+rationale: "PO.5.2: Secure and harden development endpoints \n(i.e., endpoints for\
+  \ software designers, developers, \ntesters, builders, etc.) to perform development-related\
+  \ \ntasks using a risk-based approach. \nExample 1: Configure each development endpoint\
+  \ based on approved hardening \nguides, checklists, etc.; for example, enable FIPS-compliant\
+  \ encryption of all \nsensitive data at rest and in transit. \nExample 2: Configure\
+  \ each development endpoint and the development \nresources to provide the least\
+  \ functionality needed by users and services and to \nenforce the principle of least\
+  \ privilege. \nExample 3: Continuously monitor the security posture of all development\
+  \ \nendpoints, including monitoring and auditing all use of privileged access. \n\
+  Example 4: Configure security controls and other tools involved in securing and\
+  \ \nhardening development endpoints to generate artifacts for their activities.\
+  \ \nExample 5: Require multi-factor authentication for all access to development\
+  \ \nendpoints and development resources. \nExample 6: Provide dedicated development\
+  \ endpoints on non-production \nnetworks for performing all development-related\
+  \ tasks. Provide separate \nendpoints on production networks for all other tasks.\
+  \ \nExample 7: Configure each development endpoint following a zero trust \narchitecture.\
+  \ \nBSAFSS: DE.1-1, IA.1, IA.2 \nEO14028: 4e(i)(C), 4e(i)(E), 4e(i)(F), 4e(ii),\
+  \ 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nNISTCSF: PR.AC-4, PR.AC-7, PR.IP-1,\
+  \ PR.IP-3, PR.IP-12, PR.PT-1, PR.PT-3, DE.CM \nSCAGILE: Tasks Requiring the Help\
+  \ of Security Experts 11 \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: OM-ADM-001, SP-SYS-001; T0484, T0485,\
+  \ T0489, T0553; K0005, K0007, \nK0077, K0088, K0130, K0167, K0205, K0275; S0076,\
+  \ S0097, S0121, S0158; A0155 \nProtect Software (PS) \nProtect All Forms of Code\
+  \ from Unauthorized \nAccess and Tampering (PS.1): Help prevent \nunauthorized changes\
+  \ to code, both inadvertent \nand intentional, which could circumvent or \nnegate\
+  \ the intended security characteristics of \nthe software. For code that is not\
+  \ intended to be \npublicly accessible, this helps prevent theft of \nthe software\
+  \ and may make it more difficult or \ntime-consuming for attackers to find \nvulnerabilities\
+  \ in the software."
+developer_guidance: "PO.5.2 Secure and harden development endpoints defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.5.2: Secure and harden development\
+  \ endpoints \n(i.e., endpoints for software designers, developers, \ntesters, builders,\
+  \ etc.) to perform development-related \ntasks using a risk-based approach. \nExample\
+  \ 1: Configure each development endpoint based on approved hardening \nguides, checklists,\
+  \ etc.; for example, enable FIPS-compliant encryption of all \nsensitive data at\
+  \ rest and in transit. \nExample 2: Configure each development endpoint and the\
+  \ development \nresources to provide the least functionality needed by users and\
+  \ services and to \nenforce the principle of least privilege. \nExample 3: Continuously\
+  \ monitor the security posture of all development \nendpoints, including monitoring\
+  \ and auditing all use of privileged access. \nExample 4: Configure security controls\
+  \ and other tools involved in securing and \nhardening development endpoints to\
+  \ generate artifacts for their activities. \nExample 5: Require multi-factor authentication\
+  \ for all access to development \nendpoints and development resources. \nExample\
+  \ 6: Provide dedicated development endpoints on non-production \nnetworks for performing\
+  \ all development-related tasks. Provide separate \nendpoints on production networks\
+  \ for all other tasks. \nExample 7: Configure each development endpoint following\
+  \ a zero trust \narchitecture. \nBSAFSS: DE.1-1, IA.1, IA.2 \nEO14028: 4e(i)(C),\
+  \ 4e(i)(E), 4e(i)(F), 4e(ii), 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \n\
+  NISTCSF: PR.AC-4, PR.AC-7, PR.IP-1, PR.IP-3, PR.IP-12, PR.PT-1, PR.PT-3, DE.CM \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 11 \nSCSIC: Vendor Software\
+  \ Delivery Integrity Controls \nSP80053: SA-15 \nSP800161: SA-15 \nSP800181: OM-ADM-001,\
+  \ SP-SYS-001; T0484, T0485, T0489, T0553; K0005, K0007, \nK0077, K0088, K0130, K0167,\
+  \ K0205, K0275; S0076, S0097, S0121, S0158; A0155 \nProtect Software (PS) \nProtect\
+  \ All Forms of Code from Unauthorized \nAccess and Tampering (PS.1): Help prevent\
+  \ \nunauthorized changes to code, both inadvertent \nand intentional, which could\
+  \ circumvent or \nnegate the intended security characteristics of \nthe software.\
+  \ For code that is not intended to be \npublicly accessible, this helps prevent\
+  \ theft of \nthe software and may make it more difficult or \ntime-consuming for\
+  \ attackers to find \nvulnerabilities in the software.\n\nEnriched Guidance:\nPO.5.2\
+  \ Secure and harden development endpoints is an SSDF practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.5.2
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.5.2 Secure and harden development endpoints
+implementation_examples: []

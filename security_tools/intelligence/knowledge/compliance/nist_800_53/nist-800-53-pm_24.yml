@@ -1,0 +1,61 @@
+id: nist-800-53-pm_24
+title: PM-24 DATA INTEGRITY BOARD
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_24
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-24 DATA INTEGRITY BOARD requires: Review proposals to conduct or
+  participate in a matching program; and; Conduct an annual review of all matching
+  programs in which the agency has participated.'
+rationale: A Data Integrity Board is the board of senior officials designated by the
+  head of a federal agency and is responsible for, among other things, reviewing the
+  agency’s proposals to conduct or participate in a matching program and conducting
+  an annual review of all matching programs in which the agency has participated.
+  As a general matter, a matching program is a computerized comparison of records
+  from two or more automated [PRIVACT] systems of records or an automated system of
+  records and automated records maintained by a non-federal agency (or agent thereof).
+  A matching program either pertains to Federal benefit programs or Federal personnel
+  or payroll records. At a minimum, the Data Integrity Board includes the Inspector
+  General of the agency, if any, and the senior agency official for privacy.
+developer_guidance: 'PM-24 DATA INTEGRITY BOARD is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Review proposals to conduct or participate in a matching program; and
+
+  - Conduct an annual review of all matching programs in which the agency has participated'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-24
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AC-4
+  - PM-19
+  - PM-23
+  - PT-2
+  - PT-8
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-24 DATA INTEGRITY BOARD.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,63 @@
+id: nist-800-53-pm_17
+title: PM-17 PROTECTING CONTROLLED UNCLASSIFIED INFORMATION ON EXTERNAL SYSTEMS
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_17
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-17 PROTECTING CONTROLLED UNCLASSIFIED INFORMATION ON EXTERNAL SYSTEMS
+  requires: Establish policy and procedures to ensure that requirements for the protection
+  of controlled unclassified information that is processed, stored or transmitted
+  on external systems, are implemented in accordance with applicable laws, executive
+  orders, directives, policies, regulations, and standards; and; Review and update
+  the policy and procedures [Assignment: organization-defined frequency].'
+rationale: Controlled unclassified information is defined by the National Archives
+  and Records Administration along with the safeguarding and dissemination requirements
+  for such information and is codified in [32 CFR 2002] and, specifically for systems
+  external to the federal organization, 32 CFR 2002.14h. The policy prescribes the
+  specific use and conditions to be implemented in accordance with organizational
+  procedures, including via its contracting processes.
+developer_guidance: 'PM-17 PROTECTING CONTROLLED UNCLASSIFIED INFORMATION ON EXTERNAL
+  SYSTEMS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Establish policy and procedures to ensure that requirements for the protection
+  of controlled unclassified information that is processed, stored or transmitted
+  on external systems, are implemented in accordance with applicable laws, executive
+  orders, directives, policies, regulations, and standards; and
+
+  - Review and update the policy and procedures [Assignment: organization-defined
+  frequency]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-17
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - CA-6
+  - PM-10
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-17 PROTECTING CONTROLLED UNCLASSIFIED
+    INFORMATION ON EXTERNAL SYSTEMS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

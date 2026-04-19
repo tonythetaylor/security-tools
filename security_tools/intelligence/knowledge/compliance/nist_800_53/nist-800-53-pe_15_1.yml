@@ -1,0 +1,43 @@
+id: nist-800-53-pe_15_1
+title: PE-15(1) AUTOMATION SUPPORT
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- control-enhancement
+- environment
+- facilities
+- nist
+- pe
+- pe_15_1
+- physical-security
+severity_guidance: medium
+description: PE-15(1) AUTOMATION SUPPORT
+rationale: PE-15(1) AUTOMATION SUPPORT
+developer_guidance: 'PE-15(1) AUTOMATION SUPPORT is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-15(1)
+  note: null
+risk_context:
+  family: PE
+  related_controls: []
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-15(1) AUTOMATION SUPPORT.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

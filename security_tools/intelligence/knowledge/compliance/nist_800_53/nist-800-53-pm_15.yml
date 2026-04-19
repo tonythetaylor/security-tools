@@ -1,0 +1,65 @@
+id: nist-800-53-pm_15
+title: PM-15 SECURITY AND PRIVACY GROUPS AND ASSOCIATIONS
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_15
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-15 SECURITY AND PRIVACY GROUPS AND ASSOCIATIONS requires: To facilitate
+  ongoing security and privacy education and training for organizational personnel;
+  To maintain currency with recommended security and privacy practices, techniques,
+  and technologies; and; To share current security and privacy information, including
+  threats, vulnerabilities, and incidents.'
+rationale: Ongoing contact with security and privacy groups and associations is important
+  in an environment of rapidly changing technologies and threats. Groups and associations
+  include special interest groups, professional associations, forums, news groups,
+  users’ groups, and peer groups of security and privacy professionals in similar
+  organizations. Organizations select security and privacy groups and associations
+  based on mission and business functions. Organizations share threat, vulnerability,
+  and incident information as well as contextual insights, compliance techniques,
+  and privacy problems consistent with applicable laws, executive orders, directives,
+  policies, regulations, standards, and guidelines.
+developer_guidance: 'PM-15 SECURITY AND PRIVACY GROUPS AND ASSOCIATIONS is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - To facilitate ongoing security and privacy education and training for organizational
+  personnel
+
+  - To maintain currency with recommended security and privacy practices, techniques,
+  and technologies; and
+
+  - To share current security and privacy information, including threats, vulnerabilities,
+  and incidents'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-15
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - SA-11
+  - SI-5
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-15 SECURITY AND PRIVACY GROUPS AND ASSOCIATIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

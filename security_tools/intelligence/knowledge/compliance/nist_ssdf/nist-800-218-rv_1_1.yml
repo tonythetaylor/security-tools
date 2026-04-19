@@ -1,0 +1,94 @@
+id: nist-800-218-rv_1_1
+title: RV.1.1 Gather information from software acquirers,
+category: vulnerability_management
+applies_to:
+- vulnerability_intake
+- continuous_monitoring
+- dependency_scanning
+tags:
+- intake
+- monitoring
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- rv
+- rv_1
+- rv_1_1
+- ssdf
+- task
+- triage
+- vulnerability-management
+severity_guidance: high
+description: "RV.1.1: Gather information from software acquirers, \nusers, and public\
+  \ sources on potential vulnerabilities in \nthe software and third-party components\
+  \ that the \nsoftware uses, and investigate all credible reports. \nExample 1: Monitor\
+  \ vulnerability databases9, security mailing lists, and other \nsources of vulnerability\
+  \ reports through manual or automated means. \nExample 2: Use threat intelligence\
+  \ sources to better understand how \nvulnerabilities in general are being exploited.\
+  \ \nExample 3: Automatically review provenance and software composition data for\
+  \ \nall software components to identify any new vulnerabilities they have. \nBSAFSS:\
+  \ VM.1-3, VM.3 \nBSIMM: AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing\
+  \ Materials—Verification \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-1, DM-2, DM-3 \nISO29147: 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \n\
+  OWASPSAMM: IM1-A, IM2-B, EH1-B \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE:\
+  \ Operational Security Task 5 \nSCFPSSD: Vulnerability Response and Disclosure \n\
+  SCTPC: MONITOR1 \nSP80053: SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181:\
+  \ K0009, K0038, K0040, K0070, K0161, K0362; S0078"
+rationale: "RV.1.1: Gather information from software acquirers, \nusers, and public\
+  \ sources on potential vulnerabilities in \nthe software and third-party components\
+  \ that the \nsoftware uses, and investigate all credible reports. \nExample 1: Monitor\
+  \ vulnerability databases9, security mailing lists, and other \nsources of vulnerability\
+  \ reports through manual or automated means. \nExample 2: Use threat intelligence\
+  \ sources to better understand how \nvulnerabilities in general are being exploited.\
+  \ \nExample 3: Automatically review provenance and software composition data for\
+  \ \nall software components to identify any new vulnerabilities they have. \nBSAFSS:\
+  \ VM.1-3, VM.3 \nBSIMM: AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing\
+  \ Materials—Verification \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-1, DM-2, DM-3 \nISO29147: 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \n\
+  OWASPSAMM: IM1-A, IM2-B, EH1-B \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE:\
+  \ Operational Security Task 5 \nSCFPSSD: Vulnerability Response and Disclosure \n\
+  SCTPC: MONITOR1 \nSP80053: SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181:\
+  \ K0009, K0038, K0040, K0070, K0161, K0362; S0078"
+developer_guidance: "RV.1.1 Gather information from software acquirers, defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nRV.1.1: Gather information\
+  \ from software acquirers, \nusers, and public sources on potential vulnerabilities\
+  \ in \nthe software and third-party components that the \nsoftware uses, and investigate\
+  \ all credible reports. \nExample 1: Monitor vulnerability databases9, security\
+  \ mailing lists, and other \nsources of vulnerability reports through manual or\
+  \ automated means. \nExample 2: Use threat intelligence sources to better understand\
+  \ how \nvulnerabilities in general are being exploited. \nExample 3: Automatically\
+  \ review provenance and software composition data for \nall software components\
+  \ to identify any new vulnerabilities they have. \nBSAFSS: VM.1-3, VM.3 \nBSIMM:\
+  \ AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: DM-1, DM-2, DM-3 \nISO29147:\
+  \ 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \nOWASPSAMM: IM1-A, IM2-B, EH1-B\
+  \ \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE: Operational Security Task 5\
+  \ \nSCFPSSD: Vulnerability Response and Disclosure \nSCTPC: MONITOR1 \nSP80053:\
+  \ SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181: K0009, K0038, K0040,\
+  \ K0070, K0161, K0362; S0078\n\nEnriched Guidance:\nRV.1.1 Gather information from\
+  \ software acquirers, is an SSDF practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.1.1
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.1.1 Gather information from software acquirers,
+implementation_examples: []

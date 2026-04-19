@@ -1,0 +1,54 @@
+id: nist-800-53-pe_20
+title: PE-20 ASSET MONITORING AND TRACKING
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_20
+- physical-security
+severity_guidance: medium
+description: Asset location technologies can help ensure that critical assets—including
+  vehicles, equipment, and system components—remain in authorized locations. Organizations
+  consult with the Office of the General Counsel and senior agency official for privacy
+  regarding the deployment and use of asset location technologies to address potential
+  privacy concerns.
+rationale: Asset location technologies can help ensure that critical assets—including
+  vehicles, equipment, and system components—remain in authorized locations. Organizations
+  consult with the Office of the General Counsel and senior agency official for privacy
+  regarding the deployment and use of asset location technologies to address potential
+  privacy concerns.
+developer_guidance: 'PE-20 ASSET MONITORING AND TRACKING is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-20
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - CM-8
+  - PE-16
+  - PM-8
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-20 ASSET MONITORING AND TRACKING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

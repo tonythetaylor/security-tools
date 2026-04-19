@@ -1,0 +1,93 @@
+id: nist-800-218-po_3_1
+title: PO.3.1 Specify which tools or tool types must or
+category: build_security
+applies_to:
+- build_pipeline
+- toolchain_security
+- pipeline_integrity
+tags:
+- automation
+- development-environment
+- governance
+- nist_800_218
+- pipeline
+- po
+- po_3
+- po_3_1
+- prepare-the-organization
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.3.1: Specify which tools or tool types must or \nshould be included\
+  \ in each toolchain to mitigate \nidentified risks, as well as how the toolchain\
+  \ \ncomponents are to be integrated with each other. \nExample 1: Define categories\
+  \ of toolchains, and specify the mandatory tools or \ntool types to be used for\
+  \ each category. \nExample 2: Identify security tools to integrate into the developer\
+  \ toolchain. \nExample 3: Define what information is to be passed between tools\
+  \ and what data \nformats are to be used. \nExample 4: Evaluate tools’ signing capabilities\
+  \ to create immutable records/logs \nfor auditability within the toolchain. \nExample\
+  \ 5: Use automated technology for toolchain management and \norchestration. \nBSIMM:\
+  \ CR1.4, ST1.4, ST2.5, SE2.7 \nCNCFSSCP: Securing Materials—Verification; Securing\
+  \ Build Pipelines—Verification, \nAutomation, Secure Authentication/Access; Securing\
+  \ Artefacts—Verification; Securing \nDeployments—Verification \nEO14028: 4e(iii),\
+  \ 4e(ix) \nMSSDL: 8 \nOWASPSAMM: IR2-B, ST2-B \nSCAGILE: Tasks Requiring the Help\
+  \ of Security Experts 9 \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178"
+rationale: "PO.3.1: Specify which tools or tool types must or \nshould be included\
+  \ in each toolchain to mitigate \nidentified risks, as well as how the toolchain\
+  \ \ncomponents are to be integrated with each other. \nExample 1: Define categories\
+  \ of toolchains, and specify the mandatory tools or \ntool types to be used for\
+  \ each category. \nExample 2: Identify security tools to integrate into the developer\
+  \ toolchain. \nExample 3: Define what information is to be passed between tools\
+  \ and what data \nformats are to be used. \nExample 4: Evaluate tools’ signing capabilities\
+  \ to create immutable records/logs \nfor auditability within the toolchain. \nExample\
+  \ 5: Use automated technology for toolchain management and \norchestration. \nBSIMM:\
+  \ CR1.4, ST1.4, ST2.5, SE2.7 \nCNCFSSCP: Securing Materials—Verification; Securing\
+  \ Build Pipelines—Verification, \nAutomation, Secure Authentication/Access; Securing\
+  \ Artefacts—Verification; Securing \nDeployments—Verification \nEO14028: 4e(iii),\
+  \ 4e(ix) \nMSSDL: 8 \nOWASPSAMM: IR2-B, ST2-B \nSCAGILE: Tasks Requiring the Help\
+  \ of Security Experts 9 \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178"
+developer_guidance: "PO.3.1 Specify which tools or tool types must or defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.3.1: Specify which tools or\
+  \ tool types must or \nshould be included in each toolchain to mitigate \nidentified\
+  \ risks, as well as how the toolchain \ncomponents are to be integrated with each\
+  \ other. \nExample 1: Define categories of toolchains, and specify the mandatory\
+  \ tools or \ntool types to be used for each category. \nExample 2: Identify security\
+  \ tools to integrate into the developer toolchain. \nExample 3: Define what information\
+  \ is to be passed between tools and what data \nformats are to be used. \nExample\
+  \ 4: Evaluate tools’ signing capabilities to create immutable records/logs \nfor\
+  \ auditability within the toolchain. \nExample 5: Use automated technology for toolchain\
+  \ management and \norchestration. \nBSIMM: CR1.4, ST1.4, ST2.5, SE2.7 \nCNCFSSCP:\
+  \ Securing Materials—Verification; Securing Build Pipelines—Verification, \nAutomation,\
+  \ Secure Authentication/Access; Securing Artefacts—Verification; Securing \nDeployments—Verification\
+  \ \nEO14028: 4e(iii), 4e(ix) \nMSSDL: 8 \nOWASPSAMM: IR2-B, ST2-B \nSCAGILE: Tasks\
+  \ Requiring the Help of Security Experts 9 \nSCSIC: Vendor Software Delivery Integrity\
+  \ Controls \nSP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178\n\nEnriched\
+  \ Guidance:\nPO.3.1 Specify which tools or tool types must or is an SSDF practice\
+  \ or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.3.1
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.3.1 Specify which tools or tool types must or
+implementation_examples: []

@@ -1,0 +1,84 @@
+id: nist-800-53-sc_28
+title: SC-28 PROTECTION OF INFORMATION AT REST
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_28
+severity_guidance: high
+description: Information at rest refers to the state of information when it is not
+  in process or in transit and is located on system components. Such components include
+  internal or external hard disk drives, storage area network devices, or databases.
+  However, the focus of protecting information at rest is not on the type of storage
+  device or frequency of access but rather on the state of the information. Information
+  at rest addresses the confidentiality and integrity of _____________________________________...
+rationale: Information at rest refers to the state of information when it is not in
+  process or in transit and is located on system components. Such components include
+  internal or external hard disk drives, storage area network devices, or databases.
+  However, the focus of protecting information at rest is not on the type of storage
+  device or frequency of access but rather on the state of the information. Information
+  at rest addresses the confidentiality and integrity of _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 317 information and covers user information and system information.
+  System-related information that requires protection includes configurations or rule
+  sets for firewalls, intrusion detection and prevention systems, filtering routers,
+  and authentication information. Organizations may employ different mechanisms to
+  achieve confidentiality and integrity protections, including the use of cryptographic
+  mechanisms and file share scanning. Integrity protection can be achieved, for example,
+  by implementing write-once-read-many (WORM) technologies. When adequate protection
+  of information at rest cannot otherwise be achieved, organizations may employ other
+  controls, including frequent scanning to identify malicious code at rest and secure
+  offline storage in lieu of online storage.
+developer_guidance: 'SC-28 PROTECTION OF INFORMATION AT REST is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-28
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AC-3
+  - AC-4
+  - AC-6
+  - AC-19
+  - CA-7
+  - CM-3
+  - CM-5
+  - CM-6
+  - CP-9
+  - MP-4
+  - MP-5
+  - PE-3
+  - SC-12
+  - SC-13
+  - SC-34
+  - SI-3
+  - SI-7
+  - SI-16
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-28 PROTECTION OF INFORMATION AT REST.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

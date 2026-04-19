@@ -1,0 +1,64 @@
+id: nist-800-53-ps_8
+title: PS-8 PERSONNEL SANCTIONS
+category: personnel_security
+applies_to:
+- personnel_security
+- screening
+- role_change_controls
+tags:
+- 800-53
+- access-lifecycle
+- nist
+- personnel
+- ps
+- ps_8
+- screening
+severity_guidance: medium
+description: 'PS-8 PERSONNEL SANCTIONS requires: Employ a formal sanctions process
+  for individuals failing to comply with established information security and privacy
+  policies and procedures; and; Notify [Assignment: organization-defined personnel
+  or roles] within [Assignment: organization-defined time period] when a formal employee
+  sanctions process is initiated, identifying the individual sanctioned and the reason
+  for the sanction.'
+rationale: Organizational sanctions reflect applicable laws, executive orders, directives,
+  regulations, policies, standards, and guidelines. Sanctions processes are described
+  in access agreements and can be included as part of general personnel policies for
+  organizations and/or specified in security and privacy policies. Organizations consult
+  with the Office of the General Counsel regarding matters of employee sanctions.
+  _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 228
+developer_guidance: 'PS-8 PERSONNEL SANCTIONS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Employ a formal sanctions process for individuals failing to comply with established
+  information security and privacy policies and procedures; and
+
+  - Notify [Assignment: organization-defined personnel or roles] within [Assignment:
+  organization-defined time period] when a formal employee sanctions process is initiated,
+  identifying the individual sanctioned and the reason for the sanction'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PS-8
+  note: null
+risk_context:
+  family: PS
+  related_controls:
+  - XX-1
+  - PL-4
+  - PM-12
+  - PS-6
+  - PT-1
+ownership:
+  primary: security_team
+  secondary: hr_or_management
+remediation:
+  steps:
+  - Review implementation requirements for PS-8 PERSONNEL SANCTIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

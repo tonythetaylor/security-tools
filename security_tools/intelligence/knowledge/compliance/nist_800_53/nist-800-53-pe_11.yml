@@ -1,0 +1,61 @@
+id: nist-800-53-pe_11
+title: PE-11 EMERGENCY POWER
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_11
+- physical-security
+severity_guidance: medium
+description: An uninterruptible power supply (UPS) is an electrical system or mechanism
+  that provides emergency power when there is a failure of the main power source.
+  A UPS is typically used to protect computers, data centers, telecommunication equipment,
+  or other electrical equipment where an unexpected power disruption could cause injuries,
+  fatalities, serious mission or business disruption, or loss of data or information.
+  A UPS differs from an emergency power system or backup generator in that the UPS
+  pr...
+rationale: An uninterruptible power supply (UPS) is an electrical system or mechanism
+  that provides emergency power when there is a failure of the main power source.
+  A UPS is typically used to protect computers, data centers, telecommunication equipment,
+  or other electrical equipment where an unexpected power disruption could cause injuries,
+  fatalities, serious mission or business disruption, or loss of data or information.
+  A UPS differs from an emergency power system or backup generator in that the UPS
+  provides near-instantaneous protection from unanticipated power interruptions from
+  the main power source by providing energy stored in batteries, supercapacitors,
+  or flywheels. The battery duration of a UPS is relatively short but provides sufficient
+  time to start a standby power source, such as a backup generator, or properly shut
+  down the system.
+developer_guidance: 'PE-11 EMERGENCY POWER is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-11
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AT-3
+  - CP-2
+  - CP-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-11 EMERGENCY POWER.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

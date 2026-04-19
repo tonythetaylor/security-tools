@@ -1,0 +1,196 @@
+id: nist-800-218-po
+title: Prepare the Organization (PO)
+category: secure_development_governance
+applies_to:
+- secure_sdlc
+- security_requirements
+- developer_enablement
+- build_pipeline
+- development_environment
+tags:
+- development-environment
+- governance
+- group
+- nist_800_218
+- po
+- prepare-the-organization
+- ssdf
+- toolchain
+severity_guidance: medium
+description: "Prepare the Organization (PO) \nDefine Security Requirements for Software\
+  \ \nDevelopment (PO.1): Ensure that security \nrequirements for software development\
+  \ are \nknown at all times so that they can be taken into \naccount throughout the\
+  \ SDLC and duplication of \neffort can be minimized because the \nrequirements information\
+  \ can be collected once \nand shared. This includes requirements from \ninternal\
+  \ sources (e.g., the organization’s policies, \nbusiness objectives, and risk management\
+  \ \nstrategy) and external sources (e.g., applicable \nlaws and regulations). \n\
+  PO.1.1: Identify and document all security \nrequirements for the organization’s\
+  \ software \ndevelopment infrastructures and processes, and \nmaintain the requirements\
+  \ over time. \nExample 1: Define policies for securing software development infrastructures\
+  \ and \ntheir components, including development endpoints, throughout the SDLC and\
+  \ \nmaintaining that security. \nExample 2: Define policies for securing software\
+  \ development processes \nthroughout the SDLC and maintaining that security, including\
+  \ for open-source and \nother third-party software components utilized by software\
+  \ being developed. \nExample 3: Review and update security requirements at least\
+  \ annually, or sooner \nif there are new requirements from internal or external\
+  \ sources, or a major \nsecurity incident targeting software development infrastructure\
+  \ has occurred. \nExample 4: Educate affected individuals on impending changes to\
+  \ requirements. \nBSAFSS: SM.3, DE.1, IA.1, IA.2 \nBSIMM: CP1.1, CP1.3, SR1.1, SR2.2,\
+  \ SE1.2, SE2.6 \nEO14028: 4e(ix) \nIEC62443: SM-7, SM-9 \nNISTCSF: ID.GV-3 \nOWASPASVS:\
+  \ 1.1.1 \nOWASPMASVS: 1.10 \nOWASPSAMM: PC1-A, PC1-B, PC2-A \nPCISSLC: 2.1, 2.2\
+  \ \nSCFPSSD: Planning the Implementation and Deployment of Secure Development Practices\
+  \ \nSP80053: SA-1, SA-8, SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2,\
+  \ 3.4.3 \nSP800161: SA-1, SA-8, SA-15, SR-3 \nSP800181: T0414; K0003, K0039, K0044,\
+  \ K0157, K0168, K0177, K0211, K0260, K0261, \nK0262, K0524; S0010, S0357, S0368;\
+  \ A0033, A0123, A0151 \nPO.1.2: Identify and document all security \nrequirements\
+  \ for organization-developed software to \nmeet, and maintain the requirements over\
+  \ time. \nExample 1: Define policies that specify risk-based software architecture\
+  \ and \ndesign requirements, such as making code modular to facilitate code reuse\
+  \ and \nupdates; isolating security components from other components during execution;\
+  \ \navoiding undocumented commands and settings; and providing features that will\
+  \ \naid software acquirers with the secure deployment, operation, and maintenance\
+  \ \nof the software. \nExample 2: Define policies that specify the security requirements\
+  \ for the \norganization’s software, and verify compliance at key points in the\
+  \ SDLC (e.g., \nclasses of software flaws verified by gates, responses to vulnerabilities\
+  \ \ndiscovered in released software). \nExample 3: Analyze the risk of applicable\
+  \ technology stacks (e.g., languages, \nenvironments, deployment models), and recommend\
+  \ or require the use of stacks \nthat will reduce risk compared to others. \nExample\
+  \ 4: Define policies that specify what needs to be archived for each \nsoftware\
+  \ release (e.g., code, package files, third-party libraries, documentation, \ndata\
+  \ inventory) and how long it needs to be retained based on the SDLC model, \nsoftware\
+  \ end-of-life, and other factors. \nExample 5: Ensure that policies cover the entire\
+  \ software life cycle, including \nnotifying users of the impending end of software\
+  \ support and the date of software \nend-of-life. \nExample 6: Review all security\
+  \ requirements at least annually, or sooner if there \nare new requirements from\
+  \ internal or external sources, a major vulnerability is \ndiscovered in released\
+  \ software, or a major security incident targeting \norganization-developed software\
+  \ has occurred. \nExample 7: Establish and follow processes for handling requirement\
+  \ exception \nrequests, including periodic reviews of all approved exceptions. \n\
+  BSAFSS: SC.1-1, SC.2, PD.1-1, PD.1-2, PD.1-3, PD.2-2,"
+rationale: "Prepare the Organization (PO) \nDefine Security Requirements for Software\
+  \ \nDevelopment (PO.1): Ensure that security \nrequirements for software development\
+  \ are \nknown at all times so that they can be taken into \naccount throughout the\
+  \ SDLC and duplication of \neffort can be minimized because the \nrequirements information\
+  \ can be collected once \nand shared. This includes requirements from \ninternal\
+  \ sources (e.g., the organization’s policies, \nbusiness objectives, and risk management\
+  \ \nstrategy) and external sources (e.g., applicable \nlaws and regulations). \n\
+  PO.1.1: Identify and document all security \nrequirements for the organization’s\
+  \ software \ndevelopment infrastructures and processes, and \nmaintain the requirements\
+  \ over time. \nExample 1: Define policies for securing software development infrastructures\
+  \ and \ntheir components, including development endpoints, throughout the SDLC and\
+  \ \nmaintaining that security. \nExample 2: Define policies for securing software\
+  \ development processes \nthroughout the SDLC and maintaining that security, including\
+  \ for open-source and \nother third-party software components utilized by software\
+  \ being developed. \nExample 3: Review and update security requirements at least\
+  \ annually, or sooner \nif there are new requirements from internal or external\
+  \ sources, or a major \nsecurity incident targeting software development infrastructure\
+  \ has occurred. \nExample 4: Educate affected individuals on impending changes to\
+  \ requirements. \nBSAFSS: SM.3, DE.1, IA.1, IA.2 \nBSIMM: CP1.1, CP1.3, SR1.1, SR2.2,\
+  \ SE1.2, SE2.6 \nEO14028: 4e(ix) \nIEC62443: SM-7, SM-9 \nNISTCSF: ID.GV-3 \nOWASPASVS:\
+  \ 1.1.1 \nOWASPMASVS: 1.10 \nOWASPSAMM: PC1-A, PC1-B, PC2-A \nPCISSLC: 2.1, 2.2\
+  \ \nSCFPSSD: Planning the Implementation and Deployment of Secure Development Practices\
+  \ \nSP80053: SA-1, SA-8, SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2,\
+  \ 3.4.3 \nSP800161: SA-1, SA-8, SA-15, SR-3 \nSP800181: T0414; K0003, K0039, K0044,\
+  \ K0157, K0168, K0177, K0211, K0260, K0261, \nK0262, K0524; S0010, S0357, S0368;\
+  \ A0033, A0123, A0151 \nPO.1.2: Identify and document all security \nrequirements\
+  \ for organization-developed software to \nmeet, and maintain the requirements over\
+  \ time. \nExample 1: Define policies that specify risk-based software architecture\
+  \ and \ndesign requirements, such as making code modular to facilitate code reuse\
+  \ and \nupdates; isolating security components from other components during execution;\
+  \ \navoiding undocumented commands and settings; and providing features that will\
+  \ \naid software acquirers with the secure deployment, operation, and maintenance\
+  \ \nof the software. \nExample 2: Define policies that specify the security requirements\
+  \ for the \norganization’s software, and verify compliance at key points in the\
+  \ SDLC (e.g., \nclasses of software flaws verified by gates, responses to vulnerabilities\
+  \ \ndiscovered in released software). \nExample 3: Analyze the risk of applicable\
+  \ technology stacks (e.g., languages, \nenvironments, deployment models), and recommend\
+  \ or require the use of stacks \nthat will reduce risk compared to others. \nExample\
+  \ 4: Define policies that specify what needs to be archived for each \nsoftware\
+  \ release (e.g., code, package files, third-party libraries, documentation, \ndata\
+  \ inventory) and how long it needs to be retained based on the SDLC model, \nsoftware\
+  \ end-of-life, and other factors. \nExample 5: Ensure that policies cover the entire\
+  \ software life cycle, including \nnotifying users of the impending end of software\
+  \ support and the date of software \nend-of-life. \nExample 6: Review all security\
+  \ requirements at least annually, or sooner if there \nare new requirements from\
+  \ internal or external sources, a major vulnerability is \ndiscovered in released\
+  \ software, or a major security incident targeting \norganization-developed software\
+  \ has occurred. \nExample 7: Establish and follow processes for handling requirement\
+  \ exception \nrequests, including periodic reviews of all approved exceptions. \n\
+  BSAFSS: SC.1-1, SC.2, PD.1-1, PD.1-2, PD.1-3, PD.2-2,"
+developer_guidance: "Prepare the Organization (PO) defines one of the four high-level\
+  \ SSDF practice groups. Use this record as strategic guidance for grouping findings\
+  \ and aligning SDLC expectations.\n\nPrepare the Organization (PO) \nDefine Security\
+  \ Requirements for Software \nDevelopment (PO.1): Ensure that security \nrequirements\
+  \ for software development are \nknown at all times so that they can be taken into\
+  \ \naccount throughout the SDLC and duplication of \neffort can be minimized because\
+  \ the \nrequirements information can be collected once \nand shared. This includes\
+  \ requirements from \ninternal sources (e.g., the organization’s policies, \nbusiness\
+  \ objectives, and risk management \nstrategy) and external sources (e.g., applicable\
+  \ \nlaws and regulations). \nPO.1.1: Identify and document all security \nrequirements\
+  \ for the organization’s software \ndevelopment infrastructures and processes, and\
+  \ \nmaintain the requirements over time. \nExample 1: Define policies for securing\
+  \ software development infrastructures and \ntheir components, including development\
+  \ endpoints, throughout the SDLC and \nmaintaining that security. \nExample 2: Define\
+  \ policies for securing software development processes \nthroughout the SDLC and\
+  \ maintaining that security, including for open-source and \nother third-party software\
+  \ components utilized by software being developed. \nExample 3: Review and update\
+  \ security requirements at least annually, or sooner \nif there are new requirements\
+  \ from internal or external sources, or a major \nsecurity incident targeting software\
+  \ development infrastructure has occurred. \nExample 4: Educate affected individuals\
+  \ on impending changes to requirements. \nBSAFSS: SM.3, DE.1, IA.1, IA.2 \nBSIMM:\
+  \ CP1.1, CP1.3, SR1.1, SR2.2, SE1.2, SE2.6 \nEO14028: 4e(ix) \nIEC62443: SM-7, SM-9\
+  \ \nNISTCSF: ID.GV-3 \nOWASPASVS: 1.1.1 \nOWASPMASVS: 1.10 \nOWASPSAMM: PC1-A, PC1-B,\
+  \ PC2-A \nPCISSLC: 2.1, 2.2 \nSCFPSSD: Planning the Implementation and Deployment\
+  \ of Secure Development Practices \nSP80053: SA-1, SA-8, SA-15, SR-3 \nSP800160:\
+  \ 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2, 3.4.3 \nSP800161: SA-1, SA-8, SA-15, SR-3 \n\
+  SP800181: T0414; K0003, K0039, K0044, K0157, K0168, K0177, K0211, K0260, K0261,\
+  \ \nK0262, K0524; S0010, S0357, S0368; A0033, A0123, A0151 \nPO.1.2: Identify and\
+  \ document all security \nrequirements for organization-developed software to \n\
+  meet, and maintain the requirements over time. \nExample 1: Define policies that\
+  \ specify risk-based software architecture and \ndesign requirements, such as making\
+  \ code modular to facilitate code reuse and \nupdates; isolating security components\
+  \ from other components during execution; \navoiding undocumented commands and settings;\
+  \ and providing features that will \naid software acquirers with the secure deployment,\
+  \ operation, and maintenance \nof the software. \nExample 2: Define policies that\
+  \ specify the security requirements for the \norganization’s software, and verify\
+  \ compliance at key points in the SDLC (e.g., \nclasses of software flaws verified\
+  \ by gates, responses to vulnerabilities \ndiscovered in released software). \n\
+  Example 3: Analyze the risk of applicable technology stacks (e.g., languages, \n\
+  environments, deployment models), and recommend or require the use of stacks \n\
+  that will reduce risk compared to others. \nExample 4: Define policies that specify\
+  \ what needs to be archived for each \nsoftware release (e.g., code, package files,\
+  \ third-party libraries, documentation, \ndata inventory) and how long it needs\
+  \ to be retained based on the SDLC model, \nsoftware end-of-life, and other factors.\
+  \ \nExample 5: Ensure that policies cover the entire software life cycle, including\
+  \ \nnotifying users of the impending end of software support and the date of software\
+  \ \nend-of-life. \nExample 6: Review all security requirements at least annually,\
+  \ or sooner if there \nare new requirements from internal or external sources, a\
+  \ major vulnerability is \ndiscovered in released software, or a major security\
+  \ incident targeting \norganization-developed software has occurred. \nExample 7:\
+  \ Establish and follow processes for handling requirement exception \nrequests,\
+  \ including periodic reviews of all approved exceptions. \nBSAFSS: SC.1-1, SC.2,\
+  \ PD.1-1, PD.1-2, PD.1-3, PD.2-2,\n\nEnriched Guidance:\nPrepare the Organization\
+  \ (PO) is an SSDF practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: Prepare the Organization (PO)
+implementation_examples: []

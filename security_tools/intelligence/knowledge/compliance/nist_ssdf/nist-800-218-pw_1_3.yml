@@ -1,0 +1,104 @@
+id: nist-800-218-pw_1_3
+title: PW.1.3 Where appropriate, build in support for using
+category: secure_development
+applies_to:
+- secure_sdlc
+- secure_coding
+- sast
+- dependency_scanning
+- build_security
+- code_review
+- testing
+tags:
+- code-review
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_1
+- pw_1_3
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.1.3: Where appropriate, build in support for using \nstandardized\
+  \ security features and services (e.g., \nenabling software to integrate with existing\
+  \ log \nmanagement, identity management, access control, \nand vulnerability management\
+  \ systems) instead of \ncreating proprietary implementations of security \nfeatures\
+  \ and services. [Formerly PW.4.3] \nExample 1: Maintain one or more software repositories\
+  \ of modules for supporting \nstandardized security features and services. \nExample\
+  \ 2: Determine secure configurations for modules for supporting \nstandardized security\
+  \ features and services, and make these configurations \navailable (e.g., as configuration-as-code)\
+  \ so developers can readily use them. \nExample 3: Define criteria for which security\
+  \ features and services must be \nsupported by software to be developed. \nBSAFSS:\
+  \ SI.2-1, SI.2-2, LO.1 \nBSIMM: SFD1.1, SFD2.1, SFD3.2, SR1.1, SR3.4 \nEO14028:\
+  \ 4e(ix) \nIEC62443: SD-1, SD-4 \nMSSDL: 5 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA2-A\
+  \ \nSCFPSSD: Standardize Identity and Access Management; Establish Log Requirements\
+  \ and \nAudit Practices\n\n \n \n \n \n \n12 \nPractices \nTasks \nNotional Implementation\
+  \ Examples \nReferences \nReview the Software Design to Verify \nCompliance with\
+  \ Security Requirements and \nRisk Information (PW.2): Help ensure that the \nsoftware\
+  \ will meet the security requirements and \nsatisfactorily address the identified\
+  \ risk \ninformation."
+rationale: "PW.1.3: Where appropriate, build in support for using \nstandardized security\
+  \ features and services (e.g., \nenabling software to integrate with existing log\
+  \ \nmanagement, identity management, access control, \nand vulnerability management\
+  \ systems) instead of \ncreating proprietary implementations of security \nfeatures\
+  \ and services. [Formerly PW.4.3] \nExample 1: Maintain one or more software repositories\
+  \ of modules for supporting \nstandardized security features and services. \nExample\
+  \ 2: Determine secure configurations for modules for supporting \nstandardized security\
+  \ features and services, and make these configurations \navailable (e.g., as configuration-as-code)\
+  \ so developers can readily use them. \nExample 3: Define criteria for which security\
+  \ features and services must be \nsupported by software to be developed. \nBSAFSS:\
+  \ SI.2-1, SI.2-2, LO.1 \nBSIMM: SFD1.1, SFD2.1, SFD3.2, SR1.1, SR3.4 \nEO14028:\
+  \ 4e(ix) \nIEC62443: SD-1, SD-4 \nMSSDL: 5 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA2-A\
+  \ \nSCFPSSD: Standardize Identity and Access Management; Establish Log Requirements\
+  \ and \nAudit Practices\n\n \n \n \n \n \n12 \nPractices \nTasks \nNotional Implementation\
+  \ Examples \nReferences \nReview the Software Design to Verify \nCompliance with\
+  \ Security Requirements and \nRisk Information (PW.2): Help ensure that the \nsoftware\
+  \ will meet the security requirements and \nsatisfactorily address the identified\
+  \ risk \ninformation."
+developer_guidance: "PW.1.3 Where appropriate, build in support for using defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.1.3: Where appropriate,\
+  \ build in support for using \nstandardized security features and services (e.g.,\
+  \ \nenabling software to integrate with existing log \nmanagement, identity management,\
+  \ access control, \nand vulnerability management systems) instead of \ncreating\
+  \ proprietary implementations of security \nfeatures and services. [Formerly PW.4.3]\
+  \ \nExample 1: Maintain one or more software repositories of modules for supporting\
+  \ \nstandardized security features and services. \nExample 2: Determine secure configurations\
+  \ for modules for supporting \nstandardized security features and services, and\
+  \ make these configurations \navailable (e.g., as configuration-as-code) so developers\
+  \ can readily use them. \nExample 3: Define criteria for which security features\
+  \ and services must be \nsupported by software to be developed. \nBSAFSS: SI.2-1,\
+  \ SI.2-2, LO.1 \nBSIMM: SFD1.1, SFD2.1, SFD3.2, SR1.1, SR3.4 \nEO14028: 4e(ix) \n\
+  IEC62443: SD-1, SD-4 \nMSSDL: 5 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA2-A \nSCFPSSD:\
+  \ Standardize Identity and Access Management; Establish Log Requirements and \n\
+  Audit Practices\n\n \n \n \n \n \n12 \nPractices \nTasks \nNotional Implementation\
+  \ Examples \nReferences \nReview the Software Design to Verify \nCompliance with\
+  \ Security Requirements and \nRisk Information (PW.2): Help ensure that the \nsoftware\
+  \ will meet the security requirements and \nsatisfactorily address the identified\
+  \ risk \ninformation.\n\nEnriched Guidance:\nPW.1.3 Where appropriate, build in\
+  \ support for using is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.1.3
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.1.3 Where appropriate, build in support for using
+implementation_examples: []

@@ -1,0 +1,147 @@
+id: nist-800-218-po_1_2
+title: PO.1.2 Identify and document all security
+category: secure_development_governance
+applies_to:
+- secure_sdlc
+- security_requirements
+- developer_enablement
+- build_pipeline
+- development_environment
+tags:
+- development-environment
+- governance
+- nist_800_218
+- po
+- po_1
+- po_1_2
+- prepare-the-organization
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.1.2: Identify and document all security \nrequirements for organization-developed\
+  \ software to \nmeet, and maintain the requirements over time. \nExample 1: Define\
+  \ policies that specify risk-based software architecture and \ndesign requirements,\
+  \ such as making code modular to facilitate code reuse and \nupdates; isolating\
+  \ security components from other components during execution; \navoiding undocumented\
+  \ commands and settings; and providing features that will \naid software acquirers\
+  \ with the secure deployment, operation, and maintenance \nof the software. \nExample\
+  \ 2: Define policies that specify the security requirements for the \norganization’s\
+  \ software, and verify compliance at key points in the SDLC (e.g., \nclasses of\
+  \ software flaws verified by gates, responses to vulnerabilities \ndiscovered in\
+  \ released software). \nExample 3: Analyze the risk of applicable technology stacks\
+  \ (e.g., languages, \nenvironments, deployment models), and recommend or require\
+  \ the use of stacks \nthat will reduce risk compared to others. \nExample 4: Define\
+  \ policies that specify what needs to be archived for each \nsoftware release (e.g.,\
+  \ code, package files, third-party libraries, documentation, \ndata inventory) and\
+  \ how long it needs to be retained based on the SDLC model, \nsoftware end-of-life,\
+  \ and other factors. \nExample 5: Ensure that policies cover the entire software\
+  \ life cycle, including \nnotifying users of the impending end of software support\
+  \ and the date of software \nend-of-life. \nExample 6: Review all security requirements\
+  \ at least annually, or sooner if there \nare new requirements from internal or\
+  \ external sources, a major vulnerability is \ndiscovered in released software,\
+  \ or a major security incident targeting \norganization-developed software has occurred.\
+  \ \nExample 7: Establish and follow processes for handling requirement exception\
+  \ \nrequests, including periodic reviews of all approved exceptions. \nBSAFSS: SC.1-1,\
+  \ SC.2, PD.1-1, PD.1-2, PD.1-3, PD.2-2, SI, PA, CS, AA, LO, EE \nBSIMM: SM1.1, SM1.4,\
+  \ SM2.2, CP1.1, CP1.2, CP1.3, CP2.1, CP2.3, AM1.2, SFD1.1, \nSFD2.1, SFD3.2, SR1.1,\
+  \ SR1.3, SR2.2, SR3.3, SR3.4 \nEO14028: 4e(ix) \nIEC62443: SR-3, SR-4, SR-5, SD-4\
+  \ \nISO27034: 7.3.2 \nMSSDL: 2, 5 \nNISTCSF: ID.GV-3 \nOWASPMASVS: 1.12 \nOWASPSAMM:\
+  \ PC1-A, PC1-B, PC2-A, PC3-A, SR1-A, SR1-B, SR2-B, SA1-B, IR1-A \nPCISSLC: 2.1,\
+  \ 2.2, 2.3, 3.3 \nSCFPSSD: Establish Coding Standards and Conventions \nSP80053:\
+  \ SA-8, SA-8(3), SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.3.1 \nSP800161: SA-8, SA-15,\
+  \ SR-3 \nSP800181: T0414; K0003, K0039, K0044, K0157, K0168, K0177, K0211, K0260,\
+  \ K0261, \nK0262, K0524; S0010, S0357, S0368; A0033, A0123, A0151"
+rationale: "PO.1.2: Identify and document all security \nrequirements for organization-developed\
+  \ software to \nmeet, and maintain the requirements over time. \nExample 1: Define\
+  \ policies that specify risk-based software architecture and \ndesign requirements,\
+  \ such as making code modular to facilitate code reuse and \nupdates; isolating\
+  \ security components from other components during execution; \navoiding undocumented\
+  \ commands and settings; and providing features that will \naid software acquirers\
+  \ with the secure deployment, operation, and maintenance \nof the software. \nExample\
+  \ 2: Define policies that specify the security requirements for the \norganization’s\
+  \ software, and verify compliance at key points in the SDLC (e.g., \nclasses of\
+  \ software flaws verified by gates, responses to vulnerabilities \ndiscovered in\
+  \ released software). \nExample 3: Analyze the risk of applicable technology stacks\
+  \ (e.g., languages, \nenvironments, deployment models), and recommend or require\
+  \ the use of stacks \nthat will reduce risk compared to others. \nExample 4: Define\
+  \ policies that specify what needs to be archived for each \nsoftware release (e.g.,\
+  \ code, package files, third-party libraries, documentation, \ndata inventory) and\
+  \ how long it needs to be retained based on the SDLC model, \nsoftware end-of-life,\
+  \ and other factors. \nExample 5: Ensure that policies cover the entire software\
+  \ life cycle, including \nnotifying users of the impending end of software support\
+  \ and the date of software \nend-of-life. \nExample 6: Review all security requirements\
+  \ at least annually, or sooner if there \nare new requirements from internal or\
+  \ external sources, a major vulnerability is \ndiscovered in released software,\
+  \ or a major security incident targeting \norganization-developed software has occurred.\
+  \ \nExample 7: Establish and follow processes for handling requirement exception\
+  \ \nrequests, including periodic reviews of all approved exceptions. \nBSAFSS: SC.1-1,\
+  \ SC.2, PD.1-1, PD.1-2, PD.1-3, PD.2-2, SI, PA, CS, AA, LO, EE \nBSIMM: SM1.1, SM1.4,\
+  \ SM2.2, CP1.1, CP1.2, CP1.3, CP2.1, CP2.3, AM1.2, SFD1.1, \nSFD2.1, SFD3.2, SR1.1,\
+  \ SR1.3, SR2.2, SR3.3, SR3.4 \nEO14028: 4e(ix) \nIEC62443: SR-3, SR-4, SR-5, SD-4\
+  \ \nISO27034: 7.3.2 \nMSSDL: 2, 5 \nNISTCSF: ID.GV-3 \nOWASPMASVS: 1.12 \nOWASPSAMM:\
+  \ PC1-A, PC1-B, PC2-A, PC3-A, SR1-A, SR1-B, SR2-B, SA1-B, IR1-A \nPCISSLC: 2.1,\
+  \ 2.2, 2.3, 3.3 \nSCFPSSD: Establish Coding Standards and Conventions \nSP80053:\
+  \ SA-8, SA-8(3), SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.3.1 \nSP800161: SA-8, SA-15,\
+  \ SR-3 \nSP800181: T0414; K0003, K0039, K0044, K0157, K0168, K0177, K0211, K0260,\
+  \ K0261, \nK0262, K0524; S0010, S0357, S0368; A0033, A0123, A0151"
+developer_guidance: "PO.1.2 Identify and document all security defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.1.2: Identify and document all\
+  \ security \nrequirements for organization-developed software to \nmeet, and maintain\
+  \ the requirements over time. \nExample 1: Define policies that specify risk-based\
+  \ software architecture and \ndesign requirements, such as making code modular to\
+  \ facilitate code reuse and \nupdates; isolating security components from other\
+  \ components during execution; \navoiding undocumented commands and settings; and\
+  \ providing features that will \naid software acquirers with the secure deployment,\
+  \ operation, and maintenance \nof the software. \nExample 2: Define policies that\
+  \ specify the security requirements for the \norganization’s software, and verify\
+  \ compliance at key points in the SDLC (e.g., \nclasses of software flaws verified\
+  \ by gates, responses to vulnerabilities \ndiscovered in released software). \n\
+  Example 3: Analyze the risk of applicable technology stacks (e.g., languages, \n\
+  environments, deployment models), and recommend or require the use of stacks \n\
+  that will reduce risk compared to others. \nExample 4: Define policies that specify\
+  \ what needs to be archived for each \nsoftware release (e.g., code, package files,\
+  \ third-party libraries, documentation, \ndata inventory) and how long it needs\
+  \ to be retained based on the SDLC model, \nsoftware end-of-life, and other factors.\
+  \ \nExample 5: Ensure that policies cover the entire software life cycle, including\
+  \ \nnotifying users of the impending end of software support and the date of software\
+  \ \nend-of-life. \nExample 6: Review all security requirements at least annually,\
+  \ or sooner if there \nare new requirements from internal or external sources, a\
+  \ major vulnerability is \ndiscovered in released software, or a major security\
+  \ incident targeting \norganization-developed software has occurred. \nExample 7:\
+  \ Establish and follow processes for handling requirement exception \nrequests,\
+  \ including periodic reviews of all approved exceptions. \nBSAFSS: SC.1-1, SC.2,\
+  \ PD.1-1, PD.1-2, PD.1-3, PD.2-2, SI, PA, CS, AA, LO, EE \nBSIMM: SM1.1, SM1.4,\
+  \ SM2.2, CP1.1, CP1.2, CP1.3, CP2.1, CP2.3, AM1.2, SFD1.1, \nSFD2.1, SFD3.2, SR1.1,\
+  \ SR1.3, SR2.2, SR3.3, SR3.4 \nEO14028: 4e(ix) \nIEC62443: SR-3, SR-4, SR-5, SD-4\
+  \ \nISO27034: 7.3.2 \nMSSDL: 2, 5 \nNISTCSF: ID.GV-3 \nOWASPMASVS: 1.12 \nOWASPSAMM:\
+  \ PC1-A, PC1-B, PC2-A, PC3-A, SR1-A, SR1-B, SR2-B, SA1-B, IR1-A \nPCISSLC: 2.1,\
+  \ 2.2, 2.3, 3.3 \nSCFPSSD: Establish Coding Standards and Conventions \nSP80053:\
+  \ SA-8, SA-8(3), SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.3.1 \nSP800161: SA-8, SA-15,\
+  \ SR-3 \nSP800181: T0414; K0003, K0039, K0044, K0157, K0168, K0177, K0211, K0260,\
+  \ K0261, \nK0262, K0524; S0010, S0357, S0368; A0033, A0123, A0151\n\nEnriched Guidance:\n\
+  PO.1.2 Identify and document all security is an SSDF practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.1.2
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.1.2 Identify and document all security
+implementation_examples: []

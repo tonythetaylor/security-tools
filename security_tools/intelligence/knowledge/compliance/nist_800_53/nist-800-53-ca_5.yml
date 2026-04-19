@@ -1,0 +1,67 @@
+id: nist-800-53-ca_5
+title: CA-5 PLAN OF ACTION AND MILESTONES
+category: assurance_security
+applies_to:
+- security_assessment
+- continuous_monitoring
+- authorization
+tags:
+- 800-53
+- assessment
+- authorization
+- ca
+- ca_5
+- continuous-monitoring
+- nist
+severity_guidance: medium
+description: 'CA-5 PLAN OF ACTION AND MILESTONES requires: Develop a plan of action
+  and milestones for the system to document the planned remediation actions of the
+  organization to correct weaknesses or deficiencies noted during the assessment of
+  the controls and to reduce or eliminate known vulnerabilities in the system; and;
+  Update existing plan of action and milestones [Assignment: organization-defined
+  frequency] based on the findings from control assessments, independent audits or
+  reviews, and continuous monitoring activities.'
+rationale: Plans of action and milestones are useful for any type of organization
+  to track planned remedial actions. Plans of action and milestones are required in
+  authorization packages and subject to federal reporting requirements established
+  by OMB.
+developer_guidance: 'CA-5 PLAN OF ACTION AND MILESTONES is a NIST SP 800-53 Rev. 5
+  requirement.
+
+  Implementation expectations include:
+
+  - Develop a plan of action and milestones for the system to document the planned
+  remediation actions of the organization to correct weaknesses or deficiencies noted
+  during the assessment of the controls and to reduce or eliminate known vulnerabilities
+  in the system; and
+
+  - Update existing plan of action and milestones [Assignment: organization-defined
+  frequency] based on the findings from control assessments, independent audits or
+  reviews, and continuous monitoring activities'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CA-5
+  note: null
+risk_context:
+  family: CA
+  related_controls:
+  - CA-2
+  - CA-7
+  - PM-4
+  - PM-9
+  - RA-7
+  - SI-2
+  - SI-12
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for CA-5 PLAN OF ACTION AND MILESTONES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

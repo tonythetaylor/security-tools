@@ -1,0 +1,60 @@
+id: nist-800-53-sc_36
+title: SC-36 DISTRIBUTED PROCESSING AND STORAGE
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_36
+severity_guidance: high
+description: Distributing processing and storage across multiple physical locations
+  or logical domains provides a degree of redundancy or overlap for organizations.
+  The redundancy and overlap increase the work factor of adversaries to adversely
+  impact organizational operations, assets, and individuals. The use of distributed
+  processing and storage does not assume a single primary processing or storage location.
+  Therefore, it allows for parallel processing and storage.
+rationale: Distributing processing and storage across multiple physical locations
+  or logical domains provides a degree of redundancy or overlap for organizations.
+  The redundancy and overlap increase the work factor of adversaries to adversely
+  impact organizational operations, assets, and individuals. The use of distributed
+  processing and storage does not assume a single primary processing or storage location.
+  Therefore, it allows for parallel processing and storage.
+developer_guidance: 'SC-36 DISTRIBUTED PROCESSING AND STORAGE is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-36
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - CP-6
+  - CP-7
+  - PL-8
+  - SC-32
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-36 DISTRIBUTED PROCESSING AND STORAGE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,59 @@
+id: nist-800-53-at_4
+title: AT-4 TRAINING RECORDS
+category: training_security
+applies_to:
+- security_training
+- awareness
+- role_based_training
+tags:
+- 800-53
+- at
+- at_4
+- awareness
+- education
+- nist
+- training
+severity_guidance: medium
+description: 'AT-4 TRAINING RECORDS requires: Document and monitor information security
+  and privacy training activities, including security and privacy awareness training
+  and specific role-based security and privacy training; and; Retain individual training
+  records for [Assignment: organization-defined time period].'
+rationale: Documentation for specialized training may be maintained by individual
+  supervisors at the discretion of the organization. The National Archives and Records
+  Administration provides guidance on records retention for federal agencies.
+developer_guidance: 'AT-4 TRAINING RECORDS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Document and monitor information security and privacy training activities, including
+  security and privacy awareness training and specific role-based security and privacy
+  training; and
+
+  - Retain individual training records for [Assignment: organization-defined time
+  period]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AT-4
+  note: null
+risk_context:
+  family: AT
+  related_controls:
+  - AT-2
+  - AT-3
+  - CP-3
+  - IR-2
+  - PM-14
+  - SI-12
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for AT-4 TRAINING RECORDS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

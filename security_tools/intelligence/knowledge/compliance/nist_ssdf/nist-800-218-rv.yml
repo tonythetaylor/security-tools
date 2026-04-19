@@ -1,0 +1,198 @@
+id: nist-800-218-rv
+title: Respond to Vulnerabilities (RV)
+category: vulnerability_response
+applies_to:
+- vulnerability_management
+- triage
+- remediation
+- root_cause_analysis
+- security_advisories
+tags:
+- group
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- rv
+- ssdf
+- triage
+severity_guidance: high
+description: "Respond to Vulnerabilities (RV) \nIdentify and Confirm Vulnerabilities\
+  \ on an \nOngoing Basis (RV.1): Help ensure that \nvulnerabilities are identified\
+  \ more quickly so that \nthey can be remediated more quickly in \naccordance with\
+  \ risk, reducing the window of \nopportunity for attackers. \nRV.1.1: Gather information\
+  \ from software acquirers, \nusers, and public sources on potential vulnerabilities\
+  \ in \nthe software and third-party components that the \nsoftware uses, and investigate\
+  \ all credible reports. \nExample 1: Monitor vulnerability databases9, security\
+  \ mailing lists, and other \nsources of vulnerability reports through manual or\
+  \ automated means. \nExample 2: Use threat intelligence sources to better understand\
+  \ how \nvulnerabilities in general are being exploited. \nExample 3: Automatically\
+  \ review provenance and software composition data for \nall software components\
+  \ to identify any new vulnerabilities they have. \nBSAFSS: VM.1-3, VM.3 \nBSIMM:\
+  \ AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: DM-1, DM-2, DM-3 \nISO29147:\
+  \ 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \nOWASPSAMM: IM1-A, IM2-B, EH1-B\
+  \ \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE: Operational Security Task 5\
+  \ \nSCFPSSD: Vulnerability Response and Disclosure \nSCTPC: MONITOR1 \nSP80053:\
+  \ SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181: K0009, K0038, K0040,\
+  \ K0070, K0161, K0362; S0078 \nRV.1.2: Review, analyze, and/or test the software’s\
+  \ \ncode to identify or confirm the presence of previously \nundetected vulnerabilities.\
+  \ \nExample 1: Configure the toolchain to perform automated code analysis and \n\
+  testing on a regular or continuous basis for all supported releases. \nExample 2:\
+  \ See PW.7 and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \nBSIMM: CMVM3.1 \nEO14028: 4e(iv),\
+  \ 4e(vi), 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2, SVV-3, SVV-4, DM-1, DM-2 \n\
+  ISO27034: 7.3.6 \n \n9 \nAn example is the National Vulnerability Database (NVD)\
+  \ (https://nvd.nist.gov/).\n\n \n \n \n \n \n17 \nPractices \nTasks \nNotional Implementation\
+  \ Examples \nReferences \nISO29147: 6.4 \nISO30111: 7.1.4 \nPCISSLC: 3.4, 4.1 \n\
+  SCAGILE: Operational Security Tasks 10, 11 \nSP80053: SA-11 \nSP800161: SA-11 \n\
+  SP800181: SP-DEV-002; K0009, K0039, K0153 \nRV.1.3: Have a policy that addresses\
+  \ vulnerability \ndisclosure and remediation, and implement the roles, \nresponsibilities,\
+  \ and processes needed to support that \npolicy. \nExample 1: Establish a vulnerability\
+  \ disclosure program, and make it easy for \nsecurity researchers to learn about\
+  \ your program and report possible \nvulnerabilities. \nExample 2: Have a Product\
+  \ Security Incident Response Team (PSIRT) and \nprocesses in place to handle the\
+  \ responses to vulnerability reports and incidents, \nincluding communications plans\
+  \ for all stakeholders. \nExample 3: Have a security response playbook to handle\
+  \ a generic reported \nvulnerability, a report of zero-days, a vulnerability being\
+  \ exploited in the wild, and \na major ongoing incident involving multiple parties\
+  \ and open-source software \ncomponents. \nExample 4: Periodically conduct exercises\
+  \ of the product security incident \nresponse processes. \nBSAFSS: VM.1-1, VM.2\
+  \ \nBSIMM: CMVM1.1, CMVM2.1, CMVM3.3, CMVM3.7 \nEO14028: 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-1, DM-2, DM-3, DM-4, DM-5 \nISO29147: All \nISO30111: All \nMSSDL: 12 \nNISTLABEL:\
+  \ 2.2.2.3 \nOWASPMASVS: 1.11 \nOWASPSAMM: IM1-A, IM1-B, IM2-A, IM2-B \nPCISSLC:\
+  \ 9.2, 9.3 \nSCFPSSD: Vulnerability Response and Disclosure \nSP80053: SA-15(10)\
+  \ \nSP800160: 3.3.8 \nSP800161: SA-15(10) \nSP800181: K0041, K0042, K0151, K0292,\
+  \ K0317; S0054; A0025 \nSP800216: All \nAssess, Prioritize, and Remediate \nVulnerabilities\
+  \ (RV.2): Help ensure that \nvulnerabilities are remediated in accordance with \n\
+  risk to reduce the window of opportunity for \nattackers. \nRV.2.1: Analyze each\
+  \ vulnerability to gather sufficient \ninformation about risk to plan its remediation\
+  \ or other \nrisk response. \nExample 1: Use existing issue tracking software to\
+  \ record each vulnerability. \nExample 2"
+rationale: "Respond to Vulnerabilities (RV) \nIdentify and Confirm Vulnerabilities\
+  \ on an \nOngoing Basis (RV.1): Help ensure that \nvulnerabilities are identified\
+  \ more quickly so that \nthey can be remediated more quickly in \naccordance with\
+  \ risk, reducing the window of \nopportunity for attackers. \nRV.1.1: Gather information\
+  \ from software acquirers, \nusers, and public sources on potential vulnerabilities\
+  \ in \nthe software and third-party components that the \nsoftware uses, and investigate\
+  \ all credible reports. \nExample 1: Monitor vulnerability databases9, security\
+  \ mailing lists, and other \nsources of vulnerability reports through manual or\
+  \ automated means. \nExample 2: Use threat intelligence sources to better understand\
+  \ how \nvulnerabilities in general are being exploited. \nExample 3: Automatically\
+  \ review provenance and software composition data for \nall software components\
+  \ to identify any new vulnerabilities they have. \nBSAFSS: VM.1-3, VM.3 \nBSIMM:\
+  \ AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: DM-1, DM-2, DM-3 \nISO29147:\
+  \ 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \nOWASPSAMM: IM1-A, IM2-B, EH1-B\
+  \ \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE: Operational Security Task 5\
+  \ \nSCFPSSD: Vulnerability Response and Disclosure \nSCTPC: MONITOR1 \nSP80053:\
+  \ SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181: K0009, K0038, K0040,\
+  \ K0070, K0161, K0362; S0078 \nRV.1.2: Review, analyze, and/or test the software’s\
+  \ \ncode to identify or confirm the presence of previously \nundetected vulnerabilities.\
+  \ \nExample 1: Configure the toolchain to perform automated code analysis and \n\
+  testing on a regular or continuous basis for all supported releases. \nExample 2:\
+  \ See PW.7 and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \nBSIMM: CMVM3.1 \nEO14028: 4e(iv),\
+  \ 4e(vi), 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2, SVV-3, SVV-4, DM-1, DM-2 \n\
+  ISO27034: 7.3.6 \n \n9 \nAn example is the National Vulnerability Database (NVD)\
+  \ (https://nvd.nist.gov/).\n\n \n \n \n \n \n17 \nPractices \nTasks \nNotional Implementation\
+  \ Examples \nReferences \nISO29147: 6.4 \nISO30111: 7.1.4 \nPCISSLC: 3.4, 4.1 \n\
+  SCAGILE: Operational Security Tasks 10, 11 \nSP80053: SA-11 \nSP800161: SA-11 \n\
+  SP800181: SP-DEV-002; K0009, K0039, K0153 \nRV.1.3: Have a policy that addresses\
+  \ vulnerability \ndisclosure and remediation, and implement the roles, \nresponsibilities,\
+  \ and processes needed to support that \npolicy. \nExample 1: Establish a vulnerability\
+  \ disclosure program, and make it easy for \nsecurity researchers to learn about\
+  \ your program and report possible \nvulnerabilities. \nExample 2: Have a Product\
+  \ Security Incident Response Team (PSIRT) and \nprocesses in place to handle the\
+  \ responses to vulnerability reports and incidents, \nincluding communications plans\
+  \ for all stakeholders. \nExample 3: Have a security response playbook to handle\
+  \ a generic reported \nvulnerability, a report of zero-days, a vulnerability being\
+  \ exploited in the wild, and \na major ongoing incident involving multiple parties\
+  \ and open-source software \ncomponents. \nExample 4: Periodically conduct exercises\
+  \ of the product security incident \nresponse processes. \nBSAFSS: VM.1-1, VM.2\
+  \ \nBSIMM: CMVM1.1, CMVM2.1, CMVM3.3, CMVM3.7 \nEO14028: 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-1, DM-2, DM-3, DM-4, DM-5 \nISO29147: All \nISO30111: All \nMSSDL: 12 \nNISTLABEL:\
+  \ 2.2.2.3 \nOWASPMASVS: 1.11 \nOWASPSAMM: IM1-A, IM1-B, IM2-A, IM2-B \nPCISSLC:\
+  \ 9.2, 9.3 \nSCFPSSD: Vulnerability Response and Disclosure \nSP80053: SA-15(10)\
+  \ \nSP800160: 3.3.8 \nSP800161: SA-15(10) \nSP800181: K0041, K0042, K0151, K0292,\
+  \ K0317; S0054; A0025 \nSP800216: All \nAssess, Prioritize, and Remediate \nVulnerabilities\
+  \ (RV.2): Help ensure that \nvulnerabilities are remediated in accordance with \n\
+  risk to reduce the window of opportunity for \nattackers. \nRV.2.1: Analyze each\
+  \ vulnerability to gather sufficient \ninformation about risk to plan its remediation\
+  \ or other \nrisk response. \nExample 1: Use existing issue tracking software to\
+  \ record each vulnerability. \nExample 2"
+developer_guidance: "Respond to Vulnerabilities (RV) defines one of the four high-level\
+  \ SSDF practice groups. Use this record as strategic guidance for grouping findings\
+  \ and aligning SDLC expectations.\n\nRespond to Vulnerabilities (RV) \nIdentify\
+  \ and Confirm Vulnerabilities on an \nOngoing Basis (RV.1): Help ensure that \n\
+  vulnerabilities are identified more quickly so that \nthey can be remediated more\
+  \ quickly in \naccordance with risk, reducing the window of \nopportunity for attackers.\
+  \ \nRV.1.1: Gather information from software acquirers, \nusers, and public sources\
+  \ on potential vulnerabilities in \nthe software and third-party components that\
+  \ the \nsoftware uses, and investigate all credible reports. \nExample 1: Monitor\
+  \ vulnerability databases9, security mailing lists, and other \nsources of vulnerability\
+  \ reports through manual or automated means. \nExample 2: Use threat intelligence\
+  \ sources to better understand how \nvulnerabilities in general are being exploited.\
+  \ \nExample 3: Automatically review provenance and software composition data for\
+  \ \nall software components to identify any new vulnerabilities they have. \nBSAFSS:\
+  \ VM.1-3, VM.3 \nBSIMM: AM1.5, CMVM1.2, CMVM2.1, CMVM3.4, CMVM3.7 \nCNCFSSCP: Securing\
+  \ Materials—Verification \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-1, DM-2, DM-3 \nISO29147: 6.2.1, 6.2.2, 6.2.4, 6.3, 6.5 \nISO30111: 7.1.3 \n\
+  OWASPSAMM: IM1-A, IM2-B, EH1-B \nOWASPSCVS: 4 \nPCISSLC: 3.4, 4.1, 9.1 \nSCAGILE:\
+  \ Operational Security Task 5 \nSCFPSSD: Vulnerability Response and Disclosure \n\
+  SCTPC: MONITOR1 \nSP80053: SA-10, SR-3, SR-4 \nSP800161: SA-10, SR-3, SR-4 \nSP800181:\
+  \ K0009, K0038, K0040, K0070, K0161, K0362; S0078 \nRV.1.2: Review, analyze, and/or\
+  \ test the software’s \ncode to identify or confirm the presence of previously \n\
+  undetected vulnerabilities. \nExample 1: Configure the toolchain to perform automated\
+  \ code analysis and \ntesting on a regular or continuous basis for all supported\
+  \ releases. \nExample 2: See PW.7 and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \nBSIMM: CMVM3.1\
+  \ \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2, SVV-3, SVV-4,\
+  \ DM-1, DM-2 \nISO27034: 7.3.6 \n \n9 \nAn example is the National Vulnerability\
+  \ Database (NVD) (https://nvd.nist.gov/).\n\n \n \n \n \n \n17 \nPractices \nTasks\
+  \ \nNotional Implementation Examples \nReferences \nISO29147: 6.4 \nISO30111: 7.1.4\
+  \ \nPCISSLC: 3.4, 4.1 \nSCAGILE: Operational Security Tasks 10, 11 \nSP80053: SA-11\
+  \ \nSP800161: SA-11 \nSP800181: SP-DEV-002; K0009, K0039, K0153 \nRV.1.3: Have a\
+  \ policy that addresses vulnerability \ndisclosure and remediation, and implement\
+  \ the roles, \nresponsibilities, and processes needed to support that \npolicy.\
+  \ \nExample 1: Establish a vulnerability disclosure program, and make it easy for\
+  \ \nsecurity researchers to learn about your program and report possible \nvulnerabilities.\
+  \ \nExample 2: Have a Product Security Incident Response Team (PSIRT) and \nprocesses\
+  \ in place to handle the responses to vulnerability reports and incidents, \nincluding\
+  \ communications plans for all stakeholders. \nExample 3: Have a security response\
+  \ playbook to handle a generic reported \nvulnerability, a report of zero-days,\
+  \ a vulnerability being exploited in the wild, and \na major ongoing incident involving\
+  \ multiple parties and open-source software \ncomponents. \nExample 4: Periodically\
+  \ conduct exercises of the product security incident \nresponse processes. \nBSAFSS:\
+  \ VM.1-1, VM.2 \nBSIMM: CMVM1.1, CMVM2.1, CMVM3.3, CMVM3.7 \nEO14028: 4e(viii),\
+  \ 4e(ix) \nIEC62443: DM-1, DM-2, DM-3, DM-4, DM-5 \nISO29147: All \nISO30111: All\
+  \ \nMSSDL: 12 \nNISTLABEL: 2.2.2.3 \nOWASPMASVS: 1.11 \nOWASPSAMM: IM1-A, IM1-B,\
+  \ IM2-A, IM2-B \nPCISSLC: 9.2, 9.3 \nSCFPSSD: Vulnerability Response and Disclosure\
+  \ \nSP80053: SA-15(10) \nSP800160: 3.3.8 \nSP800161: SA-15(10) \nSP800181: K0041,\
+  \ K0042, K0151, K0292, K0317; S0054; A0025 \nSP800216: All \nAssess, Prioritize,\
+  \ and Remediate \nVulnerabilities (RV.2): Help ensure that \nvulnerabilities are\
+  \ remediated in accordance with \nrisk to reduce the window of opportunity for \n\
+  attackers. \nRV.2.1: Analyze each vulnerability to gather sufficient \ninformation\
+  \ about risk to plan its remediation or other \nrisk response. \nExample 1: Use\
+  \ existing issue tracking software to record each vulnerability. \nExample 2\n\n\
+  Enriched Guidance:\nRespond to Vulnerabilities (RV) is an SSDF practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: Respond to Vulnerabilities (RV)
+implementation_examples: []

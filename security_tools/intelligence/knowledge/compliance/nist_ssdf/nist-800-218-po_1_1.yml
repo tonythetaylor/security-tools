@@ -1,0 +1,105 @@
+id: nist-800-218-po_1_1
+title: PO.1.1 Identify and document all security
+category: secure_development_governance
+applies_to:
+- secure_sdlc
+- security_requirements
+- developer_enablement
+- build_pipeline
+- development_environment
+tags:
+- development-environment
+- governance
+- nist_800_218
+- po
+- po_1
+- po_1_1
+- prepare-the-organization
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.1.1: Identify and document all security \nrequirements for the organization’s\
+  \ software \ndevelopment infrastructures and processes, and \nmaintain the requirements\
+  \ over time. \nExample 1: Define policies for securing software development infrastructures\
+  \ and \ntheir components, including development endpoints, throughout the SDLC and\
+  \ \nmaintaining that security. \nExample 2: Define policies for securing software\
+  \ development processes \nthroughout the SDLC and maintaining that security, including\
+  \ for open-source and \nother third-party software components utilized by software\
+  \ being developed. \nExample 3: Review and update security requirements at least\
+  \ annually, or sooner \nif there are new requirements from internal or external\
+  \ sources, or a major \nsecurity incident targeting software development infrastructure\
+  \ has occurred. \nExample 4: Educate affected individuals on impending changes to\
+  \ requirements. \nBSAFSS: SM.3, DE.1, IA.1, IA.2 \nBSIMM: CP1.1, CP1.3, SR1.1, SR2.2,\
+  \ SE1.2, SE2.6 \nEO14028: 4e(ix) \nIEC62443: SM-7, SM-9 \nNISTCSF: ID.GV-3 \nOWASPASVS:\
+  \ 1.1.1 \nOWASPMASVS: 1.10 \nOWASPSAMM: PC1-A, PC1-B, PC2-A \nPCISSLC: 2.1, 2.2\
+  \ \nSCFPSSD: Planning the Implementation and Deployment of Secure Development Practices\
+  \ \nSP80053: SA-1, SA-8, SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2,\
+  \ 3.4.3 \nSP800161: SA-1, SA-8, SA-15, SR-3 \nSP800181: T0414; K0003, K0039, K0044,\
+  \ K0157, K0168, K0177, K0211, K0260, K0261, \nK0262, K0524; S0010, S0357, S0368;\
+  \ A0033, A0123, A0151"
+rationale: "PO.1.1: Identify and document all security \nrequirements for the organization’s\
+  \ software \ndevelopment infrastructures and processes, and \nmaintain the requirements\
+  \ over time. \nExample 1: Define policies for securing software development infrastructures\
+  \ and \ntheir components, including development endpoints, throughout the SDLC and\
+  \ \nmaintaining that security. \nExample 2: Define policies for securing software\
+  \ development processes \nthroughout the SDLC and maintaining that security, including\
+  \ for open-source and \nother third-party software components utilized by software\
+  \ being developed. \nExample 3: Review and update security requirements at least\
+  \ annually, or sooner \nif there are new requirements from internal or external\
+  \ sources, or a major \nsecurity incident targeting software development infrastructure\
+  \ has occurred. \nExample 4: Educate affected individuals on impending changes to\
+  \ requirements. \nBSAFSS: SM.3, DE.1, IA.1, IA.2 \nBSIMM: CP1.1, CP1.3, SR1.1, SR2.2,\
+  \ SE1.2, SE2.6 \nEO14028: 4e(ix) \nIEC62443: SM-7, SM-9 \nNISTCSF: ID.GV-3 \nOWASPASVS:\
+  \ 1.1.1 \nOWASPMASVS: 1.10 \nOWASPSAMM: PC1-A, PC1-B, PC2-A \nPCISSLC: 2.1, 2.2\
+  \ \nSCFPSSD: Planning the Implementation and Deployment of Secure Development Practices\
+  \ \nSP80053: SA-1, SA-8, SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2,\
+  \ 3.4.3 \nSP800161: SA-1, SA-8, SA-15, SR-3 \nSP800181: T0414; K0003, K0039, K0044,\
+  \ K0157, K0168, K0177, K0211, K0260, K0261, \nK0262, K0524; S0010, S0357, S0368;\
+  \ A0033, A0123, A0151"
+developer_guidance: "PO.1.1 Identify and document all security defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.1.1: Identify and document all\
+  \ security \nrequirements for the organization’s software \ndevelopment infrastructures\
+  \ and processes, and \nmaintain the requirements over time. \nExample 1: Define\
+  \ policies for securing software development infrastructures and \ntheir components,\
+  \ including development endpoints, throughout the SDLC and \nmaintaining that security.\
+  \ \nExample 2: Define policies for securing software development processes \nthroughout\
+  \ the SDLC and maintaining that security, including for open-source and \nother\
+  \ third-party software components utilized by software being developed. \nExample\
+  \ 3: Review and update security requirements at least annually, or sooner \nif there\
+  \ are new requirements from internal or external sources, or a major \nsecurity\
+  \ incident targeting software development infrastructure has occurred. \nExample\
+  \ 4: Educate affected individuals on impending changes to requirements. \nBSAFSS:\
+  \ SM.3, DE.1, IA.1, IA.2 \nBSIMM: CP1.1, CP1.3, SR1.1, SR2.2, SE1.2, SE2.6 \nEO14028:\
+  \ 4e(ix) \nIEC62443: SM-7, SM-9 \nNISTCSF: ID.GV-3 \nOWASPASVS: 1.1.1 \nOWASPMASVS:\
+  \ 1.10 \nOWASPSAMM: PC1-A, PC1-B, PC2-A \nPCISSLC: 2.1, 2.2 \nSCFPSSD: Planning\
+  \ the Implementation and Deployment of Secure Development Practices \nSP80053: SA-1,\
+  \ SA-8, SA-15, SR-3 \nSP800160: 3.1.2, 3.2.1, 3.2.2, 3.3.1, 3.4.2, 3.4.3 \nSP800161:\
+  \ SA-1, SA-8, SA-15, SR-3 \nSP800181: T0414; K0003, K0039, K0044, K0157, K0168,\
+  \ K0177, K0211, K0260, K0261, \nK0262, K0524; S0010, S0357, S0368; A0033, A0123,\
+  \ A0151\n\nEnriched Guidance:\nPO.1.1 Identify and document all security is an SSDF\
+  \ practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.1.1
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.1.1 Identify and document all security
+implementation_examples: []

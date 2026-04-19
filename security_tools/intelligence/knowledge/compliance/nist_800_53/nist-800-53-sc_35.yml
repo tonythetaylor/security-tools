@@ -1,0 +1,63 @@
+id: nist-800-53-sc_35
+title: SC-35 EXTERNAL MALICIOUS CODE IDENTIFICATION
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_35
+severity_guidance: high
+description: External malicious code identification differs from decoys in SC-26 in
+  that the components actively probe networks, including the Internet, in search of
+  malicious code contained on external websites. Like decoys, the use of external
+  malicious code identification techniques requires some supporting isolation measures
+  to ensure that any malicious code discovered during the search and subsequently
+  executed does not infect organizational systems. Virtualization is a common technique
+  for achieving su...
+rationale: External malicious code identification differs from decoys in SC-26 in
+  that the components actively probe networks, including the Internet, in search of
+  malicious code contained on external websites. Like decoys, the use of external
+  malicious code identification techniques requires some supporting isolation measures
+  to ensure that any malicious code discovered during the search and subsequently
+  executed does not infect organizational systems. Virtualization is a common technique
+  for achieving such isolation.
+developer_guidance: 'SC-35 EXTERNAL MALICIOUS CODE IDENTIFICATION is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-35
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - SC-7
+  - SC-26
+  - SC-44
+  - SI-3
+  - SI-4
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-35 EXTERNAL MALICIOUS CODE IDENTIFICATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

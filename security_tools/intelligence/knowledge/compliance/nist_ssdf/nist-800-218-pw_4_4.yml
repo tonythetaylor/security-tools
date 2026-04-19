@@ -1,0 +1,123 @@
+id: nist-800-218-pw_4_4
+title: PW.4.4 Verify that acquired commercial, open-source,
+category: supply_chain_security
+applies_to:
+- dependency_scanning
+- software_supply_chain
+- component_integrity
+tags:
+- code-review
+- dependencies
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_4
+- pw_4_4
+- secure-coding
+- ssdf
+- supply-chain
+- task
+- testing
+- third-party-components
+severity_guidance: high
+description: "PW.4.4: Verify that acquired commercial, open-source, \nand all other\
+  \ third-party software components comply \nwith the requirements, as defined by\
+  \ the organization, \nthroughout their life cycles. \nExample 1: Regularly check\
+  \ whether there are publicly known vulnerabilities in \nthe software modules and\
+  \ services that vendors have not yet fixed. \nExample 2: Build into the toolchain\
+  \ automatic detection of known vulnerabilities in \nsoftware components. \nExample\
+  \ 3: Use existing results from commercial services for vetting the software \nmodules\
+  \ and services. \nExample 4: Ensure that each software component is still actively\
+  \ maintained and \nhas not reached end of life; this should include new vulnerabilities\
+  \ found in the \nsoftware being remediated. \nExample 5: Determine a plan of action\
+  \ for each software component that is no \nlonger being maintained or will not be\
+  \ available in the near future. \nExample 6: Confirm the integrity of software components\
+  \ through digital \nsignatures or other mechanisms. \nExample 7: Review, analyze,\
+  \ and/or test code. See PW.7 and PW.8. \nBSAFSS: SC.3-1, SM.2-1, SM.2-2, SM.2-3,\
+  \ TV.2, TV.3 \nBSIMM: CP3.2, SR2.4, SR3.1, SR3.2, SE2.4, SE3.6 \nCNCFSSCP: Securing\
+  \ Materials—Verification, Automation \nEO14028: 4e(iii), 4e(iv), 4e(vi), 4e(ix),\
+  \ 4e(x) \nIDASOAR: 21 \nIEC62443: SI-1, SM-9, SM-10, DM-1 \nIR8397: 2.11 \nMSSDL:\
+  \ 7 \nNISTCSF: ID.SC-4, PR.DS-6 \nNISTLABEL: 2.2.2.2 \nOWASPASVS: 10, 14.2 \nOWASPMASVS:\
+  \ 7.5 \nOWASPSAMM: TA3-A, SR3-B \nOWASPSCVS: 4, 5, 6 \nPCISSLC: 3.2, 3.4, 4.1 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 8 \nSCFPSSD: Manage Security\
+  \ Risk Inherent in the Use of Third-Party Components \nSCSIC: Vendor Sourcing Integrity\
+  \ Controls, Peer Reviews and Security Testing \nSCTPC: MAINTAIN, ASSESS \nSP80053:\
+  \ SA-9, SR-3, SR-4, SR-4(3), SR-4(4) \nSP800160: 3.1.2, 3.3.8 \nSP800161: SA-4,\
+  \ SA-8, SA-9, SA-9(3), SR-3, SR-4, SR-4(3), SR-4(4) \nSP800181: SP-DEV-002; K0153,\
+  \ K0266; S0298"
+rationale: "PW.4.4: Verify that acquired commercial, open-source, \nand all other\
+  \ third-party software components comply \nwith the requirements, as defined by\
+  \ the organization, \nthroughout their life cycles. \nExample 1: Regularly check\
+  \ whether there are publicly known vulnerabilities in \nthe software modules and\
+  \ services that vendors have not yet fixed. \nExample 2: Build into the toolchain\
+  \ automatic detection of known vulnerabilities in \nsoftware components. \nExample\
+  \ 3: Use existing results from commercial services for vetting the software \nmodules\
+  \ and services. \nExample 4: Ensure that each software component is still actively\
+  \ maintained and \nhas not reached end of life; this should include new vulnerabilities\
+  \ found in the \nsoftware being remediated. \nExample 5: Determine a plan of action\
+  \ for each software component that is no \nlonger being maintained or will not be\
+  \ available in the near future. \nExample 6: Confirm the integrity of software components\
+  \ through digital \nsignatures or other mechanisms. \nExample 7: Review, analyze,\
+  \ and/or test code. See PW.7 and PW.8. \nBSAFSS: SC.3-1, SM.2-1, SM.2-2, SM.2-3,\
+  \ TV.2, TV.3 \nBSIMM: CP3.2, SR2.4, SR3.1, SR3.2, SE2.4, SE3.6 \nCNCFSSCP: Securing\
+  \ Materials—Verification, Automation \nEO14028: 4e(iii), 4e(iv), 4e(vi), 4e(ix),\
+  \ 4e(x) \nIDASOAR: 21 \nIEC62443: SI-1, SM-9, SM-10, DM-1 \nIR8397: 2.11 \nMSSDL:\
+  \ 7 \nNISTCSF: ID.SC-4, PR.DS-6 \nNISTLABEL: 2.2.2.2 \nOWASPASVS: 10, 14.2 \nOWASPMASVS:\
+  \ 7.5 \nOWASPSAMM: TA3-A, SR3-B \nOWASPSCVS: 4, 5, 6 \nPCISSLC: 3.2, 3.4, 4.1 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 8 \nSCFPSSD: Manage Security\
+  \ Risk Inherent in the Use of Third-Party Components \nSCSIC: Vendor Sourcing Integrity\
+  \ Controls, Peer Reviews and Security Testing \nSCTPC: MAINTAIN, ASSESS \nSP80053:\
+  \ SA-9, SR-3, SR-4, SR-4(3), SR-4(4) \nSP800160: 3.1.2, 3.3.8 \nSP800161: SA-4,\
+  \ SA-8, SA-9, SA-9(3), SR-3, SR-4, SR-4(3), SR-4(4) \nSP800181: SP-DEV-002; K0153,\
+  \ K0266; S0298"
+developer_guidance: "PW.4.4 Verify that acquired commercial, open-source, defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.4.4: Verify that\
+  \ acquired commercial, open-source, \nand all other third-party software components\
+  \ comply \nwith the requirements, as defined by the organization, \nthroughout their\
+  \ life cycles. \nExample 1: Regularly check whether there are publicly known vulnerabilities\
+  \ in \nthe software modules and services that vendors have not yet fixed. \nExample\
+  \ 2: Build into the toolchain automatic detection of known vulnerabilities in \n\
+  software components. \nExample 3: Use existing results from commercial services\
+  \ for vetting the software \nmodules and services. \nExample 4: Ensure that each\
+  \ software component is still actively maintained and \nhas not reached end of life;\
+  \ this should include new vulnerabilities found in the \nsoftware being remediated.\
+  \ \nExample 5: Determine a plan of action for each software component that is no\
+  \ \nlonger being maintained or will not be available in the near future. \nExample\
+  \ 6: Confirm the integrity of software components through digital \nsignatures or\
+  \ other mechanisms. \nExample 7: Review, analyze, and/or test code. See PW.7 and\
+  \ PW.8. \nBSAFSS: SC.3-1, SM.2-1, SM.2-2, SM.2-3, TV.2, TV.3 \nBSIMM: CP3.2, SR2.4,\
+  \ SR3.1, SR3.2, SE2.4, SE3.6 \nCNCFSSCP: Securing Materials—Verification, Automation\
+  \ \nEO14028: 4e(iii), 4e(iv), 4e(vi), 4e(ix), 4e(x) \nIDASOAR: 21 \nIEC62443: SI-1,\
+  \ SM-9, SM-10, DM-1 \nIR8397: 2.11 \nMSSDL: 7 \nNISTCSF: ID.SC-4, PR.DS-6 \nNISTLABEL:\
+  \ 2.2.2.2 \nOWASPASVS: 10, 14.2 \nOWASPMASVS: 7.5 \nOWASPSAMM: TA3-A, SR3-B \nOWASPSCVS:\
+  \ 4, 5, 6 \nPCISSLC: 3.2, 3.4, 4.1 \nSCAGILE: Tasks Requiring the Help of Security\
+  \ Experts 8 \nSCFPSSD: Manage Security Risk Inherent in the Use of Third-Party Components\
+  \ \nSCSIC: Vendor Sourcing Integrity Controls, Peer Reviews and Security Testing\
+  \ \nSCTPC: MAINTAIN, ASSESS \nSP80053: SA-9, SR-3, SR-4, SR-4(3), SR-4(4) \nSP800160:\
+  \ 3.1.2, 3.3.8 \nSP800161: SA-4, SA-8, SA-9, SA-9(3), SR-3, SR-4, SR-4(3), SR-4(4)\
+  \ \nSP800181: SP-DEV-002; K0153, K0266; S0298\n\nEnriched Guidance:\nPW.4.4 Verify\
+  \ that acquired commercial, open-source, is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.4.4
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.4.4 Verify that acquired commercial, open-source,
+implementation_examples: []

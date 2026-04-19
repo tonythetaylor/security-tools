@@ -1,0 +1,105 @@
+id: nist-800-218-pw_9_2
+title: PW.9.2 Implement the default settings (or groups of
+category: secure_configuration
+applies_to:
+- secure_defaults
+- configuration_security
+- hardening
+tags:
+- code-review
+- configuration
+- hardening
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_9
+- pw_9_2
+- secure-coding
+- secure-defaults
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.9.2: Implement the default settings (or groups of \ndefault settings,\
+  \ if applicable), and document each \nsetting for software administrators. \nExample\
+  \ 1: Verify that the approved configuration is in place for the software. \nExample\
+  \ 2: Document each setting’s purpose, options, default value, security \nrelevance,\
+  \ potential operational impact, and relationships with other settings. \nExample\
+  \ 3: Use authoritative programmatic technical mechanisms to record how \neach setting\
+  \ can be implemented and assessed by software administrators. \nExample 4: Store\
+  \ the default configuration in a usable format and follow change \ncontrol practices\
+  \ for modifying it (e.g., configuration-as-code). \nBSAFSS: CF.1 \nBSIMM: SE2.2\
+  \ \nEO14028: 4e(iv), 4e(ix) \nIDASOAR: 23 \nIEC62443: SG-3 \nOWASPSAMM: OE1-A \n\
+  PCISSLC: 8.1, 8.2 \nSCAGILE: Tasks Requiring the Help of Security Experts 12 \n\
+  SCFPSSD: Verify Secure Configurations and Use of Platform Mitigation \nSCSIC: Vendor\
+  \ Software Delivery Integrity Controls, Vendor Software Development Integrity \n\
+  Controls \nSP80053: SA-5, SA-8(23) \nSP800161: SA-5, SA-8(23) \nSP800181: SP-DEV-001;\
+  \ K0009, K0039, K0073, K0153, K0165, K0275, K0531 \nRespond to Vulnerabilities (RV)\
+  \ \nIdentify and Confirm Vulnerabilities on an \nOngoing Basis (RV.1): Help ensure\
+  \ that \nvulnerabilities are identified more quickly so that \nthey can be remediated\
+  \ more quickly in \naccordance with risk, reducing the window of \nopportunity for\
+  \ attackers."
+rationale: "PW.9.2: Implement the default settings (or groups of \ndefault settings,\
+  \ if applicable), and document each \nsetting for software administrators. \nExample\
+  \ 1: Verify that the approved configuration is in place for the software. \nExample\
+  \ 2: Document each setting’s purpose, options, default value, security \nrelevance,\
+  \ potential operational impact, and relationships with other settings. \nExample\
+  \ 3: Use authoritative programmatic technical mechanisms to record how \neach setting\
+  \ can be implemented and assessed by software administrators. \nExample 4: Store\
+  \ the default configuration in a usable format and follow change \ncontrol practices\
+  \ for modifying it (e.g., configuration-as-code). \nBSAFSS: CF.1 \nBSIMM: SE2.2\
+  \ \nEO14028: 4e(iv), 4e(ix) \nIDASOAR: 23 \nIEC62443: SG-3 \nOWASPSAMM: OE1-A \n\
+  PCISSLC: 8.1, 8.2 \nSCAGILE: Tasks Requiring the Help of Security Experts 12 \n\
+  SCFPSSD: Verify Secure Configurations and Use of Platform Mitigation \nSCSIC: Vendor\
+  \ Software Delivery Integrity Controls, Vendor Software Development Integrity \n\
+  Controls \nSP80053: SA-5, SA-8(23) \nSP800161: SA-5, SA-8(23) \nSP800181: SP-DEV-001;\
+  \ K0009, K0039, K0073, K0153, K0165, K0275, K0531 \nRespond to Vulnerabilities (RV)\
+  \ \nIdentify and Confirm Vulnerabilities on an \nOngoing Basis (RV.1): Help ensure\
+  \ that \nvulnerabilities are identified more quickly so that \nthey can be remediated\
+  \ more quickly in \naccordance with risk, reducing the window of \nopportunity for\
+  \ attackers."
+developer_guidance: "PW.9.2 Implement the default settings (or groups of defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.9.2: Implement the\
+  \ default settings (or groups of \ndefault settings, if applicable), and document\
+  \ each \nsetting for software administrators. \nExample 1: Verify that the approved\
+  \ configuration is in place for the software. \nExample 2: Document each setting’s\
+  \ purpose, options, default value, security \nrelevance, potential operational impact,\
+  \ and relationships with other settings. \nExample 3: Use authoritative programmatic\
+  \ technical mechanisms to record how \neach setting can be implemented and assessed\
+  \ by software administrators. \nExample 4: Store the default configuration in a\
+  \ usable format and follow change \ncontrol practices for modifying it (e.g., configuration-as-code).\
+  \ \nBSAFSS: CF.1 \nBSIMM: SE2.2 \nEO14028: 4e(iv), 4e(ix) \nIDASOAR: 23 \nIEC62443:\
+  \ SG-3 \nOWASPSAMM: OE1-A \nPCISSLC: 8.1, 8.2 \nSCAGILE: Tasks Requiring the Help\
+  \ of Security Experts 12 \nSCFPSSD: Verify Secure Configurations and Use of Platform\
+  \ Mitigation \nSCSIC: Vendor Software Delivery Integrity Controls, Vendor Software\
+  \ Development Integrity \nControls \nSP80053: SA-5, SA-8(23) \nSP800161: SA-5, SA-8(23)\
+  \ \nSP800181: SP-DEV-001; K0009, K0039, K0073, K0153, K0165, K0275, K0531 \nRespond\
+  \ to Vulnerabilities (RV) \nIdentify and Confirm Vulnerabilities on an \nOngoing\
+  \ Basis (RV.1): Help ensure that \nvulnerabilities are identified more quickly so\
+  \ that \nthey can be remediated more quickly in \naccordance with risk, reducing\
+  \ the window of \nopportunity for attackers.\n\nEnriched Guidance:\nPW.9.2 Implement\
+  \ the default settings (or groups of is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.9.2
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.9.2 Implement the default settings (or groups of
+implementation_examples: []

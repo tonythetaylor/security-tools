@@ -1,0 +1,58 @@
+id: nist-800-53-ma_6
+title: MA-6 TIMELY MAINTENANCE
+category: maintenance_security
+applies_to:
+- maintenance
+- authorized_maintenance
+- support_access
+tags:
+- 800-53
+- ma
+- ma_6
+- maintenance
+- nist
+- operational-security
+- support
+severity_guidance: medium
+description: Organizations specify the system components that result in increased
+  risk to organizational operations and assets, individuals, other organizations,
+  or the Nation when the functionality provided by those components is not operational.
+  Organizational actions to obtain maintenance support include having appropriate
+  contracts in place.
+rationale: Organizations specify the system components that result in increased risk
+  to organizational operations and assets, individuals, other organizations, or the
+  Nation when the functionality provided by those components is not operational. Organizational
+  actions to obtain maintenance support include having appropriate contracts in place.
+developer_guidance: 'MA-6 TIMELY MAINTENANCE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: MA-6
+  note: null
+risk_context:
+  family: MA
+  related_controls:
+  - CM-8
+  - CP-2
+  - CP-7
+  - RA-7
+  - SA-15
+  - SI-13
+  - SR-2
+  - SR-3
+  - SR-4
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for MA-6 TIMELY MAINTENANCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

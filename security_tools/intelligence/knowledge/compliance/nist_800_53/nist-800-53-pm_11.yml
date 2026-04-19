@@ -1,0 +1,87 @@
+id: nist-800-53-pm_11
+title: PM-11 MISSION AND BUSINESS PROCESS DEFINITION
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_11
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-11 MISSION AND BUSINESS PROCESS DEFINITION requires: Define organizational
+  mission and business processes with consideration for information security and privacy
+  and the resulting risk to organizational operations, organizational assets, individuals,
+  other organizations, and the Nation; and; Determine information protection and personally
+  identifiable information processing needs arising from the defined mission and business
+  processes; and _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 209; Review and revise the mission and business processes [Assignment:
+  organization-defined frequency].'
+rationale: Protection needs are technology-independent capabilities that are required
+  to counter threats to organizations, individuals, systems, and the Nation through
+  the compromise of information (i.e., loss of confidentiality, integrity, availability,
+  or privacy). Information protection and personally identifiable information processing
+  needs are derived from the mission and business needs defined by organizational
+  stakeholders, the mission and business processes designed to meet those needs, and
+  the organizational risk management strategy. Information protection and personally
+  identifiable information processing needs determine the required controls for the
+  organization and the systems. Inherent to defining protection and personally identifiable
+  information processing needs is an understanding of the adverse impact that could
+  result if a compromise or breach of information occurs. The categorization process
+  is used to make such potential impact determinations. Privacy risks to individuals
+  can arise from the compromise of personally identifiable information, but they can
+  also arise as unintended consequences or a byproduct of the processing of personally
+  identifiable information at any stage of the information life cycle. Privacy risk
+  assessments are used to prioritize the risks that are created for individuals from
+  system processing of personally identifiable information. These risk assessments
+  enable the selection of the required privacy controls for the organization and systems.
+  Mission and business process definitions and the associated protection requirements
+  are documented in accordance with organizational policies and procedures.
+developer_guidance: 'PM-11 MISSION AND BUSINESS PROCESS DEFINITION is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Define organizational mission and business processes with consideration for information
+  security and privacy and the resulting risk to organizational operations, organizational
+  assets, individuals, other organizations, and the Nation; and
+
+  - Determine information protection and personally identifiable information processing
+  needs arising from the defined mission and business processes; and _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 209
+
+  - Review and revise the mission and business processes [Assignment: organization-defined
+  frequency]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-11
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - CP-2
+  - PL-2
+  - PM-7
+  - PM-8
+  - RA-2
+  - RA-3
+  - RA-9
+  - SA-2
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-11 MISSION AND BUSINESS PROCESS DEFINITION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

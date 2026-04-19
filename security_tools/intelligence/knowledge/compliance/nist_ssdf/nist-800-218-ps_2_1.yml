@@ -1,0 +1,87 @@
+id: nist-800-218-ps_2_1
+title: PS.2.1 Make software integrity verification information
+category: release_integrity_security
+applies_to:
+- artifact_integrity
+- code_signing
+- release_validation
+tags:
+- integrity
+- nist_800_218
+- protect-software
+- provenance
+- ps
+- ps_2
+- ps_2_1
+- release
+- signing
+- ssdf
+- task
+- verification
+severity_guidance: high
+description: "PS.2.1: Make software integrity verification information \navailable\
+  \ to software acquirers. \nExample 1: Post cryptographic hashes for release files\
+  \ on a well-secured \nwebsite. \nExample 2: Use an established certificate authority\
+  \ for code signing so that \nconsumers’ operating systems or other tools and services\
+  \ can confirm the validity \nof signatures before use. \nExample 3: Periodically\
+  \ review the code signing processes, including certificate \nrenewal, rotation,\
+  \ revocation, and protection. \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP:\
+  \ Securing Deployments—Verification \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443:\
+  \ SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6 \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \n\
+  OWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \nSCSIC: Vendor Software Delivery Integrity Controls\
+  \ \nSP80053: SA-8 \nSP800161: SA-8 \nSP800181: K0178 \nArchive and Protect Each\
+  \ Software Release \n(PS.3): Preserve software releases in order to \nhelp identify,\
+  \ analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease."
+rationale: "PS.2.1: Make software integrity verification information \navailable to\
+  \ software acquirers. \nExample 1: Post cryptographic hashes for release files on\
+  \ a well-secured \nwebsite. \nExample 2: Use an established certificate authority\
+  \ for code signing so that \nconsumers’ operating systems or other tools and services\
+  \ can confirm the validity \nof signatures before use. \nExample 3: Periodically\
+  \ review the code signing processes, including certificate \nrenewal, rotation,\
+  \ revocation, and protection. \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP:\
+  \ Securing Deployments—Verification \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443:\
+  \ SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6 \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \n\
+  OWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \nSCSIC: Vendor Software Delivery Integrity Controls\
+  \ \nSP80053: SA-8 \nSP800161: SA-8 \nSP800181: K0178 \nArchive and Protect Each\
+  \ Software Release \n(PS.3): Preserve software releases in order to \nhelp identify,\
+  \ analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease."
+developer_guidance: "PS.2.1 Make software integrity verification information defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPS.2.1: Make software\
+  \ integrity verification information \navailable to software acquirers. \nExample\
+  \ 1: Post cryptographic hashes for release files on a well-secured \nwebsite. \n\
+  Example 2: Use an established certificate authority for code signing so that \n\
+  consumers’ operating systems or other tools and services can confirm the validity\
+  \ \nof signatures before use. \nExample 3: Periodically review the code signing\
+  \ processes, including certificate \nrenewal, rotation, revocation, and protection.\
+  \ \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP: Securing Deployments—Verification\
+  \ \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443: SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6\
+  \ \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \nOWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \n\
+  SCSIC: Vendor Software Delivery Integrity Controls \nSP80053: SA-8 \nSP800161: SA-8\
+  \ \nSP800181: K0178 \nArchive and Protect Each Software Release \n(PS.3): Preserve\
+  \ software releases in order to \nhelp identify, analyze, and eliminate \nvulnerabilities\
+  \ discovered in the software after \nrelease.\n\nEnriched Guidance:\nPS.2.1 Make\
+  \ software integrity verification information is an SSDF practice or task."
+recommended_patterns:
+- artifact_integrity_verification
+- code_signing
+- provenance_tracking
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PS.2.1
+  note: null
+risk_context:
+  group: PS
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Verify integrity protections are implemented and auditable across software artifacts
+    and releases.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PS.2.1 Make software integrity verification information
+implementation_examples: []

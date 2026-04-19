@@ -1,0 +1,97 @@
+id: nist-800-53-pm_12
+title: PM-12 INSIDER THREAT PROGRAM
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_12
+- program-management
+- risk
+severity_guidance: medium
+description: Organizations that handle classified information are required, under
+  Executive Order 13587 [EO 13587] and the National Insider Threat Policy [ODNI NITP],
+  to establish insider threat programs. The same standards and guidelines that apply
+  to insider threat programs in classified environments can also be employed effectively
+  to improve the security of controlled unclassified and other information in non-national
+  security systems. Insider threat programs include controls to detect and prevent
+  malici...
+rationale: Organizations that handle classified information are required, under Executive
+  Order 13587 [EO 13587] and the National Insider Threat Policy [ODNI NITP], to establish
+  insider threat programs. The same standards and guidelines that apply to insider
+  threat programs in classified environments can also be employed effectively to improve
+  the security of controlled unclassified and other information in non-national security
+  systems. Insider threat programs include controls to detect and prevent malicious
+  insider activity through the centralized integration and analysis of both technical
+  and nontechnical information to identify potential insider threat concerns. A senior
+  official is designated by the department or agency head as the responsible individual
+  to implement and provide oversight for the program. In addition to the centralized
+  integration and analysis capability, insider threat programs require organizations
+  to prepare department or agency insider threat policies and implementation plans,
+  conduct host-based user monitoring of individual employee activities on government-owned
+  classified computers, provide insider threat awareness training to employees, receive
+  access to information from offices in the department or agency for insider threat
+  analysis, and conduct self-assessments of department or agency insider threat posture.
+  Insider threat programs can leverage the existence of incident handling teams that
+  organizations may already have in place, such as computer security incident response
+  teams. Human resources records are especially important in this effort, as there
+  is compelling evidence to show that some types of insider crimes are often preceded
+  by nontechnical behaviors in the workplace, including ongoing patterns of disgruntled
+  behavior and conflicts with coworkers and other colleagues. These precursors can
+  guide organizational officials in more focused, targeted monitoring efforts. However,
+  the use of human resource records could raise significant concerns for privacy.
+  The _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 210 participation of a legal team, including consultation with
+  the senior agency official for privacy, ensures that monitoring activities are performed
+  in accordance with applicable laws, executive orders, directives, regulations, policies,
+  standards, and guidelines.
+developer_guidance: 'PM-12 INSIDER THREAT PROGRAM is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-12
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AC-6
+  - AT-2
+  - AU-6
+  - AU-7
+  - AU-10
+  - AU-12
+  - AU-13
+  - CA-7
+  - IA-4
+  - IR-4
+  - MP-7
+  - PE-2
+  - PS-3
+  - PS-4
+  - PS-5
+  - PS-7
+  - PS-8
+  - SC-7
+  - SC-38
+  - SI-4
+  - PM-14
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-12 INSIDER THREAT PROGRAM.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

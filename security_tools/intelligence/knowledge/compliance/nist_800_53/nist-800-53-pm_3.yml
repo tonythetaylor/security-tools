@@ -1,0 +1,64 @@
+id: nist-800-53-pm_3
+title: PM-3 INFORMATION SECURITY AND PRIVACY RESOURCES
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_3
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-3 INFORMATION SECURITY AND PRIVACY RESOURCES requires: Include the
+  resources needed to implement the information security and privacy programs in capital
+  planning and investment requests and document all exceptions to this requirement;
+  Prepare documentation required for addressing information security and privacy programs
+  in capital planning and investment requests in accordance with applicable laws,
+  executive orders, directives, policies, regulations, standards; and; Make available
+  for expenditure, the planned information security and privacy resources.'
+rationale: Organizations consider establishing champions for information security
+  and privacy and, as part of including the necessary resources, assign specialized
+  expertise and resources as needed. Organizations may designate and empower an Investment
+  Review Board or similar group to manage and provide oversight for the information
+  security and privacy aspects of the capital planning and investment control process.
+developer_guidance: 'PM-3 INFORMATION SECURITY AND PRIVACY RESOURCES is a NIST SP
+  800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Include the resources needed to implement the information security and privacy
+  programs in capital planning and investment requests and document all exceptions
+  to this requirement
+
+  - Prepare documentation required for addressing information security and privacy
+  programs in capital planning and investment requests in accordance with applicable
+  laws, executive orders, directives, policies, regulations, standards; and
+
+  - Make available for expenditure, the planned information security and privacy resources'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-3
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - PM-4
+  - SA-2
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-3 INFORMATION SECURITY AND PRIVACY RESOURCES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,82 @@
+id: nist-800-218-rv_1_2
+title: RV.1.2 Review, analyze, and/or test the software’s
+category: vulnerability_management
+applies_to:
+- vulnerability_intake
+- continuous_monitoring
+- dependency_scanning
+tags:
+- intake
+- monitoring
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- rv
+- rv_1
+- rv_1_2
+- ssdf
+- task
+- triage
+- vulnerability-management
+severity_guidance: high
+description: "RV.1.2: Review, analyze, and/or test the software’s \ncode to identify\
+  \ or confirm the presence of previously \nundetected vulnerabilities. \nExample\
+  \ 1: Configure the toolchain to perform automated code analysis and \ntesting on\
+  \ a regular or continuous basis for all supported releases. \nExample 2: See PW.7\
+  \ and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \nBSIMM: CMVM3.1 \nEO14028: 4e(iv), 4e(vi),\
+  \ 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2, SVV-3, SVV-4, DM-1, DM-2 \nISO27034:\
+  \ 7.3.6 \n \n9 \nAn example is the National Vulnerability Database (NVD) (https://nvd.nist.gov/).\n\
+  \n \n \n \n \n \n17 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nISO29147: 6.4 \nISO30111: 7.1.4 \nPCISSLC: 3.4, 4.1 \nSCAGILE: Operational Security\
+  \ Tasks 10, 11 \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-002; K0009,\
+  \ K0039, K0153"
+rationale: "RV.1.2: Review, analyze, and/or test the software’s \ncode to identify\
+  \ or confirm the presence of previously \nundetected vulnerabilities. \nExample\
+  \ 1: Configure the toolchain to perform automated code analysis and \ntesting on\
+  \ a regular or continuous basis for all supported releases. \nExample 2: See PW.7\
+  \ and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \nBSIMM: CMVM3.1 \nEO14028: 4e(iv), 4e(vi),\
+  \ 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2, SVV-3, SVV-4, DM-1, DM-2 \nISO27034:\
+  \ 7.3.6 \n \n9 \nAn example is the National Vulnerability Database (NVD) (https://nvd.nist.gov/).\n\
+  \n \n \n \n \n \n17 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nISO29147: 6.4 \nISO30111: 7.1.4 \nPCISSLC: 3.4, 4.1 \nSCAGILE: Operational Security\
+  \ Tasks 10, 11 \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-002; K0009,\
+  \ K0039, K0153"
+developer_guidance: "RV.1.2 Review, analyze, and/or test the software’s defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nRV.1.2: Review, analyze,\
+  \ and/or test the software’s \ncode to identify or confirm the presence of previously\
+  \ \nundetected vulnerabilities. \nExample 1: Configure the toolchain to perform\
+  \ automated code analysis and \ntesting on a regular or continuous basis for all\
+  \ supported releases. \nExample 2: See PW.7 and PW.8. \nBSAFSS: VM.1-2, VM.2-1 \n\
+  BSIMM: CMVM3.1 \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: SI-1, SVV-2,\
+  \ SVV-3, SVV-4, DM-1, DM-2 \nISO27034: 7.3.6 \n \n9 \nAn example is the National\
+  \ Vulnerability Database (NVD) (https://nvd.nist.gov/).\n\n \n \n \n \n \n17 \n\
+  Practices \nTasks \nNotional Implementation Examples \nReferences \nISO29147: 6.4\
+  \ \nISO30111: 7.1.4 \nPCISSLC: 3.4, 4.1 \nSCAGILE: Operational Security Tasks 10,\
+  \ 11 \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-002; K0009, K0039, K0153\n\
+  \nEnriched Guidance:\nRV.1.2 Review, analyze, and/or test the software’s is an SSDF\
+  \ practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.1.2
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.1.2 Review, analyze, and/or test the software’s
+implementation_examples: []

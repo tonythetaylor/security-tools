@@ -1,0 +1,45 @@
+id: nist-800-53-ca_5_1
+title: CA-5(1) AUTOMATION SUPPORT FOR ACCURACY AND CURRENCY
+category: assurance_security
+applies_to:
+- security_assessment
+- continuous_monitoring
+- authorization
+tags:
+- 800-53
+- assessment
+- authorization
+- ca
+- ca_5_1
+- continuous-monitoring
+- control-enhancement
+- nist
+severity_guidance: medium
+description: CA-5(1) AUTOMATION SUPPORT FOR ACCURACY AND CURRENCY
+rationale: CA-5(1) AUTOMATION SUPPORT FOR ACCURACY AND CURRENCY
+developer_guidance: 'CA-5(1) AUTOMATION SUPPORT FOR ACCURACY AND CURRENCY is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CA-5(1)
+  note: null
+risk_context:
+  family: CA
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for CA-5(1) AUTOMATION SUPPORT FOR ACCURACY
+    AND CURRENCY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

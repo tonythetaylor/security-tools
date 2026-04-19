@@ -1,0 +1,65 @@
+id: nist-800-53-sr_10
+title: SR-10 INSPECTION OF SYSTEMS OR COMPONENTS
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_10
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: The inspection of systems or systems components for tamper resistance
+  and detection addresses physical and logical tampering and is applied to systems
+  and system components removed from organization-controlled areas. Indications of
+  a need for inspection include changes in packaging, specifications, factory location,
+  or entity in which the part is purchased, and when individuals return from travel
+  to high-risk locations.
+rationale: The inspection of systems or systems components for tamper resistance and
+  detection addresses physical and logical tampering and is applied to systems and
+  system components removed from organization-controlled areas. Indications of a need
+  for inspection include changes in packaging, specifications, factory location, or
+  entity in which the part is purchased, and when individuals return from travel to
+  high-risk locations.
+developer_guidance: 'SR-10 INSPECTION OF SYSTEMS OR COMPONENTS is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-10
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - AT-3
+  - PM-30
+  - SI-4
+  - SI-7
+  - SR-3
+  - SR-4
+  - SR-5
+  - SR-9
+  - SR-11
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-10 INSPECTION OF SYSTEMS OR COMPONENTS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

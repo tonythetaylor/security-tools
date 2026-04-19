@@ -1,0 +1,83 @@
+id: nist-800-53-pm_30
+title: PM-30 SUPPLY CHAIN RISK MANAGEMENT STRATEGY
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_30
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-30 SUPPLY CHAIN RISK MANAGEMENT STRATEGY requires: Develop an organization-wide
+  strategy for managing supply chain risks associated with the development, acquisition,
+  maintenance, and disposal of systems, system components, and system services; Implement
+  the supply chain risk management strategy consistently across the organization;
+  and; Review and update the supply chain risk management strategy on [Assignment:
+  organization-defined frequency] or as required, to address organizational changes.'
+rationale: An organization-wide supply chain risk management strategy includes an
+  unambiguous expression of the supply chain risk appetite and tolerance for the organization,
+  acceptable supply chain risk mitigation strategies or controls, a process for consistently
+  evaluating and monitoring supply chain risk, approaches for implementing and communicating
+  the supply chain risk management strategy, and the associated roles and responsibilities.
+  Supply chain risk management includes considerations of the security and privacy
+  risks associated with the development, acquisition, maintenance, and disposal of
+  systems, system components, and system services. The supply chain risk management
+  strategy can be incorporated into the organization’s overarching risk management
+  strategy and can guide and inform supply chain policies and system-level supply
+  chain risk management plans. In addition, the use of a risk executive function can
+  facilitate a consistent, organization-wide application of the supply chain risk
+  management strategy. The supply chain risk management strategy is implemented at
+  the organization and mission/business levels, whereas the supply chain risk management
+  plan (see SR-2) is implemented at the system level.
+developer_guidance: 'PM-30 SUPPLY CHAIN RISK MANAGEMENT STRATEGY is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Develop an organization-wide strategy for managing supply chain risks associated
+  with the development, acquisition, maintenance, and disposal of systems, system
+  components, and system services
+
+  - Implement the supply chain risk management strategy consistently across the organization;
+  and
+
+  - Review and update the supply chain risk management strategy on [Assignment: organization-defined
+  frequency] or as required, to address organizational changes'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-30
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - CM-10
+  - PM-9
+  - SR-1
+  - SR-2
+  - SR-3
+  - SR-4
+  - SR-5
+  - SR-6
+  - SR-7
+  - SR-8
+  - SR-9
+  - SR-11
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-30 SUPPLY CHAIN RISK MANAGEMENT STRATEGY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,109 @@
+id: nist-800-218-pw_5_1
+title: PW.5.1 Follow all secure coding practices that are
+category: secure_coding_security
+applies_to:
+- secure_coding
+- application_security
+- input_validation
+- error_handling
+tags:
+- code-review
+- coding-practices
+- linters
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_5
+- pw_5_1
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.5.1: Follow all secure coding practices that are \nappropriate to\
+  \ the development languages and \nenvironment to meet the organization’s requirements.\
+  \ \nExample 1: Validate all inputs, and validate and properly encode all outputs.\
+  \ \nExample 2: Avoid using unsafe functions and calls. \nExample 3: Detect errors,\
+  \ and handle them gracefully. \nExample 4: Provide logging and tracing capabilities.\
+  \ \nExample 5: Use development environments with automated features that \nencourage\
+  \ or require the use of secure coding practices with just-in-time training-\nin-place.\
+  \ \nExample 6: Follow procedures for manually ensuring compliance with secure \n\
+  coding practices when automated methods are insufficient or unavailable. \nExample\
+  \ 7: Use tools (e.g., linters, formatters) to standardize the style and \nformatting\
+  \ of the source code. \nExample 8: Check for other vulnerabilities that are common\
+  \ to the development \nlanguages and environment. \nExample 9: Have the developer\
+  \ review their own human-readable code to \ncomplement (not replace) code review\
+  \ performed by other people or tools. See \nPW.7. \nBSAFSS: SC.2, SC.3, LO.1, EE.1\
+  \ \nBSIMM: SR3.3, CR1.4, CR3.5 \nEO14028: 4e(iv), 4e(ix) \nIDASOAR: 2 \nIEC62443:\
+  \ SI-1, SI-2 \nISO27034: 7.3.5 \nMSSDL: 9 \nOWASPASVS: 1.1.7, 1.5, 1.7, 5, 7 \n\
+  OWASPMASVS: 7.6 \nSCFPSSD: Establish Log Requirements and Audit Practices, Use Code\
+  \ Analysis Tools to \nFind Security Issues Early, Handle Data Safely, Handle Errors,\
+  \ Use Safe Functions Only \nSP800181: SP-DEV-001; T0013, T0077, T0176; K0009, K0016,\
+  \ K0039, K0070, K0140, \nK0624; S0019, S0060, S0149, S0172, S0266; A0036, A0047"
+rationale: "PW.5.1: Follow all secure coding practices that are \nappropriate to the\
+  \ development languages and \nenvironment to meet the organization’s requirements.\
+  \ \nExample 1: Validate all inputs, and validate and properly encode all outputs.\
+  \ \nExample 2: Avoid using unsafe functions and calls. \nExample 3: Detect errors,\
+  \ and handle them gracefully. \nExample 4: Provide logging and tracing capabilities.\
+  \ \nExample 5: Use development environments with automated features that \nencourage\
+  \ or require the use of secure coding practices with just-in-time training-\nin-place.\
+  \ \nExample 6: Follow procedures for manually ensuring compliance with secure \n\
+  coding practices when automated methods are insufficient or unavailable. \nExample\
+  \ 7: Use tools (e.g., linters, formatters) to standardize the style and \nformatting\
+  \ of the source code. \nExample 8: Check for other vulnerabilities that are common\
+  \ to the development \nlanguages and environment. \nExample 9: Have the developer\
+  \ review their own human-readable code to \ncomplement (not replace) code review\
+  \ performed by other people or tools. See \nPW.7. \nBSAFSS: SC.2, SC.3, LO.1, EE.1\
+  \ \nBSIMM: SR3.3, CR1.4, CR3.5 \nEO14028: 4e(iv), 4e(ix) \nIDASOAR: 2 \nIEC62443:\
+  \ SI-1, SI-2 \nISO27034: 7.3.5 \nMSSDL: 9 \nOWASPASVS: 1.1.7, 1.5, 1.7, 5, 7 \n\
+  OWASPMASVS: 7.6 \nSCFPSSD: Establish Log Requirements and Audit Practices, Use Code\
+  \ Analysis Tools to \nFind Security Issues Early, Handle Data Safely, Handle Errors,\
+  \ Use Safe Functions Only \nSP800181: SP-DEV-001; T0013, T0077, T0176; K0009, K0016,\
+  \ K0039, K0070, K0140, \nK0624; S0019, S0060, S0149, S0172, S0266; A0036, A0047"
+developer_guidance: "PW.5.1 Follow all secure coding practices that are defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.5.1: Follow all secure\
+  \ coding practices that are \nappropriate to the development languages and \nenvironment\
+  \ to meet the organization’s requirements. \nExample 1: Validate all inputs, and\
+  \ validate and properly encode all outputs. \nExample 2: Avoid using unsafe functions\
+  \ and calls. \nExample 3: Detect errors, and handle them gracefully. \nExample 4:\
+  \ Provide logging and tracing capabilities. \nExample 5: Use development environments\
+  \ with automated features that \nencourage or require the use of secure coding practices\
+  \ with just-in-time training-\nin-place. \nExample 6: Follow procedures for manually\
+  \ ensuring compliance with secure \ncoding practices when automated methods are\
+  \ insufficient or unavailable. \nExample 7: Use tools (e.g., linters, formatters)\
+  \ to standardize the style and \nformatting of the source code. \nExample 8: Check\
+  \ for other vulnerabilities that are common to the development \nlanguages and environment.\
+  \ \nExample 9: Have the developer review their own human-readable code to \ncomplement\
+  \ (not replace) code review performed by other people or tools. See \nPW.7. \nBSAFSS:\
+  \ SC.2, SC.3, LO.1, EE.1 \nBSIMM: SR3.3, CR1.4, CR3.5 \nEO14028: 4e(iv), 4e(ix)\
+  \ \nIDASOAR: 2 \nIEC62443: SI-1, SI-2 \nISO27034: 7.3.5 \nMSSDL: 9 \nOWASPASVS:\
+  \ 1.1.7, 1.5, 1.7, 5, 7 \nOWASPMASVS: 7.6 \nSCFPSSD: Establish Log Requirements\
+  \ and Audit Practices, Use Code Analysis Tools to \nFind Security Issues Early,\
+  \ Handle Data Safely, Handle Errors, Use Safe Functions Only \nSP800181: SP-DEV-001;\
+  \ T0013, T0077, T0176; K0009, K0016, K0039, K0070, K0140, \nK0624; S0019, S0060,\
+  \ S0149, S0172, S0266; A0036, A0047\n\nEnriched Guidance:\nPW.5.1 Follow all secure\
+  \ coding practices that are is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.5.1
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.5.1 Follow all secure coding practices that are
+implementation_examples: []

@@ -1,0 +1,96 @@
+id: nist-800-218-po_4_1
+title: PO.4.1 Define criteria for software security checks
+category: secure_development_governance
+applies_to:
+- secure_sdlc
+- security_requirements
+- developer_enablement
+- build_pipeline
+- development_environment
+tags:
+- development-environment
+- governance
+- nist_800_218
+- po
+- po_4
+- po_4_1
+- prepare-the-organization
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.4.1: Define criteria for software security checks \nand track throughout\
+  \ the SDLC. \nExample 1: Ensure that the criteria adequately indicate how effectively\
+  \ security \nrisk is being managed. \nExample 2: Define key performance indicators\
+  \ (KPIs), key risk indicators (KRIs), \nvulnerability severity scores, and other\
+  \ measures for software security. \nExample 3: Add software security criteria to\
+  \ existing checks (e.g., the Definition \nof Done in agile SDLC methodologies).\
+  \ \nExample 4: Review the artifacts generated as part of the software development\
+  \ \nworkflow system to determine if they meet the criteria. \nExample 5: Record\
+  \ security check approvals, rejections, and exception requests \nas part of the\
+  \ workflow and tracking system. \nExample 6: Analyze collected data in the context\
+  \ of the security successes and \nfailures of each development project, and use\
+  \ the results to improve the SDLC. \nBSAFSS: TV.2-1, TV.5-1 \nBSIMM: SM1.4, SM2.1,\
+  \ SM2.2, SM2.6, SM3.3, CP2.2 \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIEC62443: SI-1,\
+  \ SI-2, SVV-3 \nISO27034: 7.3.5 \nMSSDL: 3 \nOWASPSAMM: PC3-A, DR3-B, IR3-B, ST3-B\
+  \ \nPCISSLC: 3.3 \nSP80053: SA-15, SA-15(1) \nSP800160: 3.2.1, 3.2.5, 3.3.1 \nSP800161:\
+  \ SA-15, SA-15(1) \nSP800181: K0153, K0165"
+rationale: "PO.4.1: Define criteria for software security checks \nand track throughout\
+  \ the SDLC. \nExample 1: Ensure that the criteria adequately indicate how effectively\
+  \ security \nrisk is being managed. \nExample 2: Define key performance indicators\
+  \ (KPIs), key risk indicators (KRIs), \nvulnerability severity scores, and other\
+  \ measures for software security. \nExample 3: Add software security criteria to\
+  \ existing checks (e.g., the Definition \nof Done in agile SDLC methodologies).\
+  \ \nExample 4: Review the artifacts generated as part of the software development\
+  \ \nworkflow system to determine if they meet the criteria. \nExample 5: Record\
+  \ security check approvals, rejections, and exception requests \nas part of the\
+  \ workflow and tracking system. \nExample 6: Analyze collected data in the context\
+  \ of the security successes and \nfailures of each development project, and use\
+  \ the results to improve the SDLC. \nBSAFSS: TV.2-1, TV.5-1 \nBSIMM: SM1.4, SM2.1,\
+  \ SM2.2, SM2.6, SM3.3, CP2.2 \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIEC62443: SI-1,\
+  \ SI-2, SVV-3 \nISO27034: 7.3.5 \nMSSDL: 3 \nOWASPSAMM: PC3-A, DR3-B, IR3-B, ST3-B\
+  \ \nPCISSLC: 3.3 \nSP80053: SA-15, SA-15(1) \nSP800160: 3.2.1, 3.2.5, 3.3.1 \nSP800161:\
+  \ SA-15, SA-15(1) \nSP800181: K0153, K0165"
+developer_guidance: "PO.4.1 Define criteria for software security checks defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPO.4.1: Define criteria\
+  \ for software security checks \nand track throughout the SDLC. \nExample 1: Ensure\
+  \ that the criteria adequately indicate how effectively security \nrisk is being\
+  \ managed. \nExample 2: Define key performance indicators (KPIs), key risk indicators\
+  \ (KRIs), \nvulnerability severity scores, and other measures for software security.\
+  \ \nExample 3: Add software security criteria to existing checks (e.g., the Definition\
+  \ \nof Done in agile SDLC methodologies). \nExample 4: Review the artifacts generated\
+  \ as part of the software development \nworkflow system to determine if they meet\
+  \ the criteria. \nExample 5: Record security check approvals, rejections, and exception\
+  \ requests \nas part of the workflow and tracking system. \nExample 6: Analyze collected\
+  \ data in the context of the security successes and \nfailures of each development\
+  \ project, and use the results to improve the SDLC. \nBSAFSS: TV.2-1, TV.5-1 \n\
+  BSIMM: SM1.4, SM2.1, SM2.2, SM2.6, SM3.3, CP2.2 \nEO14028: 4e(iv), 4e(v), 4e(ix)\
+  \ \nIEC62443: SI-1, SI-2, SVV-3 \nISO27034: 7.3.5 \nMSSDL: 3 \nOWASPSAMM: PC3-A,\
+  \ DR3-B, IR3-B, ST3-B \nPCISSLC: 3.3 \nSP80053: SA-15, SA-15(1) \nSP800160: 3.2.1,\
+  \ 3.2.5, 3.3.1 \nSP800161: SA-15, SA-15(1) \nSP800181: K0153, K0165\n\nEnriched\
+  \ Guidance:\nPO.4.1 Define criteria for software security checks is an SSDF practice\
+  \ or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.4.1
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.4.1 Define criteria for software security checks
+implementation_examples: []

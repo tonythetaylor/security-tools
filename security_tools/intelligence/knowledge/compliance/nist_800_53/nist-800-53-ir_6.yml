@@ -1,0 +1,59 @@
+id: nist-800-53-ir_6
+title: IR-6 INCIDENT REPORTING
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- 800-53
+- incident-response
+- ir
+- ir_6
+- nist
+- operations
+- response
+severity_guidance: medium
+description: 'IR-6 INCIDENT REPORTING requires: Require personnel to report suspected
+  incidents to the organizational incident response capability within [Assignment:
+  organization-defined time period]; and; Report incident information to [Assignment:
+  organization-defined authorities].'
+rationale: The types of incidents reported, the content and timeliness of the reports,
+  and the designated reporting authorities reflect applicable laws, executive orders,
+  directives, regulations, policies, standards, and guidelines. Incident information
+  can inform risk assessments, control effectiveness assessments, security requirements
+  for acquisitions, and selection criteria for technology products.
+developer_guidance: 'IR-6 INCIDENT REPORTING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Require personnel to report suspected incidents to the organizational incident
+  response capability within [Assignment: organization-defined time period]; and
+
+  - Report incident information to [Assignment: organization-defined authorities]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IR-6
+  note: null
+risk_context:
+  family: IR
+  related_controls:
+  - CM-6
+  - CP-2
+  - IR-4
+  - IR-5
+  - IR-8
+  - IR-9
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for IR-6 INCIDENT REPORTING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

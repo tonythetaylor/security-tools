@@ -1,0 +1,75 @@
+id: nist-800-53-sc_38
+title: SC-38 OPERATIONS SECURITY
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_38
+severity_guidance: high
+description: 'Operations security (OPSEC) is a systematic process by which potential
+  adversaries can be denied information about the capabilities and intentions of organizations
+  by identifying, controlling, and protecting generally unclassified information that
+  specifically relates to the planning and execution of sensitive organizational activities.
+  The OPSEC process involves five steps: identification of critical information, analysis
+  of threats, analysis of vulnerabilities, assessment of risks, and the app...'
+rationale: 'Operations security (OPSEC) is a systematic process by which potential
+  adversaries can be denied information about the capabilities and intentions of organizations
+  by identifying, controlling, and protecting generally unclassified information that
+  specifically relates to the planning and execution of sensitive organizational activities.
+  The OPSEC process involves five steps: identification of critical information, analysis
+  of threats, analysis of vulnerabilities, assessment of risks, and the application
+  of appropriate countermeasures. OPSEC controls are _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 324 applied to organizational systems and the environments in
+  which those systems operate. OPSEC controls protect the confidentiality of information,
+  including limiting the sharing of information with suppliers, potential suppliers,
+  and other non-organizational elements and individuals. Information critical to organizational
+  mission and business functions includes user identities, element uses, suppliers,
+  supply chain processes, functional requirements, security requirements, system design
+  specifications, testing and evaluation protocols, and security control implementation
+  details.'
+developer_guidance: 'SC-38 OPERATIONS SECURITY is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-38
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - CA-2
+  - CA-7
+  - PL-1
+  - PM-9
+  - PM-12
+  - RA-2
+  - RA-3
+  - RA-5
+  - SC-7
+  - SR-3
+  - SR-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-38 OPERATIONS SECURITY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,85 @@
+id: nist-800-218-pw_7_1
+title: PW.7.1 Determine whether code review (a person
+category: code_review_security
+applies_to:
+- sast
+- code_review
+- static_analysis
+- review_workflow
+tags:
+- code-review
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_7
+- pw_7_1
+- review
+- secure-coding
+- ssdf
+- static-analysis
+- task
+- testing
+severity_guidance: high
+description: "PW.7.1: Determine whether code review (a person \nlooks directly at\
+  \ the code to find issues) and/or code \nanalysis (tools are used to find issues\
+  \ in code, either in \na fully automated way or in conjunction with a person) \n\
+  should be used, as defined by the organization. \nExample 1: Follow the organization’s\
+  \ policies or guidelines for when code review \nshould be performed and how it should\
+  \ be conducted. This may include third-\nparty code and reusable code modules written\
+  \ in-house. \nExample 2: Follow the organization’s policies or guidelines for when\
+  \ code \nanalysis should be performed and how it should be conducted. \nExample\
+  \ 3: Choose code review and/or analysis methods based on the stage of \nthe software.\
+  \ \nBSIMM: CR1.5 \nEO14028: 4e(iv), 4e(ix) \nIEC62443: SM-5, SI-1, SVV-1 \nNISTLABEL:\
+  \ 2.2.2.2 \nSCSIC: Peer Reviews and Security Testing \nSP80053: SA-11 \nSP800161:\
+  \ SA-11 \nSP800181: SP-DEV-002; K0013, K0039, K0070, K0153, K0165; S0174"
+rationale: "PW.7.1: Determine whether code review (a person \nlooks directly at the\
+  \ code to find issues) and/or code \nanalysis (tools are used to find issues in\
+  \ code, either in \na fully automated way or in conjunction with a person) \nshould\
+  \ be used, as defined by the organization. \nExample 1: Follow the organization’s\
+  \ policies or guidelines for when code review \nshould be performed and how it should\
+  \ be conducted. This may include third-\nparty code and reusable code modules written\
+  \ in-house. \nExample 2: Follow the organization’s policies or guidelines for when\
+  \ code \nanalysis should be performed and how it should be conducted. \nExample\
+  \ 3: Choose code review and/or analysis methods based on the stage of \nthe software.\
+  \ \nBSIMM: CR1.5 \nEO14028: 4e(iv), 4e(ix) \nIEC62443: SM-5, SI-1, SVV-1 \nNISTLABEL:\
+  \ 2.2.2.2 \nSCSIC: Peer Reviews and Security Testing \nSP80053: SA-11 \nSP800161:\
+  \ SA-11 \nSP800181: SP-DEV-002; K0013, K0039, K0070, K0153, K0165; S0174"
+developer_guidance: "PW.7.1 Determine whether code review (a person defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPW.7.1: Determine whether code\
+  \ review (a person \nlooks directly at the code to find issues) and/or code \nanalysis\
+  \ (tools are used to find issues in code, either in \na fully automated way or in\
+  \ conjunction with a person) \nshould be used, as defined by the organization. \n\
+  Example 1: Follow the organization’s policies or guidelines for when code review\
+  \ \nshould be performed and how it should be conducted. This may include third-\n\
+  party code and reusable code modules written in-house. \nExample 2: Follow the organization’s\
+  \ policies or guidelines for when code \nanalysis should be performed and how it\
+  \ should be conducted. \nExample 3: Choose code review and/or analysis methods based\
+  \ on the stage of \nthe software. \nBSIMM: CR1.5 \nEO14028: 4e(iv), 4e(ix) \nIEC62443:\
+  \ SM-5, SI-1, SVV-1 \nNISTLABEL: 2.2.2.2 \nSCSIC: Peer Reviews and Security Testing\
+  \ \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-002; K0013, K0039, K0070,\
+  \ K0153, K0165; S0174\n\nEnriched Guidance:\nPW.7.1 Determine whether code review\
+  \ (a person is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.7.1
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.7.1 Determine whether code review (a person
+implementation_examples: []

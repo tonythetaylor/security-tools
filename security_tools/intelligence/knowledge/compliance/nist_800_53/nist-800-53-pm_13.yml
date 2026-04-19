@@ -1,0 +1,63 @@
+id: nist-800-53-pm_13
+title: PM-13 SECURITY AND PRIVACY WORKFORCE
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_13
+- program-management
+- risk
+severity_guidance: medium
+description: Security and privacy workforce development and improvement programs include
+  defining the knowledge, skills, and abilities needed to perform security and privacy
+  duties and tasks; developing role-based training programs for individuals assigned
+  security and privacy roles and responsibilities; and providing standards and guidelines
+  for measuring and building individual qualifications for incumbents and applicants
+  for security- and privacy-related positions. Such workforce development and improveme...
+rationale: Security and privacy workforce development and improvement programs include
+  defining the knowledge, skills, and abilities needed to perform security and privacy
+  duties and tasks; developing role-based training programs for individuals assigned
+  security and privacy roles and responsibilities; and providing standards and guidelines
+  for measuring and building individual qualifications for incumbents and applicants
+  for security- and privacy-related positions. Such workforce development and improvement
+  programs can also include security and privacy career paths to encourage security
+  and privacy professionals to advance in the field and fill positions with greater
+  responsibility. The programs encourage organizations to fill security- and privacy-
+  related positions with qualified personnel. Security and privacy workforce development
+  and improvement programs are complementary to organizational security awareness
+  and training programs and focus on developing and institutionalizing the core security
+  and privacy capabilities of personnel needed to protect organizational operations,
+  assets, and individuals.
+developer_guidance: 'PM-13 SECURITY AND PRIVACY WORKFORCE is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-13
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AT-2
+  - AT-3
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-13 SECURITY AND PRIVACY WORKFORCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

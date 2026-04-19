@@ -1,0 +1,46 @@
+id: nist-800-53-sr_6_1
+title: SR-6(1) TESTING AND ANALYSIS
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- control-enhancement
+- nist
+- sr
+- sr_6_1
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: SR-6(1) TESTING AND ANALYSIS
+rationale: SR-6(1) TESTING AND ANALYSIS
+developer_guidance: 'SR-6(1) TESTING AND ANALYSIS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-6(1)
+  note: null
+risk_context:
+  family: SR
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-6(1) TESTING AND ANALYSIS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

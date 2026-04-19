@@ -1,0 +1,59 @@
+id: nist-800-53-pe_14
+title: PE-14 ENVIRONMENTAL CONTROLS
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_14
+- physical-security
+severity_guidance: medium
+description: 'PE-14 ENVIRONMENTAL CONTROLS requires: Maintain [Selection (one or more):
+  temperature; humidity; pressure; radiation; [Assignment: organization-defined environmental
+  control]] levels within the facility where the system resides at [Assignment: organization-defined
+  acceptable levels]; and; Monitor environmental control levels [Assignment: organization-defined
+  frequency].'
+rationale: The provision of environmental controls applies primarily to organizational
+  facilities that contain concentrations of system resources (e.g., data centers,
+  mainframe computer rooms, and server rooms). Insufficient environmental controls,
+  especially in very harsh environments, can have a significant adverse impact on
+  the availability of systems and system components that are needed to support organizational
+  mission and business functions.
+developer_guidance: 'PE-14 ENVIRONMENTAL CONTROLS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Maintain [Selection (one or more): temperature; humidity; pressure; radiation;
+  [Assignment: organization-defined environmental control]] levels within the facility
+  where the system resides at [Assignment: organization-defined acceptable levels];
+  and
+
+  - Monitor environmental control levels [Assignment: organization-defined frequency]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-14
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AT-3
+  - CP-2
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-14 ENVIRONMENTAL CONTROLS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

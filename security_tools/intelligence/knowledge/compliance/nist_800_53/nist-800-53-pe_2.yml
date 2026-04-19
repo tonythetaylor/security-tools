@@ -1,0 +1,76 @@
+id: nist-800-53-pe_2
+title: PE-2 PHYSICAL ACCESS AUTHORIZATIONS
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_2
+- physical-security
+severity_guidance: medium
+description: 'PE-2 PHYSICAL ACCESS AUTHORIZATIONS requires: Develop, approve, and
+  maintain a list of individuals with authorized access to the facility where the
+  system resides; Issue authorization credentials for facility access; Review the
+  access list detailing authorized facility access by individuals [Assignment: organization-defined
+  frequency]; and.'
+rationale: Physical access authorizations apply to employees and visitors. Individuals
+  with permanent physical access authorization credentials are not considered visitors.
+  Authorization credentials include ID badges, identification cards, and smart cards.
+  Organizations determine the strength of authorization credentials needed consistent
+  with applicable laws, executive orders, directives, regulations, policies, standards,
+  and guidelines. Physical access authorizations may not be necessary to access certain
+  areas within facilities that are designated as publicly accessible.
+developer_guidance: 'PE-2 PHYSICAL ACCESS AUTHORIZATIONS is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Implementation expectations include:
+
+  - Develop, approve, and maintain a list of individuals with authorized access to
+  the facility where the system resides
+
+  - Issue authorization credentials for facility access
+
+  - Review the access list detailing authorized facility access by individuals [Assignment:
+  organization-defined frequency]; and
+
+  - Remove individuals from the facility access list when access is no longer required'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-2
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AT-3
+  - AU-9
+  - IA-4
+  - MA-5
+  - MP-2
+  - PE-3
+  - PE-4
+  - PE-5
+  - PE-8
+  - PM-12
+  - PS-3
+  - PS-4
+  - PS-5
+  - PS-6
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-2 PHYSICAL ACCESS AUTHORIZATIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

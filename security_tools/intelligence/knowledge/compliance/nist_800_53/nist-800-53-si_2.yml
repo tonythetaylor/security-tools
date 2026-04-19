@@ -1,0 +1,47 @@
+id: nist-800-53-si_2
+title: SI-2 Flaw Remediation
+category: system_integrity
+applies_to:
+- vulnerability_management
+- flaw_remediation
+- malware_protection
+- integrity_monitoring
+tags:
+- 800-53
+- flaw-remediation
+- integrity
+- malware-protection
+- nist
+- si
+- si_2
+severity_guidance: high
+description: SI-2 Flaw Remediation
+rationale: SI-2 Flaw Remediation
+developer_guidance: 'SI-2 Flaw Remediation is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- flaw_remediation
+- integrity_monitoring
+- malware_protection
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SI-2
+  note: null
+risk_context:
+  family: SI
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for SI-2 Flaw Remediation.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Validate remediation through scanning, monitoring, and repeatable verification.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

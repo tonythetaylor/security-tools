@@ -1,0 +1,63 @@
+id: nist-800-53-pe_4
+title: PE-4 ACCESS CONTROL FOR TRANSMISSION
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_4
+- physical-security
+severity_guidance: medium
+description: Security controls applied to system distribution and transmission lines
+  prevent accidental damage, disruption, and physical tampering. Such controls may
+  also be necessary to prevent eavesdropping or modification of unencrypted transmissions.
+  Security controls used to control physical access to system distribution and transmission
+  lines include disconnected or locked spare jacks, locked wiring closets, protection
+  of cabling by conduit or cable trays, and wiretapping sensors.
+rationale: Security controls applied to system distribution and transmission lines
+  prevent accidental damage, disruption, and physical tampering. Such controls may
+  also be necessary to prevent eavesdropping or modification of unencrypted transmissions.
+  Security controls used to control physical access to system distribution and transmission
+  lines include disconnected or locked spare jacks, locked wiring closets, protection
+  of cabling by conduit or cable trays, and wiretapping sensors.
+developer_guidance: 'PE-4 ACCESS CONTROL FOR TRANSMISSION is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-4
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AT-3
+  - IA-4
+  - MP-2
+  - MP-4
+  - PE-2
+  - PE-3
+  - PE-5
+  - PE-9
+  - SC-7
+  - SC-8
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-4 ACCESS CONTROL FOR TRANSMISSION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

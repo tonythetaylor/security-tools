@@ -1,0 +1,62 @@
+id: nist-800-53-sr_12
+title: SR-12 COMPONENT DISPOSAL
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_12
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: Data, documentation, tools, or system components can be disposed of at
+  any time during the system development life cycle (not only in the disposal or retirement
+  phase of the life cycle). For example, disposal can occur during research and development,
+  design, prototyping, or operations/maintenance and include methods such as disk
+  cleaning, removal of cryptographic keys, partial reuse of components. Opportunities
+  for compromise during disposal affect physical and logical data, including system
+  do...
+rationale: Data, documentation, tools, or system components can be disposed of at
+  any time during the system development life cycle (not only in the disposal or retirement
+  phase of the life cycle). For example, disposal can occur during research and development,
+  design, prototyping, or operations/maintenance and include methods such as disk
+  cleaning, removal of cryptographic keys, partial reuse of components. Opportunities
+  for compromise during disposal affect physical and logical data, including system
+  documentation in paper-based or digital files; shipping and delivery documentation;
+  memory sticks with software code; or complete routers or servers that include permanent
+  media, which contain sensitive or proprietary information. Additionally, proper
+  disposal of system components helps to prevent such components from entering the
+  gray market.
+developer_guidance: 'SR-12 COMPONENT DISPOSAL is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-12
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - MP-6
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-12 COMPONENT DISPOSAL.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

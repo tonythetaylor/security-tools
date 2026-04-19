@@ -1,0 +1,49 @@
+id: nist-800-53-ac_12_3
+title: AC-12(3) TIMEOUT WARNING MESSAGE
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_12_3
+- access-control
+- authorization
+- control-enhancement
+- least-privilege
+- nist
+severity_guidance: high
+description: AC-12(3) TIMEOUT WARNING MESSAGE
+rationale: AC-12(3) TIMEOUT WARNING MESSAGE
+developer_guidance: 'AC-12(3) TIMEOUT WARNING MESSAGE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-12(3)
+  note: null
+risk_context:
+  family: AC
+  related_controls: []
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-12(3) TIMEOUT WARNING MESSAGE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

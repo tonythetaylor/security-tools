@@ -1,0 +1,197 @@
+id: nist-800-218-ps
+title: Protect Software (PS)
+category: software_integrity_security
+applies_to:
+- code_integrity
+- artifact_integrity
+- sbom
+- release_integrity
+- provenance
+tags:
+- group
+- integrity
+- nist_800_218
+- protect-software
+- provenance
+- ps
+- signing
+- ssdf
+severity_guidance: high
+description: "Protect Software (PS) \nProtect All Forms of Code from Unauthorized\
+  \ \nAccess and Tampering (PS.1): Help prevent \nunauthorized changes to code, both\
+  \ inadvertent \nand intentional, which could circumvent or \nnegate the intended\
+  \ security characteristics of \nthe software. For code that is not intended to be\
+  \ \npublicly accessible, this helps prevent theft of \nthe software and may make\
+  \ it more difficult or \ntime-consuming for attackers to find \nvulnerabilities\
+  \ in the software. \nPS.1.1: Store all forms of code – including source \ncode,\
+  \ executable code, and configuration-as-code – \nbased on the principle of least\
+  \ privilege so that only \nauthorized personnel, tools, services, etc. have \naccess.\
+  \ \nExample 1: Store all source code and configuration-as-code in a code repository,\
+  \ \nand restrict access to it based on the nature of the code. For example, open-\n\
+  source code intended for public access may need its integrity and availability \n\
+  protected; other code may also need its confidentiality protected. \nExample 2:\
+  \ Use version control features of the repository to track all changes \nmade to\
+  \ the code with accountability to the individual account. \nExample 3: Use commit\
+  \ signing for code repositories. \nExample 4: Have the code owner review and approve\
+  \ all changes made to the \ncode by others. \nExample 5: Use code signing8 to help\
+  \ protect the integrity of executables. \nExample 6: Use cryptography (e.g., cryptographic\
+  \ hashes) to help protect file \nintegrity. \nBSAFSS: IA.1, IA.2, SM.4-1, DE.1-2\
+  \ \nBSIMM: SE2.4 \nCNCFSSCP: Securing the Source Code—Verification, Automation,\
+  \ Controlled \nEnvironments, Secure Authentication; Securing Materials—Automation\
+  \ \nEO14028: 4e(iii), 4e(iv), 4e(ix) \nIDASOAR: Fact Sheet 25 \nIEC62443: SM-6,\
+  \ SM-7, SM-8 \nNISTCSF: PR.AC-4, PR.DS-6, PR.IP-3 \nOWASPASVS: 1.10, 10.3.2 \nOWASPMASVS:\
+  \ 7.1 \nOWASPSAMM: OE3-B \nPCISSLC: 5.1, 6.1 \nSCSIC: Vendor Software Delivery Integrity\
+  \ Controls, Vendor Software Development Integrity \nControls \nSP80053: SA-10 \n\
+  SP800161: SA-8, SA-10 \n \n7 \nSee NIST SP 800-207, Zero Trust Architecture, for\
+  \ additional information (https://doi.org/10.6028/NIST.SP.800-207). \n8 \nFor more\
+  \ information on code signing, see NIST Cybersecurity White Paper, Security Considerations\
+  \ for Code Signing (https://doi.org/10.6028/NIST.CSWP.01262018).\n\n \n \n \n \n\
+  \ \n10 \nPractices \nTasks \nNotional Implementation Examples \nReferences \nProvide\
+  \ a Mechanism for Verifying Software \nRelease Integrity (PS.2): Help software \n\
+  acquirers ensure that the software they acquire \nis legitimate and has not been\
+  \ tampered with. \nPS.2.1: Make software integrity verification information \navailable\
+  \ to software acquirers. \nExample 1: Post cryptographic hashes for release files\
+  \ on a well-secured \nwebsite. \nExample 2: Use an established certificate authority\
+  \ for code signing so that \nconsumers’ operating systems or other tools and services\
+  \ can confirm the validity \nof signatures before use. \nExample 3: Periodically\
+  \ review the code signing processes, including certificate \nrenewal, rotation,\
+  \ revocation, and protection. \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP:\
+  \ Securing Deployments—Verification \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443:\
+  \ SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6 \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \n\
+  OWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \nSCSIC: Vendor Software Delivery Integrity Controls\
+  \ \nSP80053: SA-8 \nSP800161: SA-8 \nSP800181: K0178 \nArchive and Protect Each\
+  \ Software Release \n(PS.3): Preserve software releases in order to \nhelp identify,\
+  \ analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease.\
+  \ \nPS.3.1: Securely archive the necessary files and \nsupporting data (e.g., integrity\
+  \ verification information, \nprovenance data) to be retained for each software\
+  \ \nrelease. \nExample 1: Store the release files, associated images, etc. in repositories\
+  \ \nfollowing the organization’s established policy. Allow read-only access to them\
+  \ by \nnecessary personnel and no access by anyone else. \nExample 2: Store and\
+  \ protect release integrity verification i"
+rationale: "Protect Software (PS) \nProtect All Forms of Code from Unauthorized \n\
+  Access and Tampering (PS.1): Help prevent \nunauthorized changes to code, both inadvertent\
+  \ \nand intentional, which could circumvent or \nnegate the intended security characteristics\
+  \ of \nthe software. For code that is not intended to be \npublicly accessible,\
+  \ this helps prevent theft of \nthe software and may make it more difficult or \n\
+  time-consuming for attackers to find \nvulnerabilities in the software. \nPS.1.1:\
+  \ Store all forms of code – including source \ncode, executable code, and configuration-as-code\
+  \ – \nbased on the principle of least privilege so that only \nauthorized personnel,\
+  \ tools, services, etc. have \naccess. \nExample 1: Store all source code and configuration-as-code\
+  \ in a code repository, \nand restrict access to it based on the nature of the code.\
+  \ For example, open-\nsource code intended for public access may need its integrity\
+  \ and availability \nprotected; other code may also need its confidentiality protected.\
+  \ \nExample 2: Use version control features of the repository to track all changes\
+  \ \nmade to the code with accountability to the individual account. \nExample 3:\
+  \ Use commit signing for code repositories. \nExample 4: Have the code owner review\
+  \ and approve all changes made to the \ncode by others. \nExample 5: Use code signing8\
+  \ to help protect the integrity of executables. \nExample 6: Use cryptography (e.g.,\
+  \ cryptographic hashes) to help protect file \nintegrity. \nBSAFSS: IA.1, IA.2,\
+  \ SM.4-1, DE.1-2 \nBSIMM: SE2.4 \nCNCFSSCP: Securing the Source Code—Verification,\
+  \ Automation, Controlled \nEnvironments, Secure Authentication; Securing Materials—Automation\
+  \ \nEO14028: 4e(iii), 4e(iv), 4e(ix) \nIDASOAR: Fact Sheet 25 \nIEC62443: SM-6,\
+  \ SM-7, SM-8 \nNISTCSF: PR.AC-4, PR.DS-6, PR.IP-3 \nOWASPASVS: 1.10, 10.3.2 \nOWASPMASVS:\
+  \ 7.1 \nOWASPSAMM: OE3-B \nPCISSLC: 5.1, 6.1 \nSCSIC: Vendor Software Delivery Integrity\
+  \ Controls, Vendor Software Development Integrity \nControls \nSP80053: SA-10 \n\
+  SP800161: SA-8, SA-10 \n \n7 \nSee NIST SP 800-207, Zero Trust Architecture, for\
+  \ additional information (https://doi.org/10.6028/NIST.SP.800-207). \n8 \nFor more\
+  \ information on code signing, see NIST Cybersecurity White Paper, Security Considerations\
+  \ for Code Signing (https://doi.org/10.6028/NIST.CSWP.01262018).\n\n \n \n \n \n\
+  \ \n10 \nPractices \nTasks \nNotional Implementation Examples \nReferences \nProvide\
+  \ a Mechanism for Verifying Software \nRelease Integrity (PS.2): Help software \n\
+  acquirers ensure that the software they acquire \nis legitimate and has not been\
+  \ tampered with. \nPS.2.1: Make software integrity verification information \navailable\
+  \ to software acquirers. \nExample 1: Post cryptographic hashes for release files\
+  \ on a well-secured \nwebsite. \nExample 2: Use an established certificate authority\
+  \ for code signing so that \nconsumers’ operating systems or other tools and services\
+  \ can confirm the validity \nof signatures before use. \nExample 3: Periodically\
+  \ review the code signing processes, including certificate \nrenewal, rotation,\
+  \ revocation, and protection. \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP:\
+  \ Securing Deployments—Verification \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443:\
+  \ SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6 \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \n\
+  OWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \nSCSIC: Vendor Software Delivery Integrity Controls\
+  \ \nSP80053: SA-8 \nSP800161: SA-8 \nSP800181: K0178 \nArchive and Protect Each\
+  \ Software Release \n(PS.3): Preserve software releases in order to \nhelp identify,\
+  \ analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease.\
+  \ \nPS.3.1: Securely archive the necessary files and \nsupporting data (e.g., integrity\
+  \ verification information, \nprovenance data) to be retained for each software\
+  \ \nrelease. \nExample 1: Store the release files, associated images, etc. in repositories\
+  \ \nfollowing the organization’s established policy. Allow read-only access to them\
+  \ by \nnecessary personnel and no access by anyone else. \nExample 2: Store and\
+  \ protect release integrity verification i"
+developer_guidance: "Protect Software (PS) defines one of the four high-level SSDF\
+  \ practice groups. Use this record as strategic guidance for grouping findings and\
+  \ aligning SDLC expectations.\n\nProtect Software (PS) \nProtect All Forms of Code\
+  \ from Unauthorized \nAccess and Tampering (PS.1): Help prevent \nunauthorized changes\
+  \ to code, both inadvertent \nand intentional, which could circumvent or \nnegate\
+  \ the intended security characteristics of \nthe software. For code that is not\
+  \ intended to be \npublicly accessible, this helps prevent theft of \nthe software\
+  \ and may make it more difficult or \ntime-consuming for attackers to find \nvulnerabilities\
+  \ in the software. \nPS.1.1: Store all forms of code – including source \ncode,\
+  \ executable code, and configuration-as-code – \nbased on the principle of least\
+  \ privilege so that only \nauthorized personnel, tools, services, etc. have \naccess.\
+  \ \nExample 1: Store all source code and configuration-as-code in a code repository,\
+  \ \nand restrict access to it based on the nature of the code. For example, open-\n\
+  source code intended for public access may need its integrity and availability \n\
+  protected; other code may also need its confidentiality protected. \nExample 2:\
+  \ Use version control features of the repository to track all changes \nmade to\
+  \ the code with accountability to the individual account. \nExample 3: Use commit\
+  \ signing for code repositories. \nExample 4: Have the code owner review and approve\
+  \ all changes made to the \ncode by others. \nExample 5: Use code signing8 to help\
+  \ protect the integrity of executables. \nExample 6: Use cryptography (e.g., cryptographic\
+  \ hashes) to help protect file \nintegrity. \nBSAFSS: IA.1, IA.2, SM.4-1, DE.1-2\
+  \ \nBSIMM: SE2.4 \nCNCFSSCP: Securing the Source Code—Verification, Automation,\
+  \ Controlled \nEnvironments, Secure Authentication; Securing Materials—Automation\
+  \ \nEO14028: 4e(iii), 4e(iv), 4e(ix) \nIDASOAR: Fact Sheet 25 \nIEC62443: SM-6,\
+  \ SM-7, SM-8 \nNISTCSF: PR.AC-4, PR.DS-6, PR.IP-3 \nOWASPASVS: 1.10, 10.3.2 \nOWASPMASVS:\
+  \ 7.1 \nOWASPSAMM: OE3-B \nPCISSLC: 5.1, 6.1 \nSCSIC: Vendor Software Delivery Integrity\
+  \ Controls, Vendor Software Development Integrity \nControls \nSP80053: SA-10 \n\
+  SP800161: SA-8, SA-10 \n \n7 \nSee NIST SP 800-207, Zero Trust Architecture, for\
+  \ additional information (https://doi.org/10.6028/NIST.SP.800-207). \n8 \nFor more\
+  \ information on code signing, see NIST Cybersecurity White Paper, Security Considerations\
+  \ for Code Signing (https://doi.org/10.6028/NIST.CSWP.01262018).\n\n \n \n \n \n\
+  \ \n10 \nPractices \nTasks \nNotional Implementation Examples \nReferences \nProvide\
+  \ a Mechanism for Verifying Software \nRelease Integrity (PS.2): Help software \n\
+  acquirers ensure that the software they acquire \nis legitimate and has not been\
+  \ tampered with. \nPS.2.1: Make software integrity verification information \navailable\
+  \ to software acquirers. \nExample 1: Post cryptographic hashes for release files\
+  \ on a well-secured \nwebsite. \nExample 2: Use an established certificate authority\
+  \ for code signing so that \nconsumers’ operating systems or other tools and services\
+  \ can confirm the validity \nof signatures before use. \nExample 3: Periodically\
+  \ review the code signing processes, including certificate \nrenewal, rotation,\
+  \ revocation, and protection. \nBSAFSS: SM.4, SM.5, SM.6 \nBSIMM: SE2.4 \nCNCFSSCP:\
+  \ Securing Deployments—Verification \nEO14028: 4e(iii), 4e(ix), 4e(x) \nIEC62443:\
+  \ SM-6, SM-8, SUM-4 \nNISTCSF: PR.DS-6 \nNISTLABEL: 2.2.2.4 \nOWASPSAMM: OE3-B \n\
+  OWASPSCVS: 4 \nPCISSLC: 6.1, 6.2 \nSCSIC: Vendor Software Delivery Integrity Controls\
+  \ \nSP80053: SA-8 \nSP800161: SA-8 \nSP800181: K0178 \nArchive and Protect Each\
+  \ Software Release \n(PS.3): Preserve software releases in order to \nhelp identify,\
+  \ analyze, and eliminate \nvulnerabilities discovered in the software after \nrelease.\
+  \ \nPS.3.1: Securely archive the necessary files and \nsupporting data (e.g., integrity\
+  \ verification information, \nprovenance data) to be retained for each software\
+  \ \nrelease. \nExample 1: Store the release files, associated images, etc. in repositories\
+  \ \nfollowing the organization’s established policy. Allow read-only access to them\
+  \ by \nnecessary personnel and no access by anyone else. \nExample 2: Store and\
+  \ protect release integrity verification i\n\nEnriched Guidance:\nProtect Software\
+  \ (PS) is an SSDF practice or task."
+recommended_patterns:
+- artifact_integrity_verification
+- code_signing
+- provenance_tracking
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PS
+  note: null
+risk_context:
+  group: PS
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Verify integrity protections are implemented and auditable across software artifacts
+    and releases.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: Protect Software (PS)
+implementation_examples: []

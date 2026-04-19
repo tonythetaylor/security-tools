@@ -1,0 +1,64 @@
+id: nist-800-53-sr_9
+title: SR-9 TAMPER RESISTANCE AND DETECTION
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_9
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: Anti-tamper technologies, tools, and techniques provide a level of protection
+  for systems, system components, and services against many threats, including reverse
+  engineering, modification, and substitution. Strong identification combined with
+  tamper resistance and/or tamper detection is essential to protecting systems and
+  components during distribution and when in use.
+rationale: Anti-tamper technologies, tools, and techniques provide a level of protection
+  for systems, system components, and services against many threats, including reverse
+  engineering, modification, and substitution. Strong identification combined with
+  tamper resistance and/or tamper detection is essential to protecting systems and
+  components during distribution and when in use.
+developer_guidance: 'SR-9 TAMPER RESISTANCE AND DETECTION is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-9
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - PE-3
+  - PM-30
+  - SA-15
+  - SI-4
+  - SI-7
+  - SR-3
+  - SR-4
+  - SR-5
+  - SR-10
+  - SR-11
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-9 TAMPER RESISTANCE AND DETECTION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,87 @@
+id: nist-800-53-ma_2
+title: MA-2 CONTROLLED MAINTENANCE
+category: maintenance_security
+applies_to:
+- maintenance
+- authorized_maintenance
+- support_access
+tags:
+- 800-53
+- ma
+- ma_2
+- maintenance
+- nist
+- operational-security
+- support
+severity_guidance: medium
+description: 'MA-2 CONTROLLED MAINTENANCE requires: Schedule, document, and review
+  records of maintenance, repair, and replacement on system components in accordance
+  with manufacturer or vendor specifications and/or organizational requirements; Approve
+  and monitor all maintenance activities, whether performed on site or remotely and
+  whether the system or system components are serviced on site or removed to another
+  location; Require that [Assignment: organization-defined personnel or roles] explicitly
+  approve the removal of the system or system components from organizational facilities
+  for off-site maintenance, repair, or replacement.'
+rationale: Controlling system maintenance addresses the information security aspects
+  of the system maintenance program and applies to all types of maintenance to system
+  components conducted by local or nonlocal entities. Maintenance includes peripherals
+  such as scanners, copiers, and printers. Information necessary for creating effective
+  maintenance records includes the date and time of maintenance, a description of
+  the maintenance performed, names of the individuals or group performing the maintenance,
+  name of the escort, and system components or equipment that are removed or replaced.
+  Organizations consider supply chain-related risks associated with replacement components
+  for systems.
+developer_guidance: 'MA-2 CONTROLLED MAINTENANCE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Schedule, document, and review records of maintenance, repair, and replacement
+  on system components in accordance with manufacturer or vendor specifications and/or
+  organizational requirements
+
+  - Approve and monitor all maintenance activities, whether performed on site or remotely
+  and whether the system or system components are serviced on site or removed to another
+  location
+
+  - Require that [Assignment: organization-defined personnel or roles] explicitly
+  approve the removal of the system or system components from organizational facilities
+  for off-site maintenance, repair, or replacement
+
+  - Sanitize equipment to remove the following information from associated media prior
+  to removal from organizational facilities for off-site maintenance, repair, or replacement:
+  [Assignment: organization-defined information]
+
+  - Check all potentially impacted controls to verify that the controls are still
+  functioning properly following maintenance, repair, or replacement actions; and'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: MA-2
+  note: null
+risk_context:
+  family: MA
+  related_controls:
+  - CM-2
+  - CM-3
+  - CM-4
+  - CM-5
+  - CM-8
+  - MA-4
+  - MP-6
+  - PE-16
+  - SI-2
+  - SR-3
+  - SR-4
+  - SR-11
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for MA-2 CONTROLLED MAINTENANCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

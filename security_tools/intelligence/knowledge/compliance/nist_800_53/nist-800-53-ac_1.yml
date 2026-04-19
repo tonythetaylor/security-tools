@@ -1,0 +1,97 @@
+id: nist-800-53-ac_1
+title: AC-1 POLICY AND PROCEDURES
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_1
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: 'AC-1 POLICY AND PROCEDURES requires: Develop, document, and disseminate
+  to [Assignment: organization-defined personnel or roles]: 1. [Selection (one or
+  more): Organization-level; Mission/business process-level; System- level] access
+  control policy that: (a) Addresses purpose, scope, roles, responsibilities, management
+  commitment, coordination among organizational entities, and compliance; and (b)
+  Is consistent with applicable laws, executive orders, directives, regulations, policies,
+  standards, and guidelines; and 2. Procedures to facilitate the implementation of
+  the access control policy and the associated access controls; Designate an [Assignment:
+  organization-defined official] to manage the development, documentation, and dissemination
+  of the access control policy and procedures; and; Review and update the current
+  access control: 1. Policy [Assignment: organization-defined frequency] and following
+  [Assignment: organization-defined events]; and 2. Procedures [Assignment: organization-defined
+  frequency] and following [Assignment: organization-defined events].'
+rationale: Access control policy and procedures address the controls in the AC family
+  that are implemented within systems and organizations. The risk management strategy
+  is an important factor in establishing such policies and procedures. Policies and
+  procedures contribute to security and privacy assurance. Therefore, it is important
+  that security and privacy programs collaborate on the development of access control
+  policy and procedures. Security and privacy program policies and procedures at the
+  organization level are preferable, in general, and may obviate the need for mission-
+  or system-specific policies and procedures. The policy can be included as part of
+  the general security and privacy policy or be represented by multiple policies reflecting
+  the complex nature of organizations. Procedures can be established for security
+  and privacy programs, for mission or business processes, and for systems, if needed.
+  Procedures describe how the policies or controls are implemented and can be directed
+  at the individual or role that is the object of the procedure. Procedures can be
+  documented in system security and privacy plans or in one or more separate documents.
+  Events that may precipitate an update to access control policy and procedures include
+  assessment or audit findings, security incidents or breaches, or changes in laws,
+  executive orders, directives, regulations, policies, standards, and guidelines.
+  Simply restating controls does not constitute an organizational policy or procedure.
+developer_guidance: 'AC-1 POLICY AND PROCEDURES is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Develop, document, and disseminate to [Assignment: organization-defined personnel
+  or roles]: 1. [Selection (one or more): Organization-level; Mission/business process-level;
+  System- level] access control policy that: (a) Addresses purpose, scope, roles,
+  responsibilities, management commitment, coordination among organizational entities,
+  and compliance; and (b) Is consistent with applicable laws, executive orders, directives,
+  regulations, policies, standards, and guidelines; and 2. Procedures to facilitate
+  the implementation of the access control policy and the associated access controls
+
+  - Designate an [Assignment: organization-defined official] to manage the development,
+  documentation, and dissemination of the access control policy and procedures; and
+
+  - Review and update the current access control: 1. Policy [Assignment: organization-defined
+  frequency] and following [Assignment: organization-defined events]; and 2. Procedures
+  [Assignment: organization-defined frequency] and following [Assignment: organization-defined
+  events]'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-1
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - IA-1
+  - PM-9
+  - PM-24
+  - PS-8
+  - SI-12
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-1 POLICY AND PROCEDURES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

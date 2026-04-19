@@ -1,0 +1,67 @@
+id: nist-800-218-rv_3_3
+title: RV.3.3 Review the software for similar vulnerabilities
+category: root_cause_security
+applies_to:
+- root_cause_analysis
+- lessons_learned
+- process_improvement
+tags:
+- feedback-loop
+- lessons-learned
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- root-cause
+- rv
+- rv_3
+- rv_3_3
+- ssdf
+- task
+- triage
+severity_guidance: high
+description: "RV.3.3: Review the software for similar vulnerabilities \nto eradicate\
+  \ a class of vulnerabilities, and proactively \nfix them rather than waiting for\
+  \ external reports. \nExample 1: See PW.7 and PW.8. \nBSAFSS: VM.2 \nBSIMM: CR3.3,\
+  \ CMVM3.1 \nEO14028: 4e(iv), 4e(viii), 4e(ix) \nIEC62443: SI-1, DM-3, DM-4 \nISO30111:\
+  \ 7.1.4 \nPCISSLC: 4.2 \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-001,\
+  \ SP-DEV-002; K0009, K0039, K0070"
+rationale: "RV.3.3: Review the software for similar vulnerabilities \nto eradicate\
+  \ a class of vulnerabilities, and proactively \nfix them rather than waiting for\
+  \ external reports. \nExample 1: See PW.7 and PW.8. \nBSAFSS: VM.2 \nBSIMM: CR3.3,\
+  \ CMVM3.1 \nEO14028: 4e(iv), 4e(viii), 4e(ix) \nIEC62443: SI-1, DM-3, DM-4 \nISO30111:\
+  \ 7.1.4 \nPCISSLC: 4.2 \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-001,\
+  \ SP-DEV-002; K0009, K0039, K0070"
+developer_guidance: "RV.3.3 Review the software for similar vulnerabilities defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nRV.3.3: Review the software\
+  \ for similar vulnerabilities \nto eradicate a class of vulnerabilities, and proactively\
+  \ \nfix them rather than waiting for external reports. \nExample 1: See PW.7 and\
+  \ PW.8. \nBSAFSS: VM.2 \nBSIMM: CR3.3, CMVM3.1 \nEO14028: 4e(iv), 4e(viii), 4e(ix)\
+  \ \nIEC62443: SI-1, DM-3, DM-4 \nISO30111: 7.1.4 \nPCISSLC: 4.2 \nSP80053: SA-11\
+  \ \nSP800161: SA-11 \nSP800181: SP-DEV-001, SP-DEV-002; K0009, K0039, K0070\n\n\
+  Enriched Guidance:\nRV.3.3 Review the software for similar vulnerabilities is an\
+  \ SSDF practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.3.3
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.3.3 Review the software for similar vulnerabilities
+implementation_examples: []

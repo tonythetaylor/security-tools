@@ -1,0 +1,80 @@
+id: nist-800-53-ac_5
+title: AC-5 SEPARATION OF DUTIES
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_5
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: 'AC-5 SEPARATION OF DUTIES requires: Identify and document [Assignment:
+  organization-defined duties of individuals requiring separation]; and; Define system
+  access authorizations to support separation of duties.'
+rationale: Separation of duties addresses the potential for abuse of authorized privileges
+  and helps to reduce the risk of malevolent activity without collusion. Separation
+  of duties includes dividing mission or business functions and support functions
+  among different individuals or roles, conducting system support functions with different
+  individuals, and ensuring that security personnel who administer access control
+  functions do not also administer audit functions. Because separation of duty violations
+  can span systems and application domains, organizations consider the entirety of
+  systems and system components when developing policy on separation of duties. Separation
+  of duties is enforced through the account management activities in AC-2, access
+  control mechanisms in AC-3, and identity management activities in IA-2, IA-4, and
+  IA-12.
+developer_guidance: 'AC-5 SEPARATION OF DUTIES is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Identify and document [Assignment: organization-defined duties of individuals
+  requiring separation]; and
+
+  - Define system access authorizations to support separation of duties'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-5
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - AC-2
+  - AC-3
+  - AC-6
+  - AU-9
+  - CM-5
+  - CM-11
+  - CP-9
+  - IA-2
+  - IA-4
+  - IA-5
+  - IA-12
+  - MA-3
+  - MA-5
+  - PS-2
+  - SA-8
+  - SA-17
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-5 SEPARATION OF DUTIES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

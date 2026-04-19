@@ -1,0 +1,45 @@
+id: nist-800-53-ma_6_3
+title: MA-6(3) AUTOMATED SUPPORT FOR PREDICTIVE MAINTENANCE
+category: maintenance_security
+applies_to:
+- maintenance
+- authorized_maintenance
+- support_access
+tags:
+- 800-53
+- control-enhancement
+- ma
+- ma_6_3
+- maintenance
+- nist
+- operational-security
+- support
+severity_guidance: medium
+description: MA-6(3) AUTOMATED SUPPORT FOR PREDICTIVE MAINTENANCE
+rationale: MA-6(3) AUTOMATED SUPPORT FOR PREDICTIVE MAINTENANCE
+developer_guidance: 'MA-6(3) AUTOMATED SUPPORT FOR PREDICTIVE MAINTENANCE is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: MA-6(3)
+  note: null
+risk_context:
+  family: MA
+  related_controls: []
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for MA-6(3) AUTOMATED SUPPORT FOR PREDICTIVE
+    MAINTENANCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

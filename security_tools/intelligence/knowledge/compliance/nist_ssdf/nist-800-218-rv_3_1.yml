@@ -1,0 +1,68 @@
+id: nist-800-218-rv_3_1
+title: RV.3.1 Analyze identified vulnerabilities to determine
+category: root_cause_security
+applies_to:
+- root_cause_analysis
+- lessons_learned
+- process_improvement
+tags:
+- feedback-loop
+- lessons-learned
+- nist_800_218
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- root-cause
+- rv
+- rv_3
+- rv_3_1
+- ssdf
+- task
+- triage
+severity_guidance: high
+description: "RV.3.1: Analyze identified vulnerabilities to determine \ntheir root\
+  \ causes. \nExample 1: Record the root cause of discovered issues. \nExample 2:\
+  \ Record lessons learned through root cause analysis in a wiki that \ndevelopers\
+  \ can access and search. \nBSAFSS: VM.2-1 \nBSIMM: CMVM3.1, CMVM3.2 \nEO14028: 4e(ix)\
+  \ \nIEC62443: DM-3 \nISO30111: 7.1.4 \nOWASPSAMM: IM3-A \nPCISSLC: 4.2 \nSCFPSSD:\
+  \ Secure Development Lifecycle Feedback \nSP800181: T0047, K0009, K0039, K0070,\
+  \ K0343"
+rationale: "RV.3.1: Analyze identified vulnerabilities to determine \ntheir root causes.\
+  \ \nExample 1: Record the root cause of discovered issues. \nExample 2: Record lessons\
+  \ learned through root cause analysis in a wiki that \ndevelopers can access and\
+  \ search. \nBSAFSS: VM.2-1 \nBSIMM: CMVM3.1, CMVM3.2 \nEO14028: 4e(ix) \nIEC62443:\
+  \ DM-3 \nISO30111: 7.1.4 \nOWASPSAMM: IM3-A \nPCISSLC: 4.2 \nSCFPSSD: Secure Development\
+  \ Lifecycle Feedback \nSP800181: T0047, K0009, K0039, K0070, K0343"
+developer_guidance: "RV.3.1 Analyze identified vulnerabilities to determine defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nRV.3.1: Analyze identified\
+  \ vulnerabilities to determine \ntheir root causes. \nExample 1: Record the root\
+  \ cause of discovered issues. \nExample 2: Record lessons learned through root cause\
+  \ analysis in a wiki that \ndevelopers can access and search. \nBSAFSS: VM.2-1 \n\
+  BSIMM: CMVM3.1, CMVM3.2 \nEO14028: 4e(ix) \nIEC62443: DM-3 \nISO30111: 7.1.4 \n\
+  OWASPSAMM: IM3-A \nPCISSLC: 4.2 \nSCFPSSD: Secure Development Lifecycle Feedback\
+  \ \nSP800181: T0047, K0009, K0039, K0070, K0343\n\nEnriched Guidance:\nRV.3.1 Analyze\
+  \ identified vulnerabilities to determine is an SSDF practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.3.1
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.3.1 Analyze identified vulnerabilities to determine
+implementation_examples: []

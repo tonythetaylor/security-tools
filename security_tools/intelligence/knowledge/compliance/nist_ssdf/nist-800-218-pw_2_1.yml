@@ -1,0 +1,107 @@
+id: nist-800-218-pw_2_1
+title: PW.2.1 Have 1) a qualified person (or people) who
+category: secure_development
+applies_to:
+- secure_sdlc
+- secure_coding
+- sast
+- dependency_scanning
+- build_security
+- code_review
+- testing
+tags:
+- code-review
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_2
+- pw_2_1
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.2.1: Have 1) a qualified person (or people) who \nwere not involved\
+  \ with the design and/or 2) automated \nprocesses instantiated in the toolchain\
+  \ review the \nsoftware design to confirm and enforce that it meets all \nof the\
+  \ security requirements and satisfactorily \naddresses the identified risk information.\
+  \ \nExample 1: Review the software design to confirm that it addresses applicable\
+  \ \nsecurity requirements. \nExample 2: Review the risk models created during software\
+  \ design to determine \nif they appear to adequately identify the risks. \nExample\
+  \ 3: Review the software design to confirm that it satisfactorily addresses \nthe\
+  \ risks identified by the risk models. \nExample 4: Have the software’s designer\
+  \ correct failures to meet the \nrequirements. \nExample 5: Change the design and/or\
+  \ the risk response strategy if the security \nrequirements cannot be met. \nExample\
+  \ 6: Record the findings of design reviews to serve as artifacts (e.g., in \nthe\
+  \ software specification, in the issue tracking system, in the threat model). \n\
+  BSAFSS: TV.3 \nBSIMM: AA1.1, AA1.2, AA1.3, AA2.1, AA3.1 \nEO14028: 4e(iv), 4e(v),\
+  \ 4e(ix) \nIEC62443: SM-2, SR-2, SR-5, SD-3, SD-4, SI-2 \nISO27034: 7.3.3 \nOWASPASVS:\
+  \ 1.1.5 \nOWASPSAMM: DR1-A, DR1-B \nPCISSLC: 3.2 \nSP800181: T0328; K0038, K0039,\
+  \ K0070, K0080, K0119, K0152, K0153, K0161, K0165, \nK0172, K0297; S0006, S0009,\
+  \ S0022, S0036, S0141, S0171 \nVerify Third-Party Software Complies with \nSecurity\
+  \ Requirements (PW.3): Moved to \nPW.4"
+rationale: "PW.2.1: Have 1) a qualified person (or people) who \nwere not involved\
+  \ with the design and/or 2) automated \nprocesses instantiated in the toolchain\
+  \ review the \nsoftware design to confirm and enforce that it meets all \nof the\
+  \ security requirements and satisfactorily \naddresses the identified risk information.\
+  \ \nExample 1: Review the software design to confirm that it addresses applicable\
+  \ \nsecurity requirements. \nExample 2: Review the risk models created during software\
+  \ design to determine \nif they appear to adequately identify the risks. \nExample\
+  \ 3: Review the software design to confirm that it satisfactorily addresses \nthe\
+  \ risks identified by the risk models. \nExample 4: Have the software’s designer\
+  \ correct failures to meet the \nrequirements. \nExample 5: Change the design and/or\
+  \ the risk response strategy if the security \nrequirements cannot be met. \nExample\
+  \ 6: Record the findings of design reviews to serve as artifacts (e.g., in \nthe\
+  \ software specification, in the issue tracking system, in the threat model). \n\
+  BSAFSS: TV.3 \nBSIMM: AA1.1, AA1.2, AA1.3, AA2.1, AA3.1 \nEO14028: 4e(iv), 4e(v),\
+  \ 4e(ix) \nIEC62443: SM-2, SR-2, SR-5, SD-3, SD-4, SI-2 \nISO27034: 7.3.3 \nOWASPASVS:\
+  \ 1.1.5 \nOWASPSAMM: DR1-A, DR1-B \nPCISSLC: 3.2 \nSP800181: T0328; K0038, K0039,\
+  \ K0070, K0080, K0119, K0152, K0153, K0161, K0165, \nK0172, K0297; S0006, S0009,\
+  \ S0022, S0036, S0141, S0171 \nVerify Third-Party Software Complies with \nSecurity\
+  \ Requirements (PW.3): Moved to \nPW.4"
+developer_guidance: "PW.2.1 Have 1) a qualified person (or people) who defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.2.1: Have 1) a qualified\
+  \ person (or people) who \nwere not involved with the design and/or 2) automated\
+  \ \nprocesses instantiated in the toolchain review the \nsoftware design to confirm\
+  \ and enforce that it meets all \nof the security requirements and satisfactorily\
+  \ \naddresses the identified risk information. \nExample 1: Review the software\
+  \ design to confirm that it addresses applicable \nsecurity requirements. \nExample\
+  \ 2: Review the risk models created during software design to determine \nif they\
+  \ appear to adequately identify the risks. \nExample 3: Review the software design\
+  \ to confirm that it satisfactorily addresses \nthe risks identified by the risk\
+  \ models. \nExample 4: Have the software’s designer correct failures to meet the\
+  \ \nrequirements. \nExample 5: Change the design and/or the risk response strategy\
+  \ if the security \nrequirements cannot be met. \nExample 6: Record the findings\
+  \ of design reviews to serve as artifacts (e.g., in \nthe software specification,\
+  \ in the issue tracking system, in the threat model). \nBSAFSS: TV.3 \nBSIMM: AA1.1,\
+  \ AA1.2, AA1.3, AA2.1, AA3.1 \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIEC62443: SM-2,\
+  \ SR-2, SR-5, SD-3, SD-4, SI-2 \nISO27034: 7.3.3 \nOWASPASVS: 1.1.5 \nOWASPSAMM:\
+  \ DR1-A, DR1-B \nPCISSLC: 3.2 \nSP800181: T0328; K0038, K0039, K0070, K0080, K0119,\
+  \ K0152, K0153, K0161, K0165, \nK0172, K0297; S0006, S0009, S0022, S0036, S0141,\
+  \ S0171 \nVerify Third-Party Software Complies with \nSecurity Requirements (PW.3):\
+  \ Moved to \nPW.4\n\nEnriched Guidance:\nPW.2.1 Have 1) a qualified person (or people)\
+  \ who is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.2.1
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.2.1 Have 1) a qualified person (or people) who
+implementation_examples: []

@@ -1,0 +1,151 @@
+id: nist-800-218-pw_8_2
+title: PW.8.2 Scope the testing, design the tests, perform
+category: security_testing
+applies_to:
+- dast
+- fuzzing
+- dynamic_testing
+- penetration_testing
+tags:
+- code-review
+- dynamic-analysis
+- fuzzing
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_8
+- pw_8_2
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.8.2: Scope the testing, design the tests, perform \nthe testing,\
+  \ and document the results, including \nrecording and triaging all discovered issues\
+  \ and \nrecommended remediations in the development \nteam’s workflow or issue tracking\
+  \ system. \nExample 1: Perform robust functional testing of security features. \n\
+  Example 2: Integrate dynamic vulnerability testing into the project’s automated\
+  \ \ntest suite. \nExample 3: Incorporate tests for previously reported vulnerabilities\
+  \ into the \nproject’s test suite to ensure that errors are not reintroduced. \n\
+  Example 4: Take into consideration the infrastructures and technology stacks \n\
+  that the software will be used with in production when developing test plans. \n\
+  Example 5: Use fuzz testing tools to find issues with input handling. \nExample\
+  \ 6: If resources are available, use penetration testing to simulate how an \nattacker\
+  \ might attempt to compromise the software in high-risk scenarios. \nExample 7:\
+  \ Identify and record the root causes of discovered issues. \nExample 8: Document\
+  \ lessons learned from code testing in a wiki that \ndevelopers can access and search.\
+  \ \nExample 9: Use source code, design records, and other resources when \ndeveloping\
+  \ test plans. \nBSAFSS: TV.3, TV.5, PD.1-4 \nBSIMM: ST1.1, ST1.3, ST1.4, ST2.4,\
+  \ ST2.5, ST2.6, ST3.3, ST3.4, ST3.5, ST3.6, PT1.1, \nPT1.2, PT1.3, PT3.1 \nEO14028:\
+  \ 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 7, 8, 10, 11, 38, 39, 43, 44, 48, 55, 56, 57\
+  \ \nIEC62443: SM-5, SM-13, SI-1, SVV-1, SVV-2, SVV-3, SVV-4, SVV-5 \nIR8397: 2.6,\
+  \ 2.7, 2.8, 2.9, 2.10, 2.11 \nISO27034: 7.3.6 \nMSSDL: 10, 11 \nNISTLABEL: 2.2.2.2\
+  \ \nOWASPMASVS: 7.5 \nOWASPSAMM: ST1-A, ST1-B, ST2-A, ST2-B, ST3-A \nPCISSLC: 4.1\
+  \ \nSCAGILE: Operational Security Tasks 10, 11; Tasks Requiring the Help of Security\
+  \ Experts \n4, 5, 6, 7 \nSCFPSSD: Perform Dynamic Analysis Security Testing, Fuzz\
+  \ Parsers, Network \nVulnerability Scanning, Perform Automated Functional Testing\
+  \ of Security \nFeatures/Mitigations, Perform Penetration Testing \nSCSIC: Peer\
+  \ Reviews and Security Testing \nSP80053: SA-11, SA-11(5), SA-11(8), SA-15(7) \n\
+  SP800161: SA-11, SA-11(5), SA-11(8), SA-15(7) \nSP800181: SP-DEV-001, SP-DEV-002;\
+  \ T0013, T0028, T0169, T0176, T0253, T0266, \nT0456, T0516; K0009, K0039, K0070,\
+  \ K0272, K0339, K0342, K0362, K0536, K0624; \nS0001, S0015, S0046, S0051, S0078,\
+  \ S0081, S0083, S0135, S0137, S0167, S0242; \nA0015\n\n \n \n \n \n \n16 \nPractices\
+  \ \nTasks \nNotional Implementation Examples \nReferences \nConfigure Software to\
+  \ Have Secure Settings \nby Default (PW.9): Help improve the security of \nthe software\
+  \ at the time of installation to reduce \nthe likelihood of the software being deployed\
+  \ \nwith weak security settings, putting it at greater \nrisk of compromise."
+rationale: "PW.8.2: Scope the testing, design the tests, perform \nthe testing, and\
+  \ document the results, including \nrecording and triaging all discovered issues\
+  \ and \nrecommended remediations in the development \nteam’s workflow or issue tracking\
+  \ system. \nExample 1: Perform robust functional testing of security features. \n\
+  Example 2: Integrate dynamic vulnerability testing into the project’s automated\
+  \ \ntest suite. \nExample 3: Incorporate tests for previously reported vulnerabilities\
+  \ into the \nproject’s test suite to ensure that errors are not reintroduced. \n\
+  Example 4: Take into consideration the infrastructures and technology stacks \n\
+  that the software will be used with in production when developing test plans. \n\
+  Example 5: Use fuzz testing tools to find issues with input handling. \nExample\
+  \ 6: If resources are available, use penetration testing to simulate how an \nattacker\
+  \ might attempt to compromise the software in high-risk scenarios. \nExample 7:\
+  \ Identify and record the root causes of discovered issues. \nExample 8: Document\
+  \ lessons learned from code testing in a wiki that \ndevelopers can access and search.\
+  \ \nExample 9: Use source code, design records, and other resources when \ndeveloping\
+  \ test plans. \nBSAFSS: TV.3, TV.5, PD.1-4 \nBSIMM: ST1.1, ST1.3, ST1.4, ST2.4,\
+  \ ST2.5, ST2.6, ST3.3, ST3.4, ST3.5, ST3.6, PT1.1, \nPT1.2, PT1.3, PT3.1 \nEO14028:\
+  \ 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 7, 8, 10, 11, 38, 39, 43, 44, 48, 55, 56, 57\
+  \ \nIEC62443: SM-5, SM-13, SI-1, SVV-1, SVV-2, SVV-3, SVV-4, SVV-5 \nIR8397: 2.6,\
+  \ 2.7, 2.8, 2.9, 2.10, 2.11 \nISO27034: 7.3.6 \nMSSDL: 10, 11 \nNISTLABEL: 2.2.2.2\
+  \ \nOWASPMASVS: 7.5 \nOWASPSAMM: ST1-A, ST1-B, ST2-A, ST2-B, ST3-A \nPCISSLC: 4.1\
+  \ \nSCAGILE: Operational Security Tasks 10, 11; Tasks Requiring the Help of Security\
+  \ Experts \n4, 5, 6, 7 \nSCFPSSD: Perform Dynamic Analysis Security Testing, Fuzz\
+  \ Parsers, Network \nVulnerability Scanning, Perform Automated Functional Testing\
+  \ of Security \nFeatures/Mitigations, Perform Penetration Testing \nSCSIC: Peer\
+  \ Reviews and Security Testing \nSP80053: SA-11, SA-11(5), SA-11(8), SA-15(7) \n\
+  SP800161: SA-11, SA-11(5), SA-11(8), SA-15(7) \nSP800181: SP-DEV-001, SP-DEV-002;\
+  \ T0013, T0028, T0169, T0176, T0253, T0266, \nT0456, T0516; K0009, K0039, K0070,\
+  \ K0272, K0339, K0342, K0362, K0536, K0624; \nS0001, S0015, S0046, S0051, S0078,\
+  \ S0081, S0083, S0135, S0137, S0167, S0242; \nA0015\n\n \n \n \n \n \n16 \nPractices\
+  \ \nTasks \nNotional Implementation Examples \nReferences \nConfigure Software to\
+  \ Have Secure Settings \nby Default (PW.9): Help improve the security of \nthe software\
+  \ at the time of installation to reduce \nthe likelihood of the software being deployed\
+  \ \nwith weak security settings, putting it at greater \nrisk of compromise."
+developer_guidance: "PW.8.2 Scope the testing, design the tests, perform defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.8.2: Scope the testing,\
+  \ design the tests, perform \nthe testing, and document the results, including \n\
+  recording and triaging all discovered issues and \nrecommended remediations in the\
+  \ development \nteam’s workflow or issue tracking system. \nExample 1: Perform robust\
+  \ functional testing of security features. \nExample 2: Integrate dynamic vulnerability\
+  \ testing into the project’s automated \ntest suite. \nExample 3: Incorporate tests\
+  \ for previously reported vulnerabilities into the \nproject’s test suite to ensure\
+  \ that errors are not reintroduced. \nExample 4: Take into consideration the infrastructures\
+  \ and technology stacks \nthat the software will be used with in production when\
+  \ developing test plans. \nExample 5: Use fuzz testing tools to find issues with\
+  \ input handling. \nExample 6: If resources are available, use penetration testing\
+  \ to simulate how an \nattacker might attempt to compromise the software in high-risk\
+  \ scenarios. \nExample 7: Identify and record the root causes of discovered issues.\
+  \ \nExample 8: Document lessons learned from code testing in a wiki that \ndevelopers\
+  \ can access and search. \nExample 9: Use source code, design records, and other\
+  \ resources when \ndeveloping test plans. \nBSAFSS: TV.3, TV.5, PD.1-4 \nBSIMM:\
+  \ ST1.1, ST1.3, ST1.4, ST2.4, ST2.5, ST2.6, ST3.3, ST3.4, ST3.5, ST3.6, PT1.1, \n\
+  PT1.2, PT1.3, PT3.1 \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 7, 8, 10, 11, 38,\
+  \ 39, 43, 44, 48, 55, 56, 57 \nIEC62443: SM-5, SM-13, SI-1, SVV-1, SVV-2, SVV-3,\
+  \ SVV-4, SVV-5 \nIR8397: 2.6, 2.7, 2.8, 2.9, 2.10, 2.11 \nISO27034: 7.3.6 \nMSSDL:\
+  \ 10, 11 \nNISTLABEL: 2.2.2.2 \nOWASPMASVS: 7.5 \nOWASPSAMM: ST1-A, ST1-B, ST2-A,\
+  \ ST2-B, ST3-A \nPCISSLC: 4.1 \nSCAGILE: Operational Security Tasks 10, 11; Tasks\
+  \ Requiring the Help of Security Experts \n4, 5, 6, 7 \nSCFPSSD: Perform Dynamic\
+  \ Analysis Security Testing, Fuzz Parsers, Network \nVulnerability Scanning, Perform\
+  \ Automated Functional Testing of Security \nFeatures/Mitigations, Perform Penetration\
+  \ Testing \nSCSIC: Peer Reviews and Security Testing \nSP80053: SA-11, SA-11(5),\
+  \ SA-11(8), SA-15(7) \nSP800161: SA-11, SA-11(5), SA-11(8), SA-15(7) \nSP800181:\
+  \ SP-DEV-001, SP-DEV-002; T0013, T0028, T0169, T0176, T0253, T0266, \nT0456, T0516;\
+  \ K0009, K0039, K0070, K0272, K0339, K0342, K0362, K0536, K0624; \nS0001, S0015,\
+  \ S0046, S0051, S0078, S0081, S0083, S0135, S0137, S0167, S0242; \nA0015\n\n \n\
+  \ \n \n \n \n16 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nConfigure Software to Have Secure Settings \nby Default (PW.9): Help improve\
+  \ the security of \nthe software at the time of installation to reduce \nthe likelihood\
+  \ of the software being deployed \nwith weak security settings, putting it at greater\
+  \ \nrisk of compromise.\n\nEnriched Guidance:\nPW.8.2 Scope the testing, design\
+  \ the tests, perform is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.8.2
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.8.2 Scope the testing, design the tests, perform
+implementation_examples: []

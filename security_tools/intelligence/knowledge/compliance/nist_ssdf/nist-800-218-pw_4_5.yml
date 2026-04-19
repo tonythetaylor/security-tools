@@ -1,0 +1,63 @@
+id: nist-800-218-pw_4_5
+title: PW.4.5 Moved to PW.4.1 and PW.4.4
+category: supply_chain_security
+applies_to:
+- dependency_scanning
+- software_supply_chain
+- component_integrity
+tags:
+- code-review
+- dependencies
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_4
+- pw_4_5
+- secure-coding
+- ssdf
+- supply-chain
+- task
+- testing
+- third-party-components
+severity_guidance: high
+description: "PW.4.5: Moved to PW.4.1 and PW.4.4 \n \n \nCreate Source Code by Adhering\
+  \ to Secure \nCoding Practices (PW.5): Decrease the \nnumber of security vulnerabilities\
+  \ in the software, \nand reduce costs by minimizing vulnerabilities \nintroduced\
+  \ during source code creation that \nmeet or exceed organization-defined \nvulnerability\
+  \ severity criteria."
+rationale: "PW.4.5: Moved to PW.4.1 and PW.4.4 \n \n \nCreate Source Code by Adhering\
+  \ to Secure \nCoding Practices (PW.5): Decrease the \nnumber of security vulnerabilities\
+  \ in the software, \nand reduce costs by minimizing vulnerabilities \nintroduced\
+  \ during source code creation that \nmeet or exceed organization-defined \nvulnerability\
+  \ severity criteria."
+developer_guidance: "PW.4.5 Moved to PW.4.1 and PW.4.4 defines an actionable SSDF\
+  \ task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPW.4.5: Moved to PW.4.1 and PW.4.4\
+  \ \n \n \nCreate Source Code by Adhering to Secure \nCoding Practices (PW.5): Decrease\
+  \ the \nnumber of security vulnerabilities in the software, \nand reduce costs by\
+  \ minimizing vulnerabilities \nintroduced during source code creation that \nmeet\
+  \ or exceed organization-defined \nvulnerability severity criteria.\n\nEnriched\
+  \ Guidance:\nPW.4.5 Moved to PW.4.1 and PW.4.4 is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.4.5
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.4.5 Moved to PW.4.1 and PW.4.4
+implementation_examples: []

@@ -1,0 +1,60 @@
+id: nist-800-53-pe_16
+title: PE-16 DELIVERY AND REMOVAL
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_16
+- physical-security
+severity_guidance: medium
+description: 'PE-16 DELIVERY AND REMOVAL requires: Authorize and control [Assignment:
+  organization-defined types of system components] entering and exiting the facility;
+  and; Maintain records of the system components.'
+rationale: Enforcing authorizations for entry and exit of system components may require
+  restricting access to delivery areas and isolating the areas from the system and
+  media libraries.
+developer_guidance: 'PE-16 DELIVERY AND REMOVAL is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Authorize and control [Assignment: organization-defined types of system components]
+  entering and exiting the facility; and
+
+  - Maintain records of the system components'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-16
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - CM-3
+  - CM-8
+  - MA-2
+  - MA-3
+  - MP-5
+  - PE-20
+  - SR-2
+  - SR-3
+  - SR-4
+  - SR-6
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-16 DELIVERY AND REMOVAL.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

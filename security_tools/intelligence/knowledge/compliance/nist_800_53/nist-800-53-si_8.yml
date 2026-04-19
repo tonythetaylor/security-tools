@@ -1,0 +1,65 @@
+id: nist-800-53-si_8
+title: SI-8 SPAM PROTECTION
+category: system_integrity
+applies_to:
+- vulnerability_management
+- flaw_remediation
+- malware_protection
+- integrity_monitoring
+tags:
+- 800-53
+- flaw-remediation
+- integrity
+- malware-protection
+- nist
+- si
+- si_8
+severity_guidance: high
+description: 'SI-8 SPAM PROTECTION requires: Employ spam protection mechanisms at
+  system entry and exit points to detect and act on unsolicited messages; and; Update
+  spam protection mechanisms when new releases are available in accordance with organizational
+  configuration management policy and procedures.'
+rationale: System entry and exit points include firewalls, remote-access servers,
+  electronic mail servers, web servers, proxy servers, workstations, notebook computers,
+  and mobile devices. Spam can be transported by different means, including email,
+  email attachments, and web accesses. Spam protection mechanisms include signature
+  definitions.
+developer_guidance: 'SI-8 SPAM PROTECTION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Employ spam protection mechanisms at system entry and exit points to detect and
+  act on unsolicited messages; and
+
+  - Update spam protection mechanisms when new releases are available in accordance
+  with organizational configuration management policy and procedures'
+recommended_patterns:
+- flaw_remediation
+- integrity_monitoring
+- malware_protection
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SI-8
+  note: null
+risk_context:
+  family: SI
+  related_controls:
+  - PL-9
+  - SC-5
+  - SC-7
+  - SC-38
+  - SI-3
+  - SI-4
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for SI-8 SPAM PROTECTION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Validate remediation through scanning, monitoring, and repeatable verification.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

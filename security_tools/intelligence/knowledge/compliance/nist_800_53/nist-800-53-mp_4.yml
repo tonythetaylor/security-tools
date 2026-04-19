@@ -1,0 +1,80 @@
+id: nist-800-53-mp_4
+title: MP-4 MEDIA STORAGE
+category: data_security
+applies_to:
+- media_protection
+- data_handling
+- media_sanitization
+tags:
+- 800-53
+- data-handling
+- media
+- mp
+- mp_4
+- nist
+- sanitization
+severity_guidance: medium
+description: 'MP-4 MEDIA STORAGE requires: Physically control and securely store [Assignment:
+  organization-defined types of digital and/or non-digital media] within [Assignment:
+  organization-defined controlled areas]; and; Protect system media types defined
+  in MP-4a until the media are destroyed or sanitized using approved equipment, techniques,
+  and procedures.'
+rationale: System media includes digital and non-digital media. Digital media includes
+  flash drives, diskettes, magnetic tapes, external or removable hard disk drives
+  (e.g., solid state, magnetic), compact discs, and digital versatile discs. Non-digital
+  media includes paper and microfilm. Physically controlling stored media includes
+  conducting inventories, ensuring procedures are in place to allow individuals to
+  check out and return media to the library, and maintaining accountability for stored
+  media. Secure storage includes a locked drawer, desk, or cabinet or a controlled
+  media library. The type of media storage is commensurate with the security category
+  or classification of the information on the media. Controlled areas are spaces that
+  provide physical and procedural controls to meet the requirements established for
+  protecting information and systems. Fewer controls may be needed for media that
+  contains information determined to be in the public domain, publicly releasable,
+  or have limited adverse impacts on organizations, operations, or individuals if
+  accessed by other than authorized personnel. In these situations, physical access
+  controls provide adequate protection.
+developer_guidance: 'MP-4 MEDIA STORAGE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Physically control and securely store [Assignment: organization-defined types
+  of digital and/or non-digital media] within [Assignment: organization-defined controlled
+  areas]; and
+
+  - Protect system media types defined in MP-4a until the media are destroyed or sanitized
+  using approved equipment, techniques, and procedures'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: MP-4
+  note: null
+risk_context:
+  family: MP
+  related_controls:
+  - AC-19
+  - CP-2
+  - CP-6
+  - CP-9
+  - CP-10
+  - MP-2
+  - MP-7
+  - PE-3
+  - PL-2
+  - SC-12
+  - SC-13
+  - SC-28
+  - SC-34
+  - SI-12
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for MP-4 MEDIA STORAGE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,48 @@
+id: nist-800-53-sc_32_1
+title: SC-32(1) SEPARATE PHYSICAL DOMAINS FOR PRIVILEGED FUNCTIONS
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- control-enhancement
+- network
+- nist
+- sc
+- sc_32_1
+severity_guidance: high
+description: SC-32(1) SEPARATE PHYSICAL DOMAINS FOR PRIVILEGED FUNCTIONS
+rationale: SC-32(1) SEPARATE PHYSICAL DOMAINS FOR PRIVILEGED FUNCTIONS
+developer_guidance: 'SC-32(1) SEPARATE PHYSICAL DOMAINS FOR PRIVILEGED FUNCTIONS is
+  a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-32(1)
+  note: null
+risk_context:
+  family: SC
+  related_controls: []
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-32(1) SEPARATE PHYSICAL DOMAINS FOR
+    PRIVILEGED FUNCTIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

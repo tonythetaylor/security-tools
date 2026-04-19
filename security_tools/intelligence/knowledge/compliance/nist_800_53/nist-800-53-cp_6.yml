@@ -1,0 +1,70 @@
+id: nist-800-53-cp_6
+title: CP-6 ALTERNATE STORAGE SITE
+category: resilience_security
+applies_to:
+- contingency_planning
+- recovery
+- availability
+tags:
+- 800-53
+- availability
+- contingency
+- cp
+- cp_6
+- nist
+- recovery
+severity_guidance: medium
+description: 'CP-6 ALTERNATE STORAGE SITE requires: Establish an alternate storage
+  site, including necessary agreements to permit the storage and retrieval of system
+  backup information; and; Ensure that the alternate storage site provides controls
+  equivalent to that of the primary site.'
+rationale: Alternate storage sites are geographically distinct from primary storage
+  sites and maintain duplicate copies of information and data if the primary storage
+  site is not available. Similarly, alternate processing sites provide processing
+  capability if the primary processing site is not available. Geographically distributed
+  architectures that support contingency requirements may be considered alternate
+  storage sites. Items covered by alternate storage site agreements include environmental
+  conditions at the alternate sites, access rules for systems and facilities, physical
+  and environmental protection requirements, and coordination of delivery and retrieval
+  of backup media. Alternate storage sites reflect the requirements in contingency
+  plans so that organizations can maintain essential mission and business functions
+  despite compromise, failure, or disruption in organizational systems.
+developer_guidance: 'CP-6 ALTERNATE STORAGE SITE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Establish an alternate storage site, including necessary agreements to permit
+  the storage and retrieval of system backup information; and
+
+  - Ensure that the alternate storage site provides controls equivalent to that of
+  the primary site'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CP-6
+  note: null
+risk_context:
+  family: CP
+  related_controls:
+  - CP-2
+  - CP-7
+  - CP-8
+  - CP-9
+  - CP-10
+  - MP-4
+  - MP-5
+  - PE-3
+  - SC-36
+  - SI-13
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for CP-6 ALTERNATE STORAGE SITE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

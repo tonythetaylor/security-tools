@@ -1,0 +1,42 @@
+id: nist-800-53-ps_9
+title: PS-9 Position Descriptions
+category: personnel_security
+applies_to:
+- personnel_security
+- screening
+- role_change_controls
+tags:
+- 800-53
+- access-lifecycle
+- nist
+- personnel
+- ps
+- ps_9
+- screening
+severity_guidance: medium
+description: PS-9 Position Descriptions
+rationale: PS-9 Position Descriptions
+developer_guidance: 'PS-9 Position Descriptions is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PS-9
+  note: null
+risk_context:
+  family: PS
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: hr_or_management
+remediation:
+  steps:
+  - Review implementation requirements for PS-9 Position Descriptions.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

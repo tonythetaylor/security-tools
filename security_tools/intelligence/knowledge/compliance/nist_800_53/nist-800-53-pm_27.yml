@@ -1,0 +1,66 @@
+id: nist-800-53-pm_27
+title: PM-27 PRIVACY REPORTING
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_27
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-27 PRIVACY REPORTING requires: Develop [Assignment: organization-defined
+  privacy reports] and disseminate to: 1. [Assignment: organization-defined oversight
+  bodies] to demonstrate accountability with statutory, regulatory, and policy privacy
+  mandates; and 2. [Assignment: organization-defined officials] and other personnel
+  with responsibility for monitoring privacy program compliance; and; Review and update
+  privacy reports [Assignment: organization-defined frequency].'
+rationale: Through internal and external reporting, organizations promote accountability
+  and transparency in organizational privacy operations. Reporting can also help organizations
+  to determine progress in meeting privacy compliance requirements and privacy controls,
+  compare performance across the federal government, discover vulnerabilities, identify
+  gaps in policy and implementation, and identify models for success. For federal
+  agencies, privacy reports include annual senior agency official for privacy reports
+  to OMB, reports to Congress required by Implementing Regulations of the 9/11 Commission
+  Act, and other public reports required by law, regulation, or policy, including
+  internal policies of organizations. The senior agency official for privacy consults
+  with legal counsel, where appropriate, to ensure that organizations meet all applicable
+  privacy reporting requirements.
+developer_guidance: 'PM-27 PRIVACY REPORTING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Develop [Assignment: organization-defined privacy reports] and disseminate to:
+  1. [Assignment: organization-defined oversight bodies] to demonstrate accountability
+  with statutory, regulatory, and policy privacy mandates; and 2. [Assignment: organization-defined
+  officials] and other personnel with responsibility for monitoring privacy program
+  compliance; and
+
+  - Review and update privacy reports [Assignment: organization-defined frequency]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-27
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - IR-9
+  - PM-19
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-27 PRIVACY REPORTING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

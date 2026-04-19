@@ -1,0 +1,129 @@
+id: nist-800-218-pw_4_1
+title: PW.4.1 Acquire and maintain well-secured software
+category: supply_chain_security
+applies_to:
+- dependency_scanning
+- software_supply_chain
+- component_integrity
+tags:
+- code-review
+- dependencies
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_4
+- pw_4_1
+- secure-coding
+- ssdf
+- supply-chain
+- task
+- testing
+- third-party-components
+severity_guidance: high
+description: "PW.4.1: Acquire and maintain well-secured software \ncomponents (e.g.,\
+  \ software libraries, modules, \nmiddleware, frameworks) from commercial, open-\n\
+  source, and other third-party developers for use by the \norganization’s software.\
+  \ \nExample 1: Review and evaluate third-party software components in the context\
+  \ \nof their expected use. If a component is to be used in a substantially different\
+  \ way \nin the future, perform the review and evaluation again with that new context\
+  \ in \nmind. \nExample 2: Determine secure configurations for software components,\
+  \ and make \nthese available (e.g., as configuration-as-code) so developers can\
+  \ readily use the \nconfigurations. \nExample 3: Obtain provenance information (e.g.,\
+  \ SBOM, source composition \nanalysis, binary software composition analysis) for\
+  \ each software component, and \nanalyze that information to better assess the risk\
+  \ that the component may \nintroduce. \nExample 4: Establish one or more software\
+  \ repositories to host sanctioned and \nvetted open-source components. \nExample\
+  \ 5: Maintain a list of organization-approved commercial software \ncomponents and\
+  \ component versions along with their provenance data. \nExample 6: Designate which\
+  \ components must be included in software to be \ndeveloped. \nExample 7: Implement\
+  \ processes to update deployed software components to \nnewer versions, and retain\
+  \ older versions of software components until all \ntransitions from those versions\
+  \ have been completed successfully. \nExample 8: If the integrity or provenance\
+  \ of acquired binaries cannot be \nconfirmed, build binaries from source code after\
+  \ verifying the source code’s \nintegrity and provenance. \nBSAFSS: SM.2 \nBSIMM:\
+  \ SFD2.1, SFD3.2, SR2.4, SR3.1, SE3.6 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iii), 4e(vi), 4e(ix), 4e(x) \nIDASOAR: 19 \nIEC62443: SM-9, SM-10\
+  \ \nMSSDL: 6 \nNISTCSF: ID.SC-2 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA1-A \nOWASPSCVS:\
+  \ 4 \nSCSIC: Vendor Sourcing Integrity Controls \nSCTPC: MAINTAIN \nSP80053: SA-4,\
+  \ SA-5, SA-8(3), SA-10(6), SR-3, SR-4 \nSP800161: SA-4, SA-5, SA-8(3), SA-10(6),\
+  \ SR-3, SR-4 \nSP800181: K0039"
+rationale: "PW.4.1: Acquire and maintain well-secured software \ncomponents (e.g.,\
+  \ software libraries, modules, \nmiddleware, frameworks) from commercial, open-\n\
+  source, and other third-party developers for use by the \norganization’s software.\
+  \ \nExample 1: Review and evaluate third-party software components in the context\
+  \ \nof their expected use. If a component is to be used in a substantially different\
+  \ way \nin the future, perform the review and evaluation again with that new context\
+  \ in \nmind. \nExample 2: Determine secure configurations for software components,\
+  \ and make \nthese available (e.g., as configuration-as-code) so developers can\
+  \ readily use the \nconfigurations. \nExample 3: Obtain provenance information (e.g.,\
+  \ SBOM, source composition \nanalysis, binary software composition analysis) for\
+  \ each software component, and \nanalyze that information to better assess the risk\
+  \ that the component may \nintroduce. \nExample 4: Establish one or more software\
+  \ repositories to host sanctioned and \nvetted open-source components. \nExample\
+  \ 5: Maintain a list of organization-approved commercial software \ncomponents and\
+  \ component versions along with their provenance data. \nExample 6: Designate which\
+  \ components must be included in software to be \ndeveloped. \nExample 7: Implement\
+  \ processes to update deployed software components to \nnewer versions, and retain\
+  \ older versions of software components until all \ntransitions from those versions\
+  \ have been completed successfully. \nExample 8: If the integrity or provenance\
+  \ of acquired binaries cannot be \nconfirmed, build binaries from source code after\
+  \ verifying the source code’s \nintegrity and provenance. \nBSAFSS: SM.2 \nBSIMM:\
+  \ SFD2.1, SFD3.2, SR2.4, SR3.1, SE3.6 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iii), 4e(vi), 4e(ix), 4e(x) \nIDASOAR: 19 \nIEC62443: SM-9, SM-10\
+  \ \nMSSDL: 6 \nNISTCSF: ID.SC-2 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA1-A \nOWASPSCVS:\
+  \ 4 \nSCSIC: Vendor Sourcing Integrity Controls \nSCTPC: MAINTAIN \nSP80053: SA-4,\
+  \ SA-5, SA-8(3), SA-10(6), SR-3, SR-4 \nSP800161: SA-4, SA-5, SA-8(3), SA-10(6),\
+  \ SR-3, SR-4 \nSP800181: K0039"
+developer_guidance: "PW.4.1 Acquire and maintain well-secured software defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.4.1: Acquire and\
+  \ maintain well-secured software \ncomponents (e.g., software libraries, modules,\
+  \ \nmiddleware, frameworks) from commercial, open-\nsource, and other third-party\
+  \ developers for use by the \norganization’s software. \nExample 1: Review and evaluate\
+  \ third-party software components in the context \nof their expected use. If a component\
+  \ is to be used in a substantially different way \nin the future, perform the review\
+  \ and evaluation again with that new context in \nmind. \nExample 2: Determine secure\
+  \ configurations for software components, and make \nthese available (e.g., as configuration-as-code)\
+  \ so developers can readily use the \nconfigurations. \nExample 3: Obtain provenance\
+  \ information (e.g., SBOM, source composition \nanalysis, binary software composition\
+  \ analysis) for each software component, and \nanalyze that information to better\
+  \ assess the risk that the component may \nintroduce. \nExample 4: Establish one\
+  \ or more software repositories to host sanctioned and \nvetted open-source components.\
+  \ \nExample 5: Maintain a list of organization-approved commercial software \ncomponents\
+  \ and component versions along with their provenance data. \nExample 6: Designate\
+  \ which components must be included in software to be \ndeveloped. \nExample 7:\
+  \ Implement processes to update deployed software components to \nnewer versions,\
+  \ and retain older versions of software components until all \ntransitions from\
+  \ those versions have been completed successfully. \nExample 8: If the integrity\
+  \ or provenance of acquired binaries cannot be \nconfirmed, build binaries from\
+  \ source code after verifying the source code’s \nintegrity and provenance. \nBSAFSS:\
+  \ SM.2 \nBSIMM: SFD2.1, SFD3.2, SR2.4, SR3.1, SE3.6 \nCNCFSSCP: Securing Materials—Verification\
+  \ \nEO14028: 4e(iii), 4e(vi), 4e(ix), 4e(x) \nIDASOAR: 19 \nIEC62443: SM-9, SM-10\
+  \ \nMSSDL: 6 \nNISTCSF: ID.SC-2 \nOWASPASVS: 1.1.6 \nOWASPSAMM: SA1-A \nOWASPSCVS:\
+  \ 4 \nSCSIC: Vendor Sourcing Integrity Controls \nSCTPC: MAINTAIN \nSP80053: SA-4,\
+  \ SA-5, SA-8(3), SA-10(6), SR-3, SR-4 \nSP800161: SA-4, SA-5, SA-8(3), SA-10(6),\
+  \ SR-3, SR-4 \nSP800181: K0039\n\nEnriched Guidance:\nPW.4.1 Acquire and maintain\
+  \ well-secured software is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.4.1
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.4.1 Acquire and maintain well-secured software
+implementation_examples: []

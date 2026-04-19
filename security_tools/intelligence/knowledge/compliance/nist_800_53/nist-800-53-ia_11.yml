@@ -1,0 +1,59 @@
+id: nist-800-53-ia_11
+title: IA-11 RE-AUTHENTICATION
+category: identity_security
+applies_to:
+- authentication
+- identity_management
+- credential_security
+tags:
+- 800-53
+- authentication
+- credentials
+- ia
+- ia_11
+- identity
+- nist
+severity_guidance: high
+description: In addition to the re-authentication requirements associated with device
+  locks, organizations may require re-authentication of individuals in certain situations,
+  including when roles, authenticators or credentials change, when security categories
+  of systems change, when the execution of privileged functions occurs, after a fixed
+  time period, or periodically.
+rationale: In addition to the re-authentication requirements associated with device
+  locks, organizations may require re-authentication of individuals in certain situations,
+  including when roles, authenticators or credentials change, when security categories
+  of systems change, when the execution of privileged functions occurs, after a fixed
+  time period, or periodically.
+developer_guidance: 'IA-11 RE-AUTHENTICATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- strong_authentication
+- credential_lifecycle_management
+- identity_assurance
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IA-11
+  note: null
+risk_context:
+  family: IA
+  related_controls:
+  - AC-3
+  - AC-11
+  - IA-2
+  - IA-3
+  - IA-4
+  - IA-8
+ownership:
+  primary: iam_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for IA-11 RE-AUTHENTICATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

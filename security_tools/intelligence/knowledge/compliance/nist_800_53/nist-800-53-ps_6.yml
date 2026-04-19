@@ -1,0 +1,42 @@
+id: nist-800-53-ps_6
+title: PS-6 Access Agreements
+category: personnel_security
+applies_to:
+- personnel_security
+- screening
+- role_change_controls
+tags:
+- 800-53
+- access-lifecycle
+- nist
+- personnel
+- ps
+- ps_6
+- screening
+severity_guidance: medium
+description: PS-6 Access Agreements
+rationale: PS-6 Access Agreements
+developer_guidance: 'PS-6 Access Agreements is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PS-6
+  note: null
+risk_context:
+  family: PS
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: hr_or_management
+remediation:
+  steps:
+  - Review implementation requirements for PS-6 Access Agreements.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

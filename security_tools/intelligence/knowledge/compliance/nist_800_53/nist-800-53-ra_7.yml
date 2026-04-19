@@ -1,0 +1,67 @@
+id: nist-800-53-ra_7
+title: RA-7 RISK RESPONSE
+category: risk_security
+applies_to:
+- risk_assessment
+- threat_analysis
+- vulnerability_management
+tags:
+- 800-53
+- assessment
+- nist
+- ra
+- ra_7
+- risk
+- vulnerabilities
+severity_guidance: medium
+description: Organizations have many options for responding to risk including mitigating
+  risk by implementing new controls or strengthening existing controls, accepting
+  risk with appropriate justification or rationale, sharing or transferring risk,
+  or avoiding risk. The risk tolerance of the organization influences risk response
+  decisions and actions. Risk response addresses the need to determine an appropriate
+  response to risk before generating a plan of action and milestones entry. For example,
+  the respons...
+rationale: Organizations have many options for responding to risk including mitigating
+  risk by implementing new controls or strengthening existing controls, accepting
+  risk with appropriate justification or rationale, sharing or transferring risk,
+  or avoiding risk. The risk tolerance of the organization influences risk response
+  decisions and actions. Risk response addresses the need to determine an appropriate
+  response to risk before generating a plan of action and milestones entry. For example,
+  the response may be to accept risk or reject risk, or it may be possible to mitigate
+  the risk immediately so that a plan of action and milestones entry is not needed.
+  However, if the risk response is to mitigate the risk, and the mitigation cannot
+  be completed immediately, a plan of action and milestones entry is generated.
+developer_guidance: 'RA-7 RISK RESPONSE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- risk_assessment
+- threat_modeling
+- vulnerability_assessment
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: RA-7
+  note: null
+risk_context:
+  family: RA
+  related_controls:
+  - CA-5
+  - IR-9
+  - PM-4
+  - PM-28
+  - RA-2
+  - RA-3
+  - SR-2
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for RA-7 RISK RESPONSE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

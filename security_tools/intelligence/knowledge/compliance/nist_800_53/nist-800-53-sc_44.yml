@@ -1,0 +1,70 @@
+id: nist-800-53-sc_44
+title: SC-44 DETONATION CHAMBERS
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_44
+severity_guidance: high
+description: Detonation chambers, also known as dynamic execution environments, allow
+  organizations to open email attachments, execute untrusted or suspicious applications,
+  and execute Universal Resource Locator requests in the safety of an isolated environment
+  or a virtualized sandbox. Protected and isolated execution environments provide
+  a means of determining whether the associated attachments or applications contain
+  malicious code. While related to the concept of deception nets, the employment of
+  detonat...
+rationale: Detonation chambers, also known as dynamic execution environments, allow
+  organizations to open email attachments, execute untrusted or suspicious applications,
+  and execute Universal Resource Locator requests in the safety of an isolated environment
+  or a virtualized sandbox. Protected and isolated execution environments provide
+  a means of determining whether the associated attachments or applications contain
+  malicious code. While related to the concept of deception nets, the employment of
+  detonation chambers is not intended to maintain a long-term environment in which
+  adversaries can operate and their actions can be observed. Rather, detonation chambers
+  are intended to quickly identify malicious code and either reduce the likelihood
+  that the code is propagated to user environments of operation or prevent such propagation
+  completely.
+developer_guidance: 'SC-44 DETONATION CHAMBERS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-44
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - SC-7
+  - SC-18
+  - SC-25
+  - SC-26
+  - SC-30
+  - SC-35
+  - SC-39
+  - SI-3
+  - SI-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-44 DETONATION CHAMBERS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

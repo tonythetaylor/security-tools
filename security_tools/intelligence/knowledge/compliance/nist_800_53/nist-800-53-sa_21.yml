@@ -1,0 +1,76 @@
+id: nist-800-53-sa_21
+title: SA-21 DEVELOPER SCREENING
+category: secure_development
+applies_to:
+- secure_sdlc
+- developer_testing
+- supply_chain_security
+- application_security
+tags:
+- 800-53
+- developer-testing
+- nist
+- sa
+- sa_21
+- sdlc
+- secure-development
+severity_guidance: medium
+description: 'SA-21 DEVELOPER SCREENING requires: Has appropriate access authorizations
+  as determined by assigned [Assignment: organization- defined official government
+  duties]; and; Satisfies the following additional personnel screening criteria: [Assignment:
+  organization- defined additional personnel screening criteria].'
+rationale: Developer screening is directed at external developers. Internal developer
+  screening is addressed by PS-3. Because the system, system component, or system
+  service may be used in critical activities essential to the national or economic
+  security interests of the United States, organizations have a strong interest in
+  ensuring that developers are trustworthy. The degree of _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 290 trust required of developers may need to be consistent with
+  that of the individuals who access the systems, system components, or system services
+  once deployed. Authorization and personnel screening criteria include clearances,
+  background checks, citizenship, and nationality. Developer trustworthiness may also
+  include a review and analysis of company ownership and relationships that the company
+  has with entities that may potentially affect the quality and reliability of the
+  systems, components, or services being developed. Satisfying the required access
+  authorizations and personnel screening criteria includes providing a list of all
+  individuals who are authorized to perform development activities on the selected
+  system, system component, or system service so that organizations can validate that
+  the developer has satisfied the authorization and screening requirements.
+developer_guidance: 'SA-21 DEVELOPER SCREENING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Has appropriate access authorizations as determined by assigned [Assignment: organization-
+  defined official government duties]; and
+
+  - Satisfies the following additional personnel screening criteria: [Assignment:
+  organization- defined additional personnel screening criteria]'
+recommended_patterns:
+- secure_sdlc
+- developer_testing
+- supply_chain_review
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SA-21
+  note: null
+risk_context:
+  family: SA
+  related_controls:
+  - PS-2
+  - PS-3
+  - PS-6
+  - PS-7
+  - SA-4
+  - SR-6
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SA-21 DEVELOPER SCREENING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Ensure the control is integrated into development and testing workflows.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

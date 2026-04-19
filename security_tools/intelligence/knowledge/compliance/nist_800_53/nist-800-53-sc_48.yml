@@ -1,0 +1,65 @@
+id: nist-800-53-sc_48
+title: SC-48 SENSOR RELOCATION
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_48
+severity_guidance: high
+description: Adversaries may take various paths and use different approaches as they
+  move laterally through an organization (including its systems) to reach their target
+  or as they attempt to exfiltrate information from the organization. The organization
+  often only has a limited set of monitoring and detection capabilities, and they
+  may be focused on the critical or likely infiltration or exfiltration paths. By
+  using communications paths that the organization typically does not monitor, the
+  adversary can inc...
+rationale: Adversaries may take various paths and use different approaches as they
+  move laterally through an organization (including its systems) to reach their target
+  or as they attempt to exfiltrate information from the organization. The organization
+  often only has a limited set of monitoring and detection capabilities, and they
+  may be focused on the critical or likely infiltration or exfiltration paths. By
+  using communications paths that the organization typically does not monitor, the
+  adversary can increase its chances of achieving its desired goals. By relocating
+  its sensors or monitoring capabilities to new locations, the organization can impede
+  the adversary’s ability to achieve its goals. The relocation of the sensors or monitoring
+  capabilities might be done based on threat information that the organization has
+  acquired or randomly to confuse the adversary and make its lateral transition through
+  the system or organization more challenging.
+developer_guidance: 'SC-48 SENSOR RELOCATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-48
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AU-2
+  - SC-7
+  - SI-4
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-48 SENSOR RELOCATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

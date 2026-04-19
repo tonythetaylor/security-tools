@@ -1,0 +1,46 @@
+id: nist-800-53-pm_5
+title: PM-5 SYSTEM INVENTORY
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_5
+- program-management
+- risk
+severity_guidance: medium
+description: '[OMB A-130] provides guidance on developing systems inventories and
+  associated reporting requirements. System inventory refers to an organization-wide
+  inventory of systems, not system components as described in CM-8.'
+rationale: '[OMB A-130] provides guidance on developing systems inventories and associated
+  reporting requirements. System inventory refers to an organization-wide inventory
+  of systems, not system components as described in CM-8.'
+developer_guidance: 'PM-5 SYSTEM INVENTORY is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-5
+  note: null
+risk_context:
+  family: PM
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-5 SYSTEM INVENTORY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

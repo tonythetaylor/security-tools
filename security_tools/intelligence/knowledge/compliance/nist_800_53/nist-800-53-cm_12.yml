@@ -1,0 +1,83 @@
+id: nist-800-53-cm_12
+title: CM-12 INFORMATION LOCATION
+category: configuration_security
+applies_to:
+- secure_configuration
+- baseline_configuration
+- change_management
+tags:
+- 800-53
+- baseline
+- cm
+- cm_12
+- configuration
+- hardening
+- nist
+severity_guidance: medium
+description: 'CM-12 INFORMATION LOCATION requires: Identify and document the location
+  of [Assignment: organization-defined information] and the specific system components
+  on which the information is processed and stored; Identify and document the users
+  who have access to the system and system components where the information is processed
+  and stored; and; Document changes to the location (i.e., system or system components)
+  where the information is processed and stored.'
+rationale: Information location addresses the need to understand where information
+  is being processed and stored. Information location includes identifying where specific
+  information types and information reside in system components and how information
+  is being processed so that information flow can be understood and adequate protection
+  and policy management provided for such information and system components. The security
+  category of the information is also a factor in determining the controls necessary
+  to protect the information and the system component where the information resides
+  (see FIPS 199). The location of the information and system components is also a
+  factor in the architecture and design of the system (see SA-4, SA-8, SA-17).
+developer_guidance: 'CM-12 INFORMATION LOCATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Identify and document the location of [Assignment: organization-defined information]
+  and the specific system components on which the information is processed and stored
+
+  - Identify and document the users who have access to the system and system components
+  where the information is processed and stored; and
+
+  - Document changes to the location (i.e., system or system components) where the
+  information is processed and stored'
+recommended_patterns:
+- baseline_configuration_management
+- secure_defaults
+- change_control
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CM-12
+  note: null
+risk_context:
+  family: CM
+  related_controls:
+  - AC-2
+  - AC-3
+  - AC-4
+  - AC-6
+  - AC-23
+  - CM-8
+  - PM-5
+  - RA-2
+  - SA-4
+  - SA-8
+  - SA-17
+  - SC-4
+  - SC-28
+  - SI-4
+  - SI-7
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for CM-12 INFORMATION LOCATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Verify the control is reflected in baseline configuration and change management
+    processes.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

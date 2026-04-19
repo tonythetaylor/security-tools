@@ -1,0 +1,42 @@
+id: nist-800-53-ca_7
+title: CA-7 Continuous Monitoring
+category: assurance_security
+applies_to:
+- security_assessment
+- continuous_monitoring
+- authorization
+tags:
+- 800-53
+- assessment
+- authorization
+- ca
+- ca_7
+- continuous-monitoring
+- nist
+severity_guidance: medium
+description: CA-7 Continuous Monitoring
+rationale: CA-7 Continuous Monitoring
+developer_guidance: 'CA-7 Continuous Monitoring is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CA-7
+  note: null
+risk_context:
+  family: CA
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for CA-7 Continuous Monitoring.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

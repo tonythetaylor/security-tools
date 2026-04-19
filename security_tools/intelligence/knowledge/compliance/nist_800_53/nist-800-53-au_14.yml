@@ -1,0 +1,77 @@
+id: nist-800-53-au_14
+title: AU-14 SESSION AUDIT
+category: logging_security
+applies_to:
+- audit_logging
+- audit_trail
+- security_monitoring
+tags:
+- 800-53
+- au
+- au_14
+- audit
+- logging
+- nist
+- traceability
+severity_guidance: medium
+description: 'AU-14 SESSION AUDIT requires: Provide and implement the capability for
+  [Assignment: organization-defined users or roles] to [Selection (one or more): record;
+  view; hear; log] the content of a user session under [Assignment: organization-defined
+  circumstances]; and; Develop, integrate, and use session auditing activities in
+  consultation with legal counsel and in accordance with applicable laws, executive
+  orders, directives, regulations, policies, standards, and guidelines.'
+rationale: Session audits can include monitoring keystrokes, tracking websites visited,
+  and recording information and/or file transfers. Session audit capability is implemented
+  in addition to event logging and may involve implementation of specialized session
+  capture technology. Organizations consider how session auditing can reveal information
+  about individuals that may give rise to privacy risk as well as how to mitigate
+  those risks. Because session auditing can impact system and network performance,
+  organizations activate the capability under well- defined situations (e.g., the
+  organization is suspicious of a specific individual). Organizations consult with
+  legal counsel, civil liberties officials, and privacy officials to ensure that any
+  legal, privacy, civil rights, or civil liberties issues, including the use of personally
+  identifiable information, are appropriately addressed.
+developer_guidance: 'AU-14 SESSION AUDIT is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Provide and implement the capability for [Assignment: organization-defined users
+  or roles] to [Selection (one or more): record; view; hear; log] the content of a
+  user session under [Assignment: organization-defined circumstances]; and
+
+  - Develop, integrate, and use session auditing activities in consultation with legal
+  counsel and in accordance with applicable laws, executive orders, directives, regulations,
+  policies, standards, and guidelines'
+recommended_patterns:
+- audit_logging
+- tamper_resistant_logs
+- log_review_and_alerting
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AU-14
+  note: null
+risk_context:
+  family: AU
+  related_controls:
+  - AC-3
+  - AC-8
+  - AU-2
+  - AU-3
+  - AU-4
+  - AU-5
+  - AU-8
+  - AU-9
+  - AU-11
+  - AU-12
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for AU-14 SESSION AUDIT.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

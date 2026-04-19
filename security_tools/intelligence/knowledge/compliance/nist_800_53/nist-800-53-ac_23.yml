@@ -1,0 +1,81 @@
+id: nist-800-53-ac_23
+title: AC-23 DATA MINING PROTECTION
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_23
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: Data mining is an analytical process that attempts to find correlations
+  or patterns in large data sets for the purpose of data or knowledge discovery. Data
+  storage objects include database records and database fields. Sensitive information
+  can be extracted from data mining operations. When information is personally identifiable
+  information, it may lead to unanticipated revelations about individuals and give
+  rise to privacy risks. Prior to performing data mining activities, organizations
+  determin...
+rationale: Data mining is an analytical process that attempts to find correlations
+  or patterns in large data sets for the purpose of data or knowledge discovery. Data
+  storage objects include database records and database fields. Sensitive information
+  can be extracted from data mining operations. When information is personally identifiable
+  information, it may lead to unanticipated revelations about individuals and give
+  rise to privacy risks. Prior to performing data mining activities, organizations
+  determine whether such activities are authorized. Organizations may be subject to
+  applicable laws, executive orders, directives, regulations, or policies that address
+  data mining requirements. Organizational personnel consult with the senior agency
+  official for privacy and legal counsel regarding such requirements. Data mining
+  prevention and detection techniques include limiting the number and frequency of
+  database queries to increase the work factor needed to determine the contents of
+  databases, limiting types of responses provided to database queries, applying differential
+  privacy techniques or homomorphic encryption, and notifying personnel when atypical
+  database queries or accesses occur. Data mining protection focuses on protecting
+  information from data mining while such information resides in organizational data
+  stores. In contrast, AU-13 focuses on monitoring for organizational information
+  that may have been mined or otherwise obtained from data stores _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 57 and is available as open-source information residing on external
+  sites, such as social networking or social media websites. [EO 13587] requires the
+  establishment of an insider threat program for deterring, detecting, and mitigating
+  insider threats, including the safeguarding of sensitive information from exploitation,
+  compromise, or other unauthorized disclosure. Data mining protection requires organizations
+  to identify appropriate techniques to prevent and detect unnecessary or unauthorized
+  data mining. Data mining can be used by an insider to collect organizational information
+  for the purpose of exfiltration.
+developer_guidance: 'AC-23 DATA MINING PROTECTION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-23
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - PM-12
+  - PT-2
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-23 DATA MINING PROTECTION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

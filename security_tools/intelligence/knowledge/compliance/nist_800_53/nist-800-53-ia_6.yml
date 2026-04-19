@@ -1,0 +1,61 @@
+id: nist-800-53-ia_6
+title: IA-6 AUTHENTICATION FEEDBACK
+category: identity_security
+applies_to:
+- authentication
+- identity_management
+- credential_security
+tags:
+- 800-53
+- authentication
+- credentials
+- ia
+- ia_6
+- identity
+- nist
+severity_guidance: high
+description: Authentication feedback from systems does not provide information that
+  would allow unauthorized individuals to compromise authentication mechanisms. For
+  some types of systems, such as desktops or notebooks with relatively large monitors,
+  the threat (referred to as shoulder surfing) may be significant. For other types
+  of systems, such as mobile devices with small displays, the threat may be less significant
+  and is balanced against the increased likelihood of typographic input errors due
+  to small...
+rationale: Authentication feedback from systems does not provide information that
+  would allow unauthorized individuals to compromise authentication mechanisms. For
+  some types of systems, such as desktops or notebooks with relatively large monitors,
+  the threat (referred to as shoulder surfing) may be significant. For other types
+  of systems, such as mobile devices with small displays, the threat may be less significant
+  and is balanced against the increased likelihood of typographic input errors due
+  to small keyboards. Thus, the means for obscuring authentication feedback is selected
+  accordingly. Obscuring authentication feedback includes displaying asterisks when
+  users type passwords into input devices or displaying feedback for a very limited
+  time before obscuring it.
+developer_guidance: 'IA-6 AUTHENTICATION FEEDBACK is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- strong_authentication
+- credential_lifecycle_management
+- identity_assurance
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IA-6
+  note: null
+risk_context:
+  family: IA
+  related_controls:
+  - AC-3
+ownership:
+  primary: iam_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for IA-6 AUTHENTICATION FEEDBACK.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

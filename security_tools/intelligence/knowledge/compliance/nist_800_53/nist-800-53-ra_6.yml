@@ -1,0 +1,61 @@
+id: nist-800-53-ra_6
+title: RA-6 TECHNICAL SURVEILLANCE COUNTERMEASURES SURVEY
+category: risk_security
+applies_to:
+- risk_assessment
+- threat_analysis
+- vulnerability_management
+tags:
+- 800-53
+- assessment
+- nist
+- ra
+- ra_6
+- risk
+- vulnerabilities
+severity_guidance: medium
+description: A technical surveillance countermeasures survey is a service provided
+  by qualified personnel to detect the presence of technical surveillance devices
+  and hazards and to identify technical security weaknesses that could be used in
+  the conduct of a technical penetration of the surveyed facility. Technical surveillance
+  countermeasures surveys also provide evaluations of the technical security posture
+  of organizations and facilities and include visual, electronic, and physical examinations
+  of survey...
+rationale: A technical surveillance countermeasures survey is a service provided by
+  qualified personnel to detect the presence of technical surveillance devices and
+  hazards and to identify technical security weaknesses that could be used in the
+  conduct of a technical penetration of the surveyed facility. Technical surveillance
+  countermeasures surveys also provide evaluations of the technical security posture
+  of organizations and facilities and include visual, electronic, and physical examinations
+  of surveyed facilities, internally and externally. The surveys also provide useful
+  input for risk assessments and information regarding organizational exposure to
+  potential adversaries.
+developer_guidance: 'RA-6 TECHNICAL SURVEILLANCE COUNTERMEASURES SURVEY is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- risk_assessment
+- threat_modeling
+- vulnerability_assessment
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: RA-6
+  note: null
+risk_context:
+  family: RA
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for RA-6 TECHNICAL SURVEILLANCE COUNTERMEASURES
+    SURVEY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

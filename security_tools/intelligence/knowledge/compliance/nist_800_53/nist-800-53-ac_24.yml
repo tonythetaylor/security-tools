@@ -1,0 +1,62 @@
+id: nist-800-53-ac_24
+title: AC-24 ACCESS CONTROL DECISIONS
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_24
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: Access control decisions (also known as authorization decisions) occur
+  when authorization information is applied to specific accesses. In contrast, access
+  enforcement occurs when systems enforce access control decisions. While it is common
+  to have access control decisions and access enforcement implemented by the same
+  entity, it is not required, and it is not always an optimal implementation choice.
+  For some architectures and distributed systems, different entities may make access
+  control decisi...
+rationale: Access control decisions (also known as authorization decisions) occur
+  when authorization information is applied to specific accesses. In contrast, access
+  enforcement occurs when systems enforce access control decisions. While it is common
+  to have access control decisions and access enforcement implemented by the same
+  entity, it is not required, and it is not always an optimal implementation choice.
+  For some architectures and distributed systems, different entities may make access
+  control decisions and enforce access.
+developer_guidance: 'AC-24 ACCESS CONTROL DECISIONS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-24
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - AC-2
+  - AC-3
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-24 ACCESS CONTROL DECISIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

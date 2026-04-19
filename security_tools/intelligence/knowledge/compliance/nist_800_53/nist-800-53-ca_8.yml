@@ -1,0 +1,79 @@
+id: nist-800-53-ca_8
+title: CA-8 PENETRATION TESTING
+category: assurance_security
+applies_to:
+- security_assessment
+- continuous_monitoring
+- authorization
+tags:
+- 800-53
+- assessment
+- authorization
+- ca
+- ca_8
+- continuous-monitoring
+- nist
+severity_guidance: medium
+description: Penetration testing is a specialized type of assessment conducted on
+  systems or individual system components to identify vulnerabilities that could be
+  exploited by adversaries. Penetration testing goes beyond automated vulnerability
+  scanning and is conducted by agents and teams with demonstrable skills and experience
+  that include technical expertise in network, operating system, and/or application
+  level security. Penetration testing can be used to validate vulnerabilities or determine
+  the degree...
+rationale: Penetration testing is a specialized type of assessment conducted on systems
+  or individual system components to identify vulnerabilities that could be exploited
+  by adversaries. Penetration testing goes beyond automated vulnerability scanning
+  and is conducted by agents and teams with demonstrable skills and experience that
+  include technical expertise in network, operating system, and/or application level
+  security. Penetration testing can be used to validate vulnerabilities or determine
+  the degree of penetration resistance of systems to adversaries within specified
+  constraints. Such constraints include time, resources, and skills. Penetration testing
+  attempts to duplicate the actions of adversaries and provides a more in-depth analysis
+  of security- and privacy-related weaknesses or deficiencies. Penetration testing
+  is especially important when organizations are transitioning from older technologies
+  to newer technologies (e.g., transitioning from IPv4 to IPv6 network protocols).
+  Organizations can use the results of vulnerability analyses to support penetration
+  testing activities. Penetration testing can be conducted internally or externally
+  on the hardware, software, or firmware components of a system and can exercise both
+  physical and technical controls. A standard method for penetration testing includes
+  a pretest analysis based on full knowledge of the system, pretest identification
+  of potential vulnerabilities based on the pretest analysis, and testing designed
+  to determine the exploitability of vulnerabilities. All parties agree to the rules
+  of engagement before commencing penetration testing scenarios. Organizations correlate
+  the rules of engagement for the penetration tests with the tools, techniques, and
+  procedures that are anticipated to be employed by adversaries. Penetration testing
+  may result in the exposure of information that is protected by laws or regulations,
+  to individuals conducting the testing. Rules of engagement, contracts, or other
+  appropriate mechanisms can be used to communicate expectations for how to protect
+  this information. Risk assessments guide the decisions on the level of independence
+  required for the personnel conducting penetration testing.
+developer_guidance: 'CA-8 PENETRATION TESTING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CA-8
+  note: null
+risk_context:
+  family: CA
+  related_controls:
+  - RA-5
+  - RA-10
+  - SA-11
+  - SR-5
+  - SR-6
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for CA-8 PENETRATION TESTING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

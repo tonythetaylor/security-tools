@@ -1,0 +1,65 @@
+id: nist-800-53-sc_16
+title: SC-16 TRANSMISSION OF SECURITY AND PRIVACY ATTRIBUTES
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_16
+severity_guidance: high
+description: Security and privacy attributes can be explicitly or implicitly associated
+  with the information contained in organizational systems or system components. Attributes
+  are abstractions that represent the basic properties or characteristics of an entity
+  with respect to protecting information or the management of personally identifiable
+  information. Attributes are typically associated with internal data structures,
+  including records, buffers, and files within the system. Security and privacy attribut...
+rationale: Security and privacy attributes can be explicitly or implicitly associated
+  with the information contained in organizational systems or system components. Attributes
+  are abstractions that represent the basic properties or characteristics of an entity
+  with respect to protecting information or the management of personally identifiable
+  information. Attributes are typically associated with internal data structures,
+  including records, buffers, and files within the system. Security and privacy attributes
+  are used to implement access control and information flow control policies; reflect
+  special dissemination, management, or distribution instructions, including permitted
+  uses of personally identifiable information; or support other aspects of the information
+  security and privacy policies. Privacy attributes may be used independently or in
+  conjunction with security attributes.
+developer_guidance: 'SC-16 TRANSMISSION OF SECURITY AND PRIVACY ATTRIBUTES is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-16
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AC-3
+  - AC-4
+  - AC-16
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-16 TRANSMISSION OF SECURITY AND PRIVACY
+    ATTRIBUTES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

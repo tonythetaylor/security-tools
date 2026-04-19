@@ -1,0 +1,114 @@
+id: nist-800-218-po_3_2
+title: PO.3.2 Follow recommended security practices to
+category: build_security
+applies_to:
+- build_pipeline
+- toolchain_security
+- pipeline_integrity
+tags:
+- automation
+- development-environment
+- governance
+- nist_800_218
+- pipeline
+- po
+- po_3
+- po_3_2
+- prepare-the-organization
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.3.2: Follow recommended security practices to \ndeploy, operate,\
+  \ and maintain tools and toolchains. \nExample 1: Evaluate, select, and acquire\
+  \ tools, and assess the security of each \ntool. \nExample 2: Integrate tools with\
+  \ other tools and existing software development \nprocesses and workflows. \nExample\
+  \ 3: Use code-based configuration for toolchains (e.g., pipelines-as-code, \ntoolchains-as-code).\
+  \ \nExample 4: Implement the technologies and processes needed for reproducible\
+  \ \nbuilds. \nExample 5: Update, upgrade, or replace tools as needed to address\
+  \ tool \nvulnerabilities or add new tool capabilities. \nExample 6: Continuously\
+  \ monitor tools and tool logs for potential operational and \nsecurity issues, including\
+  \ policy violations and anomalous behavior. \nExample 7: Regularly verify the integrity\
+  \ and check the provenance of each tool \nto identify potential problems. \nExample\
+  \ 8: See PW.6 regarding compiler, interpreter, and build tools. \nExample 9: See\
+  \ PO.5 regarding implementing and maintaining secure \nenvironments. \nBSAFSS: DE.2\
+  \ \nBSIMM: SR1.1, SR1.3, SR3.4 \nCNCFSSCP: Securing Build Pipelines—Verification,\
+  \ Automation, Controlled Environments, \nSecure Authentication/Access; Securing\
+  \ Artefacts—Verification, Automation, Controlled \nEnvironments, Encryption; Securing\
+  \ Deployments—Verification, Automation \nEO14028: 4e(i)(F), 4e(ii), 4e(iii), 4e(v),\
+  \ 4e(vi), 4e(ix) \nIEC62443: SM-7 \nIR8397: 2.2 \nOWASPASVS: 1.14.3, 1.14.4, 14.1,\
+  \ 14.2 \nOWASPMASVS: 7.9 \nOWASPSCVS: 3, 5 \nSCAGILE: Tasks Requiring the Help of\
+  \ Security Experts 9 \nSCFPSSD: Use Current Compiler and Toolchain Versions and\
+  \ Secure Compiler Options \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178"
+rationale: "PO.3.2: Follow recommended security practices to \ndeploy, operate, and\
+  \ maintain tools and toolchains. \nExample 1: Evaluate, select, and acquire tools,\
+  \ and assess the security of each \ntool. \nExample 2: Integrate tools with other\
+  \ tools and existing software development \nprocesses and workflows. \nExample 3:\
+  \ Use code-based configuration for toolchains (e.g., pipelines-as-code, \ntoolchains-as-code).\
+  \ \nExample 4: Implement the technologies and processes needed for reproducible\
+  \ \nbuilds. \nExample 5: Update, upgrade, or replace tools as needed to address\
+  \ tool \nvulnerabilities or add new tool capabilities. \nExample 6: Continuously\
+  \ monitor tools and tool logs for potential operational and \nsecurity issues, including\
+  \ policy violations and anomalous behavior. \nExample 7: Regularly verify the integrity\
+  \ and check the provenance of each tool \nto identify potential problems. \nExample\
+  \ 8: See PW.6 regarding compiler, interpreter, and build tools. \nExample 9: See\
+  \ PO.5 regarding implementing and maintaining secure \nenvironments. \nBSAFSS: DE.2\
+  \ \nBSIMM: SR1.1, SR1.3, SR3.4 \nCNCFSSCP: Securing Build Pipelines—Verification,\
+  \ Automation, Controlled Environments, \nSecure Authentication/Access; Securing\
+  \ Artefacts—Verification, Automation, Controlled \nEnvironments, Encryption; Securing\
+  \ Deployments—Verification, Automation \nEO14028: 4e(i)(F), 4e(ii), 4e(iii), 4e(v),\
+  \ 4e(vi), 4e(ix) \nIEC62443: SM-7 \nIR8397: 2.2 \nOWASPASVS: 1.14.3, 1.14.4, 14.1,\
+  \ 14.2 \nOWASPMASVS: 7.9 \nOWASPSCVS: 3, 5 \nSCAGILE: Tasks Requiring the Help of\
+  \ Security Experts 9 \nSCFPSSD: Use Current Compiler and Toolchain Versions and\
+  \ Secure Compiler Options \nSCSIC: Vendor Software Delivery Integrity Controls \n\
+  SP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178"
+developer_guidance: "PO.3.2 Follow recommended security practices to defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.3.2: Follow recommended security\
+  \ practices to \ndeploy, operate, and maintain tools and toolchains. \nExample 1:\
+  \ Evaluate, select, and acquire tools, and assess the security of each \ntool. \n\
+  Example 2: Integrate tools with other tools and existing software development \n\
+  processes and workflows. \nExample 3: Use code-based configuration for toolchains\
+  \ (e.g., pipelines-as-code, \ntoolchains-as-code). \nExample 4: Implement the technologies\
+  \ and processes needed for reproducible \nbuilds. \nExample 5: Update, upgrade,\
+  \ or replace tools as needed to address tool \nvulnerabilities or add new tool capabilities.\
+  \ \nExample 6: Continuously monitor tools and tool logs for potential operational\
+  \ and \nsecurity issues, including policy violations and anomalous behavior. \n\
+  Example 7: Regularly verify the integrity and check the provenance of each tool\
+  \ \nto identify potential problems. \nExample 8: See PW.6 regarding compiler, interpreter,\
+  \ and build tools. \nExample 9: See PO.5 regarding implementing and maintaining\
+  \ secure \nenvironments. \nBSAFSS: DE.2 \nBSIMM: SR1.1, SR1.3, SR3.4 \nCNCFSSCP:\
+  \ Securing Build Pipelines—Verification, Automation, Controlled Environments, \n\
+  Secure Authentication/Access; Securing Artefacts—Verification, Automation, Controlled\
+  \ \nEnvironments, Encryption; Securing Deployments—Verification, Automation \nEO14028:\
+  \ 4e(i)(F), 4e(ii), 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nIR8397: 2.2\
+  \ \nOWASPASVS: 1.14.3, 1.14.4, 14.1, 14.2 \nOWASPMASVS: 7.9 \nOWASPSCVS: 3, 5 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 9 \nSCFPSSD: Use Current Compiler\
+  \ and Toolchain Versions and Secure Compiler Options \nSCSIC: Vendor Software Delivery\
+  \ Integrity Controls \nSP80053: SA-15 \nSP800161: SA-15 \nSP800181: K0013, K0178\n\
+  \nEnriched Guidance:\nPO.3.2 Follow recommended security practices to is an SSDF\
+  \ practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.3.2
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.3.2 Follow recommended security practices to
+implementation_examples: []

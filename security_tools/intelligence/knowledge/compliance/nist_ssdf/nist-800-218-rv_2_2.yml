@@ -1,0 +1,117 @@
+id: nist-800-218-rv_2_2
+title: RV.2.2 Plan and implement risk responses for
+category: remediation_management
+applies_to:
+- triage
+- remediation
+- advisories
+- patch_management
+tags:
+- nist_800_218
+- patching
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- rv
+- rv_2
+- rv_2_2
+- ssdf
+- task
+- triage
+severity_guidance: high
+description: "RV.2.2: Plan and implement risk responses for \nvulnerabilities. \n\
+  Example 1: Make a risk-based decision as to whether each vulnerability will be \n\
+  remediated or if the risk will be addressed through other means (e.g., risk \nacceptance,\
+  \ risk transference), and prioritize any actions to be taken. \nExample 2: If a\
+  \ permanent mitigation for a vulnerability is not yet available, \ndetermine how\
+  \ the vulnerability can be temporarily mitigated until the permanent \nsolution\
+  \ is available, and add that temporary remediation to the plan. \nExample 3: Develop\
+  \ and release security advisories that provide the necessary \ninformation to software\
+  \ acquirers, including descriptions of what the vulnerabilities \nare, how to find\
+  \ instances of the vulnerable software, and how to address them \n(e.g., where to\
+  \ get patches and what the patches change in the software; what \nconfiguration\
+  \ settings may need to be changed; how temporary workarounds \ncould be implemented).\
+  \ \nExample 4: Deliver remediations to acquirers via an automated and trusted \n\
+  delivery mechanism. A single remediation could address multiple vulnerabilities.\
+  \ \nExample 5: Update records of design decisions, risk responses, and approved\
+  \ \nexceptions as needed. See PW.1.2. \nBSAFSS: VM.1-1, VM-2 \nBSIMM: CMVM2.1 \n\
+  EO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: DM-4 \nISO30111: 7.1.4, 7.1.5\
+  \ \nNISTLABEL: 2.2.2.2 \nPCISSLC: 4.1, 4.2, 10.1 \nSCAGILE: Operational Security\
+  \ Task 2 \nSCFPSSD: Fix the Vulnerability, Identify Mitigating Factors or Workarounds\
+  \ \nSCTPC: MITIGATE \nSP80053: SA-5, SA-10, SA-11, SA-15(7) \nSP800160: 3.3.8 \n\
+  SP800161: SA-5, SA-8, SA-10, SA-11, SA-15(7) \nSP800181: T0163, T0229, T0264; K0009,\
+  \ K0070 \nAnalyze Vulnerabilities to Identify Their Root \nCauses (RV.3): Help reduce\
+  \ the frequency of \nvulnerabilities in the future."
+rationale: "RV.2.2: Plan and implement risk responses for \nvulnerabilities. \nExample\
+  \ 1: Make a risk-based decision as to whether each vulnerability will be \nremediated\
+  \ or if the risk will be addressed through other means (e.g., risk \nacceptance,\
+  \ risk transference), and prioritize any actions to be taken. \nExample 2: If a\
+  \ permanent mitigation for a vulnerability is not yet available, \ndetermine how\
+  \ the vulnerability can be temporarily mitigated until the permanent \nsolution\
+  \ is available, and add that temporary remediation to the plan. \nExample 3: Develop\
+  \ and release security advisories that provide the necessary \ninformation to software\
+  \ acquirers, including descriptions of what the vulnerabilities \nare, how to find\
+  \ instances of the vulnerable software, and how to address them \n(e.g., where to\
+  \ get patches and what the patches change in the software; what \nconfiguration\
+  \ settings may need to be changed; how temporary workarounds \ncould be implemented).\
+  \ \nExample 4: Deliver remediations to acquirers via an automated and trusted \n\
+  delivery mechanism. A single remediation could address multiple vulnerabilities.\
+  \ \nExample 5: Update records of design decisions, risk responses, and approved\
+  \ \nexceptions as needed. See PW.1.2. \nBSAFSS: VM.1-1, VM-2 \nBSIMM: CMVM2.1 \n\
+  EO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443: DM-4 \nISO30111: 7.1.4, 7.1.5\
+  \ \nNISTLABEL: 2.2.2.2 \nPCISSLC: 4.1, 4.2, 10.1 \nSCAGILE: Operational Security\
+  \ Task 2 \nSCFPSSD: Fix the Vulnerability, Identify Mitigating Factors or Workarounds\
+  \ \nSCTPC: MITIGATE \nSP80053: SA-5, SA-10, SA-11, SA-15(7) \nSP800160: 3.3.8 \n\
+  SP800161: SA-5, SA-8, SA-10, SA-11, SA-15(7) \nSP800181: T0163, T0229, T0264; K0009,\
+  \ K0070 \nAnalyze Vulnerabilities to Identify Their Root \nCauses (RV.3): Help reduce\
+  \ the frequency of \nvulnerabilities in the future."
+developer_guidance: "RV.2.2 Plan and implement risk responses for defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nRV.2.2: Plan and implement risk\
+  \ responses for \nvulnerabilities. \nExample 1: Make a risk-based decision as to\
+  \ whether each vulnerability will be \nremediated or if the risk will be addressed\
+  \ through other means (e.g., risk \nacceptance, risk transference), and prioritize\
+  \ any actions to be taken. \nExample 2: If a permanent mitigation for a vulnerability\
+  \ is not yet available, \ndetermine how the vulnerability can be temporarily mitigated\
+  \ until the permanent \nsolution is available, and add that temporary remediation\
+  \ to the plan. \nExample 3: Develop and release security advisories that provide\
+  \ the necessary \ninformation to software acquirers, including descriptions of what\
+  \ the vulnerabilities \nare, how to find instances of the vulnerable software, and\
+  \ how to address them \n(e.g., where to get patches and what the patches change\
+  \ in the software; what \nconfiguration settings may need to be changed; how temporary\
+  \ workarounds \ncould be implemented). \nExample 4: Deliver remediations to acquirers\
+  \ via an automated and trusted \ndelivery mechanism. A single remediation could\
+  \ address multiple vulnerabilities. \nExample 5: Update records of design decisions,\
+  \ risk responses, and approved \nexceptions as needed. See PW.1.2. \nBSAFSS: VM.1-1,\
+  \ VM-2 \nBSIMM: CMVM2.1 \nEO14028: 4e(iv), 4e(vi), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-4 \nISO30111: 7.1.4, 7.1.5 \nNISTLABEL: 2.2.2.2 \nPCISSLC: 4.1, 4.2, 10.1 \n\
+  SCAGILE: Operational Security Task 2 \nSCFPSSD: Fix the Vulnerability, Identify\
+  \ Mitigating Factors or Workarounds \nSCTPC: MITIGATE \nSP80053: SA-5, SA-10, SA-11,\
+  \ SA-15(7) \nSP800160: 3.3.8 \nSP800161: SA-5, SA-8, SA-10, SA-11, SA-15(7) \nSP800181:\
+  \ T0163, T0229, T0264; K0009, K0070 \nAnalyze Vulnerabilities to Identify Their\
+  \ Root \nCauses (RV.3): Help reduce the frequency of \nvulnerabilities in the future.\n\
+  \nEnriched Guidance:\nRV.2.2 Plan and implement risk responses for is an SSDF practice\
+  \ or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.2.2
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.2.2 Plan and implement risk responses for
+implementation_examples: []

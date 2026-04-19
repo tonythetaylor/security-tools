@@ -1,0 +1,68 @@
+id: nist-800-53-sr_7
+title: SR-7 SUPPLY CHAIN OPERATIONS SECURITY
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_7
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: Supply chain OPSEC expands the scope of OPSEC to include suppliers and
+  potential suppliers. OPSEC is a process that includes identifying critical information,
+  analyzing friendly actions related to operations and other activities to identify
+  actions that can be observed by potential adversaries, determining indicators that
+  potential adversaries might obtain that could be interpreted or pieced together
+  to derive information in sufficient time to cause harm to organizations, implementing
+  safeguards...
+rationale: Supply chain OPSEC expands the scope of OPSEC to include suppliers and
+  potential suppliers. OPSEC is a process that includes identifying critical information,
+  analyzing friendly actions related to operations and other activities to identify
+  actions that can be observed by potential adversaries, determining indicators that
+  potential adversaries might obtain that could be interpreted or pieced together
+  to derive information in sufficient time to cause harm to organizations, implementing
+  safeguards or countermeasures to eliminate or reduce exploitable vulnerabilities
+  and risk to an acceptable level, and considering how aggregated information may
+  expose users or specific uses of the supply chain. Supply chain information includes
+  user identities; uses for systems, system components, and system services; supplier
+  identities; security and privacy requirements; system and component configurations;
+  supplier processes; design specifications; and testing and evaluation results. Supply
+  chain OPSEC may require _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 371 organizations to withhold mission or business information
+  from suppliers and may include the use of intermediaries to hide the end use or
+  users of systems, system components, or system services.
+developer_guidance: 'SR-7 SUPPLY CHAIN OPERATIONS SECURITY is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-7
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - SC-38
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-7 SUPPLY CHAIN OPERATIONS SECURITY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

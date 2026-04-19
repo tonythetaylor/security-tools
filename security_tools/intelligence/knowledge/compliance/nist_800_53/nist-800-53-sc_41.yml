@@ -1,0 +1,57 @@
+id: nist-800-53-sc_41
+title: SC-41 PORT AND I/O DEVICE ACCESS
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_41
+severity_guidance: high
+description: Connection ports include Universal Serial Bus (USB), Thunderbolt, and
+  Firewire (IEEE 1394). Input/output (I/O) devices include compact disc and digital
+  versatile disc drives. Disabling or removing such connection ports and I/O devices
+  helps prevent the exfiltration of information from systems and the introduction
+  of malicious code from those ports or devices. Physically disabling or removing
+  ports and/or devices is the stronger action.
+rationale: Connection ports include Universal Serial Bus (USB), Thunderbolt, and Firewire
+  (IEEE 1394). Input/output (I/O) devices include compact disc and digital versatile
+  disc drives. Disabling or removing such connection ports and I/O devices helps prevent
+  the exfiltration of information from systems and the introduction of malicious code
+  from those ports or devices. Physically disabling or removing ports and/or devices
+  is the stronger action.
+developer_guidance: 'SC-41 PORT AND I/O DEVICE ACCESS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-41
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AC-20
+  - MP-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-41 PORT AND I/O DEVICE ACCESS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

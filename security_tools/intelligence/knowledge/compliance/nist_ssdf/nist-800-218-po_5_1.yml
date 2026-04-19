@@ -1,0 +1,145 @@
+id: nist-800-218-po_5_1
+title: PO.5.1 Separate and protect each environment
+category: development_environment_security
+applies_to:
+- development_environment
+- build_environment
+- access_control
+- hardening
+tags:
+- development-environment
+- governance
+- hardening
+- nist_800_218
+- po
+- po_5
+- po_5_1
+- prepare-the-organization
+- segmentation
+- ssdf
+- task
+- toolchain
+severity_guidance: medium
+description: "PO.5.1: Separate and protect each environment \ninvolved in software\
+  \ development. \nExample 1: Use multi-factor, risk-based authentication and conditional\
+  \ access for \neach environment. \nExample 2: Use network segmentation and access\
+  \ controls to separate the \nenvironments from each other and from production environments,\
+  \ and to \nseparate components from each other within each non-production environment,\
+  \ \nin order to reduce attack surfaces and attackers’ lateral movement and \nprivilege/access\
+  \ escalation. \nExample 3: Enforce authentication and tightly restrict connections\
+  \ entering and \nexiting each software development environment, including minimizing\
+  \ access to \nthe internet to only what is necessary. \nExample 4: Minimize direct\
+  \ human access to toolchain systems, such as build \nservices. Continuously monitor\
+  \ and audit all access attempts and all use of \nprivileged access. \nExample 5:\
+  \ Minimize the use of production-environment software and services \nfrom non-production\
+  \ environments. \nExample 6: Regularly log, monitor, and audit trust relationships\
+  \ for authorization \nand access between the environments and between the components\
+  \ within each \nenvironment. \nExample 7: Continuously log and monitor operations\
+  \ and alerts across all \ncomponents of the development environment to detect, respond,\
+  \ and recover \nBSAFSS: DE.1, IA.1, IA.2 \nCNCFSSCP: Securing Build Pipelines—Controlled\
+  \ Environments \nEO14028: 4e(i)(A), 4e(i)(B), 4e(i)(C), 4e(i)(D), 4e(i)(F), 4e(ii),\
+  \ 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nNISTCSF: PR.AC-5, PR.DS-7 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 11 \nSCSIC: Vendor Software\
+  \ Delivery Integrity Controls \nSP80053: SA-3(1), SA-8, SA-15 \nSP800161: SA-3,\
+  \ SA-8, SA-15 \nSP800181: OM-NET-001, SP-SYS-001; T0019, T0023, T0144, T0160, T0262,\
+  \ T0438, \nT0484, T0485, T0553; K0001, K0005, K0007, K0033, K0049, K0056, K0061,\
+  \ K0071, \nK0104, K0112, K0179, K0326, K0487; S0007, S0084, S0121; A0048\n\n \n\
+  \ \n \n \n \n9 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nfrom attempted and actual cyber incidents. \nExample 8: Configure security controls\
+  \ and other tools involved in separating and \nprotecting the environments to generate\
+  \ artifacts for their activities. \nExample 9: Continuously monitor all software\
+  \ deployed in each environment for \nnew vulnerabilities, and respond to vulnerabilities\
+  \ appropriately following a risk-\nbased approach. \nExample 10: Configure and implement\
+  \ measures to secure the environments’ \nhosting infrastructures following a zero\
+  \ trust architecture7."
+rationale: "PO.5.1: Separate and protect each environment \ninvolved in software development.\
+  \ \nExample 1: Use multi-factor, risk-based authentication and conditional access\
+  \ for \neach environment. \nExample 2: Use network segmentation and access controls\
+  \ to separate the \nenvironments from each other and from production environments,\
+  \ and to \nseparate components from each other within each non-production environment,\
+  \ \nin order to reduce attack surfaces and attackers’ lateral movement and \nprivilege/access\
+  \ escalation. \nExample 3: Enforce authentication and tightly restrict connections\
+  \ entering and \nexiting each software development environment, including minimizing\
+  \ access to \nthe internet to only what is necessary. \nExample 4: Minimize direct\
+  \ human access to toolchain systems, such as build \nservices. Continuously monitor\
+  \ and audit all access attempts and all use of \nprivileged access. \nExample 5:\
+  \ Minimize the use of production-environment software and services \nfrom non-production\
+  \ environments. \nExample 6: Regularly log, monitor, and audit trust relationships\
+  \ for authorization \nand access between the environments and between the components\
+  \ within each \nenvironment. \nExample 7: Continuously log and monitor operations\
+  \ and alerts across all \ncomponents of the development environment to detect, respond,\
+  \ and recover \nBSAFSS: DE.1, IA.1, IA.2 \nCNCFSSCP: Securing Build Pipelines—Controlled\
+  \ Environments \nEO14028: 4e(i)(A), 4e(i)(B), 4e(i)(C), 4e(i)(D), 4e(i)(F), 4e(ii),\
+  \ 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nNISTCSF: PR.AC-5, PR.DS-7 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 11 \nSCSIC: Vendor Software\
+  \ Delivery Integrity Controls \nSP80053: SA-3(1), SA-8, SA-15 \nSP800161: SA-3,\
+  \ SA-8, SA-15 \nSP800181: OM-NET-001, SP-SYS-001; T0019, T0023, T0144, T0160, T0262,\
+  \ T0438, \nT0484, T0485, T0553; K0001, K0005, K0007, K0033, K0049, K0056, K0061,\
+  \ K0071, \nK0104, K0112, K0179, K0326, K0487; S0007, S0084, S0121; A0048\n\n \n\
+  \ \n \n \n \n9 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nfrom attempted and actual cyber incidents. \nExample 8: Configure security controls\
+  \ and other tools involved in separating and \nprotecting the environments to generate\
+  \ artifacts for their activities. \nExample 9: Continuously monitor all software\
+  \ deployed in each environment for \nnew vulnerabilities, and respond to vulnerabilities\
+  \ appropriately following a risk-\nbased approach. \nExample 10: Configure and implement\
+  \ measures to secure the environments’ \nhosting infrastructures following a zero\
+  \ trust architecture7."
+developer_guidance: "PO.5.1 Separate and protect each environment defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPO.5.1: Separate and protect each\
+  \ environment \ninvolved in software development. \nExample 1: Use multi-factor,\
+  \ risk-based authentication and conditional access for \neach environment. \nExample\
+  \ 2: Use network segmentation and access controls to separate the \nenvironments\
+  \ from each other and from production environments, and to \nseparate components\
+  \ from each other within each non-production environment, \nin order to reduce attack\
+  \ surfaces and attackers’ lateral movement and \nprivilege/access escalation. \n\
+  Example 3: Enforce authentication and tightly restrict connections entering and\
+  \ \nexiting each software development environment, including minimizing access to\
+  \ \nthe internet to only what is necessary. \nExample 4: Minimize direct human access\
+  \ to toolchain systems, such as build \nservices. Continuously monitor and audit\
+  \ all access attempts and all use of \nprivileged access. \nExample 5: Minimize\
+  \ the use of production-environment software and services \nfrom non-production\
+  \ environments. \nExample 6: Regularly log, monitor, and audit trust relationships\
+  \ for authorization \nand access between the environments and between the components\
+  \ within each \nenvironment. \nExample 7: Continuously log and monitor operations\
+  \ and alerts across all \ncomponents of the development environment to detect, respond,\
+  \ and recover \nBSAFSS: DE.1, IA.1, IA.2 \nCNCFSSCP: Securing Build Pipelines—Controlled\
+  \ Environments \nEO14028: 4e(i)(A), 4e(i)(B), 4e(i)(C), 4e(i)(D), 4e(i)(F), 4e(ii),\
+  \ 4e(iii), 4e(v), 4e(vi), 4e(ix) \nIEC62443: SM-7 \nNISTCSF: PR.AC-5, PR.DS-7 \n\
+  SCAGILE: Tasks Requiring the Help of Security Experts 11 \nSCSIC: Vendor Software\
+  \ Delivery Integrity Controls \nSP80053: SA-3(1), SA-8, SA-15 \nSP800161: SA-3,\
+  \ SA-8, SA-15 \nSP800181: OM-NET-001, SP-SYS-001; T0019, T0023, T0144, T0160, T0262,\
+  \ T0438, \nT0484, T0485, T0553; K0001, K0005, K0007, K0033, K0049, K0056, K0061,\
+  \ K0071, \nK0104, K0112, K0179, K0326, K0487; S0007, S0084, S0121; A0048\n\n \n\
+  \ \n \n \n \n9 \nPractices \nTasks \nNotional Implementation Examples \nReferences\
+  \ \nfrom attempted and actual cyber incidents. \nExample 8: Configure security controls\
+  \ and other tools involved in separating and \nprotecting the environments to generate\
+  \ artifacts for their activities. \nExample 9: Continuously monitor all software\
+  \ deployed in each environment for \nnew vulnerabilities, and respond to vulnerabilities\
+  \ appropriately following a risk-\nbased approach. \nExample 10: Configure and implement\
+  \ measures to secure the environments’ \nhosting infrastructures following a zero\
+  \ trust architecture7.\n\nEnriched Guidance:\nPO.5.1 Separate and protect each environment\
+  \ is an SSDF practice or task."
+recommended_patterns:
+- secure_toolchain_management
+- development_environment_hardening
+- security_requirements_management
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PO.5.1
+  note: null
+risk_context:
+  group: PO
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Validate the practice is reflected in organizational policy, tooling, and development
+    environment controls.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PO.5.1 Separate and protect each environment
+implementation_examples: []

@@ -1,0 +1,69 @@
+id: nist-800-53-pm_7
+title: PM-7 ENTERPRISE ARCHITECTURE
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_7
+- program-management
+- risk
+severity_guidance: medium
+description: The integration of security and privacy requirements and controls into
+  the enterprise architecture helps to ensure that security and privacy considerations
+  are addressed throughout the system development life cycle and are explicitly related
+  to the organization’s mission and business processes. The process of security and
+  privacy requirements integration also embeds into the enterprise architecture and
+  the organization’s security and privacy architectures consistent with the organizational
+  risk...
+rationale: The integration of security and privacy requirements and controls into
+  the enterprise architecture helps to ensure that security and privacy considerations
+  are addressed throughout the system development life cycle and are explicitly related
+  to the organization’s mission and business processes. The process of security and
+  privacy requirements integration also embeds into the enterprise architecture and
+  the organization’s security and privacy architectures consistent with the organizational
+  risk management strategy. For PM-7, security and privacy architectures are developed
+  at a system-of-systems level, representing all organizational _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 207 systems. For PL-8, the security and privacy architectures
+  are developed at a level that represents an individual system. The system-level
+  architectures are consistent with the security and privacy architectures defined
+  for the organization. Security and privacy requirements and control integration
+  are most effectively accomplished through the rigorous application of the Risk Management
+  Framework [SP 800-37] and supporting security standards and guidelines.
+developer_guidance: 'PM-7 ENTERPRISE ARCHITECTURE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-7
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AU-6
+  - PL-2
+  - PL-8
+  - PM-11
+  - RA-2
+  - SA-3
+  - SA-8
+  - SA-17
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-7 ENTERPRISE ARCHITECTURE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

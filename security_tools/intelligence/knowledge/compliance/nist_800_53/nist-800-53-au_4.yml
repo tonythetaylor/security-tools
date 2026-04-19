@@ -1,0 +1,61 @@
+id: nist-800-53-au_4
+title: AU-4 AUDIT LOG STORAGE CAPACITY
+category: logging_security
+applies_to:
+- audit_logging
+- audit_trail
+- security_monitoring
+tags:
+- 800-53
+- au
+- au_4
+- audit
+- logging
+- nist
+- traceability
+severity_guidance: medium
+description: Organizations consider the types of audit logging to be performed and
+  the audit log processing requirements when allocating audit log storage capacity.
+  Allocating sufficient audit log storage capacity reduces the likelihood of such
+  capacity being exceeded and resulting in the potential loss or reduction of audit
+  logging capability.
+rationale: Organizations consider the types of audit logging to be performed and the
+  audit log processing requirements when allocating audit log storage capacity. Allocating
+  sufficient audit log storage capacity reduces the likelihood of such capacity being
+  exceeded and resulting in the potential loss or reduction of audit logging capability.
+developer_guidance: 'AU-4 AUDIT LOG STORAGE CAPACITY is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- audit_logging
+- tamper_resistant_logs
+- log_review_and_alerting
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AU-4
+  note: null
+risk_context:
+  family: AU
+  related_controls:
+  - AU-2
+  - AU-5
+  - AU-6
+  - AU-7
+  - AU-9
+  - AU-11
+  - AU-12
+  - AU-14
+  - SI-4
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for AU-4 AUDIT LOG STORAGE CAPACITY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

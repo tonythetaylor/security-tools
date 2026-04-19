@@ -1,0 +1,87 @@
+id: nist-800-53-ra_2
+title: RA-2 SECURITY CATEGORIZATION
+category: risk_security
+applies_to:
+- risk_assessment
+- threat_analysis
+- vulnerability_management
+tags:
+- 800-53
+- assessment
+- nist
+- ra
+- ra_2
+- risk
+- vulnerabilities
+severity_guidance: medium
+description: 'RA-2 SECURITY CATEGORIZATION requires: Categorize the system and information
+  it processes, stores, and transmits; Document the security categorization results,
+  including supporting rationale, in the security plan for the system; and; Verify
+  that the authorizing official or authorizing official designated representative
+  reviews and approves the security categorization decision.'
+rationale: Security categories describe the potential adverse impacts or negative
+  consequences to organizational operations, organizational assets, and individuals
+  if organizational information and systems are compromised through a loss of confidentiality,
+  integrity, or availability. Security categorization is also a type of asset loss
+  characterization in systems security engineering processes that is carried out throughout
+  the system development life cycle. Organizations can use privacy risk assessments
+  or privacy impact assessments to better understand the potential adverse effects
+  on individuals. [CNSSI 1253] provides additional guidance on categorization for
+  national security systems. Organizations conduct the security categorization process
+  as an organization-wide activity with the direct involvement of chief information
+  officers, senior agency information security officers, senior agency officials for
+  privacy, system owners, mission and business owners, and information owners or stewards.
+  Organizations consider the potential adverse impacts to other organizations and,
+  in accordance with [USA PATRIOT] and Homeland Security Presidential Directives,
+  potential national-level adverse impacts. Security categorization processes facilitate
+  the development of inventories of information assets and, along with CM-8, mappings
+  to specific system components where information is processed, stored, or transmitted.
+  The security categorization process is revisited throughout the system development
+  life cycle to ensure that the security categories remain accurate and relevant.
+developer_guidance: 'RA-2 SECURITY CATEGORIZATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Categorize the system and information it processes, stores, and transmits
+
+  - Document the security categorization results, including supporting rationale,
+  in the security plan for the system; and
+
+  - Verify that the authorizing official or authorizing official designated representative
+  reviews and approves the security categorization decision'
+recommended_patterns:
+- risk_assessment
+- threat_modeling
+- vulnerability_assessment
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: RA-2
+  note: null
+risk_context:
+  family: RA
+  related_controls:
+  - CM-8
+  - MP-4
+  - PL-2
+  - PL-10
+  - PL-11
+  - PM-7
+  - RA-3
+  - RA-5
+  - RA-7
+  - RA-8
+  - SA-8
+  - SC-7
+  - SI-12
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for RA-2 SECURITY CATEGORIZATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

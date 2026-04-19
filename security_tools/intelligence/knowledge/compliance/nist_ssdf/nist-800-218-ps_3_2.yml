@@ -1,0 +1,114 @@
+id: nist-800-218-ps_3_2
+title: PS.3.2 Collect, safeguard, maintain, and share
+category: provenance_security
+applies_to:
+- sbom
+- provenance
+- artifact_retention
+- software_inventory
+tags:
+- integrity
+- inventory
+- nist_800_218
+- protect-software
+- provenance
+- ps
+- ps_3
+- ps_3_2
+- sbom
+- signing
+- ssdf
+- task
+severity_guidance: high
+description: "PS.3.2: Collect, safeguard, maintain, and share \nprovenance data for\
+  \ all components of each software \nrelease (e.g., in a software bill of materials\
+  \ [SBOM]). \nExample 1: Make the provenance data available to software acquirers\
+  \ in \naccordance with the organization’s policies, preferably using standards-based\
+  \ \nformats. \nExample 2: Make the provenance data available to the organization’s\
+  \ operations \nand response teams to aid them in mitigating software vulnerabilities.\
+  \ \nExample 3: Protect the integrity of provenance data, and provide a way for \n\
+  recipients to verify provenance data integrity. \nExample 4: Update the provenance\
+  \ data every time any of the software’s \ncomponents are updated. \nBSAFSS: SM.2\
+  \ \nBSIMM: SE3.6 \nCNCFSSCP: Securing Materials—Verification, Automation \nEO14028:\
+  \ 4e(vi), 4e(vii), 4e(ix), 4e(x) \nNTIASBOM: All \nOWASPSCVS: 1.4, 2 \nSCSIC: Vendor\
+  \ Software Delivery Integrity Controls \nSCTPC: MAINTAIN3 \nSP80053: SA-8, SR-3,\
+  \ SR-4 \nSP800161: SA-8, SR-3, SR-4\n\n \n \n \n \n \n11 \nPractices \nTasks \n\
+  Notional Implementation Examples \nReferences \nProduce Well-Secured Software (PW)\
+  \ \nDesign Software to Meet Security \nRequirements and Mitigate Security Risks\
+  \ \n(PW.1): Identify and evaluate the security \nrequirements for the software;\
+  \ determine what \nsecurity risks the software is likely to face during \noperation\
+  \ and how the software’s design and \narchitecture should mitigate those risks;\
+  \ and \njustify any cases where risk-based analysis \nindicates that security requirements\
+  \ should be \nrelaxed or waived. Addressing security \nrequirements and risks during\
+  \ software design \n(secure by design) is key for improving software \nsecurity\
+  \ and also helps improve development \nefficiency."
+rationale: "PS.3.2: Collect, safeguard, maintain, and share \nprovenance data for\
+  \ all components of each software \nrelease (e.g., in a software bill of materials\
+  \ [SBOM]). \nExample 1: Make the provenance data available to software acquirers\
+  \ in \naccordance with the organization’s policies, preferably using standards-based\
+  \ \nformats. \nExample 2: Make the provenance data available to the organization’s\
+  \ operations \nand response teams to aid them in mitigating software vulnerabilities.\
+  \ \nExample 3: Protect the integrity of provenance data, and provide a way for \n\
+  recipients to verify provenance data integrity. \nExample 4: Update the provenance\
+  \ data every time any of the software’s \ncomponents are updated. \nBSAFSS: SM.2\
+  \ \nBSIMM: SE3.6 \nCNCFSSCP: Securing Materials—Verification, Automation \nEO14028:\
+  \ 4e(vi), 4e(vii), 4e(ix), 4e(x) \nNTIASBOM: All \nOWASPSCVS: 1.4, 2 \nSCSIC: Vendor\
+  \ Software Delivery Integrity Controls \nSCTPC: MAINTAIN3 \nSP80053: SA-8, SR-3,\
+  \ SR-4 \nSP800161: SA-8, SR-3, SR-4\n\n \n \n \n \n \n11 \nPractices \nTasks \n\
+  Notional Implementation Examples \nReferences \nProduce Well-Secured Software (PW)\
+  \ \nDesign Software to Meet Security \nRequirements and Mitigate Security Risks\
+  \ \n(PW.1): Identify and evaluate the security \nrequirements for the software;\
+  \ determine what \nsecurity risks the software is likely to face during \noperation\
+  \ and how the software’s design and \narchitecture should mitigate those risks;\
+  \ and \njustify any cases where risk-based analysis \nindicates that security requirements\
+  \ should be \nrelaxed or waived. Addressing security \nrequirements and risks during\
+  \ software design \n(secure by design) is key for improving software \nsecurity\
+  \ and also helps improve development \nefficiency."
+developer_guidance: "PS.3.2 Collect, safeguard, maintain, and share defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPS.3.2: Collect, safeguard, maintain,\
+  \ and share \nprovenance data for all components of each software \nrelease (e.g.,\
+  \ in a software bill of materials [SBOM]). \nExample 1: Make the provenance data\
+  \ available to software acquirers in \naccordance with the organization’s policies,\
+  \ preferably using standards-based \nformats. \nExample 2: Make the provenance data\
+  \ available to the organization’s operations \nand response teams to aid them in\
+  \ mitigating software vulnerabilities. \nExample 3: Protect the integrity of provenance\
+  \ data, and provide a way for \nrecipients to verify provenance data integrity.\
+  \ \nExample 4: Update the provenance data every time any of the software’s \ncomponents\
+  \ are updated. \nBSAFSS: SM.2 \nBSIMM: SE3.6 \nCNCFSSCP: Securing Materials—Verification,\
+  \ Automation \nEO14028: 4e(vi), 4e(vii), 4e(ix), 4e(x) \nNTIASBOM: All \nOWASPSCVS:\
+  \ 1.4, 2 \nSCSIC: Vendor Software Delivery Integrity Controls \nSCTPC: MAINTAIN3\
+  \ \nSP80053: SA-8, SR-3, SR-4 \nSP800161: SA-8, SR-3, SR-4\n\n \n \n \n \n \n11\
+  \ \nPractices \nTasks \nNotional Implementation Examples \nReferences \nProduce\
+  \ Well-Secured Software (PW) \nDesign Software to Meet Security \nRequirements and\
+  \ Mitigate Security Risks \n(PW.1): Identify and evaluate the security \nrequirements\
+  \ for the software; determine what \nsecurity risks the software is likely to face\
+  \ during \noperation and how the software’s design and \narchitecture should mitigate\
+  \ those risks; and \njustify any cases where risk-based analysis \nindicates that\
+  \ security requirements should be \nrelaxed or waived. Addressing security \nrequirements\
+  \ and risks during software design \n(secure by design) is key for improving software\
+  \ \nsecurity and also helps improve development \nefficiency.\n\nEnriched Guidance:\n\
+  PS.3.2 Collect, safeguard, maintain, and share is an SSDF practice or task."
+recommended_patterns:
+- artifact_integrity_verification
+- code_signing
+- provenance_tracking
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PS.3.2
+  note: null
+risk_context:
+  group: PS
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Verify integrity protections are implemented and auditable across software artifacts
+    and releases.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PS.3.2 Collect, safeguard, maintain, and share
+implementation_examples: []

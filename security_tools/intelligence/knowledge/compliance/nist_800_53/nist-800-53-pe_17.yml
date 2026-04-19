@@ -1,0 +1,65 @@
+id: nist-800-53-pe_17
+title: PE-17 ALTERNATE WORK SITE
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_17
+- physical-security
+severity_guidance: medium
+description: 'PE-17 ALTERNATE WORK SITE requires: Determine and document the [Assignment:
+  organization-defined alternate work sites] allowed for use by employees; Employ
+  the following controls at alternate work sites: [Assignment: organization-defined
+  controls]; Assess the effectiveness of controls at alternate work sites; and.'
+rationale: Alternate work sites include government facilities or the private residences
+  of employees. While distinct from alternative processing sites, alternate work sites
+  can provide readily available alternate locations during contingency operations.
+  Organizations can define different sets of controls for specific alternate work
+  sites or types of sites depending on the work-related activities conducted at the
+  sites. Implementing and assessing the effectiveness of organization-defined controls
+  and providing a means to communicate incidents at alternate work sites supports
+  the contingency planning activities of organizations.
+developer_guidance: 'PE-17 ALTERNATE WORK SITE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Determine and document the [Assignment: organization-defined alternate work sites]
+  allowed for use by employees
+
+  - Employ the following controls at alternate work sites: [Assignment: organization-defined
+  controls]
+
+  - Assess the effectiveness of controls at alternate work sites; and
+
+  - Provide a means for employees to communicate with information security and privacy
+  personnel in case of incidents'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-17
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AC-17
+  - AC-18
+  - CP-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-17 ALTERNATE WORK SITE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

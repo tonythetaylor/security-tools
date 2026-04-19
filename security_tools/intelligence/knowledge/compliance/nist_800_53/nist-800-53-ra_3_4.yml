@@ -1,0 +1,47 @@
+id: nist-800-53-ra_3_4
+title: RA-3(4) PREDICTIVE CYBER ANALYTICS
+category: risk_security
+applies_to:
+- risk_assessment
+- threat_analysis
+- vulnerability_management
+tags:
+- 800-53
+- assessment
+- control-enhancement
+- nist
+- ra
+- ra_3_4
+- risk
+- vulnerabilities
+severity_guidance: medium
+description: RA-3(4) PREDICTIVE CYBER ANALYTICS
+rationale: RA-3(4) PREDICTIVE CYBER ANALYTICS
+developer_guidance: 'RA-3(4) PREDICTIVE CYBER ANALYTICS is a NIST SP 800-53 Rev. 5
+  requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- risk_assessment
+- threat_modeling
+- vulnerability_assessment
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: RA-3(4)
+  note: null
+risk_context:
+  family: RA
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for RA-3(4) PREDICTIVE CYBER ANALYTICS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

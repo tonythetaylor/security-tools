@@ -1,0 +1,69 @@
+id: nist-800-53-sa_2
+title: SA-2 ALLOCATION OF RESOURCES
+category: secure_development
+applies_to:
+- secure_sdlc
+- developer_testing
+- supply_chain_security
+- application_security
+tags:
+- 800-53
+- developer-testing
+- nist
+- sa
+- sa_2
+- sdlc
+- secure-development
+severity_guidance: medium
+description: 'SA-2 ALLOCATION OF RESOURCES requires: Determine the high-level information
+  security and privacy requirements for the system or system service in mission and
+  business process planning; Determine, document, and allocate the resources required
+  to protect the system or system service as part of the organizational capital planning
+  and investment control process; and; Establish a discrete line item for information
+  security and privacy in organizational programming and budgeting documentation.'
+rationale: Resource allocation for information security and privacy includes funding
+  for system and services acquisition, sustainment, and supply chain-related risks
+  throughout the system development life cycle.
+developer_guidance: 'SA-2 ALLOCATION OF RESOURCES is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Determine the high-level information security and privacy requirements for the
+  system or system service in mission and business process planning
+
+  - Determine, document, and allocate the resources required to protect the system
+  or system service as part of the organizational capital planning and investment
+  control process; and
+
+  - Establish a discrete line item for information security and privacy in organizational
+  programming and budgeting documentation'
+recommended_patterns:
+- secure_sdlc
+- developer_testing
+- supply_chain_review
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SA-2
+  note: null
+risk_context:
+  family: SA
+  related_controls:
+  - PL-7
+  - PM-3
+  - PM-11
+  - SA-9
+  - SR-3
+  - SR-5
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SA-2 ALLOCATION OF RESOURCES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Ensure the control is integrated into development and testing workflows.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

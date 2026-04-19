@@ -1,0 +1,64 @@
+id: nist-800-53-sr_6
+title: SR-6 SUPPLIER ASSESSMENTS AND REVIEWS
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- nist
+- sr
+- sr_6
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: An assessment and review of supplier risk includes security and supply
+  chain risk management processes, foreign ownership, control or influence (FOCI),
+  and the ability of the supplier to effectively assess subordinate second-tier and
+  third-tier suppliers and contractors. The reviews may be conducted by the organization
+  or by an independent third party. The reviews consider documented processes, documented
+  controls, all-source intelligence, and publicly available information related to
+  the suppli...
+rationale: An assessment and review of supplier risk includes security and supply
+  chain risk management processes, foreign ownership, control or influence (FOCI),
+  and the ability of the supplier to effectively assess subordinate second-tier and
+  third-tier suppliers and contractors. The reviews may be conducted by the organization
+  or by an independent third party. The reviews consider documented processes, documented
+  controls, all-source intelligence, and publicly available information related to
+  the supplier or contractor. Organizations can use open-source information to monitor
+  for indications of stolen information, poor development and quality control practices,
+  information spillage, or counterfeits. In some cases, it may be appropriate or required
+  to share assessment and review results with other organizations in accordance with
+  any applicable rules, policies, or inter-organizational agreements or contracts.
+developer_guidance: 'SR-6 SUPPLIER ASSESSMENTS AND REVIEWS is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-6
+  note: null
+risk_context:
+  family: SR
+  related_controls:
+  - SR-3
+  - SR-5
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-6 SUPPLIER ASSESSMENTS AND REVIEWS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

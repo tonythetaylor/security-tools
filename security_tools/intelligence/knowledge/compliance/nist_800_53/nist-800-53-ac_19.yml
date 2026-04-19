@@ -1,0 +1,49 @@
+id: nist-800-53-ac_19
+title: AC-19 Access Control for Mobile Devices
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_19
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: AC-19 Access Control for Mobile Devices
+rationale: AC-19 Access Control for Mobile Devices
+developer_guidance: 'AC-19 Access Control for Mobile Devices is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-19
+  note: null
+risk_context:
+  family: AC
+  related_controls: []
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-19 Access Control for Mobile Devices.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

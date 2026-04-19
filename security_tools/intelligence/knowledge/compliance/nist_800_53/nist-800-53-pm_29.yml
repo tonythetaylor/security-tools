@@ -1,0 +1,58 @@
+id: nist-800-53-pm_29
+title: PM-29 RISK MANAGEMENT PROGRAM LEADERSHIP ROLES
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_29
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-29 RISK MANAGEMENT PROGRAM LEADERSHIP ROLES requires: Appoint a Senior
+  Accountable Official for Risk Management to align organizational information security
+  and privacy management processes with strategic, operational, and budgetary planning
+  processes; and; Establish a Risk Executive (function) to view and analyze risk from
+  an organization-wide perspective and ensure management of risk is consistent across
+  the organization.'
+rationale: The senior accountable official for risk management leads the risk executive
+  (function) in organization-wide risk management activities.
+developer_guidance: 'PM-29 RISK MANAGEMENT PROGRAM LEADERSHIP ROLES is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Appoint a Senior Accountable Official for Risk Management to align organizational
+  information security and privacy management processes with strategic, operational,
+  and budgetary planning processes; and
+
+  - Establish a Risk Executive (function) to view and analyze risk from an organization-wide
+  perspective and ensure management of risk is consistent across the organization'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-29
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - PM-2
+  - PM-19
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-29 RISK MANAGEMENT PROGRAM LEADERSHIP
+    ROLES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

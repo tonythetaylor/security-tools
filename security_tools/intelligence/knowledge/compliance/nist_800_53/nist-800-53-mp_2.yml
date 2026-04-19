@@ -1,0 +1,69 @@
+id: nist-800-53-mp_2
+title: MP-2 MEDIA ACCESS
+category: data_security
+applies_to:
+- media_protection
+- data_handling
+- media_sanitization
+tags:
+- 800-53
+- data-handling
+- media
+- mp
+- mp_2
+- nist
+- sanitization
+severity_guidance: medium
+description: System media includes digital and non-digital media. Digital media includes
+  flash drives, diskettes, magnetic tapes, external or removable hard disk drives
+  (e.g., solid state, magnetic), compact discs, and digital versatile discs. Non-digital
+  media includes paper and microfilm. Denying access to patient medical records in
+  a community hospital unless the individuals seeking access to such records are authorized
+  healthcare providers is an example of restricting access to non-digital media. Limitin...
+rationale: System media includes digital and non-digital media. Digital media includes
+  flash drives, diskettes, magnetic tapes, external or removable hard disk drives
+  (e.g., solid state, magnetic), compact discs, and digital versatile discs. Non-digital
+  media includes paper and microfilm. Denying access to patient medical records in
+  a community hospital unless the individuals seeking access to such records are authorized
+  healthcare providers is an example of restricting access to non-digital media. Limiting
+  access to the design specifications stored on compact discs in the media library
+  to individuals on the system development team is an example of restricting access
+  to digital media.
+developer_guidance: 'MP-2 MEDIA ACCESS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: MP-2
+  note: null
+risk_context:
+  family: MP
+  related_controls:
+  - AC-19
+  - AU-9
+  - CP-2
+  - CP-9
+  - CP-10
+  - MA-5
+  - MP-4
+  - MP-6
+  - PE-2
+  - PE-3
+  - SC-12
+  - SC-13
+  - SC-34
+  - SI-12
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for MP-2 MEDIA ACCESS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

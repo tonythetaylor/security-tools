@@ -1,0 +1,73 @@
+id: nist-800-53-pl_10
+title: PL-10 BASELINE SELECTION
+category: governance_security
+applies_to:
+- security_planning
+- policy
+- system_security_plan
+tags:
+- 800-53
+- governance
+- nist
+- pl
+- pl_10
+- planning
+- policy
+severity_guidance: medium
+description: Control baselines are predefined sets of controls specifically assembled
+  to address the protection needs of a group, organization, or community of interest.
+  Controls are chosen for baselines to either satisfy mandates imposed by laws, executive
+  orders, directives, regulations, policies, standards, and guidelines or address
+  threats common to all users of the baseline under the assumptions specific to the
+  baseline. Baselines represent a starting point for the protection of individuals’
+  privacy, in...
+rationale: Control baselines are predefined sets of controls specifically assembled
+  to address the protection needs of a group, organization, or community of interest.
+  Controls are chosen for baselines to either satisfy mandates imposed by laws, executive
+  orders, directives, regulations, policies, standards, and guidelines or address
+  threats common to all users of the baseline under the assumptions specific to the
+  baseline. Baselines represent a starting point for the protection of individuals’
+  privacy, information, and information systems with subsequent tailoring actions
+  to manage risk in accordance with mission, business, or other constraints (see PL-11).
+  Federal control baselines are provided in [SP 800-53B]. The selection of a control
+  baseline is determined by the needs of stakeholders. Stakeholder needs consider
+  mission and business requirements as well as mandates imposed by applicable laws,
+  executive orders, directives, policies, regulations, standards, and guidelines.
+  For example, the control baselines in [SP 800-53B] are based on the requirements
+  from [FISMA] and [PRIVACT]. The requirements, along with the NIST standards and
+  guidelines implementing the legislation, direct organizations to select one of the
+  control baselines after the reviewing the information types and the information
+  that is processed, stored, and transmitted on the system; analyzing the potential
+  adverse impact of the loss or compromise of the information or system on the organization’s
+  operations and assets, individuals, other organizations, or the Nation; and considering
+  the results from system and organizational risk assessments. [CNSSI 1253] provides
+  guidance on control baselines for national security systems.
+developer_guidance: 'PL-10 BASELINE SELECTION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PL-10
+  note: null
+risk_context:
+  family: PL
+  related_controls:
+  - PL-2
+  - PL-11
+  - RA-2
+  - RA-3
+  - SA-8
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PL-10 BASELINE SELECTION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

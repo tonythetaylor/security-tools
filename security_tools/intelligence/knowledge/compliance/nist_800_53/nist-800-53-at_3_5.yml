@@ -1,0 +1,45 @@
+id: nist-800-53-at_3_5
+title: AT-3(5) PROCESSING PERSONALLY IDENTIFIABLE INFORMATION
+category: training_security
+applies_to:
+- security_training
+- awareness
+- role_based_training
+tags:
+- 800-53
+- at
+- at_3_5
+- awareness
+- control-enhancement
+- education
+- nist
+- training
+severity_guidance: medium
+description: AT-3(5) PROCESSING PERSONALLY IDENTIFIABLE INFORMATION
+rationale: AT-3(5) PROCESSING PERSONALLY IDENTIFIABLE INFORMATION
+developer_guidance: 'AT-3(5) PROCESSING PERSONALLY IDENTIFIABLE INFORMATION is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AT-3(5)
+  note: null
+risk_context:
+  family: AT
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for AT-3(5) PROCESSING PERSONALLY IDENTIFIABLE
+    INFORMATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

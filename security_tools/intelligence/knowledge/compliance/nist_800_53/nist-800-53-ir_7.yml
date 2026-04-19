@@ -1,0 +1,58 @@
+id: nist-800-53-ir_7
+title: IR-7 INCIDENT RESPONSE ASSISTANCE
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- 800-53
+- incident-response
+- ir
+- ir_7
+- nist
+- operations
+- response
+severity_guidance: medium
+description: Incident response support resources provided by organizations include
+  help desks, assistance groups, automated ticketing systems to open and track incident
+  response tickets, and access to forensics services or consumer redress services,
+  when required.
+rationale: Incident response support resources provided by organizations include help
+  desks, assistance groups, automated ticketing systems to open and track incident
+  response tickets, and access to forensics services or consumer redress services,
+  when required.
+developer_guidance: 'IR-7 INCIDENT RESPONSE ASSISTANCE is a NIST SP 800-53 Rev. 5
+  requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IR-7
+  note: null
+risk_context:
+  family: IR
+  related_controls:
+  - AT-2
+  - AT-3
+  - IR-4
+  - IR-6
+  - IR-8
+  - PM-22
+  - PM-26
+  - SA-9
+  - SI-18
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for IR-7 INCIDENT RESPONSE ASSISTANCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

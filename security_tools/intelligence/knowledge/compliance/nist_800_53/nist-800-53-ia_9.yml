@@ -1,0 +1,65 @@
+id: nist-800-53-ia_9
+title: IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION
+category: identity_security
+applies_to:
+- authentication
+- identity_management
+- credential_security
+tags:
+- 800-53
+- authentication
+- credentials
+- ia
+- ia_9
+- identity
+- nist
+severity_guidance: high
+description: Services that may require identification and authentication include web
+  applications using digital certificates or services or applications that query a
+  database. Identification and authentication methods for system services and applications
+  include information or code signing, provenance graphs, and electronic signatures
+  that indicate the sources of services. Decisions regarding the validity of identification
+  and authentication claims can be made by services separate from the services acting
+  on...
+rationale: Services that may require identification and authentication include web
+  applications using digital certificates or services or applications that query a
+  database. Identification and authentication methods for system services and applications
+  include information or code signing, provenance graphs, and electronic signatures
+  that indicate the sources of services. Decisions regarding the validity of identification
+  and authentication claims can be made by services separate from the services acting
+  on those decisions. This can occur in distributed system architectures. In such
+  situations, the identification and authentication decisions (instead of actual identifiers
+  and authentication data) are provided to the services that need to act on those
+  decisions.
+developer_guidance: 'IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- strong_authentication
+- credential_lifecycle_management
+- identity_assurance
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IA-9
+  note: null
+risk_context:
+  family: IA
+  related_controls:
+  - IA-3
+  - IA-4
+  - IA-5
+  - SC-8
+ownership:
+  primary: iam_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for IA-9 SERVICE IDENTIFICATION AND AUTHENTICATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

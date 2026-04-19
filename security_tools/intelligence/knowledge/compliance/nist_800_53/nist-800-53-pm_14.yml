@@ -1,0 +1,71 @@
+id: nist-800-53-pm_14
+title: PM-14 TESTING, TRAINING, AND MONITORING
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_14
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-14 TESTING, TRAINING, AND MONITORING requires: Implement a process
+  for ensuring that organizational plans for conducting security and privacy testing,
+  training, and monitoring activities associated with organizational systems: 1. Are
+  developed and maintained; and 2. Continue to be executed; and; Review testing, training,
+  and monitoring plans for consistency with the organizational risk management strategy
+  and organization-wide priorities for risk response actions.'
+rationale: A process for organization-wide security and privacy testing, training,
+  and monitoring helps ensure that organizations provide oversight for testing, training,
+  and monitoring activities and that those activities are coordinated. With the growing
+  importance of continuous monitoring programs, the implementation of information
+  security and privacy across the three levels of the risk management hierarchy and
+  the widespread use of common controls, organizations coordinate and consolidate
+  the testing and monitoring activities that are routinely conducted as part of ongoing
+  assessments supporting a variety of controls. Security and privacy training activities,
+  while focused on individual systems and specific roles, require coordination across
+  all organizational elements. Testing, training, and monitoring plans and activities
+  are informed by current threat and vulnerability assessments.
+developer_guidance: 'PM-14 TESTING, TRAINING, AND MONITORING is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Implementation expectations include:
+
+  - Implement a process for ensuring that organizational plans for conducting security
+  and privacy testing, training, and monitoring activities associated with organizational
+  systems: 1. Are developed and maintained; and 2. Continue to be executed; and
+
+  - Review testing, training, and monitoring plans for consistency with the organizational
+  risk management strategy and organization-wide priorities for risk response actions'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-14
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AT-2
+  - AT-3
+  - CA-7
+  - CP-4
+  - IR-3
+  - PM-12
+  - SI-4
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-14 TESTING, TRAINING, AND MONITORING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

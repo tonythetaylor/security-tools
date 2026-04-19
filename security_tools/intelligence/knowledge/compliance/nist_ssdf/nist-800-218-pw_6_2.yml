@@ -1,0 +1,126 @@
+id: nist-800-218-pw_6_2
+title: PW.6.2 Determine which compiler, interpreter, and
+category: build_security
+applies_to:
+- build_pipeline
+- compiler_hardening
+- reproducible_builds
+tags:
+- build
+- code-review
+- compiler
+- hardening
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_6
+- pw_6_2
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.6.2: Determine which compiler, interpreter, and \nbuild tool features\
+  \ should be used and how each \nshould be configured, then implement and use the\
+  \ \napproved configurations. \nExample 1: Enable compiler features that produce\
+  \ warnings for poorly secured \ncode during the compilation process. \nExample 2:\
+  \ Implement the “clean build” concept, where all compiler warnings are \ntreated\
+  \ as errors and eliminated except those determined to be false positives or \nirrelevant.\
+  \ \nExample 3: Perform all builds in a dedicated, highly controlled build environment.\
+  \ \nExample 4: Enable compiler features that randomize or obfuscate execution \n\
+  characteristics, such as memory location usage, that would otherwise be \npredictable\
+  \ and thus potentially exploitable. \nExample 5: Test to ensure that the features\
+  \ are working as expected and are not \ninadvertently causing any operational issues\
+  \ or other problems. \nExample 6: Continuously verify that the approved configurations\
+  \ are being used. \nExample 7: Make the approved tool configurations available as\
+  \ configuration-as-\ncode so developers can readily use them. \nBSAFSS: DE.2-3,\
+  \ DE.2-4, DE.2-5 \nBSIMM: SE2.4, SE3.2 \nCNCFSSCP: Securing Build Pipelines—Verification,\
+  \ Automation \nEO14028: 4e(iv), 4e(ix) \nIEC62443: SI-2 \nIR8397: 2.5 \nMSSDL: 8\
+  \ \nOWASPASVS: 14.1, 14.2.1 \nOWASPMASVS: 7.2 \nPCISSLC: 3.2 \nSCAGILE: Operational\
+  \ Security Task 8 \nSCFPSSD: Use Current Compiler and Toolchain Versions and Secure\
+  \ Compiler Options \nSCSIC: Vendor Software Development Integrity Controls \nSP80053:\
+  \ SA-15, SR-9 \nSP800161: SA-15, SR-9 \nSP800181: K0039, K0070 \nReview and/or Analyze\
+  \ Human-Readable \nCode to Identify Vulnerabilities and Verify \nCompliance with\
+  \ Security Requirements \n(PW.7): Help identify vulnerabilities so that they \n\
+  can be corrected before the software is released \nto prevent exploitation. Using\
+  \ automated \nmethods lowers the effort and resources needed \nto detect vulnerabilities.\
+  \ Human-readable code \nincludes source code, scripts, and any other \nform of code\
+  \ that an organization deems human-\nreadable."
+rationale: "PW.6.2: Determine which compiler, interpreter, and \nbuild tool features\
+  \ should be used and how each \nshould be configured, then implement and use the\
+  \ \napproved configurations. \nExample 1: Enable compiler features that produce\
+  \ warnings for poorly secured \ncode during the compilation process. \nExample 2:\
+  \ Implement the “clean build” concept, where all compiler warnings are \ntreated\
+  \ as errors and eliminated except those determined to be false positives or \nirrelevant.\
+  \ \nExample 3: Perform all builds in a dedicated, highly controlled build environment.\
+  \ \nExample 4: Enable compiler features that randomize or obfuscate execution \n\
+  characteristics, such as memory location usage, that would otherwise be \npredictable\
+  \ and thus potentially exploitable. \nExample 5: Test to ensure that the features\
+  \ are working as expected and are not \ninadvertently causing any operational issues\
+  \ or other problems. \nExample 6: Continuously verify that the approved configurations\
+  \ are being used. \nExample 7: Make the approved tool configurations available as\
+  \ configuration-as-\ncode so developers can readily use them. \nBSAFSS: DE.2-3,\
+  \ DE.2-4, DE.2-5 \nBSIMM: SE2.4, SE3.2 \nCNCFSSCP: Securing Build Pipelines—Verification,\
+  \ Automation \nEO14028: 4e(iv), 4e(ix) \nIEC62443: SI-2 \nIR8397: 2.5 \nMSSDL: 8\
+  \ \nOWASPASVS: 14.1, 14.2.1 \nOWASPMASVS: 7.2 \nPCISSLC: 3.2 \nSCAGILE: Operational\
+  \ Security Task 8 \nSCFPSSD: Use Current Compiler and Toolchain Versions and Secure\
+  \ Compiler Options \nSCSIC: Vendor Software Development Integrity Controls \nSP80053:\
+  \ SA-15, SR-9 \nSP800161: SA-15, SR-9 \nSP800181: K0039, K0070 \nReview and/or Analyze\
+  \ Human-Readable \nCode to Identify Vulnerabilities and Verify \nCompliance with\
+  \ Security Requirements \n(PW.7): Help identify vulnerabilities so that they \n\
+  can be corrected before the software is released \nto prevent exploitation. Using\
+  \ automated \nmethods lowers the effort and resources needed \nto detect vulnerabilities.\
+  \ Human-readable code \nincludes source code, scripts, and any other \nform of code\
+  \ that an organization deems human-\nreadable."
+developer_guidance: "PW.6.2 Determine which compiler, interpreter, and defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.6.2: Determine which\
+  \ compiler, interpreter, and \nbuild tool features should be used and how each \n\
+  should be configured, then implement and use the \napproved configurations. \nExample\
+  \ 1: Enable compiler features that produce warnings for poorly secured \ncode during\
+  \ the compilation process. \nExample 2: Implement the “clean build” concept, where\
+  \ all compiler warnings are \ntreated as errors and eliminated except those determined\
+  \ to be false positives or \nirrelevant. \nExample 3: Perform all builds in a dedicated,\
+  \ highly controlled build environment. \nExample 4: Enable compiler features that\
+  \ randomize or obfuscate execution \ncharacteristics, such as memory location usage,\
+  \ that would otherwise be \npredictable and thus potentially exploitable. \nExample\
+  \ 5: Test to ensure that the features are working as expected and are not \ninadvertently\
+  \ causing any operational issues or other problems. \nExample 6: Continuously verify\
+  \ that the approved configurations are being used. \nExample 7: Make the approved\
+  \ tool configurations available as configuration-as-\ncode so developers can readily\
+  \ use them. \nBSAFSS: DE.2-3, DE.2-4, DE.2-5 \nBSIMM: SE2.4, SE3.2 \nCNCFSSCP: Securing\
+  \ Build Pipelines—Verification, Automation \nEO14028: 4e(iv), 4e(ix) \nIEC62443:\
+  \ SI-2 \nIR8397: 2.5 \nMSSDL: 8 \nOWASPASVS: 14.1, 14.2.1 \nOWASPMASVS: 7.2 \nPCISSLC:\
+  \ 3.2 \nSCAGILE: Operational Security Task 8 \nSCFPSSD: Use Current Compiler and\
+  \ Toolchain Versions and Secure Compiler Options \nSCSIC: Vendor Software Development\
+  \ Integrity Controls \nSP80053: SA-15, SR-9 \nSP800161: SA-15, SR-9 \nSP800181:\
+  \ K0039, K0070 \nReview and/or Analyze Human-Readable \nCode to Identify Vulnerabilities\
+  \ and Verify \nCompliance with Security Requirements \n(PW.7): Help identify vulnerabilities\
+  \ so that they \ncan be corrected before the software is released \nto prevent exploitation.\
+  \ Using automated \nmethods lowers the effort and resources needed \nto detect vulnerabilities.\
+  \ Human-readable code \nincludes source code, scripts, and any other \nform of code\
+  \ that an organization deems human-\nreadable.\n\nEnriched Guidance:\nPW.6.2 Determine\
+  \ which compiler, interpreter, and is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.6.2
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.6.2 Determine which compiler, interpreter, and
+implementation_examples: []

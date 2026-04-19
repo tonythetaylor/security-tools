@@ -1,0 +1,61 @@
+id: nist-800-53-pe_18
+title: PE-18 LOCATION OF SYSTEM COMPONENTS
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_18
+- physical-security
+severity_guidance: medium
+description: Physical and environmental hazards include floods, fires, tornadoes,
+  earthquakes, hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical
+  interference, and other forms of incoming electromagnetic radiation. Organizations
+  consider the location of entry points where unauthorized individuals, while not
+  being granted access, might nonetheless be near systems. Such proximity can increase
+  the risk of unauthorized access to organizational communications using wireless
+  packet sniffers or...
+rationale: Physical and environmental hazards include floods, fires, tornadoes, earthquakes,
+  hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference,
+  and other forms of incoming electromagnetic radiation. Organizations consider the
+  location of entry points where unauthorized individuals, while not being granted
+  access, might nonetheless be near systems. Such proximity can increase the risk
+  of unauthorized access to organizational communications using wireless packet sniffers
+  or microphones, or unauthorized disclosure of information.
+developer_guidance: 'PE-18 LOCATION OF SYSTEM COMPONENTS is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-18
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - CP-2
+  - PE-5
+  - PE-19
+  - PE-20
+  - RA-3
+  - PE-23
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-18 LOCATION OF SYSTEM COMPONENTS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

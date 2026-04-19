@@ -1,0 +1,62 @@
+id: nist-800-53-sc_26
+title: SC-26 DECOYS
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_26
+severity_guidance: high
+description: Decoys (i.e., honeypots, honeynets, or deception nets) are established
+  to attract adversaries and deflect attacks away from the operational systems that
+  support organizational mission and business functions. Use of decoys requires some
+  supporting isolation measures to ensure that any deflected malicious code does not
+  infect organizational systems. Depending on the specific usage of the decoy, consultation
+  with the Office of the General Counsel before deployment may be needed.
+rationale: Decoys (i.e., honeypots, honeynets, or deception nets) are established
+  to attract adversaries and deflect attacks away from the operational systems that
+  support organizational mission and business functions. Use of decoys requires some
+  supporting isolation measures to ensure that any deflected malicious code does not
+  infect organizational systems. Depending on the specific usage of the decoy, consultation
+  with the Office of the General Counsel before deployment may be needed.
+developer_guidance: 'SC-26 DECOYS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-26
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - RA-5
+  - SC-7
+  - SC-30
+  - SC-35
+  - SC-44
+  - SI-3
+  - SI-4
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-26 DECOYS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

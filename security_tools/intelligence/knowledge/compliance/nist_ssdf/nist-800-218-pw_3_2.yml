@@ -1,0 +1,71 @@
+id: nist-800-218-pw_3_2
+title: PW.3.2 Moved to PW.4.4
+category: secure_development
+applies_to:
+- secure_sdlc
+- secure_coding
+- sast
+- dependency_scanning
+- build_security
+- code_review
+- testing
+tags:
+- code-review
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_3
+- pw_3_2
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.3.2: Moved to PW.4.4 \n \n \nReuse Existing, Well-Secured Software\
+  \ When \nFeasible Instead of Duplicating Functionality \n(PW.4): Lower the costs\
+  \ of software \ndevelopment, expedite software development, \nand decrease the likelihood\
+  \ of introducing \nadditional security vulnerabilities into the \nsoftware by reusing\
+  \ software modules and \nservices that have already had their security \nposture\
+  \ checked. This is particularly important \nfor software that implements security\
+  \ \nfunctionality, such as cryptographic modules and \nprotocols."
+rationale: "PW.3.2: Moved to PW.4.4 \n \n \nReuse Existing, Well-Secured Software\
+  \ When \nFeasible Instead of Duplicating Functionality \n(PW.4): Lower the costs\
+  \ of software \ndevelopment, expedite software development, \nand decrease the likelihood\
+  \ of introducing \nadditional security vulnerabilities into the \nsoftware by reusing\
+  \ software modules and \nservices that have already had their security \nposture\
+  \ checked. This is particularly important \nfor software that implements security\
+  \ \nfunctionality, such as cryptographic modules and \nprotocols."
+developer_guidance: "PW.3.2 Moved to PW.4.4 defines an actionable SSDF task. Use it\
+  \ when findings indicate a gap in development workflow, toolchain, review, testing,\
+  \ or vulnerability response.\n\nPW.3.2: Moved to PW.4.4 \n \n \nReuse Existing,\
+  \ Well-Secured Software When \nFeasible Instead of Duplicating Functionality \n\
+  (PW.4): Lower the costs of software \ndevelopment, expedite software development,\
+  \ \nand decrease the likelihood of introducing \nadditional security vulnerabilities\
+  \ into the \nsoftware by reusing software modules and \nservices that have already\
+  \ had their security \nposture checked. This is particularly important \nfor software\
+  \ that implements security \nfunctionality, such as cryptographic modules and \n\
+  protocols.\n\nEnriched Guidance:\nPW.3.2 Moved to PW.4.4 is an SSDF practice or\
+  \ task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.3.2
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.3.2 Moved to PW.4.4
+implementation_examples: []

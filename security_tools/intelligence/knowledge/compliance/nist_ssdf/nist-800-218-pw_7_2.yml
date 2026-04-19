@@ -1,0 +1,158 @@
+id: nist-800-218-pw_7_2
+title: PW.7.2 Perform the code review and/or code analysis
+category: code_review_security
+applies_to:
+- sast
+- code_review
+- static_analysis
+- review_workflow
+tags:
+- code-review
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_7
+- pw_7_2
+- review
+- secure-coding
+- ssdf
+- static-analysis
+- task
+- testing
+severity_guidance: high
+description: "PW.7.2: Perform the code review and/or code analysis \nbased on the\
+  \ organization’s secure coding standards, \nand record and triage all discovered\
+  \ issues and \nrecommended remediations in the development \nteam’s workflow or\
+  \ issue tracking system. \nExample 1: Perform peer review of code, and review any\
+  \ existing code review, \nanalysis, or testing results as part of the peer review.\
+  \ \nExample 2: Use expert reviewers to check code for backdoors and other \nmalicious\
+  \ content. \nExample 3: Use peer reviewing tools that facilitate the peer review\
+  \ process, and \ndocument all discussions and other feedback. \nExample 4: Use a\
+  \ static analysis tool to automatically check code for \nvulnerabilities and compliance\
+  \ with the organization’s secure coding standards \nwith a human reviewing the issues\
+  \ reported by the tool and remediating them as \nnecessary. \nExample 5: Use review\
+  \ checklists to verify that the code complies with the \nrequirements. \nExample\
+  \ 6: Use automated tools to identify and remediate documented and \nverified unsafe\
+  \ software practices on a continuous basis as human-readable code \nis checked into\
+  \ the code repository. \nBSAFSS: TV.2, PD.1-4 \nBSIMM: CR1.2, CR1.4, CR1.6, CR2.6,\
+  \ CR2.7, CR3.4, CR3.5 \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 3, 4, 5, 14, 15,\
+  \ 48 \nIEC62443: SI-1, SVV-1, SVV-2 \nIR8397: 2.3, 2.4 \nISO27034: 7.3.6 \nMSSDL:\
+  \ 9, 10 \nNISTLABEL: 2.2.2.2 \nOWASPASVS: 1.1.7, 10 \nOWASPMASVS: 7.5 \nOWASPSAMM:\
+  \ IR1-B, IR2-A, IR2-B, IR3-A \nPCISSLC: 3.2, 4.1 \nSCAGILE: Operational Security\
+  \ Tasks 4, 7; Tasks Requiring the Help of Security Experts 10\n\n \n \n \n \n \n\
+  15 \nPractices \nTasks \nNotional Implementation Examples \nReferences \nExample\
+  \ 7: Identify and document the root causes of discovered issues. \nExample 8: Document\
+  \ lessons learned from code review and analysis in a wiki \nthat developers can\
+  \ access and search. \nSCFPSSD: Use Code Analysis Tools to Find Security Issues\
+  \ Early, Use Static Analysis \nSecurity Testing Tools, Perform Manual Verification\
+  \ of Security Features/Mitigations \nSCSIC: Peer Reviews and Security Testing \n\
+  SP80053: SA-11, SA-11(1), SA-11(4), SA-15(7) \nSP800161: SA-11, SA-11(1), SA-11(4),\
+  \ SA-15(7) \nSP800181: SP-DEV-001, SP-DEV-002; T0013, T0111, T0176, T0267, T0516;\
+  \ K0009, \nK0039, K0070, K0140, K0624; S0019, S0060, S0078, S0137, S0149, S0167,\
+  \ S0174, \nS0242, S0266; A0007, A0015, A0036, A0044, A0047 \nTest Executable Code\
+  \ to Identify \nVulnerabilities and Verify Compliance with \nSecurity Requirements\
+  \ (PW.8): Help identify \nvulnerabilities so that they can be corrected \nbefore\
+  \ the software is released in order to \nprevent exploitation. Using automated methods\
+  \ \nlowers the effort and resources needed to detect \nvulnerabilities and improves\
+  \ traceability and \nrepeatability. Executable code includes binaries, \ndirectly\
+  \ executed bytecode and source code, \nand any other form of code that an organization\
+  \ \ndeems executable."
+rationale: "PW.7.2: Perform the code review and/or code analysis \nbased on the organization’s\
+  \ secure coding standards, \nand record and triage all discovered issues and \n\
+  recommended remediations in the development \nteam’s workflow or issue tracking\
+  \ system. \nExample 1: Perform peer review of code, and review any existing code\
+  \ review, \nanalysis, or testing results as part of the peer review. \nExample 2:\
+  \ Use expert reviewers to check code for backdoors and other \nmalicious content.\
+  \ \nExample 3: Use peer reviewing tools that facilitate the peer review process,\
+  \ and \ndocument all discussions and other feedback. \nExample 4: Use a static analysis\
+  \ tool to automatically check code for \nvulnerabilities and compliance with the\
+  \ organization’s secure coding standards \nwith a human reviewing the issues reported\
+  \ by the tool and remediating them as \nnecessary. \nExample 5: Use review checklists\
+  \ to verify that the code complies with the \nrequirements. \nExample 6: Use automated\
+  \ tools to identify and remediate documented and \nverified unsafe software practices\
+  \ on a continuous basis as human-readable code \nis checked into the code repository.\
+  \ \nBSAFSS: TV.2, PD.1-4 \nBSIMM: CR1.2, CR1.4, CR1.6, CR2.6, CR2.7, CR3.4, CR3.5\
+  \ \nEO14028: 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 3, 4, 5, 14, 15, 48 \nIEC62443: SI-1,\
+  \ SVV-1, SVV-2 \nIR8397: 2.3, 2.4 \nISO27034: 7.3.6 \nMSSDL: 9, 10 \nNISTLABEL:\
+  \ 2.2.2.2 \nOWASPASVS: 1.1.7, 10 \nOWASPMASVS: 7.5 \nOWASPSAMM: IR1-B, IR2-A, IR2-B,\
+  \ IR3-A \nPCISSLC: 3.2, 4.1 \nSCAGILE: Operational Security Tasks 4, 7; Tasks Requiring\
+  \ the Help of Security Experts 10\n\n \n \n \n \n \n15 \nPractices \nTasks \nNotional\
+  \ Implementation Examples \nReferences \nExample 7: Identify and document the root\
+  \ causes of discovered issues. \nExample 8: Document lessons learned from code review\
+  \ and analysis in a wiki \nthat developers can access and search. \nSCFPSSD: Use\
+  \ Code Analysis Tools to Find Security Issues Early, Use Static Analysis \nSecurity\
+  \ Testing Tools, Perform Manual Verification of Security Features/Mitigations \n\
+  SCSIC: Peer Reviews and Security Testing \nSP80053: SA-11, SA-11(1), SA-11(4), SA-15(7)\
+  \ \nSP800161: SA-11, SA-11(1), SA-11(4), SA-15(7) \nSP800181: SP-DEV-001, SP-DEV-002;\
+  \ T0013, T0111, T0176, T0267, T0516; K0009, \nK0039, K0070, K0140, K0624; S0019,\
+  \ S0060, S0078, S0137, S0149, S0167, S0174, \nS0242, S0266; A0007, A0015, A0036,\
+  \ A0044, A0047 \nTest Executable Code to Identify \nVulnerabilities and Verify Compliance\
+  \ with \nSecurity Requirements (PW.8): Help identify \nvulnerabilities so that they\
+  \ can be corrected \nbefore the software is released in order to \nprevent exploitation.\
+  \ Using automated methods \nlowers the effort and resources needed to detect \n\
+  vulnerabilities and improves traceability and \nrepeatability. Executable code includes\
+  \ binaries, \ndirectly executed bytecode and source code, \nand any other form of\
+  \ code that an organization \ndeems executable."
+developer_guidance: "PW.7.2 Perform the code review and/or code analysis defines an\
+  \ actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nPW.7.2: Perform the\
+  \ code review and/or code analysis \nbased on the organization’s secure coding standards,\
+  \ \nand record and triage all discovered issues and \nrecommended remediations in\
+  \ the development \nteam’s workflow or issue tracking system. \nExample 1: Perform\
+  \ peer review of code, and review any existing code review, \nanalysis, or testing\
+  \ results as part of the peer review. \nExample 2: Use expert reviewers to check\
+  \ code for backdoors and other \nmalicious content. \nExample 3: Use peer reviewing\
+  \ tools that facilitate the peer review process, and \ndocument all discussions\
+  \ and other feedback. \nExample 4: Use a static analysis tool to automatically check\
+  \ code for \nvulnerabilities and compliance with the organization’s secure coding\
+  \ standards \nwith a human reviewing the issues reported by the tool and remediating\
+  \ them as \nnecessary. \nExample 5: Use review checklists to verify that the code\
+  \ complies with the \nrequirements. \nExample 6: Use automated tools to identify\
+  \ and remediate documented and \nverified unsafe software practices on a continuous\
+  \ basis as human-readable code \nis checked into the code repository. \nBSAFSS:\
+  \ TV.2, PD.1-4 \nBSIMM: CR1.2, CR1.4, CR1.6, CR2.6, CR2.7, CR3.4, CR3.5 \nEO14028:\
+  \ 4e(iv), 4e(v), 4e(ix) \nIDASOAR: 3, 4, 5, 14, 15, 48 \nIEC62443: SI-1, SVV-1,\
+  \ SVV-2 \nIR8397: 2.3, 2.4 \nISO27034: 7.3.6 \nMSSDL: 9, 10 \nNISTLABEL: 2.2.2.2\
+  \ \nOWASPASVS: 1.1.7, 10 \nOWASPMASVS: 7.5 \nOWASPSAMM: IR1-B, IR2-A, IR2-B, IR3-A\
+  \ \nPCISSLC: 3.2, 4.1 \nSCAGILE: Operational Security Tasks 4, 7; Tasks Requiring\
+  \ the Help of Security Experts 10\n\n \n \n \n \n \n15 \nPractices \nTasks \nNotional\
+  \ Implementation Examples \nReferences \nExample 7: Identify and document the root\
+  \ causes of discovered issues. \nExample 8: Document lessons learned from code review\
+  \ and analysis in a wiki \nthat developers can access and search. \nSCFPSSD: Use\
+  \ Code Analysis Tools to Find Security Issues Early, Use Static Analysis \nSecurity\
+  \ Testing Tools, Perform Manual Verification of Security Features/Mitigations \n\
+  SCSIC: Peer Reviews and Security Testing \nSP80053: SA-11, SA-11(1), SA-11(4), SA-15(7)\
+  \ \nSP800161: SA-11, SA-11(1), SA-11(4), SA-15(7) \nSP800181: SP-DEV-001, SP-DEV-002;\
+  \ T0013, T0111, T0176, T0267, T0516; K0009, \nK0039, K0070, K0140, K0624; S0019,\
+  \ S0060, S0078, S0137, S0149, S0167, S0174, \nS0242, S0266; A0007, A0015, A0036,\
+  \ A0044, A0047 \nTest Executable Code to Identify \nVulnerabilities and Verify Compliance\
+  \ with \nSecurity Requirements (PW.8): Help identify \nvulnerabilities so that they\
+  \ can be corrected \nbefore the software is released in order to \nprevent exploitation.\
+  \ Using automated methods \nlowers the effort and resources needed to detect \n\
+  vulnerabilities and improves traceability and \nrepeatability. Executable code includes\
+  \ binaries, \ndirectly executed bytecode and source code, \nand any other form of\
+  \ code that an organization \ndeems executable.\n\nEnriched Guidance:\nPW.7.2 Perform\
+  \ the code review and/or code analysis is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.7.2
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.7.2 Perform the code review and/or code analysis
+implementation_examples: []

@@ -1,0 +1,45 @@
+id: nist-800-53-pl_4_1
+title: PL-4(1) SOCIAL MEDIA AND EXTERNAL SITE/APPLICATION USAGE RESTRICTIONS
+category: governance_security
+applies_to:
+- security_planning
+- policy
+- system_security_plan
+tags:
+- 800-53
+- control-enhancement
+- governance
+- nist
+- pl
+- pl_4_1
+- planning
+- policy
+severity_guidance: medium
+description: PL-4(1) SOCIAL MEDIA AND EXTERNAL SITE/APPLICATION USAGE RESTRICTIONS
+rationale: PL-4(1) SOCIAL MEDIA AND EXTERNAL SITE/APPLICATION USAGE RESTRICTIONS
+developer_guidance: 'PL-4(1) SOCIAL MEDIA AND EXTERNAL SITE/APPLICATION USAGE RESTRICTIONS
+  is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PL-4(1)
+  note: null
+risk_context:
+  family: PL
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PL-4(1) SOCIAL MEDIA AND EXTERNAL SITE/APPLICATION
+    USAGE RESTRICTIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

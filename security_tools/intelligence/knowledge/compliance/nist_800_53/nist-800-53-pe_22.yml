@@ -1,0 +1,67 @@
+id: nist-800-53-pe_22
+title: PE-22 COMPONENT MARKING
+category: physical_security
+applies_to:
+- physical_access
+- environmental_protection
+- facility_security
+tags:
+- 800-53
+- environment
+- facilities
+- nist
+- pe
+- pe_22
+- physical-security
+severity_guidance: medium
+description: Hardware components that may require marking include input and output
+  devices. Input devices include desktop and notebook computers, keyboards, tablets,
+  and smart phones. Output devices include printers, monitors/video displays, facsimile
+  machines, scanners, copiers, and audio devices. Permissions controlling output to
+  the output devices are addressed in AC-3 or AC-4. Components are marked to indicate
+  the impact level or classification level of the system to which the devices are
+  connected, or t...
+rationale: Hardware components that may require marking include input and output devices.
+  Input devices include desktop and notebook computers, keyboards, tablets, and smart
+  phones. Output devices include printers, monitors/video displays, facsimile machines,
+  scanners, copiers, and audio devices. Permissions controlling output to the output
+  devices are addressed in AC-3 or AC-4. Components are marked to indicate the impact
+  level or classification level of the system to which the devices are connected,
+  or the impact level or classification level of the information permitted to be output.
+  Security marking refers to the use of human-readable security attributes. Security
+  labeling refers to the use of security attributes for internal system data structures.
+  Security marking is generally not required for hardware components that process,
+  store, or transmit information determined by organizations to be in the public domain
+  or to be publicly releasable. However, organizations may require markings for hardware
+  components that process, store, or transmit public information in order to indicate
+  that such information is publicly releasable. Marking of system hardware components
+  reflects applicable laws, executive orders, directives, policies, regulations, and
+  standards.
+developer_guidance: 'PE-22 COMPONENT MARKING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PE-22
+  note: null
+risk_context:
+  family: PE
+  related_controls:
+  - AC-3
+  - AC-4
+  - AC-16
+  - MP-3
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for PE-22 COMPONENT MARKING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

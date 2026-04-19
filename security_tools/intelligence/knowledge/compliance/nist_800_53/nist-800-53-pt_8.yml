@@ -1,0 +1,43 @@
+id: nist-800-53-pt_8
+title: PT-8 Computer Matching Requirements
+category: privacy_security
+applies_to:
+- privacy
+- pii_protection
+- data_processing
+tags:
+- 800-53
+- nist
+- pii
+- privacy
+- pt
+- pt_8
+- transparency
+severity_guidance: medium
+description: PT-8 Computer Matching Requirements
+rationale: PT-8 Computer Matching Requirements
+developer_guidance: 'PT-8 Computer Matching Requirements is a NIST SP 800-53 Rev.
+  5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PT-8
+  note: null
+risk_context:
+  family: PT
+  related_controls: []
+ownership:
+  primary: privacy_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PT-8 Computer Matching Requirements.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

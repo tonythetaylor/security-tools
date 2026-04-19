@@ -1,0 +1,50 @@
+id: nist-800-53-ac_20_1
+title: AC-20(1) LIMITS ON AUTHORIZED USE
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_20_1
+- access-control
+- authorization
+- control-enhancement
+- least-privilege
+- nist
+severity_guidance: high
+description: AC-20(1) LIMITS ON AUTHORIZED USE
+rationale: AC-20(1) LIMITS ON AUTHORIZED USE
+developer_guidance: 'AC-20(1) LIMITS ON AUTHORIZED USE is a NIST SP 800-53 Rev. 5
+  requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-20(1)
+  note: null
+risk_context:
+  family: AC
+  related_controls: []
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-20(1) LIMITS ON AUTHORIZED USE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,84 @@
+id: nist-800-218-pw_8_1
+title: PW.8.1 Determine whether executable code testing
+category: security_testing
+applies_to:
+- dast
+- fuzzing
+- dynamic_testing
+- penetration_testing
+tags:
+- code-review
+- dynamic-analysis
+- fuzzing
+- nist_800_218
+- produce-well-secured-software
+- pw
+- pw_8
+- pw_8_1
+- secure-coding
+- ssdf
+- task
+- testing
+severity_guidance: high
+description: "PW.8.1: Determine whether executable code testing \nshould be performed\
+  \ to find vulnerabilities not \nidentified by previous reviews, analysis, or testing\
+  \ and, \nif so, which types of testing should be used. \nExample 1: Follow the organization’s\
+  \ policies or guidelines for when code testing \nshould be performed and how it\
+  \ should be conducted (e.g., within a sandboxed \nenvironment). This may include\
+  \ third-party executable code and reusable \nexecutable code modules written in-house.\
+  \ \nExample 2: Choose testing methods based on the stage of the software. \nBSAFSS:\
+  \ TV.3 \nBSIMM: PT2.3 \nEO14028: 4e(ix) \nIEC62443: SVV-1, SVV-2, SVV-3, SVV-4,\
+  \ SVV-5 \nNISTLABEL: 2.2.2.2 \nSCSIC: Peer Reviews and Security Testing \nSP80053:\
+  \ SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-001, SP-DEV-002; T0456; K0013, K0039,\
+  \ K0070, K0153, K0165, \nK0342, K0367, K0536, K0624; S0001, S0015, S0026, S0061,\
+  \ S0083, S0112, S0135"
+rationale: "PW.8.1: Determine whether executable code testing \nshould be performed\
+  \ to find vulnerabilities not \nidentified by previous reviews, analysis, or testing\
+  \ and, \nif so, which types of testing should be used. \nExample 1: Follow the organization’s\
+  \ policies or guidelines for when code testing \nshould be performed and how it\
+  \ should be conducted (e.g., within a sandboxed \nenvironment). This may include\
+  \ third-party executable code and reusable \nexecutable code modules written in-house.\
+  \ \nExample 2: Choose testing methods based on the stage of the software. \nBSAFSS:\
+  \ TV.3 \nBSIMM: PT2.3 \nEO14028: 4e(ix) \nIEC62443: SVV-1, SVV-2, SVV-3, SVV-4,\
+  \ SVV-5 \nNISTLABEL: 2.2.2.2 \nSCSIC: Peer Reviews and Security Testing \nSP80053:\
+  \ SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-001, SP-DEV-002; T0456; K0013, K0039,\
+  \ K0070, K0153, K0165, \nK0342, K0367, K0536, K0624; S0001, S0015, S0026, S0061,\
+  \ S0083, S0112, S0135"
+developer_guidance: "PW.8.1 Determine whether executable code testing defines an actionable\
+  \ SSDF task. Use it when findings indicate a gap in development workflow, toolchain,\
+  \ review, testing, or vulnerability response.\n\nPW.8.1: Determine whether executable\
+  \ code testing \nshould be performed to find vulnerabilities not \nidentified by\
+  \ previous reviews, analysis, or testing and, \nif so, which types of testing should\
+  \ be used. \nExample 1: Follow the organization’s policies or guidelines for when\
+  \ code testing \nshould be performed and how it should be conducted (e.g., within\
+  \ a sandboxed \nenvironment). This may include third-party executable code and reusable\
+  \ \nexecutable code modules written in-house. \nExample 2: Choose testing methods\
+  \ based on the stage of the software. \nBSAFSS: TV.3 \nBSIMM: PT2.3 \nEO14028: 4e(ix)\
+  \ \nIEC62443: SVV-1, SVV-2, SVV-3, SVV-4, SVV-5 \nNISTLABEL: 2.2.2.2 \nSCSIC: Peer\
+  \ Reviews and Security Testing \nSP80053: SA-11 \nSP800161: SA-11 \nSP800181: SP-DEV-001,\
+  \ SP-DEV-002; T0456; K0013, K0039, K0070, K0153, K0165, \nK0342, K0367, K0536, K0624;\
+  \ S0001, S0015, S0026, S0061, S0083, S0112, S0135\n\nEnriched Guidance:\nPW.8.1\
+  \ Determine whether executable code testing is an SSDF practice or task."
+recommended_patterns:
+- secure_sdlc
+- secure_coding_practices
+- code_review_and_testing
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: PW.8.1
+  note: null
+risk_context:
+  group: PW
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Integrate the identified practice into the development workflow and verification
+    process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: PW.8.1 Determine whether executable code testing
+implementation_examples: []

@@ -1,0 +1,68 @@
+id: nist-800-53-sa_20
+title: SA-20 CUSTOMIZED DEVELOPMENT OF CRITICAL COMPONENTS
+category: secure_development
+applies_to:
+- secure_sdlc
+- developer_testing
+- supply_chain_security
+- application_security
+tags:
+- 800-53
+- developer-testing
+- nist
+- sa
+- sa_20
+- sdlc
+- secure-development
+severity_guidance: medium
+description: Organizations determine that certain system components likely cannot
+  be trusted due to specific threats to and vulnerabilities in those components for
+  which there are no viable security controls to adequately mitigate risk. Reimplementation
+  or custom development of such components may satisfy requirements for higher assurance
+  and is carried out by initiating changes to system components (including hardware,
+  software, and firmware) such that the standard attacks by adversaries are less likely
+  to...
+rationale: Organizations determine that certain system components likely cannot be
+  trusted due to specific threats to and vulnerabilities in those components for which
+  there are no viable security controls to adequately mitigate risk. Reimplementation
+  or custom development of such components may satisfy requirements for higher assurance
+  and is carried out by initiating changes to system components (including hardware,
+  software, and firmware) such that the standard attacks by adversaries are less likely
+  to succeed. In situations where no alternative sourcing is available and organizations
+  choose not to reimplement or custom develop critical system components, additional
+  controls can be employed. Controls include enhanced auditing, restrictions on source
+  code and system utility access, and protection from deletion of system and application
+  files.
+developer_guidance: 'SA-20 CUSTOMIZED DEVELOPMENT OF CRITICAL COMPONENTS is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- secure_sdlc
+- developer_testing
+- supply_chain_review
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SA-20
+  note: null
+risk_context:
+  family: SA
+  related_controls:
+  - CP-2
+  - RA-9
+  - SA-8
+ownership:
+  primary: application_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SA-20 CUSTOMIZED DEVELOPMENT OF CRITICAL
+    COMPONENTS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Ensure the control is integrated into development and testing workflows.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

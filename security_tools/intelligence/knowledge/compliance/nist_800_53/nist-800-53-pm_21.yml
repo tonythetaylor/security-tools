@@ -1,0 +1,80 @@
+id: nist-800-53-pm_21
+title: PM-21 ACCOUNTING OF DISCLOSURES
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_21
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-21 ACCOUNTING OF DISCLOSURES requires: Develop and maintain an accurate
+  accounting of disclosures of personally identifiable information, including: 1.
+  Date, nature, and purpose of each disclosure; and 2. Name and address, or other
+  contact information of the individual or organization to which the disclosure was
+  made; Retain the accounting of disclosures for the length of the time the personally
+  identifiable information is maintained or five years after the disclosure is made,
+  whichever is longer; and; Make the accounting of disclosures available to the individual
+  to whom the personally identifiable information relates upon request. _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 215.'
+rationale: The purpose of accounting of disclosures is to allow individuals to learn
+  to whom their personally identifiable information has been disclosed, to provide
+  a basis for subsequently advising recipients of any corrected or disputed personally
+  identifiable information, and to provide an audit trail for subsequent reviews of
+  organizational compliance with conditions for disclosures. For federal agencies,
+  keeping an accounting of disclosures is required by the [PRIVACT]; agencies should
+  consult with their senior agency official for privacy and legal counsel on this
+  requirement and be aware of the statutory exceptions and OMB guidance relating to
+  the provision. Organizations can use any system for keeping notations of disclosures,
+  if it can construct from such a system, a document listing of all disclosures along
+  with the required information. Automated mechanisms can be used by organizations
+  to determine when personally identifiable information is disclosed, including commercial
+  services that provide notifications and alerts. Accounting of disclosures may also
+  be used to help organizations verify compliance with applicable privacy statutes
+  and policies governing the disclosure or dissemination of information and dissemination
+  restrictions.
+developer_guidance: 'PM-21 ACCOUNTING OF DISCLOSURES is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Develop and maintain an accurate accounting of disclosures of personally identifiable
+  information, including: 1. Date, nature, and purpose of each disclosure; and 2.
+  Name and address, or other contact information of the individual or organization
+  to which the disclosure was made
+
+  - Retain the accounting of disclosures for the length of the time the personally
+  identifiable information is maintained or five years after the disclosure is made,
+  whichever is longer; and
+
+  - Make the accounting of disclosures available to the individual to whom the personally
+  identifiable information relates upon request. _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 215'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-21
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AC-3
+  - AU-2
+  - PT-2
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-21 ACCOUNTING OF DISCLOSURES.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

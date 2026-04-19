@@ -1,0 +1,74 @@
+id: nist-800-53-sc_37
+title: SC-37 OUT-OF-BAND CHANNELS
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_37
+severity_guidance: high
+description: Out-of-band channels include local, non-network accesses to systems;
+  network paths physically separate from network paths used for operational traffic;
+  or non-electronic paths, such as the U.S. Postal Service. The use of out-of-band
+  channels is contrasted with the use of in-band channels (i.e., the same channels)
+  that carry routine operational traffic. Out-of-band channels do not have the same
+  vulnerability or exposure as in-band channels. Therefore, the confidentiality, integrity,
+  or availabili...
+rationale: Out-of-band channels include local, non-network accesses to systems; network
+  paths physically separate from network paths used for operational traffic; or non-electronic
+  paths, such as the U.S. Postal Service. The use of out-of-band channels is contrasted
+  with the use of in-band channels (i.e., the same channels) that carry routine operational
+  traffic. Out-of-band channels do not have the same vulnerability or exposure as
+  in-band channels. Therefore, the confidentiality, integrity, or availability compromises
+  of in-band channels will not compromise or adversely affect the out-of-band channels.
+  Organizations may employ out-of-band channels in the delivery or transmission of
+  organizational items, including authenticators and credentials; cryptographic key
+  management information; system and data backups; configuration management changes
+  for hardware, firmware, or software; security updates; maintenance information;
+  and malicious code protection updates.
+developer_guidance: 'SC-37 OUT-OF-BAND CHANNELS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-37
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AC-2
+  - CM-3
+  - CM-5
+  - CM-7
+  - IA-2
+  - IA-4
+  - IA-5
+  - MA-4
+  - SC-12
+  - SI-3
+  - SI-4
+  - SI-7
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-37 OUT-OF-BAND CHANNELS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,68 @@
+id: nist-800-53-sc_39
+title: SC-39 PROCESS ISOLATION
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_39
+severity_guidance: high
+description: Systems can maintain separate execution domains for each executing process
+  by assigning each process a separate address space. Each system process has a distinct
+  address space so that communication between processes is performed in a manner controlled
+  through the security functions, and one process cannot modify the executing code
+  of another process. Maintaining separate execution domains for executing processes
+  can be achieved, for example, by implementing separate address spaces. Process isola...
+rationale: Systems can maintain separate execution domains for each executing process
+  by assigning each process a separate address space. Each system process has a distinct
+  address space so that communication between processes is performed in a manner controlled
+  through the security functions, and one process cannot modify the executing code
+  of another process. Maintaining separate execution domains for executing processes
+  can be achieved, for example, by implementing separate address spaces. Process isolation
+  technologies, including sandboxing or virtualization, logically separate software
+  and firmware from other software, firmware, and data. Process isolation helps limit
+  the access of potentially untrusted software to other system resources. The capability
+  to maintain separate execution domains is available in commercial operating systems
+  that employ multi-state processor technologies.
+developer_guidance: 'SC-39 PROCESS ISOLATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-39
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AC-3
+  - AC-4
+  - AC-6
+  - AC-25
+  - SA-8
+  - SC-2
+  - SC-3
+  - SI-16
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-39 PROCESS ISOLATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

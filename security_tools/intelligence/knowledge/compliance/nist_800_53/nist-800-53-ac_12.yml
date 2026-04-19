@@ -1,0 +1,67 @@
+id: nist-800-53-ac_12
+title: AC-12 SESSION TERMINATION
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_12
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: Session termination addresses the termination of user-initiated logical
+  sessions (in contrast to SC-10, which addresses the termination of network connections
+  associated with communications sessions (i.e., network disconnect)). A logical session
+  (for local, network, and remote access) is initiated whenever a user (or process
+  acting on behalf of a user) accesses an organizational system. Such user sessions
+  can be terminated without terminating network sessions. Session termination ends
+  all proces...
+rationale: Session termination addresses the termination of user-initiated logical
+  sessions (in contrast to SC-10, which addresses the termination of network connections
+  associated with communications sessions (i.e., network disconnect)). A logical session
+  (for local, network, and remote access) is initiated whenever a user (or process
+  acting on behalf of a user) accesses an organizational system. Such user sessions
+  can be terminated without terminating network sessions. Session termination ends
+  all processes associated with a user’s logical session except for those processes
+  that are specifically created by the user (i.e., session owner) to continue after
+  the session is terminated. Conditions or trigger events that require automatic termination
+  of the session include organization-defined periods of user inactivity, targeted
+  responses to certain types of incidents, or time-of-day restrictions on system use.
+developer_guidance: 'AC-12 SESSION TERMINATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-12
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - MA-4
+  - SC-10
+  - SC-23
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-12 SESSION TERMINATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

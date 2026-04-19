@@ -1,0 +1,71 @@
+id: nist-800-53-ac_11
+title: AC-11 DEVICE LOCK
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_11
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: 'AC-11 DEVICE LOCK requires: Prevent further access to the system by
+  [Selection (one or more): initiating a device lock after [Assignment: organization-defined
+  time period] of inactivity; requiring the user to initiate a device lock before
+  leaving the system unattended]; and; Retain the device lock until the user reestablishes
+  access using established identification and authentication procedures.'
+rationale: Device locks are temporary actions taken to prevent logical access to organizational
+  systems when users stop work and move away from the immediate vicinity of those
+  systems but do not want to log out because of the temporary nature of their absences.
+  Device locks can be implemented at the operating system level or at the application
+  level. A proximity lock may be used to initiate the device lock (e.g., via a Bluetooth-enabled
+  device or dongle). User-initiated device locking is behavior or policy-based and,
+  as such, requires users to take physical action to initiate the device lock. Device
+  locks are not an acceptable substitute for logging out of systems, such as when
+  organizations require users to log out at the end of workdays.
+developer_guidance: 'AC-11 DEVICE LOCK is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Prevent further access to the system by [Selection (one or more): initiating a
+  device lock after [Assignment: organization-defined time period] of inactivity;
+  requiring the user to initiate a device lock before leaving the system unattended];
+  and
+
+  - Retain the device lock until the user reestablishes access using established identification
+  and authentication procedures'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-11
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - AC-2
+  - AC-7
+  - IA-11
+  - PL-4
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-11 DEVICE LOCK.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

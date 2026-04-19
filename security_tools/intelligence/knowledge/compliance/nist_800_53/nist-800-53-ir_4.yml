@@ -1,0 +1,42 @@
+id: nist-800-53-ir_4
+title: IR-4 Incident Handling
+category: incident_response
+applies_to:
+- incident_response
+- response_process
+- security_operations
+tags:
+- 800-53
+- incident-response
+- ir
+- ir_4
+- nist
+- operations
+- response
+severity_guidance: medium
+description: IR-4 Incident Handling
+rationale: IR-4 Incident Handling
+developer_guidance: 'IR-4 Incident Handling is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IR-4
+  note: null
+risk_context:
+  family: IR
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for IR-4 Incident Handling.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

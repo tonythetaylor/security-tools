@@ -1,0 +1,81 @@
+id: nist-800-218-rv_2_1
+title: RV.2.1 Analyze each vulnerability to gather sufficient
+category: remediation_management
+applies_to:
+- triage
+- remediation
+- advisories
+- patch_management
+tags:
+- nist_800_218
+- patching
+- psirt
+- remediation
+- respond-to-vulnerabilities
+- rv
+- rv_2
+- rv_2_1
+- ssdf
+- task
+- triage
+severity_guidance: high
+description: "RV.2.1: Analyze each vulnerability to gather sufficient \ninformation\
+  \ about risk to plan its remediation or other \nrisk response. \nExample 1: Use\
+  \ existing issue tracking software to record each vulnerability. \nExample 2: Perform\
+  \ risk calculations for each vulnerability based on estimates of \nits exploitability,\
+  \ the potential impact if exploited, and any other relevant \ncharacteristics. \n\
+  BSAFSS: VM.2 \nBSIMM: CMVM1.2, CMVM2.2 \nEO14028: 4e(iv), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-2, DM-3 \nISO30111: 7.1.4 \nNISTLABEL: 2.2.2.2 \nPCISSLC: 3.4, 4.2 \nSCAGILE:\
+  \ Operational Security Task 1, Tasks Requiring the Help of Security Experts 10 \n\
+  SP80053: SA-10, SA-15(7) \nSP800160: 3.3.8 \nSP800161: SA-15(7) \nSP800181: K0009,\
+  \ K0039, K0070, K0161, K0165; S0078\n\n \n \n \n \n \n18 \nPractices \nTasks \n\
+  Notional Implementation Examples \nReferences"
+rationale: "RV.2.1: Analyze each vulnerability to gather sufficient \ninformation\
+  \ about risk to plan its remediation or other \nrisk response. \nExample 1: Use\
+  \ existing issue tracking software to record each vulnerability. \nExample 2: Perform\
+  \ risk calculations for each vulnerability based on estimates of \nits exploitability,\
+  \ the potential impact if exploited, and any other relevant \ncharacteristics. \n\
+  BSAFSS: VM.2 \nBSIMM: CMVM1.2, CMVM2.2 \nEO14028: 4e(iv), 4e(viii), 4e(ix) \nIEC62443:\
+  \ DM-2, DM-3 \nISO30111: 7.1.4 \nNISTLABEL: 2.2.2.2 \nPCISSLC: 3.4, 4.2 \nSCAGILE:\
+  \ Operational Security Task 1, Tasks Requiring the Help of Security Experts 10 \n\
+  SP80053: SA-10, SA-15(7) \nSP800160: 3.3.8 \nSP800161: SA-15(7) \nSP800181: K0009,\
+  \ K0039, K0070, K0161, K0165; S0078\n\n \n \n \n \n \n18 \nPractices \nTasks \n\
+  Notional Implementation Examples \nReferences"
+developer_guidance: "RV.2.1 Analyze each vulnerability to gather sufficient defines\
+  \ an actionable SSDF task. Use it when findings indicate a gap in development workflow,\
+  \ toolchain, review, testing, or vulnerability response.\n\nRV.2.1: Analyze each\
+  \ vulnerability to gather sufficient \ninformation about risk to plan its remediation\
+  \ or other \nrisk response. \nExample 1: Use existing issue tracking software to\
+  \ record each vulnerability. \nExample 2: Perform risk calculations for each vulnerability\
+  \ based on estimates of \nits exploitability, the potential impact if exploited,\
+  \ and any other relevant \ncharacteristics. \nBSAFSS: VM.2 \nBSIMM: CMVM1.2, CMVM2.2\
+  \ \nEO14028: 4e(iv), 4e(viii), 4e(ix) \nIEC62443: DM-2, DM-3 \nISO30111: 7.1.4 \n\
+  NISTLABEL: 2.2.2.2 \nPCISSLC: 3.4, 4.2 \nSCAGILE: Operational Security Task 1, Tasks\
+  \ Requiring the Help of Security Experts 10 \nSP80053: SA-10, SA-15(7) \nSP800160:\
+  \ 3.3.8 \nSP800161: SA-15(7) \nSP800181: K0009, K0039, K0070, K0161, K0165; S0078\n\
+  \n \n \n \n \n \n18 \nPractices \nTasks \nNotional Implementation Examples \nReferences\n\
+  \nEnriched Guidance:\nRV.2.1 Analyze each vulnerability to gather sufficient is\
+  \ an SSDF practice or task."
+recommended_patterns:
+- vulnerability_intake_and_triage
+- risk_based_remediation
+- root_cause_analysis
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-218 SSDF
+  control: RV.2.1
+  note: null
+risk_context:
+  group: RV
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Ensure findings are tracked, triaged, and remediated through an established vulnerability
+    response process.
+source_path: knowledge_sources/nist/NIST.SP.800-218.pdf
+source_type: ssdf
+summary: RV.2.1 Analyze each vulnerability to gather sufficient
+implementation_examples: []

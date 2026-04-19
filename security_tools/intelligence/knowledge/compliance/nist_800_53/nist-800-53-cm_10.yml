@@ -1,0 +1,70 @@
+id: nist-800-53-cm_10
+title: CM-10 SOFTWARE USAGE RESTRICTIONS
+category: configuration_security
+applies_to:
+- secure_configuration
+- baseline_configuration
+- change_management
+tags:
+- 800-53
+- baseline
+- cm
+- cm_10
+- configuration
+- hardening
+- nist
+severity_guidance: medium
+description: 'CM-10 SOFTWARE USAGE RESTRICTIONS requires: Use software and associated
+  documentation in accordance with contract agreements and copyright laws; Track the
+  use of software and associated documentation protected by quantity licenses to control
+  copying and distribution; and; Control and document the use of peer-to-peer file
+  sharing technology to ensure that this capability is not used for the unauthorized
+  distribution, display, performance, or reproduction of copyrighted work.'
+rationale: Software license tracking can be accomplished by manual or automated methods,
+  depending on organizational needs. Examples of contract agreements include software
+  license agreements and non-disclosure agreements.
+developer_guidance: 'CM-10 SOFTWARE USAGE RESTRICTIONS is a NIST SP 800-53 Rev. 5
+  requirement.
+
+  Implementation expectations include:
+
+  - Use software and associated documentation in accordance with contract agreements
+  and copyright laws
+
+  - Track the use of software and associated documentation protected by quantity licenses
+  to control copying and distribution; and
+
+  - Control and document the use of peer-to-peer file sharing technology to ensure
+  that this capability is not used for the unauthorized distribution, display, performance,
+  or reproduction of copyrighted work'
+recommended_patterns:
+- baseline_configuration_management
+- secure_defaults
+- change_control
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CM-10
+  note: null
+risk_context:
+  family: CM
+  related_controls:
+  - AC-17
+  - AU-6
+  - CM-7
+  - CM-8
+  - PM-30
+  - SC-7
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for CM-10 SOFTWARE USAGE RESTRICTIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Verify the control is reflected in baseline configuration and change management
+    processes.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

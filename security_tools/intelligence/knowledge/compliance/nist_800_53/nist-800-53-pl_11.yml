@@ -1,0 +1,42 @@
+id: nist-800-53-pl_11
+title: PL-11 Baseline Tailoring
+category: governance_security
+applies_to:
+- security_planning
+- policy
+- system_security_plan
+tags:
+- 800-53
+- governance
+- nist
+- pl
+- pl_11
+- planning
+- policy
+severity_guidance: medium
+description: PL-11 Baseline Tailoring
+rationale: PL-11 Baseline Tailoring
+developer_guidance: 'PL-11 Baseline Tailoring is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PL-11
+  note: null
+risk_context:
+  family: PL
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PL-11 Baseline Tailoring.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

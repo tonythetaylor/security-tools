@@ -1,0 +1,65 @@
+id: nist-800-53-ia_10
+title: IA-10 ADAPTIVE AUTHENTICATION
+category: identity_security
+applies_to:
+- authentication
+- identity_management
+- credential_security
+tags:
+- 800-53
+- authentication
+- credentials
+- ia
+- ia_10
+- identity
+- nist
+severity_guidance: high
+description: Adversaries may compromise individual authentication mechanisms employed
+  by organizations and subsequently attempt to impersonate legitimate users. To address
+  this threat, organizations may employ specific techniques or mechanisms and establish
+  protocols to assess suspicious behavior. Suspicious behavior may include accessing
+  information that individuals do not typically access as part of their duties, roles,
+  or responsibilities; accessing greater quantities of information than individuals
+  would...
+rationale: Adversaries may compromise individual authentication mechanisms employed
+  by organizations and subsequently attempt to impersonate legitimate users. To address
+  this threat, organizations may employ specific techniques or mechanisms and establish
+  protocols to assess suspicious behavior. Suspicious behavior may include accessing
+  information that individuals do not typically access as part of their duties, roles,
+  or responsibilities; accessing greater quantities of information than individuals
+  would routinely access; or attempting to access information from suspicious network
+  addresses. When pre-established conditions or triggers occur, organizations can
+  require individuals to provide additional authentication information. Another potential
+  use for adaptive authentication is to increase the strength of mechanism based on
+  the number or types of records being accessed. Adaptive authentication does not
+  replace and is not used to avoid the use of multi-factor authentication mechanisms
+  but can augment implementations of multi-factor authentication.
+developer_guidance: 'IA-10 ADAPTIVE AUTHENTICATION is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- strong_authentication
+- credential_lifecycle_management
+- identity_assurance
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IA-10
+  note: null
+risk_context:
+  family: IA
+  related_controls:
+  - IA-2
+  - IA-8
+ownership:
+  primary: iam_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for IA-10 ADAPTIVE AUTHENTICATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

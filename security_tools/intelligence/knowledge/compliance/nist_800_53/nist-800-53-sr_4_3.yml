@@ -1,0 +1,47 @@
+id: nist-800-53-sr_4_3
+title: SR-4(3) VALIDATE AS GENUINE AND NOT ALTERED
+category: supply_chain_security
+applies_to:
+- software_supply_chain
+- vendor_risk
+- component_integrity
+tags:
+- 800-53
+- component-integrity
+- control-enhancement
+- nist
+- sr
+- sr_4_3
+- supply-chain
+- vendor-risk
+severity_guidance: high
+description: SR-4(3) VALIDATE AS GENUINE AND NOT ALTERED
+rationale: SR-4(3) VALIDATE AS GENUINE AND NOT ALTERED
+developer_guidance: 'SR-4(3) VALIDATE AS GENUINE AND NOT ALTERED is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- supplier_assessment
+- component_integrity_validation
+- software_supply_chain_controls
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SR-4(3)
+  note: null
+risk_context:
+  family: SR
+  related_controls: []
+ownership:
+  primary: security_team
+  secondary: procurement_or_vendor_management
+remediation:
+  steps:
+  - Review implementation requirements for SR-4(3) VALIDATE AS GENUINE AND NOT ALTERED.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

@@ -1,0 +1,69 @@
+id: nist-800-53-si_20
+title: SI-20 TAINTING
+category: system_integrity
+applies_to:
+- vulnerability_management
+- flaw_remediation
+- malware_protection
+- integrity_monitoring
+tags:
+- 800-53
+- flaw-remediation
+- integrity
+- malware-protection
+- nist
+- si
+- si_20
+severity_guidance: high
+description: Many cyber-attacks target organizational information, or information
+  that the organization holds on behalf of other entities (e.g., personally identifiable
+  information), and exfiltrate that data. In addition, insider attacks and erroneous
+  user procedures can remove information from the system that is in violation of the
+  organizational policies. Tainting approaches can range from passive to active. A
+  passive tainting approach can be as simple as adding false email names and addresses
+  to an intern...
+rationale: Many cyber-attacks target organizational information, or information that
+  the organization holds on behalf of other entities (e.g., personally identifiable
+  information), and exfiltrate that data. In addition, insider attacks and erroneous
+  user procedures can remove information from the system that is in violation of the
+  organizational policies. Tainting approaches can range from passive to active. A
+  passive tainting approach can be as simple as adding false email names and addresses
+  to an internal database. If the organization receives email at one of the false
+  email addresses, it knows that the database has been compromised. Moreover, the
+  organization knows that the email was sent by an unauthorized entity, so any _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 361 packets it includes potentially contain malicious code, and
+  that the unauthorized entity may have potentially obtained a copy of the database.
+  Another tainting approach can include embedding false data or steganographic data
+  in files to enable the data to be found via open-source analysis. Finally, an active
+  tainting approach can include embedding software in the data that is able to “call
+  home,” thereby alerting the organization to its “capture,” and possibly its location,
+  and the path by which it was exfiltrated or removed.
+developer_guidance: 'SI-20 TAINTING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- flaw_remediation
+- integrity_monitoring
+- malware_protection
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SI-20
+  note: null
+risk_context:
+  family: SI
+  related_controls:
+  - AU-13
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for SI-20 TAINTING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Validate remediation through scanning, monitoring, and repeatable verification.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

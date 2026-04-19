@@ -1,0 +1,46 @@
+id: nist-800-53-au_9_6
+title: AU-9(6) READ-ONLY ACCESS
+category: logging_security
+applies_to:
+- audit_logging
+- audit_trail
+- security_monitoring
+tags:
+- 800-53
+- au
+- au_9_6
+- audit
+- control-enhancement
+- logging
+- nist
+- traceability
+severity_guidance: medium
+description: AU-9(6) READ-ONLY ACCESS
+rationale: AU-9(6) READ-ONLY ACCESS
+developer_guidance: 'AU-9(6) READ-ONLY ACCESS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- audit_logging
+- tamper_resistant_logs
+- log_review_and_alerting
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AU-9(6)
+  note: null
+risk_context:
+  family: AU
+  related_controls: []
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for AU-9(6) READ-ONLY ACCESS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

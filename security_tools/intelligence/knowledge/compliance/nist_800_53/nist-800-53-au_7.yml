@@ -1,0 +1,75 @@
+id: nist-800-53-au_7
+title: AU-7 AUDIT RECORD REDUCTION AND REPORT GENERATION
+category: logging_security
+applies_to:
+- audit_logging
+- audit_trail
+- security_monitoring
+tags:
+- 800-53
+- au
+- au_7
+- audit
+- logging
+- nist
+- traceability
+severity_guidance: medium
+description: 'AU-7 AUDIT RECORD REDUCTION AND REPORT GENERATION requires: Supports
+  on-demand audit record review, analysis, and reporting requirements and after- the-fact
+  investigations of incidents; and; Does not alter the original content or time ordering
+  of audit records.'
+rationale: Audit record reduction is a process that manipulates collected audit log
+  information and organizes it into a summary format that is more meaningful to analysts.
+  Audit record _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 73 reduction and report generation capabilities do not always
+  emanate from the same system or from the same organizational entities that conduct
+  audit logging activities. The audit record reduction capability includes modern
+  data mining techniques with advanced data filters to identify anomalous behavior
+  in audit records. The report generation capability provided by the system can generate
+  customizable reports. Time ordering of audit records can be an issue if the granularity
+  of the timestamp in the record is insufficient.
+developer_guidance: 'AU-7 AUDIT RECORD REDUCTION AND REPORT GENERATION is a NIST SP
+  800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Supports on-demand audit record review, analysis, and reporting requirements and
+  after- the-fact investigations of incidents; and
+
+  - Does not alter the original content or time ordering of audit records'
+recommended_patterns:
+- audit_logging
+- tamper_resistant_logs
+- log_review_and_alerting
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AU-7
+  note: null
+risk_context:
+  family: AU
+  related_controls:
+  - AC-2
+  - AU-2
+  - AU-3
+  - AU-4
+  - AU-5
+  - AU-6
+  - AU-12
+  - AU-16
+  - CM-5
+  - IA-5
+  - IR-4
+  - PM-12
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for AU-7 AUDIT RECORD REDUCTION AND REPORT
+    GENERATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

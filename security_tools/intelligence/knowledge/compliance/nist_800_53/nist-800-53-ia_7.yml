@@ -1,0 +1,55 @@
+id: nist-800-53-ia_7
+title: IA-7 CRYPTOGRAPHIC MODULE AUTHENTICATION
+category: identity_security
+applies_to:
+- authentication
+- identity_management
+- credential_security
+tags:
+- 800-53
+- authentication
+- credentials
+- ia
+- ia_7
+- identity
+- nist
+severity_guidance: high
+description: Authentication mechanisms may be required within a cryptographic module
+  to authenticate an operator accessing the module and to verify that the operator
+  is authorized to assume the requested role and perform services within that role.
+rationale: Authentication mechanisms may be required within a cryptographic module
+  to authenticate an operator accessing the module and to verify that the operator
+  is authorized to assume the requested role and perform services within that role.
+developer_guidance: 'IA-7 CRYPTOGRAPHIC MODULE AUTHENTICATION is a NIST SP 800-53
+  Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- strong_authentication
+- credential_lifecycle_management
+- identity_assurance
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: IA-7
+  note: null
+risk_context:
+  family: IA
+  related_controls:
+  - AC-3
+  - IA-5
+  - SA-4
+  - SC-12
+  - SC-13
+ownership:
+  primary: iam_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for IA-7 CRYPTOGRAPHIC MODULE AUTHENTICATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

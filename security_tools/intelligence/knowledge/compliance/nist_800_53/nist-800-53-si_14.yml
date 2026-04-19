@@ -1,0 +1,79 @@
+id: nist-800-53-si_14
+title: SI-14 NON-PERSISTENCE
+category: system_integrity
+applies_to:
+- vulnerability_management
+- flaw_remediation
+- malware_protection
+- integrity_monitoring
+tags:
+- 800-53
+- flaw-remediation
+- integrity
+- malware-protection
+- nist
+- si
+- si_14
+severity_guidance: high
+description: Implementation of non-persistent components and services mitigates risk
+  from advanced persistent threats (APTs) by reducing the targeting capability of
+  adversaries (i.e., window of opportunity and available attack surface) to initiate
+  and complete attacks. By implementing the concept of non-persistence for selected
+  system components, organizations can provide a trusted, known state computing resource
+  for a specific time period that does not give adversaries sufficient time to exploit
+  vulnerabili...
+rationale: Implementation of non-persistent components and services mitigates risk
+  from advanced persistent threats (APTs) by reducing the targeting capability of
+  adversaries (i.e., window of opportunity and available attack surface) to initiate
+  and complete attacks. By implementing the concept of non-persistence for selected
+  system components, organizations can provide a trusted, known state computing resource
+  for a specific time period that does not give adversaries sufficient time to exploit
+  vulnerabilities in organizational systems or operating environments. Since the APT
+  is a high-end, sophisticated threat with regard to capability, intent, and targeting,
+  organizations assume that over an extended period, a percentage of attacks will
+  be successful. Non-persistent system components and services are activated as required
+  using protected information and terminated periodically or at the end of sessions.
+  Non-persistence increases the work factor of adversaries attempting to compromise
+  or breach organizational systems. Non-persistence can be achieved by refreshing
+  system components, periodically reimaging components, or using a variety of common
+  virtualization techniques. Non-persistent services can be implemented by using virtualization
+  techniques as part of virtual machines or as new instances of processes on physical
+  machines (either persistent or non-persistent). The benefit of periodic refreshes
+  of system components and services is that it does not require organizations to first
+  determine whether compromises of components or services have occurred (something
+  that may often be difficult to determine). The refresh of selected system components
+  and services occurs with sufficient frequency to prevent the spread or intended
+  impact of attacks, but not with such frequency that it makes the system unstable.
+  Refreshes of critical components and services may be done periodically to hinder
+  the ability of adversaries to exploit optimum windows of vulnerabilities.
+developer_guidance: 'SI-14 NON-PERSISTENCE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- flaw_remediation
+- integrity_monitoring
+- malware_protection
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SI-14
+  note: null
+risk_context:
+  family: SI
+  related_controls:
+  - SC-30
+  - SC-34
+  - SI-21
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for SI-14 NON-PERSISTENCE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Validate remediation through scanning, monitoring, and repeatable verification.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

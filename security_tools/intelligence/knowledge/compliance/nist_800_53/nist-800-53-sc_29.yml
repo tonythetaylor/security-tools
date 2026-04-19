@@ -1,0 +1,64 @@
+id: nist-800-53-sc_29
+title: SC-29 HETEROGENEITY
+category: network_security
+applies_to:
+- network_security
+- boundary_protection
+- data_in_transit
+tags:
+- 800-53
+- boundary
+- communications-security
+- network
+- nist
+- sc
+- sc_29
+severity_guidance: high
+description: Increasing the diversity of information technologies within organizational
+  systems reduces the impact of potential exploitations or compromises of specific
+  technologies. Such diversity protects against common mode failures, including those
+  failures induced by supply chain attacks. Diversity in information technologies
+  also reduces the likelihood that the means _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 318 adversaries use...
+rationale: Increasing the diversity of information technologies within organizational
+  systems reduces the impact of potential exploitations or compromises of specific
+  technologies. Such diversity protects against common mode failures, including those
+  failures induced by supply chain attacks. Diversity in information technologies
+  also reduces the likelihood that the means _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 318 adversaries use to compromise one system component will be
+  effective against other system components, thus further increasing the adversary
+  work factor to successfully complete planned attacks. An increase in diversity may
+  add complexity and management overhead that could ultimately lead to mistakes and
+  unauthorized configurations.
+developer_guidance: 'SC-29 HETEROGENEITY is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- boundary_protection
+- secure_communications
+- network_segmentation
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SC-29
+  note: null
+risk_context:
+  family: SC
+  related_controls:
+  - AU-9
+  - PL-8
+  - SC-27
+  - SC-30
+  - SR-3
+ownership:
+  primary: platform_team
+  secondary: security_team
+remediation:
+  steps:
+  - Review implementation requirements for SC-29 HETEROGENEITY.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

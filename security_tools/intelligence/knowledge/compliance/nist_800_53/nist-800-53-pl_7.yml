@@ -1,0 +1,61 @@
+id: nist-800-53-pl_7
+title: PL-7 CONCEPT OF OPERATIONS
+category: governance_security
+applies_to:
+- security_planning
+- policy
+- system_security_plan
+tags:
+- 800-53
+- governance
+- nist
+- pl
+- pl_7
+- planning
+- policy
+severity_guidance: medium
+description: 'PL-7 CONCEPT OF OPERATIONS requires: Develop a Concept of Operations
+  (CONOPS) for the system describing how the organization intends to operate the system
+  from the perspective of information security and privacy; and; Review and update
+  the CONOPS [Assignment: organization-defined frequency].'
+rationale: The CONOPS may be included in the security or privacy plans for the system
+  or in other system development life cycle documents. The CONOPS is a living document
+  that requires updating throughout the system development life cycle. For example,
+  during system design reviews, the concept of operations is checked to ensure that
+  it remains consistent with the design for controls, the system architecture, and
+  the operational procedures. Changes to the CONOPS are reflected in ongoing updates
+  to the security and privacy plans, security and privacy architectures, and other
+  organizational documents, such as procurement specifications, system development
+  life cycle documents, and systems engineering documents.
+developer_guidance: 'PL-7 CONCEPT OF OPERATIONS is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Develop a Concept of Operations (CONOPS) for the system describing how the organization
+  intends to operate the system from the perspective of information security and privacy;
+  and
+
+  - Review and update the CONOPS [Assignment: organization-defined frequency]'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PL-7
+  note: null
+risk_context:
+  family: PL
+  related_controls:
+  - PL-2
+  - SA-2
+  - SI-12
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PL-7 CONCEPT OF OPERATIONS.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

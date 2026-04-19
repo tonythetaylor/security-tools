@@ -1,0 +1,78 @@
+id: nist-800-53-ac_21
+title: AC-21 INFORMATION SHARING
+category: access_security
+applies_to:
+- access_control
+- authorization
+- least_privilege
+- identity_security
+tags:
+- 800-53
+- ac
+- ac_21
+- access-control
+- authorization
+- least-privilege
+- nist
+severity_guidance: high
+description: 'AC-21 INFORMATION SHARING requires: Enable authorized users to determine
+  whether access authorizations assigned to a sharing partner match the information’s
+  access and use restrictions for [Assignment: organization- defined information sharing
+  circumstances where user discretion is required]; and; Employ [Assignment: organization-defined
+  automated mechanisms or manual processes] to assist users in making information
+  sharing and collaboration decisions.'
+rationale: Information sharing applies to information that may be restricted in some
+  manner based on some formal or administrative determination. Examples of such information
+  include, contract-sensitive information, classified information related to special
+  access programs or compartments, privileged information, proprietary information,
+  and personally identifiable information. Security and privacy risk assessments as
+  well as applicable laws, regulations, and policies can provide useful inputs to
+  these determinations. Depending on the circumstances, sharing partners may be defined
+  at the individual, group, or organizational level. Information may be defined by
+  content, type, security category, or special access program or compartment. Access
+  restrictions may include non-disclosure agreements (NDA). Information flow techniques
+  and security attributes may be used to provide automated assistance to users making
+  sharing and collaboration decisions.
+developer_guidance: 'AC-21 INFORMATION SHARING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Enable authorized users to determine whether access authorizations assigned to
+  a sharing partner match the information’s access and use restrictions for [Assignment:
+  organization- defined information sharing circumstances where user discretion is
+  required]; and
+
+  - Employ [Assignment: organization-defined automated mechanisms or manual processes]
+  to assist users in making information sharing and collaboration decisions'
+recommended_patterns:
+- role_based_access_control
+- separation_of_duties_enforcement
+- least_privilege_enforcement
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: AC-21
+  note: null
+risk_context:
+  family: AC
+  related_controls:
+  - AC-3
+  - AC-4
+  - AC-16
+  - PT-2
+  - PT-7
+  - RA-3
+  - SC-15
+ownership:
+  primary: application_team
+  secondary: iam_team
+remediation:
+  steps:
+  - Review implementation requirements for AC-21 INFORMATION SHARING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Confirm access assignments and role definitions align with least privilege and
+    duty separation.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

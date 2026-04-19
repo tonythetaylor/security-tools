@@ -1,0 +1,71 @@
+id: nist-800-53-pm_20
+title: PM-20 DISSEMINATION OF PRIVACY PROGRAM INFORMATION
+category: program_security
+applies_to:
+- program_management
+- governance
+- risk_management
+tags:
+- 800-53
+- governance
+- nist
+- pm
+- pm_20
+- program-management
+- risk
+severity_guidance: medium
+description: 'PM-20 DISSEMINATION OF PRIVACY PROGRAM INFORMATION requires: Ensures
+  that the public has access to information about organizational privacy activities
+  and can communicate with its senior agency official for privacy; _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 214; Ensures that organizational privacy practices and reports
+  are publicly available; and; Employs publicly facing email addresses and/or phone
+  lines to enable the public to provide feedback and/or direct questions to privacy
+  offices regarding privacy practices.'
+rationale: For federal agencies, the webpage is located at www.[agency].gov/privacy.
+  Federal agencies include public privacy impact assessments, system of records notices,
+  computer matching notices and agreements, [PRIVACT] exemption and implementation
+  rules, privacy reports, privacy policies, instructions for individuals making an
+  access or amendment request, email addresses for questions/complaints, blogs, and
+  periodic publications.
+developer_guidance: 'PM-20 DISSEMINATION OF PRIVACY PROGRAM INFORMATION is a NIST
+  SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Ensures that the public has access to information about organizational privacy
+  activities and can communicate with its senior agency official for privacy; _________________________________________________________________________________________________
+  CHAPTER THREE PAGE 214
+
+  - Ensures that organizational privacy practices and reports are publicly available;
+  and
+
+  - Employs publicly facing email addresses and/or phone lines to enable the public
+  to provide feedback and/or direct questions to privacy offices regarding privacy
+  practices'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PM-20
+  note: null
+risk_context:
+  family: PM
+  related_controls:
+  - AC-3
+  - PM-19
+  - PT-5
+  - PT-6
+  - PT-7
+  - RA-8
+ownership:
+  primary: security_team
+  secondary: platform_team
+remediation:
+  steps:
+  - Review implementation requirements for PM-20 DISSEMINATION OF PRIVACY PROGRAM
+    INFORMATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

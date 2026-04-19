@@ -1,0 +1,50 @@
+id: nist-800-53-cm_12_1
+title: CM-12(1) AUTOMATED TOOLS TO SUPPORT INFORMATION LOCATION
+category: configuration_security
+applies_to:
+- secure_configuration
+- baseline_configuration
+- change_management
+tags:
+- 800-53
+- baseline
+- cm
+- cm_12_1
+- configuration
+- control-enhancement
+- hardening
+- nist
+severity_guidance: medium
+description: CM-12(1) AUTOMATED TOOLS TO SUPPORT INFORMATION LOCATION
+rationale: CM-12(1) AUTOMATED TOOLS TO SUPPORT INFORMATION LOCATION
+developer_guidance: 'CM-12(1) AUTOMATED TOOLS TO SUPPORT INFORMATION LOCATION is a
+  NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns:
+- baseline_configuration_management
+- secure_defaults
+- change_control
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: CM-12(1)
+  note: null
+risk_context:
+  family: CM
+  related_controls: []
+ownership:
+  primary: platform_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for CM-12(1) AUTOMATED TOOLS TO SUPPORT INFORMATION
+    LOCATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Verify the control is reflected in baseline configuration and change management
+    processes.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

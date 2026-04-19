@@ -7,6 +7,7 @@ from security_tools.intelligence.ingest.mappers.cis import map_cis_section
 from security_tools.intelligence.ingest.mappers.fedramp import map_fedramp_section
 from security_tools.intelligence.ingest.mappers.nist_800_53 import map_nist_800_53_section
 from security_tools.intelligence.ingest.mappers.nist_800_190 import map_nist_800_190_section
+from security_tools.intelligence.ingest.mappers.ssdf import map_ssdf_section
 from security_tools.intelligence.ingest.mappers.stig import map_stig_section
 from security_tools.intelligence.ingest.models import ExtractedSection, IngestResult
 from security_tools.intelligence.ingest.splitters.cis import (
@@ -16,6 +17,7 @@ from security_tools.intelligence.ingest.splitters.cis import (
 from security_tools.intelligence.ingest.splitters.fedramp import split_fedramp_sections
 from security_tools.intelligence.ingest.splitters.nist_800_53 import split_nist_800_53_sections
 from security_tools.intelligence.ingest.splitters.nist_800_190 import split_nist_800_190_sections
+from security_tools.intelligence.ingest.splitters.ssdf import split_ssdf_sections
 from security_tools.intelligence.ingest.splitters.stig import split_stig_sections
 from security_tools.intelligence.ingest.writers import write_knowledge_doc
 
@@ -66,6 +68,10 @@ def ingest_document(
         sections = split_nist_800_190_sections(text, str(input_path))
         mapper = map_nist_800_190_section
 
+    elif fw in {"ssdf", "nist_800_218"}:
+        sections = split_ssdf_sections(text, str(input_path))
+        mapper = map_ssdf_section
+
     elif fw == "stig":
         sections = split_stig_sections(text, str(input_path))
         mapper = map_stig_section
@@ -78,7 +84,7 @@ def ingest_document(
         raise ValueError(
             f"Unsupported framework '{framework}'. "
             "Supported values: cis, cis_safeguards, cis_all, "
-            "nist_800_53, nist_800_190, stig, fedramp."
+            "nist_800_53, nist_800_190, ssdf, nist_800_218, stig, fedramp."
         )
 
     if not sections:

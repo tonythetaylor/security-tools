@@ -1,0 +1,61 @@
+id: nist-800-53-pt_7
+title: PT-7 SPECIFIC CATEGORIES OF PERSONALLY IDENTIFIABLE INFORMATION
+category: privacy_security
+applies_to:
+- privacy
+- pii_protection
+- data_processing
+tags:
+- 800-53
+- nist
+- pii
+- privacy
+- pt
+- pt_7
+- transparency
+severity_guidance: medium
+description: Organizations apply any conditions or protections that may be necessary
+  for specific categories of personally identifiable information. These conditions
+  may be required by laws, executive orders, directives, regulations, policies, standards,
+  or guidelines. The requirements may also come from the results of privacy risk assessments
+  that factor in contextual changes that may result in an organizational determination
+  that a particular category of personally identifiable information is particularly...
+rationale: Organizations apply any conditions or protections that may be necessary
+  for specific categories of personally identifiable information. These conditions
+  may be required by laws, executive orders, directives, regulations, policies, standards,
+  or guidelines. The requirements may also come from the results of privacy risk assessments
+  that factor in contextual changes that may result in an organizational determination
+  that a particular category of personally identifiable information is particularly
+  sensitive or raises particular privacy risks. Organizations consult with the senior
+  agency official for privacy and legal counsel regarding any protections that may
+  be necessary.
+developer_guidance: 'PT-7 SPECIFIC CATEGORIES OF PERSONALLY IDENTIFIABLE INFORMATION
+  is a NIST SP 800-53 Rev. 5 requirement.
+
+  Review and implement the control requirements within the applicable system and process
+  boundaries.'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PT-7
+  note: null
+risk_context:
+  family: PT
+  related_controls:
+  - IR-9
+  - PT-2
+  - PT-3
+  - RA-3
+ownership:
+  primary: privacy_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PT-7 SPECIFIC CATEGORIES OF PERSONALLY
+    IDENTIFIABLE INFORMATION.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

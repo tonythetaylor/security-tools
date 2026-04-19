@@ -1,0 +1,66 @@
+id: nist-800-53-si_11
+title: SI-11 ERROR HANDLING
+category: system_integrity
+applies_to:
+- vulnerability_management
+- flaw_remediation
+- malware_protection
+- integrity_monitoring
+tags:
+- 800-53
+- flaw-remediation
+- integrity
+- malware-protection
+- nist
+- si
+- si_11
+severity_guidance: high
+description: 'SI-11 ERROR HANDLING requires: Generate error messages that provide
+  information necessary for corrective actions without revealing information that
+  could be exploited; and; Reveal error messages only to [Assignment: organization-defined
+  personnel or roles].'
+rationale: Organizations consider the structure and content of error messages. The
+  extent to which systems can handle error conditions is guided and informed by organizational
+  policy and operational requirements. Exploitable information includes stack traces
+  and implementation details; erroneous logon attempts with passwords mistakenly entered
+  as the username; mission or business information that can be derived from, if not
+  stated explicitly by, the information recorded; and personally identifiable information,
+  such as account numbers, social security numbers, and credit card numbers. Error
+  messages may also provide a covert channel for transmitting information.
+developer_guidance: 'SI-11 ERROR HANDLING is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Generate error messages that provide information necessary for corrective actions
+  without revealing information that could be exploited; and
+
+  - Reveal error messages only to [Assignment: organization-defined personnel or roles]'
+recommended_patterns:
+- flaw_remediation
+- integrity_monitoring
+- malware_protection
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: SI-11
+  note: null
+risk_context:
+  family: SI
+  related_controls:
+  - AU-2
+  - AU-3
+  - SC-31
+  - SI-2
+  - SI-15
+ownership:
+  primary: security_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for SI-11 ERROR HANDLING.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+  - Validate remediation through scanning, monitoring, and repeatable verification.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53

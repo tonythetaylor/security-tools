@@ -1,0 +1,69 @@
+id: nist-800-53-pt_6
+title: PT-6 SYSTEM OF RECORDS NOTICE
+category: privacy_security
+applies_to:
+- privacy
+- pii_protection
+- data_processing
+tags:
+- 800-53
+- nist
+- pii
+- privacy
+- pt
+- pt_6
+- transparency
+severity_guidance: medium
+description: 'PT-6 SYSTEM OF RECORDS NOTICE requires: Draft system of records notices
+  in accordance with OMB guidance and submit new and significantly modified system
+  of records notices to the OMB and appropriate congressional committees for advance
+  review; Publish system of records notices in the Federal Register; and; Keep system
+  of records notices accurate, up-to-date, and scoped in accordance with policy.'
+rationale: The [PRIVACT] requires that federal agencies publish a system of records
+  notice in the Federal Register upon the establishment and/or modification of a [PRIVACT]
+  system of records. As a general matter, a system of records notice is required when
+  an agency maintains a group of any records under the control of the agency from
+  which information is retrieved by the name of an individual or by some identifying
+  number, symbol, or other identifier. The notice describes the existence and character
+  of the system and identifies the system of records, the purpose(s) of the system,
+  the authority for maintenance of the records, the categories of records maintained
+  in the system, the categories of individuals about whom records are maintained,
+  the routine uses to which the records are subject, and additional details about
+  the system as described in [OMB A-108].
+developer_guidance: 'PT-6 SYSTEM OF RECORDS NOTICE is a NIST SP 800-53 Rev. 5 requirement.
+
+  Implementation expectations include:
+
+  - Draft system of records notices in accordance with OMB guidance and submit new
+  and significantly modified system of records notices to the OMB and appropriate
+  congressional committees for advance review
+
+  - Publish system of records notices in the Federal Register; and
+
+  - Keep system of records notices accurate, up-to-date, and scoped in accordance
+  with policy'
+recommended_patterns: []
+bad_examples: []
+good_examples: []
+compliance_refs:
+- framework: NIST SP 800-53 Rev. 5
+  control: PT-6
+  note: null
+risk_context:
+  family: PT
+  related_controls:
+  - AC-3
+  - PM-20
+  - PT-2
+  - PT-3
+  - PT-5
+ownership:
+  primary: privacy_team
+  secondary: application_team
+remediation:
+  steps:
+  - Review implementation requirements for PT-6 SYSTEM OF RECORDS NOTICE.
+  - Document current control coverage and identify implementation gaps.
+  - Implement technical or procedural changes and validate through review.
+source_path: knowledge_sources/nist/NIST.SP.800-53r5.pdf
+source_type: nist_800_53
