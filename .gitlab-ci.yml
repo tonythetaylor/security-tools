@@ -31,6 +31,13 @@ validate_repo:
     - test -f templates/review/security-review.yml
 
     ########################################################
+    # Control-plane templates
+    ########################################################
+
+    - test -d templates/control-plane
+    - test -f templates/control-plane/control-plane-promotion.yml
+
+    ########################################################
     # Scan templates
     ########################################################
 
@@ -233,6 +240,104 @@ validate_repo:
     - test -d security_tools/intelligence/knowledge/org_policies
 
     ########################################################
+    # Control-plane package
+    ########################################################
+
+    - test -d security_tools/control_plane
+    - test -f security_tools/control_plane/__init__.py
+    - test -f security_tools/control_plane/config_loader.py
+    - test -f security_tools/control_plane/factory.py
+
+    ########################################################
+    # Control-plane commands
+    ########################################################
+
+    - test -d security_tools/control_plane/commands
+    - test -f security_tools/control_plane/commands/evaluate_promotion.py
+    - test -f security_tools/control_plane/commands/promote_artifact.py
+    - test -f security_tools/control_plane/commands/record_deployment.py
+    - test -f security_tools/control_plane/commands/check_drift.py
+
+    ########################################################
+    # Control-plane models
+    ########################################################
+
+    - test -d security_tools/control_plane/models
+    - test -f security_tools/control_plane/models/__init__.py
+    - test -f security_tools/control_plane/models/artifact.py
+    - test -f security_tools/control_plane/models/config.py
+    - test -f security_tools/control_plane/models/deployment.py
+    - test -f security_tools/control_plane/models/execution.py
+    - test -f security_tools/control_plane/models/policy.py
+    - test -f security_tools/control_plane/models/promotion.py
+
+    ########################################################
+    # Control-plane config package
+    ########################################################
+
+    - test -d security_tools/control_plane/config
+    - test -f security_tools/control_plane/config/control_plane.yaml
+    - test -f security_tools/control_plane/config/artifact_types.yaml
+    - test -f security_tools/control_plane/config/environments.yaml
+    - test -f security_tools/control_plane/config/integrations.yaml
+
+    ########################################################
+    # Control-plane services
+    ########################################################
+
+    - test -d security_tools/control_plane/services
+    - test -f security_tools/control_plane/services/artifact_service.py
+    - test -f security_tools/control_plane/services/deployment_service.py
+    - test -f security_tools/control_plane/services/evidence_service.py
+    - test -f security_tools/control_plane/services/promotion_service.py
+
+    ########################################################
+    # Control-plane state
+    ########################################################
+
+    - test -d security_tools/control_plane/state
+    - test -f security_tools/control_plane/state/__init__.py
+    - test -f security_tools/control_plane/state/base.py
+    - test -f security_tools/control_plane/state/local_json.py
+
+    ########################################################
+    # Control-plane runtime helpers
+    ########################################################
+
+    - test -d security_tools/control_plane/runtime
+    - test -f security_tools/control_plane/runtime/__init__.py
+    - test -f security_tools/control_plane/runtime/config_model.py
+    - test -f security_tools/control_plane/runtime/drift.py
+    - test -f security_tools/control_plane/runtime/verification.py
+
+    ########################################################
+    # Control-plane resolver
+    ########################################################
+
+    - test -d security_tools/control_plane/resolver
+    - test -f security_tools/control_plane/resolver/__init__.py
+    - test -f security_tools/control_plane/resolver/backend_resolver.py
+
+    ########################################################
+    # Control-plane registry
+    ########################################################
+
+    - test -d security_tools/control_plane/registry
+    - test -f security_tools/control_plane/registry/base.py
+    - test -f security_tools/control_plane/registry/oci.py
+    - test -f security_tools/control_plane/registry/harbor.py
+    - test -f security_tools/control_plane/registry/artifactory.py
+
+    ########################################################
+    # Control-plane evidence
+    ########################################################
+
+    - test -d security_tools/control_plane/evidence
+    - test -f security_tools/control_plane/evidence/store.py
+    - test -f security_tools/control_plane/evidence/object_store.py
+    - test -f security_tools/control_plane/evidence/generic_repo.py
+
+    ########################################################
     # Optional raw knowledge sources
     ########################################################
 
@@ -245,6 +350,10 @@ validate_repo:
     - pip install .
     - security-review --help || true
     - container-runtime-verify --help || true
+    - control-plane-evaluate --help || true
+    - control-plane-promote --help || true
+    - control-plane-record-deployment --help || true
+    - control-plane-check-drift --help || true
 
     ########################################################
     # Import smoke tests
@@ -303,5 +412,18 @@ validate_repo:
     - python -c "from security_tools.intelligence.ingest.mappers.cis import map_cis_section; print('cis mapper loaded')"
     - python -c "from security_tools.intelligence.ingest.splitters.nist_800_190 import split_nist_800_190_sections; print('nist 800-190 splitter loaded')"
     - python -c "from security_tools.intelligence.ingest.mappers.nist_800_190 import map_nist_800_190_section; print('nist 800-190 mapper loaded')"
+
+    ########################################################
+    # Control-plane smoke tests
+    ########################################################
+
+    - python -c "from security_tools.control_plane.config_loader import ControlPlaneConfigLoader; print('config loader loaded')"
+    - python -c "from security_tools.control_plane.factory import RegistryFactory, EvidenceStoreFactory; print('factories loaded')"
+    - python -c "from security_tools.control_plane.services.artifact_service import ArtifactService; print('artifact service loaded')"
+    - python -c "from security_tools.control_plane.services.promotion_service import PromotionService; print('promotion service loaded')"
+    - python -c "from security_tools.control_plane.services.deployment_service import DeploymentService; print('deployment service loaded')"
+    - python -c "from security_tools.control_plane.services.evidence_service import EvidenceService; print('evidence service loaded')"
+    - python -c "from security_tools.control_plane.runtime.config_model import RuntimeConfigEnvelope; print('runtime config envelope loaded')"
+    - python -c "from security_tools.control_plane.runtime.drift import detect_runtime_drift; print('drift module loaded')"
 
     - echo "security-tools repo validation passed"
