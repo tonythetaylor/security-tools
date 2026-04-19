@@ -1,10 +1,28 @@
 include:
   - local: "/templates/base/security-rules.yml"
 
+.control_plane_setup:
+  before_script:
+    - python --version
+    - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+    - |
+      CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
+
+      if [ ! -d .security-tools ]; then
+        git clone --depth 1 \
+          --branch "${SECURITY_TOOLS_REF:-main}" \
+          "$CLONE_URL" \
+          .security-tools
+      fi
+
+      python -m pip install ./.security-tools
+
 control_plane_evaluate:
   extends: .security_rule_template
   stage: promote
   image: python:${PYTHON_VERSION}
+  before_script:
+    - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
       optional: true
@@ -13,8 +31,6 @@ control_plane_evaluate:
       optional: true
       artifacts: true
   script:
-    - python --version
-    - python -m pip install .
     - test -n "$TEAM"
     - test -n "$ARTIFACT_TYPE"
     - test -n "$SERVICE_NAME"
@@ -42,6 +58,8 @@ control_plane_promote:
   extends: .security_rule_template
   stage: promote
   image: python:${PYTHON_VERSION}
+  before_script:
+    - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
       optional: true
@@ -50,8 +68,6 @@ control_plane_promote:
       optional: false
       artifacts: true
   script:
-    - python --version
-    - python -m pip install .
     - test -n "$TEAM"
     - test -n "$ARTIFACT_TYPE"
     - test -n "$SERVICE_NAME"
@@ -84,6 +100,8 @@ control_plane_record_deployment:
   extends: .security_rule_template
   stage: verify
   image: python:${PYTHON_VERSION}
+  before_script:
+    - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
       optional: true
@@ -92,8 +110,6 @@ control_plane_record_deployment:
       optional: false
       artifacts: true
   script:
-    - python --version
-    - python -m pip install .
     - test -n "$ARTIFACT_DIGEST"
     - test -n "$TARGET_ENV"
     - test -n "$DEPLOY_MANIFEST_HASH"
@@ -118,6 +134,8 @@ control_plane_check_drift:
   extends: .security_rule_template
   stage: verify
   image: python:${PYTHON_VERSION}
+  before_script:
+    - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
       optional: true
@@ -126,8 +144,6 @@ control_plane_check_drift:
       optional: false
       artifacts: true
   script:
-    - python --version
-    - python -m pip install .
     - test -n "$ARTIFACT_DIGEST"
     - test -n "$TARGET_ENV"
     - test -n "$DEPLOY_MANIFEST_HASH"
