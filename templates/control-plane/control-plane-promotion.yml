@@ -5,6 +5,7 @@ include:
   before_script:
     - python --version
     - apt-get update && apt-get install -y git >/dev/null 2>&1 || true
+    - mkdir -p data/control_plane_state data/evidence
     - |
       CLONE_URL="http://gitlab-ci-token:${CI_JOB_TOKEN}@host.docker.internal:8088/${SECURITY_TOOLS_PROJECT_PATH}.git"
 
@@ -15,7 +16,7 @@ include:
           .security-tools
       fi
 
-      python -m pip install ./.security-tools
+      python -m pip install --root-user-action=ignore ./.security-tools
 
 control_plane_evaluate:
   extends: .security_rule_template
@@ -25,12 +26,14 @@ control_plane_evaluate:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: true
+      optional: false
       artifacts: true
-    - job: security_review
+    - job: run_dynamic_security_pipeline
       optional: true
-      artifacts: true
+    - job: run_static_security_fallback
+      optional: true
   script:
+    - env | sort | grep -E '^(TEAM|ARTIFACT_TYPE|SERVICE_NAME|ARTIFACT_DIGEST|SOURCE_ENV|TARGET_ENV)=' || true
     - test -n "$TEAM"
     - test -n "$ARTIFACT_TYPE"
     - test -n "$SERVICE_NAME"
@@ -62,7 +65,7 @@ control_plane_promote:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: true
+      optional: false
       artifacts: true
     - job: control_plane_evaluate
       optional: false
@@ -104,7 +107,7 @@ control_plane_record_deployment:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: true
+      optional: false
       artifacts: true
     - job: control_plane_promote
       optional: false
@@ -138,7 +141,7 @@ control_plane_check_drift:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: true
+      optional: false
       artifacts: true
     - job: control_plane_record_deployment
       optional: false
