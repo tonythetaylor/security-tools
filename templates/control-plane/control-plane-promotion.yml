@@ -31,6 +31,7 @@ control_plane_evaluate:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
+      optional: true
       artifacts: true
     - job: run_dynamic_security_pipeline
       optional: true
@@ -69,8 +70,10 @@ control_plane_promote:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
+      optional: true
       artifacts: true
     - job: control_plane_evaluate
+      optional: false
       artifacts: true
   script:
     - test -n "$TEAM"
@@ -109,8 +112,10 @@ control_plane_record_deployment:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
+      optional: true
       artifacts: true
     - job: control_plane_promote
+      optional: false
       artifacts: true
   script:
     - test -n "$ARTIFACT_DIGEST"
@@ -141,8 +146,10 @@ control_plane_check_drift:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
+      optional: true
       artifacts: true
     - job: control_plane_record_deployment
+      optional: false
       artifacts: true
   script:
     - test -n "$ARTIFACT_DIGEST"
