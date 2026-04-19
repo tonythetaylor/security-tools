@@ -1,0 +1,3 @@
+include:
+  - local: "/templates/suites/dynamic-security-suite.yml"
+  - local: "/templates/control-plane/control-plane-promotion.yml"
