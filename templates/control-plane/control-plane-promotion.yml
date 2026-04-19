@@ -1,6 +1,11 @@
 include:
   - local: "/templates/base/security-rules.yml"
 
+.control_plane_parent_rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
 .control_plane_setup:
   before_script:
     - python --version
@@ -19,14 +24,13 @@ include:
       python -m pip install --root-user-action=ignore ./.security-tools
 
 control_plane_evaluate:
-  extends: .security_rule_template
+  extends: .control_plane_parent_rules
   stage: promote
   image: python:${PYTHON_VERSION}
   before_script:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: false
       artifacts: true
     - job: run_dynamic_security_pipeline
       optional: true
@@ -58,17 +62,15 @@ control_plane_evaluate:
     expire_in: 1 week
 
 control_plane_promote:
-  extends: .security_rule_template
+  extends: .control_plane_parent_rules
   stage: promote
   image: python:${PYTHON_VERSION}
   before_script:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: false
       artifacts: true
     - job: control_plane_evaluate
-      optional: false
       artifacts: true
   script:
     - test -n "$TEAM"
@@ -100,17 +102,15 @@ control_plane_promote:
     expire_in: 1 week
 
 control_plane_record_deployment:
-  extends: .security_rule_template
+  extends: .control_plane_parent_rules
   stage: verify
   image: python:${PYTHON_VERSION}
   before_script:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: false
       artifacts: true
     - job: control_plane_promote
-      optional: false
       artifacts: true
   script:
     - test -n "$ARTIFACT_DIGEST"
@@ -134,17 +134,15 @@ control_plane_record_deployment:
     expire_in: 1 week
 
 control_plane_check_drift:
-  extends: .security_rule_template
+  extends: .control_plane_parent_rules
   stage: verify
   image: python:${PYTHON_VERSION}
   before_script:
     - !reference [.control_plane_setup, before_script]
   needs:
     - job: build
-      optional: false
       artifacts: true
     - job: control_plane_record_deployment
-      optional: false
       artifacts: true
   script:
     - test -n "$ARTIFACT_DIGEST"
